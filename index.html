@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>コロガリウム フェーズ0 ｜ 操作感の検証</title>
+<style>
+  :root{
+    --bg:#0F1513; --panel:#18211E; --panel2:#131B19; --ink:#E7EDEA; --muted:#8B9A95;
+    --line:#2E3B37; --accent:#FF6A43; --accent-ink:#1A0B06;
+    --wall:#9BB0A9; --path:#0B100F; --grid:#182220;
+    --ok:#5FBF92; --ng:#E4705E; --warn:#D9A441;
+    --sans:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    --mono:"SFMono-Regular",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:15px; line-height:1.6; -webkit-text-size-adjust:100%; overscroll-behavior:none}
+  .wrap{max-width:480px; margin:0 auto; padding-inline:14px;
+    padding-block:14px calc(28px + env(safe-area-inset-bottom)); display:flex; flex-direction:column; gap:12px}
+
+  h1{margin:0; font-size:16px; font-weight:700}
+  .sub{margin:0; color:var(--muted); font-size:12px}
+  .head{display:flex; justify-content:space-between; align-items:baseline; gap:10px}
+  .badge{font-family:var(--mono); font-size:10px; letter-spacing:.12em; color:var(--accent);
+    border:1px solid var(--accent); border-radius:4px; padding:2px 6px; white-space:nowrap}
+
+  .hud{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
+    border:1px solid var(--line); border-radius:9px; overflow:hidden}
+  .hud div{background:var(--panel); padding:7px 4px; text-align:center}
+  .hud dt{margin:0 0 1px; font-size:10px; color:var(--muted)}
+  .hud dd{margin:0; font-family:var(--mono); font-size:15px; font-weight:600; font-variant-numeric:tabular-nums}
+  .hud dd small{font-size:9px; color:var(--muted); font-weight:400}
+
+  .board{position:relative; width:100%; aspect-ratio:1/1; background:var(--path);
+    border:1px solid var(--line); border-radius:10px; overflow:hidden; touch-action:none;
+    user-select:none; -webkit-user-select:none}
+  .board canvas{display:block; width:100%; height:100%}
+  .flash{position:absolute; inset:0; background:var(--accent); opacity:0; pointer-events:none; transition:opacity .5s}
+  .board.win .flash{opacity:.22; transition:none}
+  .cap{margin:-6px 0 0; font-family:var(--mono); font-size:10px; letter-spacing:.1em;
+    color:var(--muted); text-align:center}
+
+  .gate{position:absolute; inset:0; background:rgba(15,21,19,.94); display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:14px; padding:26px; text-align:center}
+  .gate p{margin:0; font-size:13px; color:var(--muted); max-width:30ch}
+  .gate strong{display:block; color:var(--ink); font-size:15px; margin-bottom:4px}
+  button.primary{background:var(--accent); color:var(--accent-ink); border:0; border-radius:9px;
+    padding:13px 26px; font-family:var(--sans); font-size:15px; font-weight:700; cursor:pointer}
+  button.primary:active{filter:brightness(.9)}
+
+  .seg{display:flex; gap:5px}
+  .seg button{flex:1; padding:10px 4px; background:var(--panel); color:var(--ink);
+    border:1px solid var(--line); border-radius:8px; font-family:var(--sans); font-size:13px; cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent);
+    color:var(--accent-ink); font-weight:600}
+  .seg button[disabled]{opacity:.4; cursor:not-allowed}
+  .row{display:flex; gap:8px}
+  button.ghost{flex:1; padding:10px 6px; background:var(--panel); color:var(--ink);
+    border:1px solid var(--line); border-radius:8px; font-family:var(--sans); font-size:13px; cursor:pointer}
+  button.ghost:active{background:var(--panel2)}
+  button.ghost.cal{border-color:var(--accent); color:var(--accent)}
+
+  .field{display:flex; flex-direction:column; gap:4px}
+  .field label{display:flex; justify-content:space-between; align-items:baseline; gap:8px;
+    font-size:12px; color:var(--muted)}
+  .field label b{font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:500;
+    font-variant-numeric:tabular-nums}
+  input[type=range]{width:100%; accent-color:var(--accent); margin:0}
+
+  details{background:var(--panel); border:1px solid var(--line); border-radius:9px; overflow:hidden}
+  details>summary{cursor:pointer; list-style:none; padding:10px 13px; font-size:13px; font-weight:500;
+    display:flex; justify-content:space-between; align-items:center}
+  details>summary::-webkit-details-marker{display:none}
+  details>summary::after{content:"＋"; color:var(--muted); font-family:var(--mono)}
+  details[open]>summary::after{content:"−"}
+  .body{padding:6px 13px 14px; border-top:1px dashed var(--line); display:flex; flex-direction:column; gap:13px}
+  .body>p{margin:0; font-size:12px; color:var(--muted)}
+
+  .crit{display:flex; flex-direction:column; gap:9px}
+  .crit .line{display:flex; align-items:center; gap:8px}
+  .crit .lbl{flex:1; font-size:12.5px}
+  .crit .lbl em{display:block; font-style:normal; color:var(--muted); font-size:11px}
+  .crit .score{font-family:var(--mono); font-size:13px; font-variant-numeric:tabular-nums; min-width:52px; text-align:right}
+  .crit .score.pass{color:var(--ok)} .crit .score.fail{color:var(--ng)}
+  .crit button{width:34px; height:32px; border-radius:7px; background:var(--panel2);
+    border:1px solid var(--line); color:var(--ink); font-size:14px; cursor:pointer}
+  .crit button.y{color:var(--ok)} .crit button.n{color:var(--ng)}
+
+  textarea{width:100%; min-height:112px; background:var(--panel2); color:var(--ink);
+    border:1px solid var(--line); border-radius:8px; padding:9px; font-family:var(--mono);
+    font-size:11.5px; line-height:1.5; resize:vertical}
+  .note{font-size:11.5px; color:var(--muted); line-height:1.7}
+  .warn{color:var(--warn)}
+  :is(button,input,summary,textarea):focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <div>
+      <h1>コロガリウム</h1>
+      <p class="sub">フェーズ0：操作感の検証（開発中の技術検証です）</p>
+    </div>
+    <span class="badge">PHASE 0</span>
+  </div>
+
+  <dl class="hud">
+    <div><dt>タイム</dt><dd id="hTime">0.0<small>s</small></dd></div>
+    <div><dt>壁ヒット</dt><dd id="hHit">0</dd></div>
+    <div><dt>傾き</dt><dd id="hTilt">0.00</dd></div>
+    <div><dt>ドリフト</dt><dd id="hDrift">—</dd></div>
+  </dl>
+
+  <div class="board" id="board">
+    <canvas id="cv"></canvas>
+    <div class="flash"></div>
+    <div class="gate" id="gate">
+      <p><strong>まず基準の姿勢を決めます</strong>端末を、自分がいちばん楽に持てる角度で構えてください。その角度を「水平」として記録します。</p>
+      <button class="primary" id="startBtn" type="button">この向きを基準にして始める</button>
+      <p id="gateNote" class="note"></p>
+    </div>
+  </div>
+
+  <p class="cap">7 × 7 ／ 1画面完結・カメラ固定</p>
+
+  <div class="seg" id="segMode">
+    <button type="button" data-m="tilt">傾きで操作</button>
+    <button type="button" data-m="touch">擬似傾き（押した位置）</button>
+  </div>
+
+  <div class="row">
+    <button class="ghost cal" id="calBtn" type="button">基準をとり直す</button>
+    <button class="ghost" id="resetBtn" type="button">最初から</button>
+    <button class="ghost" id="mazeBtn" type="button">別の迷路</button>
+  </div>
+
+  <details open>
+    <summary>操作パラメータ</summary>
+    <div class="body">
+      <div class="field">
+        <label for="pSens">感度（最大傾き時の加速）<b id="vSens">22 マス/s²</b></label>
+        <input type="range" id="pSens" min="4" max="60" step="1" value="22">
+      </div>
+      <div class="field">
+        <label for="pFric">摩擦（止まりやすさ）<b id="vFric">2.2</b></label>
+        <input type="range" id="pFric" min="0.2" max="8" step="0.1" value="2.2">
+      </div>
+      <div class="field">
+        <label for="pMax">最大傾き角（この角度で全力）<b id="vMax">20°</b></label>
+        <input type="range" id="pMax" min="6" max="40" step="1" value="20">
+      </div>
+      <div class="field">
+        <label for="pRest">壁の反発<b id="vRest">0.15</b></label>
+        <input type="range" id="pRest" min="0" max="0.7" step="0.05" value="0.15">
+      </div>
+      <div class="field">
+        <label for="pSm">入力の平滑化（センサーのノイズ取り）<b id="vSm">0.35</b></label>
+        <input type="range" id="pSm" min="0" max="0.9" step="0.05" value="0.35">
+      </div>
+      <div class="field">
+        <label for="pBall">ボールの大きさ<b id="vBall">セルの 55%</b></label>
+        <input type="range" id="pBall" min="30" max="80" step="5" value="55">
+      </div>
+      <p><b>bが通らないとき</b>は摩擦を上げるか感度を下げる。速すぎて壁に弾かれるなら反発を下げる。腕が辛いなら最大傾き角を下げる。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>合格ラインの判定</summary>
+    <div class="body">
+      <p>フェーズ0はここが目的。10回ずつ試して記録する。<b>b が最重要</b>——「動かせる」と「止められる」は別の話。</p>
+      <div class="crit">
+        <div class="line">
+          <span class="lbl">a 通し抜け<em>幅1マスの通路を壁に当たらず端から端まで（8/10で合格）</em></span>
+          <span class="score" id="sA">0/0</span>
+          <button type="button" class="y" data-c="a" data-v="1">○</button>
+          <button type="button" class="n" data-c="a" data-v="0">✕</button>
+        </div>
+        <div class="line">
+          <span class="lbl">b 隙間で停止<em>狙った1マスの隙間に入って止められる（7/10で合格）</em></span>
+          <span class="score" id="sB">0/0</span>
+          <button type="button" class="y" data-c="b" data-v="1">○</button>
+          <button type="button" class="n" data-c="b" data-v="0">✕</button>
+        </div>
+      </div>
+      <div class="row">
+        <button class="ghost" id="driftBtn" type="button">c ドリフト計測（5秒）</button>
+        <button class="ghost" id="critReset" type="button">記録をリセット</button>
+      </div>
+      <p>c は端末を静止させた状態で押す。<b>1マス分以上流れたら不合格</b>——キャリブレーションか平滑化を見直す。<br>
+         d は Pixel 6a と iPhone XR の両方で a〜c を通すこと。e は30秒続けて腕が辛くない角度で a が通ること。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>調整した値の書き出し</summary>
+    <div class="body">
+      <p>合格したときの値。フェーズ1の <code>gameConfig</code> の初期値にそのまま入れる。</p>
+      <textarea id="dump" readonly></textarea>
+    </div>
+  </details>
+
+  <p class="note">
+    傾きセンサーは HTTPS でのみ動作します（<code>http://192.168.x.x</code> では反応しません）。<br>
+    iOSでは最初の一度だけ許可を求められます。許可しない場合は自動で擬似傾きモードになります。<br>
+    <span id="orientWarn" class="warn" hidden>端末を縦向きに戻してください。このプロトタイプは縦持ち前提です。</span>
+  </p>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var N = 7;                     // フェーズ0は 7×7 固定
+var P = {                      // 調整パラメータ（localStorageに保存）
+  sens:22, fric:2.2, maxAngle:20, rest:0.15, smooth:0.35, ballRatio:55, mode:"tilt", seed:20260910
+};
+var crit = {a:[0,0], b:[0,0]}; // [成功, 試行]
+
+try{ var saved=JSON.parse(localStorage.getItem("korogarium-p0")||"{}");
+     for(var k in saved) if(k in P) P[k]=saved[k]; }catch(e){}
+function save(){ try{ localStorage.setItem("korogarium-p0", JSON.stringify(P)); }catch(e){} }
+
+var board=document.getElementById("board"), cv=document.getElementById("cv"), ctx=cv.getContext("2d");
+var size=0, cell=0, wt=0, walls=[], ball=null, goal=null;
+var started=false, cleared=false, t0=0, elapsed=0, hits=0;
+var drift=null;                 // {t, x, y}
+var tiltRaw={x:0,y:0}, tilt={x:0,y:0};
+var calib=null, sensorOK=false, pointerDown=false;
+
+/* ---------- 迷路生成（DFSバックトラッカー・LLM不使用） ---------- */
+function rand(seed){ var s=seed>>>0||1; return function(){ s^=s<<13; s>>>=0; s^=s>>17; s^=s<<5; s>>>=0; return s/4294967296; }; }
+function makeMaze(n, seed){
+  var r=rand(seed), c=[], i;
+  for(i=0;i<n*n;i++) c.push({t:1,r:1,b:1,l:1,v:0});
+  var st=[0]; c[0].v=1;
+  while(st.length){
+    var cur=st[st.length-1], cx=cur%n, cy=(cur-cx)/n, nb=[];
+    if(cy>0   && !c[cur-n].v) nb.push([cur-n,"t","b"]);
+    if(cx<n-1 && !c[cur+1].v) nb.push([cur+1,"r","l"]);
+    if(cy<n-1 && !c[cur+n].v) nb.push([cur+n,"b","t"]);
+    if(cx>0   && !c[cur-1].v) nb.push([cur-1,"l","r"]);
+    if(!nb.length){ st.pop(); continue; }
+    var p=nb[Math.floor(r()*nb.length)];
+    c[cur][p[1]]=0; c[p[0]][p[2]]=0; c[p[0]].v=1; st.push(p[0]);
+  }
+  return c;
+}
+/* 壁を矩形の配列に変換する（円と矩形の当たり判定で解決するため） */
+function buildWalls(cells){
+  walls=[];
+  function add(x,y,w,h){ walls.push({x:x,y:y,w:w,h:h}); }
+  for(var i=0;i<N*N;i++){
+    var cx=i%N, cy=(i-cx)/N, x=cx*cell, y=cy*cell, c=cells[i];
+    if(c.t) add(x-wt/2, y-wt/2, cell+wt, wt);
+    if(c.l) add(x-wt/2, y-wt/2, wt, cell+wt);
+    if(cx===N-1 && c.r) add(x+cell-wt/2, y-wt/2, wt, cell+wt);
+    if(cy===N-1 && c.b) add(x-wt/2, y+cell-wt/2, cell+wt, wt);
+  }
+}
+
+/* ---------- レイアウト ---------- */
+function layout(){
+  var box=board.getBoundingClientRect();
+  size=Math.round(box.width);
+  var dpr=Math.min(window.devicePixelRatio||1, 3);
+  cv.width=size*dpr; cv.height=size*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  cell=size/N; wt=Math.max(3, cell*0.10);
+  buildWalls(maze);
+  goal={x:size-cell/2, y:size-cell/2, r:cell*0.30};
+  if(!ball) resetBall(); else ball.r=cell*(P.ballRatio/100)/2;
+}
+function resetBall(){
+  ball={ x:cell/2, y:cell/2, vx:0, vy:0, r:cell*(P.ballRatio/100)/2 };
+  started=false; cleared=false; elapsed=0; hits=0; drift=null;
+  board.classList.remove("win");
+}
+
+/* ---------- 入力 ---------- */
+function setMode(m){
+  P.mode=m; save();
+  [].forEach.call(document.querySelectorAll("#segMode button"), function(b){
+    b.setAttribute("aria-pressed", b.dataset.m===m ? "true":"false");
+  });
+  document.getElementById("calBtn").disabled = (m!=="tilt");
+  tiltRaw={x:0,y:0};
+}
+function onOrient(e){
+  if(e.beta===null && e.gamma===null) return;
+  if(!sensorOK){
+    sensorOK=true;
+    var tb=document.querySelector('#segMode button[data-m="tilt"]');
+    if(tb && tb.disabled){ tb.disabled=false; document.getElementById("gateNote").textContent=""; }
+  }
+  if(!calib) calib={beta:e.beta||0, gamma:e.gamma||0};
+  if(P.mode!=="tilt") return;
+  var db=(e.beta||0)-calib.beta, dg=(e.gamma||0)-calib.gamma;
+  if(db>180) db-=360; if(db<-180) db+=360;
+  tiltRaw.x=Math.max(-1,Math.min(1, dg/P.maxAngle));
+  tiltRaw.y=Math.max(-1,Math.min(1, db/P.maxAngle));
+}
+function calibrate(){ calib=null; /* 次のイベントで再取得 */ tiltRaw={x:0,y:0}; }
+
+function pointerTilt(ev){
+  var b=board.getBoundingClientRect(), half=b.width/2;
+  var x=(ev.clientX-b.left-half)/half, y=(ev.clientY-b.top-half)/half;
+  var m=Math.sqrt(x*x+y*y);
+  if(m>1){ x/=m; y/=m; }
+  tiltRaw.x=x; tiltRaw.y=y;
+}
+board.addEventListener("pointerdown", function(ev){
+  if(P.mode!=="touch") return;
+  pointerDown=true; board.setPointerCapture(ev.pointerId); pointerTilt(ev); ev.preventDefault();
+});
+board.addEventListener("pointermove", function(ev){ if(pointerDown) pointerTilt(ev); });
+["pointerup","pointercancel"].forEach(function(t){
+  board.addEventListener(t, function(){ pointerDown=false; tiltRaw={x:0,y:0}; });
+});
+
+/* ---------- 物理 ---------- */
+function step(dt){
+  var k = P.smooth>0 ? 1-Math.pow(P.smooth, dt*60) : 1;
+  tilt.x += (tiltRaw.x-tilt.x)*k;
+  tilt.y += (tiltRaw.y-tilt.y)*k;
+
+  var a=P.sens*cell;                       // マス/s² → px/s²
+  ball.vx += tilt.x*a*dt;
+  ball.vy += tilt.y*a*dt;
+  var damp=Math.exp(-P.fric*dt);
+  ball.vx*=damp; ball.vy*=damp;
+
+  var maxV=cell*30;                        // トンネリング防止の速度上限
+  var sp=Math.hypot(ball.vx,ball.vy);
+  if(sp>maxV){ ball.vx*=maxV/sp; ball.vy*=maxV/sp; }
+
+  var sub=Math.max(1, Math.ceil(sp*dt/(ball.r*0.6)));
+  for(var s=0;s<sub;s++){
+    ball.x+=ball.vx*dt/sub; ball.y+=ball.vy*dt/sub;
+    collide();
+  }
+  ball.x=Math.max(ball.r, Math.min(size-ball.r, ball.x));
+  ball.y=Math.max(ball.r, Math.min(size-ball.r, ball.y));
+
+  if(!started && (Math.abs(ball.vx)+Math.abs(ball.vy))>cell*0.5){ started=true; t0=performance.now(); }
+  if(started && !cleared) elapsed=(performance.now()-t0)/1000;
+  if(!cleared && Math.hypot(ball.x-goal.x, ball.y-goal.y) < goal.r){
+    cleared=true; board.classList.add("win");
+  }
+}
+function collide(){
+  for(var i=0;i<walls.length;i++){
+    var w=walls[i];
+    var cxp=Math.max(w.x, Math.min(ball.x, w.x+w.w));
+    var cyp=Math.max(w.y, Math.min(ball.y, w.y+w.h));
+    var dx=ball.x-cxp, dy=ball.y-cyp, d2=dx*dx+dy*dy;
+    if(d2 >= ball.r*ball.r) continue;
+    var d=Math.sqrt(d2), nx, ny;
+    if(d>0.0001){ nx=dx/d; ny=dy/d; }
+    else{ // 中心が矩形内：貫通の浅い軸へ押し出す
+      var l=ball.x-w.x, r=w.x+w.w-ball.x, t=ball.y-w.y, b=w.y+w.h-ball.y;
+      var m=Math.min(l,r,t,b);
+      nx = (m===l)?-1:(m===r)?1:0; ny = (m===t)?-1:(m===b)?1:0; d=0;
+    }
+    ball.x = cxp + nx*ball.r; ball.y = cyp + ny*ball.r;
+    var vn = ball.vx*nx + ball.vy*ny;
+    if(vn<0){
+      if(-vn > cell*2) hits++;
+      ball.vx -= (1+P.rest)*vn*nx;
+      ball.vy -= (1+P.rest)*vn*ny;
+    }
+  }
+}
+
+/* ---------- 描画 ---------- */
+function draw(){
+  ctx.fillStyle="#0B100F"; ctx.fillRect(0,0,size,size);
+  ctx.strokeStyle="#182220"; ctx.lineWidth=1;
+  for(var g=1;g<N;g++){ var p=Math.round(g*cell)+0.5;
+    ctx.beginPath(); ctx.moveTo(p,0); ctx.lineTo(p,size); ctx.moveTo(0,p); ctx.lineTo(size,p); ctx.stroke(); }
+
+  ctx.fillStyle="#9BB0A9";
+  for(var i=0;i<walls.length;i++){ var w=walls[i]; ctx.fillRect(w.x,w.y,w.w,w.h); }
+
+  ctx.strokeStyle="#FF6A43"; ctx.lineWidth=Math.max(2, wt*0.7);
+  ctx.beginPath(); ctx.arc(goal.x,goal.y,goal.r,0,6.2832); ctx.stroke();
+
+  if(P.mode==="touch" && pointerDown){
+    ctx.strokeStyle="rgba(255,106,67,.45)"; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(size/2,size/2);
+    ctx.lineTo(size/2+tilt.x*size*0.42, size/2+tilt.y*size*0.42); ctx.stroke();
+  }
+
+  ctx.fillStyle="#FF6A43";
+  ctx.beginPath(); ctx.arc(ball.x,ball.y,ball.r,0,6.2832); ctx.fill();
+}
+
+/* ---------- HUD ---------- */
+function hud(){
+  document.getElementById("hTime").innerHTML=elapsed.toFixed(1)+'<small>s</small>';
+  document.getElementById("hHit").textContent=hits;
+  document.getElementById("hTilt").textContent=Math.hypot(tilt.x,tilt.y).toFixed(2);
+  var hd=document.getElementById("hDrift");
+  if(drift){
+    if(drift.done===undefined){
+      var dd=Math.hypot(ball.x-drift.x, ball.y-drift.y)/cell;
+      if(dd>drift.peak) drift.peak=dd;
+      if(performance.now()-drift.t >= 5000) drift.done=drift.peak;
+    }
+    var v=(drift.done!==undefined)?drift.done:drift.peak;
+    hd.innerHTML=v.toFixed(2)+'<small>マス</small>';
+    hd.style.color = (drift.done===undefined) ? "#E7EDEA" : (v>=1 ? "#E4705E" : "#5FBF92");
+  } else { hd.textContent="—"; hd.style.color=""; }
+}
+
+/* ---------- ループ ---------- */
+var last=0;
+function frame(now){
+  var dt=Math.min((now-(last||now))/1000, 1/20); last=now;
+  if(dt>0) step(dt);
+  draw(); hud();
+  requestAnimationFrame(frame);
+}
+
+/* ---------- UI 配線 ---------- */
+var maze=makeMaze(N, P.seed);
+
+function bindRange(id, key, fmt, after){
+  var el=document.getElementById(id), out=document.getElementById("v"+id.slice(1));
+  el.value=P[key];
+  function upd(){ P[key]=+el.value; out.textContent=fmt(P[key]); save(); if(after) after(); dump(); }
+  el.addEventListener("input", upd); upd();
+}
+bindRange("pSens","sens", function(v){return v+" マス/s²";});
+bindRange("pFric","fric", function(v){return v.toFixed(1);});
+bindRange("pMax","maxAngle", function(v){return v+"°";});
+bindRange("pRest","rest", function(v){return v.toFixed(2);});
+bindRange("pSm","smooth", function(v){return v.toFixed(2);});
+bindRange("pBall","ballRatio", function(v){return "セルの "+v+"%";}, function(){ if(ball) ball.r=cell*(P.ballRatio/100)/2; });
+
+[].forEach.call(document.querySelectorAll("#segMode button"), function(b){
+  b.onclick=function(){ setMode(b.dataset.m); };
+});
+document.getElementById("calBtn").onclick=calibrate;
+document.getElementById("resetBtn").onclick=resetBall;
+document.getElementById("mazeBtn").onclick=function(){
+  P.seed=(P.seed*7919+13)%1000003; save();
+  maze=makeMaze(N,P.seed); buildWalls(maze); resetBall();
+};
+document.getElementById("driftBtn").onclick=function(){
+  drift={t:performance.now(), x:ball.x, y:ball.y, peak:0};
+};
+
+function critUI(){
+  ["a","b"].forEach(function(k){
+    var c=crit[k], need=(k==="a"?8:7), el=document.getElementById("s"+k.toUpperCase());
+    el.textContent=c[0]+"/"+c[1];
+    el.className="score"+(c[1]>=10 ? (c[0]>=need?" pass":" fail") : "");
+  });
+}
+[].forEach.call(document.querySelectorAll(".crit button"), function(b){
+  b.onclick=function(){ var c=crit[b.dataset.c]; c[1]++; if(b.dataset.v==="1") c[0]++; critUI(); };
+});
+document.getElementById("critReset").onclick=function(){ crit={a:[0,0],b:[0,0]}; critUI(); };
+critUI();
+
+function dump(){
+  document.getElementById("dump").value = JSON.stringify({
+    tiltSensitivity: P.sens, friction: P.fric, maxTiltAngleDeg: P.maxAngle,
+    wallRestitution: P.rest, inputSmoothing: P.smooth, ballSizeRatio: P.ballRatio/100,
+    mazeSize: N
+  }, null, 2);
+}
+
+/* ---------- 起動（iOSの許可はユーザー操作を起点に） ---------- */
+var gate=document.getElementById("gate"), note=document.getElementById("gateNote");
+function enterTouchOnly(msg){
+  setMode("touch");
+  document.querySelector('#segMode button[data-m="tilt"]').disabled=true;
+  note.innerHTML=msg;
+}
+document.getElementById("startBtn").onclick=function(){
+  var DOE=window.DeviceOrientationEvent;
+  function listen(){ window.addEventListener("deviceorientation", onOrient); }
+  if(!DOE){ enterTouchOnly("この端末では傾きセンサーが使えないため、擬似傾きモードで動作します。"); gate.remove(); return; }
+  if(typeof DOE.requestPermission==="function"){
+    DOE.requestPermission().then(function(res){
+      if(res==="granted"){ listen(); setMode(P.mode); }
+      else enterTouchOnly("傾きセンサーの利用が許可されなかったため、擬似傾きモードで動作します。");
+      gate.remove();
+    }).catch(function(){
+      enterTouchOnly("傾きセンサーを開始できませんでした（HTTPSで開いているか確認してください）。擬似傾きモードで動作します。");
+      gate.remove();
+    });
+  } else {
+    listen(); setMode(P.mode); gate.remove();
+    setTimeout(function(){
+      if(!sensorOK && P.mode==="tilt")
+        enterTouchOnly("センサーからの値が届きません（HTTPSで開いているか、端末が対応しているか確認してください）。擬似傾きモードに切り替えました。");
+    }, 1200);
+  }
+};
+
+function checkOrient(){
+  var w=document.getElementById("orientWarn");
+  w.hidden = !(window.innerWidth > window.innerHeight && P.mode==="tilt");
+}
+addEventListener("resize", function(){ layout(); checkOrient(); });
+addEventListener("orientationchange", checkOrient);
+
+setMode(P.mode);
+layout(); dump(); checkOrient();
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
