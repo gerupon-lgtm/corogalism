@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>コロガリウム フェーズ0 ｜ 操作感の検証</title>
+<title>コロガリズム フェーズ0 ｜ 操作感の検証</title>
 <style>
   :root{
     --bg:#0F1513; --panel:#18211E; --panel2:#131B19; --ink:#E7EDEA; --muted:#8B9A95;
@@ -102,7 +102,7 @@
 
   <div class="head">
     <div>
-      <h1>コロガリウム</h1>
+      <h1>コロガリズム</h1>
       <p class="sub">フェーズ0：操作感の検証（開発中の技術検証です）</p>
     </div>
     <span class="badge">PHASE 0</span>
@@ -221,9 +221,9 @@ var P = {                      // 調整パラメータ（localStorageに保存�
 };
 var crit = {a:[0,0], b:[0,0]}; // [成功, 試行]
 
-try{ var saved=JSON.parse(localStorage.getItem("korogarium-p0")||"{}");
+try{ var saved=JSON.parse(localStorage.getItem("corogalism-p0")||"{}");
      for(var k in saved) if(k in P) P[k]=saved[k]; }catch(e){}
-function save(){ try{ localStorage.setItem("korogarium-p0", JSON.stringify(P)); }catch(e){} }
+function save(){ try{ localStorage.setItem("corogalism-p0", JSON.stringify(P)); }catch(e){} }
 
 var board=document.getElementById("board"), cv=document.getElementById("cv"), ctx=cv.getContext("2d");
 var size=0, cell=0, wt=0, walls=[], ball=null, goal=null;

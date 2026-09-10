@@ -1,6 +1,6 @@
-# コロガリウム — フェーズ0（操作感の検証）
+# コロガリズム / Corogalism — フェーズ0（操作感の検証）
 
-傾き操作の迷路ゲーム「コロガリウム」の、**判断のための最小プロトタイプ**。
+傾き操作の迷路ゲーム「コロガリズム」の、**判断のための最小プロトタイプ**。
 7×7の迷路を1画面に収め、傾き操作と擬似傾き操作で転がして、パラメータの当たりを取る。
 
 - ビルド不要。`index.html` 1枚だけ。
@@ -9,7 +9,10 @@
 
 ## 置き方
 
-GitHub Pages（またはHTTPSで配信できる場所）に `index.html` を置く。
+リポジトリ: <https://github.com/gerupon-lgtm/corogalism>
+公開URL: <https://gerupon-lgtm.github.io/corogalism/>
+
+`index.html` をリポジトリ直下に置き、Settings → Pages で `main` ブランチのルートを公開に設定する。
 
 **傾きセンサーはHTTPSでしか動かない。** 開発機のLAN IP（`http://192.168.x.x`）にスマホから
 繋いでもセンサーは反応しない（`localhost` は例外だが、スマホからは開けない）。
