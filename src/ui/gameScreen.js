@@ -1,5 +1,6 @@
 /** S-102 ゲーム（F-142）。キャリブレーションはプレイ中も実行できる（F-103） */
 import { UI, RECOVERY } from '../config/gameConfig.js';
+import { hpLabel, damageLabel, recoveryLabel } from './hpDisplay.js';
 
 export function createGameScreen(root) {
   const el = root.querySelector('#screen-game');
@@ -34,8 +35,8 @@ export function createGameScreen(root) {
         : !v.started ? '動き出すとタイム計測が始まります。' : '';
       if (v.hp) {
         hpBar.value = v.hp.ratio;
-        hpBar.setAttribute('aria-valuetext', `${Math.ceil(Math.max(0, v.hp.value))} / ${Math.ceil(v.hp.max)}`);
-        root.querySelector('#hud-hp').textContent = `${Math.ceil(Math.max(0, v.hp.value))} / ${Math.ceil(v.hp.max)}`;
+        hpBar.setAttribute('aria-valuetext', hpLabel(v.hp));
+        root.querySelector('#hud-hp').textContent = hpLabel(v.hp);
         timeBar.value = v.remainingSec / v.limitSec;
         timeBar.setAttribute('aria-valuetext', `${v.remainingSec.toFixed(1)} 秒`);
         root.querySelector('#hud-remaining').textContent = v.remainingSec.toFixed(1);
@@ -45,6 +46,7 @@ export function createGameScreen(root) {
       if (v.now >= damageUntil) {
         hpBlock.classList.remove('damaged');
         damageText.textContent = '';
+        damageText.removeAttribute('aria-label');
       }
     },
     setStage({ challenge, stageIndex, continuesLeft }) {
@@ -56,16 +58,18 @@ export function createGameScreen(root) {
       el.querySelector('#material-legend').open = false;
       hpBlock.classList.remove('damaged');
       damageText.textContent = '';
+      damageText.removeAttribute('aria-label');
       damageUntil = 0;
     },
-    showDamage(amount, now) {
+    showDamage(before, after, now) {
       damageUntil = now + UI.damageFeedbackMs;
-      damageText.textContent = `−${Math.ceil(amount)}`;
+      damageText.textContent = damageLabel(before, after);
+      damageText.setAttribute('aria-label', damageText.textContent === '微小' ? '1未満のダメージ。HPバーに反映しています。' : `${damageText.textContent} HP`);
       hpBlock.classList.add('damaged');
     },
-    showRecovery(amount, now) {
+    showRecovery(before, after, now) {
       recoveryUntil = now + RECOVERY.feedbackMs;
-      root.querySelector('#recovery-feedback').textContent = `HP +${Number(amount.toFixed(1))}`;
+      root.querySelector('#recovery-feedback').textContent = recoveryLabel(before, after);
     },
     setPaused(paused) { pauseBtn.textContent = paused ? '▶ 再開' : 'Ⅱ ポーズ'; },
     setOrientationWarning(show) { orientWarn.hidden = !show; },

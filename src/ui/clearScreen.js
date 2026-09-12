@@ -1,4 +1,5 @@
 /** S-103 クリア（F-143） */
+import { hpLabel } from './hpDisplay.js';
 export function createClearScreen(root) {
   const el = root.querySelector('#screen-clear');
   const time = el.querySelector('#clear-time');
@@ -16,7 +17,7 @@ export function createClearScreen(root) {
       el.querySelector('#clear-heading').textContent = 'クリア！';
       el.querySelector('#clear-best-field').hidden = challenge;
       el.querySelector('#clear-hp-field').hidden = !challenge;
-      el.querySelector('#clear-hp').textContent = challenge ? `${Math.ceil(Math.max(0, v.hp.value))} / ${Math.ceil(v.hp.max)}` : '—';
+      el.querySelector('#clear-hp').textContent = challenge ? hpLabel(v.hp) : '—';
       el.querySelector('#clear-note').textContent = challenge
         ? `${v.stageIndex}面目${v.noDamage ? ' · ノーダメージ！' : ' · お見事！'}`
         : 'ゴールに到着！';

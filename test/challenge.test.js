@@ -53,8 +53,10 @@ test('満タンでは残り、触れると一度だけ20%回復。被弾履歴�
   assert.equal(item.collected, false);
   p.hp.applyImpact(30, { materialId: 'default' }, 0);
   const before = p.hp.value;
-  let gained = 0;
-  tick(p, { onRecovery: n => gained += n });
+  let gained = 0, change;
+  tick(p, { onRecovery: (n, snapshot) => { gained += n; change = snapshot; } });
+  assert.equal(change.before, before);
+  assert.equal(change.after, p.hp.value);
   assert.ok(Math.abs(gained - Math.min(p.hp.max * 0.2, p.hp.max - before)) < 1e-8);
   assert.equal(item.collected, true);
   assert.equal(p.hp.tookDamage, true);

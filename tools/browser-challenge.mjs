@@ -43,10 +43,12 @@ try {
     // 衝突でHPを減らしてから取得。既存物理・回復表示を同じ経路で検証。
     await page.evaluate(() => window.__corogalism.setTilt(-1, 0)); await page.clock.runFor(1300);
     assert.ok((await state()).hp.value < (await state()).hp.max);
+    const beforeRecovery = Math.ceil((await state()).hp.value);
     await page.evaluate(() => { const s = window.__corogalism.state; window.__corogalism.setTilt(0, 0); window.__corogalism.teleport(s.recovery.x, s.recovery.y); });
     await page.clock.runFor(32);
     assert.equal((await state()).recovery.collected, true);
-    assert.match(await page.locator('#recovery-feedback').textContent(), /HP \+/);
+    const displayedRecovery = Math.ceil((await state()).hp.value) - beforeRecovery;
+    assert.equal(await page.locator('#recovery-feedback').textContent(), displayedRecovery ? `HP +${displayedRecovery}` : 'HPを少し回復');
     await page.screenshot({ path: fileURLToPath(new URL(`heal-${width}.png`, output)), fullPage: true });
     for (let n = 1; n < 4; n++) { await clear(); await click('btn-next'); await ready(); }
     assert.equal((await state()).theme.id, 'bounce');

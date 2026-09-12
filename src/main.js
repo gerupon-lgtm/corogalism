@@ -360,9 +360,11 @@ function frame(now) {
     if (countdownMs === 0) resetInput();
   } else if (isPlaying() && play.status === 'playing') {
     tilt.update(dt, BASE.inputSmoothing);
+    const hpBefore = play.hp?.value;
+    let recovery = null;
     const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact,
-      onRecovery: (amount) => { game.showRecovery(amount, now); sound.effect('select'); } });
-    if (damage > 0) game.showDamage(damage, now);
+      onRecovery: (_amount, change) => { recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
+    if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);
     if (!handled && play.status === 'clear') finishStage();
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
   }

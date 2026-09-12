@@ -51,8 +51,9 @@ export function createStagePlay(seed, difficulty = null) {
         const item = stage.recovery;
         if (item && !item.collected && hp.value < hp.max
           && Math.hypot(actor.x - item.x, actor.y - item.y) < actor.r + RECOVERY.radius) {
+          const before = hp.value;
           const gained = hp.heal(hp.max * RECOVERY.healRatio);
-          if (gained > 0) { item.collected = true; onRecovery?.(gained); }
+          if (gained > 0) { item.collected = true; onRecovery?.(gained, { before, after: hp.value }); }
         }
         if (Math.hypot(actor.x - goal.x, actor.y - goal.y) < TUNING.goalRadius) status = 'clear';
       }
