@@ -1,8 +1,12 @@
+/* Google Fontsの配布版を同梱。取得できなくてもOSの日本語フォントで表示する。 */
+@font-face{font-family:"M PLUS 1p";font-style:normal;font-weight:400;src:url('assets/fonts/MPLUS1p-Regular.woff2') format('woff2');font-display:swap}
+@font-face{font-family:"M PLUS 1p";font-style:normal;font-weight:700;src:url('assets/fonts/MPLUS1p-Bold.woff2') format('woff2');font-display:swap}
+@font-face{font-family:"M PLUS 1p";font-style:normal;font-weight:900;src:url('assets/fonts/MPLUS1p-Black.woff2') format('woff2');font-display:swap}
 :root{
   --bg:#0F1513; --panel:#18211E; --panel2:#131B19; --ink:#E7EDEA; --muted:#8B9A95;
   --line:#2E3B37; --accent:#FF6A43; --accent-ink:#1A0B06; --warn:#D9A441; --ok:#5FBF92;
-  --sans:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-  --mono:"SFMono-Regular",Menlo,Consolas,monospace;
+  --sans:"M PLUS 1p","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;
+  --mono:var(--sans);
 }
 *{box-sizing:border-box}
 /* .panel の display:flex が hidden 属性を上書きしてしまうため、明示的に打ち消す。
@@ -155,14 +159,15 @@ body.board-session .wrap{gap:8px}
   .game-toast .result{gap:5px}.game-toast .result dd{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.game-toast{animation:none}*{scroll-behavior:auto!important}}
 /* 比較画像左下のロゴ。葉はSVG、文字は実テキストで小画面でも鮮明に保つ。 */
-.brand,.brand-footer{display:flex;align-items:center;gap:6px;color:#dfe5cc;font-weight:400}
+.brand{display:flex;align-items:center;gap:6px;color:#dfe5cc;font-weight:400}
 .brand{line-height:1.35}
 .brand-leaf{width:22px;height:26px;flex:none;color:#a8c994;filter:drop-shadow(0 1px 2px #0003)}
 .brand-word{font-family:"Trebuchet MS","Segoe UI",sans-serif;font-size:23px;font-weight:400;letter-spacing:.025em}
-.brand-footer{margin-bottom:11px}
-.brand-footer .brand-word{font-size:20px}
-.brand-footer .brand-leaf{width:20px;height:23px}
-.brand-tagline{font-size:7px;line-height:1.8;letter-spacing:.24em;color:#9da991;margin-left:8px}
+.head{display:block;position:relative}
+.head .badge{position:absolute;right:0;bottom:0}
+.head .sub{padding-right:62px;font-size:10px}
+.brand-lockup{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.brand-tagline{margin:0;font-size:7px;line-height:1.8;letter-spacing:.18em;color:#b6c3a7;white-space:nowrap}
 /* TIME / HP：トイパネル、読みやすい数値、丸いゲル状ゲージ。 */
 .challenge-hud{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:stretch}
 .stage-line{grid-column:1/-1;min-height:25px}
@@ -202,7 +207,7 @@ progress::-moz-progress-bar{border-radius:999px;background:linear-gradient(#a5d9
 /* タイトルは迷路を置かず、同じトイ調のモード選択から始める。 */
 body[data-screen="mode"] .wrap{padding-top:28px;gap:22px}
 body[data-screen="mode"] .head{align-items:center}
-body[data-screen="mode"] .brand-word{font-size:27px}
+body[data-screen="mode"] .brand-word{font-size:clamp(22px,6vw,27px)}
 .mode-menu{padding:22px 18px 18px;gap:14px;border:2px solid #c6ac83;border-radius:23px;
   background:linear-gradient(135deg,#fdf1d7,#ead6b4);box-shadow:inset 0 1px 0 #fff9e8,0 4px 0 #877151,0 8px 22px #0003}
 .mode-menu h2{justify-content:center;margin:0 0 7px;color:#765033;font-size:19px;line-height:1.4}
@@ -214,14 +219,13 @@ body[data-screen="mode"] .brand-word{font-size:27px}
 .mode-menu .mode-card strong{display:flex;align-items:flex-start;flex-direction:column;gap:3px;padding-right:22px;color:#775037;font-size:19px}
 .mode-menu .mode-card span{font-size:10px;color:#a4845c;letter-spacing:.1em}
 .mode-menu .mode-card small{font-size:12px;color:#8a7252;line-height:1.7;text-align:left}
+.mode-menu .mode-description{display:flex;flex-wrap:wrap}
+.mode-menu .mode-description > span{font:inherit;color:inherit;letter-spacing:normal;max-width:100%}
 .mode-menu #btn-practice{border-color:#9dad7b;background:linear-gradient(#f7f8df,#e3e8c3);box-shadow:inset 0 1px 0 #fffde9,0 3px 0 #8a996e}
 .mode-menu #btn-practice strong,.mode-menu #btn-practice::after{color:#617a49}
 .mode-menu #btn-challenge strong,.mode-menu #btn-challenge::after{color:#b56930}
 .menu-instruction{font-size:11px;text-align:center;line-height:1.8;color:#8b7150;margin:5px 0 0}
 .mode-menu #mode-note:empty{display:none}.mode-menu #mode-note{color:#8b7150;font-size:10px;text-align:center}
-.mode-menu .result{border-color:#cdb590;background:#cfbb99;border-radius:10px}
-.mode-menu .result div{background:#efdfc3;padding:8px 4px}.mode-menu .result dt{color:#967b55;font-size:9px}
-.mode-menu .result dd{color:#785b37;font-size:11px}
 .mode-menu .ghost{background:#f7e9cc;border-color:#c8ab7d;border-radius:999px;color:#8b6a3f;box-shadow:0 2px 0 #bea079}
 .mode-menu :is(button):focus-visible{outline-color:#77542e;outline-offset:4px}
 /* 準備中は盤面の位置を固定したまま球と時計を止める。下部の設定は操作可能。 */
@@ -247,3 +251,41 @@ body[data-screen="mode"] .brand-word{font-size:27px}
 .board-overlay .pause-card span{display:block;padding:0;margin-bottom:13px;background:none;border:0;color:#86603b;font-size:20px;font-weight:800}
 #btn-resume{width:100%;min-height:40px;border-radius:999px;border:1px solid #c5742a;background:linear-gradient(#ffbe62,#ee8a2f);
   color:#fff9e9;font-size:16px;font-weight:800;box-shadow:inset 0 1px 0 #ffe9b5,0 3px 0 #a15b29;text-shadow:0 1px 0 #af6226}
+/* 記録は沈んだ表から、ラベルと数値が独立した明るいカードへ。 */
+.records-heading{margin:8px 0 -5px;text-align:center;font-size:13px;font-weight:700;color:#6c4d30;letter-spacing:.08em}
+.record-cards{display:grid;grid-template-columns:1fr;gap:10px;border:0;background:none;overflow:visible}
+.record-cards div{padding:12px 14px;text-align:left;border:1px solid #d3b58a;border-radius:13px;
+  background:linear-gradient(120deg,#fffdf3,#fff0d5);box-shadow:inset 0 1px 0 #fff,0 3px 0 #ba9b6e,0 5px 8px #8d62351a}
+.record-cards dt{color:#745332;font-size:11px;font-weight:700;margin-bottom:5px}
+.record-cards dd{color:#513922;font-size:19px;font-weight:900;line-height:1.5;overflow-wrap:anywhere}
+.record-cards .record-empty{font-size:15px;font-weight:400;color:#735b40}
+.record-time{font-size:12px;font-weight:400;color:#745332;margin-left:12px;white-space:nowrap}
+/* 操作用ボタンと設定カードを同じクリーム色・面取り・押し込みで揃える。 */
+:is(#screen-game,.settings-menu) button.ghost{min-height:44px;border:1px solid #c9aa7b;border-radius:999px;
+  background:linear-gradient(#fff4db,#e9d2ac);color:#704c2e;font-size:13px;font-weight:700;
+  box-shadow:inset 0 1px 0 #fffaf0,0 3px 0 #93734b}
+:is(#screen-game,.settings-menu) button.cal{border-color:#cf9559;background:linear-gradient(#ffe9bd,#edc88f);color:#815125}
+:is(#screen-game,.settings-menu) button.ghost:active{transform:translateY(2px);box-shadow:0 1px 0 #93734b}
+#screen-game .note,#screen-game .text-button,#screen-game details{color:#bfc7b6}
+body[data-screen="settings"] .wrap{padding-top:28px;gap:22px}
+body[data-screen="settings"] footer{display:none}
+.settings-menu{padding:23px 18px;gap:20px;border:2px solid #c6ac83;border-radius:23px;
+  background:linear-gradient(135deg,#fdf1d7,#ead6b4);color:#6f4d2d;
+  box-shadow:inset 0 1px 0 #fff9e8,0 4px 0 #877151,0 8px 22px #0003}
+.settings-menu h2{justify-content:center;font-size:22px;margin:-10px 0 -14px}
+.settings-intro{font-size:12px;text-align:center;color:#795b3b;margin:0;line-height:1.8}
+.settings-menu .field{padding:15px 12px;gap:14px;border:1px solid #d9bf99;border-radius:15px;background:#fff6e1;box-shadow:0 2px 0 #d0b58c}
+.settings-menu :is(.legend,.field label){color:#6a4b30;font-size:13px;font-weight:700;flex-wrap:wrap}
+.settings-menu .field label b{font-size:20px;color:#a3622c;font-weight:900}
+.settings-menu .seg{flex-direction:column;gap:9px}
+.settings-menu .seg button{min-height:44px;padding:12px;border-radius:12px;border:1px solid #d1b890;
+  background:linear-gradient(#fffdf1,#f1e3c9);color:#775435;font-size:13px;box-shadow:0 2px 0 #c6aa80}
+.settings-menu .seg button[aria-pressed="true"]{border-color:#7b9758;background:linear-gradient(#e6edc8,#ccdba9);color:#435f32;font-weight:700;box-shadow:inset 0 0 0 1px #f4f8dd,0 2px 0 #829766}
+.settings-menu .seg button[aria-pressed="true"]::before{content:'✓ ';font-weight:900}
+.settings-menu input[type=range]{accent-color:#b9672c;min-height:32px;cursor:pointer}
+.settings-menu button.primary{min-height:44px;padding:10px 6px;border:1px solid #c5742a;border-radius:999px;
+  background:linear-gradient(#ffbe62,#ee8a2f);color:#563216;font-size:13px;font-weight:900;
+  box-shadow:inset 0 1px 0 #ffe9b5,0 3px 0 #a15b29}
+.settings-menu .note{color:#785b3d;font-size:12px}.settings-menu .note:empty{display:none}
+.settings-menu :is(button,input):focus-visible{outline-color:#77542e;outline-offset:4px}
+@media(max-width:360px){.settings-menu{padding:20px 13px;gap:18px}.brand-tagline{font-size:7px;letter-spacing:.1em}.sub{font-size:10px}}

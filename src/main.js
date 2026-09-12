@@ -123,7 +123,7 @@ function showScreen(name) {
   const previousScreen = screen;
   screen = name;
   const ended = name === 'clear' || name === 'over';
-  const boardSession = name === 'game' || ended || (name === 'settings' && ['game', 'clear', 'over'].includes(settingsUi.returnTo));
+  const boardSession = name === 'game' || ended;
   root.querySelectorAll('section.panel, section.game-toast').forEach((el) => {
     el.hidden = el.id !== `screen-${name}` && !(ended && el.id === 'screen-game');
   });
@@ -142,6 +142,9 @@ function showScreen(name) {
   lastFrame = performance.now();
   updateHint();
   resize();
+  // 設定は先頭から読める独立画面にし、戻るときは元の操作位置を復元する。
+  if (name === 'settings') window.scrollTo(0, 0);
+  else if (previousScreen === 'settings') window.scrollTo(0, settingsUi.returnScroll || 0);
   // focus()の既定スクロールを抑え、トースト内から操作を続けられるようにする。
   if (ended) {
     const button = name === 'clear' ? find('btn-next') : find('btn-continue').disabled ? find('btn-run-end') : find('btn-continue');
@@ -295,6 +298,7 @@ async function selectMode(mode) {
 function toSettings(from) {
   if (from === 'game') setPaused(true);
   settingsUi.returnTo = from;
+  settingsUi.returnScroll = window.scrollY;
   settingsUi.setTiltAvailable(tiltAllowed, tiltDeniedReason);
   settingsUi.render(settings);
   showScreen('settings');

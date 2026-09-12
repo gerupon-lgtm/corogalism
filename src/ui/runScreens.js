@@ -2,12 +2,22 @@
 const seconds = (ms) => `${(ms / 1000).toFixed(2)} 秒`;
 const bestLabel = (best) => best ? `${best.stages}面 / ${seconds(best.totalTimeMs)}` : '記録なし';
 
+function renderModeBest(el, best) {
+  el.classList.toggle('record-empty', !best);
+  el.replaceChildren();
+  if (!best) { el.textContent = 'これから挑戦'; return; }
+  const time = el.ownerDocument.createElement('span');
+  time.className = 'record-time';
+  time.textContent = seconds(best.totalTimeMs);
+  el.append(`${best.stages} 面`, time);
+}
+
 export function createRunScreens(root) {
   const find = (id) => root.querySelector(`#${id}`);
   return {
     setModeBests(bests, note) {
-      find('mode-best-no').textContent = bestLabel(bests.noContinue);
-      find('mode-best-continue').textContent = bestLabel(bests.withContinue);
+      renderModeBest(find('mode-best-no'), bests.noContinue);
+      renderModeBest(find('mode-best-continue'), bests.withContinue);
       find('mode-note').textContent = note;
     },
     setOver(run) {

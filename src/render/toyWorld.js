@@ -33,6 +33,20 @@ export function drawToyWall(ctx, wall, camera) {
       const dw=Math.min(tileWidth,length-offset);
       ctx.drawImage(wallAtlas,0,sy,wallAtlas.naturalWidth*(dw/tileWidth),sh,offset,0,dw,thickness);
     }
+    // C案の成形パーツらしい端の丸みと下面の厚みを、衝突矩形内で強調する。
+    const bevel=ctx.createLinearGradient(0,0,0,thickness);
+    bevel.addColorStop(0,'#fff9e57a');bevel.addColorStop(.2,'#ffffff00');
+    bevel.addColorStop(.65,'#00000000');bevel.addColorStop(1,'#07100b88');
+    ctx.fillStyle=bevel;ctx.fillRect(0,0,length,thickness);
+    if (['default','spike','rubber'].includes(wall.materialId)) {
+      const capWidth=thickness*.32;
+      for(const x of [0,length-capWidth]) {
+        const cap=ctx.createLinearGradient(x,0,x+capWidth,thickness);
+        cap.addColorStop(0,a.edge);cap.addColorStop(.4,a.fill);cap.addColorStop(1,a.pattern);
+        ctx.fillStyle=cap;rounded(ctx,x,0,capWidth,thickness,thickness*.16);ctx.fill();
+        ctx.fillStyle='#fff8df66';ctx.fillRect(x+capWidth*.2,thickness*.15,Math.max(.5,thickness*.05),thickness*.6);
+      }
+    }
     ctx.restore();return;
   }
   const gradient = ctx.createLinearGradient(0,0,0,thickness);

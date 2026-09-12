@@ -13,13 +13,16 @@
 
   <header class="head">
     <div>
+      <div class="brand-lockup">
       <h1 class="brand" aria-label="Corogalism コロガリズム">
         <svg class="brand-leaf" viewBox="0 0 32 32" aria-hidden="true"><path d="M27 3C23 8 10 4 6 13C2 21 9 28 17 25C25 23 24 12 27 3Z" fill="currentColor"/><path d="M5 29C10 19 15 15 22 10" fill="none" stroke="#e1ebc6" stroke-width="1.3" stroke-linecap="round"/></svg>
         <span class="brand-word">Corogalism</span>
       </h1>
+      <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
+      </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
-    <span class="badge">v0.2.3</span>
+    <span class="badge">v0.2.4</span>
   </header>
 
   <div id="challenge-hud" class="challenge-hud" hidden>
@@ -71,12 +74,13 @@
   <!-- S-101 / S-105 タイトル兼モード選択 -->
   <section id="screen-mode" class="panel mode-menu">
     <p class="menu-eyebrow">ROLL AT YOUR OWN PACE</p>
-    <h2>今日は、どちらで遊ぶ？</h2>
-    <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small>HP・制限時間なし。同じ迷路でタイムを縮めよう。</small></button>
+    <h2>今日はどちらで遊ぶ？</h2>
+    <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small class="mode-description"><span>HP・制限時間なし。</span><span>同じ迷路でタイムを縮めよう。</span></small></button>
     <button class="mode-card" id="btn-challenge" type="button"><strong>チャレンジ <span>面数に挑戦</span></strong><small>HPと制限時間あり。クリアを重ねて先へ進もう。</small></button>
-    <p class="menu-instruction">楽に持てる角度でモードを選んでください。<br>3・2・1のあとに始まります。</p>
+    <p class="menu-instruction">楽に持てる角度でモードを選んでください。</p>
     <p class="note" id="mode-note"></p>
-    <dl class="result two-columns">
+    <h3 class="records-heading">自己ベスト</h3>
+    <dl class="result record-cards">
       <div><dt>ノーコンティニュー記録</dt><dd id="mode-best-no">—</dd></div>
       <div><dt>コンティニュー使用記録</dt><dd id="mode-best-continue">—</dd></div>
     </dl>
@@ -117,8 +121,10 @@
   </section>
 
   <!-- S-104 設定 -->
-  <section id="screen-settings" class="panel" hidden>
-    <h2>設定</h2>
+  <section id="screen-settings" class="panel settings-menu" hidden>
+    <p class="menu-eyebrow">MAKE YOURSELF COMFORTABLE</p>
+    <h2>操作の設定</h2>
+    <p class="settings-intro">持ちやすい角度で あなたに合う操作に。</p>
     <div class="field">
       <span class="legend">操作モード</span>
       <div class="seg">
@@ -132,16 +138,12 @@
     </div>
     <div class="row">
       <button class="ghost cal" id="btn-settings-calibrate" type="button">基準をとり直す</button>
-      <button class="ghost" id="btn-settings-close" type="button">閉じる</button>
+      <button class="primary" id="btn-settings-close" type="button">設定を終える</button>
     </div>
     <p class="note" id="settings-note"></p>
   </section>
 
   <footer class="note">
-    <div class="brand-footer" aria-label="Corogalism — A small maze, a big feeling.">
-      <svg class="brand-leaf" viewBox="0 0 32 32" aria-hidden="true"><path d="M27 3C23 8 10 4 6 13C2 21 9 28 17 25C25 23 24 12 27 3Z" fill="currentColor"/><path d="M5 29C10 19 15 15 22 10" fill="none" stroke="#e1ebc6" stroke-width="1.3" stroke-linecap="round"/></svg>
-      <span class="brand-word">Corogalism</span><span class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</span>
-    </div>
     SIKUMI LAB · 端末を傾けるか、盤面を押して操作します。<br>
     センサーが使えないときも、タッチ／クリックで遊べます。
   </footer>

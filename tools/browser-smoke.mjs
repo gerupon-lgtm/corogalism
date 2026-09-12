@@ -82,8 +82,8 @@ try {
   assert.equal(records.noContinue.stages, 1); assert.equal(records.withContinue.stages, 2);
   await page.screenshot({ path: fileURLToPath(new URL('result-375.png', output)), fullPage: true });
   await page.reload(); await page.clock.runFor(32);
-  assert.match(await page.locator('#mode-best-no').textContent(), /1面/);
-  assert.match(await page.locator('#mode-best-continue').textContent(), /2面/);
+  assert.match(await page.locator('#mode-best-no').textContent(), /1\s*面/);
+  assert.match(await page.locator('#mode-best-continue').textContent(), /2\s*面/);
   await click('btn-challenge');
   await page.evaluate(() => { Object.defineProperty(document, 'hidden', { configurable: true, value: true }); document.dispatchEvent(new Event('visibilitychange')); });
   await page.clock.fastForward(60000);

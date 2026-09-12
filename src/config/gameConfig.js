@@ -30,7 +30,7 @@ export const CLAMP = {
 
 /** 物理・描画の固定値（層構造の対象外） */
 export const TUNING = {
-  wallThickness: 0.10,   // セルに対する壁の厚み比
+  wallThickness: 0.24,   // セルに対する壁の厚み比
   maxSpeed: 30,          // マス/s。トンネリング防止の速度上限
   maxDt: 1 / 20,         // s。タブ復帰時などの巨大なdtを切る
   wallHitSpeed: 2.0,     // マス/s。これを超える法線速度の衝突を「壁ヒット」と数える
