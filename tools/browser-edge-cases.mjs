@@ -1,4 +1,5 @@
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const baseUrl = new URL(process.env.BASE_URL || 'http://127.0.0.1:8765/');
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
@@ -22,7 +23,7 @@ async function setup(kind = 'unsupported', blockStorage = false) {
   const page = await context.newPage();
   page.on('pageerror', e => errors.push(e.message));
   await page.clock.install(); await page.clock.pauseAt(new Date(Date.now() + 1000));
-  await page.goto('http://127.0.0.1:8765/?debug=1&seed=123');
+  await page.goto(new URL('?debug=1&seed=123', baseUrl).href);
   await page.clock.runFor(32);
   const click = async (id) => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); };
   const state = () => page.evaluate(() => window.__corogalism.state);

@@ -1,6 +1,6 @@
 # フェーズ2の検証（2026-09-12）
 
-対象: ローカル `v0.2.0`。公開サイトには未反映。
+対象: `v0.2.0`。ローカルに加え、公開サイト `https://gerupon-lgtm.github.io/corogalism/` でも両ブラウザスクリプトが成功。
 
 ## 結果
 
@@ -47,6 +47,9 @@ node tools/browser-smoke.mjs
 node tools/browser-edge-cases.mjs
 ```
 
+公開版を確認する場合は実行前に `$env:BASE_URL = 'https://gerupon-lgtm.github.io/corogalism/'` を設定する。
+ローカルへ戻す場合は `Remove-Item Env:BASE_URL -ErrorAction SilentlyContinue`。
+
 ブラウザスクリプトはテスト専用の新規ブラウザコンテキストを使用し、ユーザーの普段の記録は変更しない。
 時刻の制御と既存の `?debug=1` フックで終了条件を再現する。記録テストでは成功・失敗両方を確認する。
 
@@ -67,4 +70,4 @@ node tools/browser-edge-cases.mjs
 
 Pixel 6a（Chrome）とiPhone XR（Safari）で、HTTPSに公開した版を試遊する。
 操作感・被弾の分かりやすさ・素材の識別・時間の厳しさ・腕の負担を確認する。
-今回のローカル作業フォルダには `.git` がないため、コミット・push・デプロイは未実施。
+Git初期化・コミット・push・Pages公開は完了。デプロイ記録は `../deployment.md`。

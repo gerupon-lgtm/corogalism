@@ -8,11 +8,11 @@ Vanilla JavaScript・Canvas、ビルド不要。バックエンド・外部API�
 |---|---|
 | フェーズ0（操作感） | 合格。Pixel 6a / iPhone XRで過去に確認済み |
 | フェーズ1（迷路生成・タイムアタック） | 完了・公開済み（従来の引き継ぎ記録） |
-| フェーズ2（HP・素材・ラン・制限時間） | **v0.2.0 ローカル実装・自動検証済み。デプロイとT-209の実機試遊が残り** |
+| フェーズ2（HP・素材・ラン・制限時間） | **v0.2.0 公開済み。公開URLで自動検証済み、T-209の実機試遊が残り** |
 
-今回のフォルダにはGit管理情報がなく、フェーズ2のコミット・pushはしていません。
+このフォルダをGit初期化し、既存のリモート履歴に接続してフェーズ2をmainへpushしました。
 リポジトリは [gerupon-lgtm/corogalism](https://github.com/gerupon-lgtm/corogalism)、
-公開先は [GitHub Pages](https://gerupon-lgtm.github.io/corogalism/)。今回、公開版の更新確認はしていません。
+公開先は [GitHub Pages](https://gerupon-lgtm.github.io/corogalism/)。公開版の更新とブラウザ動作を確認済みです（2026-09-12）。詳細は [デプロイ記録](docs/deployment.md)。
 
 ## 起動と検証
 

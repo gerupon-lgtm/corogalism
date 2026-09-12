@@ -1,4 +1,5 @@
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const baseUrl = new URL(process.env.BASE_URL || 'http://127.0.0.1:8765/');
 import assert from 'node:assert/strict';
 import { mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -17,7 +18,7 @@ const click = async (id) => { await page.locator(`#${id}`).click({ force: true }
 const goal = () => page.evaluate(() => { const g = window.__corogalism.state.goal; window.__corogalism.teleport(g.x, g.y); });
 const timeout = async () => { await page.evaluate(() => window.__corogalism.teleport(0.5, 0.5)); await page.clock.fastForward((await state()).limitSec * 1000 + 100); };
 try {
-  await page.goto('http://127.0.0.1:8765/?debug=1&seed=123');
+  await page.goto(new URL('?debug=1&seed=123', baseUrl).href);
   await page.clock.runFor(32);
   assert.equal(await page.locator('section.panel:visible').count(), 1);
   await click('btn-start');
@@ -93,7 +94,7 @@ try {
     const rect = await page.locator('#board').boundingBox();
     assert.ok(rect.x >= 0 && rect.x + rect.width <= viewport.width);
   }
-  await page.goto('http://127.0.0.1:8765/');
+  await page.goto(baseUrl.href);
   assert.equal(await page.evaluate(() => '__corogalism' in window), false);
   assert.deepEqual(errors, []);
   console.log('PASS: practice, pointer input, pause/settings/visibility, challenge clear/timeout/continue limit, separate records/reload, mobile layout, production hook absence; no page errors.');
