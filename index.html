@@ -19,7 +19,7 @@
       </h1>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
-    <span class="badge">v0.2.2</span>
+    <span class="badge">v0.2.3</span>
   </header>
 
   <div id="challenge-hud" class="challenge-hud" hidden>
@@ -33,10 +33,11 @@
       <progress id="hp-bar" max="1" value="1" aria-label="HP"></progress>
     </div>
   </div>
-  <div class="board" id="board">
+  <div id="play-toolbar" class="play-toolbar" hidden><span id="play-mode-label">プラクティス</span><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div>
+  <div class="board" id="board" hidden>
     <canvas id="canvas" aria-label="7×7の迷路。オレンジのビー玉を右下のカップへ導きます"></canvas>
     <div id="toast-layer" class="toast-layer" hidden>
-  <section id="screen-clear" class="game-toast" role="dialog" aria-modal="true" aria-labelledby="clear-heading" hidden>
+  <section id="screen-clear" class="game-toast" role="region" aria-labelledby="clear-heading" hidden>
     <h2><span id="clear-heading">クリア</span><span class="best-badge" id="clear-badge" hidden>自己ベスト更新</span></h2>
     <dl class="result">
       <div><dt>タイム</dt><dd id="clear-time">—</dd></div>
@@ -51,7 +52,7 @@
     </div>
     <button class="text-button" id="btn-clear-exit" type="button">モード選択へ戻る</button>
   </section>
-  <section id="screen-over" class="game-toast" role="dialog" aria-modal="true" aria-labelledby="over-heading" hidden>
+  <section id="screen-over" class="game-toast" role="region" aria-labelledby="over-heading" hidden>
     <h2 id="over-heading">ゲームオーバー</h2>
     <p id="over-note" class="lead"></p>
     <dl class="result two-columns"><div><dt>クリア面数</dt><dd id="over-stages">0 面</dd></div><div><dt>合計クリアタイム</dt><dd id="over-time">0.00 秒</dd></div></dl>
@@ -60,33 +61,26 @@
     <button class="ghost" id="btn-run-end" type="button">ランを終えて結果を見る</button>
   </section>
     </div>
-    <div id="board-overlay" class="board-overlay" hidden><span id="board-status"></span></div>
+    <div id="countdown-layer" class="countdown-layer" role="status" aria-live="polite" hidden>
+      <div class="countdown-medallion"><span class="countdown-label">READY</span><strong id="countdown-number">3</strong><span class="countdown-caption">まもなくスタート</span></div>
+    </div>
+    <div id="board-overlay" class="board-overlay" hidden><div class="pause-card"><span id="board-status"></span><button id="btn-resume" type="button">▶ 再開</button></div></div>
   </div>
-  <p class="cap" id="play-hint">オレンジのビー玉を、右下のカップへ。</p>
+  <p class="cap" id="play-hint" hidden>オレンジのビー玉を、右下のカップへ。</p>
 
-  <!-- S-101 タイトル -->
-  <section id="screen-title" class="panel">
-    <p class="lead">端末を、自分がいちばん楽に持てる角度で構えてから始めてください。その角度を「水平」として記録します。</p>
-    <div class="row">
-      <button class="primary" id="btn-start" type="button">この向きを基準にして始める</button>
-    </div>
-    <div class="row">
-      <button class="ghost" id="btn-title-settings" type="button">設定</button>
-    </div>
-    <p class="note" id="title-note"></p>
-  </section>
-
-  <!-- S-105 モード選択 -->
-  <section id="screen-mode" class="panel" hidden>
-    <h2>遊び方を選ぶ</h2>
-    <button class="mode-card" id="btn-challenge" type="button"><strong>チャレンジ <span>面数に挑戦</span></strong><small>HPと制限時間あり。クリアを重ねて先へ進もう。</small></button>
+  <!-- S-101 / S-105 タイトル兼モード選択 -->
+  <section id="screen-mode" class="panel mode-menu">
+    <p class="menu-eyebrow">ROLL AT YOUR OWN PACE</p>
+    <h2>今日は、どちらで遊ぶ？</h2>
     <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small>HP・制限時間なし。同じ迷路でタイムを縮めよう。</small></button>
+    <button class="mode-card" id="btn-challenge" type="button"><strong>チャレンジ <span>面数に挑戦</span></strong><small>HPと制限時間あり。クリアを重ねて先へ進もう。</small></button>
+    <p class="menu-instruction">楽に持てる角度でモードを選んでください。<br>3・2・1のあとに始まります。</p>
     <p class="note" id="mode-note"></p>
     <dl class="result two-columns">
       <div><dt>ノーコンティニュー記録</dt><dd id="mode-best-no">—</dd></div>
       <div><dt>コンティニュー使用記録</dt><dd id="mode-best-continue">—</dd></div>
     </dl>
-    <button class="ghost" id="btn-mode-back" type="button">タイトルへ</button>
+    <button class="ghost" id="btn-mode-settings" type="button">操作の設定</button>
   </section>
 
   <!-- S-102 ゲーム -->
@@ -99,7 +93,6 @@
     </dl>
     <p id="game-status" class="note" role="status"></p>
     <div class="row">
-      <button class="ghost" id="btn-pause" type="button">一時停止</button>
       <button class="ghost cal" id="btn-calibrate" type="button">基準をとり直す</button>
       <button class="ghost" id="btn-game-settings" type="button">設定</button>
     </div>

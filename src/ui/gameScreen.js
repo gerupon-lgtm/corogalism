@@ -7,7 +7,7 @@ export function createGameScreen(root) {
   const hits = el.querySelector('#hud-hits');
   const tilt = el.querySelector('#hud-tilt');
   const mode = el.querySelector('#hud-mode');
-  const pauseBtn = el.querySelector('#btn-pause');
+  const pauseBtn = root.querySelector('#btn-pause');
   const calBtn = el.querySelector('#btn-calibrate');
   const settingsBtn = el.querySelector('#btn-game-settings');
   const orientWarn = el.querySelector('#orient-warn');
@@ -27,6 +27,7 @@ export function createGameScreen(root) {
       mode.textContent = v.mode === 'tilt' ? '傾き' : '擬似';
       calBtn.disabled = v.mode !== 'tilt';
       el.querySelector('#game-status').textContent = v.paused ? '一時停止中。再開ボタンで続けます。'
+        : v.preparing ? '準備ができたら、3・2・1でスタート！'
         : !v.started ? '動き出すとタイム計測が始まります。' : '';
       if (v.hp) {
         hpBar.value = v.hp.ratio;
@@ -44,6 +45,7 @@ export function createGameScreen(root) {
       }
     },
     setStage({ challenge, stageIndex, continuesLeft }) {
+      root.querySelector('#play-mode-label').textContent = challenge ? 'CHALLENGE' : 'PRACTICE';
       root.querySelector('#hud-stage').textContent = `${stageIndex}面目`;
       root.querySelector('#hud-continues').textContent = `コンティニュー 残り${continuesLeft}回`;
       el.querySelector('#btn-game-exit').textContent = challenge ? 'ランを終えて結果を見る' : 'モード選択へ戻る';
@@ -58,7 +60,7 @@ export function createGameScreen(root) {
       damageText.textContent = `−${Math.ceil(amount)}`;
       hpBlock.classList.add('damaged');
     },
-    setPaused(paused) { pauseBtn.textContent = paused ? '再開' : '一時停止'; },
+    setPaused(paused) { pauseBtn.textContent = paused ? '▶ 再開' : 'Ⅱ ポーズ'; },
     setOrientationWarning(show) { orientWarn.hidden = !show; },
     onPause(cb) { pauseBtn.addEventListener('click', cb); },
     onCalibrate(cb) { calBtn.addEventListener('click', cb); },

@@ -1,0 +1,77 @@
+import assert from 'node:assert/strict';
+import { mkdir } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const base = new URL(process.env.BASE_URL || 'http://127.0.0.1:8765/');
+const output = new URL('../docs/verification/start-flow/', import.meta.url);
+await mkdir(output,{recursive:true});
+const browser=await chromium.launch({executablePath:process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
+const errors=[];
+try {
+  for(const width of [320,375,390,1280]) {
+    const context=await browser.newContext({viewport:{width,height:width===320?568:812},deviceScaleFactor:2});
+    await context.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true}));
+    const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+    await page.clock.install();await page.clock.pauseAt(new Date(Date.now()+1000));
+    await page.goto(new URL('?debug=1&seed=123',base).href);await page.clock.runFor(32);
+    const state=()=>page.evaluate(()=>window.__corogalism.state);
+    const click=async id=>{await page.locator(`#${id}`).click({force:true});await page.clock.runFor(32);};
+    const ready=async()=>{await page.clock.runFor((await state()).countdownMs+32);};
+    const snapshot=()=>page.evaluate(()=>{const s=window.__corogalism.state;return {actor:s.actor,time:s.timeMs,hp:s.hp,remaining:s.remainingSec};});
+    const clear=async()=>{await page.evaluate(()=>{const {goal}=window.__corogalism.state;window.__corogalism.teleport(goal.x,goal.y);});await page.clock.runFor(32);};
+    assert.equal((await state()).screen,'mode');assert.equal(await page.locator('#board').isVisible(),false);
+    assert.deepEqual(await page.locator('.mode-card').evaluateAll(els=>els.map(el=>el.id)),['btn-practice','btn-challenge']);
+    await page.screenshot({path:fileURLToPath(new URL(`title-${width}.png`,output)),fullPage:true});
+    await click('btn-mode-settings');assert.equal(await page.locator('#board').isVisible(),false);
+    await click('btn-settings-close');assert.equal((await state()).screen,'mode');
+    await click('btn-practice');
+    assert.equal(await page.locator('#countdown-number').textContent(),'3');
+    const initial=await snapshot();
+    const pause=await page.locator('#btn-pause').boundingBox();const board=await page.locator('#board').boundingBox();
+    assert.ok(pause.y+pause.height<=board.y,'pause is above board');
+    await page.screenshot({path:fileURLToPath(new URL(`countdown-${width}.png`,output)),fullPage:true});
+    // 準備中の押しっぱなしは球や時計を動かさず、開始時に持ち越さない。
+    await page.mouse.move(board.x+board.width*.8,board.y+board.height*.5);await page.mouse.down();
+    await page.clock.runFor(1000);assert.equal(await page.locator('#countdown-number').textContent(),'2');
+    assert.deepEqual(await snapshot(),initial);
+    await page.clock.runFor(1000);assert.equal(await page.locator('#countdown-number').textContent(),'1');
+    assert.deepEqual(await snapshot(),initial);
+    await ready();assert.equal(await page.locator('#countdown-layer').isVisible(),false);assert.deepEqual(await snapshot(),initial);
+    await page.mouse.up();
+    await page.mouse.click(board.x+board.width*.8,board.y+board.height*.5);
+    await page.mouse.move(board.x+board.width*.8,board.y+board.height*.5);await page.mouse.down();await page.clock.runFor(200);await page.mouse.up();
+    assert.equal((await state()).started,true);
+    await click('btn-pause');assert.equal((await state()).paused,true);
+    const paused=await snapshot();await page.clock.fastForward(60000);assert.deepEqual(await snapshot(),paused);
+    await page.screenshot({path:fileURLToPath(new URL(`pause-${width}.png`,output)),fullPage:true});
+    await click('btn-resume');assert.equal(await page.locator('#countdown-number').textContent(),'3');assert.deepEqual(await snapshot(),paused);
+    await ready();await clear();assert.equal((await state()).screen,'clear');
+    // トースト表示中でも背後の設定と戻る操作を実クリックできる。
+    await page.locator('#btn-game-settings').click();await page.clock.runFor(32);
+    assert.equal((await state()).screen,'settings');await click('btn-settings-close');assert.equal((await state()).screen,'clear');
+    assert.equal(await page.locator('#screen-game').getAttribute('inert'),null);
+    await click('btn-retry');assert.equal(await page.locator('#countdown-number').textContent(),'3');
+    await click('btn-game-settings');const remaining=(await state()).countdownMs;
+    await page.clock.fastForward(60000);assert.equal((await state()).countdownMs,remaining);
+    await click('btn-settings-close');assert.equal((await state()).paused,true);
+    await click('btn-resume');assert.ok((await state()).countdownMs>2900);
+    await page.evaluate(()=>{Object.defineProperty(document,'hidden',{value:true,configurable:true});document.dispatchEvent(new Event('visibilitychange'));});
+    await page.clock.fastForward(60000);
+    await page.evaluate(()=>{Object.defineProperty(document,'hidden',{value:false,configurable:true});document.dispatchEvent(new Event('visibilitychange'));});
+    assert.equal((await state()).paused,true);await click('btn-resume');await ready();
+    await click('btn-game-exit');assert.equal((await state()).screen,'mode');assert.equal(await page.locator('#board').isVisible(),false);
+    await click('btn-challenge');const challengeInitial=await snapshot();await page.clock.runFor(2000);assert.deepEqual(await snapshot(),challengeInitial);await ready();
+    await clear();await click('btn-next');assert.equal((await state()).stageIndex,2);assert.ok((await state()).countdownMs>2900);await ready();
+    await page.evaluate(()=>window.__corogalism.teleport(.5,.5));await page.clock.fastForward((await state()).limitSec*1000+50);
+    assert.equal((await state()).screen,'over');
+    await page.locator('#btn-game-settings').click();await page.clock.runFor(32);await click('btn-settings-close');assert.equal((await state()).screen,'over');
+    await click('btn-continue');assert.ok((await state()).countdownMs>2900);assert.equal((await state()).hp.value,(await state()).hp.max);
+    await ready();await clear();
+    await page.locator('#btn-game-exit').click();await page.clock.runFor(32);assert.equal((await state()).screen,'run-result');
+    await click('btn-run-modes');assert.equal(await page.locator('#board').isVisible(),false);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+    await context.close();
+  }
+  assert.deepEqual(errors,[]);
+  console.log('PASS: mode-only title, practice first, 3/2/1 input/clock/HP freeze, visible pause and counted resume, background settings/exit during clear/over, retry/next/continue countdown, settings/visibility suspension at 4 widths.');
+} finally {await browser.close();}

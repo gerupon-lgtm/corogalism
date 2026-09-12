@@ -1,5 +1,5 @@
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
-import { BASE, TUNING } from './config/gameConfig.js';
+import { BASE, TUNING, UI } from './config/gameConfig.js';
 import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
 import { difficultyAt } from './game/progression.js';
@@ -11,7 +11,6 @@ import { createFixedCamera } from './render/camera.js';
 import { createRenderer } from './render/canvasRenderer.js';
 import { getWallMaterialAppearance } from './render/materialAppearance.js';
 import { loadSettings, saveSettings, saveBest, getBest, loadRunBests, saveRunBest } from './record/storage.js';
-import { createTitleScreen } from './ui/titleScreen.js';
 import { createGameScreen } from './ui/gameScreen.js';
 import { createClearScreen } from './ui/clearScreen.js';
 import { createSettingsScreen } from './ui/settingsScreen.js';
@@ -20,7 +19,6 @@ import { createRunScreens } from './ui/runScreens.js';
 const root = document;
 const find = (id) => root.querySelector(`#${id}`);
 const boardEl = find('board');
-const title = createTitleScreen(root);
 const game = createGameScreen(root);
 const clear = createClearScreen(root);
 const settingsUi = createSettingsScreen(root);
@@ -40,10 +38,12 @@ let gameMode = 'practice';
 let run = null;
 let recordStatus = null;
 let stageIndex = 1;
-let screen = 'title';
+let screen = 'mode';
 let paused = false;
 let handled = false;
 let starting = false;
+let inputReady = false;
+let countdownMs = 0;
 let lastFrame = performance.now();
 
 function initialSeed() {
@@ -52,7 +52,7 @@ function initialSeed() {
   return (Date.now() % 1000003) >>> 0;
 }
 function nextSeed() { return ((seed * 7919 + 13) % 1000003) >>> 0; }
-function isPlaying() { return screen === 'game' && !paused && !document.hidden; }
+function isPlaying() { return screen === 'game' && !paused && !document.hidden && countdownMs === 0; }
 function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
 
 function resetInput() {
@@ -109,7 +109,7 @@ function calibrate() {
 }
 
 function resize() {
-  if (play) camera = createFixedCamera(play.stage, renderer.resize(boardEl.clientWidth));
+  if (play && !boardEl.hidden) camera = createFixedCamera(play.stage, renderer.resize(boardEl.clientWidth));
 }
 
 function updateHint() {
@@ -123,18 +123,21 @@ function showScreen(name) {
   const previousScreen = screen;
   screen = name;
   const ended = name === 'clear' || name === 'over';
-  const boardSession = name === 'game' || ended;
+  const boardSession = name === 'game' || ended || (name === 'settings' && ['game', 'clear', 'over'].includes(settingsUi.returnTo));
   root.querySelectorAll('section.panel, section.game-toast').forEach((el) => {
     el.hidden = el.id !== `screen-${name}` && !(ended && el.id === 'screen-game');
   });
   root.body.dataset.screen = name;
   root.body.classList.toggle('board-session', boardSession);
-  find('screen-game').inert = ended;
-  find('screen-game').setAttribute('aria-hidden', String(ended));
+  boardEl.hidden = !boardSession;
+  find('play-toolbar').hidden = !boardSession;
+  find('play-hint').hidden = !boardSession;
+  find('btn-pause').disabled = name !== 'game';
   find('toast-layer').hidden = !ended;
   find('challenge-hud').hidden = !boardSession || gameMode !== 'challenge';
   find('board-overlay').hidden = name !== 'game' || !paused;
   find('board-status').textContent = '一時停止';
+  updateCountdown();
   resetInput();
   lastFrame = performance.now();
   updateHint();
@@ -148,14 +151,15 @@ function showScreen(name) {
   }
 }
 
-// 操作付きトースト内でTabを循環し、背景の操作へ抜けないようにする。
-root.addEventListener('keydown', (event) => {
-  if (!['clear', 'over'].includes(screen) || event.key !== 'Tab') return;
-  const buttons = [...find(`screen-${screen}`).querySelectorAll('button')].filter(el => !el.hidden && !el.disabled);
-  const index = buttons.indexOf(root.activeElement);
-  const next = (index + (event.shiftKey ? -1 : 1) + buttons.length) % buttons.length;
-  event.preventDefault(); buttons[next].focus({ preventScroll: true });
-});
+function updateCountdown() {
+  const visible = screen === 'game' && !paused && countdownMs > 0;
+  find('countdown-layer').hidden = !visible;
+  const label = String(Math.ceil(countdownMs / 1000));
+  if (visible && find('countdown-number').textContent !== label) {
+    find('countdown-number').textContent = label;
+    find('countdown-layer').setAttribute('aria-label', `開始まで${label}秒`);
+  }
+}
 
 const materialHelp = {
   default: '標準の跳ね返りとダメージ', rubber: 'よく跳ねる・ダメージ小',
@@ -185,6 +189,7 @@ function loadStage(useSeed) {
   play = createStagePlay(seed, run ? difficultyAt(stageIndex) : null);
   paused = false;
   handled = false;
+  countdownMs = UI.startCountdownMs;
   game.setPaused(false);
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
   renderLegend();
@@ -200,16 +205,19 @@ function startGame(mode, useSeed = seed) {
 }
 
 function showModes() {
+  countdownMs = 0;
   runUi.setModeBests(loadRunBests(), tiltDeniedReason);
   showScreen('mode');
 }
 
 function setPaused(value) {
   paused = value;
+  if (!value) countdownMs = UI.startCountdownMs;
   game.setPaused(value);
   resetInput();
   lastFrame = performance.now();
   find('board-overlay').hidden = !value || screen !== 'game';
+  updateCountdown();
 }
 
 function finishStage() {
@@ -245,36 +253,44 @@ function frame(now) {
   const elapsedMs = Math.max(0, now - lastFrame);
   const dt = Math.min(elapsedMs / 1000, TUNING.maxDt);
   lastFrame = now;
-  if (isPlaying() && play.status === 'playing') {
+  if (screen === 'game' && !paused && !document.hidden && countdownMs > 0) {
+    // 長いフレームや復帰で準備時間を飛ばさず、完了フレームでは物理を進めない。
+    countdownMs = Math.max(0, countdownMs - Math.min(elapsedMs, UI.countdownMaxStepMs));
+    updateCountdown();
+    if (countdownMs === 0) resetInput();
+  } else if (isPlaying() && play.status === 'playing') {
     tilt.update(dt, BASE.inputSmoothing);
     const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg } });
     if (damage > 0) game.showDamage(damage, now);
     if (!handled && play.status === 'clear') finishStage();
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
   }
-  if (play && camera) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, now,
+  if (play && camera && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, now,
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
-    mode: settings.mode, started: play.started, paused, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, now });
+    mode: settings.mode, started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, now });
   requestAnimationFrame(frame);
 }
 
-title.onStart(async () => {
+async function selectMode(mode) {
   if (starting) return;
   starting = true;
-  find('btn-start').disabled = true;
-  find('btn-title-settings').disabled = true;
+  const controls = ['btn-practice', 'btn-challenge', 'btn-mode-settings'].map(find);
+  controls.forEach(el => { el.disabled = true; });
   try {
-    tiltAllowed = await enableTilt();
-    applyMode(settings.mode);
+    if (!inputReady) {
+      // モードボタンのクリックから直接iOS許可を求める。
+      tiltAllowed = await enableTilt();
+      applyMode(settings.mode);
+      inputReady = true;
+    }
     calibrate();
-    showModes();
+    startGame(mode, mode === 'practice' ? initialSeed() : seed);
   } finally {
     starting = false;
-    find('btn-start').disabled = false;
-    find('btn-title-settings').disabled = false;
+    controls.forEach(el => { el.disabled = false; });
   }
-});
+}
 
 function toSettings(from) {
   if (from === 'game') setPaused(true);
@@ -283,13 +299,13 @@ function toSettings(from) {
   settingsUi.render(settings);
   showScreen('settings');
 }
-title.onSettings(() => toSettings('title'));
-find('btn-challenge').addEventListener('click', () => startGame('challenge'));
-find('btn-practice').addEventListener('click', () => startGame('practice', initialSeed()));
-find('btn-mode-back').addEventListener('click', () => showScreen('title'));
-game.onPause(() => setPaused(!paused));
+find('btn-challenge').addEventListener('click', () => selectMode('challenge'));
+find('btn-practice').addEventListener('click', () => selectMode('practice'));
+find('btn-mode-settings').addEventListener('click', () => toSettings('mode'));
+game.onPause(() => { if (screen === 'game') setPaused(!paused); });
+find('btn-resume').addEventListener('click', () => { if (screen === 'game' && paused) setPaused(false); });
 game.onCalibrate(calibrate);
-game.onSettings(() => toSettings('game'));
+game.onSettings(() => toSettings(screen));
 find('btn-game-exit').addEventListener('click', finishRun);
 find('btn-clear-exit').addEventListener('click', finishRun);
 find('material-legend').addEventListener('toggle', () => {
@@ -310,7 +326,7 @@ find('btn-run-modes').addEventListener('click', showModes);
 settingsUi.onModeChange(applyMode);
 settingsUi.onAngleChange((v) => { settings.maxTiltAngleDeg = v; saveSettings(settings); });
 settingsUi.onCalibrate(calibrate);
-settingsUi.onClose(() => showScreen(settingsUi.returnTo === 'game' ? 'game' : 'title'));
+settingsUi.onClose(() => showScreen(['game', 'clear', 'over'].includes(settingsUi.returnTo) ? settingsUi.returnTo : 'mode'));
 window.addEventListener('resize', () => { resize(); updateHint(); });
 document.addEventListener('visibilitychange', () => {
   if (document.hidden && screen === 'game') setPaused(true);
@@ -322,7 +338,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   window.__corogalism = {
     get state() {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
-        cleared: play.status === 'clear', paused, mode: settings.mode, gameMode, screen, stageIndex,
+        cleared: play.status === 'clear', paused, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,
         run: run ? { ...run.result(), stageIndex: run.stageIndex, continuesLeft: run.continuesLeft, runSeed: run.runSeed } : null,
@@ -334,7 +350,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   };
 }
 loadStage(seed);
-showScreen('title');
-settingsUi.setTiltAvailable(false, '傾き操作を使うには、タイトルの開始ボタンを押してください。');
+showModes();
+settingsUi.setTiltAvailable(false, 'モードを選んだときに、傾きセンサーの利用を確認します。');
 settingsUi.render(settings);
 requestAnimationFrame(frame);

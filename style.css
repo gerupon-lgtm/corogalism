@@ -107,9 +107,9 @@ body.board-session .wrap{gap:8px}
   isolation:isolate;container-type:inline-size}
 #game-status{min-height:21px}
 .cap{min-height:16px;letter-spacing:.025em}
-.toast-layer{position:absolute;inset:0;z-index:2;touch-action:manipulation;display:grid;place-items:center;
+.toast-layer{position:absolute;inset:0;z-index:2;touch-action:manipulation;display:grid;place-items:center;pointer-events:none;
   background:linear-gradient(0deg,#101d1522,transparent 70%)}
-.game-toast{position:relative;width:65%;margin:0;padding:10px 12px 7px;
+.game-toast{position:relative;width:65%;margin:0;padding:10px 12px 7px;pointer-events:auto;
   display:flex;flex-direction:column;align-items:stretch;gap:5px;
   border:3px solid #f8874a;border-radius:21px;
   background:radial-gradient(ellipse at 30% 0%,#fff5dc 0%,#f7e4c5 65%,#ebcea9 100%);
@@ -147,7 +147,6 @@ body.board-session .wrap{gap:8px}
 .game-toast #continue-note{order:-1}
 .game-toast .best-badge{position:absolute;bottom:100%;right:-8px;white-space:nowrap;font-size:9px;
   background:#b86529;color:#fff4dc;border:1px solid #ffe0a1;border-radius:999px;padding:3px 7px;transform:rotate(5deg)}
-#screen-game[inert]{pointer-events:none}
 @keyframes toy-toast-in{0%{opacity:0;transform:translateY(8px) scale(.94)}70%{opacity:1;transform:translateY(-2px) scale(1.015)}100%{opacity:1;transform:none}}
 @container(max-width:260px){.game-toast{padding:8px 8px 5px;gap:3px;border-radius:16px;border-width:2px}
   .game-toast h2{font-size:18px}.game-toast h2::before,.game-toast h2::after{width:4px;height:8px}
@@ -200,3 +199,51 @@ progress::-moz-progress-bar{border-radius:999px;background:linear-gradient(#a5d9
 .material-swatch[data-material="moss"]{background-position-y:75%}
 .material-swatch[data-material="rubber"]{background-position-y:100%}
 @media(max-width:360px){.meter-block{padding:6px 7px 8px}.meter-label strong{font-size:16px}.meter-name{font-size:9px}.meter-name svg{width:11px;height:11px}}
+/* タイトルは迷路を置かず、同じトイ調のモード選択から始める。 */
+body[data-screen="mode"] .wrap{padding-top:28px;gap:22px}
+body[data-screen="mode"] .head{align-items:center}
+body[data-screen="mode"] .brand-word{font-size:27px}
+.mode-menu{padding:22px 18px 18px;gap:14px;border:2px solid #c6ac83;border-radius:23px;
+  background:linear-gradient(135deg,#fdf1d7,#ead6b4);box-shadow:inset 0 1px 0 #fff9e8,0 4px 0 #877151,0 8px 22px #0003}
+.mode-menu h2{justify-content:center;margin:0 0 7px;color:#765033;font-size:19px;line-height:1.4}
+.menu-eyebrow{margin:0;text-align:center;font-size:9px;letter-spacing:.2em;color:#a17f53;font-weight:700}
+.mode-menu .mode-card{position:relative;border:1px solid #d5bc96;border-radius:16px;gap:9px;padding:18px 16px;
+  background:linear-gradient(#fff9e9,#f1e2c6);box-shadow:inset 0 1px 0 #fff,0 3px 0 #b59970;transition:transform .12s}
+.mode-menu .mode-card::after{content:'›';position:absolute;right:15px;top:14px;font-size:26px;color:#a38659}
+.mode-menu .mode-card:active{transform:translateY(2px);box-shadow:0 1px 0 #b59970}
+.mode-menu .mode-card strong{display:flex;align-items:flex-start;flex-direction:column;gap:3px;padding-right:22px;color:#775037;font-size:19px}
+.mode-menu .mode-card span{font-size:10px;color:#a4845c;letter-spacing:.1em}
+.mode-menu .mode-card small{font-size:12px;color:#8a7252;line-height:1.7;text-align:left}
+.mode-menu #btn-practice{border-color:#9dad7b;background:linear-gradient(#f7f8df,#e3e8c3);box-shadow:inset 0 1px 0 #fffde9,0 3px 0 #8a996e}
+.mode-menu #btn-practice strong,.mode-menu #btn-practice::after{color:#617a49}
+.mode-menu #btn-challenge strong,.mode-menu #btn-challenge::after{color:#b56930}
+.menu-instruction{font-size:11px;text-align:center;line-height:1.8;color:#8b7150;margin:5px 0 0}
+.mode-menu #mode-note:empty{display:none}.mode-menu #mode-note{color:#8b7150;font-size:10px;text-align:center}
+.mode-menu .result{border-color:#cdb590;background:#cfbb99;border-radius:10px}
+.mode-menu .result div{background:#efdfc3;padding:8px 4px}.mode-menu .result dt{color:#967b55;font-size:9px}
+.mode-menu .result dd{color:#785b37;font-size:11px}
+.mode-menu .ghost{background:#f7e9cc;border-color:#c8ab7d;border-radius:999px;color:#8b6a3f;box-shadow:0 2px 0 #bea079}
+.mode-menu :is(button):focus-visible{outline-color:#77542e;outline-offset:4px}
+/* 準備中は盤面の位置を固定したまま球と時計を止める。下部の設定は操作可能。 */
+.countdown-layer{position:absolute;inset:0;z-index:3;display:grid;place-items:center;pointer-events:none;background:#17231c28}
+.countdown-medallion{display:flex;flex-direction:column;justify-content:center;align-items:center;width:48%;max-width:178px;aspect-ratio:1;
+  border:4px solid #f6a459;border-radius:50%;background:radial-gradient(at 35% 25%,#fff8e3,#efdbb7);
+  box-shadow:inset 0 0 0 3px #fff2d6,0 5px 0 #a86a37,0 10px 25px #0004;color:#ad612c}
+.countdown-label{font-size:clamp(9px,3cqw,12px);font-weight:800;letter-spacing:.25em}
+#countdown-number{font-family:var(--sans);font-size:clamp(40px,22cqw,84px);line-height:1.1;font-weight:900;
+  color:#f1953c;text-shadow:0 2px 0 #b56529,0 -1px 0 #ffe5b1;animation:countdown-beat 1s ease-in-out infinite}
+.countdown-caption{font-size:clamp(8px,2.8cqw,11px);color:#927046;margin-top:3px}
+@keyframes countdown-beat{0%,100%{transform:scale(.96)}25%{transform:scale(1.05)}}
+@media(prefers-reduced-motion:reduce){#countdown-number{animation:none}.mode-menu .mode-card{transition:none}}
+@media(max-width:360px){body[data-screen="mode"] .wrap{padding-top:18px;gap:16px}.mode-menu{padding:18px 14px;gap:12px}
+  .mode-menu h2{font-size:17px}.mode-menu .mode-card{padding:14px}.mode-menu .mode-card strong{font-size:17px}}
+.play-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:-3px}
+#play-mode-label{font-size:9px;letter-spacing:.2em;color:#a6b49c}
+.pause-button{padding:5px 14px;min-height:32px;background:linear-gradient(#f8ebcf,#e6cea7);border:1px solid #c9aa7b;
+  border-radius:999px;box-shadow:inset 0 1px 0 #fff6df,0 2px 0 #8e724c;color:#735131;font-size:12px;font-weight:800;white-space:nowrap}
+.pause-button:active{transform:translateY(1px);box-shadow:0 1px 0 #8e724c}
+.pause-card{pointer-events:auto;width:65%;padding:16px;border:3px solid #d4b58a;border-radius:22px;
+  background:linear-gradient(#fff2d9,#eddbb8);box-shadow:inset 0 0 0 2px #fff9e6,0 4px 0 #9c7c52,0 10px 22px #0005;text-align:center}
+.board-overlay .pause-card span{display:block;padding:0;margin-bottom:13px;background:none;border:0;color:#86603b;font-size:20px;font-weight:800}
+#btn-resume{width:100%;min-height:40px;border-radius:999px;border:1px solid #c5742a;background:linear-gradient(#ffbe62,#ee8a2f);
+  color:#fff9e9;font-size:16px;font-weight:800;box-shadow:inset 0 1px 0 #ffe9b5,0 3px 0 #a15b29;text-shadow:0 1px 0 #af6226}

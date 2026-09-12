@@ -19,13 +19,15 @@ try {
       assert.ok(box,`${id} visible`);
       await page.mouse.click(box.x+box.width/2,box.y+box.height/2);
       await page.clock.runFor(500);
+      const s = await state();
+      if (s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.countdownMs + 32);
     };
     const state=()=>page.evaluate(()=>window.__corogalism.state);
     const layout=()=>page.evaluate(()=>{
       const b=document.querySelector('#board').getBoundingClientRect();
       return {x:b.x,y:b.y,width:b.width,height:b.height,scroll:window.scrollY,documentHeight:document.documentElement.scrollHeight};
     });
-    await click('btn-start');await click('btn-challenge');
+    await click('btn-challenge');
     await page.evaluate(()=>window.scrollTo(0,16));
     const before=await layout();
     await page.screenshot({path:fileURLToPath(new URL(`game-${width}.png`,output)),fullPage:true});
@@ -41,7 +43,9 @@ try {
     assert.ok(Math.abs(toast.x+toast.width/2-before.x-before.width/2)<1, 'clear horizontally centered');
     assert.ok(Math.abs(toast.y+toast.height/2-before.y-before.height/2)<1, 'clear vertically centered');
     await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'btn-clear-exit');
-    await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'btn-next');
+    await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'btn-game-settings');
+    // 画面外の設定へTab移動した際のブラウザ標準スクロールと、ゲーム遷移の検査を分ける。
+    await page.evaluate(scroll=>window.scrollTo(0,scroll),before.scroll);
     await page.screenshot({path:fileURLToPath(new URL(`clear-${width}.png`,output)),fullPage:true});
     await page.clock.runFor(2000);
     assert.equal((await state()).screen,'clear');
@@ -77,7 +81,8 @@ try {
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.clock.install();await page.clock.pauseAt(new Date(Date.now()+1000));
   await page.goto(new URL('?debug=1&seed=123',baseUrl).href);await page.clock.runFor(32);
-  for(const id of ['btn-start','btn-practice']) {await page.locator(`#${id}`).click({force:true});await page.clock.runFor(32);}
+  for(const id of ['btn-practice']) {await page.locator(`#${id}`).click({force:true});await page.clock.runFor(32);}
+  await page.clock.runFor(3100);
   const before=await page.locator('#board').boundingBox();
   await page.evaluate(()=>{const g=window.__corogalism.state.goal;window.__corogalism.teleport(g.x,g.y);});await page.clock.runFor(32);
   assert.deepEqual(await page.locator('#board').boundingBox(),before);
@@ -88,5 +93,5 @@ try {
   await page.locator('#btn-retry').click({force:true});await page.clock.runFor(32);
   assert.equal(await page.evaluate(()=>window.__corogalism.state.screen),'game');
   assert.deepEqual(errors,[]);
-  console.log('PASS: C visuals, unchanged scroll/document/board bounds through clear/next/fail/continue at 4 widths, real pointer clicks, focus loop, persistent toast, frozen timer, reduced motion and practice retry; no page errors.');
+  console.log('PASS: C visuals, unchanged scroll/document/board bounds through clear/next/fail/continue at 4 widths, real pointer clicks, non-modal keyboard navigation, persistent toast, frozen timer, reduced motion and practice retry; no page errors.');
 } finally {await browser.close();}

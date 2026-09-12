@@ -14,14 +14,14 @@ page.on('pageerror', e => errors.push(e.message));
 await page.clock.install();
 await page.clock.pauseAt(new Date(Date.now() + 1000));
 const state = () => page.evaluate(() => window.__corogalism.state);
-const click = async (id) => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); };
+const click = async (id) => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); const s = await state(); if (s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.countdownMs + 32); };
 const goal = () => page.evaluate(() => { const g = window.__corogalism.state.goal; window.__corogalism.teleport(g.x, g.y); });
 const timeout = async () => { await page.evaluate(() => window.__corogalism.teleport(0.5, 0.5)); await page.clock.fastForward((await state()).limitSec * 1000 + 100); };
 try {
   await page.goto(new URL('?debug=1&seed=123', baseUrl).href);
   await page.clock.runFor(32);
   assert.equal(await page.locator('section.panel:visible').count(), 1);
-  await click('btn-start');
+
   assert.equal((await state()).screen, 'mode');
   await page.screenshot({ path: fileURLToPath(new URL('mode-375.png', output)), fullPage: true });
   await click('btn-practice');
@@ -81,7 +81,7 @@ try {
   records = await page.evaluate(() => JSON.parse(localStorage.getItem('corogalism-run-bests')));
   assert.equal(records.noContinue.stages, 1); assert.equal(records.withContinue.stages, 2);
   await page.screenshot({ path: fileURLToPath(new URL('result-375.png', output)), fullPage: true });
-  await page.reload(); await page.clock.runFor(32); await click('btn-start');
+  await page.reload(); await page.clock.runFor(32);
   assert.match(await page.locator('#mode-best-no').textContent(), /1面/);
   assert.match(await page.locator('#mode-best-continue').textContent(), /2面/);
   await click('btn-challenge');
