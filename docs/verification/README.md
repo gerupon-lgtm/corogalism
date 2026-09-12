@@ -122,3 +122,7 @@ Git初期化・コミット・push・Pages公開は完了。デプロイ記録�
 `node tools/balance-challenge.mjs`：面テーマ・回復込みで通常/やさしい、各30シード・2通りの操縦を計測。従来曲線の比較用検証は `tools/balance.mjs` に維持。
 
 新しい画面証跡は `challenge/`。他のディレクトリは過去版の記録として保持する。
+
+## T-228 HP表示
+
+`node tools/browser-hp-display.mjs`：320/390/1280pxで実際の壁衝突を発生させ、微小ダメージ・整数をまたぐダメージとHUDの一致を確認。公開先もBASE_URL指定で確認済み。証跡は `hp-display/`（v0.3.2）。

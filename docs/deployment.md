@@ -4,7 +4,8 @@
 
 - HUDの整数表示と被弾・回復の増減を同じ基準へ統一。整数表示が変わらない被弾は「微小」。内部HP計算は維持。
 - 101テスト成功、実際の壁衝突を使った3幅のbrowser-hp-display成功。既存browser-challengeも回復・記録・基準設定を4幅で確認。Standards/Specレビュー指摘0。
-- 公開準備中。
+- アプリ `61cc522`。[Pages公開成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/34725191106)。
+- 実行ファイル7個が正式URLでHTTP200、SHA-256一致。正式URLでも3画面幅の実壁衝突から、HP整数と増減表示の一致を確認。未処理例外0。
 
 ## v0.3.1 初回操作SE（2026-09-13）
 
