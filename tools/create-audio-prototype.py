@@ -194,7 +194,7 @@ demo[-round(1.4*RATE):]*=np.linspace(1,0,round(1.4*RATE))[:,None]
 write('03-gameplay-mix.wav',demo,float(np.max(np.abs(demo))))
 
 manifest={'bpm':BPM,'bgmSeconds':length,'sampleRate':RATE,'channels':2,'effects':timeline}
-(OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8', newline='\n')
 for file in sorted(OUT.glob('*.wav')):
     with wave.open(str(file),'rb') as source:
         pcm=np.frombuffer(source.readframes(source.getnframes()),dtype='<i2').astype(float)/32768
