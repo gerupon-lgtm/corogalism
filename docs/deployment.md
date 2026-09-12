@@ -1,5 +1,13 @@
 # フェーズ2 デプロイ記録（2026-09-12）
 
+## v0.2.9 BGMを毎回先頭から
+
+- アプリ `4dc6b59`、公開 `2d5f8b0`。BGMの停止位置を保存せず、再開・次面・音ON復帰も先頭から再生。ループと開始待機は維持。
+- 83テスト成功。Standards / Specレビューとも指摘0件。
+- [Pages公開成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/34687955714)。正式URLの変更3ファイルはHTTP200、SHA-256がローカルと一致。
+
+- 正式URLの `browser-audio.mjs` 成功。AudioBufferSourceNode.startのoffset=0・loop=true、承認済み開始間隔、中断・失敗時の処理を確認。未処理例外0。
+
 ## v0.2.8 スタートSE後0.2秒の間
 
 - アプリ `de6e997`、公開対象 `03d420d`。スタートSE0.8秒の後に0.2秒待ち、プレイ中だけBGMを開始。
