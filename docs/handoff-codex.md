@@ -1,5 +1,7 @@
 # Codexへの引き継ぎ（2026-09-12 更新）
 
+**音の試聴版v1を作成済み:** `docs/design/2026-09-12-audio-prototypes/` にWAV・試聴HTML、`tools/create-audio-prototype.py` に再生成コード。BGMと13種類のSEを試聴する段階。ゲームはv0.2.5のまま、音の接続・公開はしていない。
+
 **v0.2.5は正式URLへ公開済み:** ヘッダの2段コピー・バージョン・注記下の余白をユーザー画像に合わせて調整。5画面幅のブラウザ確認成功。`ui-polish.md` のT-222、`deployment.md` を参照。
 
 **v0.2.4は正式URLへ公開済み。** 公開コミット `8059402`、Pages成功。最新仕様は `ui-polish.md`、公開証跡は `deployment.md`。BGM・効果音は追加依頼を受けて `audio-proposal.md` に検討案のみ記録（未実装）。

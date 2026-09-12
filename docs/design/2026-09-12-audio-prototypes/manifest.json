@@ -1,0 +1,86 @@
+{
+  "bpm": 100,
+  "bgmSeconds": 38.4,
+  "sampleRate": 44100,
+  "channels": 2,
+  "effects": [
+    {
+      "file": "se-select.wav",
+      "label": "選択",
+      "start": 0.65,
+      "duration": 0.35
+    },
+    {
+      "file": "se-countdown.wav",
+      "label": "3・2・1 → スタート",
+      "start": 1.65,
+      "duration": 3.8
+    },
+    {
+      "file": "se-rolling.wav",
+      "label": "転がり（加速→減速）",
+      "start": 6.1,
+      "duration": 3.5
+    },
+    {
+      "file": "se-wall.wav",
+      "label": "標準壁：コツ",
+      "start": 10.25,
+      "duration": 0.45
+    },
+    {
+      "file": "se-stone.wav",
+      "label": "石：カッ",
+      "start": 11.35,
+      "duration": 0.45
+    },
+    {
+      "file": "se-spike.wav",
+      "label": "棘：短い金属音",
+      "start": 12.45,
+      "duration": 0.65
+    },
+    {
+      "file": "se-moss.wav",
+      "label": "苔：柔らかい接触",
+      "start": 13.75,
+      "duration": 0.4
+    },
+    {
+      "file": "se-rubber.wav",
+      "label": "ゴム：ポン",
+      "start": 14.8,
+      "duration": 0.5
+    },
+    {
+      "file": "se-goal.wav",
+      "label": "カップ：コトン",
+      "start": 15.95,
+      "duration": 0.7
+    },
+    {
+      "file": "se-clear.wav",
+      "label": "クリア：明るい上昇フレーズ",
+      "start": 17.3,
+      "duration": 2.05
+    },
+    {
+      "file": "se-fail.wav",
+      "label": "失敗：短い下降音",
+      "start": 20.0,
+      "duration": 1.3
+    },
+    {
+      "file": "se-continue.wav",
+      "label": "コンティニュー：前向きな2音",
+      "start": 21.95,
+      "duration": 1.3
+    },
+    {
+      "file": "se-pause.wav",
+      "label": "ポーズ",
+      "start": 23.9,
+      "duration": 0.45
+    }
+  ]
+}

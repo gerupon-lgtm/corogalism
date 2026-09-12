@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Corogalism 音の試聴 v1</title>
+<style>
+@font-face{font-family:Toy;src:url('../../../assets/fonts/MPLUS1p-Regular.woff2')}@font-face{font-family:Toy;src:url('../../../assets/fonts/MPLUS1p-Bold.woff2');font-weight:700}
+*{box-sizing:border-box}body{margin:0;background:#0f1513;color:#e3e8d0;font:14px/1.7 Toy,"Yu Gothic",sans-serif}main{max-width:680px;padding:24px 16px 40px;margin:auto}h1{font:28px "Trebuchet MS",sans-serif;margin:0}.sub{color:#b4bca8;font-size:12px;margin:6px 0 22px}
+section{background:linear-gradient(130deg,#fff4da,#ecd9b7);border:2px solid #c6ac83;border-radius:20px;color:#68482d;padding:18px;margin:16px 0;box-shadow:0 4px 0 #877151}h2{margin:0 0 6px;font-size:18px}p{margin:6px 0 12px}audio{display:block;width:100%;margin:12px 0}label{display:flex;gap:8px;align-items:center}button{font:inherit;padding:10px 12px;cursor:pointer;background:#fff5df;border:1px solid #c9aa7b;border-radius:12px;color:#704c2e;box-shadow:0 2px 0 #a1845a;text-align:left}button:active{transform:translateY(1px)}button:focus-visible{outline:2px solid #8b552c;outline-offset:3px}.clips{display:grid;grid-template-columns:1fr 1fr;gap:10px}small{color:#876a4b}#status{min-height:24px;font-size:12px}footer{font-size:12px;color:#a6b19d}
+@media(max-width:440px){.clips{grid-template-columns:1fr}section{padding:14px}}
+</style>
+<main>
+<h1>Corogalism</h1><p class="sub">音の試聴 v1 · まだゲームには組み込んでいません</p>
+<section><h2>まずはプレイ中のイメージ</h2><p>BGMとSEを重ねた20秒。選択からスタート、接触、ゴール、再挑戦へ。</p><audio controls preload="metadata" src="03-gameplay-mix.wav"></audio></section>
+<section><h2>BGM — Toy Garden</h2><p>木琴とトイピアノをイメージした、100 BPMの穏やかなオリジナル曲。38.4秒。</p><audio id="bgm" controls preload="metadata" src="01-bgm-toy-garden.wav" loop></audio><label><input id="loop" type="checkbox" checked>ループして聴く</label></section>
+<section><h2>SE — 13種類をまとめて</h2><p>間を空けて順番に再生します。転がり音は、ほかの音より小さめです。</p><audio id="showcase" controls preload="metadata" src="02-se-showcase.wav"></audio><ol id="timeline"></ol></section>
+<section><h2>SEを1つずつ聴く</h2><div id="clips" class="clips"></div><audio id="single" controls preload="none"></audio><p id="status" role="status">音を選んでください。</p></section>
+<footer>外部の音楽・録音素材は使わず、旋律と音色をこの試作向けに合成しています。曲調・耳当たり・音量の比較用です。</footer>
+</main>
+<script>
+const clips = [["select", "選択", 0.65], ["countdown", "3・2・1 → スタート", 1.65], ["rolling", "転がり（加速→減速）", 6.1], ["wall", "標準壁：コツ", 10.25], ["stone", "石：カッ", 11.35], ["spike", "棘：短い金属音", 12.45], ["moss", "苔：柔らかい接触", 13.75], ["rubber", "ゴム：ポン", 14.8], ["goal", "カップ：コトン", 15.95], ["clear", "クリア：明るい上昇フレーズ", 17.3], ["fail", "失敗：短い下降音", 20.0], ["continue", "コンティニュー：前向きな2音", 21.95], ["pause", "ポーズ", 23.9]];
+const single=document.querySelector('#single'),status=document.querySelector('#status');
+for(const [slug,label,start] of clips){
+ const button=document.createElement('button');button.type='button';button.textContent='▶ '+label;
+ button.addEventListener('click',()=>{single.src='se-'+slug+'.wav';status.textContent=label;single.play().catch(()=>{status.textContent='再生ボタンを押してください。';});});
+ document.querySelector('#clips').append(button);
+ const item=document.createElement('li');item.textContent=start.toFixed(2)+'秒 — '+label;document.querySelector('#timeline').append(item);
+}
+document.querySelector('#loop').addEventListener('change',e=>{document.querySelector('#bgm').loop=e.target.checked;});
+const players=[...document.querySelectorAll('audio')];
+players.forEach(player=>player.addEventListener('play',()=>players.forEach(other=>{if(other!==player)other.pause();})));
+</script>
+</html>
