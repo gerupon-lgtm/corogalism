@@ -14,6 +14,8 @@
 
 ## 2. 現在の状態
 
+**v0.2.9更新:** BGMは再開時も毎回曲の先頭から再生。スタートSE後0.2秒の間、プレイ中だけの再生、ループを維持。`docs/audio-implementation.md` 参照。
+
 **v0.2.8更新:** 承認済みタイミングに合わせ、スタートSE0.8秒＋間0.2秒の後にBGM開始。操作開始は従来どおり。`docs/audio-implementation.md` 参照。
 
 **v0.2.7更新:** BGMをカウントダウン終了後のプレイ中だけに制限。その他の画面では停止し、SEは維持。`docs/audio-implementation.md` 参照。

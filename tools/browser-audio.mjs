@@ -10,6 +10,14 @@ const errors = [];
 async function open({ failure, delayed = false } = {}) {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
   await context.addInitScript(() => Object.defineProperty(window, 'DeviceOrientationEvent', { value: undefined, configurable: true }));
+  await context.addInitScript(() => {
+    window.__bgmStarts = [];
+    const start = AudioBufferSourceNode.prototype.start;
+    AudioBufferSourceNode.prototype.start = function (...args) {
+      if (this.buffer?.duration > 30) window.__bgmStarts.push({ offset: args[1] || 0, loop: this.loop });
+      return start.apply(this, args);
+    };
+  });
   if (failure === 'api') await context.addInitScript(() => { window.AudioContext = undefined; window.webkitAudioContext = undefined; });
   if (failure === 'fetch') await context.route('**/assets/audio/*', route => route.abort());
   const pending = [];
@@ -48,9 +56,13 @@ try {
     await page.waitForFunction(() => window.__corogalism.state.audio.musicDelaySec === 0, null, { polling: 50 });
     await page.clock.runFor(32);
     assert.equal((await state()).audio.music, true, 'BGM starts after the 0.8s SE plus 0.2s gap');
+    assert.deepEqual(await page.evaluate(() => window.__bgmStarts.at(-1)), { offset: 0, loop: true }, 'every BGM start begins at the first sample and loops');
   };
   await click('btn-challenge'); await countdown();
   assert.equal((await state()).audio.events.filter(e => e === 'countdown').length, 4);
+  await click('btn-sound'); await click('btn-sound');
+  assert.equal((await state()).audio.music, true);
+  assert.deepEqual(await page.evaluate(() => window.__bgmStarts.at(-1)), { offset: 0, loop: true }, 'unmuting also restarts BGM from the beginning');
   const audioBox = await page.locator('#btn-sound').boundingBox(), pauseBox = await page.locator('#btn-pause').boundingBox();
   assert.ok(audioBox.x + audioBox.width <= pauseBox.x); assert.ok(Math.abs(audioBox.y - pauseBox.y) < 1);
   assert.equal(await page.locator('#dev-note').isVisible(), true);
@@ -112,5 +124,5 @@ try {
   await slow.page.waitForFunction(() => window.__corogalism.state.audio.loaded, null, { polling: 50 });
   assert.equal((await slow.state()).audio.music, false); assert.equal((await slow.state()).audio.voices, 0);
   await slow.context.close(); assert.deepEqual(errors, []);
-  console.log('PASS: BGM after start SE + 0.2s gap, cancellation during delay, active play only; opt-in loading, 14 decoded sounds, countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
+  console.log('PASS: every BGM start uses offset 0 and loops, start SE + 0.2s gap, cancellation during delay, active play only; opt-in loading, 14 decoded sounds, countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
 } finally { await browser.close(); }

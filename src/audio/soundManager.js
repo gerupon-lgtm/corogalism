@@ -12,7 +12,7 @@ const files = {
 export function createSoundManager(initial, onStatus = () => {}) {
   let prefs = normalizeAudioSettings(initial);
   let context = null, bgmGain, seGain, loading = null, loaded = false;
-  let music = null, rolling = null, musicOffset = 0, lastImpact = -Infinity;
+  let music = null, rolling = null, lastImpact = -Infinity;
   let musicStart = null;
   let scene = { music: false, speed: 0, hidden: false };
   const buffers = new Map(), voices = new Set(), events = [];
@@ -63,10 +63,9 @@ export function createSoundManager(initial, onStatus = () => {}) {
     ramp(seGain.gain, prefs.seVolume);
     const wantsMusic = available() && scene.music && prefs.bgmVolume > 0 && musicDelaySec() === 0;
     if (!wantsMusic && music) {
-      musicOffset = (music.offset + Math.max(0, context.currentTime - music.at)) % buffers.get('bgm').duration;
       stopVoice(music, true); music = null;
     } else if (wantsMusic && !music) {
-      music = startVoice('bgm', { loop: true, offset: musicOffset, gain: 0 });
+      music = startVoice('bgm', { loop: true, offset: 0, gain: 0 });
       if (music) ramp(music.gain.gain, 1);
     }
     const speed = Math.min(1, Math.max(0, scene.speed / AUDIO.rollingFullSpeed));
