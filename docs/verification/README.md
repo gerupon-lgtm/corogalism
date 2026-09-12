@@ -1,5 +1,11 @@
 # フェーズ2の検証（2026-09-12）
 
+## v0.2.9 BGMを毎回先頭から
+
+- `node --test`: 83件成功。
+- `browser-audio.mjs`: AudioBufferSourceNode.startの実呼出しを観測し、初回・ポーズ復帰・次面・コンティニュー・音ON復帰でoffset=0、loop=trueを確認。修正前は再開時offset=0.96秒で失敗、修正後成功。
+- スタートSE後0.2秒の間、待機中中断、SE・音量保存・読込失敗時の動作も成功。
+
 ## v0.2.8 スタートSE後のBGM
 
 - `node --test`: 83件成功。
