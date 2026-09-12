@@ -27,7 +27,7 @@ try {
       assert.equal(await page.locator('#screen-settings').isVisible(), true);
       await noOverflow();
     };
-    assert.equal(await page.locator('#screen-mode h2').textContent(), '今日はどちらで遊ぶ？');
+    assert.equal(await page.locator('#screen-mode h2').textContent(), 'どちらで遊ぶ？');
     assert.doesNotMatch(await page.locator('#screen-mode').textContent(), /3・2・1|カウントダウン/);
     const sentences = await page.locator('#btn-practice .mode-description > span').evaluateAll(els => els.map(el => {
       const r=el.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height,line:parseFloat(getComputedStyle(el).lineHeight)};
