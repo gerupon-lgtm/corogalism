@@ -32,8 +32,16 @@ try {
   assert.equal((await state()).audio.buffers, 14); assert.equal((await state()).audio.context, 'running');
   assert.equal((await state()).audio.music, false);
   await page.screenshot({ path: fileURLToPath(new URL('settings-390.png', output)), fullPage: true });
-  await click('btn-settings-close'); assert.equal((await state()).audio.music, true);
-  await click('btn-challenge'); await ready();
+  await click('btn-settings-close'); assert.equal((await state()).audio.music, false);
+  const countdown = async () => {
+    assert.ok((await state()).countdownMs > 0);
+    for (let i = 0; i < 3; i++) {
+      assert.equal((await state()).audio.music, false, 'BGM stays silent during 3/2/1');
+      await page.clock.runFor(1000);
+    }
+    await page.clock.runFor(100); assert.equal((await state()).audio.music, true, 'BGM starts when controls become active');
+  };
+  await click('btn-challenge'); await countdown();
   assert.equal((await state()).audio.events.filter(e => e === 'countdown').length, 4);
   const audioBox = await page.locator('#btn-sound').boundingBox(), pauseBox = await page.locator('#btn-pause').boundingBox();
   assert.ok(audioBox.x + audioBox.width <= pauseBox.x); assert.ok(Math.abs(audioBox.y - pauseBox.y) < 1);
@@ -44,13 +52,14 @@ try {
   await page.clock.runFor(1500); assert.ok((await state()).audio.events.includes('wall'));
   await click('btn-pause'); assert.equal((await state()).audio.music, false); assert.equal((await state()).audio.rolling, false);
   assert.ok((await state()).audio.events.includes('pause'));
-  await click('btn-resume'); await ready(); await clear();
+  await click('btn-resume'); await countdown(); await clear();
+  assert.equal((await state()).audio.music, false, 'clear stops BGM');
   assert.equal((await state()).screen, 'clear'); assert.ok((await state()).audio.events.includes('goal')); assert.ok((await state()).audio.events.includes('clear'));
-  await click('btn-next'); await ready();
+  await click('btn-next'); await countdown();
   await page.evaluate(() => window.__corogalism.teleport(.5, .5)); await page.clock.fastForward((await state()).limitSec * 1000 + 50);
-  assert.equal((await state()).screen, 'over'); assert.ok((await state()).audio.events.includes('fail'));
-  await click('btn-continue'); assert.ok((await state()).audio.events.includes('continue'));
-  await click('btn-game-settings');
+  assert.equal((await state()).screen, 'over'); assert.equal((await state()).audio.music, false, 'game over stops BGM'); assert.ok((await state()).audio.events.includes('fail'));
+  await click('btn-continue'); assert.ok((await state()).audio.events.includes('continue')); await countdown();
+  await click('btn-game-settings'); assert.equal((await state()).audio.music, false);
   await page.locator('#set-bgm-volume').fill('0'); await page.locator('#set-se-volume').fill('25');
   assert.equal((await state()).audio.bgmVolume, 0); assert.equal((await state()).audio.seVolume, .25);
   await click('btn-settings-close'); await click('btn-resume'); assert.equal((await state()).audio.music, false);
@@ -61,6 +70,12 @@ try {
   await page.reload(); await page.clock.runFor(32);
   assert.equal((await state()).audio.enabled, true); assert.equal((await state()).audio.context, 'none');
   assert.equal((await state()).audio.seVolume, .25); assert.equal((await state()).audio.bgmVolume, 0);
+  await click('btn-mode-settings'); await page.locator('#set-bgm-volume').fill('60');
+  await page.waitForFunction(() => window.__corogalism.state.audio.loaded, null, { polling: 50 });
+  await click('btn-settings-close'); assert.equal((await state()).audio.music, false);
+  await click('btn-challenge'); await countdown(); await click('btn-game-exit');
+  assert.equal((await state()).screen, 'run-result'); assert.equal((await state()).audio.music, false);
+  await click('btn-run-modes'); assert.equal((await state()).audio.music, false);
   await context.close();
   for (const failure of ['api', 'fetch']) {
     const app = await open({ failure }); await app.click('btn-mode-settings'); await app.click('btn-settings-sound');
@@ -76,5 +91,5 @@ try {
   await slow.page.waitForFunction(() => window.__corogalism.state.audio.loaded, null, { polling: 50 });
   assert.equal((await slow.state()).audio.music, false); assert.equal((await slow.state()).audio.voices, 0);
   await slow.context.close(); assert.deepEqual(errors, []);
-  console.log('PASS: opt-in loading, 14 decoded sounds, countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
+  console.log('PASS: BGM only after countdown during active play; opt-in loading, 14 decoded sounds, countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
 } finally { await browser.close(); }

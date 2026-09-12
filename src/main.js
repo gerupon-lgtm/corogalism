@@ -1,5 +1,5 @@
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
-import { BASE, TUNING, UI, AUDIO } from './config/gameConfig.js';
+import { BASE, TUNING, UI } from './config/gameConfig.js';
 import { createSoundManager } from './audio/soundManager.js';
 import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
@@ -59,10 +59,10 @@ function isPlaying() { return screen === 'game' && !paused && !document.hidden &
 function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
 
 function updateAudio() {
+  const active = play && isPlaying() && play.status === 'playing';
   sound.setScene({
-    music: ['mode', 'clear', 'over', 'run-result'].includes(screen) || (screen === 'game' && !paused),
-    duck: ['clear', 'over'].includes(screen) ? AUDIO.clearDuck : 1,
-    speed: play && isPlaying() && play.status === 'playing' ? Math.hypot(play.actor.vx, play.actor.vy) : 0,
+    music: Boolean(active),
+    speed: active ? Math.hypot(play.actor.vx, play.actor.vy) : 0,
     hidden: document.hidden,
   });
 }

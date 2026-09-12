@@ -13,7 +13,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
   let prefs = normalizeAudioSettings(initial);
   let context = null, bgmGain, seGain, loading = null, loaded = false;
   let music = null, rolling = null, musicOffset = 0, lastImpact = -Infinity;
-  let scene = { music: false, duck: 1, speed: 0, hidden: false };
+  let scene = { music: false, speed: 0, hidden: false };
   const buffers = new Map(), voices = new Set(), events = [];
   const log = name => { events.push(name); if (events.length > 32) events.shift(); };
   const available = () => prefs.soundEnabled && context?.state === 'running' && !scene.hidden;
@@ -50,7 +50,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
 
   function sync() {
     if (!context) return;
-    ramp(bgmGain.gain, prefs.bgmVolume * scene.duck);
+    ramp(bgmGain.gain, prefs.bgmVolume);
     ramp(seGain.gain, prefs.seVolume);
     const wantsMusic = available() && scene.music && prefs.bgmVolume > 0;
     if (!wantsMusic && music) {

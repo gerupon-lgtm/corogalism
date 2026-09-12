@@ -105,7 +105,6 @@ export const AUDIO = {
   maxVoices: 8,
   rollingMinSpeed: 0.15,
   rollingFullSpeed: 4,
-  clearDuck: 0.45,
   loadTimeoutMs: 15000,
   limiterThresholdDb: -3,
   limiterRatio: 12,
