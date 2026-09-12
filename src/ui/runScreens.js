@@ -1,4 +1,5 @@
 /** S-105 / S-106 / S-107。ランの進行と記録計算は呼び出し側が担う。 */
+import { CHALLENGE_LEVELS } from '../config/gameConfig.js';
 const seconds = (ms) => `${(ms / 1000).toFixed(2)} 秒`;
 const bestLabel = (best) => best ? `${best.stages}面 / ${seconds(best.totalTimeMs)}` : '記録なし';
 
@@ -33,7 +34,7 @@ export function createRunScreens(root) {
       find('btn-run-end').textContent = run.canContinue ? '終了して結果を見る' : '結果を見る';
     },
     setResult(result, record) {
-      find('run-category').textContent = result.usedContinue ? 'コンティニュー使用の記録' : 'ノーコンティニューの記録';
+      find('run-category').textContent = `${CHALLENGE_LEVELS[result.level || 'normal'].label} · ${result.usedContinue ? 'コンティニュー使用の記録' : 'ノーコンティニューの記録'}`;
       find('run-stages').textContent = `${result.stages} 面`;
       find('run-time').textContent = seconds(result.totalTimeMs);
       find('run-no-damage').textContent = `${result.noDamageStages} 面`;

@@ -1,9 +1,9 @@
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
-import { BASE, TUNING, UI } from './config/gameConfig.js';
+import { BASE, TUNING, UI, CHALLENGE_LEVELS } from './config/gameConfig.js';
 import { createSoundManager } from './audio/soundManager.js';
 import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
-import { difficultyAt } from './game/progression.js';
+import { challengeDifficulty, normalizeLevel } from './game/challenge.js';
 import { goalCenter } from './world/stage.js';
 import { createTiltVector } from './input/tiltVector.js';
 import { createTiltSource } from './input/tiltSource.js';
@@ -26,9 +26,24 @@ const settingsUi = createSettingsScreen(root);
 const runUi = createRunScreens(root);
 const renderer = createRenderer(find('canvas'));
 const tilt = createTiltVector();
-const tiltSource = createTiltSource();
+const tiltSource = createTiltSource({
+  canCalibrate: () => !document.hidden && settings.mode === 'tilt'
+    && (manualCalibration || (screen === 'game' && !paused && prepareMs > 0)),
+  onCalibrated: (value) => {
+    settings.calibration = value;
+    saveSettings(settings);
+    manualCalibration = false;
+    tilt.reset();
+    find('calibration-note').textContent = '基準を設定しました。このページで遊ぶ間は維持します。';
+    find('board-status').textContent = '基準を設定しました';
+    updateCountdown();
+  },
+});
 const pointerSource = createPointerSource(boardEl);
 const settings = loadSettings();
+settings.challengeLevel = normalizeLevel(settings.challengeLevel);
+let activeLevel = settings.challengeLevel;
+let manualCalibration = false;
 const sound = createSoundManager(settings, (note) => { find('sound-note').textContent = note; });
 let tiltAllowed = false;
 let tiltDeniedReason = '';
@@ -99,6 +114,8 @@ function resetInput() {
 function applyMode(mode) {
   clearTimeout(sensorCheck);
   tiltSource.stop();
+  manualCalibration = false;
+  tiltSource.cancelCalibration();
   settings.mode = mode === 'tilt' && tiltAllowed ? 'tilt' : 'pointer';
   resetInput();
   if (settings.mode === 'tilt') {
@@ -114,7 +131,7 @@ function applyMode(mode) {
   saveSettings(settings);
   settingsUi.setTiltAvailable(tiltAllowed, tiltDeniedReason);
   settingsUi.render(settings);
-  runUi.setModeBests(loadRunBests(), tiltDeniedReason);
+  renderDifficulty();
   updateHint();
 }
 
@@ -135,13 +152,21 @@ async function enableTilt() {
 
 function calibrate() {
   if (settings.mode !== 'tilt') return;
+  if (screen === 'game') setPaused(true);
+  manualCalibration = true;
   tiltSource.calibrate();
   tilt.reset();
-  setTimeout(() => {
-    const c = tiltSource.getCalibration();
-    if (c) { settings.calibration = c; saveSettings(settings); }
-  }, 300);
+  find('calibration-note').textContent = '楽に持てる角度で、少し静止してください。';
+  find('board-status').textContent = '楽な角度で少し静止してください';
 }
+
+function renderDifficulty() {
+  for (const button of root.querySelectorAll('[data-level]')) button.setAttribute('aria-pressed', String(button.dataset.level === settings.challengeLevel));
+  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'ぶつかったときのHP消費が少なめ。' : 'いつもの手応えで挑戦。';
+  find('challenge-level-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
+  runUi.setModeBests(loadRunBests(settings.challengeLevel), tiltDeniedReason);
+}
+function runResult() { return { ...run.result(), level: activeLevel }; }
 
 function resize() {
   if (play && !boardEl.hidden) camera = createFixedCamera(play.stage, renderer.resize(boardEl.clientWidth));
@@ -156,6 +181,11 @@ function updateHint() {
 
 function showScreen(name) {
   const previousScreen = screen;
+  if (previousScreen !== name && manualCalibration) {
+    manualCalibration = false;
+    tiltSource.cancelCalibration();
+  }
+  tiltSource.resetCalibrationSamples();
   if (previousScreen !== name) sound.stopEffects();
   screen = name;
   const ended = name === 'clear' || name === 'over';
@@ -199,6 +229,9 @@ function updateCountdown() {
   const visible = screen === 'game' && !paused && countdownMs > 0;
   find('countdown-layer').hidden = !visible;
   const preparing = prepareMs > 0;
+  const calibrating = visible && settings.mode === 'tilt' && tiltSource.needsCalibration;
+  find('countdown-caption').textContent = calibrating ? '楽な角度で少し静止してください' : 'まもなくスタート';
+  find('btn-calibration-pointer').hidden = !calibrating;
   const counting = visible && !preparing;
   const label = preparing ? 'READY' : String(Math.ceil(countdownMs / 1000));
   find('countdown-layer').classList.toggle('is-preparing', preparing);
@@ -236,19 +269,23 @@ function renderLegend() {
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
-  play = createStagePlay(seed, run ? difficultyAt(stageIndex) : null);
+  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null);
   paused = false;
   handled = false;
   countdownMs = UI.startCountdownMs;
   prepareMs = delayMs;
   game.setPaused(false);
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
+  find('play-mode-label').textContent = run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
+  find('stage-theme').textContent = play.stage.theme?.label || '';
+  find('recovery-feedback').textContent = '';
   renderLegend();
   resize();
 }
 
 function startGame(mode, useSeed = seed) {
   gameMode = mode;
+  activeLevel = settings.challengeLevel;
   run = mode === 'challenge' ? createRun(useSeed) : null;
   recordStatus = null;
   loadStage(run ? run.currentSeed() : useSeed);
@@ -258,13 +295,16 @@ function startGame(mode, useSeed = seed) {
 function showModes() {
   countdownMs = 0;
   prepareMs = 0;
-  runUi.setModeBests(loadRunBests(), tiltDeniedReason);
+  renderDifficulty();
   showScreen('mode');
 }
 
 function setPaused(value) {
   sound.stopEffects();
+  find('board-status').textContent = '一時停止';
   paused = value;
+  tiltSource.resetCalibrationSamples();
+  if (manualCalibration) { manualCalibration = false; tiltSource.cancelCalibration(); }
   if (!value) { countdownMs = UI.startCountdownMs; prepareMs = UI.beforeCountdownMs; }
   game.setPaused(value);
   resetInput();
@@ -292,7 +332,7 @@ function failStage() {
   handled = true;
   run.failStage(play.status);
   // 最初の失敗でノーコン記録を確定。続けてもその記録を失わない。
-  recordStatus = saveRunBest(run.result());
+  recordStatus = saveRunBest(runResult());
   runUi.setOver(run);
   showScreen('over');
   sound.effect('fail');
@@ -300,8 +340,8 @@ function failStage() {
 
 function finishRun() {
   if (!run) { showModes(); return; }
-  recordStatus ??= saveRunBest(run.result());
-  runUi.setResult(run.result(), recordStatus);
+  recordStatus ??= saveRunBest(runResult());
+  runUi.setResult(runResult(), recordStatus);
   showScreen('run-result');
 }
 
@@ -311,7 +351,8 @@ function frame(now) {
   lastFrame = now;
   if (screen === 'game' && !paused && !document.hidden && countdownMs > 0) {
     // 長いフレームや復帰で準備時間を飛ばさず、完了フレームでは物理を進めない。
-    const step = Math.min(elapsedMs, UI.countdownMaxStepMs);
+    const calibrating = settings.mode === 'tilt' && tiltSource.needsCalibration;
+    const step = calibrating ? 0 : Math.min(elapsedMs, UI.countdownMaxStepMs);
     const preparingStep = Math.min(prepareMs, step);
     prepareMs -= preparingStep;
     countdownMs = Math.max(0, countdownMs - (step - preparingStep));
@@ -319,7 +360,8 @@ function frame(now) {
     if (countdownMs === 0) resetInput();
   } else if (isPlaying() && play.status === 'playing') {
     tilt.update(dt, BASE.inputSmoothing);
-    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact });
+    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact,
+      onRecovery: (amount) => { game.showRecovery(amount, now); sound.effect('select'); } });
     if (damage > 0) game.showDamage(damage, now);
     if (!handled && play.status === 'clear') finishStage();
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
@@ -344,7 +386,6 @@ async function selectMode(mode) {
       applyMode(settings.mode);
       inputReady = true;
     }
-    calibrate();
     startGame(mode, mode === 'practice' ? initialSeed() : seed);
   } finally {
     starting = false;
@@ -361,6 +402,14 @@ function toSettings(from) {
   showScreen('settings');
 }
 find('btn-challenge').addEventListener('click', () => selectMode('challenge'));
+for (const button of root.querySelectorAll('[data-level]')) button.addEventListener('click', () => {
+  if (screen !== 'mode' || starting) return;
+  settings.challengeLevel = normalizeLevel(button.dataset.level);
+  saveSettings(settings);
+  renderDifficulty();
+});
+find('btn-calibration-pointer').addEventListener('click', () => applyMode('pointer'));
+find('btn-pause-calibrate').addEventListener('click', calibrate);
 find('btn-practice').addEventListener('click', () => selectMode('practice'));
 find('btn-mode-settings').addEventListener('click', () => toSettings('mode'));
 game.onPause(() => { if (screen === 'game') { setPaused(!paused); if (paused) sound.effect('pause'); } });
@@ -413,7 +462,8 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   window.__corogalism = {
     get state() {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
-        audio: sound.state,
+        audio: sound.state, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
+        calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,

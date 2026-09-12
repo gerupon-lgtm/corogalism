@@ -2,6 +2,7 @@
 import { TUNING, UI } from '../config/gameConfig.js';
 import { goalCenter } from '../world/stage.js';
 import { createToyBall } from './toyBall.js';
+import { drawToyCandy } from './toyCandy.js';
 import { drawToyFloor, drawToyGoal, drawConfetti, wallTextureReady } from './toyWorld.js';
 
 export function createRenderer(canvas) {
@@ -38,6 +39,10 @@ export function createRenderer(canvas) {
     ctx.drawImage(background,0,0,viewportPx,viewportPx);
     const goal=goalCenter(stage.maze), gs=camera.toScreen(goal.x,goal.y);
     drawToyGoal(ctx,gs.px,gs.py,camera.toPx(TUNING.goalRadius),progress);
+    if (stage.recovery && !stage.recovery.collected) {
+      const item = camera.toScreen(stage.recovery.x, stage.recovery.y);
+      drawToyCandy(ctx, item.px, item.py, camera.toPx(0.34), now, reducedMotion.matches);
+    }
     if(pointerTilt) {
       const c=viewportPx/2;ctx.strokeStyle='rgba(255,202,139,.38)';ctx.lineWidth=1.5;
       ctx.beginPath();ctx.moveTo(c,c);ctx.lineTo(c+pointerTilt.x*viewportPx*.42,c+pointerTilt.y*viewportPx*.42);ctx.stroke();

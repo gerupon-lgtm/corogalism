@@ -1,5 +1,7 @@
 # フェーズ2 UI実装の作業記録（2026-09-12）
 
+**v0.2.12:** チャレンジの最新仕様は [challenge-expansion.md](challenge-expansion.md)。やさしい・通常のHP係数、4枠の記録、回復キャンディ、面テーマ（ゴム壁を含む）、基準角度の保持を追加。以下の旧版記録・数値は履歴として参照。公開状況はdeployment.md。
+
 正典: `tasks.md`、`run-and-score.md`、`hp-and-materials.md`。
 
 ## 計画

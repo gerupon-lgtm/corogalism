@@ -1,5 +1,5 @@
 /** S-102 ゲーム（F-142）。キャリブレーションはプレイ中も実行できる（F-103） */
-import { UI } from '../config/gameConfig.js';
+import { UI, RECOVERY } from '../config/gameConfig.js';
 
 export function createGameScreen(root) {
   const el = root.querySelector('#screen-game');
@@ -16,6 +16,7 @@ export function createGameScreen(root) {
   const hpBlock = root.querySelector('#hp-meter-block');
   const damageText = root.querySelector('#hud-damage');
   let damageUntil = 0;
+  let recoveryUntil = 0;
 
   return {
     show() { el.hidden = false; },
@@ -26,6 +27,8 @@ export function createGameScreen(root) {
       tilt.textContent = v.tiltMagnitude.toFixed(2);
       mode.textContent = v.mode === 'tilt' ? '傾き' : '擬似';
       calBtn.disabled = v.mode !== 'tilt';
+      root.querySelector('#btn-pause-calibrate').hidden = v.mode !== 'tilt';
+      if (v.now >= recoveryUntil) root.querySelector('#recovery-feedback').textContent = '';
       el.querySelector('#game-status').textContent = v.paused ? '一時停止中。再開ボタンで続けます。'
         : v.preparing ? '準備ができたら、3・2・1でスタート！'
         : !v.started ? '動き出すとタイム計測が始まります。' : '';
@@ -59,6 +62,10 @@ export function createGameScreen(root) {
       damageUntil = now + UI.damageFeedbackMs;
       damageText.textContent = `−${Math.ceil(amount)}`;
       hpBlock.classList.add('damaged');
+    },
+    showRecovery(amount, now) {
+      recoveryUntil = now + RECOVERY.feedbackMs;
+      root.querySelector('#recovery-feedback').textContent = `HP +${Number(amount.toFixed(1))}`;
     },
     setPaused(paused) { pauseBtn.textContent = paused ? '▶ 再開' : 'Ⅱ ポーズ'; },
     setOrientationWarning(show) { orientWarn.hidden = !show; },

@@ -6,6 +6,8 @@
 import { TUNING } from '../config/gameConfig.js';
 import { getMaterial } from './materials.js';
 import { createRng } from '../maze/rng.js';
+import { assignTheme } from './themes.js';
+import { createRecovery } from './recovery.js';
 
 const NEUTRAL_ZONE = { id: 'none', frictionK: 1, restitutionK: 1, accelK: 1, forceX: 0, forceY: 0 };
 
@@ -36,7 +38,9 @@ export function createStage(maze, difficulty) {
     zones: [], // フェーズ2でも空（ゾーンはフェーズ3以降）
     wallThickness: TUNING.wallThickness,
   };
-  if (difficulty) assignWallMaterials(stage, difficulty);
+  if (difficulty?.themed) assignTheme(stage, difficulty);
+  else if (difficulty) assignWallMaterials(stage, difficulty);
+  stage.recovery = difficulty ? createRecovery(maze, difficulty.recoveryChance ?? 0) : null;
   return stage;
 }
 

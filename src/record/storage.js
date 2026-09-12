@@ -15,6 +15,7 @@ const DEFAULT_SETTINGS = {
   mode: 'tilt',
   maxTiltAngleDeg: 25,
   calibration: null,
+  challengeLevel: 'normal',
 };
 
 function read(key, fallback) {
@@ -77,13 +78,16 @@ function isRunBest(value) {
 }
 
 /** チャレンジの自己ベストを、ノーコン／コンティニュー込みの2本で読む。 */
-export function loadRunBests() {
-  const stored = read(RUN_BESTS_KEY, {});
+export function loadRunBests(level = 'normal') {
+  const stored = read(runBestsKey(level), {});
   return {
     noContinue: isRunBest(stored.noContinue) ? stored.noContinue : null,
     withContinue: isRunBest(stored.withContinue) ? stored.withContinue : null,
   };
 }
+
+// 通常は従来キーを維持し、既存記録をそのまま引き継ぐ。
+function runBestsKey(level) { return level === 'easy' ? `${RUN_BESTS_KEY}-easy` : RUN_BESTS_KEY; }
 
 function isBetterRun(candidate, previous) {
   if (!previous) return true;
@@ -105,7 +109,7 @@ export function saveRunBest(result) {
 
   if (!validResult) return { updated: false, saved: false, best: null };
 
-  const bests = loadRunBests();
+  const bests = loadRunBests(result.level);
   const category = result.usedContinue ? 'withContinue' : 'noContinue';
   const previous = bests[category];
   if (!isBetterRun(result, previous)) {
@@ -118,6 +122,6 @@ export function saveRunBest(result) {
     at: new Date().toISOString(),
   };
   bests[category] = best;
-  const saved = write(RUN_BESTS_KEY, bests);
+  const saved = write(runBestsKey(result.level), bests);
   return { updated: true, saved, best };
 }

@@ -114,3 +114,11 @@ node tools/browser-edge-cases.mjs
 Pixel 6a（Chrome）とiPhone XR（Safari）で、HTTPSに公開した版を試遊する。
 操作感・被弾の分かりやすさ・素材の識別・時間の厳しさ・腕の負担を確認する。
 Git初期化・コミット・push・Pages公開は完了。デプロイ記録は `../deployment.md`。
+
+## T-225 チャレンジ拡張
+
+`node tools/browser-challenge.mjs`：4画面幅で難易度・記録開閉・キャンディ回復・ゴム壁。初回安定測定・ページ内の基準保持・明示測定と中断・タッチへの切替も検証。`PLAYWRIGHT_MODULE` / `BASE_URL` は他のスクリプトと共通。
+
+`node tools/balance-challenge.mjs`：面テーマ・回復込みで通常/やさしい、各30シード・2通りの操縦を計測。従来曲線の比較用検証は `tools/balance.mjs` に維持。
+
+新しい画面証跡は `challenge/`。他のディレクトリは過去版の記録として保持する。

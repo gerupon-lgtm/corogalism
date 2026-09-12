@@ -34,6 +34,14 @@ export function createHp({ turns, hpPerTurn, damageMult = 1, cfg = HP, damageCap
     /** この面で一度でもダメージを受けたか（ノーミス面数の判定に使う） */
     get tookDamage() { return tookDamage; },
 
+    /** 回復しても被弾履歴は維持。死亡後の復活には使わない。 */
+    heal(amount) {
+      if (value <= 0 || !Number.isFinite(amount) || amount <= 0) return 0;
+      const gained = Math.min(amount, max - value);
+      value += gained;
+      return gained;
+    },
+
     /**
      * 衝突を適用して、実際に減ったHPを返す（0なら無傷）。
      * speed は法線方向の速度（マス/s）、wall は衝突した壁（materialId を持つ）。

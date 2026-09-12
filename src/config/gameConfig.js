@@ -83,6 +83,25 @@ export const RUN = {
   continues: 2,  // 1ランに使えるコンティニュー回数
 };
 
+/** 難易度はHPだけを変更。時間・迷路・物理は共通。 */
+export const CHALLENGE_LEVELS = {
+  easy: { label: 'やさしい', damageFactor: 0.5, recoveryChance: 0.5 },
+  normal: { label: '通常', damageFactor: 1, recoveryChance: 0.2 },
+};
+export const RECOVERY = { healRatio: 0.2, pathMin: 0.55, pathMax: 0.85, radius: 0.22, feedbackMs: 1000 };
+/** 1・2面は基本。その後は素材を順に紹介し、同じ順で周回する。 */
+export const STAGE_THEMES = {
+  introStages: 2,
+  cycle: ['rest', 'bounce', 'careful', 'basic', 'rest', 'bounce', 'careful', 'trial'],
+  definitions: {
+    basic: { label: '基本の迷路', material: 'default', ratio: 0 },
+    rest: { label: 'やすらぎの迷路', material: 'moss', ratio: 0.45 },
+    bounce: { label: 'はずむ迷路', material: 'rubber', ratio: 0.3 },
+    careful: { label: '慎重に進む迷路', material: 'stone', ratio: 0.22 },
+    trial: { label: '腕試しの迷路', material: 'spike', ratio: 0.12 },
+  },
+};
+
 /** 表示専用。物理や難易度の数値とは分離する。 */
 export const UI = {
   startCountdownMs: 3000,
@@ -94,6 +113,14 @@ export const UI = {
   damageFeedbackMs: 450,
   urgentTimeRatio: 0.25,
   lowHpRatio: 0.35,
+};
+
+/** 初回・明示操作時だけ、安定した姿勢を基準として採用する。 */
+export const CALIBRATION = {
+  stableMs: 500,
+  toleranceDeg: 2,
+  minSamples: 5,
+  maxSampleGapMs: 250,
 };
 
 /** 承認済み試聴版v2の音量と発音制御。 */

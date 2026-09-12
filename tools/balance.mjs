@@ -13,13 +13,15 @@ import { difficultyAt, stageTimeLimitSec } from '../src/game/progression.js';
 import { createHp } from '../src/game/hp.js';
 import { createRun } from '../src/game/run.js';
 import { BASE, TUNING } from '../src/config/gameConfig.js';
+import { RECOVERY } from '../src/config/gameConfig.js';
+import { challengeDifficulty } from '../src/game/challenge.js';
 
 /**
  * 1面を自動操縦で通す。
  * urgency = 間に合うペースに対する走り方の余裕（1.0=ぴったり、1.3=3割速く）
  */
-export function playStage(seed, stageIndex, urgency) {
-  const d = difficultyAt(stageIndex);
+export function playStage(seed, stageIndex, urgency, level = null) {
+  const d = level ? challengeDifficulty(stageIndex, level) : difficultyAt(stageIndex);
   const maze = generateMaze(BASE.mazeSize, seed);
   const stage = createStage(maze, d);
   const actor = createActor(maze, getCharacter('default'));
@@ -51,6 +53,11 @@ export function playStage(seed, stageIndex, urgency) {
     const m = Math.hypot(tx, ty);
     if (m > 1) { tx /= m; ty /= m; }
     stepPhysics({ actor, stage, tilt: { x: tx, y: ty }, base: BASE, dt, onImpact });
+    const item = stage.recovery;
+    if (!hp.isDead && item && !item.collected && hp.value < hp.max
+      && Math.hypot(actor.x - item.x, actor.y - item.y) < actor.r + RECOVERY.radius) {
+      if (hp.heal(hp.max * RECOVERY.healRatio) > 0) item.collected = true;
+    }
 
     if (Math.hypot(actor.x - goal.x, actor.y - goal.y) < TUNING.goalRadius)
       return { result: 'clear', sec: t, hp, maze, limitSec };

@@ -19,7 +19,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.2.11</span>
+      <span class="badge">v0.2.12</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -36,8 +36,8 @@
       <progress id="hp-bar" max="1" value="1" aria-label="HP"></progress>
     </div>
   </div>
-  <div id="play-toolbar" class="play-toolbar" hidden><span id="play-mode-label">プラクティス</span><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
-  <div class="board" id="board" hidden>
+  <div id="play-toolbar" class="play-toolbar" hidden><div class="play-labels"><span id="play-mode-label">プラクティス</span><span id="stage-theme" class="stage-theme"></span></div><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
+  <div class="board" id="board" hidden><span id="recovery-feedback" class="recovery-feedback" role="status"></span>
     <canvas id="canvas" aria-label="7×7の迷路。オレンジのビー玉を右下のカップへ導きます"></canvas>
     <div id="toast-layer" class="toast-layer" hidden>
   <section id="screen-clear" class="game-toast" role="region" aria-labelledby="clear-heading" hidden>
@@ -65,9 +65,9 @@
   </section>
     </div>
     <div id="countdown-layer" class="countdown-layer" role="status" aria-live="polite" hidden>
-      <div class="countdown-medallion"><span class="countdown-label">READY</span><strong id="countdown-number">3</strong><span class="countdown-caption">まもなくスタート</span></div>
+      <div class="countdown-medallion"><span class="countdown-label">READY</span><strong id="countdown-number">3</strong><span class="countdown-caption" id="countdown-caption">まもなくスタート</span><button id="btn-calibration-pointer" type="button" hidden>タッチで遊ぶ</button></div>
     </div>
-    <div id="board-overlay" class="board-overlay" hidden><div class="pause-card"><span id="board-status"></span><button id="btn-resume" type="button">▶ 再開</button></div></div>
+    <div id="board-overlay" class="board-overlay" hidden><div class="pause-card"><span id="board-status"></span><button id="btn-pause-calibrate" type="button">この角度を基準にする</button><button id="btn-resume" type="button">▶ 再開</button></div></div>
   </div>
   <p class="cap" id="play-hint" hidden>オレンジのビー玉を、右下のカップへ。</p>
 
@@ -76,14 +76,17 @@
     <p class="menu-eyebrow">ROLL AT YOUR OWN PACE</p>
     <h2>どちらで遊ぶ？</h2>
     <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small class="mode-description"><span>HP・制限時間なし。</span><span>同じ迷路でタイムを縮めよう。</span></small></button>
-    <button class="mode-card" id="btn-challenge" type="button"><strong>チャレンジ <span>面数に挑戦</span></strong><small>HPと制限時間あり。クリアを重ねて先へ進もう。</small></button>
+    <div class="difficulty-switch" role="group" aria-label="チャレンジの難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
+    <p id="difficulty-note" class="difficulty-note"></p>
+    <button class="mode-card" id="btn-challenge" type="button"><strong>チャレンジ <span id="challenge-level-label">通常</span></strong><small>HPと制限時間あり。クリアを重ねて先へ進もう。</small></button>
     <p class="menu-instruction">楽に持てる角度でモードを選んでください。</p>
     <p class="note" id="mode-note"></p>
-    <h3 class="records-heading">自己ベスト</h3>
+    <details id="mode-records" class="mode-records"><summary>自己ベストを見る</summary><div class="difficulty-switch record-switch" role="group" aria-label="記録の難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
     <dl class="result record-cards">
       <div><dt>ノーコンティニュー記録</dt><dd id="mode-best-no">—</dd></div>
       <div><dt>コンティニュー使用記録</dt><dd id="mode-best-continue">—</dd></div>
     </dl>
+    </details>
     <button class="ghost" id="btn-mode-settings" type="button">操作の設定</button>
   </section>
 
@@ -148,7 +151,7 @@
       <button class="ghost cal" id="btn-settings-calibrate" type="button">基準をとり直す</button>
       <button class="primary" id="btn-settings-close" type="button">設定を終える</button>
     </div>
-    <p class="note" id="settings-note"></p>
+    <p class="note" id="settings-note"></p><p class="note" id="calibration-note" role="status">基準の角度は、このページで遊ぶ間は維持します。</p>
   </section>
 
   <footer class="note">

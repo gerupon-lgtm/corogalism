@@ -9,13 +9,16 @@
  * 許可拒否・非搭載・値が届かない場合は supported/receiving が false になる。
  * 呼び出し側は必ず擬似傾きモードへ着地させる（行き止まりを作らない）。
  */
-export function createTiltSource() {
+import { createStableCalibration } from './stableCalibration.js';
+
+export function createTiltSource({ canCalibrate = () => true, onCalibrated = () => {} } = {}) {
   let calibration = null;
   let pendingCalibration = true;
   let receiving = false;
   let handler = null;
   let onVector = null;
   let getMaxAngle = () => 25;
+  const stable = createStableCalibration();
 
   function isSupported() {
     return typeof window !== 'undefined' && typeof window.DeviceOrientationEvent !== 'undefined';
@@ -37,15 +40,19 @@ export function createTiltSource() {
   }
 
   function onOrientation(e) {
-    if (e.beta === null && e.gamma === null) return;
+    if (!Number.isFinite(e.beta) || !Number.isFinite(e.gamma)) { stable.reset(); return; }
     receiving = true;
 
-    const beta = e.beta || 0;
-    const gamma = e.gamma || 0;
+    const beta = e.beta;
+    const gamma = e.gamma;
 
     if (pendingCalibration || !calibration) {
-      calibration = { beta, gamma };
+      if (!canCalibrate()) { stable.reset(); return; }
+      const measured = stable.sample(beta, gamma, performance.now());
+      if (!measured) return;
+      calibration = measured;
       pendingCalibration = false;
+      onCalibrated({ ...calibration });
     }
 
     let dBeta = beta - calibration.beta;
@@ -62,6 +69,7 @@ export function createTiltSource() {
   return {
     get supported() { return isSupported(); },
     get receiving() { return receiving; },
+    get needsCalibration() { return pendingCalibration || !calibration; },
     needsPermission,
     requestPermission,
 
@@ -82,13 +90,17 @@ export function createTiltSource() {
         handler = null;
       }
       receiving = false;
+      stable.reset();
     },
 
-    /** 次に届いたイベントの姿勢を基準にする（プレイ中でも呼べる） */
+    /** 明示的な再調整。採用するまでは前の基準を残し、中断できる。 */
     calibrate() {
       pendingCalibration = true;
-      calibration = null;
+      stable.reset();
     },
+
+    cancelCalibration() { pendingCalibration = !calibration; stable.reset(); },
+    resetCalibrationSamples() { stable.reset(); },
 
     getCalibration() { return calibration ? { ...calibration } : null; },
     setCalibration(c) {

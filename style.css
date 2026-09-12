@@ -332,3 +332,21 @@ body[data-screen="run-result"] footer{display:none}
 .countdown-layer.is-preparing .countdown-label{visibility:hidden}
 .countdown-layer.is-preparing #countdown-number{font-size:clamp(21px,8cqw,34px);letter-spacing:.07em;animation:none}
 @media(max-width:360px){.run-result-menu{padding:20px 13px;gap:14px}.run-score dt{font-size:10px}}
+/* T-225 難易度・回復・テーマ。盤面やヘッダの寸法は変えない。 */
+.difficulty-switch{display:flex;gap:6px;padding:5px;border:1px solid #c6ab7e;border-radius:24px;background:#ddc8a5;margin:12px 0 4px}
+.difficulty-switch button{flex:1;min-width:0;padding:8px 12px;border:1px solid transparent;border-radius:20px;background:transparent;color:#6e4c2b;font:inherit;font-weight:700;box-shadow:none}
+.difficulty-switch button[aria-pressed="true"]{background:linear-gradient(#f9ffe5,#dce9ba);border-color:#9bab73;color:#476a36;box-shadow:0 2px 0 #8e9e70}
+.difficulty-note{font-size:12px;color:#785532;text-align:center;margin:6px 0 12px;min-height:1.5em}
+.record-switch{margin-bottom:12px}
+.play-labels{display:flex;flex-direction:column;min-width:0;gap:2px}.stage-theme{font-size:10px;line-height:1.4;letter-spacing:0;color:#d3c7a7;white-space:nowrap}
+.stage-theme:empty,.recovery-feedback:empty{display:none}
+.recovery-feedback{position:absolute;left:50%;top:38%;transform:translateX(-50%);z-index:3;pointer-events:none;border-radius:20px;padding:5px 14px;background:#f3fbdc;color:#42672f;box-shadow:0 3px 0 #8c9d6f;font-size:18px;font-weight:800}
+.countdown-caption{max-width:170px;text-align:center}
+#btn-calibration-pointer{pointer-events:auto;margin-top:10px;padding:8px;font-size:12px;border-radius:18px;background:#f5e6c4;color:#6d4b2b}
+#btn-pause-calibrate{font-size:12px;margin:8px 0;padding:10px;border-radius:20px;background:#f7e8c6;color:#6d4b2b}
+
+.mode-records{margin:14px 0;border:1px solid #c6ab7e;border-radius:18px;padding:0 12px;background:#f9edcf;box-shadow:0 2px 0 #b69a6e;color:#6e4c2b}
+.mode-records summary{padding:13px 2px;font-size:14px;font-weight:700;cursor:pointer}
+.mode-records[open]{padding-bottom:8px}
+.mode-records .record-switch{margin-top:0}
+.mode-records .record-cards{margin:10px 0}

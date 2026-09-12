@@ -117,3 +117,11 @@ test('localStorageを読めない場合も未保存として扱う', () => {
   assert.deepEqual(loadRunBests(), { noContinue: null, withContinue: null });
   assert.doesNotThrow(() => saveRunBest({ stages: 1, totalTimeMs: 1_000, usedContinue: true }));
 });
+test('難易度ごとに2枠ずつ保存し、旧記録は通常に残す', () => {
+  const old = saveRunBest({ stages: 8, totalTimeMs: 8000, usedContinue: false });
+  const easy = saveRunBest({ stages: 2, totalTimeMs: 3000, usedContinue: false, level: 'easy' });
+  const continued = saveRunBest({ stages: 4, totalTimeMs: 9000, usedContinue: true, level: 'easy' });
+  assert.deepEqual(loadRunBests('normal').noContinue, old.best);
+  assert.deepEqual(loadRunBests('easy'), { noContinue: easy.best, withContinue: continued.best });
+  assert.equal(loadRunBests('normal').withContinue, null);
+});

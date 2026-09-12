@@ -18,6 +18,6 @@ test('音設定を保存・復元しても操作モードとキャリブレー�
   globalThis.localStorage = { getItem: key => store.get(key), setItem: (key, value) => store.set(key, value) };
   try {
     saveSettings({ mode: 'pointer', maxTiltAngleDeg: 30, calibration: { beta: 12, gamma: 2 }, soundEnabled: true, bgmVolume: .2, seVolume: 0 });
-    assert.deepEqual(loadSettings(), { mode: 'pointer', maxTiltAngleDeg: 30, calibration: { beta: 12, gamma: 2 }, soundEnabled: true, bgmVolume: .2, seVolume: 0 });
+    assert.deepEqual(loadSettings(), { challengeLevel: 'normal', mode: 'pointer', maxTiltAngleDeg: 30, calibration: { beta: 12, gamma: 2 }, soundEnabled: true, bgmVolume: .2, seVolume: 0 });
   } finally { delete globalThis.localStorage; }
 });

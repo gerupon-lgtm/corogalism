@@ -1,5 +1,5 @@
 /** 1面の実行状態。DOMを持たず、既存の物理・HP・時間を接続する。 */
-import { BASE, TUNING } from '../config/gameConfig.js';
+import { BASE, TUNING, RECOVERY } from '../config/gameConfig.js';
 import { generateMaze } from '../maze/generator.js';
 import { createStage, createActor, goalCenter } from '../world/stage.js';
 import { getCharacter } from '../world/characters.js';
@@ -28,7 +28,7 @@ export function createStagePlay(seed, difficulty = null) {
     get status() { return status; },
     get remainingSec() { return limitSec === null ? null : Math.max(0, limitSec - timeMs / 1000); },
     /** 停止中は呼ばない。elapsedMsは実時間、dtは物理用に上限を設けた秒数。 */
-    advance({ dt, elapsedMs, tilt, base, onImpact }) {
+    advance({ dt, elapsedMs, tilt, base, onImpact, onRecovery }) {
       if (status !== 'playing') return 0;
       activeSec += Math.max(0, elapsedMs) / 1000;
       if (started) timeMs += Math.max(0, elapsedMs);
@@ -47,7 +47,15 @@ export function createStagePlay(seed, difficulty = null) {
       // 最終フレームでゴールに触れても、死亡・時間切れならクリアにしない。
       if (hp?.isDead) status = 'dead';
       else if (limitSec !== null && timeMs >= limitSec * 1000) status = 'timeout';
-      else if (Math.hypot(actor.x - goal.x, actor.y - goal.y) < TUNING.goalRadius) status = 'clear';
+      else {
+        const item = stage.recovery;
+        if (item && !item.collected && hp.value < hp.max
+          && Math.hypot(actor.x - item.x, actor.y - item.y) < actor.r + RECOVERY.radius) {
+          const gained = hp.heal(hp.max * RECOVERY.healRatio);
+          if (gained > 0) { item.collected = true; onRecovery?.(gained); }
+        }
+        if (Math.hypot(actor.x - goal.x, actor.y - goal.y) < TUNING.goalRadius) status = 'clear';
+      }
       return damage;
     },
     /** 開発用フックから使う。通常プレイは物理の移動速度で開始する。 */

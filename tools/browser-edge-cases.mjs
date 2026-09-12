@@ -51,7 +51,7 @@ try {
     await page.clock.runFor(32); await click('btn-next');
   }
   const ids = new Set((await state()).walls.map(w => w.materialId));
-  assert.ok(ids.has('stone') && ids.has('spike'));
+  assert.ok(ids.has('moss') && !ids.has('spike'), '15面目は苔が主役');
   await page.screenshot({ path: fileURLToPath(new URL('materials-stage15-375.png', output)), fullPage: true });
   await context.close();
 
@@ -68,13 +68,14 @@ try {
         window.emitOrientation(20, 10);
       });
     }
+    if (kind === 'granted') for (let i = 0; i < 7; i++) { await page.evaluate(() => window.emitOrientation(20, 10)); await page.clock.runFor(100); }
     await page.clock.runFor(1700); await page.clock.runFor((await state()).prepareMs + (await state()).countdownMs + 32);
     assert.equal((await state()).mode, kind === 'granted' ? 'tilt' : 'pointer');
     if (kind === 'granted') {
       await page.evaluate(() => window.emitOrientation(20, 25)); await page.clock.runFor(200);
       assert.equal((await state()).started, true);
       await click('btn-calibrate');
-      await page.evaluate(() => window.emitOrientation(35, 17)); await page.clock.runFor(350);
+      for (let i = 0; i < 7; i++) { await page.evaluate(() => window.emitOrientation(35, 17)); await page.clock.runFor(100); }
       const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('corogalism-settings')).calibration);
       assert.deepEqual(saved, { beta: 35, gamma: 17 });
     }

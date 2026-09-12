@@ -23,6 +23,7 @@ export function createSettingsScreen(root) {
     },
     render(settings) {
       paintMode(settings.mode);
+      calBtn.disabled = settings.mode !== 'tilt' || modeTilt.disabled;
       angle.value = String(settings.maxTiltAngleDeg);
       angleOut.textContent = `${settings.maxTiltAngleDeg}°`;
       for (const [id, key] of [['bgm', 'bgmVolume'], ['se', 'seVolume']]) {
