@@ -1,4 +1,7 @@
-# 画面（フェーズ2 / v0.2.0）
+# 画面（フェーズ2 / v0.2.2）
+
+v0.2.2ではS-103/S-106を盤面内のC案トーストに変更。HUDとS-102の配置を保持し、背景操作をinertにする。詳細は `toy-visuals.md`。
+表示切替は `section.panel` と `section.game-toast` のhidden属性で管理する。以下の旧画面詳細より本注記を優先する。
 
 画面の切り替えは `main.js` が `section.panel` の `hidden` で一元管理する。
 `[hidden]{display:none!important}` を維持する。盤面は固定カメラの正方形。

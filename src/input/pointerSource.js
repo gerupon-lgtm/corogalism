@@ -47,6 +47,9 @@ export function createPointerSource(element) {
       element.addEventListener('pointerleave', up);
     },
     stop() {
+      if (pointerId !== null) {
+        try { element.releasePointerCapture(pointerId); } catch { /* capture解除済み */ }
+      }
       element.removeEventListener('pointerdown', down);
       element.removeEventListener('pointermove', move);
       element.removeEventListener('pointerup', up);

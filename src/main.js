@@ -58,7 +58,7 @@ function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
 function resetInput() {
   pointerSource.stop();
   tilt.reset();
-  if (settings.mode === 'pointer') pointerSource.start(receiveTilt);
+  if (settings.mode === 'pointer' && isPlaying()) pointerSource.start(receiveTilt);
 }
 
 function applyMode(mode) {
@@ -114,23 +114,48 @@ function resize() {
 
 function updateHint() {
   find('play-hint').textContent = screen === 'game'
-    ? settings.mode === 'pointer' ? '盤面の中心から、進みたい方向を押し続けます。' : '端末を傾けて、右下の輪へ。'
-    : 'オレンジのビー玉を、右下の輪へ。';
+    ? settings.mode === 'pointer' ? '盤面の中心から、進みたい方向を押し続けます。' : '端末を傾けて、右下のカップへ。'
+    : 'オレンジのビー玉を、右下のカップへ。';
   game.setOrientationWarning(window.innerWidth > window.innerHeight && settings.mode === 'tilt');
 }
 
 function showScreen(name) {
+  const previousScreen = screen;
   screen = name;
-  root.querySelectorAll('section.panel').forEach((el) => { el.hidden = el.id !== `screen-${name}`; });
+  const ended = name === 'clear' || name === 'over';
+  const boardSession = name === 'game' || ended;
+  root.querySelectorAll('section.panel, section.game-toast').forEach((el) => {
+    el.hidden = el.id !== `screen-${name}` && !(ended && el.id === 'screen-game');
+  });
   root.body.dataset.screen = name;
-  find('challenge-hud').hidden = name !== 'game' || gameMode !== 'challenge';
+  root.body.classList.toggle('board-session', boardSession);
+  find('screen-game').inert = ended;
+  find('screen-game').setAttribute('aria-hidden', String(ended));
+  find('toast-layer').hidden = !ended;
+  find('challenge-hud').hidden = !boardSession || gameMode !== 'challenge';
   find('board-overlay').hidden = name !== 'game' || !paused;
   find('board-status').textContent = '一時停止';
   resetInput();
   lastFrame = performance.now();
   updateHint();
   resize();
+  // focus()の既定スクロールを抑え、トースト内から操作を続けられるようにする。
+  if (ended) {
+    const button = name === 'clear' ? find('btn-next') : find('btn-continue').disabled ? find('btn-run-end') : find('btn-continue');
+    button.focus({ preventScroll: true });
+  } else if (boardSession && ['clear', 'over'].includes(previousScreen)) {
+    find('btn-pause').focus({ preventScroll: true });
+  }
 }
+
+// 操作付きトースト内でTabを循環し、背景の操作へ抜けないようにする。
+root.addEventListener('keydown', (event) => {
+  if (!['clear', 'over'].includes(screen) || event.key !== 'Tab') return;
+  const buttons = [...find(`screen-${screen}`).querySelectorAll('button')].filter(el => !el.hidden && !el.disabled);
+  const index = buttons.indexOf(root.activeElement);
+  const next = (index + (event.shiftKey ? -1 : 1) + buttons.length) % buttons.length;
+  event.preventDefault(); buttons[next].focus({ preventScroll: true });
+});
 
 const materialHelp = {
   default: '標準の跳ね返りとダメージ', rubber: 'よく跳ねる・ダメージ小',
@@ -226,9 +251,9 @@ function frame(now) {
     if (!handled && play.status === 'clear') finishStage();
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
   }
-  if (play && camera) renderer.draw({ stage: play.stage, actor: play.actor, camera,
+  if (play && camera) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, now,
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
-  if (screen === 'game') game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
+  if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
     mode: settings.mode, started: play.started, paused, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, now });
   requestAnimationFrame(frame);
 }
@@ -269,8 +294,8 @@ find('btn-clear-exit').addEventListener('click', finishRun);
 find('material-legend').addEventListener('toggle', () => {
   if (find('material-legend').open && screen === 'game') setPaused(true);
 });
-clear.onRetry(() => { if (!run) { loadStage(seed); showScreen('game'); } });
-clear.onNext(() => { loadStage(run ? run.currentSeed() : nextSeed()); showScreen('game'); });
+clear.onRetry(() => { if (screen === 'clear' && !run) { loadStage(seed); showScreen('game'); } });
+clear.onNext(() => { if (screen === 'clear') { loadStage(run ? run.currentSeed() : nextSeed()); showScreen('game'); } });
 find('btn-continue').addEventListener('click', () => {
   if (screen === 'over' && run?.useContinue()) {
     recordStatus = null;

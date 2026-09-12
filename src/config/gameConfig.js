@@ -85,6 +85,8 @@ export const RUN = {
 
 /** 表示専用。物理や難易度の数値とは分離する。 */
 export const UI = {
+  goalSettleMs: 520,
+  clearCelebrationMs: 1500,
   damageFeedbackMs: 450,
   urgentTimeRatio: 0.25,
   lowHpRatio: 0.35,

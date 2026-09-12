@@ -5,9 +5,9 @@
 export const WALL_MATERIAL_APPEARANCE = Object.freeze({
   default: Object.freeze({
     label: '標準',
-    fill: '#9BB0A9',
-    edge: '#D7E2DE',
-    pattern: '#60736D',
+    fill: '#B9BCB0',
+    edge: '#F1E7D1',
+    pattern: '#69736A',
     motif: 'dash',
   }),
   rubber: Object.freeze({
@@ -19,9 +19,9 @@ export const WALL_MATERIAL_APPEARANCE = Object.freeze({
   }),
   stone: Object.freeze({
     label: '石',
-    fill: '#8C8278',
-    edge: '#D4CBC2',
-    pattern: '#4F4944',
+    fill: '#BB9A75',
+    edge: '#EBD0A7',
+    pattern: '#69513D',
     motif: 'masonry',
   }),
   spike: Object.freeze({

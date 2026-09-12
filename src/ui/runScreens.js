@@ -11,15 +11,16 @@ export function createRunScreens(root) {
       find('mode-note').textContent = note;
     },
     setOver(run) {
-      find('over-heading').textContent = run.cause === 'timeout' ? '時間切れ' : 'HPがなくなりました';
-      find('over-note').textContent = `${run.stageIndex}面目で終了。${run.usedContinue ? 'コンティニュー使用' : 'ノーコンティニュー'}の記録です。`;
+      find('over-heading').textContent = run.canContinue ? 'もう一度！' : 'おつかれさま！';
+      find('over-note').textContent = `${run.cause === 'timeout' ? '時間切れ' : 'HPがなくなりました'} · ${run.stageIndex}面目`;
       find('over-stages').textContent = `${run.clearedStages} 面`;
       find('over-time').textContent = seconds(run.totalTimeMs);
       find('btn-continue').disabled = !run.canContinue;
-      find('btn-continue').textContent = `コンティニュー（残り${run.continuesLeft}回）`;
+      find('btn-continue').textContent = 'コンティニュー';
       find('continue-note').textContent = run.canContinue
-        ? '同じ面をHP満タン・制限時間リセットで再開。以降の記録はコンティニュー使用枠になります。'
-        : 'コンティニューを使い切りました。結果を確認して、新しいランに挑戦できます。';
+        ? `残り${run.continuesLeft}回 · HPと時間を回復`
+        : 'コンティニューを使い切りました';
+      find('btn-run-end').textContent = run.canContinue ? '終了して結果を見る' : '結果を見る';
     },
     setResult(result, record) {
       find('run-category').textContent = result.usedContinue ? 'コンティニュー使用の記録' : 'ノーコンティニューの記録';

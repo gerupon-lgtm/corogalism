@@ -14,6 +14,8 @@
 
 ## 2. 現在の状態
 
+**v0.2.2更新:** C案のトースト・光沢球・カップ型ゴール・素材壁・葉ロゴを実装。78テスト成功。4画面幅で終了／再開時のスクロール不変を検証。`docs/toy-visuals.md` と `docs/deployment.md` を参照。以下のv0.2.1記録は難易度調整時点の履歴。
+
 **フェーズ0（操作感の検証）は合格済み**（2026-09-11、合格ライン a〜e 全通過。Pixel 6a と iPhone XR の実機で確認）。
 
 既にあるもの:
@@ -53,7 +55,7 @@
 
 - 言語: Vanilla JavaScript（ES2020+、ES modules）、HTML5 Canvas 2D
 - ビルド: なし（プレーンJS）。GitHub Pages にそのまま置ける形を優先する
-- ホスティング: GitHub Pages（`gerupon-lgtm/corogalism`、公開URL `https://gerupon-lgtm.github.io/corogalism/`）
+- ホスティング: GitHub Pages（`gerupon-lgtm/corogalism`、公開URL `https://corogalism.sikumilab.com/`）
 - データ永続化: `localStorage`（自己ベスト・設定のみ）
 - テスト: Node標準の `node --test`（純粋関数のみ対象）
 - バージョン: セマンティックバージョニング、接頭辞 `v`、フェーズ1の初期値 `v0.1.0`

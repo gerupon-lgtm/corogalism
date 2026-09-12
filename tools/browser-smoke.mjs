@@ -65,7 +65,8 @@ try {
   assert.equal(s.stageIndex, 2); assert.notEqual(s.seed, firstSeed); assert.equal(s.hp.value, s.hp.max);
   const failedSeed = s.seed; const walls = s.walls;
   await timeout(); assert.equal((await state()).status, 'timeout'); assert.equal((await state()).screen, 'over');
-  assert.equal(await page.locator('#over-heading').textContent(), '時間切れ');
+  assert.equal(await page.locator('#over-heading').textContent(), 'もう一度！');
+  assert.match(await page.locator('#over-note').textContent(), /時間切れ/);
   let records = await page.evaluate(() => JSON.parse(localStorage.getItem('corogalism-run-bests')));
   assert.equal(records.noContinue.stages, 1); assert.equal(records.withContinue, null);
   await page.screenshot({ path: fileURLToPath(new URL('over-375.png', output)), fullPage: true });
