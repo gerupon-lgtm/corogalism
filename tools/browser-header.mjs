@@ -50,6 +50,7 @@ try {
     await app.page.screenshot({ path: fileURLToPath(new URL(`game-${suffix}.png`, output)), fullPage: true });
     await app.click('btn-pause'); await check('pause'); await app.click('btn-game-settings'); await check('game settings');
     await app.click('btn-settings-close'); await app.click('btn-resume'); await app.ready();
+    await app.page.locator('#board').evaluate(el => el.scrollIntoView({ block: 'center' }));
     const board = await app.page.locator('#board').boundingBox();
     await app.page.mouse.move(board.x + board.width * .8, board.y + board.height * .5); await app.page.mouse.down(); await app.page.clock.runFor(200); await app.page.mouse.up();
     assert.equal((await app.state()).started, true, 'pointer gameplay still responds');
