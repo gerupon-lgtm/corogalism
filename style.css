@@ -1,0 +1,73 @@
+:root{
+  --bg:#0F1513; --panel:#18211E; --panel2:#131B19; --ink:#E7EDEA; --muted:#8B9A95;
+  --line:#2E3B37; --accent:#FF6A43; --accent-ink:#1A0B06; --warn:#D9A441; --ok:#5FBF92;
+  --sans:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --mono:"SFMono-Regular",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+/* .panel の display:flex が hidden 属性を上書きしてしまうため、明示的に打ち消す。
+   画面の表示/非表示は el.hidden で切り替えている（style.display は使わない）。 */
+[hidden]{display:none!important}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%;overscroll-behavior:none}
+.wrap{max-width:480px;margin:0 auto;padding-inline:14px;
+  padding-block:14px calc(28px + env(safe-area-inset-bottom));
+  display:flex;flex-direction:column;gap:12px}
+
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+h1{margin:0;font-size:16px;font-weight:700}
+h2{margin:0 0 4px;font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px}
+.sub{margin:0;color:var(--muted);font-size:12px}
+.badge{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--accent);
+  border:1px solid var(--accent);border-radius:4px;padding:2px 6px;white-space:nowrap}
+
+.board{position:relative;width:100%;aspect-ratio:1/1;background:#0B100F;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;touch-action:none;
+  user-select:none;-webkit-user-select:none}
+.board canvas{display:block}
+.cap{margin:-6px 0 0;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--muted);text-align:center}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:14px;display:flex;flex-direction:column;gap:12px}
+.lead{margin:0;font-size:13px;color:var(--muted)}
+.row{display:flex;gap:8px}
+button{font-family:var(--sans);cursor:pointer}
+button.primary{flex:1;background:var(--accent);color:var(--accent-ink);border:0;
+  border-radius:9px;padding:13px 18px;font-size:15px;font-weight:700}
+button.primary:active{filter:brightness(.9)}
+button.ghost{flex:1;padding:10px 6px;background:var(--panel2);color:var(--ink);
+  border:1px solid var(--line);border-radius:8px;font-size:13px}
+button.ghost.cal{border-color:var(--accent);color:var(--accent)}
+button[disabled]{opacity:.4;cursor:not-allowed}
+
+.hud,.result{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:9px;overflow:hidden;margin:0}
+.hud{grid-template-columns:repeat(4,1fr)}
+.result{grid-template-columns:repeat(3,1fr)}
+.hud div,.result div{background:var(--panel2);padding:7px 4px;text-align:center}
+.hud dt,.result dt{margin:0 0 1px;font-size:10px;color:var(--muted)}
+.hud dd,.result dd{margin:0;font-family:var(--mono);font-size:15px;font-weight:600;
+  font-variant-numeric:tabular-nums}
+.hud dd small{font-size:9px;color:var(--muted);font-weight:400}
+.result dd{font-size:13px}
+.best-badge{font-size:10px;font-weight:600;color:var(--accent-ink);background:var(--accent);
+  border-radius:4px;padding:2px 6px}
+
+.field{display:flex;flex-direction:column;gap:6px}
+.field label,.legend{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+  font-size:12px;color:var(--muted)}
+.field label b{font-family:var(--mono);font-size:12px;color:var(--ink);font-weight:500;
+  font-variant-numeric:tabular-nums}
+.seg{display:flex;gap:5px}
+.seg button{flex:1;padding:10px 4px;background:var(--panel2);color:var(--ink);
+  border:1px solid var(--line);border-radius:8px;font-size:13px}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);
+  color:var(--accent-ink);font-weight:600}
+input[type=range]{width:100%;accent-color:var(--accent);margin:0}
+
+.note{color:var(--muted);font-size:11.5px;line-height:1.75;margin:0}
+.warn{color:var(--warn)}
+footer.note{border-top:1px solid var(--line);padding-top:12px}
+:is(button,input):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
