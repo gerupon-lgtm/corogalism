@@ -1,5 +1,13 @@
 # フェーズ2 デプロイ記録（2026-09-12）
 
+## v0.2.10 ラン結果とカウント前の間
+
+- アプリ `80982e9` / `c740222`、公開 `645d321`。結果画面をトイ調へ統一し、通常0.6秒・コンティニュー1.5秒のREADYを追加。
+- 83テスト成功。start-flow/audio/results/toy/edgeのブラウザ検証成功。Standards / Specレビューとも指摘0件。
+- [Pages公開成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/34689212018)。正式URLの変更5ファイルはHTTP200、SHA-256がローカルと一致。
+
+- 正式URLの `browser-results.mjs` / `browser-audio.mjs` も成功。4幅の結果表示、READY中の停止・再開、結果先頭へのスクロール、BGMとSEの既存タイミングを確認。未処理例外0。
+
 ## v0.2.9 BGMを毎回先頭から
 
 - アプリ `4dc6b59`、公開 `2d5f8b0`。BGMの停止位置を保存せず、再開・次面・音ON復帰も先頭から再生。ループと開始待機は維持。
