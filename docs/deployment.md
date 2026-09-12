@@ -1,5 +1,14 @@
 # フェーズ2 デプロイ記録（2026-09-12）
 
+## v0.2.6 サウンド・操作配置・ヘッダ
+
+- 承認済みv2 BGMとSE、ポーズ左の音切替、独立音量を実装。検証中注記を維持し、A BIG FEELINGの下端をロゴmに揃えた。
+- アプリコミット `0896296`、公開コミット `f00bd52`。83テスト成功。Standards / Specレビューとも指摘0件。
+- [Pages公開成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/34686147424)。
+- 正式URLのHTML/CSS/JS・設定・音源計25ファイルがHTTP200、ローカルとSHA-256一致。
+- 正式URLでも `browser-audio.mjs` と `browser-ui-polish.mjs` が成功。音イベント・停止保存・読込失敗時の継続、5画面幅のヘッダ整列と設定を確認。未処理例外0。
+- 実機試聴は未実施。仕様と再確認手順は `audio-implementation.md`。
+
 ## v0.2.5 ヘッダ位置調整
 
 - 2段コピーをロゴ末尾mの高さ内へ縮小・位置合わせ。バージョンをロゴ行、注記下の余白を8pxへ。
