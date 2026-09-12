@@ -1,5 +1,6 @@
 import { AUDIO } from '../config/gameConfig.js';
 import { normalizeAudioSettings } from './audioSettings.js';
+import { createSelectBuffer } from './selectBuffer.js';
 
 const files = {
   bgm: 'bgm.wav', rolling: 'rolling-loop.wav', countdown: 'se-countdown.wav',
@@ -8,12 +9,13 @@ const files = {
   fail: 'se-fail.wav', continue: 'se-continue.wav', pause: 'se-pause.wav',
 };
 
-/** 音声の失敗をゲームへ伝播させない。音源は音ON後だけ取得し、遅れて届いたSEは再生しない。 */
+/** 操作音は同梱PCMで初回から鳴らす。他音源は音ON後に取得し、過去のSEを再生しない。 */
 export function createSoundManager(initial, onStatus = () => {}) {
   let prefs = normalizeAudioSettings(initial);
   let context = null, bgmGain, seGain, loading = null, loaded = false;
   let music = null, rolling = null, lastImpact = -Infinity;
   let musicStart = null;
+  let instantSelect = null, pendingSelect = null;
   let scene = { music: false, speed: 0, hidden: false };
   const buffers = new Map(), voices = new Set(), events = [];
   const log = name => { events.push(name); if (events.length > 32) events.shift(); };
@@ -42,10 +44,11 @@ export function createSoundManager(initial, onStatus = () => {}) {
   }
 
   function startVoice(name, { loop = false, offset = 0, duration, gain = 1, delay = 0 } = {}) {
-    if (!available() || !buffers.has(name)) return null;
+    const buffer = buffers.get(name) || (name === 'select' ? instantSelect : null);
+    if (!available() || !buffer) return null;
     try {
       const source = context.createBufferSource(), node = context.createGain();
-      source.buffer = buffers.get(name); source.loop = loop;
+      source.buffer = buffer; source.loop = loop;
       node.gain.value = gain;
       source.connect(node); node.connect(name === 'bgm' ? bgmGain : seGain);
       const voice = { source, gain: node, at: context.currentTime + delay, offset };
@@ -61,6 +64,10 @@ export function createSoundManager(initial, onStatus = () => {}) {
     if (!context) return;
     ramp(bgmGain.gain, prefs.bgmVolume);
     ramp(seGain.gain, prefs.seVolume);
+    if (pendingSelect && available()) {
+      const pending = pendingSelect; pendingSelect = null;
+      if (performance.now() <= pending.expires) effect('select', pending.options);
+    }
     const wantsMusic = available() && scene.music && prefs.bgmVolume > 0 && musicDelaySec() === 0;
     if (!wantsMusic && music) {
       stopVoice(music, true); music = null;
@@ -79,6 +86,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
   }
 
   function stopEffects() {
+    pendingSelect = null;
     voices.forEach(voice => stopVoice(voice)); voices.clear();
   }
 
@@ -117,6 +125,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
         limiter.ratio.value = AUDIO.limiterRatio;
         musicNode.connect(limiter); effectsNode.connect(limiter); limiter.connect(next.destination);
         context = next; bgmGain = musicNode; seGain = effectsNode;
+        instantSelect = createSelectBuffer(context);
         context.addEventListener('statechange', () => { if (context.state !== 'running') stopEffects(); sync(); });
       }
       if (context.state !== 'running') context.resume().then(sync).catch(() => onStatus('音ボタンを押して再開してください。'));
@@ -126,7 +135,12 @@ export function createSoundManager(initial, onStatus = () => {}) {
   }
 
   function effect(name, options = {}) {
-    if (!available() || prefs.seVolume === 0) return;
+    if (!prefs.soundEnabled || scene.hidden || prefs.seVolume === 0) return;
+    if (!available()) {
+      // 初回resumeの短い待ちだけ許容。連打を蓄積せず、最後の操作音1件に限定する。
+      if (name === 'select' && context) pendingSelect = { options, expires: performance.now() + AUDIO.uiSoundMaxWaitMs };
+      return;
+    }
     if (voices.size >= AUDIO.maxVoices) { const first = voices.values().next().value; stopVoice(first); voices.delete(first); }
     const voice = startVoice(name, options);
     if (voice) voices.add(voice);

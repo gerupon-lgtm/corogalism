@@ -125,6 +125,7 @@ export const CALIBRATION = {
 
 /** 承認済み試聴版v2の音量と発音制御。 */
 export const AUDIO = {
+  uiSoundMaxWaitMs: 250,
   defaultBgmVolume: 0.6,
   defaultSeVolume: 0.8,
   fadeSec: 0.06,

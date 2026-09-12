@@ -102,7 +102,7 @@ function saveSound() {
 function toggleSound() {
   settings.soundEnabled = !settings.soundEnabled;
   saveSound();
-  if (settings.soundEnabled) sound.unlock(true);
+  if (settings.soundEnabled) { sound.unlock(true); sound.effect('select'); }
 }
 
 function resetInput() {
@@ -387,6 +387,8 @@ async function selectMode(mode) {
       inputReady = true;
     }
     startGame(mode, mode === 'practice' ? initialSeed() : seed);
+    // 初回センサー確認でボタンを無効化していても、遷移完了後に操作音を1回鳴らす。
+    sound.effect('select');
   } finally {
     starting = false;
     controls.forEach(el => { el.disabled = false; });
@@ -445,7 +447,7 @@ root.addEventListener('click', (event) => {
 }, true);
 root.addEventListener('click', (event) => {
   const button = event.target.closest('button');
-  if (button && !button.disabled && !['btn-sound', 'btn-settings-sound', 'btn-pause', 'btn-resume', 'btn-continue'].includes(button.id)) sound.effect('select');
+  if (button && !button.disabled && !['btn-sound', 'btn-settings-sound', 'btn-pause', 'btn-resume', 'btn-continue', 'btn-practice', 'btn-challenge'].includes(button.id)) sound.effect('select');
 });
 settingsUi.onCalibrate(calibrate);
 settingsUi.onClose(() => showScreen(['game', 'clear', 'over'].includes(settingsUi.returnTo) ? settingsUi.returnTo : 'mode'));
