@@ -8,6 +8,18 @@ import { goalCenter } from '../src/world/stage.js';
 const tick = (play, elapsedMs = 1000 / 60, tilt = { x: 0, y: 0 }) =>
   play.advance({ dt: Math.min(elapsedMs / 1000, 1 / 20), elapsedMs, tilt, base: BASE });
 
+test('衝突通知は実際の衝突を伝え、音の有無で物理やHPを変えない', () => {
+  const a = createStagePlay(123, difficultyAt(1)), b = createStagePlay(123, difficultyAt(1));
+  for (const play of [a, b]) { play.actor.x = play.actor.r + .13; play.actor.vx = -4; }
+  const impacts = [];
+  const input = { dt: .05, elapsedMs: 50, tilt: { x: 0, y: 0 }, base: BASE };
+  assert.equal(a.advance({ ...input, onImpact: (speed, wall) => impacts.push({ speed, wall }) }), b.advance(input));
+  assert.ok(impacts.length > 0);
+  assert.ok(impacts[0].speed > 0);
+  assert.equal(impacts[0].wall.materialId, 'default');
+  assert.deepEqual(a.actor, b.actor); assert.equal(a.hp.value, b.hp.value);
+});
+
 test('プラクティスはHP・制限時間なしで、標準の壁だけを使う', () => {
   const play = createStagePlay(123);
   assert.equal(play.hp, null);

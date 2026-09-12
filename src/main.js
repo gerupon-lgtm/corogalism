@@ -1,5 +1,6 @@
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
-import { BASE, TUNING, UI } from './config/gameConfig.js';
+import { BASE, TUNING, UI, AUDIO } from './config/gameConfig.js';
+import { createSoundManager } from './audio/soundManager.js';
 import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
 import { difficultyAt } from './game/progression.js';
@@ -28,6 +29,7 @@ const tilt = createTiltVector();
 const tiltSource = createTiltSource();
 const pointerSource = createPointerSource(boardEl);
 const settings = loadSettings();
+const sound = createSoundManager(settings, (note) => { find('sound-note').textContent = note; });
 let tiltAllowed = false;
 let tiltDeniedReason = '';
 let sensorCheck = null;
@@ -44,6 +46,7 @@ let handled = false;
 let starting = false;
 let inputReady = false;
 let countdownMs = 0;
+let audibleCountdown = null;
 let lastFrame = performance.now();
 
 function initialSeed() {
@@ -54,6 +57,37 @@ function initialSeed() {
 function nextSeed() { return ((seed * 7919 + 13) % 1000003) >>> 0; }
 function isPlaying() { return screen === 'game' && !paused && !document.hidden && countdownMs === 0; }
 function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
+
+function updateAudio() {
+  sound.setScene({
+    music: ['mode', 'clear', 'over', 'run-result'].includes(screen) || (screen === 'game' && !paused),
+    duck: ['clear', 'over'].includes(screen) ? AUDIO.clearDuck : 1,
+    speed: play && isPlaying() && play.status === 'playing' ? Math.hypot(play.actor.vx, play.actor.vy) : 0,
+    hidden: document.hidden,
+  });
+}
+
+function renderSound() {
+  for (const id of ['btn-sound', 'btn-settings-sound']) {
+    const button = find(id);
+    button.setAttribute('aria-pressed', String(settings.soundEnabled));
+    button.setAttribute('aria-label', settings.soundEnabled ? '音をミュートする' : '音を有効にする');
+    button.querySelector('span').textContent = settings.soundEnabled ? '音 ON' : '音 OFF';
+  }
+}
+
+function saveSound() {
+  sound.setPreferences(settings);
+  find('sound-save-note').textContent = saveSettings(settings)
+    ? '音量の設定は次回も引き継ぎます。' : 'このブラウザでは設定を保存できません。今回はこの音量で遊べます。';
+  renderSound();
+}
+
+function toggleSound() {
+  settings.soundEnabled = !settings.soundEnabled;
+  saveSound();
+  if (settings.soundEnabled) sound.unlock(true);
+}
 
 function resetInput() {
   pointerSource.stop();
@@ -121,6 +155,7 @@ function updateHint() {
 
 function showScreen(name) {
   const previousScreen = screen;
+  if (previousScreen !== name) sound.stopEffects();
   screen = name;
   const ended = name === 'clear' || name === 'over';
   const boardSession = name === 'game' || ended;
@@ -142,6 +177,7 @@ function showScreen(name) {
   lastFrame = performance.now();
   updateHint();
   resize();
+  updateAudio();
   // 設定は先頭から読める独立画面にし、戻るときは元の操作位置を復元する。
   if (name === 'settings') window.scrollTo(0, 0);
   else if (previousScreen === 'settings') window.scrollTo(0, settingsUi.returnScroll || 0);
@@ -158,6 +194,9 @@ function updateCountdown() {
   const visible = screen === 'game' && !paused && countdownMs > 0;
   find('countdown-layer').hidden = !visible;
   const label = String(Math.ceil(countdownMs / 1000));
+  if (visible && audibleCountdown !== label) sound.tick(Number(label));
+  else if (audibleCountdown !== null && !visible && countdownMs === 0 && isPlaying()) sound.tick(0);
+  audibleCountdown = visible ? label : null;
   if (visible && find('countdown-number').textContent !== label) {
     find('countdown-number').textContent = label;
     find('countdown-layer').setAttribute('aria-label', `開始まで${label}秒`);
@@ -214,6 +253,7 @@ function showModes() {
 }
 
 function setPaused(value) {
+  sound.stopEffects();
   paused = value;
   if (!value) countdownMs = UI.startCountdownMs;
   game.setPaused(value);
@@ -221,6 +261,7 @@ function setPaused(value) {
   lastFrame = performance.now();
   find('board-overlay').hidden = !value || screen !== 'game';
   updateCountdown();
+  updateAudio();
 }
 
 function finishStage() {
@@ -234,6 +275,7 @@ function finishStage() {
     clear.setResult({ gameMode, timeMs: play.timeMs, bestMs: best?.timeMs, isNewBest: Boolean(updated && best), seed });
   }
   showScreen('clear');
+  sound.clear();
 }
 
 function failStage() {
@@ -243,6 +285,7 @@ function failStage() {
   recordStatus = saveRunBest(run.result());
   runUi.setOver(run);
   showScreen('over');
+  sound.effect('fail');
 }
 
 function finishRun() {
@@ -263,7 +306,7 @@ function frame(now) {
     if (countdownMs === 0) resetInput();
   } else if (isPlaying() && play.status === 'playing') {
     tilt.update(dt, BASE.inputSmoothing);
-    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg } });
+    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact });
     if (damage > 0) game.showDamage(damage, now);
     if (!handled && play.status === 'clear') finishStage();
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
@@ -272,6 +315,7 @@ function frame(now) {
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
     mode: settings.mode, started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, now });
+  updateAudio();
   requestAnimationFrame(frame);
 }
 
@@ -306,7 +350,7 @@ function toSettings(from) {
 find('btn-challenge').addEventListener('click', () => selectMode('challenge'));
 find('btn-practice').addEventListener('click', () => selectMode('practice'));
 find('btn-mode-settings').addEventListener('click', () => toSettings('mode'));
-game.onPause(() => { if (screen === 'game') setPaused(!paused); });
+game.onPause(() => { if (screen === 'game') { setPaused(!paused); if (paused) sound.effect('pause'); } });
 find('btn-resume').addEventListener('click', () => { if (screen === 'game' && paused) setPaused(false); });
 game.onCalibrate(calibrate);
 game.onSettings(() => toSettings(screen));
@@ -322,6 +366,7 @@ find('btn-continue').addEventListener('click', () => {
     recordStatus = null;
     loadStage(run.currentSeed());
     showScreen('game');
+    sound.effect('continue');
   }
 });
 find('btn-run-end').addEventListener('click', finishRun);
@@ -329,11 +374,24 @@ find('btn-run-again').addEventListener('click', () => startGame('challenge', nex
 find('btn-run-modes').addEventListener('click', showModes);
 settingsUi.onModeChange(applyMode);
 settingsUi.onAngleChange((v) => { settings.maxTiltAngleDeg = v; saveSettings(settings); });
+settingsUi.onVolumeChange((key, value) => { settings[key] = value; saveSound(); sound.unlock(); });
+find('btn-sound').addEventListener('click', toggleSound);
+find('btn-settings-sound').addEventListener('click', toggleSound);
+// センサー許可のawaitへ進む前に、クリック内で音声を有効化する。
+root.addEventListener('click', (event) => {
+  if (event.target.closest('button')) sound.unlock();
+}, true);
+root.addEventListener('click', (event) => {
+  const button = event.target.closest('button');
+  if (button && !button.disabled && !['btn-sound', 'btn-settings-sound', 'btn-pause', 'btn-resume', 'btn-continue'].includes(button.id)) sound.effect('select');
+});
 settingsUi.onCalibrate(calibrate);
 settingsUi.onClose(() => showScreen(['game', 'clear', 'over'].includes(settingsUi.returnTo) ? settingsUi.returnTo : 'mode'));
 window.addEventListener('resize', () => { resize(); updateHint(); });
 document.addEventListener('visibilitychange', () => {
   if (document.hidden && screen === 'game') setPaused(true);
+  if (document.hidden) sound.stopEffects();
+  updateAudio();
   lastFrame = performance.now();
 });
 
@@ -342,6 +400,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   window.__corogalism = {
     get state() {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
+        audio: sound.state,
         cleared: play.status === 'clear', paused, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,
@@ -357,4 +416,5 @@ loadStage(seed);
 showModes();
 settingsUi.setTiltAvailable(false, 'モードを選んだときに、傾きセンサーの利用を確認します。');
 settingsUi.render(settings);
+renderSound();
 requestAnimationFrame(frame);

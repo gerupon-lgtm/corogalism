@@ -43,7 +43,11 @@ try {
     const logo = await page.locator('header .brand').boundingBox();
     const tagline = await page.locator('header .brand-tagline').boundingBox();
     assert.ok(tagline.x >= logo.x + logo.width, 'two-line tagline is right of logo');
-    assert.ok(Math.abs(tagline.y + tagline.height / 2 - logo.y - logo.height / 2 - 2) < 1);
+    const baselines = await page.evaluate(() => ['.brand-word', '.brand-tagline'].map(selector => {
+      const probe = document.createElement('span'); probe.style.cssText = 'display:inline-block;width:0;height:0';
+      document.querySelector(selector).append(probe); const y = probe.getBoundingClientRect().y; probe.remove(); return y;
+    }));
+    assert.ok(Math.abs(baselines[0] - baselines[1]) < 1, 'A BIG FEELING aligns with the bottom baseline of m');
     assert.match(await page.locator('#mode-best-no').textContent(), /12 面192.34 秒/);
     assert.match(await page.locator('#mode-best-continue').textContent(), /20 面390.12 秒/);
     assert.equal(await page.evaluate(() => document.fonts.check('700 16px "M PLUS 1p"', '記録')), true);

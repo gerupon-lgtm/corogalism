@@ -159,15 +159,15 @@ body.board-session .wrap{gap:8px}
   .game-toast .result{gap:5px}.game-toast .result dd{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.game-toast{animation:none}*{scroll-behavior:auto!important}}
 /* 比較画像左下のロゴ。葉はSVG、文字は実テキストで小画面でも鮮明に保つ。 */
-.brand{display:flex;align-items:center;gap:6px;color:#dfe5cc;font-weight:400}
+.brand{display:flex;align-items:baseline;gap:6px;color:#dfe5cc;font-weight:400}
 .brand{line-height:1.35}
-.brand-leaf{width:22px;height:26px;flex:none;color:#a8c994;filter:drop-shadow(0 1px 2px #0003)}
+.brand-leaf{width:22px;height:26px;flex:none;align-self:center;color:#a8c994;filter:drop-shadow(0 1px 2px #0003)}
 .brand-word{font-family:"Trebuchet MS","Segoe UI",sans-serif;font-size:23px;font-weight:400;letter-spacing:.025em}
 .head{display:block;position:relative}
 .head .badge{position:static;margin-left:auto;flex:none;align-self:center}
 .head .sub{font-size:10px}
-.brand-lockup{display:flex;align-items:center;gap:8px;margin-bottom:5px}
-.brand-tagline{margin:0;transform:translateY(2px);font-size:clamp(5px,1.3vw,6px);line-height:1.1;letter-spacing:.16em;color:#b6c3a7;white-space:nowrap}
+.brand-lockup{display:flex;align-items:last baseline;gap:8px;margin-bottom:5px}
+.brand-tagline{margin:0;font-size:clamp(5px,1.3vw,6px);line-height:1.1;letter-spacing:.16em;color:#b6c3a7;white-space:nowrap}
 /* TIME / HP：トイパネル、読みやすい数値、丸いゲル状ゲージ。 */
 .challenge-hud{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:stretch}
 .stage-line{grid-column:1/-1;min-height:25px}
@@ -289,3 +289,18 @@ body[data-screen="settings"] footer{display:none}
 .settings-menu .note{color:#785b3d;font-size:12px}.settings-menu .note:empty{display:none}
 .settings-menu :is(button,input):focus-visible{outline-color:#77542e;outline-offset:4px}
 @media(max-width:360px){.settings-menu{padding:20px 13px;gap:18px}.brand-tagline{letter-spacing:.1em}.sub{font-size:10px}}
+/* 音の即時切替はポーズの左。詳細音量は設定カードにまとめる。 */
+.play-actions{display:flex;gap:8px;align-items:center;margin-left:auto}
+.play-actions .pause-button{min-height:34px;display:flex;align-items:center;justify-content:center}
+.sound-button{display:flex;align-items:center;justify-content:center;gap:5px;min-height:34px;padding:5px 13px;
+  border:1px solid #c9aa7b;border-radius:999px;background:linear-gradient(#fff4db,#e9d2ac);color:#704c2e;
+  box-shadow:inset 0 1px 0 #fffaf0,0 2px 0 #93734b;font-size:12px;font-weight:700;white-space:nowrap}
+.sound-button[aria-pressed="true"]{border-color:#9cae7c;background:linear-gradient(#eff3d6,#d3dfaf);color:#4e673a;
+  box-shadow:inset 0 1px 0 #fffde9,0 2px 0 #7b8e62}
+.sound-button svg{width:13px;height:13px;fill:currentColor}
+.sound-button:active{transform:translateY(1px)}
+.sound-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sound-settings .sound-button{min-height:36px;padding:5px 16px}
+.volume-field{display:grid;gap:3px}
+.sound-settings output{font-size:20px;font-weight:900;color:#a3622c}
+#sound-note:empty{display:none}

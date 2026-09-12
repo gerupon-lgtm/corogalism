@@ -1,6 +1,6 @@
 # Codexへの引き継ぎ（2026-09-12 更新）
 
-**音の試聴版v1を作成済み:** `docs/design/2026-09-12-audio-prototypes/` にWAV・試聴HTML、`tools/create-audio-prototype.py` に再生成コード。BGMと13種類のSEを試聴する段階。ゲームはv0.2.5のまま、音の接続・公開はしていない。
+**最新v0.2.6:** ユーザー承認済みv2 BGMとSEを接続。ポーズ左の音切替、BGM/SE音量、停止・再開・保存を実装。検証中注記は維持。ヘッダA BIG FEELINGはロゴmの下端に揃える。仕様は `audio-implementation.md`。公開状況は `deployment.md`。
 
 **v0.2.5は正式URLへ公開済み:** ヘッダの2段コピー・バージョン・注記下の余白をユーザー画像に合わせて調整。5画面幅のブラウザ確認成功。`ui-polish.md` のT-222、`deployment.md` を参照。
 

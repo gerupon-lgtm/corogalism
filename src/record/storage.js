@@ -5,6 +5,8 @@
  * ブラウザ等）でもゲームが動くこと。すべて try/catch で囲み、失敗しても黙って
  * 既定値で続ける。
  */
+import { normalizeAudioSettings } from '../audio/audioSettings.js';
+
 const SETTINGS_KEY = 'corogalism-settings';
 const BESTS_KEY = 'corogalism-bests';
 const RUN_BESTS_KEY = 'corogalism-run-bests';
@@ -36,7 +38,8 @@ function write(key, value) {
 }
 
 export function loadSettings() {
-  return { ...DEFAULT_SETTINGS, ...read(SETTINGS_KEY, {}) };
+  const stored = read(SETTINGS_KEY, {});
+  return { ...DEFAULT_SETTINGS, ...stored, ...normalizeAudioSettings(stored) };
 }
 
 export function saveSettings(settings) {

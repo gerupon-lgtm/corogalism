@@ -28,7 +28,7 @@ export function createStagePlay(seed, difficulty = null) {
     get status() { return status; },
     get remainingSec() { return limitSec === null ? null : Math.max(0, limitSec - timeMs / 1000); },
     /** 停止中は呼ばない。elapsedMsは実時間、dtは物理用に上限を設けた秒数。 */
-    advance({ dt, elapsedMs, tilt, base }) {
+    advance({ dt, elapsedMs, tilt, base, onImpact }) {
       if (status !== 'playing') return 0;
       activeSec += Math.max(0, elapsedMs) / 1000;
       if (started) timeMs += Math.max(0, elapsedMs);
@@ -37,6 +37,7 @@ export function createStagePlay(seed, difficulty = null) {
         actor, stage, tilt, base, dt,
         onImpact(speed, wall) {
           if (hp && !hp.isDead) damage += hp.applyImpact(speed, wall, activeSec);
+          onImpact?.(speed, wall);
         },
       });
       wallHits += result.wallHits;

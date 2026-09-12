@@ -93,3 +93,20 @@ export const UI = {
   urgentTimeRatio: 0.25,
   lowHpRatio: 0.35,
 };
+
+/** 承認済み試聴版v2の音量と発音制御。 */
+export const AUDIO = {
+  defaultBgmVolume: 0.6,
+  defaultSeVolume: 0.8,
+  fadeSec: 0.06,
+  impactMinSpeed: 0.55,
+  impactFullSpeed: 4.5,
+  impactIntervalSec: 0.09,
+  maxVoices: 8,
+  rollingMinSpeed: 0.15,
+  rollingFullSpeed: 4,
+  clearDuck: 0.45,
+  loadTimeoutMs: 15000,
+  limiterThresholdDb: -3,
+  limiterRatio: 12,
+};

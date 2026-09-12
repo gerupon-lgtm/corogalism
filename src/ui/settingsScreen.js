@@ -25,6 +25,10 @@ export function createSettingsScreen(root) {
       paintMode(settings.mode);
       angle.value = String(settings.maxTiltAngleDeg);
       angleOut.textContent = `${settings.maxTiltAngleDeg}°`;
+      for (const [id, key] of [['bgm', 'bgmVolume'], ['se', 'seVolume']]) {
+        el.querySelector(`#set-${id}-volume`).value = String(Math.round(settings[key] * 100));
+        el.querySelector(`#set-${id}-value`).textContent = `${Math.round(settings[key] * 100)}%`;
+      }
     },
     onModeChange(cb) {
       modeTilt.addEventListener('click', () => cb('tilt'));
@@ -38,6 +42,14 @@ export function createSettingsScreen(root) {
       });
     },
     onCalibrate(cb) { calBtn.addEventListener('click', cb); },
+    onVolumeChange(cb) {
+      for (const [id, key] of [['bgm', 'bgmVolume'], ['se', 'seVolume']]) {
+        el.querySelector(`#set-${id}-volume`).addEventListener('input', (event) => {
+          el.querySelector(`#set-${id}-value`).textContent = `${event.target.value}%`;
+          cb(key, Number(event.target.value) / 100);
+        });
+      }
+    },
     onClose(cb) { closeBtn.addEventListener('click', cb); },
   };
 }

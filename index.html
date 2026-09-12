@@ -19,7 +19,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.2.5</span>
+      <span class="badge">v0.2.6</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -36,7 +36,7 @@
       <progress id="hp-bar" max="1" value="1" aria-label="HP"></progress>
     </div>
   </div>
-  <div id="play-toolbar" class="play-toolbar" hidden><span id="play-mode-label">プラクティス</span><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div>
+  <div id="play-toolbar" class="play-toolbar" hidden><span id="play-mode-label">プラクティス</span><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
   <div class="board" id="board" hidden>
     <canvas id="canvas" aria-label="7×7の迷路。オレンジのビー玉を右下のカップへ導きます"></canvas>
     <div id="toast-layer" class="toast-layer" hidden>
@@ -135,6 +135,13 @@
     <div class="field">
       <label for="set-angle">最大傾き角（この角度で全力）<b id="set-angle-value">25°</b></label>
       <input type="range" id="set-angle" min="10" max="40" step="1" value="25">
+    </div>
+    <div class="field sound-settings" role="group" aria-labelledby="sound-heading">
+      <div class="sound-heading"><span id="sound-heading" class="legend">サウンド</span><button id="btn-settings-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button></div>
+      <div class="volume-field"><label for="set-bgm-volume">BGM<output id="set-bgm-value" for="set-bgm-volume">60%</output></label><input type="range" id="set-bgm-volume" min="0" max="100" step="1" value="60"></div>
+      <div class="volume-field"><label for="set-se-volume">効果音（SE）<output id="set-se-value" for="set-se-volume">80%</output></label><input type="range" id="set-se-volume" min="0" max="100" step="1" value="80"></div>
+      <p class="note" id="sound-save-note">音量の設定は次回も引き継ぎます。</p>
+      <p class="note" id="sound-note" role="status"></p>
     </div>
     <div class="row">
       <button class="ghost cal" id="btn-settings-calibrate" type="button">基準をとり直す</button>
