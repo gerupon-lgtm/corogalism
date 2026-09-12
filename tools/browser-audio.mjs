@@ -39,7 +39,15 @@ try {
       assert.equal((await state()).audio.music, false, 'BGM stays silent during 3/2/1');
       await page.clock.runFor(1000);
     }
-    await page.clock.runFor(100); assert.equal((await state()).audio.music, true, 'BGM starts when controls become active');
+    await page.clock.runFor(100);
+    assert.equal((await state()).countdownMs, 0, 'controls become active before BGM');
+    assert.equal((await state()).audio.music, false, 'start SE and the gap remain free of BGM');
+    assert.ok((await state()).audio.musicDelaySec > 0);
+    // AudioContextはPlaywrightの仮想時計と独立しているので、音声時計も進める。
+    await page.clock.runFor(1000);
+    await page.waitForFunction(() => window.__corogalism.state.audio.musicDelaySec === 0, null, { polling: 50 });
+    await page.clock.runFor(32);
+    assert.equal((await state()).audio.music, true, 'BGM starts after the 0.8s SE plus 0.2s gap');
   };
   await click('btn-challenge'); await countdown();
   assert.equal((await state()).audio.events.filter(e => e === 'countdown').length, 4);
@@ -76,6 +84,19 @@ try {
   await click('btn-challenge'); await countdown(); await click('btn-game-exit');
   assert.equal((await state()).screen, 'run-result'); assert.equal((await state()).audio.music, false);
   await click('btn-run-modes'); assert.equal((await state()).audio.music, false);
+  for (const interruption of ['pause', 'settings', 'clear', 'exit', 'mute']) {
+    await click('btn-practice'); await ready();
+    assert.equal((await state()).audio.music, false);
+    if (interruption === 'clear') await clear();
+    else await click({ pause: 'btn-pause', settings: 'btn-game-settings', exit: 'btn-game-exit', mute: 'btn-sound' }[interruption]);
+    await page.clock.runFor(1200);
+    await new Promise(resolve => setTimeout(resolve, 1100)); await page.clock.runFor(32);
+    assert.equal((await state()).audio.music, false, `no late BGM after ${interruption}`);
+    assert.notEqual((await state()).audio.events.at(-1), 'bgm');
+    if (interruption === 'settings') await click('btn-settings-close');
+    if (interruption !== 'exit') await click('btn-game-exit');
+    if (interruption === 'mute') { await click('btn-mode-settings'); await click('btn-settings-sound'); await click('btn-settings-close'); }
+  }
   await context.close();
   for (const failure of ['api', 'fetch']) {
     const app = await open({ failure }); await app.click('btn-mode-settings'); await app.click('btn-settings-sound');
@@ -91,5 +112,5 @@ try {
   await slow.page.waitForFunction(() => window.__corogalism.state.audio.loaded, null, { polling: 50 });
   assert.equal((await slow.state()).audio.music, false); assert.equal((await slow.state()).audio.voices, 0);
   await slow.context.close(); assert.deepEqual(errors, []);
-  console.log('PASS: BGM only after countdown during active play; opt-in loading, 14 decoded sounds, countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
+  console.log('PASS: BGM after start SE + 0.2s gap, cancellation during delay, active play only; opt-in loading, 14 decoded sounds, countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
 } finally { await browser.close(); }

@@ -13,10 +13,19 @@ export function createSoundManager(initial, onStatus = () => {}) {
   let prefs = normalizeAudioSettings(initial);
   let context = null, bgmGain, seGain, loading = null, loaded = false;
   let music = null, rolling = null, musicOffset = 0, lastImpact = -Infinity;
+  let musicStart = null;
   let scene = { music: false, speed: 0, hidden: false };
   const buffers = new Map(), voices = new Set(), events = [];
   const log = name => { events.push(name); if (events.length > 32) events.shift(); };
   const available = () => prefs.soundEnabled && context?.state === 'running' && !scene.hidden;
+
+  function musicDelaySec() {
+    if (!musicStart) return 0;
+    const wallElapsed = performance.now() / 1000 - musicStart.time;
+    // 音声時計でもSEの終了を待つ。音OFFでContextがない場合は実時間だけで待つ。
+    const audioElapsed = musicStart.audioTime === undefined ? wallElapsed : context.currentTime - musicStart.audioTime;
+    return Math.max(0, AUDIO.startCueSec + AUDIO.bgmAfterStartGapSec - Math.min(wallElapsed, audioElapsed));
+  }
 
   function ramp(param, value) {
     const now = context.currentTime;
@@ -52,7 +61,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
     if (!context) return;
     ramp(bgmGain.gain, prefs.bgmVolume);
     ramp(seGain.gain, prefs.seVolume);
-    const wantsMusic = available() && scene.music && prefs.bgmVolume > 0;
+    const wantsMusic = available() && scene.music && prefs.bgmVolume > 0 && musicDelaySec() === 0;
     if (!wantsMusic && music) {
       musicOffset = (music.offset + Math.max(0, context.currentTime - music.at)) % buffers.get('bgm').duration;
       stopVoice(music, true); music = null;
@@ -133,12 +142,16 @@ export function createSoundManager(initial, onStatus = () => {}) {
     },
     setScene(value) {
       scene = value;
+      if (!scene.music || scene.hidden) musicStart = null;
       if (scene.hidden) stopEffects();
       sync();
     },
     effect,
     stopEffects,
-    tick(number) { effect('countdown', number === 0 ? { offset: 3, duration: 0.8 } : { offset: 0, duration: 0.55 }); },
+    tick(number) {
+      if (number === 0) musicStart = { time: performance.now() / 1000, audioTime: context?.currentTime };
+      effect('countdown', number === 0 ? { offset: 3, duration: AUDIO.startCueSec } : { offset: 0, duration: 0.55 });
+    },
     clear() { effect('goal'); effect('clear', { delay: 0.18 }); },
     impact(speed, wall) {
       if (!available() || speed < AUDIO.impactMinSpeed || context.currentTime - lastImpact < AUDIO.impactIntervalSec) return;
@@ -148,6 +161,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
     },
     get state() { return { enabled: prefs.soundEnabled, context: context?.state || 'none', loaded,
       buffers: buffers.size, music: Boolean(music), rolling: Boolean(rolling), voices: voices.size,
+      musicDelaySec: musicDelaySec(),
       bgmVolume: prefs.bgmVolume, seVolume: prefs.seVolume, events: [...events] }; },
   };
 }
