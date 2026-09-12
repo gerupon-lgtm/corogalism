@@ -13,7 +13,7 @@ import { resolveCollisions } from './collision.js';
 import { sampleMaterial, sampleZone } from '../world/stage.js';
 import { getMaterial } from '../world/materials.js';
 
-export function stepPhysics({ actor, stage, tilt, base, dt }) {
+export function stepPhysics({ actor, stage, tilt, base, dt, onImpact }) {
   const step = Math.min(dt, TUNING.maxDt);
   if (step <= 0) return { wallHits: 0, params: null };
 
@@ -53,7 +53,7 @@ export function stepPhysics({ actor, stage, tilt, base, dt }) {
   for (let s = 0; s < sub; s++) {
     actor.x += (actor.vx * step) / sub;
     actor.y += (actor.vy * step) / sub;
-    wallHits += resolveCollisions(actor, stage.walls, restitutionOf);
+    wallHits += resolveCollisions(actor, stage.walls, restitutionOf, onImpact);
   }
 
   const size = stage.maze.size;

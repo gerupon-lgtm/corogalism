@@ -14,15 +14,27 @@
   <header class="head">
     <div>
       <h1>コロガリズム</h1>
-      <p class="sub" id="dev-note">開発中の技術検証です（フェーズ1）</p>
+      <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
-    <span class="badge">PHASE 1</span>
+    <span class="badge">v0.2.0</span>
   </header>
 
-  <div class="board" id="board">
-    <canvas id="canvas"></canvas>
+  <div id="challenge-hud" class="challenge-hud" hidden>
+    <div class="stage-line"><strong id="hud-stage">1面目</strong><span id="hud-continues"></span></div>
+    <div class="meter-block" id="time-meter-block">
+      <div class="meter-label"><span>残り時間</span><strong><span id="hud-remaining">0.0</span><small> 秒</small></strong></div>
+      <progress id="time-bar" max="1" value="1" aria-label="残り時間"></progress>
+    </div>
+    <div class="meter-block" id="hp-meter-block">
+      <div class="meter-label"><span>HP <span id="hud-damage" role="status"></span></span><strong id="hud-hp">—</strong></div>
+      <progress id="hp-bar" max="1" value="1" aria-label="HP"></progress>
+    </div>
   </div>
-  <p class="cap">7 × 7 ／ 1画面完結・カメラ固定</p>
+  <div class="board" id="board">
+    <canvas id="canvas" aria-label="7×7の迷路。オレンジのビー玉を右下の輪へ導きます"></canvas>
+    <div id="board-overlay" class="board-overlay" hidden><span id="board-status"></span></div>
+  </div>
+  <p class="cap" id="play-hint">オレンジのビー玉を、右下の輪へ。</p>
 
   <!-- S-101 タイトル -->
   <section id="screen-title" class="panel">
@@ -36,6 +48,19 @@
     <p class="note" id="title-note"></p>
   </section>
 
+  <!-- S-105 モード選択 -->
+  <section id="screen-mode" class="panel" hidden>
+    <h2>遊び方を選ぶ</h2>
+    <button class="mode-card" id="btn-challenge" type="button"><strong>チャレンジ <span>面数に挑戦</span></strong><small>HPと制限時間あり。クリアを重ねて先へ進もう。</small></button>
+    <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small>HP・制限時間なし。同じ迷路でタイムを縮めよう。</small></button>
+    <p class="note" id="mode-note"></p>
+    <dl class="result two-columns">
+      <div><dt>ノーコンティニュー記録</dt><dd id="mode-best-no">—</dd></div>
+      <div><dt>コンティニュー使用記録</dt><dd id="mode-best-continue">—</dd></div>
+    </dl>
+    <button class="ghost" id="btn-mode-back" type="button">タイトルへ</button>
+  </section>
+
   <!-- S-102 ゲーム -->
   <section id="screen-game" class="panel" hidden>
     <dl class="hud">
@@ -44,26 +69,51 @@
       <div><dt>傾き</dt><dd id="hud-tilt">0.00</dd></div>
       <div><dt>操作</dt><dd id="hud-mode">傾き</dd></div>
     </dl>
+    <p id="game-status" class="note" role="status"></p>
     <div class="row">
       <button class="ghost" id="btn-pause" type="button">一時停止</button>
       <button class="ghost cal" id="btn-calibrate" type="button">基準をとり直す</button>
       <button class="ghost" id="btn-game-settings" type="button">設定</button>
     </div>
+    <button class="text-button" id="btn-game-exit" type="button">モード選択へ戻る</button>
+    <details id="material-legend" hidden><summary>壁の見分け方</summary><ul id="material-list" class="material-list"></ul></details>
     <p class="note warn" id="orient-warn" hidden>端末を縦向きに戻してください。縦持ち前提です。</p>
   </section>
 
   <!-- S-103 クリア -->
   <section id="screen-clear" class="panel" hidden>
-    <h2>クリア<span class="best-badge" id="clear-badge" hidden>自己ベスト更新</span></h2>
+    <h2><span id="clear-heading">クリア</span><span class="best-badge" id="clear-badge" hidden>自己ベスト更新</span></h2>
     <dl class="result">
       <div><dt>タイム</dt><dd id="clear-time">—</dd></div>
-      <div><dt>自己ベスト</dt><dd id="clear-best">—</dd></div>
+      <div id="clear-best-field"><dt>自己ベスト</dt><dd id="clear-best">—</dd></div>
+      <div id="clear-hp-field" hidden><dt>残HPボーナス</dt><dd id="clear-hp">—</dd></div>
       <div><dt>シード</dt><dd id="clear-seed">—</dd></div>
     </dl>
+    <p class="note" id="clear-note"></p>
     <div class="row">
       <button class="primary" id="btn-retry" type="button">同じ迷路をやり直す</button>
       <button class="ghost" id="btn-next" type="button">次の迷路</button>
     </div>
+    <button class="text-button" id="btn-clear-exit" type="button">モード選択へ戻る</button>
+  </section>
+
+  <!-- S-106 ゲームオーバー -->
+  <section id="screen-over" class="panel" hidden>
+    <h2 id="over-heading">ゲームオーバー</h2>
+    <p id="over-note" class="lead"></p>
+    <dl class="result two-columns"><div><dt>クリア面数</dt><dd id="over-stages">0 面</dd></div><div><dt>合計クリアタイム</dt><dd id="over-time">0.00 秒</dd></div></dl>
+    <button class="primary" id="btn-continue" type="button">コンティニュー</button>
+    <p class="note" id="continue-note"></p>
+    <button class="ghost" id="btn-run-end" type="button">ランを終えて結果を見る</button>
+  </section>
+
+  <!-- S-107 ラン結果 -->
+  <section id="screen-run-result" class="panel" hidden>
+    <h2>ラン結果<span id="run-badge" class="best-badge" hidden>自己ベスト更新</span></h2>
+    <p id="run-category" class="lead"></p>
+    <dl class="result"><div><dt>クリア面数</dt><dd id="run-stages">0 面</dd></div><div><dt>合計クリアタイム</dt><dd id="run-time">0.00 秒</dd></div><div><dt>ノーミス</dt><dd id="run-no-damage">0 面</dd></div></dl>
+    <p id="run-best" class="note"></p><p id="run-save-note" class="note" role="status"></p>
+    <div class="row"><button class="primary" id="btn-run-again" type="button">新しいランに挑戦</button><button class="ghost" id="btn-run-modes" type="button">モード選択</button></div>
   </section>
 
   <!-- S-104 設定 -->
@@ -88,9 +138,8 @@
   </section>
 
   <footer class="note">
-    傾きセンサーは HTTPS でのみ動作します（<code>http://192.168.x.x</code> では反応しません）。<br>
-    iOSでは最初の一度だけ許可を求められます。許可しない場合は擬似傾きモードで遊べます。<br>
-    生成AI（LLM）は使用していません。迷路はブラウザ内のDFSバックトラッカーで生成しています。
+    SIKUMI LAB · 端末を傾けるか、盤面を押して操作します。<br>
+    センサーが使えないときも、タッチ／クリックで遊べます。
   </footer>
 </div>
 <script type="module" src="src/main.js"></script>

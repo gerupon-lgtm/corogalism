@@ -36,4 +36,52 @@ export const TUNING = {
   wallHitSpeed: 2.0,     // マス/s。これを超える法線速度の衝突を「壁ヒット」と数える
   goalRadius: 0.30,      // セル比。ゴール判定の半径
   startMoveSpeed: 0.5,   // マス/s。これを超えたらタイム計測を開始する
+  challengeStartDistance: 0.02, // マス。微速移動でチャレンジの時間制限を回避させない
+};
+
+/**
+ * HPとダメージ（フェーズ2）。根拠と検証データは docs/hp-and-materials.md。
+ * threshold と capRatio は仕組みごと外さないこと（CLAUDE.md §9-6）。
+ */
+export const HP = {
+  base: 40,          // HP初期値の下駄
+  damageScale: 10,   // ダメージ = damageScale × 倍率 × 素材係数 × (v - threshold)^2
+  threshold: 1.2,    // マス/s。これ以下の接触は無傷（壁への押し付けによる微小接触を無効化）
+  capRatio: 0.35,    // 1発で失えるHPの上限（初期HPに対する比）。全力衝突の即死を防ぐ
+  cooldownSec: 0.25, // 無敵時間
+};
+
+/**
+ * 難易度カーブ（フェーズ2）。tools/run2.mjs の検証で「緩」を採用。
+ * 根拠は docs/run-and-score.md §5。
+ */
+export const DIFFICULTY = {
+  secPerCellStart: 0.55,   // 面1の「1マスあたりの秒数」
+  secPerCellEnd: 0.28,     // 底
+  secPerCellStages: 20,    // 何面かけて底まで削るか
+  hpPerTurnStart: 4.0,     // HP係数（折れ回数に掛ける）
+  hpPerTurnMin: 3.0,
+  hpPerTurnPerStage: 0.06,
+  damageMultMax: 2.0,      // 素材の危険度上昇の代理値
+  damageMultPerStage: 0.04,
+  dangerRatioPerStage: 0.035, // stone/spike が占める壁の割合
+  dangerRatioMax: 0.5,
+  spikeShareStart: 0.0,    // 危険な壁のうち spike の割合
+  spikeShareMax: 0.45,
+  spikeSharePerStage: 0.03,
+  mossRatioStart: 0.12,    // 安全地帯（moss）の割合
+  mossRatioMin: 0.02,
+  mossRatioPerStage: 0.01,
+};
+
+/** ラン（チャレンジモード） */
+export const RUN = {
+  continues: 2,  // 1ランに使えるコンティニュー回数
+};
+
+/** 表示専用。物理や難易度の数値とは分離する。 */
+export const UI = {
+  damageFeedbackMs: 450,
+  urgentTimeRatio: 0.25,
+  lowHpRatio: 0.35,
 };

@@ -10,6 +10,7 @@
  */
 import { createRng, randInt } from './rng.js';
 import { checkReachability } from './validator.js';
+import { solvePath, countTurns } from './path.js';
 
 const DIRS = [
   { dx: 0, dy: -1, wall: 't', opposite: 'b' },
@@ -72,6 +73,12 @@ export function generateMaze(size, seed) {
       `迷路生成の到達可能性検証に失敗しました（size=${size}, seed=${seed}, 未到達=${result.unreachable.length}）`
     );
   }
+
+  // F-201/F-202: 経路と折れ回数を持たせる。HPの初期値と制限時間の算出に使う
+  const path = solvePath(maze);
+  maze.path = path;
+  maze.pathLength = path.length;
+  maze.turns = countTurns(path);
 
   return maze;
 }

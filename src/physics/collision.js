@@ -6,10 +6,14 @@
  *
  * 反発係数は壁ごとに変わり得るため、呼び出し側から
  * restitutionOf(wall) を受け取る（resolveParams への依存を持たない）。
+ *
+ * onImpact(speed, wall) を渡すと、衝突のたびに法線方向の速度（マス/s）と
+ * ぶつかった壁を通知する。HPのような「ぶつかり方」に依存する仕組みは
+ * これを使う（衝突判定を二重に持たないため）。
  */
 import { TUNING } from '../config/gameConfig.js';
 
-export function resolveCollisions(actor, walls, restitutionOf) {
+export function resolveCollisions(actor, walls, restitutionOf, onImpact) {
   let hits = 0;
 
   for (let i = 0; i < walls.length; i++) {
@@ -43,6 +47,7 @@ export function resolveCollisions(actor, walls, restitutionOf) {
 
     const vn = actor.vx * nx + actor.vy * ny;
     if (vn < 0) {
+      if (onImpact) onImpact(-vn, w);
       if (-vn > TUNING.wallHitSpeed) hits++;
       const rest = restitutionOf(w);
       actor.vx -= (1 + rest) * vn * nx;

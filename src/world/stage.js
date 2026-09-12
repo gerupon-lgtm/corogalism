@@ -5,6 +5,7 @@
  */
 import { TUNING } from '../config/gameConfig.js';
 import { getMaterial } from './materials.js';
+import { createRng } from '../maze/rng.js';
 
 const NEUTRAL_ZONE = { id: 'none', frictionK: 1, restitutionK: 1, accelK: 1, forceX: 0, forceY: 0 };
 
@@ -27,14 +28,52 @@ export function buildWalls(maze, wallThickness = TUNING.wallThickness) {
   return walls;
 }
 
-export function createStage(maze) {
-  return {
+export function createStage(maze, difficulty) {
+  const stage = {
     maze,
     floors: new Array(maze.size * maze.size).fill('default'),
     walls: buildWalls(maze),
-    zones: [], // フェーズ1では常に空
+    zones: [], // フェーズ2でも空（ゾーンはフェーズ3以降）
     wallThickness: TUNING.wallThickness,
   };
+  if (difficulty) assignWallMaterials(stage, difficulty);
+  return stage;
+}
+
+/**
+ * 壁に素材を配置する（F-223）。
+ *
+ * シードから決定的に配置するので、同じ面は常に同じ素材配置になる。
+ * 難易度が上がると危険な壁（stone / spike）が増え、安全地帯（moss）が減る。
+ * 外周の壁は対象外（盤面の縁が痛いのは理不尽なため）【想定】。
+ */
+export function assignWallMaterials(stage, difficulty) {
+  const { size } = stage.maze;
+  const rng = createRng((stage.maze.seed ^ 0x5bf03635) >>> 0);
+  const { dangerRatio, spikeShare, mossRatio } = difficulty;
+
+  for (const w of stage.walls) {
+    if (isOuterWall(w, size, stage.wallThickness)) { w.materialId = 'default'; continue; }
+    const r = rng();
+    if (r < dangerRatio) {
+      w.materialId = rng() < spikeShare ? 'spike' : 'stone';
+    } else if (r < dangerRatio + mossRatio) {
+      w.materialId = 'moss';
+    } else {
+      w.materialId = 'default';
+    }
+  }
+  return stage;
+}
+
+function isOuterWall(w, size, wt) {
+  const eps = wt;
+  return (
+    w.y <= -wt / 2 + eps * 0.5 ||
+    w.x <= -wt / 2 + eps * 0.5 ||
+    w.x + w.w >= size + wt / 2 - eps * 0.5 ||
+    w.y + w.h >= size + wt / 2 - eps * 0.5
+  );
 }
 
 /**

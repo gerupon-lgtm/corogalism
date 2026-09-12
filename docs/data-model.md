@@ -1,4 +1,4 @@
-# データモデル（フェーズ1）
+# データモデル（フェーズ2 / v0.2.0）
 
 単位の原則: **位置・速度・加速度・サイズはマス（セル）単位で保持する。** ピクセルへの変換は描画と積分の最終段だけで行う。画面サイズで難易度が変わらないようにするため。
 
@@ -13,6 +13,9 @@
   ],
   start: { x: 0, y: 0 },
   goal:  { x: 6, y: 6 },
+  path: [{ x, y }, ...],       // startからgoalへの一意な経路
+  pathLength: 25,              // 経路のセル数（path.length）
+  turns: 15,                  // 経路上の方向転換の回数
 }
 ```
 
@@ -51,7 +54,7 @@
 ## Material（`world/materials.js`）
 
 ```js
-{ id: 'default', frictionK: 1.0, restitutionK: 1.0, accelK: 1.0 }
+{ id: 'default', frictionK: 1.0, restitutionK: 1.0, accelK: 1.0, damageK: 1.0 }
 ```
 
 ## Zone（`world/stage.js`）
@@ -114,10 +117,51 @@
 ```js
 // フェーズ1は fixed 実装のみ。将来のスクロール対応で差し替える
 createFixedCamera(stage, viewportPx) => {
-  toScreen({x, y}) => {px, py},
+  toScreen(x, y) => {px, py},
+  toCells(px, py) => {x, y},
+  toPx(cellValue),
   cellSizePx,
   visibleBounds,
 }
 ```
 
 描画とヒットテストはこの抽象経由で座標変換する。`cellSize` を各所で直接計算しないこと。
+
+## StagePlay（`game/stagePlay.js`）
+
+`createStagePlay(seed, difficulty = null)` で生成する。`difficulty` があればチャレンジ。
+
+```js
+{
+  stage, actor,
+  hp,                     // createHpのインスタンス。練習はnull
+  limitSec,               // 1面の制限時間。練習はnull
+  timeMs, remainingSec, wallHits, started, // getter
+  status,                 // playing | clear | dead | timeout
+  advance({ dt, elapsedMs, tilt, base }), // ダメージ量を返す。停止中は呼ばない
+  teleport(x, y),          // 開発確認用。速度0、計測開始済みにする
+}
+```
+
+`main.js` がランとこの1面を接続する。停止・設定・非表示中はadvanceを呼ばない。
+HP0→時間切れ→ゴールの順に判定し、終了後はadvanceしても変化しない。
+
+## RunとRunBests
+
+`game/run.js` の `createRun(runSeed)` が面数・合計タイム・残りコンティニューを保持する。
+`currentSeed()`、`clearStage({timeMs,noDamage})`、`failStage(cause)`、`useContinue()`、`result()` を使う。
+`stageLimitSec` はRunには持たず、StagePlayの `limitSec` として計算する。
+
+```js
+// result()
+{ stages, totalTimeMs, noDamageStages, usedContinue, cause }
+// localStorage: corogalism-run-bests（従来のcorogalism-bestsから独立）
+{
+  noContinue: { stages, totalTimeMs, at } | null,
+  withContinue: { stages, totalTimeMs, at } | null,
+}
+```
+
+`loadRunBests()` が不正・未保存データをnullに正規化する。
+`saveRunBest(result)` は `{updated, saved, best}` を返す。面数降順、タイム昇順。
+書き込み失敗時は `saved:false`。初回失敗時のノーコン記録と、コンティニュー後の記録を分ける。
