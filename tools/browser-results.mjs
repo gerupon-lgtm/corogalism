@@ -9,7 +9,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
 const errors = [];
 try {
   for (const width of [320, 390, 576, 1280]) {
-    const context = await browser.newContext({ viewport: { width, height: 900 }, deviceScaleFactor: 2 });
+    const context = await browser.newContext({ viewport: { width, height: width === 320 ? 568 : 900 }, deviceScaleFactor: 2 });
     await context.addInitScript(() => Object.defineProperty(window, 'DeviceOrientationEvent', { value: undefined, configurable: true }));
     const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
     await page.clock.install(); await page.clock.pauseAt(new Date(Date.now() + 1000));
@@ -40,6 +40,8 @@ try {
       if (i < 2) { await click('btn-next'); assert.ok((await state()).prepareMs > 550); await ready(); }
     }
     await click('btn-game-exit'); assert.equal((await state()).screen, 'run-result');
+    assert.equal(await page.evaluate(() => window.scrollY), 0);
+    assert.equal(await page.evaluate(() => document.activeElement.id), 'run-heading');
     assert.equal(await page.locator('#board').isVisible(), false); assert.equal((await state()).audio.music, false);
     assert.match(await page.locator('#run-stages').textContent(), /3 面/);
     assert.equal(await page.locator('#run-badge').isVisible(), true);

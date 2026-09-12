@@ -181,6 +181,10 @@ function showScreen(name) {
   updateAudio();
   // 設定は先頭から読める独立画面にし、戻るときは元の操作位置を復元する。
   if (name === 'settings') window.scrollTo(0, 0);
+  else if (name === 'run-result') {
+    window.scrollTo(0, 0);
+    find('run-heading').focus({ preventScroll: true });
+  }
   else if (previousScreen === 'settings') window.scrollTo(0, settingsUi.returnScroll || 0);
   // focus()の既定スクロールを抑え、トースト内から操作を続けられるようにする。
   if (ended) {
