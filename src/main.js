@@ -171,6 +171,7 @@ function renderLegend() {
     const item = document.createElement('li');
     const swatch = document.createElement('span');
     swatch.className = 'material-swatch';
+    swatch.dataset.material = id;
     swatch.style.backgroundColor = appearance.fill;
     swatch.setAttribute('aria-hidden', 'true');
     item.append(swatch, `${appearance.label}：${materialHelp[id]}`);

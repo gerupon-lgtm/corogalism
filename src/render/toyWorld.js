@@ -1,5 +1,11 @@
 import { getWallMaterialAppearance } from './materialAppearance.js';
 
+// C案から作った同梱テクスチャ。読み込み失敗時は下のCanvas描画へフォールバック。
+const wallAtlas = new Image();
+wallAtlas.src = new URL('../../assets/toy-wall-atlas.png', import.meta.url).href;
+export function wallTextureReady() { return wallAtlas.complete && wallAtlas.naturalWidth > 0; }
+const materialBands = { default: [0,.185], stone:[.187,.387], spike:[.391,.587], moss:[.592,.789], rubber:[.794,.999] };
+
 const circle = (ctx, x,y,r) => { ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2); ctx.fill(); };
 function rounded(ctx,x,y,w,h,r) { ctx.beginPath(); ctx.roundRect(x,y,w,h,r); }
 
@@ -10,8 +16,25 @@ export function drawToyWall(ctx, wall, camera) {
   const horizontal = w >= h, length = Math.max(w,h), thickness = Math.min(w,h);
   const a = getWallMaterialAppearance(wall.materialId);
   ctx.save(); ctx.translate(point.px, point.py);
+  // 接地影だけを壁外へ落とし、壁面自体の位置と衝突境界は保つ。
+  ctx.shadowColor='#08120acc';ctx.shadowBlur=thickness*.8;ctx.shadowOffsetY=thickness*.7;
+  ctx.fillStyle='#243127';rounded(ctx,0,0,w,h,thickness*.22);ctx.fill();
+  ctx.shadowColor='transparent';ctx.shadowOffsetY=0;ctx.shadowBlur=0;
   ctx.beginPath(); ctx.rect(0,0,w,h); ctx.clip();
   if (!horizontal) { ctx.translate(w,0); ctx.rotate(Math.PI/2); }
+  if (wallTextureReady()) {
+    const [top,bottom]=materialBands[wall.materialId] || materialBands.default;
+    const sy=wallAtlas.naturalHeight*top, sh=wallAtlas.naturalHeight*(bottom-top);
+    rounded(ctx,0,0,length,thickness,thickness*.22);ctx.clip();
+    ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+    // 面の素材感を潰さないように等倍比率でタイル化。白い外枠は重ねない。
+    const tileWidth=wallAtlas.naturalWidth/sh*thickness;
+    for(let offset=0;offset<length;offset+=tileWidth) {
+      const dw=Math.min(tileWidth,length-offset);
+      ctx.drawImage(wallAtlas,0,sy,wallAtlas.naturalWidth*(dw/tileWidth),sh,offset,0,dw,thickness);
+    }
+    ctx.restore();return;
+  }
   const gradient = ctx.createLinearGradient(0,0,0,thickness);
   gradient.addColorStop(0,a.edge); gradient.addColorStop(.22,a.fill);
   gradient.addColorStop(.62,a.fill); gradient.addColorStop(1,a.pattern);

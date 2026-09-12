@@ -32,10 +32,14 @@ try {
     await page.evaluate(()=>{const g=window.__corogalism.state.goal;window.__corogalism.teleport(g.x,g.y);});
     await page.clock.runFor(500);
     assert.equal((await state()).screen,'clear');
+    // Playwrightの時計とCSS timelineは独立するため、定位置の検査は登場アニメーション完了後。
+    await page.locator('#screen-clear').evaluate(el=>el.getAnimations().forEach(animation=>animation.finish()));
     assert.deepEqual(await layout(),before,`clear preserves complete layout at ${width}`);
     assert.equal(await page.evaluate(()=>document.activeElement.id),'btn-next');
     const toast=await page.locator('#screen-clear').boundingBox();
     assert.ok(toast.x>=before.x && toast.y>=before.y && toast.y+toast.height<=before.y+before.height);
+    assert.ok(Math.abs(toast.x+toast.width/2-before.x-before.width/2)<1, 'clear horizontally centered');
+    assert.ok(Math.abs(toast.y+toast.height/2-before.y-before.height/2)<1, 'clear vertically centered');
     await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'btn-clear-exit');
     await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.id),'btn-next');
     await page.screenshot({path:fileURLToPath(new URL(`clear-${width}.png`,output)),fullPage:true});
@@ -48,7 +52,11 @@ try {
     await page.evaluate(()=>window.__corogalism.teleport(.5,.5));
     await page.clock.fastForward((await state()).limitSec*1000+50);await page.clock.runFor(500);
     assert.equal((await state()).screen,'over');
+    await page.locator('#screen-over').evaluate(el=>el.getAnimations().forEach(animation=>animation.finish()));
     assert.deepEqual(await layout(),before,`failure preserves complete layout at ${width}`);
+    const over=await page.locator('#screen-over').boundingBox();
+    assert.ok(Math.abs(over.x+over.width/2-before.x-before.width/2)<1, 'continue horizontally centered');
+    assert.ok(Math.abs(over.y+over.height/2-before.y-before.height/2)<1, `continue vertically centered: ${JSON.stringify({over,before})}`);
     await page.screenshot({path:fileURLToPath(new URL(`continue-${width}.png`,output)),fullPage:true});
     await click('btn-continue');
     assert.equal((await state()).screen,'game');assert.equal((await state()).seed,failedSeed);

@@ -2,7 +2,7 @@
 import { TUNING, UI } from '../config/gameConfig.js';
 import { goalCenter } from '../world/stage.js';
 import { createToyBall } from './toyBall.js';
-import { drawToyFloor, drawToyGoal, drawConfetti } from './toyWorld.js';
+import { drawToyFloor, drawToyGoal, drawConfetti, wallTextureReady } from './toyWorld.js';
 
 export function createRenderer(canvas) {
   const ctx = canvas.getContext('2d');
@@ -11,6 +11,7 @@ export function createRenderer(canvas) {
   const ball = createToyBall();
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let viewportPx = 0, dpr = 1, cachedStage = null, clearAt = null, lastActor = null;
+  let cachedTextureReady = false;
 
   function resize(px) {
     const next = Math.max(1, Math.round(px)), ratio = Math.min(window.devicePixelRatio || 1, 3);
@@ -25,7 +26,10 @@ export function createRenderer(canvas) {
   }
 
   function draw({ stage, actor, camera, pointerTilt, status = 'playing', now = performance.now() }) {
-    if (stage !== cachedStage) {drawToyFloor(bg,stage,camera,viewportPx);cachedStage=stage;}
+    const textureReady = wallTextureReady();
+    if (stage !== cachedStage || textureReady !== cachedTextureReady) {
+      drawToyFloor(bg,stage,camera,viewportPx);cachedStage=stage;cachedTextureReady=textureReady;
+    }
     if (actor !== lastActor) {clearAt=null;lastActor=actor;}
     if (status === 'clear' && clearAt === null) clearAt=now;
     if (status !== 'clear') clearAt=null;
