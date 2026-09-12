@@ -14,9 +14,10 @@
 [hidden]{display:none!important}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
   font-size:15px;line-height:1.6;-webkit-text-size-adjust:100%;overscroll-behavior:none}
+/* ヘッダと上余白は全画面共通。プレイ中の盤面位置を基準に保つ。 */
 .wrap{max-width:480px;margin:0 auto;padding-inline:14px;
   padding-block:14px calc(28px + env(safe-area-inset-bottom));
-  display:flex;flex-direction:column;gap:12px}
+  display:flex;flex-direction:column;gap:8px}
 
 .head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 h1{margin:0;font-size:16px;font-weight:700}
@@ -103,7 +104,6 @@ progress::-moz-progress-bar{background:var(--ok)}
 details{font-size:12px;color:var(--muted)}summary{cursor:pointer}
 body.board-session footer{display:none}
 body.board-session .panel{padding:10px;gap:8px}
-body.board-session .wrap{gap:8px}
 @media(max-width:360px){.wrap{padding-inline:10px}.hud dd{font-size:13px}.mode-card strong{font-size:14px}}
 /* C案：クリーム色のトイフレームと盤面内に浮く操作トースト。 */
 .board{border:3px solid #cfb38d;border-radius:12px;background:#263a2e;
@@ -205,9 +205,6 @@ progress::-moz-progress-bar{border-radius:999px;background:linear-gradient(#a5d9
 .material-swatch[data-material="rubber"]{background-position-y:100%}
 @media(max-width:360px){.meter-block{padding:6px 7px 8px}.meter-label strong{font-size:16px}.meter-name{font-size:9px}.meter-name svg{width:11px;height:11px}}
 /* タイトルは迷路を置かず、同じトイ調のモード選択から始める。 */
-body[data-screen="mode"] .wrap{padding-top:28px;gap:8px}
-body[data-screen="mode"] .head{align-items:center}
-body[data-screen="mode"] .brand-word{font-size:clamp(22px,6vw,27px)}
 .mode-menu{padding:22px 18px 18px;gap:14px;border:2px solid #c6ac83;border-radius:23px;
   background:linear-gradient(135deg,#fdf1d7,#ead6b4);box-shadow:inset 0 1px 0 #fff9e8,0 4px 0 #877151,0 8px 22px #0003}
 .mode-menu h2{justify-content:center;margin:0 0 7px;color:#765033;font-size:19px;line-height:1.4}
@@ -239,7 +236,7 @@ body[data-screen="mode"] .brand-word{font-size:clamp(22px,6vw,27px)}
 .countdown-caption{font-size:clamp(8px,2.8cqw,11px);color:#927046;margin-top:3px}
 @keyframes countdown-beat{0%,100%{transform:scale(.96)}25%{transform:scale(1.05)}}
 @media(prefers-reduced-motion:reduce){#countdown-number{animation:none}.mode-menu .mode-card{transition:none}}
-@media(max-width:360px){body[data-screen="mode"] .wrap{padding-top:18px;gap:8px}.mode-menu{padding:18px 14px;gap:12px}
+@media(max-width:360px){.mode-menu{padding:18px 14px;gap:12px}
   .mode-menu h2{font-size:17px}.mode-menu .mode-card{padding:14px}.mode-menu .mode-card strong{font-size:17px}}
 .play-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:-3px}
 #play-mode-label{font-size:9px;letter-spacing:.2em;color:#a6b49c}
@@ -267,7 +264,6 @@ body[data-screen="mode"] .brand-word{font-size:clamp(22px,6vw,27px)}
 :is(#screen-game,.settings-menu) button.cal{border-color:#cf9559;background:linear-gradient(#ffe9bd,#edc88f);color:#815125}
 :is(#screen-game,.settings-menu) button.ghost:active{transform:translateY(2px);box-shadow:0 1px 0 #93734b}
 #screen-game .note,#screen-game .text-button,#screen-game details{color:#bfc7b6}
-body[data-screen="settings"] .wrap{padding-top:28px;gap:8px}
 body[data-screen="settings"] footer{display:none}
 .settings-menu{padding:23px 18px;gap:20px;border:2px solid #c6ac83;border-radius:23px;
   background:linear-gradient(135deg,#fdf1d7,#ead6b4);color:#6f4d2d;
@@ -305,7 +301,6 @@ body[data-screen="settings"] footer{display:none}
 .sound-settings output{font-size:20px;font-weight:900;color:#a3622c}
 #sound-note:empty{display:none}
 /* 結果もモード選択と同じトイの質感。面数を主役にする。 */
-body[data-screen="run-result"] .wrap{padding-top:28px;gap:8px}
 body[data-screen="run-result"] footer{display:none}
 .run-result-menu{padding:24px 18px;gap:16px;border:2px solid #c6ac83;border-radius:23px;
   background:linear-gradient(135deg,#fdf1d7,#ead6b4);color:#6f4d2d;

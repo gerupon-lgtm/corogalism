@@ -1,6 +1,6 @@
 {
   "name": "corogalism",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "private": true,
   "type": "module",
   "description": "コロガリズム / Corogalism — 傾き操作の迷路ゲーム",
