@@ -39,6 +39,7 @@ HP・時間・素材配置・物理係数は変更していないが、通路が
 - `test/wall-clearance.test.js`: 実際の素材配置・衝突・HP・時間を使い、序盤1〜3面を各100シード、丁寧な操縦で300回全クリア。
 - `tools/browser-ui-polish.mjs`: 320/375/390/1280px。記録ありの表示、ヘッダ、独立設定、停止と復帰、フォント実読込、取得失敗時の操作と折返し。
 - 既存のsmoke / edge-cases / start-flow / toy-visualsも成功。入力フォールバック・HP0・再開・非モーダルトースト・自動スクロール防止を維持。
+- Standards / Specの並列レビュー: `b4caf690...ee20447`、両軸とも指摘0件。
 - スクリーンショット: `docs/verification/ui-polish/`。公開確認結果は `docs/deployment.md`。
 
 ## 実装の入口

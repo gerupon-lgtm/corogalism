@@ -30,12 +30,13 @@ try {
     assert.equal(await page.locator('#screen-mode h2').textContent(), '今日はどちらで遊ぶ？');
     assert.doesNotMatch(await page.locator('#screen-mode').textContent(), /3・2・1|カウントダウン/);
     const sentences = await page.locator('#btn-practice .mode-description > span').evaluateAll(els => els.map(el => {
-      const r=el.getBoundingClientRect();return {x:r.x,y:r.y,h:r.height,line:parseFloat(getComputedStyle(el).lineHeight)};
+      const r=el.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height,line:parseFloat(getComputedStyle(el).lineHeight)};
     }));
     assert.equal(sentences.length,2);
     assert.ok(sentences.every(s=>Math.abs(s.h-s.line)<1),'each sentence fits on one line');
-    if(width<400) assert.ok(sentences[1].y>sentences[0].y,'mobile description breaks at full stop');
-    else assert.equal(sentences[1].y,sentences[0].y,'wide description stays on one line');
+    const description = await page.locator('#btn-practice .mode-description').boundingBox();
+    if(sentences[0].w+sentences[1].w>description.width+.5) assert.ok(sentences[1].y>sentences[0].y,'description breaks at full stop when it cannot fit');
+    else assert.equal(sentences[1].y,sentences[0].y,'description stays on one line when it fits');
     assert.equal(await page.locator('footer .brand-word').count(), 0);
     assert.match(await page.locator('header .brand-tagline').textContent(), /A SMALL MAZE/);
     assert.equal(await page.locator('header .brand-tagline br').count(), 1);
