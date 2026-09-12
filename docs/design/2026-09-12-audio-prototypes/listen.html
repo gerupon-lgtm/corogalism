@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Corogalism 音の試聴 v1</title>
+<title>Corogalism 音の試聴 v2</title>
 <style>
 @font-face{font-family:Toy;src:url('../../../assets/fonts/MPLUS1p-Regular.woff2')}@font-face{font-family:Toy;src:url('../../../assets/fonts/MPLUS1p-Bold.woff2');font-weight:700}
 *{box-sizing:border-box}body{margin:0;background:#0f1513;color:#e3e8d0;font:14px/1.7 Toy,"Yu Gothic",sans-serif}main{max-width:680px;padding:24px 16px 40px;margin:auto}h1{font:28px "Trebuchet MS",sans-serif;margin:0}.sub{color:#b4bca8;font-size:12px;margin:6px 0 22px}
@@ -11,9 +11,9 @@ section{background:linear-gradient(130deg,#fff4da,#ecd9b7);border:2px solid #c6a
 @media(max-width:440px){.clips{grid-template-columns:1fr}section{padding:14px}}
 </style>
 <main>
-<h1>Corogalism</h1><p class="sub">音の試聴 v1 · まだゲームには組み込んでいません</p>
-<section><h2>まずはプレイ中のイメージ</h2><p>BGMとSEを重ねた20秒。選択からスタート、接触、ゴール、再挑戦へ。</p><audio controls preload="metadata" src="03-gameplay-mix.wav"></audio></section>
-<section><h2>BGM — Toy Garden</h2><p>木琴とトイピアノをイメージした、100 BPMの穏やかなオリジナル曲。38.4秒。</p><audio id="bgm" controls preload="metadata" src="01-bgm-toy-garden.wav" loop></audio><label><input id="loop" type="checkbox" checked>ループして聴く</label></section>
+<h1>Corogalism</h1><p class="sub">音の試聴 v2 · まだゲームには組み込んでいません</p>
+<section><h2>まずはプレイ中のイメージ</h2><p>BGMとSEを重ねた20秒。選択からスタート、接触、ゴール、再挑戦へ。</p><audio controls preload="metadata" src="v2/03-gameplay-mix-quarter-pulse.wav"></audio></section>
+<section><h2>BGM — Toy Garden</h2><p>木琴とトイピアノをイメージした、100 BPMの穏やかなオリジナル曲。38.4秒。4分音符を刻む控えめなパーカッションを追加しました。</p><audio id="bgm" controls preload="metadata" src="v2/01-bgm-toy-garden-quarter-pulse.wav" loop></audio><label><input id="loop" type="checkbox" checked>ループして聴く</label></section>
 <section><h2>SE — 13種類をまとめて</h2><p>間を空けて順番に再生します。転がり音は、ほかの音より小さめです。</p><audio id="showcase" controls preload="metadata" src="02-se-showcase.wav"></audio><ol id="timeline"></ol></section>
 <section><h2>SEを1つずつ聴く</h2><div id="clips" class="clips"></div><audio id="single" controls preload="none"></audio><p id="status" role="status">音を選んでください。</p></section>
 <footer>外部の音楽・録音素材は使わず、旋律と音色をこの試作向けに合成しています。曲調・耳当たり・音量の比較用です。</footer>
