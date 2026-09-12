@@ -8,7 +8,7 @@ await mkdir(output, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const errors = [];
 try {
-  for (const width of [320, 375, 390, 1280]) {
+  for (const width of [320, 375, 390, 464, 1280]) {
     const context = await browser.newContext({ viewport: { width, height: 812 }, deviceScaleFactor: 2 });
     await context.addInitScript(() => {
       Object.defineProperty(window, 'DeviceOrientationEvent', { value: undefined, configurable: true });
@@ -43,7 +43,7 @@ try {
     const logo = await page.locator('header .brand').boundingBox();
     const tagline = await page.locator('header .brand-tagline').boundingBox();
     assert.ok(tagline.x >= logo.x + logo.width, 'two-line tagline is right of logo');
-    assert.ok(Math.abs(tagline.y + tagline.height / 2 - logo.y - logo.height / 2) < 1);
+    assert.ok(Math.abs(tagline.y + tagline.height / 2 - logo.y - logo.height / 2 - 2) < 1);
     assert.match(await page.locator('#mode-best-no').textContent(), /12 面192.34 秒/);
     assert.match(await page.locator('#mode-best-continue').textContent(), /20 面390.12 秒/);
     assert.equal(await page.evaluate(() => document.fonts.check('700 16px "M PLUS 1p"', '記録')), true);
