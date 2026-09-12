@@ -8,6 +8,9 @@
 - クリア／失敗トースト表示中も設定・凡例・終了操作を使える。設定から元の終了状態に戻る。
 - 78テスト成功。ローカルでsmoke/edge/toy/start-flowの4ブラウザ検証成功。新フローは4画面幅で確認。
 - 実装コミット `bfc25d7`。動作仕様・検証内容は `start-flow.md`。
+- [Pages公開成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/34680980329)（公開コミット `b308902`）。正式URLでv0.2.3を確認。
+- HTML・CSS・main・gameConfig・gameScreenの5ファイルがHTTP200、ローカルとのSHA-256一致。
+- 正式URLへの `browser-start-flow.mjs` も4画面幅ですべて成功。タイトル／3カウント／停止と再開／結果トースト中の設定と退出／タブ非表示からの復帰を確認、未処理例外0件。
 
 ## v0.2.2 C案のビジュアル
 
