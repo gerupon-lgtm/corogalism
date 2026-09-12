@@ -14,7 +14,7 @@ page.on('pageerror', e => errors.push(e.message));
 await page.clock.install();
 await page.clock.pauseAt(new Date(Date.now() + 1000));
 const state = () => page.evaluate(() => window.__corogalism.state);
-const click = async (id) => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); const s = await state(); if (s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.countdownMs + 32); };
+const click = async (id) => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); const s = await state(); if (s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.prepareMs + s.countdownMs + 32); };
 const goal = () => page.evaluate(() => { const g = window.__corogalism.state.goal; window.__corogalism.teleport(g.x, g.y); });
 const timeout = async () => { await page.evaluate(() => window.__corogalism.teleport(0.5, 0.5)); await page.clock.fastForward((await state()).limitSec * 1000 + 100); };
 try {

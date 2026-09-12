@@ -56,7 +56,7 @@ try {
     await noOverflow(); await screenshot('title-records');
     await click('btn-mode-settings'); await settingsOnly();
     await screenshot('settings-title'); await click('btn-settings-close');
-    await click('btn-challenge'); await page.clock.runFor(3100);
+    await click('btn-challenge'); await page.clock.runFor(3700);
     const before = await state();
     assert.ok(before.walls.every(w => Math.abs(Math.min(w.w, w.h) - .24) < 1e-9));
     await screenshot('game');
@@ -65,7 +65,7 @@ try {
     assert.deepEqual((await state()).actor, stopped.actor); assert.equal((await state()).timeMs, stopped.timeMs); assert.deepEqual((await state()).hp, stopped.hp);
     await page.locator('#set-angle').fill('30'); await screenshot('settings-game');
     await click('btn-settings-close'); assert.equal((await state()).paused, true); assert.equal((await state()).seed, before.seed);
-    await click('btn-resume'); await page.clock.runFor(3100);
+    await click('btn-resume'); await page.clock.runFor(3700);
     await page.evaluate(() => { const g = window.__corogalism.state.goal; window.__corogalism.teleport(g.x, g.y); }); await page.clock.runFor(32);
     assert.equal((await state()).screen, 'clear'); await click('btn-game-settings'); await settingsOnly();
     await click('btn-settings-close'); assert.equal((await state()).screen, 'clear');

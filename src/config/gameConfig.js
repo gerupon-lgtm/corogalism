@@ -86,6 +86,8 @@ export const RUN = {
 /** 表示専用。物理や難易度の数値とは分離する。 */
 export const UI = {
   startCountdownMs: 3000,
+  beforeCountdownMs: 600,
+  continueBeforeCountdownMs: 1500,
   countdownMaxStepMs: 250,
   goalSettleMs: 520,
   clearCelebrationMs: 1500,

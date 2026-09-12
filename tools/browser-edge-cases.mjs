@@ -25,7 +25,7 @@ async function setup(kind = 'unsupported', blockStorage = false) {
   await page.clock.install(); await page.clock.pauseAt(new Date(Date.now() + 1000));
   await page.goto(new URL('?debug=1&seed=123', baseUrl).href);
   await page.clock.runFor(32);
-  const click = async (id, ready = true) => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); const s = await state(); if (ready && s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.countdownMs + 32); };
+  const click = async (id, ready = true) => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); const s = await state(); if (ready && s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.prepareMs + s.countdownMs + 32); };
   const state = () => page.evaluate(() => window.__corogalism.state);
   return { context, page, click, state };
 }
@@ -68,7 +68,7 @@ try {
         window.emitOrientation(20, 10);
       });
     }
-    await page.clock.runFor(1700); await page.clock.runFor((await state()).countdownMs + 32);
+    await page.clock.runFor(1700); await page.clock.runFor((await state()).prepareMs + (await state()).countdownMs + 32);
     assert.equal((await state()).mode, kind === 'granted' ? 'tilt' : 'pointer');
     if (kind === 'granted') {
       await page.evaluate(() => window.emitOrientation(20, 25)); await page.clock.runFor(200);

@@ -46,6 +46,7 @@ let handled = false;
 let starting = false;
 let inputReady = false;
 let countdownMs = 0;
+let prepareMs = 0;
 let audibleCountdown = null;
 let lastFrame = performance.now();
 
@@ -55,7 +56,7 @@ function initialSeed() {
   return (Date.now() % 1000003) >>> 0;
 }
 function nextSeed() { return ((seed * 7919 + 13) % 1000003) >>> 0; }
-function isPlaying() { return screen === 'game' && !paused && !document.hidden && countdownMs === 0; }
+function isPlaying() { return screen === 'game' && !paused && !document.hidden && prepareMs === 0 && countdownMs === 0; }
 function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
 
 function updateAudio() {
@@ -193,13 +194,16 @@ function showScreen(name) {
 function updateCountdown() {
   const visible = screen === 'game' && !paused && countdownMs > 0;
   find('countdown-layer').hidden = !visible;
-  const label = String(Math.ceil(countdownMs / 1000));
-  if (visible && audibleCountdown !== label) sound.tick(Number(label));
+  const preparing = prepareMs > 0;
+  const counting = visible && !preparing;
+  const label = preparing ? 'READY' : String(Math.ceil(countdownMs / 1000));
+  find('countdown-layer').classList.toggle('is-preparing', preparing);
+  if (counting && audibleCountdown !== label) sound.tick(Number(label));
   else if (audibleCountdown !== null && !visible && countdownMs === 0 && isPlaying()) sound.tick(0);
-  audibleCountdown = visible ? label : null;
+  audibleCountdown = counting ? label : null;
   if (visible && find('countdown-number').textContent !== label) {
     find('countdown-number').textContent = label;
-    find('countdown-layer').setAttribute('aria-label', `開始まで${label}秒`);
+    find('countdown-layer').setAttribute('aria-label', preparing ? '姿勢を整えてください' : `開始まで${label}秒`);
   }
 }
 
@@ -225,13 +229,14 @@ function renderLegend() {
   }
 }
 
-function loadStage(useSeed) {
+function loadStage(useSeed, delayMs = UI.beforeCountdownMs) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
   play = createStagePlay(seed, run ? difficultyAt(stageIndex) : null);
   paused = false;
   handled = false;
   countdownMs = UI.startCountdownMs;
+  prepareMs = delayMs;
   game.setPaused(false);
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
   renderLegend();
@@ -248,6 +253,7 @@ function startGame(mode, useSeed = seed) {
 
 function showModes() {
   countdownMs = 0;
+  prepareMs = 0;
   runUi.setModeBests(loadRunBests(), tiltDeniedReason);
   showScreen('mode');
 }
@@ -255,7 +261,7 @@ function showModes() {
 function setPaused(value) {
   sound.stopEffects();
   paused = value;
-  if (!value) countdownMs = UI.startCountdownMs;
+  if (!value) { countdownMs = UI.startCountdownMs; prepareMs = UI.beforeCountdownMs; }
   game.setPaused(value);
   resetInput();
   lastFrame = performance.now();
@@ -301,7 +307,10 @@ function frame(now) {
   lastFrame = now;
   if (screen === 'game' && !paused && !document.hidden && countdownMs > 0) {
     // 長いフレームや復帰で準備時間を飛ばさず、完了フレームでは物理を進めない。
-    countdownMs = Math.max(0, countdownMs - Math.min(elapsedMs, UI.countdownMaxStepMs));
+    const step = Math.min(elapsedMs, UI.countdownMaxStepMs);
+    const preparingStep = Math.min(prepareMs, step);
+    prepareMs -= preparingStep;
+    countdownMs = Math.max(0, countdownMs - (step - preparingStep));
     updateCountdown();
     if (countdownMs === 0) resetInput();
   } else if (isPlaying() && play.status === 'playing') {
@@ -364,7 +373,7 @@ clear.onNext(() => { if (screen === 'clear') { loadStage(run ? run.currentSeed()
 find('btn-continue').addEventListener('click', () => {
   if (screen === 'over' && run?.useContinue()) {
     recordStatus = null;
-    loadStage(run.currentSeed());
+    loadStage(run.currentSeed(), UI.continueBeforeCountdownMs);
     showScreen('game');
     sound.effect('continue');
   }
@@ -401,7 +410,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
     get state() {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
         audio: sound.state,
-        cleared: play.status === 'clear', paused, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
+        cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,
         run: run ? { ...run.result(), stageIndex: run.stageIndex, continuesLeft: run.continuesLeft, runSeed: run.runSeed } : null,

@@ -16,7 +16,7 @@ try {
     await page.goto(new URL('?debug=1&seed=123',base).href);await page.clock.runFor(32);
     const state=()=>page.evaluate(()=>window.__corogalism.state);
     const click=async id=>{await page.locator(`#${id}`).click({force:true});await page.clock.runFor(32);};
-    const ready=async()=>{await page.clock.runFor((await state()).countdownMs+32);};
+    const ready=async()=>{await page.clock.runFor((await state()).prepareMs+(await state()).countdownMs+32);};
     const snapshot=()=>page.evaluate(()=>{const s=window.__corogalism.state;return {actor:s.actor,time:s.timeMs,hp:s.hp,remaining:s.remainingSec};});
     const clear=async()=>{await page.evaluate(()=>{const {goal}=window.__corogalism.state;window.__corogalism.teleport(goal.x,goal.y);});await page.clock.runFor(32);};
     assert.equal((await state()).screen,'mode');assert.equal(await page.locator('#board').isVisible(),false);
@@ -25,13 +25,14 @@ try {
     await click('btn-mode-settings');assert.equal(await page.locator('#board').isVisible(),false);
     await click('btn-settings-close');assert.equal((await state()).screen,'mode');
     await click('btn-practice');
-    assert.equal(await page.locator('#countdown-number').textContent(),'3');
+    assert.equal(await page.locator('#countdown-number').textContent(),'READY');
     const initial=await snapshot();
     const pause=await page.locator('#btn-pause').boundingBox();const board=await page.locator('#board').boundingBox();
     assert.ok(pause.y+pause.height<=board.y,'pause is above board');
     await page.screenshot({path:fileURLToPath(new URL(`countdown-${width}.png`,output)),fullPage:true});
     // 準備中の押しっぱなしは球や時計を動かさず、開始時に持ち越さない。
     await page.mouse.move(board.x+board.width*.8,board.y+board.height*.5);await page.mouse.down();
+    await page.clock.runFor((await state()).prepareMs+16);assert.equal(await page.locator('#countdown-number').textContent(),'3');assert.deepEqual(await snapshot(),initial);
     await page.clock.runFor(1000);assert.equal(await page.locator('#countdown-number').textContent(),'2');
     assert.deepEqual(await snapshot(),initial);
     await page.clock.runFor(1000);assert.equal(await page.locator('#countdown-number').textContent(),'1');
@@ -44,13 +45,13 @@ try {
     await click('btn-pause');assert.equal((await state()).paused,true);
     const paused=await snapshot();await page.clock.fastForward(60000);assert.deepEqual(await snapshot(),paused);
     await page.screenshot({path:fileURLToPath(new URL(`pause-${width}.png`,output)),fullPage:true});
-    await click('btn-resume');assert.equal(await page.locator('#countdown-number').textContent(),'3');assert.deepEqual(await snapshot(),paused);
+    await click('btn-resume');assert.equal(await page.locator('#countdown-number').textContent(),'READY');assert.deepEqual(await snapshot(),paused);
     await ready();await clear();assert.equal((await state()).screen,'clear');
     // トースト表示中でも背後の設定と戻る操作を実クリックできる。
     await page.locator('#btn-game-settings').click();await page.clock.runFor(32);
     assert.equal((await state()).screen,'settings');await click('btn-settings-close');assert.equal((await state()).screen,'clear');
     assert.equal(await page.locator('#screen-game').getAttribute('inert'),null);
-    await click('btn-retry');assert.equal(await page.locator('#countdown-number').textContent(),'3');
+    await click('btn-retry');assert.equal(await page.locator('#countdown-number').textContent(),'READY');
     await click('btn-game-settings');const remaining=(await state()).countdownMs;
     await page.clock.fastForward(60000);assert.equal((await state()).countdownMs,remaining);
     await click('btn-settings-close');assert.equal((await state()).paused,true);

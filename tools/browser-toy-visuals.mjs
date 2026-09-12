@@ -20,7 +20,7 @@ try {
       await page.mouse.click(box.x+box.width/2,box.y+box.height/2);
       await page.clock.runFor(500);
       const s = await state();
-      if (s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.countdownMs + 32);
+      if (s.screen === 'game' && !s.paused && s.countdownMs > 0) await page.clock.runFor(s.prepareMs + s.countdownMs + 32);
     };
     const state=()=>page.evaluate(()=>window.__corogalism.state);
     const layout=()=>page.evaluate(()=>{
@@ -82,7 +82,7 @@ try {
   await page.clock.install();await page.clock.pauseAt(new Date(Date.now()+1000));
   await page.goto(new URL('?debug=1&seed=123',baseUrl).href);await page.clock.runFor(32);
   for(const id of ['btn-practice']) {await page.locator(`#${id}`).click({force:true});await page.clock.runFor(32);}
-  await page.clock.runFor(3100);
+  await page.clock.runFor(3700);
   const before=await page.locator('#board').boundingBox();
   await page.evaluate(()=>{const g=window.__corogalism.state.goal;window.__corogalism.teleport(g.x,g.y);});await page.clock.runFor(32);
   assert.deepEqual(await page.locator('#board').boundingBox(),before);

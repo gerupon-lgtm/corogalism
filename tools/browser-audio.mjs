@@ -28,7 +28,7 @@ async function open({ failure, delayed = false } = {}) {
   await page.goto(new URL('?debug=1&seed=123', base).href); await page.clock.runFor(32);
   const state = () => page.evaluate(() => window.__corogalism.state);
   const click = async id => { await page.locator(`#${id}`).click(); await page.clock.runFor(32); };
-  const ready = () => page.clock.runFor(3100);
+  const ready = async () => { const s = await state(); await page.clock.runFor(s.prepareMs + s.countdownMs + 32); };
   const clear = async () => { await page.evaluate(() => { const g = window.__corogalism.state.goal; window.__corogalism.teleport(g.x, g.y); }); await page.clock.runFor(32); };
   return { context, page, state, click, ready, clear, requests, pending };
 }
@@ -43,6 +43,8 @@ try {
   await click('btn-settings-close'); assert.equal((await state()).audio.music, false);
   const countdown = async () => {
     assert.ok((await state()).countdownMs > 0);
+    assert.equal(await page.locator('#countdown-number').textContent(), 'READY');
+    await page.clock.runFor((await state()).prepareMs + 16);
     for (let i = 0; i < 3; i++) {
       assert.equal((await state()).audio.music, false, 'BGM stays silent during 3/2/1');
       await page.clock.runFor(1000);

@@ -19,7 +19,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.2.9</span>
+      <span class="badge">v0.2.10</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -112,10 +112,11 @@
 
 
   <!-- S-107 ラン結果 -->
-  <section id="screen-run-result" class="panel" hidden>
-    <h2>ラン結果<span id="run-badge" class="best-badge" hidden>自己ベスト更新</span></h2>
+  <section id="screen-run-result" class="panel run-result-menu" aria-labelledby="run-heading" hidden>
+    <h2 id="run-heading">ラン結果</h2>
+    <span id="run-badge" class="best-badge" hidden>自己ベスト更新</span>
     <p id="run-category" class="lead"></p>
-    <dl class="result"><div><dt>クリア面数</dt><dd id="run-stages">0 面</dd></div><div><dt>合計クリアタイム</dt><dd id="run-time">0.00 秒</dd></div><div><dt>ノーミス</dt><dd id="run-no-damage">0 面</dd></div></dl>
+    <dl class="result run-score"><div class="run-stage-score"><dt>クリア面数</dt><dd id="run-stages">0 面</dd></div><div><dt>合計クリアタイム</dt><dd id="run-time">0.00 秒</dd></div><div><dt>ノーミス</dt><dd id="run-no-damage">0 面</dd></div></dl>
     <p id="run-best" class="note"></p><p id="run-save-note" class="note" role="status"></p>
     <div class="row"><button class="primary" id="btn-run-again" type="button">新しいランに挑戦</button><button class="ghost" id="btn-run-modes" type="button">モード選択</button></div>
   </section>
