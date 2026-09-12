@@ -78,5 +78,5 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
   await page.screenshot({ path: fileURLToPath(new URL('font-fallback-320.png', output)), fullPage: true });
   await context.close(); assert.deepEqual(errors, []);
-  console.log('PASS: header branding, populated records, fonts and blocked-font fallback, settings without board/HUD at 4 widths, game freeze and return from clear, wider collision walls.');
+  console.log('PASS: header branding, populated records, fonts and blocked-font fallback, settings without board/HUD at 5 widths, game freeze and return from clear, wider collision walls.');
 } finally { await browser.close(); }
