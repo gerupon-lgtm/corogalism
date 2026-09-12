@@ -62,7 +62,7 @@ test('既存の物理衝突からHPが減り、閾値未満の接触は無傷', 
 
 test('HP0はゴールより優先し、同一シードの再開ではHP・時間・素材を復元する', () => {
   const play = createStagePlay(123, difficultyAt(4));
-  for (let i = 0; i < 3; i++) play.hp.applyImpact(30, null, i);
+  for (let i = 0; i < 10 && !play.hp.isDead; i++) play.hp.applyImpact(30, null, i);
   const goal = goalCenter(play.stage.maze);
   play.teleport(goal.x, goal.y);
   tick(play);

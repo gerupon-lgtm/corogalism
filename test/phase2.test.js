@@ -63,7 +63,7 @@ test('まっすぐな経路なら折れ回数は0', () => {
 test('面が進むと制限時間が縮み、HP係数が下がり、危険な壁が増える（F-251）', () => {
   const d1 = difficultyAt(1);
   const d20 = difficultyAt(20);
-  assert.equal(d1.secPerCell, DIFFICULTY.secPerCellStart);
+  assert.equal(d1.secPerCell, DIFFICULTY.secPerCellStart * DIFFICULTY.introTimeMult);
   assert.ok(d20.secPerCell < d1.secPerCell, '制限時間が縮む');
   assert.ok(d20.hpPerTurn < d1.hpPerTurn, 'HP係数が下がる');
   assert.ok(d20.dangerRatio > d1.dangerRatio, '危険な壁が増える');

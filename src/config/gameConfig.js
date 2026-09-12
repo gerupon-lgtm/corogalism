@@ -56,7 +56,11 @@ export const HP = {
  * 根拠は docs/run-and-score.md §5。
  */
 export const DIFFICULTY = {
-  secPerCellStart: 0.55,   // 面1の「1マスあたりの秒数」
+  introEndStage: 10,      // この面で序盤の緩和を終え、従来の難易度につなげる
+  introTimeMult: 2.5,     // 1面目の制限時間を延長する倍率
+  introDamageMult: 0.5,   // 1面目の通常ダメージを半分にする
+  introCapRatio: 0.20,    // 1面目の単発上限。10面目でHP.capRatioへ戻す
+  secPerCellStart: 0.55,   // 序盤の時間延長を掛ける前の基準秒数
   secPerCellEnd: 0.28,     // 底
   secPerCellStages: 20,    // 何面かけて底まで削るか
   hpPerTurnStart: 4.0,     // HP係数（折れ回数に掛ける）

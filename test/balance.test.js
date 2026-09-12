@@ -60,5 +60,5 @@ test('制限時間は経路長に比例し、面が進むと縮む', () => {
   const early = playStage(101, 1, 1.0);
   const late = playStage(101, 20, 1.0);
   assert.ok(late.limitSec < early.limitSec, '面が進むと制限時間が縮む');
-  assert.ok(Math.abs(early.limitSec / early.maze.pathLength - 0.55) < 1e-9, '面1は0.55秒/マス');
+  assert.ok(Math.abs(early.limitSec / early.maze.pathLength - 1.375) < 1e-9, '面1は1.375秒/マス');
 });

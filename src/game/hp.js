@@ -19,9 +19,9 @@ export function initialHp(turns, hpPerTurn, cfg = HP) {
   return cfg.base + hpPerTurn * turns;
 }
 
-export function createHp({ turns, hpPerTurn, damageMult = 1, cfg = HP } = {}) {
+export function createHp({ turns, hpPerTurn, damageMult = 1, cfg = HP, damageCapRatio = cfg.capRatio } = {}) {
   const max = initialHp(turns, hpPerTurn, cfg);
-  const cap = max * cfg.capRatio;
+  const cap = max * Math.min(cfg.capRatio, damageCapRatio);
   let value = max;
   let lastDamageAt = -Infinity;
   let tookDamage = false;

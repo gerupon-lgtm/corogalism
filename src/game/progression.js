@@ -7,7 +7,7 @@
  *
  * 純粋関数。
  */
-import { DIFFICULTY } from '../config/gameConfig.js';
+import { DIFFICULTY, HP } from '../config/gameConfig.js';
 
 const lerpDown = (start, end, stages, n) =>
   Math.max(end, start - (start - end) * (n - 1) / Math.max(1, stages - 1));
@@ -15,14 +15,19 @@ const lerpDown = (start, end, stages, n) =>
 /** 面数（1始まり）から、その面の難易度パラメータを返す */
 export function difficultyAt(stage, cfg = DIFFICULTY) {
   const n = Math.max(1, Math.floor(stage));
+  const intro = Math.max(0, (cfg.introEndStage - n) / Math.max(1, cfg.introEndStage - 1));
   return {
     stage: n,
     /** 制限時間 = 経路長 × これ */
-    secPerCell: lerpDown(cfg.secPerCellStart, cfg.secPerCellEnd, cfg.secPerCellStages, n),
+    secPerCell: lerpDown(cfg.secPerCellStart, cfg.secPerCellEnd, cfg.secPerCellStages, n)
+      * (1 + (cfg.introTimeMult - 1) * intro),
     /** HP初期値 = HP.base + これ × 折れ回数 */
     hpPerTurn: Math.max(cfg.hpPerTurnMin, cfg.hpPerTurnStart - cfg.hpPerTurnPerStage * (n - 1)),
     /** ダメージ倍率（素材の危険度上昇とは別に、全体を底上げする係数） */
-    damageMult: Math.min(cfg.damageMultMax, 1 + cfg.damageMultPerStage * (n - 1)),
+    damageMult: Math.min(cfg.damageMultMax, 1 + cfg.damageMultPerStage * (n - 1))
+      * (1 - (1 - cfg.introDamageMult) * intro),
+    /** 序盤の全力衝突を抑える。通常倍率だけでは35%上限に当たり、軽減されないため。 */
+    damageCapRatio: HP.capRatio - (HP.capRatio - cfg.introCapRatio) * intro,
     /** 危険な壁（stone / spike）が占める割合 */
     dangerRatio: Math.min(cfg.dangerRatioMax, cfg.dangerRatioPerStage * (n - 1)),
     /** 危険な壁のうち spike の割合（残りは stone） */

@@ -26,7 +26,7 @@ export function playStage(seed, stageIndex, urgency) {
   const path = maze.path.map((c) => ({ x: c.x + 0.5, y: c.y + 0.5 }));
   const goal = goalCenter(maze);
   const limitSec = stageTimeLimitSec(maze, d);
-  const hp = createHp({ turns: maze.turns, hpPerTurn: d.hpPerTurn, damageMult: d.damageMult });
+  const hp = createHp({ turns: maze.turns, ...d });
 
   let wp = 1;
   let t = 0;
