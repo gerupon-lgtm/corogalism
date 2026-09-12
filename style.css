@@ -350,3 +350,14 @@ body[data-screen="run-result"] footer{display:none}
 .mode-records[open]{padding-bottom:8px}
 .mode-records .record-switch{margin-top:0}
 .mode-records .record-cards{margin:10px 0}
+
+/* T-226 難易度選択をチャレンジの枠内にまとめる。 */
+.challenge-choice{padding:18px 16px;border:1px solid #d5bc96;border-radius:16px;background:linear-gradient(#fff9e9,#f1e2c6);box-shadow:inset 0 1px 0 #fff,0 3px 0 #b59970}
+.challenge-choice h3{margin:0 0 6px;color:#b56930;font-size:19px;line-height:1.4}
+.challenge-description{margin:0;color:#8a7252;font-size:12px;line-height:1.7}
+.challenge-choice .difficulty-switch{margin:12px 0 0}
+.challenge-choice .difficulty-note{margin:8px 0 12px;font-size:11px}
+.mode-menu .challenge-choice #btn-challenge{display:block;width:100%;padding:11px 12px;border-color:#c99863;border-radius:999px;background:linear-gradient(#ffe4b4,#f2c185);box-shadow:inset 0 1px 0 #fff4dc,0 2px 0 #b58754;text-align:center;color:#80502a;font-weight:700;font-size:14px}
+.mode-menu .challenge-choice #btn-challenge span{font:inherit;color:inherit;letter-spacing:normal}
+.mode-menu .challenge-choice #btn-challenge::after{content:none}
+@media(max-width:360px){.challenge-choice{padding:14px}.challenge-choice h3{font-size:17px}}

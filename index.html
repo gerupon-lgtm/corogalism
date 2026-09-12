@@ -19,7 +19,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.2.12</span>
+      <span class="badge">v0.3.0</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -76,9 +76,13 @@
     <p class="menu-eyebrow">ROLL AT YOUR OWN PACE</p>
     <h2>どちらで遊ぶ？</h2>
     <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small class="mode-description"><span>HP・制限時間なし。</span><span>同じ迷路でタイムを縮めよう。</span></small></button>
-    <div class="difficulty-switch" role="group" aria-label="チャレンジの難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
-    <p id="difficulty-note" class="difficulty-note"></p>
-    <button class="mode-card" id="btn-challenge" type="button"><strong>チャレンジ <span id="challenge-level-label">通常</span></strong><small>HPと制限時間あり。クリアを重ねて先へ進もう。</small></button>
+    <div class="challenge-choice" role="group" aria-labelledby="challenge-heading">
+      <h3 id="challenge-heading">チャレンジ</h3>
+      <p class="challenge-description">HPと制限時間あり。<br>クリアを重ねて先へ進もう。</p>
+      <div class="difficulty-switch" role="group" aria-label="チャレンジの難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
+      <p id="difficulty-note" class="difficulty-note"></p>
+      <button class="mode-card challenge-start" id="btn-challenge" type="button"><span id="challenge-level-label">通常</span>でスタート</button>
+    </div>
     <p class="menu-instruction">楽に持てる角度でモードを選んでください。</p>
     <p class="note" id="mode-note"></p>
     <details id="mode-records" class="mode-records"><summary>自己ベストを見る</summary><div class="difficulty-switch record-switch" role="group" aria-label="記録の難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
