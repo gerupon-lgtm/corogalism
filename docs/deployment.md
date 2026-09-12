@@ -5,7 +5,10 @@
 - やさしいモード、難易度別記録と折りたたみ表示、回復キャンディ、面テーマ・ゴム壁、基準角度の安定化。
 - 95テスト成功。challenge/start-flow/edge-cases/audio/headerのブラウザ検証成功。
 - Standards/Specレビュー各1件を修正しブラウザで確認。仕様・調整値・将来案は `challenge-expansion.md`。
-- 公開準備中。
+- アプリコミット `0ff92a9`。[Pages公開成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/34706740758)。
+- 正式URLの実行ファイル19個がHTTP200、ローカルとSHA-256一致。
+- 正式URLでも `browser-challenge.mjs` 成功。4幅で記録の開閉・難易度別保存・回復・ゴム壁、センサーの基準保持と再設定を確認。未処理例外0。
+- スマホ実機での新HPバランスと基準設定の体感確認は今後。
 
 ## v0.2.11 共通ヘッダ（2026-09-13）
 

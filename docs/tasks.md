@@ -541,6 +541,6 @@ T-208 のバランス検証をラン単位に拡張する。`tools/run.mjs` と�
 - [x] 安定姿勢による初回基準設定、ページ内で維持、ポーズから明示再設定
 - [x] とりもち・床素材を将来案として記録
 - [x] ローカル検証・レビュー完了（95テスト、challenge/start-flow/edge/audio/header）
-- [ ] 正式URLへ公開して確認
+- [x] 正式URLへ公開して確認（0ff92a9、Pages34706740758、19ファイル一致・browser-challenge成功）
 
 詳細は `challenge-expansion.md`。BGMの実機試聴はユーザーよりOKの報告あり（機種未指定）。
