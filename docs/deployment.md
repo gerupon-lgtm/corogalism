@@ -1,5 +1,17 @@
 # フェーズ2 デプロイ記録（2026-09-12）
 
+## v0.2.1 序盤の難易度調整
+
+- 実装コミット: [`eaab0ec`](https://github.com/gerupon-lgtm/corogalism/commit/eaab0ec77f9d50a5eb12eb551e5f66cebc2d5e84)
+- [Pagesデプロイ成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/34677165731)
+- 1面目の時間2.5倍、通常ダメージ半減、単発上限20%。10面目で従来値へ接続。
+- 全76テスト成功。ローカルの両ブラウザ検証成功。100ラン×3条件の後半のバランスは従来値を維持。
+- 公開先の `index.html`、`gameConfig.js`、`progression.js`、`hp.js` がHTTP 200かつローカルと一致。
+- 公開URLで両ブラウザ検証スクリプトも成功。未処理例外0件。
+- 操作感・迷路・素材配置・既存記録は維持。T-209は調整後の再試遊待ち。
+
+以下はv0.2.0の初回公開記録。
+
 ## 公開状態
 
 - バージョン: `v0.2.0`
