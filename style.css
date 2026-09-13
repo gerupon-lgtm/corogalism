@@ -377,3 +377,5 @@ body[data-screen="run-result"] footer{display:none}
 
 .feature-hint.is-success{background:#edf7d7;color:#496e38;border-color:#99b580;font-weight:800}
 .feature-hint{width:max-content}
+
+.update-check{text-align:center}.update-check button{font-size:12px;padding:8px 16px}.update-check .note{margin:8px 0 0;color:#735033}.update-check .note:empty{display:none}

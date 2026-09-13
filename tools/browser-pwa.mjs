@@ -26,6 +26,8 @@ try {
  await context.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true}));
  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(base);
  await page.evaluate(()=>navigator.serviceWorker.ready);await page.waitForFunction(()=>navigator.serviceWorker.controller);
+ await page.locator('#btn-pwa-check').click();await page.waitForFunction(()=>document.querySelector('#pwa-check-result').textContent==='最新版です。');
+ await context.setOffline(true);await page.locator('#btn-pwa-check').click();await page.waitForFunction(()=>document.querySelector('#pwa-check-result').textContent.includes('オフラインです'));
  await context.setOffline(true);await page.goto(base+'?debug=1&seed=1');
  await page.locator('#btn-practice').click();await page.waitForTimeout(3800);assert.equal(await page.evaluate(()=>window.__corogalism.state.screen),'game');
  assert.equal(await page.evaluate(async()=>{const r=await fetch('assets/audio/bgm.wav');return (await r.arrayBuffer()).byteLength;}),6773804);
@@ -35,13 +37,14 @@ try {
  assert.equal(await page.locator('#pwa-notice').isVisible(),false);assert.equal(await page.locator('body').getAttribute('data-fixture'),'1');
  await page.locator('#btn-game-exit').click();await page.locator('#btn-pwa-update').click();await page.waitForFunction(()=>document.body.dataset.fixture==='2');
  const second=await context.newPage();await second.goto(base);await second.locator('#btn-practice').click();
- epoch=3;await page.evaluate(async()=>{await (await navigator.serviceWorker.getRegistration()).update();});await page.waitForFunction(async()=>Boolean((await navigator.serviceWorker.getRegistration()).waiting));
+ epoch=3;await page.locator('#btn-pwa-check').click();await page.waitForFunction(()=>document.querySelector('#pwa-check-result').textContent.includes('新しいバージョン'));assert.equal(await page.locator('body').getAttribute('data-fixture'),'2');await page.waitForFunction(async()=>Boolean((await navigator.serviceWorker.getRegistration()).waiting));
  await page.locator('#btn-pwa-update').click();await page.waitForFunction(()=>document.querySelector('#pwa-message').textContent.includes('ほかのタブ'));
  assert.equal(await second.locator('body').getAttribute('data-fixture'),'2');assert.equal(await page.locator('body').getAttribute('data-fixture'),'2');
  await second.close();await page.locator('#btn-pwa-update').click();await page.waitForFunction(()=>document.body.dataset.fixture==='3');
- assert.deepEqual(await page.evaluate(()=>caches.keys()),['corogalism-fixture-3']);assert.deepEqual(errors,[]);await context.close();
+ assert.deepEqual(await page.evaluate(()=>caches.keys()),['corogalism-fixture-3']);assert.deepEqual(errors,[]);
+ broken=true;epoch=4;await page.locator('#btn-pwa-check').click();await page.waitForFunction(()=>document.querySelector('#pwa-check-result').textContent.includes('確認できません'));assert.equal(await page.locator('body').getAttribute('data-fixture'),'3');await context.close();
  broken=true;const failed=await browser.newContext();await failed.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true}));
  const fallback=await failed.newPage();await fallback.goto(base);await fallback.waitForFunction(()=>document.querySelector('#pwa-status').textContent.includes('完了できません'));
- await fallback.locator('#btn-practice').click();assert.equal(await fallback.locator('body').getAttribute('data-screen'),'game');await failed.close();
+ await fallback.locator('#btn-practice').click();await fallback.waitForFunction(()=>document.body.dataset.screen==='game');assert.equal(await fallback.locator('body').getAttribute('data-screen'),'game');await failed.close();
  console.log('PASS: complete offline launch/audio; update waits for title; other tab protected; failed precache leaves online game usable.');
 }finally{await browser.close();server.close();}

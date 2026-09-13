@@ -107,6 +107,7 @@ export const STAGE_THEMES = {
 
 /** 表示専用。物理や難易度の数値とは分離する。 */
 export const UI = {
+  updateCheckTimeoutMs: 15000,
   startCountdownMs: 3000,
   beforeCountdownMs: 600,
   continueBeforeCountdownMs: 1500,

@@ -152,3 +152,7 @@ T-230公開検証: f896663／Pages34735555124成功、実行資材5件の一致�
 113テスト成功。browser-hourglassで320/390/576pxの見た目・横溢れなし・取得5秒加算・専用SEを確認。証跡はdocs/verification/hourglass/。仕様・規約レビュー指摘なし。precacheは73資材で再生成済み。公開コミット9624df3、[Pages34740187854](https://github.com/gerupon-lgtm/corogalism/actions/runs/34740187854)成功。正式URLで実行資材14件のSHA256一致、砂時計取得・表示・SEを確認。
 
 正式URLのPWA検証も成功。73資材保存・オフライン遷移／ゲーム／BGMを確認。スマホ証跡はviewport撮影とし、全ページ撮影による仮想時計停止中のCanvasリサイズを回避。
+
+## T-233 v0.4.4
+
+browser-pwa: 手動チェックの最新版・更新あり・オフライン・保存失敗、明示更新と別タブ保護成功。仕様・規約レビュー指摘なし。precache73資材を再生成。公開結果は追記。
