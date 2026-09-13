@@ -144,3 +144,5 @@ T-230公開検証: f896663／Pages34735555124成功、実行資材5件の一致�
 ## T-231 v0.4.2
 
 109テスト。browser-escape-timingは10タップで最短0.5秒を2操作モードで確認。browser-sticky-feedbackは実際の上端とりもち、離れた位置のダブルタップ、成功表示、320/390/576pxの四隅の球との非重複、別トラップへの成功表示持ち越し防止を確認。証跡はsticky-feedback/。撮影前にCanvas単体も撮影して合成を同期。仕様・規約の2軸レビュー済み。
+
+公開検証: 1f00540／Pages34736358514成功。正式URLの実行資材9件一致、browser-escape-timingとbrowser-sticky-feedback成功。
