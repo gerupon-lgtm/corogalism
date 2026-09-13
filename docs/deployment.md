@@ -215,4 +215,4 @@ browser-pwa: 手動チェックの最新版・更新あり・オフライン・�
 
 ## T-234 v0.4.5
 
-browser-guide:320/390/576pxで1画面・床等高・本文一致、×／下ボタン／背景／Escapeの閉じる操作、元の位置とフォーカス復帰を確認。高さ480pxでも内部スクロールで閉じられる。証跡docs/verification/guide。公開結果は追記。
+browser-guide:320/390/576pxで1画面・床等高・本文一致、×／下ボタン／背景／Escapeの閉じる操作、元の位置とフォーカス復帰を確認。高さ480pxでも内部スクロールで閉じられる。証跡docs/verification/guide。113テスト、仕様・規約レビュー指摘なし。公開0de4e79／[Pages34741624671](https://github.com/gerupon-lgtm/corogalism/actions/runs/34741624671)成功。実行資材5件SHA256一致。正式URLの3幅のガイド確認、PWA74資材保存・オフラインのガイド10カード／ゲーム／BGM確認成功。
