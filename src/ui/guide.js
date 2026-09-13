@@ -9,8 +9,9 @@ const walls=[['default','標準','いつもの壁。'],['rubber','ゴム','よ�
 const items=[['candy','キャンディ',`げんきを${RECOVERY.healRatio*100}％回復。`],['leaf','葉っぱのまもり','ダメージを肩代わり。'],['hourglass','砂時計',`のこりじかん ＋${HOURGLASS.bonusSec}秒。`]];
 const floors=[['rest','ひとやすみ',`${REST.durationSec}秒じっとすると げんき回復＆じかん＋${REST.durationSec}秒。`],['sticky','とりもち','迷路内連続タップで最短0.5秒で脱出可能。']];
 const card=([id,title,body])=>`<article class="guide-card"><canvas data-guide-art="${id}" width="144" height="112" aria-hidden="true"></canvas><div><h3>${title}</h3><p>${body}</p></div></article>`;
-export function initGuide(isTitle) {
- const dialog=document.querySelector('#play-guide'),opener=document.querySelector('#btn-guide');
+export function initGuide(canOpen) {
+ const dialog=document.querySelector('#play-guide');
+ let opener=document.querySelector('#btn-guide');
  dialog.innerHTML=`<header class="guide-heading"><h2 id="guide-title"><canvas data-guide-art="leaf" width="144" height="112" aria-hidden="true"></canvas> あそびのガイド</h2><button type="button" class="guide-x" aria-label="ガイドを閉じる" autofocus>×</button><p>壁・アイテム・床のこと</p></header>
  <div class="guide-group guide-walls"><h2>壁のいろいろ</h2><div class="guide-wall-grid">${walls.map(card).join('')}<p class="guide-wall-note">壁にふれる強さで<br>げんきの減り方が変わる。</p></div></div>
  <div class="guide-group"><h2>うれしいアイテム</h2><div class="guide-list">${items.map(card).join('')}</div></div>
@@ -32,8 +33,9 @@ export function initGuide(isTitle) {
 
  }
  const texture=new Image();texture.addEventListener('load',()=>{if(dialog.open)draw();});texture.src=new URL('../../assets/toy-wall-atlas.png',import.meta.url).href;
- opener.addEventListener('click',()=>{
-  if(!isTitle()||dialog.open)return;
+ for(const trigger of document.querySelectorAll('#btn-guide, #btn-pause-guide'))trigger.addEventListener('click',()=>{
+  if(!canOpen(trigger.id)||dialog.open)return;
+  opener=trigger;
   scrollY=window.scrollY;document.body.classList.add('guide-open');dialog.showModal();dialog.scrollTop=0;draw();
  });
  for(const b of dialog.querySelectorAll('button'))b.addEventListener('click',()=>dialog.close());

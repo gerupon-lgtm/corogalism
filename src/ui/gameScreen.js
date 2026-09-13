@@ -60,8 +60,6 @@ export function createGameScreen(root) {
       root.querySelector('#hud-stage').textContent = `${stageIndex}面目`;
       root.querySelector('#hud-continues').textContent = `コンティニュー 残り${continuesLeft}回`;
       el.querySelector('#btn-game-exit').textContent = challenge ? 'ランを終えて結果を見る' : 'モード選択へ戻る';
-      el.querySelector('#material-legend').hidden = !challenge;
-      el.querySelector('#material-legend').open = false;
       hpBlock.classList.remove('damaged');
       damageText.textContent = '';
       damageText.removeAttribute('aria-label');

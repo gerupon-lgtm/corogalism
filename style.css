@@ -426,3 +426,20 @@ body[data-screen="mode"] .wrap{padding-bottom:calc(12px + env(safe-area-inset-bo
 
 .settings-menu{padding-block:12px;gap:8px}.settings-menu .field{padding:8px;gap:6px}
 @media(max-height:760px){.mode-menu{gap:5px;padding-block:10px}.mode-menu .mode-records{margin:1px 0}.mode-menu .menu-instruction{margin:0}.challenge-choice .difficulty-note{margin-block:4px}}
+
+/* T-237: 余った画面高を枠内へ配分。狭い画面では自然な高さを保ち、操作を縮めない。 */
+.wrap{min-height:100dvh;padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+.wrap>*{flex-shrink:0}
+body[data-screen="mode"] .mode-menu,body[data-screen="settings"] .settings-menu,body[data-screen="run-result"] .run-result-menu{flex:1 0 auto;justify-content:space-between}
+body.board-session #screen-game{flex:1 0 auto;justify-content:space-between}
+.pause-card{display:flex;flex-direction:column;gap:8px;padding:12px;width:75%;max-width:310px;max-height:calc(100% - 16px);overflow:auto;overscroll-behavior:contain}
+.board-overlay .pause-card #board-status{margin:0 0 3px;font-size:20px}
+.pause-card button{flex-shrink:0;min-height:40px;font-family:var(--sans)}
+.pause-card :is(#btn-pause-guide,#btn-pause-calibrate){border:1px solid #c9aa7b;border-radius:999px;padding:7px 8px;background:linear-gradient(#fff4da,#e9d2ac);box-shadow:0 2px 0 #a48a63;color:#735131;font-size:12px}
+@media(max-height:650px){body.board-session #screen-game{padding:8px;gap:6px}.pause-card{gap:6px;padding:10px}.board-overlay .pause-card #board-status{font-size:17px}}
+
+body.board-session #screen-game{padding:8px;gap:6px}#game-status{margin:0}
+
+.pause-card{touch-action:pan-y}
+
+@media(max-height:800px){body.board-session .wrap{gap:6px}body.board-session #play-hint{display:none}}

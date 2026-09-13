@@ -13,7 +13,6 @@ import { createTiltSource } from './input/tiltSource.js';
 import { createPointerSource } from './input/pointerSource.js';
 import { createFixedCamera } from './render/camera.js';
 import { createRenderer } from './render/canvasRenderer.js';
-import { getWallMaterialAppearance } from './render/materialAppearance.js';
 import { loadSettings, saveSettings, saveBest, getBest, loadRunBests, saveRunBest } from './record/storage.js';
 import { createGameScreen } from './ui/gameScreen.js';
 import { createClearScreen } from './ui/clearScreen.js';
@@ -70,7 +69,7 @@ let audibleCountdown = null;
 let lastFrame = performance.now();
 let shield = { value: 0 };
 const pwa = initPwa(() => screen === 'mode');
-initGuide(() => screen === 'mode');
+initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 
 function initialSeed() {
   const q = new URLSearchParams(location.search).get('seed');
@@ -255,28 +254,6 @@ function updateCountdown() {
   }
 }
 
-const materialHelp = {
-  default: '標準の跳ね返りとダメージ', rubber: 'よく跳ねる・ダメージ小',
-  stone: '跳ねにくい・ダメージ大', spike: '跳ねる・ダメージ特大', moss: '跳ねにくい・ダメージ小',
-};
-function renderLegend() {
-  const list = find('material-list');
-  list.replaceChildren();
-  const present = new Set(play.stage.walls.map((wall) => wall.materialId));
-  for (const id of Object.keys(materialHelp)) {
-    if (!present.has(id)) continue;
-    const appearance = getWallMaterialAppearance(id);
-    const item = document.createElement('li');
-    const swatch = document.createElement('span');
-    swatch.className = 'material-swatch';
-    swatch.dataset.material = id;
-    swatch.style.backgroundColor = appearance.fill;
-    swatch.setAttribute('aria-hidden', 'true');
-    item.append(swatch, `${appearance.label}：${materialHelp[id]}`);
-    list.append(item);
-  }
-}
-
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
@@ -290,7 +267,6 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   find('play-mode-label').textContent = run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
   find('stage-theme').textContent = play.stage.theme?.label || '';
   find('recovery-feedback').textContent = '';
-  renderLegend();
   resize();
 }
 
@@ -440,9 +416,6 @@ game.onCalibrate(calibrate);
 game.onSettings(() => toSettings(screen));
 find('btn-game-exit').addEventListener('click', finishRun);
 find('btn-clear-exit').addEventListener('click', finishRun);
-find('material-legend').addEventListener('toggle', () => {
-  if (find('material-legend').open && screen === 'game') setPaused(true);
-});
 clear.onRetry(() => { if (screen === 'clear' && !run) { loadStage(seed); showScreen('game'); } });
 clear.onNext(() => { if (screen === 'clear') { loadStage(run ? run.currentSeed() : nextSeed()); showScreen('game'); } });
 find('btn-continue').addEventListener('click', () => {
