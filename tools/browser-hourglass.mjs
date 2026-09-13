@@ -19,7 +19,7 @@ try{
  for(const width of [320,390,576]){
   await page.setViewportSize({width,height:844});await page.clock.runFor(32);
   await page.locator('#canvas').screenshot({path:`docs/verification/hourglass/board-${width}.png`});
-  await page.screenshot({path:`docs/verification/hourglass/play-${width}.png`,fullPage:true});
+  await page.screenshot({path:`docs/verification/hourglass/play-${width}.png`,fullPage:false});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  }
  const before=await page.evaluate(()=>window.__corogalism.state);
@@ -28,6 +28,6 @@ try{
  assert.equal(after.extendedSec,5);assert.ok(after.hourglass.collected);assert.ok(after.remainingSec>before.remainingSec+4.9);
  assert.match(await page.locator('#recovery-feedback').innerText(),/＋5秒/);assert.ok(after.audio.events.includes('hourglass'));
  await page.locator('#canvas').screenshot({path:'docs/verification/hourglass/collected-board.png'});
- await page.screenshot({path:'docs/verification/hourglass/collected.png',fullPage:true});
+ await page.screenshot({path:'docs/verification/hourglass/collected.png',fullPage:false});
  assert.deepEqual(errors,[]);console.log('PASS: 3 mobile widths, hourglass pickup +5 seconds and SE, no horizontal overflow or page errors.');
 }finally{await browser.close()}
