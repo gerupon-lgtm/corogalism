@@ -211,4 +211,4 @@ node tools/browser-edge-cases.mjs
 
 ## T-233 v0.4.4
 
-browser-pwa: 手動チェックの最新版・更新あり・オフライン・保存失敗、明示更新と別タブ保護成功。仕様・規約レビュー指摘なし。precache73資材を再生成。公開結果は追記。
+browser-pwa: 手動チェックの最新版・更新あり・オフライン・保存失敗、明示更新と別タブ保護成功。仕様・規約レビュー指摘なし。precache73資材を再生成。113テスト成功。公開78b4c39／[Pages34740639772](https://github.com/gerupon-lgtm/corogalism/actions/runs/34740639772)成功。正式URLで実行資材5件のSHA256一致、最新版チェック・オフライン表示・再試行ボタン確認成功。
