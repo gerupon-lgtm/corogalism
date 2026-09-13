@@ -177,6 +177,15 @@ function renderDifficulty() {
 }
 function runResult() { return { ...run.result(), level: activeLevel }; }
 
+// クリア済みの成績を随時保存。再保存でも今回の自己ベスト更新表示を維持する。
+function saveRunProgress() {
+  const next = saveRunBest(runResult());
+  if (next.saved && recordStatus?.saved && recordStatus.updated
+      && next.best?.stages === recordStatus.best?.stages
+      && next.best?.totalTimeMs === recordStatus.best?.totalTimeMs) next.updated = true;
+  recordStatus = next;
+}
+
 function resize() {
   if (play && !boardEl.hidden) camera = createFixedCamera(play.stage, renderer.resize(boardEl.clientWidth));
 }
@@ -306,6 +315,7 @@ function finishStage() {
   handled = true;
   if (run) {
     run.clearStage({ timeMs: play.timeMs, noDamage: !play.hp.tookDamage });
+    saveRunProgress();
     clear.setResult({ gameMode, stageIndex, hp: play.hp, noDamage: !play.hp.tookDamage, timeMs: play.timeMs, seed });
   } else {
     const updated = saveBest(seed, play.timeMs, play.wallHits);
@@ -320,7 +330,7 @@ function failStage() {
   handled = true;
   run.failStage(play.status);
   // 最初の失敗でノーコン記録を確定。続けてもその記録を失わない。
-  recordStatus = saveRunBest(runResult());
+  saveRunProgress();
   runUi.setOver(run);
   showScreen('over');
   sound.effect('fail');
@@ -328,7 +338,7 @@ function failStage() {
 
 function finishRun() {
   if (!run) { showModes(); return; }
-  recordStatus ??= saveRunBest(runResult());
+  saveRunProgress();
   runUi.setResult(runResult(), recordStatus);
   showScreen('run-result');
 }
@@ -419,8 +429,10 @@ find('btn-clear-exit').addEventListener('click', finishRun);
 clear.onRetry(() => { if (screen === 'clear' && !run) { loadStage(seed); showScreen('game'); } });
 clear.onNext(() => { if (screen === 'clear') { loadStage(run ? run.currentSeed() : nextSeed()); showScreen('game'); } });
 find('btn-continue').addEventListener('click', () => {
+  const alreadyContinued = run?.usedContinue;
   if (screen === 'over' && run?.useContinue()) {
-    recordStatus = null;
+    if (!alreadyContinued) recordStatus = null;
+    saveRunProgress();
     loadStage(run.currentSeed(), UI.continueBeforeCountdownMs, { leafCollected: play.stage.leaf?.collected, restUsed: play.stage.rest?.used });
     showScreen('game');
     sound.effect('continue');
