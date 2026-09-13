@@ -13,11 +13,10 @@ test('新テーマの序盤10面は両難易度で丁寧に完走できる（各
   }
 });
 
-test('やさしいは衝突速度・素材によらず通常の半分。迷路・時間・物理は共通', () => {
+test('やさしいは衝突速度・素材によらず通常の半分。迷路・物理は共通', () => {
   for (const stage of [1, 4, 10, 30]) for (const materialId of ['default','rubber','moss','stone','spike']) for (const speed of [1, 2, 6, 30]) {
     const normal = createStagePlay(123, challengeDifficulty(stage, 'normal'));
     const easy = createStagePlay(123, challengeDifficulty(stage, 'easy'));
-    assert.equal(easy.limitSec, normal.limitSec);
     assert.deepEqual(easy.stage.walls, normal.stage.walls);
     assert.deepEqual(easy.actor, normal.actor);
     assert.equal(easy.hp.max, normal.hp.max);

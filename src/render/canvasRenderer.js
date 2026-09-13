@@ -1,6 +1,7 @@
 /** C案のトイ調描画。静止した盤面はキャッシュし、球とクリア演出のみ更新する。 */
 import { TUNING, UI } from '../config/gameConfig.js';
 import { goalCenter } from '../world/stage.js';
+import { drawHourglass } from './toyHourglass.js';
 import { createToyBall } from './toyBall.js';
 import { drawLeaf, drawFeatureFloors, drawGuard, drawTrap } from './toyFeatures.js';
 import { drawToyCandy } from './toyCandy.js';
@@ -40,6 +41,10 @@ export function createRenderer(canvas) {
     ctx.drawImage(background,0,0,viewportPx,viewportPx);
     drawFeatureFloors(ctx,stage,camera);
     if (stage.leaf && !stage.leaf.collected) { const at=camera.toScreen(stage.leaf.x,stage.leaf.y);drawLeaf(ctx,at.px,at.py,camera.toPx(.3)); }
+    if (stage.hourglass && !stage.hourglass.collected) {
+      const at=camera.toScreen(stage.hourglass.x,stage.hourglass.y);
+      drawHourglass(ctx,at.px,at.py,camera.toPx(.32));
+    }
     const goal=goalCenter(stage.maze), gs=camera.toScreen(goal.x,goal.y);
     drawToyGoal(ctx,gs.px,gs.py,camera.toPx(TUNING.goalRadius),progress);
     if (stage.recovery && !stage.recovery.collected) {

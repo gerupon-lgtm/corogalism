@@ -83,11 +83,13 @@ export const RUN = {
   continues: 2,  // 1ランに使えるコンティニュー回数
 };
 
-/** 難易度はHPだけを変更。時間・迷路・物理は共通。 */
+/** やさしいは被弾を軽減し、9面以降の制限時間に秒数を加算する。 */
 export const CHALLENGE_LEVELS = {
   easy: { label: 'やさしい', damageFactor: 0.5, recoveryChance: 0.5 },
   normal: { label: '通常', damageFactor: 1, recoveryChance: 0.2 },
 };
+export const EASY_TIME = { firstStage: 9, stepSec: 3, maxBonusSec: 12 };
+export const HOURGLASS = { firstStage: 9, bonusSec: 5, chance: { easy: 0.5, normal: 0.2 }, pathMin: 0.55, pathMax: 0.85, radius: 0.22 };
 export const RECOVERY = { healRatio: 0.2, pathMin: 0.55, pathMax: 0.85, radius: 0.22, feedbackMs: 1000 };
 /** 1・2面は基本。その後は素材を順に紹介し、同じ順で周回する。 */
 export const STAGE_THEMES = {

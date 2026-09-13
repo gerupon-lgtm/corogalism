@@ -1,5 +1,5 @@
 /** S-102 ゲーム（F-142）。キャリブレーションはプレイ中も実行できる（F-103） */
-import { UI, RECOVERY, REST, STICKY } from '../config/gameConfig.js';
+import { UI, RECOVERY, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
 import { featureHintPosition } from './featureHintPosition.js';
 import { hpLabel, damageLabel, recoveryLabel } from './hpDisplay.js';
 
@@ -79,7 +79,7 @@ export function createGameScreen(root) {
     },
     showFeature(kind, now) {
       recoveryUntil = now + UI.featureFeedbackMs;
-      root.querySelector('#recovery-feedback').textContent = { leaf: '葉っぱのまもりが増えた！', guard: '葉っぱが守ってくれた！', rest: `げんき回復！ のこりじかん＋${REST.durationSec}秒` }[kind];
+      root.querySelector('#recovery-feedback').textContent = { hourglass: `のこりじかん ＋${HOURGLASS.bonusSec}秒！`, leaf: '葉っぱのまもりが増えた！', guard: '葉っぱが守ってくれた！', rest: `げんき回復！ のこりじかん＋${REST.durationSec}秒` }[kind];
     },
     showEscape(play, now) {
       escapeUntil = now + UI.featureFeedbackMs;

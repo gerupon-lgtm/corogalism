@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '8d1e268f91a80a32';
+self.PRECACHE_VERSION = '44751f2ef852addf';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -7,6 +7,7 @@ self.PRECACHE_FILES = [
   "assets/audio/se-countdown.wav",
   "assets/audio/se-fail.wav",
   "assets/audio/se-goal.wav",
+  "assets/audio/se-hourglass.wav",
   "assets/audio/se-moss.wav",
   "assets/audio/se-pause.wav",
   "assets/audio/se-rolling.wav",
@@ -56,6 +57,7 @@ self.PRECACHE_FILES = [
   "src/render/toyBall.js",
   "src/render/toyCandy.js",
   "src/render/toyFeatures.js",
+  "src/render/toyHourglass.js",
   "src/render/toyWorld.js",
   "src/ui/clearScreen.js",
   "src/ui/featureHintPosition.js",

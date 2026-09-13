@@ -170,7 +170,7 @@ function calibrate() {
 
 function renderDifficulty() {
   for (const button of root.querySelectorAll('[data-level]')) button.setAttribute('aria-pressed', String(button.dataset.level === settings.challengeLevel));
-  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'ぶつかったときのげんき消費が少なめ。' : 'いつもの手応えで挑戦。';
+  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'げんき消費が少なめ。9面から時間にもゆとり。' : 'いつもの手応えで挑戦。';
   find('challenge-level-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
   runUi.setModeBests(loadRunBests(settings.challengeLevel), tiltDeniedReason);
 }
@@ -374,7 +374,7 @@ function frame(now) {
     const guardBefore = shield.value;
     let recovery = null;
     const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact,
-      onFeature: kind => { game.showFeature(kind, now); sound.effect('select'); },
+      onFeature: kind => { game.showFeature(kind, now); sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
       onRecovery: (_amount, change) => { recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
     if (guardBefore > shield.value && damage === 0) game.showFeature('guard', now);
     if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);
@@ -482,7 +482,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   window.__corogalism = {
     get state() {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
-        audio: sound.state, leaf: play.stage.leaf, rest: play.stage.rest, sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
+        audio: sound.state, hourglass: play.stage.hourglass, leaf: play.stage.leaf, rest: play.stage.rest, sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
         calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,

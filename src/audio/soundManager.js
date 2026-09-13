@@ -3,7 +3,7 @@ import { normalizeAudioSettings } from './audioSettings.js';
 import { createSelectBuffer } from './selectBuffer.js';
 
 const files = {
-  bgm: 'bgm.wav', rolling: 'rolling-loop.wav', countdown: 'se-countdown.wav',
+  hourglass: 'se-hourglass.wav', bgm: 'bgm.wav', rolling: 'rolling-loop.wav', countdown: 'se-countdown.wav',
   select: 'se-select.wav', wall: 'se-wall.wav', stone: 'se-stone.wav', spike: 'se-spike.wav',
   moss: 'se-moss.wav', rubber: 'se-rubber.wav', goal: 'se-goal.wav', clear: 'se-clear.wav',
   fail: 'se-fail.wav', continue: 'se-continue.wav', pause: 'se-pause.wav',

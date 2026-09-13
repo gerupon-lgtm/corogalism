@@ -39,5 +39,5 @@ export function difficultyAt(stage, cfg = DIFFICULTY) {
 
 /** 制限時間（秒）。経路長で正規化する（生成された迷路による難易度のばらつきを消す） */
 export function stageTimeLimitSec(maze, difficulty) {
-  return maze.pathLength * difficulty.secPerCell;
+  return maze.pathLength * difficulty.secPerCell + (difficulty.timeBonusSec ?? 0);
 }

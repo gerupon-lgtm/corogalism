@@ -1,5 +1,5 @@
 /** 経路と独立したシード抽選。コンティニューで配置は変えない。 */
-import { LEAF, REST, STICKY } from '../config/gameConfig.js';
+import { LEAF, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
 import { createRng } from '../maze/rng.js';
 import { solvePath } from '../maze/path.js';
 // XORだけの初期化だと抽選同士に相関が出るため、非線形に混ぜる。
@@ -10,7 +10,7 @@ function featureSeed(seed, salt) {
   return (h ^ (h >>> 16)) >>> 0;
 }
 export function addStageFeatures(stage, difficulty) {
-  stage.leaf = null; stage.rest = null; stage.sticky = [];
+  stage.leaf = null; stage.rest = null; stage.sticky = []; stage.hourglass = null;
   if (!difficulty?.themed) return;
   const { maze } = stage, path = solvePath(maze), occupied = new Set();
   const key = p => `${p.x},${p.y}`;
@@ -53,5 +53,10 @@ export function addStageFeatures(stage, difficulty) {
           && clearOfEnds(p));
       if (cells.length) stage.sticky.push(cells[Math.floor(rng()*cells.length)]);
     }
+  }
+  for (const tile of stage.sticky) occupied.add(key(tile));
+  if (difficulty.stage >= HOURGLASS.firstStage) {
+    const at = place(0x4ab297e3, HOURGLASS.chance[difficulty.level] ?? 0, HOURGLASS.pathMin, HOURGLASS.pathMax);
+    if (at) stage.hourglass = { ...at, collected: false };
   }
 }

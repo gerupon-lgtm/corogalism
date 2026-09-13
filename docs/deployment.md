@@ -202,3 +202,7 @@ node tools/browser-edge-cases.mjs
 ## v0.4.2 / T-231
 
 自然脱出3秒・0.5秒ずつ短縮・最短0.5秒、盤面内の別位置ダブルタップ、48pxの移動許容、球を避けるヒントと成功表示。109テスト、実タッチの2モード、3幅のヒント配置を確認。precacheを71資材で再生成。公開コミット `1f00540`、[Pages34736358514](https://github.com/gerupon-lgtm/corogalism/actions/runs/34736358514) 成功。実行資材9件のSHA256一致、正式URLで脱出時間の2操作モードとヒント配置・成功表示の確認が成功。
+
+## T-232 v0.4.3
+
+113テスト成功。browser-hourglassで320/390/576pxの見た目・横溢れなし・取得5秒加算・専用SEを確認。証跡はdocs/verification/hourglass/。仕様・規約レビュー指摘なし。precacheは73資材で再生成済み。公開確認は追記。

@@ -1,5 +1,5 @@
 /** 1面の実行状態。DOMを持たず、既存の物理・HP・時間を接続する。 */
-import { BASE, TUNING, RECOVERY, LEAF, REST, STICKY } from '../config/gameConfig.js';
+import { BASE, TUNING, RECOVERY, LEAF, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
 import { generateMaze } from '../maze/generator.js';
 import { createStage, createActor, goalCenter } from '../world/stage.js';
 import { getCharacter } from '../world/characters.js';
@@ -68,6 +68,11 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
       if (hp?.isDead) status = 'dead';
       else if (limitSec !== null && timeMs >= (limitSec + extendedSec) * 1000) status = 'timeout';
       else {
+        const hourglass = stage.hourglass;
+        if (hourglass && !hourglass.collected
+          && Math.hypot(actor.x-hourglass.x, actor.y-hourglass.y) < actor.r + HOURGLASS.radius) {
+          hourglass.collected = true; extendedSec += HOURGLASS.bonusSec; onFeature?.('hourglass');
+        }
         const leaf = stage.leaf;
         if (leaf && !leaf.collected && onTile(leaf, actor.r + LEAF.radius) && shield.value < hp.max * LEAF.capRatio) {
           shield.value += Math.min(hp.max * LEAF.amountRatio, hp.max * LEAF.capRatio - shield.value);
