@@ -51,6 +51,7 @@ export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg 
       if (nowSec - lastDamageAt < cfg.cooldownSec) return 0;
       const damageK = getMaterial(wall && wall.materialId).damageK ?? 1;
       const raw = cfg.damageScale * damageMult * damageK * (speed - cfg.threshold) ** 2;
+      if (raw <= 0) return 0; // 無傷のゴム接触で、次の壁への無敵時間を作らない。
       const incoming = Math.min(cap, raw);
       const absorbed = Math.min(shield?.value ?? 0, incoming);
       if (shield) shield.value -= absorbed;

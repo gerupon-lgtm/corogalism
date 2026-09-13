@@ -1,5 +1,7 @@
 # HPと壁の素材（フェーズ2の中核）
 
+**v0.4.9:** ゴムのみ反発上限0.9・damageK=0。無傷接触ではダメージ無敵時間を開始しない。他素材の上限とダメージは維持。[rubber-and-candy.md](rubber-and-candy.md)参照。
+
 **v0.4.3:** 時間・砂時計・ゴム壁の最新仕様は[time-and-hourglass.md](time-and-hourglass.md)。以下の旧数値は履歴。
 
 **v0.4.0追記:** 葉っぱ・休憩床・とりもち床（時間／ダブルタップ／本体タップ脱出）は今回実装。最新仕様・確定値は [leaf-floors-pwa.md](leaf-floors-pwa.md)。以下の「将来案」は当時の記録です。

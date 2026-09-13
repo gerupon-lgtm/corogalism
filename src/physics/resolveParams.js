@@ -27,7 +27,7 @@ export function resolveParams({ base, character, material, zone } = {}) {
     friction: clamp(base.friction * ch.frictionK * mt.frictionK * zn.frictionK, CLAMP.friction),
     restitution: clamp(
       base.wallRestitution * ch.restitutionK * mt.restitutionK * zn.restitutionK,
-      CLAMP.restitution
+      mt.id === 'rubber' ? CLAMP.rubberRestitution : CLAMP.restitution
     ),
     forceX: zn.forceX,
     forceY: zn.forceY,

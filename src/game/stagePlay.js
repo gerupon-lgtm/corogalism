@@ -21,6 +21,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
   const limitSec = difficulty ? stageTimeLimitSec(maze, difficulty) : null;
   let timeMs = 0;
   let activeSec = 0;
+  let touchingRecovery = false;
   let wallHits = 0;
   let started = false;
   let status = 'playing';
@@ -95,8 +96,11 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
           }
         } else { if (rest) rest.progress = 0; restOrigin = null; }
         const item = stage.recovery;
-        if (item && !item.collected && hp.value < hp.max
-          && Math.hypot(actor.x - item.x, actor.y - item.y) < actor.r + RECOVERY.radius) {
+        const touching = Boolean(item && !item.collected
+          && Math.hypot(actor.x - item.x, actor.y - item.y) < actor.r + RECOVERY.radius);
+        if (touching && hp.value >= hp.max && !touchingRecovery) onFeature?.('full');
+        touchingRecovery = touching;
+        if (touching && hp.value < hp.max) {
           const before = hp.value;
           const gained = hp.heal(hp.max * RECOVERY.healRatio);
           if (gained > 0) { item.collected = true; onRecovery?.(gained, { before, after: hp.value }); }

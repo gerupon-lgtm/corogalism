@@ -352,7 +352,7 @@ function frame(now) {
     const guardBefore = shield.value;
     let recovery = null;
     const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact,
-      onFeature: kind => { game.showFeature(kind, now); sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
+      onFeature: kind => { game.showFeature(kind, now); if (kind !== 'full') sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
       onRecovery: (_amount, change) => { recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
     if (guardBefore > shield.value && damage === 0) game.showFeature('guard', now);
     if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);

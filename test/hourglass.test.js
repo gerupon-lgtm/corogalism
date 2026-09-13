@@ -36,9 +36,3 @@ test('取得は一度だけ5秒加算し記録は引かない。時間切れ優�
  const q=make();q.stage.hourglass={x:2.5,y:2.5,collected:false};q.teleport(2.5,2.5);tick(q,q.limitSec*1000);
  assert.equal(q.status,'timeout');assert.equal(q.extendedSec,0);assert.equal(q.stage.hourglass.collected,false);
 });
-test('ゴム壁は通常の2倍の反発速度、既存上限内でダメージ係数を維持',()=>{
- const bounce=id=>{const a={x:.9,y:.5,r:.2,vx:2,vy:0};const e=resolveParams({base:BASE,material:getMaterial(id)}).restitution;
- resolveCollisions(a,[{x:1,y:0,w:.2,h:1}],()=>e);return a.vx;};
- assert.ok(Math.abs(bounce('rubber')/bounce('default')-2)<1e-8);
- assert.equal(getMaterial('rubber').damageK,.4);assert.equal(resolveParams({base:BASE,material:getMaterial('rubber')}).restitution,.7);
-});

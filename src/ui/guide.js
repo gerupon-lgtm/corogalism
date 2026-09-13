@@ -5,8 +5,8 @@ import { drawLeaf, drawFeatureFloors } from '../render/toyFeatures.js';
 import { drawHourglass } from '../render/toyHourglass.js';
 import { createToyBall } from '../render/toyBall.js';
 import { RECOVERY, REST, HOURGLASS } from '../config/gameConfig.js';
-const walls=[['default','標準','いつもの壁。'],['rubber','ゴム','よくはねる・痛み少なめ。'],['stone','石','はねにくい・痛み大きめ。'],['spike','とげ','ぶつかると大きなダメージ。'],['moss','こけ','はねにくい・痛み少なめ。']];
-const items=[['candy','キャンディ',`げんきを${RECOVERY.healRatio*100}％回復。`],['leaf','葉っぱのまもり','ダメージを肩代わり。'],['hourglass','砂時計',`のこりじかん ＋${HOURGLASS.bonusSec}秒。`]];
+const walls=[['default','標準','いつもの壁。'],['rubber','ゴム','ゴムは無傷。次の壁に注意。'],['stone','石','はねにくい・痛み大きめ。'],['spike','とげ','ぶつかると大きなダメージ。'],['moss','こけ','はねにくい・痛み少なめ。']];
+const items=[['candy','キャンディ',`${RECOVERY.healRatio*100}％回復。満タンなら残る。`],['leaf','葉っぱのまもり','ダメージを肩代わり。'],['hourglass','砂時計',`のこりじかん ＋${HOURGLASS.bonusSec}秒。`]];
 const floors=[['rest','ひとやすみ',`${REST.durationSec}秒じっとすると げんき回復＆じかん＋${REST.durationSec}秒。`],['sticky','とりもち','迷路内連続タップで最短0.5秒で脱出可能。']];
 const card=([id,title,body])=>`<article class="guide-card"><canvas data-guide-art="${id}" width="144" height="112" aria-hidden="true"></canvas><div><h3>${title}</h3><p>${body}</p></div></article>`;
 export function initGuide(canOpen) {

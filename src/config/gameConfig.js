@@ -25,6 +25,7 @@ export const BASE = {
 export const CLAMP = {
   friction:    { min: 0.2, max: 8.0 },
   restitution: { min: 0.0, max: 0.7 },
+  rubberRestitution: { min: 0.0, max: 0.9 }, // ゴムだけ強い反発を許可
   accel:       { min: 4,   max: 60  }, // マス/s²
 };
 

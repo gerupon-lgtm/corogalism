@@ -443,3 +443,5 @@ body.board-session #screen-game{padding:8px;gap:6px}#game-status{margin:0}
 .pause-card{touch-action:pan-y}
 
 @media(max-height:800px){body.board-session .wrap{gap:6px}body.board-session #play-hint{display:none}}
+
+@media(max-width:360px){.play-guide .guide-group{padding:6px;margin-top:6px}}
