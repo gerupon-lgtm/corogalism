@@ -42,7 +42,7 @@ test('微小な被弾の蓄積でも、整数HPが減ったときだけ数値を
 });
 
 test('回復の表示もHPの増分と一致し、小さい回復を+0と表示しない', () => {
-  assert.equal(recoveryLabel(80.2, 100), 'HP +19');
-  assert.equal(recoveryLabel(99.8, 100), 'HPを少し回復');
-  assert.equal(recoveryLabel(79.9, 99.9), 'HP +20');
+  assert.equal(recoveryLabel(80.2, 100), 'げんき +19');
+  assert.equal(recoveryLabel(99.8, 100), 'げんきを少し回復');
+  assert.equal(recoveryLabel(79.9, 99.9), 'げんき +20');
 });

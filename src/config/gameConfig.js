@@ -94,6 +94,7 @@ export const STAGE_THEMES = {
   introStages: 2,
   cycle: ['rest', 'bounce', 'careful', 'basic', 'rest', 'bounce', 'careful', 'trial'],
   definitions: {
+    sticky: { label: 'とりもちの迷路', material: 'default', ratio: 0 },
     basic: { label: '基本の迷路', material: 'default', ratio: 0 },
     rest: { label: 'やすらぎの迷路', material: 'moss', ratio: 0.45 },
     bounce: { label: 'はずむ迷路', material: 'rubber', ratio: 0.3 },
@@ -111,6 +112,7 @@ export const UI = {
   goalSettleMs: 520,
   clearCelebrationMs: 1500,
   damageFeedbackMs: 450,
+  featureFeedbackMs: 1400,
   urgentTimeRatio: 0.25,
   lowHpRatio: 0.35,
 };
@@ -141,3 +143,11 @@ export const AUDIO = {
   limiterThresholdDb: -3,
   limiterRatio: 12,
 };
+
+/** 葉っぱ・休憩・とりもち。出現率は各難易度で独立に調整する。 */
+export const LEAF = { amountRatio: 0.2, capRatio: 0.5, chance: { easy: 0.5, normal: 0.2 }, pathMin: 0.2, pathMax: 0.5, radius: 0.22 };
+export const REST = { durationSec: 2, healRatio: 0.2, speed: 0.12, drift: 0.08, radius: 0.3,
+  chance: { easy: 0.3, normal: 0.2 }, dangerChance: { easy: 0.6, normal: 0.4 }, pathMin: 0.45, pathMax: 0.8 };
+export const STICKY = { firstStage: 3, interval: 8, durationSec: 2, shortenSec: 0.5, minSec: 0.5, radius: 0.37, pathMin: 0.25, pathMax: 0.7, endpointClearance: 1.5,
+  tapMinMs: 60, tapMaxMs: 350, tapTravelPx: 24, tapHoldMs: 220, assistCooldownMs: 400,
+  motionThreshold: 6, motionReset: 2, motionGapMs: 250, touchSuppressMs: 450 };

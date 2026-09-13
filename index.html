@@ -6,6 +6,10 @@
 <meta name="robots" content="noindex">
 <title>コロガリズム ｜ 傾き操作の迷路ゲーム</title>
 <link rel="icon" href="assets/brand-leaf.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0f1513">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="assets/pwa/icon-192.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +23,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.3.2</span>
+      <span class="badge">v0.4.0</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -28,16 +32,17 @@
   <div id="challenge-hud" class="challenge-hud" hidden>
     <div class="stage-line"><strong id="hud-stage">1面目</strong><span id="hud-continues"></span></div>
     <div class="meter-block" id="time-meter-block">
-      <div class="meter-label"><span class="meter-name"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>TIME</span><strong><span id="hud-remaining">0.0</span><small> 秒</small></strong></div>
+      <div class="meter-label"><span class="meter-name"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>のこりじかん</span><strong><span id="hud-remaining">0.0</span><small> 秒</small></strong></div>
       <progress id="time-bar" max="1" value="1" aria-label="残り時間"></progress>
     </div>
     <div class="meter-block" id="hp-meter-block">
-      <div class="meter-label"><span class="meter-name"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20S3 14.5 3 8.5C3 3.5 9 2.5 12 7c3-4.5 9-3.5 9 1.5C21 14.5 12 20 12 20Z"/></svg>HP <span id="hud-damage" role="status"></span></span><strong id="hud-hp">—</strong></div>
-      <progress id="hp-bar" max="1" value="1" aria-label="HP"></progress>
+      <div class="meter-label"><span class="meter-name"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20S3 14.5 3 8.5C3 3.5 9 2.5 12 7c3-4.5 9-3.5 9 1.5C21 14.5 12 20 12 20Z"/></svg>げんき <span id="hud-damage" role="status"></span></span><span class="shield-stock" aria-label="葉っぱのまもり"><img src="assets/brand-leaf.svg" alt=""><span id="hud-shield">0</span></span><strong id="hud-hp">—</strong></div>
+      <progress id="hp-bar" max="1" value="1" aria-label="げんき"></progress>
     </div>
   </div>
   <div id="play-toolbar" class="play-toolbar" hidden><div class="play-labels"><span id="play-mode-label">プラクティス</span><span id="stage-theme" class="stage-theme"></span></div><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
   <div class="board" id="board" hidden><span id="recovery-feedback" class="recovery-feedback" role="status"></span>
+    <div id="feature-hint" class="feature-hint" role="status" hidden></div>
     <canvas id="canvas" aria-label="7×7の迷路。オレンジのビー玉を右下のカップへ導きます"></canvas>
     <div id="toast-layer" class="toast-layer" hidden>
   <section id="screen-clear" class="game-toast" role="region" aria-labelledby="clear-heading" hidden>
@@ -45,7 +50,7 @@
     <dl class="result">
       <div><dt>タイム</dt><dd id="clear-time">—</dd></div>
       <div id="clear-best-field"><dt>自己ベスト</dt><dd id="clear-best">—</dd></div>
-      <div id="clear-hp-field" hidden><dt>残HPボーナス</dt><dd id="clear-hp">—</dd></div>
+      <div id="clear-hp-field" hidden><dt>残りのげんき</dt><dd id="clear-hp">—</dd></div>
       <div><dt>シード</dt><dd id="clear-seed">—</dd></div>
     </dl>
     <p class="note" id="clear-note"></p>
@@ -73,12 +78,13 @@
 
   <!-- S-101 / S-105 タイトル兼モード選択 -->
   <section id="screen-mode" class="panel mode-menu">
+    <div id="pwa-notice" class="pwa-notice" hidden><span id="pwa-message"></span><button id="btn-pwa-update" type="button" hidden>更新する</button></div>
     <p class="menu-eyebrow">ROLL AT YOUR OWN PACE</p>
     <h2>どちらで遊ぶ？</h2>
-    <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small class="mode-description"><span>HP・制限時間なし。</span><span>同じ迷路でタイムを縮めよう。</span></small></button>
+    <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small class="mode-description"><span>げんき・時間制限なし。</span><span>同じ迷路でタイムを縮めよう。</span></small></button>
     <div class="challenge-choice" role="group" aria-labelledby="challenge-heading">
       <h3 id="challenge-heading">チャレンジ</h3>
-      <p class="challenge-description">HPと制限時間あり。<br>クリアを重ねて先へ進もう。</p>
+      <p class="challenge-description">げんきと時間制限あり。<br>クリアを重ねて先へ進もう。</p>
       <div class="difficulty-switch" role="group" aria-label="チャレンジの難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
       <p id="difficulty-note" class="difficulty-note"></p>
       <button class="mode-card challenge-start" id="btn-challenge" type="button"><span id="challenge-level-label">通常</span>でスタート</button>
@@ -144,6 +150,7 @@
       <label for="set-angle">最大傾き角（この角度で全力）<b id="set-angle-value">25°</b></label>
       <input type="range" id="set-angle" min="10" max="40" step="1" value="25">
     </div>
+    <p id="pwa-status" class="note" role="status">オフラインで遊ぶ準備をしています。</p>
     <div class="field sound-settings" role="group" aria-labelledby="sound-heading">
       <div class="sound-heading"><span id="sound-heading" class="legend">サウンド</span><button id="btn-settings-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button></div>
       <div class="volume-field"><label for="set-bgm-volume">BGM<output id="set-bgm-value" for="set-bgm-volume">60%</output></label><input type="range" id="set-bgm-volume" min="0" max="100" step="1" value="60"></div>

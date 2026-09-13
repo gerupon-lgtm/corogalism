@@ -23,13 +23,13 @@ export function createRunScreens(root) {
     },
     setOver(run) {
       find('over-heading').textContent = run.canContinue ? 'もう一度！' : 'おつかれさま！';
-      find('over-note').textContent = `${run.cause === 'timeout' ? '時間切れ' : 'HPがなくなりました'} · ${run.stageIndex}面目`;
+      find('over-note').textContent = `${run.cause === 'timeout' ? '時間切れ' : 'げんきがなくなりました'} · ${run.stageIndex}面目`;
       find('over-stages').textContent = `${run.clearedStages} 面`;
       find('over-time').textContent = seconds(run.totalTimeMs);
       find('btn-continue').disabled = !run.canContinue;
       find('btn-continue').textContent = 'コンティニュー';
       find('continue-note').textContent = run.canContinue
-        ? `残り${run.continuesLeft}回 · HPと時間を回復`
+        ? `残り${run.continuesLeft}回 · げんきと時間を回復`
         : 'コンティニューを使い切りました';
       find('btn-run-end').textContent = run.canContinue ? '終了して結果を見る' : '結果を見る';
     },

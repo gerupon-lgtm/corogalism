@@ -188,3 +188,7 @@ node tools/browser-edge-cases.mjs
 ```
 
 実機試遊では公開先をHTTPSで開き、Pixel 6aとiPhone XRでT-209を評価する。
+
+## v0.4.0 / T-229（公開準備）
+
+葉っぱ・床素材・PWAを追加。`node tools/update-precache.mjs` 実行済み。107テスト、4幅、音声、モーション模擬、オフライン／更新を確認。PWA更新でキャッシュ名が変わるため、実行資材の変更後はprecache.jsを必ず再生成する。正式URLの反映確認後に公開コミットとPages実行を追記する。

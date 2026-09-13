@@ -48,7 +48,7 @@ try {
     await page.clock.runFor(32);
     assert.equal((await state()).recovery.collected, true);
     const displayedRecovery = Math.ceil((await state()).hp.value) - beforeRecovery;
-    assert.equal(await page.locator('#recovery-feedback').textContent(), displayedRecovery ? `HP +${displayedRecovery}` : 'HPを少し回復');
+    assert.equal(await page.locator('#recovery-feedback').textContent(), displayedRecovery ? `げんき +${displayedRecovery}` : 'げんきを少し回復');
     await page.screenshot({ path: fileURLToPath(new URL(`heal-${width}.png`, output)), fullPage: true });
     for (let n = 1; n < 4; n++) { await clear(); await click('btn-next'); await ready(); }
     assert.equal((await state()).theme.id, 'bounce');

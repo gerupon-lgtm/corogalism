@@ -1,5 +1,7 @@
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
 import { BASE, TUNING, UI, CHALLENGE_LEVELS } from './config/gameConfig.js';
+import { createEscapeInput } from './input/escapeInput.js';
+import { initPwa } from './pwa.js';
 import { createSoundManager } from './audio/soundManager.js';
 import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
@@ -42,6 +44,7 @@ const tiltSource = createTiltSource({
 const pointerSource = createPointerSource(boardEl);
 const settings = loadSettings();
 settings.challengeLevel = normalizeLevel(settings.challengeLevel);
+const escapeInput = createEscapeInput(boardEl, () => Boolean(isPlaying() && play?.status === 'playing' && play.trap), () => play.assistEscape());
 let activeLevel = settings.challengeLevel;
 let manualCalibration = false;
 const sound = createSoundManager(settings, (note) => { find('sound-note').textContent = note; });
@@ -64,6 +67,8 @@ let countdownMs = 0;
 let prepareMs = 0;
 let audibleCountdown = null;
 let lastFrame = performance.now();
+let shield = { value: 0 };
+const pwa = initPwa(() => screen === 'mode');
 
 function initialSeed() {
   const q = new URLSearchParams(location.search).get('seed');
@@ -106,6 +111,9 @@ function toggleSound() {
 }
 
 function resetInput() {
+  find('feature-hint').hidden = true;
+  escapeInput.reset();
+  play?.resetRest();
   pointerSource.stop();
   tilt.reset();
   if (settings.mode === 'pointer' && isPlaying()) pointerSource.start(receiveTilt);
@@ -162,7 +170,7 @@ function calibrate() {
 
 function renderDifficulty() {
   for (const button of root.querySelectorAll('[data-level]')) button.setAttribute('aria-pressed', String(button.dataset.level === settings.challengeLevel));
-  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'ぶつかったときのHP消費が少なめ。' : 'いつもの手応えで挑戦。';
+  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'ぶつかったときのげんき消費が少なめ。' : 'いつもの手応えで挑戦。';
   find('challenge-level-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
   runUi.setModeBests(loadRunBests(settings.challengeLevel), tiltDeniedReason);
 }
@@ -188,6 +196,7 @@ function showScreen(name) {
   tiltSource.resetCalibrationSamples();
   if (previousScreen !== name) sound.stopEffects();
   screen = name;
+  pwa.render();
   const ended = name === 'clear' || name === 'over';
   const boardSession = name === 'game' || ended;
   root.querySelectorAll('section.panel, section.game-toast').forEach((el) => {
@@ -266,10 +275,10 @@ function renderLegend() {
   }
 }
 
-function loadStage(useSeed, delayMs = UI.beforeCountdownMs) {
+function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
-  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null);
+  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, shield });
   paused = false;
   handled = false;
   countdownMs = UI.startCountdownMs;
@@ -288,6 +297,7 @@ function startGame(mode, useSeed = seed) {
   activeLevel = settings.challengeLevel;
   run = mode === 'challenge' ? createRun(useSeed) : null;
   recordStatus = null;
+  shield = { value: 0 };
   loadStage(run ? run.currentSeed() : useSeed);
   showScreen('game');
 }
@@ -361,17 +371,21 @@ function frame(now) {
   } else if (isPlaying() && play.status === 'playing') {
     tilt.update(dt, BASE.inputSmoothing);
     const hpBefore = play.hp?.value;
+    const guardBefore = shield.value;
     let recovery = null;
     const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact,
+      onFeature: kind => { game.showFeature(kind, now); sound.effect('select'); },
       onRecovery: (_amount, change) => { recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
+    if (guardBefore > shield.value && damage === 0) game.showFeature('guard', now);
     if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);
     if (!handled && play.status === 'clear') finishStage();
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
   }
-  if (play && camera && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, now,
+  if (play && camera && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, shield: shield.value, trap: play.trap, now,
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
-    mode: settings.mode, started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, now });
+    mode: settings.mode, started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, shield: shield.value, now });
+  if (play && camera) game.setFeatureHint(play, camera, isPlaying() && play.status === 'playing', escapeInput.motionAvailable);
   updateAudio();
   requestAnimationFrame(frame);
 }
@@ -384,7 +398,9 @@ async function selectMode(mode) {
   try {
     if (!inputReady) {
       // モードボタンのクリックから直接iOS許可を求める。
+      const motionPermission = escapeInput.requestPermission();
       tiltAllowed = await enableTilt();
+      await motionPermission;
       applyMode(settings.mode);
       inputReady = true;
     }
@@ -430,7 +446,7 @@ clear.onNext(() => { if (screen === 'clear') { loadStage(run ? run.currentSeed()
 find('btn-continue').addEventListener('click', () => {
   if (screen === 'over' && run?.useContinue()) {
     recordStatus = null;
-    loadStage(run.currentSeed(), UI.continueBeforeCountdownMs);
+    loadStage(run.currentSeed(), UI.continueBeforeCountdownMs, { leafCollected: play.stage.leaf?.collected, restUsed: play.stage.rest?.used });
     showScreen('game');
     sound.effect('continue');
   }
@@ -466,7 +482,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   window.__corogalism = {
     get state() {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
-        audio: sound.state, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
+        audio: sound.state, leaf: play.stage.leaf, rest: play.stage.rest, sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
         calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,

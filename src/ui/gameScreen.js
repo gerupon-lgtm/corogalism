@@ -1,5 +1,5 @@
 /** S-102 ゲーム（F-142）。キャリブレーションはプレイ中も実行できる（F-103） */
-import { UI, RECOVERY } from '../config/gameConfig.js';
+import { UI, RECOVERY, REST } from '../config/gameConfig.js';
 import { hpLabel, damageLabel, recoveryLabel } from './hpDisplay.js';
 
 export function createGameScreen(root) {
@@ -37,6 +37,8 @@ export function createGameScreen(root) {
         hpBar.value = v.hp.ratio;
         hpBar.setAttribute('aria-valuetext', hpLabel(v.hp));
         root.querySelector('#hud-hp').textContent = hpLabel(v.hp);
+        const stock = root.querySelector('#hud-shield');
+        if (stock) { stock.textContent = String(Math.ceil(v.shield ?? 0)); stock.parentElement?.setAttribute('aria-label', `葉っぱのまもり ${Math.ceil(v.shield ?? 0)}`); }
         timeBar.value = v.remainingSec / v.limitSec;
         timeBar.setAttribute('aria-valuetext', `${v.remainingSec.toFixed(1)} 秒`);
         root.querySelector('#hud-remaining').textContent = v.remainingSec.toFixed(1);
@@ -64,12 +66,29 @@ export function createGameScreen(root) {
     showDamage(before, after, now) {
       damageUntil = now + UI.damageFeedbackMs;
       damageText.textContent = damageLabel(before, after);
-      damageText.setAttribute('aria-label', damageText.textContent === '微小' ? '1未満のダメージ。HPバーに反映しています。' : `${damageText.textContent} HP`);
+      damageText.setAttribute('aria-label', damageText.textContent === '微小' ? '1未満のダメージ。げんきのゲージに反映しています。' : `${damageText.textContent} げんき`);
       hpBlock.classList.add('damaged');
     },
     showRecovery(before, after, now) {
       recoveryUntil = now + RECOVERY.feedbackMs;
       root.querySelector('#recovery-feedback').textContent = recoveryLabel(before, after);
+    },
+    showFeature(kind, now) {
+      recoveryUntil = now + UI.featureFeedbackMs;
+      root.querySelector('#recovery-feedback').textContent = { leaf: '葉っぱのまもりが増えた！', guard: '葉っぱが守ってくれた！', rest: `げんき回復！ のこりじかん＋${REST.durationSec}秒` }[kind];
+    },
+    setFeatureHint(play, camera, visible, motion) {
+      const hint = root.querySelector('#feature-hint');
+      const resting = play.stage.rest && !play.stage.rest.used && play.stage.rest.progress > 0;
+      hint.hidden = !visible || (!play.trap && !resting);
+      if (hint.hidden) return;
+      const message = play.trap ? `☝ ダブルタップで はやくぬける${motion ? '\nスマホを軽くトントンでもOK' : ''}` : 'ひとやすみ中…';
+      if (hint.textContent !== message) hint.textContent = message;
+      const at = camera.toScreen(play.actor.x, play.actor.y);
+      const board = root.querySelector('#board');
+      const width = hint.offsetWidth;
+      hint.style.left = `${Math.max(width/2+4,Math.min(board.clientWidth-width/2-4,at.px))}px`;
+      hint.style.top = `${Math.max(4, at.py-camera.toPx(play.actor.r)-hint.offsetHeight-6)}px`;
     },
     setPaused(paused) { pauseBtn.textContent = paused ? '▶ 再開' : 'Ⅱ ポーズ'; },
     setOrientationWarning(show) { orientWarn.hidden = !show; },

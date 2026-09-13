@@ -1,10 +1,10 @@
-import { STAGE_THEMES } from '../config/gameConfig.js';
+import { STAGE_THEMES, STICKY } from '../config/gameConfig.js';
 import { createRng } from '../maze/rng.js';
 import { solvePath } from '../maze/path.js';
 
 export function themeAt(stage, cfg = STAGE_THEMES) {
   const n = Math.max(1, Math.floor(stage));
-  const id = n <= cfg.introStages ? 'basic' : cfg.cycle[(n - cfg.introStages - 1) % cfg.cycle.length];
+  const id = n >= STICKY.firstStage && (n - STICKY.firstStage) % STICKY.interval === 0 ? 'sticky' : n <= cfg.introStages ? 'basic' : cfg.cycle[(n - cfg.introStages - 1) % cfg.cycle.length];
   return { id, ...cfg.definitions[id] };
 }
 

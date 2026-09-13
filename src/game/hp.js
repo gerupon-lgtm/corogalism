@@ -19,7 +19,7 @@ export function initialHp(turns, hpPerTurn, cfg = HP) {
   return cfg.base + hpPerTurn * turns;
 }
 
-export function createHp({ turns, hpPerTurn, damageMult = 1, cfg = HP, damageCapRatio = cfg.capRatio } = {}) {
+export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg = HP, damageCapRatio = cfg.capRatio } = {}) {
   const max = initialHp(turns, hpPerTurn, cfg);
   const cap = max * Math.min(cfg.capRatio, damageCapRatio);
   let value = max;
@@ -51,10 +51,13 @@ export function createHp({ turns, hpPerTurn, damageMult = 1, cfg = HP, damageCap
       if (nowSec - lastDamageAt < cfg.cooldownSec) return 0;
       const damageK = getMaterial(wall && wall.materialId).damageK ?? 1;
       const raw = cfg.damageScale * damageMult * damageK * (speed - cfg.threshold) ** 2;
-      const dealt = Math.min(cap, raw);
+      const incoming = Math.min(cap, raw);
+      const absorbed = Math.min(shield?.value ?? 0, incoming);
+      if (shield) shield.value -= absorbed;
+      const dealt = incoming - absorbed;
       value -= dealt;
       lastDamageAt = nowSec;
-      tookDamage = true;
+      if (dealt > 0) tookDamage = true;
       return dealt;
     },
   };

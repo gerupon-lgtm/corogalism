@@ -126,3 +126,8 @@ Git初期化・コミット・push・Pages公開は完了。デプロイ記録�
 ## T-228 HP表示
 
 `node tools/browser-hp-display.mjs`：320/390/1280pxで実際の壁衝突を発生させ、微小ダメージ・整数をまたぐダメージとHUDの一致を確認。公開先もBASE_URL指定で確認済み。証跡は `hp-display/`（v0.3.2）。
+
+## T-229 v0.4.0
+
+`features/approved-concept.png` が承認画像、`features/{leaf,rest,sticky}-{320,390,576,1280}.png` が実画面。
+`node --test`:107件成功。`browser-features.mjs`:4幅の取得・休憩・脱出と盤面寸法。`browser-escape-input.mjs`:画面／本体タップ・二重計上防止。`browser-pwa.mjs`:初回制御・オフライン音源・タイトル更新・別タブ保護・保存失敗時フォールバック。既存browser-audio/first-sound成功。本体タップの実機感度は利用端末で確認が必要。

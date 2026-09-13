@@ -43,7 +43,7 @@ try {
   }
   assert.equal((await state()).status, 'dead');
   assert.equal(await page.locator('#over-heading').textContent(), 'もう一度！');
-  assert.match(await page.locator('#over-note').textContent(), /HPがなくなりました/);
+  assert.match(await page.locator('#over-note').textContent(), /げんきがなくなりました/);
   await click('btn-continue'); assert.equal((await state()).hp.value, max);
   // 後半の素材も実際のステージ配置で描画する。
   for (let i = 0; i < 14; i++) {

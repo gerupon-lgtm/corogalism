@@ -4,7 +4,7 @@ const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chr
 const base=process.env.BASE_URL||'http://127.0.0.1:8765/';
 try {
  for(const selector of ['.challenge-choice [data-level="easy"]','#btn-mode-settings','#btn-practice','#btn-challenge']) {
-  const ctx=await browser.newContext();
+  const ctx=await browser.newContext({serviceWorkers:'block'});
   await ctx.addInitScript(()=>{
    Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true});
    localStorage.setItem('corogalism-settings',JSON.stringify({soundEnabled:true,mode:'pointer'}));

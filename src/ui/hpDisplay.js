@@ -9,5 +9,5 @@ export function damageLabel(before, after) {
 
 export function recoveryLabel(before, after) {
   const change = displayedHp(after) - displayedHp(before);
-  return change > 0 ? `HP +${change}` : 'HPを少し回復';
+  return change > 0 ? `げんき +${change}` : 'げんきを少し回復';
 }

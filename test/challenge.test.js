@@ -78,7 +78,7 @@ test('死亡・時間切れ時の接触では回復も復活もしない', () =>
 });
 
 test('面には1種類の主役素材。外周・入口・出口は標準。序盤から段階的に紹介', () => {
-  assert.deepEqual([1,2,3,4,5,10].map(n => themeAt(n).id), ['basic','basic','rest','bounce','careful','trial']);
+  assert.deepEqual([1,2,3,4,5,10].map(n => themeAt(n).id), ['basic','basic','sticky','bounce','careful','trial']);
   for (let n = 1; n <= 30; n++) for (let seed = 1; seed <= 10; seed++) {
     const { stage } = createStagePlay(seed, challengeDifficulty(n, 'normal'));
     const ids = new Set(stage.walls.map(w => w.materialId));
