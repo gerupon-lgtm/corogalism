@@ -138,3 +138,5 @@ Git初期化・コミット・push・Pages公開は完了。デプロイ記録�
 ## T-230 v0.4.1
 
 `node --test`:108件成功。新しいescape-timing.test.jsは修正前に1.5秒のままで失敗し、修正後に500ms脱出を確認。browser-escape-timing.mjsはhasTouch/isMobileのtouchscreen.tapを使用し、傾き・擬似操作の両方で成立。browser-escape-input.mjsも成功。仕様・規約の2軸レビューは指摘なし。
+
+T-230公開検証: f896663／Pages34735555124成功、実行資材5件の一致、正式URLのtouchscreen.tapで2操作モードの0.5秒脱出成功。
