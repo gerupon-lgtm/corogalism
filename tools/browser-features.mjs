@@ -42,7 +42,7 @@ try {
   await page.evaluate(()=>{const a=window.__corogalism;a.setTilt(0,0);const t=a.state.sticky[0];a.teleport(t.x,t.y);});await page.clock.runFor(50);
   s=await state();assert.ok(s.trap);await page.screenshot({path:`docs/verification/features/sticky-${width}.png`,fullPage:true});
   const box=await page.locator('#board').boundingBox();await page.mouse.click(box.x+box.width/2,box.y+box.height/2);await page.clock.runFor(100);await page.mouse.click(box.x+box.width/2,box.y+box.height/2);await page.clock.runFor(32);
-  assert.equal((await state()).trap.target,1.5);await page.clock.runFor(1500);assert.equal((await state()).trap,null);
+  assert.equal((await state()).trap.target,2.5);await page.clock.runFor(2500);assert.equal((await state()).trap,null);
   await page.clock.runFor(250);assert.equal((await state()).trap,null);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   assert.equal(await page.locator('#time-meter-block .meter-name').innerText(),'のこりじかん');

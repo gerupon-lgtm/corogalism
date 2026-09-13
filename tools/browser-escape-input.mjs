@@ -13,7 +13,7 @@ try {
  const tap=async()=>{await page.evaluate(()=>{probe.pointer('pointerdown');probe.pointer('pointerup');});};
  await tap();await page.clock.runFor(100);await tap();assert.equal(await page.evaluate(()=>probe.count),1);
  // スワイプはダブルタップにならない。
- await page.clock.runFor(500);await page.evaluate(()=>{probe.pointer('pointerdown');probe.pointer('pointerup',80);});await page.clock.runFor(100);await tap();assert.equal(await page.evaluate(()=>probe.count),1);
+ await page.clock.runFor(500);await page.evaluate(()=>{probe.pointer('pointerdown');probe.pointer('pointerup',100);});await page.clock.runFor(100);await tap();assert.equal(await page.evaluate(()=>probe.count),1);
  await page.evaluate(()=>probe.input.reset());await page.clock.runFor(500);
  // 軽い本体衝撃の模擬入力。連続した大きなサンプルは1回のみ。
  await page.evaluate(()=>probe.motion(0));await page.clock.runFor(16);await page.evaluate(()=>probe.motion(8));await page.clock.runFor(80);assert.equal(await page.evaluate(()=>probe.count),2);

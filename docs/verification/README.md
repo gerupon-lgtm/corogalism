@@ -140,3 +140,7 @@ Git初期化・コミット・push・Pages公開は完了。デプロイ記録�
 `node --test`:108件成功。新しいescape-timing.test.jsは修正前に1.5秒のままで失敗し、修正後に500ms脱出を確認。browser-escape-timing.mjsはhasTouch/isMobileのtouchscreen.tapを使用し、傾き・擬似操作の両方で成立。browser-escape-input.mjsも成功。仕様・規約の2軸レビューは指摘なし。
 
 T-230公開検証: f896663／Pages34735555124成功、実行資材5件の一致、正式URLのtouchscreen.tapで2操作モードの0.5秒脱出成功。
+
+## T-231 v0.4.2
+
+109テスト。browser-escape-timingは10タップで最短0.5秒を2操作モードで確認。browser-sticky-feedbackは実際の上端とりもち、離れた位置のダブルタップ、成功表示、320/390/576pxの四隅の球との非重複、別トラップへの成功表示持ち越し防止を確認。証跡はsticky-feedback/。撮影前にCanvas単体も撮影して合成を同期。仕様・規約の2軸レビュー済み。

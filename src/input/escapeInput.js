@@ -20,8 +20,7 @@ export function createEscapeInput(board, active, assist) {
     const point = down; down = null;
     if (!active() || now()-point.at > STICKY.tapHoldMs || Math.hypot(e.clientX-point.x,e.clientY-point.y)>STICKY.tapTravelPx) { first=null; return; }
     const stamp = now();
-    if (first && stamp-first.at >= STICKY.tapMinMs && stamp-first.at <= STICKY.tapMaxMs
-      && Math.hypot(point.x-first.x,point.y-first.y)<=STICKY.tapTravelPx) { help(); first=null; }
+    if (first && stamp-first.at >= STICKY.tapMinMs && stamp-first.at <= STICKY.tapMaxMs) { help(); first=null; }
     else first = { ...point, at:stamp };
   });
   window.addEventListener('pointercancel', reset);

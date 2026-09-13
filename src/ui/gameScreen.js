@@ -1,5 +1,6 @@
 /** S-102 ゲーム（F-142）。キャリブレーションはプレイ中も実行できる（F-103） */
-import { UI, RECOVERY, REST } from '../config/gameConfig.js';
+import { UI, RECOVERY, REST, STICKY } from '../config/gameConfig.js';
+import { featureHintPosition } from './featureHintPosition.js';
 import { hpLabel, damageLabel, recoveryLabel } from './hpDisplay.js';
 
 export function createGameScreen(root) {
@@ -18,6 +19,9 @@ export function createGameScreen(root) {
   const damageText = root.querySelector('#hud-damage');
   let damageUntil = 0;
   let recoveryUntil = 0;
+  let escapeUntil = 0;
+  let escapeActor = null;
+  let escapeTrap = null;
 
   return {
     show() { el.hidden = false; },
@@ -77,18 +81,26 @@ export function createGameScreen(root) {
       recoveryUntil = now + UI.featureFeedbackMs;
       root.querySelector('#recovery-feedback').textContent = { leaf: '葉っぱのまもりが増えた！', guard: '葉っぱが守ってくれた！', rest: `げんき回復！ のこりじかん＋${REST.durationSec}秒` }[kind];
     },
-    setFeatureHint(play, camera, visible, motion) {
+    showEscape(play, now) {
+      escapeUntil = now + UI.featureFeedbackMs;
+      escapeActor = play.actor;
+      escapeTrap = play.trap;
+    },
+    setFeatureHint(play, camera, visible, motion, now = performance.now()) {
       const hint = root.querySelector('#feature-hint');
       const resting = play.stage.rest && !play.stage.rest.used && play.stage.rest.progress > 0;
-      hint.hidden = !visible || (!play.trap && !resting);
+      const escaped = escapeActor === play.actor && (!play.trap || play.trap === escapeTrap) && now < escapeUntil;
+      hint.hidden = !visible || (!play.trap && !resting && !escaped);
       if (hint.hidden) return;
-      const message = play.trap ? `☝ ダブルタップで はやくぬける${motion ? '\nスマホを軽くトントンでもOK' : ''}` : 'ひとやすみ中…';
+      hint.classList.toggle('is-success', escaped);
+      const message = escaped ? (play.trap ? `${STICKY.shortenSec}秒短縮！` : 'ぬけられた！') : play.trap ? `☝ 盤面をダブルタップで はやくぬける${motion ? '\nスマホを軽くトントンでもOK' : ''}` : 'ひとやすみ中…';
       if (hint.textContent !== message) hint.textContent = message;
       const at = camera.toScreen(play.actor.x, play.actor.y);
       const board = root.querySelector('#board');
-      const width = hint.offsetWidth;
-      hint.style.left = `${Math.max(width/2+4,Math.min(board.clientWidth-width/2-4,at.px))}px`;
-      hint.style.top = `${Math.max(4, at.py-camera.toPx(play.actor.r)-hint.offsetHeight-6)}px`;
+      const position = featureHintPosition({ x: at.px, y: at.py, radius: camera.toPx(play.actor.r),
+        width: hint.offsetWidth, height: hint.offsetHeight, boardWidth: board.clientWidth, boardHeight: board.clientHeight });
+      hint.style.left = `${position.left + hint.offsetWidth/2}px`;
+      hint.style.top = `${position.top}px`;
     },
     setPaused(paused) { pauseBtn.textContent = paused ? '▶ 再開' : 'Ⅱ ポーズ'; },
     setOrientationWarning(show) { orientWarn.hidden = !show; },

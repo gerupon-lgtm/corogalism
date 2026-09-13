@@ -29,7 +29,12 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
     stage, actor, hp, limitSec, shield,
     get trap() { return trap; },
     get extendedSec() { return extendedSec; },
-    assistEscape() { if (status === 'playing' && trap) trap.target = Math.max(STICKY.minSec, trap.target - STICKY.shortenSec); },
+    assistEscape() {
+      if (status !== 'playing' || !trap) return false;
+      const before = trap.target;
+      trap.target = Math.max(STICKY.minSec, before - STICKY.shortenSec);
+      return trap.target < before;
+    },
     resetRest() { if (stage.rest) stage.rest.progress = 0; restOrigin = null; },
     get timeMs() { return timeMs; },
     get wallHits() { return wallHits; },

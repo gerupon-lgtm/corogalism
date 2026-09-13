@@ -198,3 +198,7 @@ node tools/browser-edge-cases.mjs
 ## v0.4.1 / T-230
 
 画面タップでの脱出短縮にかかる受付制限を修正。108テスト、browser-escape-input（本体との二重計上防止）、browser-escape-timing（スマホ相当の6タップ、傾き／擬似操作の両方）が成功。precache更新済み。公開コミット `f896663`、[Pages34735555124](https://github.com/gerupon-lgtm/corogalism/actions/runs/34735555124) 成功。実行資材5件がHTTP200・SHA256一致。正式URLでもbrowser-escape-timing.mjsの傾き／擬似操作の両方が成功。
+
+## v0.4.2 / T-231
+
+自然脱出3秒・0.5秒ずつ短縮・最短0.5秒、盤面内の別位置ダブルタップ、48pxの移動許容、球を避けるヒントと成功表示。109テスト、実タッチの2モード、3幅のヒント配置を確認。precacheを71資材で再生成。公開結果は追記する。

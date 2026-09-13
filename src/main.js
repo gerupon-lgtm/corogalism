@@ -44,7 +44,7 @@ const tiltSource = createTiltSource({
 const pointerSource = createPointerSource(boardEl);
 const settings = loadSettings();
 settings.challengeLevel = normalizeLevel(settings.challengeLevel);
-const escapeInput = createEscapeInput(boardEl, () => Boolean(isPlaying() && play?.status === 'playing' && play.trap), () => play.assistEscape());
+const escapeInput = createEscapeInput(boardEl, () => Boolean(isPlaying() && play?.status === 'playing' && play.trap), () => { if (play.assistEscape()) game.showEscape(play, performance.now()); });
 let activeLevel = settings.challengeLevel;
 let manualCalibration = false;
 const sound = createSoundManager(settings, (note) => { find('sound-note').textContent = note; });

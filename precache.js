@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '83b13871d989601f';
+self.PRECACHE_VERSION = '8d1e268f91a80a32';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -58,6 +58,7 @@ self.PRECACHE_FILES = [
   "src/render/toyFeatures.js",
   "src/render/toyWorld.js",
   "src/ui/clearScreen.js",
+  "src/ui/featureHintPosition.js",
   "src/ui/gameScreen.js",
   "src/ui/hpDisplay.js",
   "src/ui/runScreens.js",

@@ -44,7 +44,7 @@ test('とりもちは拘束・タップ短縮の下限・同じ床から出る�
  tick(p,499,1/60);assert.ok(p.trap);assert.equal(p.actor.x,tile.x);assert.equal(p.actor.y,tile.y);
  tick(p,1);assert.equal(p.trap,null);tick(p,3000);assert.equal(p.trap,null);
  p.teleport(.5,.5);tick(p);p.teleport(tile.x,tile.y);tick(p);assert.ok(p.trap);
- tick(p,2000);assert.equal(p.trap,null);
+ tick(p,2999);assert.ok(p.trap);tick(p,1);assert.equal(p.trap,null);
  const timed=make(3);timed.teleport(timed.stage.sticky[0].x,timed.stage.sticky[0].y);tick(timed);tick(timed,timed.remainingSec*1000);assert.equal(timed.status,'timeout');
 });
 test('配置は独立抽選・全テーマで休憩、危険壁で高確率、重複せずとりもち3+8n',()=>{
