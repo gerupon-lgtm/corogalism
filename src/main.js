@@ -1,6 +1,7 @@
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
 import { BASE, TUNING, UI, CHALLENGE_LEVELS } from './config/gameConfig.js';
 import { createEscapeInput } from './input/escapeInput.js';
+import { initGuide } from './ui/guide.js';
 import { initPwa } from './pwa.js';
 import { createSoundManager } from './audio/soundManager.js';
 import { createStagePlay } from './game/stagePlay.js';
@@ -69,6 +70,7 @@ let audibleCountdown = null;
 let lastFrame = performance.now();
 let shield = { value: 0 };
 const pwa = initPwa(() => screen === 'mode');
+initGuide(() => screen === 'mode');
 
 function initialSeed() {
   const q = new URLSearchParams(location.search).get('seed');

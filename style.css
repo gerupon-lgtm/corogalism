@@ -379,3 +379,26 @@ body[data-screen="run-result"] footer{display:none}
 .feature-hint{width:max-content}
 
 .update-check{text-align:center}.update-check button{font-size:12px;padding:8px 16px}.update-check .note{margin:8px 0 0;color:#735033}.update-check .note:empty{display:none}
+
+/* タイトル上の一枚ガイド。通常のスマホでは全項目を表示し、小画面・文字拡大時だけ内部スクロール。 */
+body.guide-open{overflow:hidden}
+.play-guide{box-sizing:border-box;width:calc(100% - 28px);max-width:520px;max-height:calc(100dvh - 28px);padding:14px 14px 10px;margin:auto;overflow:auto;overscroll-behavior:contain;color:#735033;background:linear-gradient(135deg,#fff4da,#efddbb);border:2px solid #f8e4b9;border-radius:25px;box-shadow:0 5px 0 #b29870,0 12px 40px #0008;font-family:var(--sans)}
+.play-guide::backdrop{background:#07100bd9}
+.guide-heading{position:relative;text-align:center;margin:0 0 10px;padding:0 34px;border:0;display:block}
+.guide-heading h2{font-size:20px;margin:0;color:#704620}.guide-heading h2 span{color:#6b9552}.guide-heading p{font-size:11px;margin:2px 0 0}
+.play-guide button{color:#73491e;border:1px solid #c6a570;background:linear-gradient(#fff4da,#eed7ad);box-shadow:0 3px 0 #b69a70;font-family:inherit}
+.play-guide .guide-x{position:absolute;right:-2px;top:0;width:34px;height:34px;min-height:34px;padding:0;border-radius:50%;font-size:24px}
+.guide-group{border:1px solid #ceb58c;border-radius:17px;background:#fff8e754;padding:8px;margin-top:8px;box-shadow:0 2px 0 #b7a17a}
+.guide-walls{background:linear-gradient(#f3f5df,#e6e9c7);border-color:#adbb8c}
+.guide-group>h2{font-size:17px;line-height:1.3;color:#527341;margin:0 0 5px 3px}
+.guide-wall-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px}.guide-list{display:grid;gap:5px}
+.guide-card{display:flex;align-items:center;gap:8px;background:#fff9eaaa;border:1px solid #d9c5a2;border-radius:12px;padding:5px 9px;min-width:0}
+.guide-card canvas{width:52px;height:40px;flex-shrink:0}.guide-card h3{font-size:14px;margin:0 0 1px;line-height:1.3}.guide-card p{font-size:11px;line-height:1.5;margin:0;overflow-wrap:anywhere}
+.guide-wall-grid .guide-card{gap:4px;padding:5px}.guide-wall-grid canvas{width:42px;height:33px}.guide-wall-grid h3{font-size:12px}.guide-wall-grid p{font-size:10px}
+.guide-wall-note{font-size:10px;line-height:1.6;margin:auto 3px;text-align:center}
+.guide-floors{grid-auto-rows:1fr}.guide-floors .guide-card{min-height:52px;box-sizing:border-box}
+.play-guide .guide-close{display:block;width:80%;margin:12px auto 0;border-radius:30px;min-height:38px;padding:6px;font-size:17px;font-weight:800}
+.guide-dismiss-note{text-align:center;font-size:10px;margin:7px 0 0;color:#876d4e}
+@media(min-width:480px){.guide-card canvas{width:64px;height:44px}.guide-card p{font-size:12px}.guide-wall-grid p{font-size:11px}}
+
+.guide-heading h2 canvas{width:25px;height:23px;vertical-align:middle}
