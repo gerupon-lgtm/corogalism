@@ -194,3 +194,7 @@ node tools/browser-edge-cases.mjs
 葉っぱ・床素材・PWAを追加。`node tools/update-precache.mjs` 実行済み。107テスト、4幅、音声、モーション模擬、オフライン／更新を確認。PWA更新でキャッシュ名が変わるため、実行資材の変更後はprecache.jsを必ず再生成する。公開コミット `141640d`。Pages成功: https://github.com/gerupon-lgtm/corogalism/actions/runs/34734209091 。変更した実行資材23件がHTTP200・SHA256一致。正式URLで70資材の保存、オフライン遷移／プレイ／BGM音源読み込み成功（browser-pwa-live.mjs）。
 
 公開後の微調整: 休憩進捗リングが球に隠れない半径へ拡大。390pxの実ブラウザを再確認し、precacheを更新。同じv0.4.0として反映する。
+
+## v0.4.1 / T-230
+
+画面タップでの脱出短縮にかかる受付制限を修正。108テスト、browser-escape-input（本体との二重計上防止）、browser-escape-timing（スマホ相当の6タップ、傾き／擬似操作の両方）が成功。precache更新済み。公開先の確認結果は反映後に追記する。

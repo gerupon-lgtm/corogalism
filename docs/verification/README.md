@@ -134,3 +134,7 @@ Git初期化・コミット・push・Pages公開は完了。デプロイ記録�
 
 正式URL: アプリ141640d、Pages34734209091成功。変更資材23件の一致とbrowser-pwa-live（70件のキャッシュ・オフライン起動／音源）成功。
 公開先のbrowser-featuresも4幅成功。最終描画調整として休憩の進捗リングをボール外側に広げ、390pxで再確認。
+
+## T-230 v0.4.1
+
+`node --test`:108件成功。新しいescape-timing.test.jsは修正前に1.5秒のままで失敗し、修正後に500ms脱出を確認。browser-escape-timing.mjsはhasTouch/isMobileのtouchscreen.tapを使用し、傾き・擬似操作の両方で成立。browser-escape-input.mjsも成功。仕様・規約の2軸レビューは指摘なし。

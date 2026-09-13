@@ -4,8 +4,9 @@ export function createEscapeInput(board, active, assist) {
   let first = null, down = null, lastAssist = -Infinity, touchAt = -Infinity;
   let motionAt = -Infinity, previous = null, armed = true, pending = null;
   const now = () => performance.now();
-  function help() {
-    if (!active() || now()-lastAssist < STICKY.assistCooldownMs) return;
+  function help(fromMotion = false) {
+    // 画面タップは2回で1組に分けているため、組の間を間引かない。
+    if (!active() || (fromMotion && now()-lastAssist < STICKY.motionAssistCooldownMs)) return;
     lastAssist = now(); assist();
   }
   function reset() { first = null; down = null; previous = null; armed = true; clearTimeout(pending); }
@@ -35,7 +36,7 @@ export function createEscapeInput(board, active, assist) {
     if (armed && magnitude > STICKY.motionThreshold && stamp-touchAt > STICKY.touchSuppressMs) {
       armed = false; clearTimeout(pending);
       // 同じ動作から遅れて届く画面タップを先に検知して、二重計上を避ける。
-      pending = setTimeout(() => { if (now()-touchAt > STICKY.touchSuppressMs) help(); }, STICKY.tapMinMs);
+      pending = setTimeout(() => { if (now()-touchAt > STICKY.touchSuppressMs) help(true); }, STICKY.tapMinMs);
     }
   });
   return {
