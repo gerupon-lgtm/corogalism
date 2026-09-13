@@ -28,7 +28,7 @@ export function drawFeatureFloors(c,stage,camera) {
     c.fillStyle=g;c.strokeStyle='#cbdcba';c.lineWidth=1;c.beginPath();c.roundRect(x-r,y-r,r*2,r*2,r*.22);c.fill();c.stroke();c.shadowBlur=0;c.shadowOffsetY=0;
     c.strokeStyle='#648a62';c.beginPath();c.roundRect(x-r*.83,y-r*.83,r*1.66,r*1.66,r*.15);c.stroke();
     c.fillStyle='#7ba276';c.strokeStyle='#cfdfbe';heart(c,x,y,r*.38);
-    if (!rest.used) ring(c,x,y,r*.73,rest.progress/REST.durationSec,'#e9f3ce');c.restore();
+    if (!rest.used) ring(c,x,y,r*.9,rest.progress/REST.durationSec,'#e9f3ce');c.restore();
   }
   for (const tile of stage.sticky) {
     const {px:x,py:y}=camera.toScreen(tile.x,tile.y),r=camera.toPx(.34);

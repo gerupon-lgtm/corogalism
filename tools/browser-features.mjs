@@ -10,7 +10,7 @@ await mkdir('docs/verification/features',{recursive:true});
 const errors=[];
 const seed=Array.from({length:500},(_,i)=>(i+1)*7919).find(seed=>{const p=createStagePlay(stageSeed(seed,1),challengeDifficulty(1,'easy'));return p.stage.leaf && p.stage.rest;});
 try {
- for(const width of [320,390,576,1280]) {
+ for(const width of (process.env.TEST_WIDTH ? [Number(process.env.TEST_WIDTH)] : [320,390,576,1280])) {
   const context=await browser.newContext({viewport:{width,height:900},deviceScaleFactor:2,serviceWorkers:'block'});
   await context.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true}));
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));await page.clock.install();await page.clock.pauseAt(Date.now()+1000);
@@ -48,5 +48,5 @@ try {
   assert.equal(await page.locator('#time-meter-block .meter-name').innerText(),'のこりじかん');
   await context.close();
  }
- assert.deepEqual(errors,[]);console.log('PASS: 4 widths, leaf pickup/HUD, real damage, rest pause/reset/success, stage 3 sticky/double-tap/grace; stable board geometry.');
+ assert.deepEqual(errors,[]);console.log('PASS: selected widths, leaf pickup/HUD, real damage, rest pause/reset/success, stage 3 sticky/double-tap/grace; stable board geometry.');
 } finally {await browser.close();}

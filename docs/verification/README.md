@@ -131,3 +131,6 @@ Git初期化・コミット・push・Pages公開は完了。デプロイ記録�
 
 `features/approved-concept.png` が承認画像、`features/{leaf,rest,sticky}-{320,390,576,1280}.png` が実画面。
 `node --test`:107件成功。`browser-features.mjs`:4幅の取得・休憩・脱出と盤面寸法。`browser-escape-input.mjs`:画面／本体タップ・二重計上防止。`browser-pwa.mjs`:初回制御・オフライン音源・タイトル更新・別タブ保護・保存失敗時フォールバック。既存browser-audio/first-sound成功。本体タップの実機感度は利用端末で確認が必要。
+
+正式URL: アプリ141640d、Pages34734209091成功。変更資材23件の一致とbrowser-pwa-live（70件のキャッシュ・オフライン起動／音源）成功。
+公開先のbrowser-featuresも4幅成功。最終描画調整として休憩の進捗リングをボール外側に広げ、390pxで再確認。

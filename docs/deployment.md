@@ -189,6 +189,8 @@ node tools/browser-edge-cases.mjs
 
 実機試遊では公開先をHTTPSで開き、Pixel 6aとiPhone XRでT-209を評価する。
 
-## v0.4.0 / T-229（公開準備）
+## v0.4.0 / T-229（公開・確認済み）
 
-葉っぱ・床素材・PWAを追加。`node tools/update-precache.mjs` 実行済み。107テスト、4幅、音声、モーション模擬、オフライン／更新を確認。PWA更新でキャッシュ名が変わるため、実行資材の変更後はprecache.jsを必ず再生成する。正式URLの反映確認後に公開コミットとPages実行を追記する。
+葉っぱ・床素材・PWAを追加。`node tools/update-precache.mjs` 実行済み。107テスト、4幅、音声、モーション模擬、オフライン／更新を確認。PWA更新でキャッシュ名が変わるため、実行資材の変更後はprecache.jsを必ず再生成する。公開コミット `141640d`。Pages成功: https://github.com/gerupon-lgtm/corogalism/actions/runs/34734209091 。変更した実行資材23件がHTTP200・SHA256一致。正式URLで70資材の保存、オフライン遷移／プレイ／BGM音源読み込み成功（browser-pwa-live.mjs）。
+
+公開後の微調整: 休憩進捗リングが球に隠れない半径へ拡大。390pxの実ブラウザを再確認し、precacheを更新。同じv0.4.0として反映する。
