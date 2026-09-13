@@ -402,3 +402,27 @@ body.guide-open{overflow:hidden}
 @media(min-width:480px){.guide-card canvas{width:64px;height:44px}.guide-card p{font-size:12px}.guide-wall-grid p{font-size:11px}}
 
 .guide-heading h2 canvas{width:25px;height:23px;vertical-align:middle}
+
+/* T-236: 文字と押しやすさを保ち、タイトル・設定の余白を整理する。 */
+body[data-screen="mode"] .wrap{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+.mode-menu{padding:15px 16px 12px;gap:9px}
+.mode-menu h2{margin-bottom:3px}
+.mode-menu .mode-card{padding:12px 14px;gap:6px}
+.challenge-choice{padding:12px 14px}
+.challenge-choice .difficulty-switch{margin-top:8px}
+.challenge-choice .difficulty-note{margin:6px 0 8px}
+.mode-menu .challenge-choice #btn-challenge{min-height:44px;padding:8px 12px}
+.mode-menu .menu-instruction{margin:2px 0;font-size:10px}
+.mode-menu .mode-records{margin:3px 0}
+.mode-menu .mode-records summary{padding:10px 2px;min-height:44px}
+.mode-tools{display:flex;gap:10px}.mode-tools button{min-width:0;min-height:44px;font-size:12px;padding:8px 4px}
+.mode-menu .update-check button{min-height:36px;padding:6px 14px}
+.menu-copyright{font-size:10px;line-height:1.4;text-align:center;color:#806440;border-top:1px solid #d3bd99;padding-top:6px;margin:0}
+.settings-menu{padding:16px;gap:11px}.settings-menu h2{margin:0}
+.settings-menu .field{padding:10px;gap:8px}.settings-menu .seg{gap:6px}.settings-menu .seg button{padding:8px;min-height:44px}
+.settings-menu .note{margin:0;font-size:11px}.settings-menu .settings-intro{margin:0}
+.run-result-menu{padding:18px 16px;gap:12px}
+@media(max-height:760px){.mode-menu{padding-top:12px;gap:7px}.mode-menu .menu-eyebrow{font-size:8px}.mode-menu .mode-card{padding-top:10px;padding-bottom:10px}.challenge-choice{padding-top:10px;padding-bottom:10px}}
+
+.settings-menu{padding-block:12px;gap:8px}.settings-menu .field{padding:8px;gap:6px}
+@media(max-height:760px){.mode-menu{gap:5px;padding-block:10px}.mode-menu .mode-records{margin:1px 0}.mode-menu .menu-instruction{margin:0}.challenge-choice .difficulty-note{margin-block:4px}}
