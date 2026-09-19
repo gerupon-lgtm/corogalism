@@ -1,6 +1,6 @@
 # T-240 はじめてのあそび方（v0.5.0）
 
-**v0.5.1:** 表示場所・停止時間・素材配分は [tutorial-pacing.md](tutorial-pacing.md) が最新。以下はv0.5.0の導入時点の記録。
+**v0.5.2:** 最新の表示動作は [tutorial-continuous.md](tutorial-continuous.md)。素材配分は [tutorial-pacing.md](tutorial-pacing.md)。以下はv0.5.0の導入時点の記録。
 
 承認済みの3画面コンセプト（縦持ちに修正）に基づく固定面チュートリアル。
 

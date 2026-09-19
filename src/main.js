@@ -69,7 +69,7 @@ let prepareMs = 0;
 let audibleCountdown = null;
 let lastFrame = performance.now();
 let shield = { value: 0 };
-const tutorial = createTutorialUi(() => { resetInput({ preserveRest: true }); lastFrame = performance.now(); updateAudio(); });
+const tutorial = createTutorialUi();
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 
@@ -79,7 +79,7 @@ function initialSeed() {
   return (Date.now() % 1000003) >>> 0;
 }
 function nextSeed() { return ((seed * 7919 + 13) % 1000003) >>> 0; }
-function isPlaying() { return screen === 'game' && !paused && !tutorial.blocking && !document.hidden && prepareMs === 0 && countdownMs === 0; }
+function isPlaying() { return screen === 'game' && !paused && !document.hidden && prepareMs === 0 && countdownMs === 0; }
 function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
 
 function updateAudio() {
@@ -113,10 +113,10 @@ function toggleSound() {
   if (settings.soundEnabled) { sound.unlock(true); sound.effect('select'); }
 }
 
-function resetInput({ preserveRest = false } = {}) {
+function resetInput() {
   find('feature-hint').hidden = true;
   escapeInput.reset();
-  if (!preserveRest) play?.resetRest();
+  play?.resetRest();
   pointerSource.stop();
   tilt.reset();
   if (settings.mode === 'pointer' && isPlaying()) pointerSource.start(receiveTilt);
@@ -353,7 +353,6 @@ function finishRun() {
 
 function frame(now) {
   const elapsedMs = Math.max(0, now - lastFrame);
-  const lessonWasBlocking = tutorial.blocking;
   tutorial.tick(elapsedMs, screen === 'game' && !paused && countdownMs === 0 && gameMode === 'tutorial');
   const dt = Math.min(elapsedMs / 1000, TUNING.maxDt);
   lastFrame = now;
@@ -366,7 +365,7 @@ function frame(now) {
     countdownMs = Math.max(0, countdownMs - (step - preparingStep));
     updateCountdown();
     if (countdownMs === 0) resetInput();
-  } else if (!lessonWasBlocking && isPlaying() && play.status === 'playing') {
+  } else if (isPlaying() && play.status === 'playing') {
     tilt.update(dt, BASE.inputSmoothing);
     const hpBefore = play.hp?.value;
     const guardBefore = shield.value;
@@ -383,7 +382,7 @@ function frame(now) {
   if (play && camera && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, shield: shield.value, trap: play.trap, now,
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
-    mode: settings.mode, tutorial: gameMode === 'tutorial', started: play.started, paused: paused || tutorial.blocking, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, shield: shield.value, now });
+    mode: settings.mode, tutorial: gameMode === 'tutorial', started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, shield: shield.value, now });
   if (play && camera) game.setFeatureHint(play, camera, isPlaying() && play.status === 'playing', escapeInput.motionAvailable);
   updateAudio();
   requestAnimationFrame(frame);
@@ -486,7 +485,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
         audio: sound.state, hourglass: play.stage.hourglass, leaf: play.stage.leaf, rest: play.stage.rest, sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
         calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
-        tutorialOpen: tutorial.open, tutorialBlocking: tutorial.blocking,
+        tutorialOpen: tutorial.open,
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,

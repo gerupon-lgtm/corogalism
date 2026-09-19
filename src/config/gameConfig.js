@@ -156,5 +156,5 @@ export const STICKY = { firstStage: 3, interval: 8, durationSec: 3, shortenSec: 
   tapMinMs: 60, tapMaxMs: 350, tapTravelPx: 48, tapHoldMs: 220, motionAssistCooldownMs: 400,
   motionThreshold: 6, motionReset: 2, motionGapMs: 250, touchSuppressMs: 450 };
 
-/** チュートリアル。説明秒数は実機確認後にここだけで調整できる。 */
-export const TUTORIAL = { lessonMs: 4000, contactDelayMs: 700, pauseMs: 1000, lessonGapMs: 4000, hp: 100, minHp: 1, size: 7 };
+/** チュートリアル。表示前の間と更新時のハイライト時間を調整できる。 */
+export const TUTORIAL = { contactDelayMs: 700, flashMs: 650, hp: 100, minHp: 1, size: 7 };

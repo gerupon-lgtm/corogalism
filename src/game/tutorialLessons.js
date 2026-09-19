@@ -1,18 +1,14 @@
-/** 説明をため込まず、体験→短い停止→表示したまま操作→間隔の順で進む。 */
+/** 初めて触れた素材だけを順に説明。動作後の短い間を置き、説明は次の更新まで残す。 */
 export function createLessonTiming(cfg) {
- const seen=new Set();let pending=null,active=null,delay=0,shown=0,gap=0;
+ const seen=new Set(),pending=[];let active=null,delay=cfg.contactDelayMs;
  return {
   get active(){return active;},
-  get blocking(){return active!==null&&shown<cfg.pauseMs;},
-  get progress(){return active===null?0:Math.max(0,1-shown/cfg.lessonMs);},
-  contact(id){if(seen.has(id)||pending||active||gap>0)return;pending=id;delay=cfg.contactDelayMs;},
+  contact(id){if(seen.has(id))return;seen.add(id);pending.push(id);},
   tick(ms){
-   const step=Math.max(0,ms);
-   if(active){shown+=step;if(shown>=cfg.lessonMs)this.dismiss();return;}
-   if(gap>0){gap=Math.max(0,gap-step);return;}
-   if(pending){delay-=step;if(delay<=0){active=pending;seen.add(active);pending=null;shown=0;}}
+   if(!pending.length)return;
+   delay-=Math.max(0,ms);
+   if(delay<=0){active=pending.shift();delay=cfg.contactDelayMs;}
   },
-  dismiss(){if(active){active=null;shown=0;gap=cfg.lessonGapMs;}},
-  reset(){seen.clear();pending=null;active=null;delay=shown=gap=0;},
+  reset(){seen.clear();pending.length=0;active=null;delay=cfg.contactDelayMs;},
  };
 }

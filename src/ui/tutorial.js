@@ -1,12 +1,12 @@
-/** 接触説明の表示・自動終了。物理時間とは独立し、非表示タブでは進めない。 */
+/** 接触説明の差し替えと穏やかな更新通知。物理時間とは独立し、非表示タブでは進めない。 */
 import { TUTORIAL, REST, STICKY, RECOVERY, LEAF, HOURGLASS } from '../config/gameConfig.js';
 import { walls, items, floors, drawGuideArt } from './guide.js';
 import { createLessonTiming } from '../game/tutorialLessons.js';
-export function createTutorialUi(onChange) {
+export function createTutorialUi() {
  const panel=document.querySelector('#tutorial-lesson');
  const timing=createLessonTiming(TUTORIAL);
  const entries=new Map([...walls,...items,...floors].map(([id,title,body])=>[id,{title,body}]));
- let lastActive=null,lastBlocking=false;let touching=new Set();
+ let lastActive=null,flash=null;let touching=new Set();
  function render(){
   const id=timing.active;
   panel.classList.toggle('has-lesson',Boolean(id));
@@ -18,17 +18,19 @@ export function createTutorialUi(onChange) {
    panel.querySelector('.tutorial-copy').textContent=entry.body;
    panel.querySelector('.tutorial-context').textContent=walls.some(w=>w[0]===id)?'速さと壁の素材で、げんきの減り方が変わります。':['hourglass','rest'].includes(id)?'時間の加算はチャレンジで有効です。':'';
    drawGuideArt(panel.querySelector('canvas'),id);
+   panel.dataset.lesson=id;
+   flash?.cancel();
+   if(!matchMedia('(prefers-reduced-motion: reduce)').matches) flash=panel.animate([
+    {boxShadow:'0 3px #8e7957, inset 0 0 0 0px #efd8a0'},
+    {boxShadow:'0 3px #8e7957, inset 0 0 0 3px #efd8a0',offset:.35},
+    {boxShadow:'0 3px #8e7957, inset 0 0 0 0px #efd8a0'},
+   ],{duration:TUTORIAL.flashMs,easing:'ease-out'});
   }
-  panel.querySelector('progress').value=timing.progress;
-  panel.querySelector('.tutorial-play-state').textContent=timing.blocking?'ちょっとひと息…':'操作できます';
   lastActive=id;
-  if(lastBlocking!==timing.blocking){lastBlocking=timing.blocking;onChange();}
  }
- panel.addEventListener('click',()=>{timing.dismiss();render();});
  return {
   get open(){return Boolean(timing.active);},
-  get blocking(){return timing.blocking;},
-  reset(){timing.reset();touching.clear();render();},
+  reset(){timing.reset();touching.clear();flash?.cancel();delete panel.dataset.lesson;render();},
   contact(id){timing.contact(id);},
   inspect(play){
    const a=play.actor,s=play.stage;
