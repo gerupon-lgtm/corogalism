@@ -4,6 +4,7 @@ import { createEscapeInput } from './input/escapeInput.js';
 import { initGuide } from './ui/guide.js';
 import { initPwa } from './pwa.js';
 import { createSoundManager } from './audio/soundManager.js';
+import { createTutorialUi } from './ui/tutorial.js';
 import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
 import { challengeDifficulty, normalizeLevel } from './game/challenge.js';
@@ -68,6 +69,7 @@ let prepareMs = 0;
 let audibleCountdown = null;
 let lastFrame = performance.now();
 let shield = { value: 0 };
+const tutorial = createTutorialUi(() => { resetInput(); lastFrame = performance.now(); updateAudio(); });
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 
@@ -77,7 +79,7 @@ function initialSeed() {
   return (Date.now() % 1000003) >>> 0;
 }
 function nextSeed() { return ((seed * 7919 + 13) % 1000003) >>> 0; }
-function isPlaying() { return screen === 'game' && !paused && !document.hidden && prepareMs === 0 && countdownMs === 0; }
+function isPlaying() { return screen === 'game' && !paused && !tutorial.open && !document.hidden && prepareMs === 0 && countdownMs === 0; }
 function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
 
 function updateAudio() {
@@ -213,13 +215,14 @@ function showScreen(name) {
     el.hidden = el.id !== `screen-${name}` && !(ended && el.id === 'screen-game');
   });
   root.body.dataset.screen = name;
+  root.body.dataset.gameMode = gameMode;
   root.body.classList.toggle('board-session', boardSession);
   boardEl.hidden = !boardSession;
   find('play-toolbar').hidden = !boardSession;
   find('play-hint').hidden = !boardSession;
   find('btn-pause').disabled = name !== 'game';
   find('toast-layer').hidden = !ended;
-  find('challenge-hud').hidden = !boardSession || gameMode !== 'challenge';
+  find('challenge-hud').hidden = !boardSession || !['challenge','tutorial'].includes(gameMode);
   find('board-overlay').hidden = name !== 'game' || !paused;
   find('board-status').textContent = '一時停止';
   updateCountdown();
@@ -266,20 +269,21 @@ function updateCountdown() {
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
-  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, shield });
+  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, shield, tutorial: gameMode === 'tutorial' });
   paused = false;
   handled = false;
   countdownMs = UI.startCountdownMs;
   prepareMs = delayMs;
   game.setPaused(false);
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
-  find('play-mode-label').textContent = run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
+  find('play-mode-label').textContent = gameMode === 'tutorial' ? 'はじめて' : run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
   find('stage-theme').textContent = play.stage.theme?.label || '';
   find('recovery-feedback').textContent = '';
   resize();
 }
 
 function startGame(mode, useSeed = seed) {
+  tutorial.reset();
   gameMode = mode;
   activeLevel = settings.challengeLevel;
   run = mode === 'challenge' ? createRun(useSeed) : null;
@@ -290,6 +294,7 @@ function startGame(mode, useSeed = seed) {
 }
 
 function showModes() {
+  tutorial.reset();
   countdownMs = 0;
   prepareMs = 0;
   renderDifficulty();
@@ -317,6 +322,9 @@ function finishStage() {
     run.clearStage({ timeMs: play.timeMs, noDamage: !play.hp.tookDamage });
     saveRunProgress();
     clear.setResult({ gameMode, stageIndex, hp: play.hp, noDamage: !play.hp.tookDamage, timeMs: play.timeMs, seed });
+  } else if (gameMode === 'tutorial') {
+    tutorial.reset();
+    clear.setResult({ gameMode, timeMs: play.timeMs, seed });
   } else {
     const updated = saveBest(seed, play.timeMs, play.wallHits);
     const best = getBest(seed);
@@ -345,6 +353,8 @@ function finishRun() {
 
 function frame(now) {
   const elapsedMs = Math.max(0, now - lastFrame);
+  const lessonWasOpen = tutorial.open;
+  tutorial.tick(elapsedMs, isPlaying() && gameMode === 'tutorial');
   const dt = Math.min(elapsedMs / 1000, TUNING.maxDt);
   lastFrame = now;
   if (screen === 'game' && !paused && !document.hidden && countdownMs > 0) {
@@ -356,14 +366,15 @@ function frame(now) {
     countdownMs = Math.max(0, countdownMs - (step - preparingStep));
     updateCountdown();
     if (countdownMs === 0) resetInput();
-  } else if (isPlaying() && play.status === 'playing') {
+  } else if (!lessonWasOpen && isPlaying() && play.status === 'playing') {
     tilt.update(dt, BASE.inputSmoothing);
     const hpBefore = play.hp?.value;
     const guardBefore = shield.value;
     let recovery = null;
-    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: sound.impact,
+    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: (speed,wall) => { sound.impact(speed,wall); if(gameMode==='tutorial')tutorial.contact(wall.materialId); },
       onFeature: kind => { game.showFeature(kind, now); if (kind !== 'full') sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
       onRecovery: (_amount, change) => { recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
+    if (gameMode === 'tutorial') { tutorial.inspect(play); if (play.status === 'playing') tutorial.flush(); }
     if (guardBefore > shield.value && damage === 0) game.showFeature('guard', now);
     if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);
     if (!handled && play.status === 'clear') finishStage();
@@ -372,7 +383,7 @@ function frame(now) {
   if (play && camera && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, shield: shield.value, trap: play.trap, now,
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
-    mode: settings.mode, started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, shield: shield.value, now });
+    mode: settings.mode, tutorial: gameMode === 'tutorial', started: play.started, paused: paused || tutorial.open, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, shield: shield.value, now });
   if (play && camera) game.setFeatureHint(play, camera, isPlaying() && play.status === 'playing', escapeInput.motionAvailable);
   updateAudio();
   requestAnimationFrame(frame);
@@ -381,7 +392,7 @@ function frame(now) {
 async function selectMode(mode) {
   if (starting) return;
   starting = true;
-  const controls = ['btn-practice', 'btn-challenge', 'btn-mode-settings'].map(find);
+  const controls = ['btn-practice', 'btn-challenge', 'btn-mode-settings', 'btn-tutorial-start'].map(find);
   controls.forEach(el => { el.disabled = true; });
   try {
     if (!inputReady) {
@@ -392,6 +403,7 @@ async function selectMode(mode) {
       applyMode(settings.mode);
       inputReady = true;
     }
+    if (mode === 'tutorial' && settings.mode === 'tilt') tiltSource.calibrate();
     startGame(mode, mode === 'practice' ? initialSeed() : seed);
     // 初回センサー確認でボタンを無効化していても、遷移完了後に操作音を1回鳴らす。
     sound.effect('select');
@@ -409,6 +421,9 @@ function toSettings(from) {
   settingsUi.render(settings);
   showScreen('settings');
 }
+find('btn-tutorial').addEventListener('click', () => showScreen('tutorial-intro'));
+find('btn-tutorial-back').addEventListener('click', showModes);
+find('btn-tutorial-start').addEventListener('click', () => selectMode('tutorial'));
 find('btn-challenge').addEventListener('click', () => selectMode('challenge'));
 for (const button of root.querySelectorAll('[data-level]')) button.addEventListener('click', () => {
   if (screen !== 'mode' || starting) return;
@@ -426,8 +441,8 @@ game.onCalibrate(calibrate);
 game.onSettings(() => toSettings(screen));
 find('btn-game-exit').addEventListener('click', finishRun);
 find('btn-clear-exit').addEventListener('click', finishRun);
-clear.onRetry(() => { if (screen === 'clear' && !run) { loadStage(seed); showScreen('game'); } });
-clear.onNext(() => { if (screen === 'clear') { loadStage(run ? run.currentSeed() : nextSeed()); showScreen('game'); } });
+clear.onRetry(() => { if (screen === 'clear' && !run) { if (gameMode === 'tutorial') startGame('tutorial', seed); else { loadStage(seed); showScreen('game'); } } });
+clear.onNext(() => { if (screen === 'clear' && gameMode === 'tutorial') { showModes(); return; } if (screen === 'clear') { loadStage(run ? run.currentSeed() : nextSeed()); showScreen('game'); } });
 find('btn-continue').addEventListener('click', () => {
   const alreadyContinued = run?.usedContinue;
   if (screen === 'over' && run?.useContinue()) {
@@ -452,7 +467,7 @@ root.addEventListener('click', (event) => {
 }, true);
 root.addEventListener('click', (event) => {
   const button = event.target.closest('button');
-  if (button && !button.disabled && !['btn-sound', 'btn-settings-sound', 'btn-pause', 'btn-resume', 'btn-continue', 'btn-practice', 'btn-challenge'].includes(button.id)) sound.effect('select');
+  if (button && !button.disabled && !['btn-sound', 'btn-settings-sound', 'btn-pause', 'btn-resume', 'btn-continue', 'btn-practice', 'btn-challenge', 'btn-tutorial-start'].includes(button.id)) sound.effect('select');
 });
 settingsUi.onCalibrate(calibrate);
 settingsUi.onClose(() => showScreen(['game', 'clear', 'over'].includes(settingsUi.returnTo) ? settingsUi.returnTo : 'mode'));
@@ -471,6 +486,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
         audio: sound.state, hourglass: play.stage.hourglass, leaf: play.stage.leaf, rest: play.stage.rest, sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
         calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
+        tutorialOpen: tutorial.open,
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,

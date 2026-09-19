@@ -1,5 +1,6 @@
 /** 1面の実行状態。DOMを持たず、既存の物理・HP・時間を接続する。 */
-import { BASE, TUNING, RECOVERY, LEAF, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
+import { BASE, TUNING, RECOVERY, LEAF, REST, STICKY, HOURGLASS, TUTORIAL, HP } from '../config/gameConfig.js';
+import { createTutorialStage } from '../world/tutorialStage.js';
 import { generateMaze } from '../maze/generator.js';
 import { createStage, createActor, goalCenter } from '../world/stage.js';
 import { getCharacter } from '../world/characters.js';
@@ -8,17 +9,18 @@ import { createHp } from './hp.js';
 import { stageTimeLimitSec } from './progression.js';
 
 export function createStagePlay(seed, difficulty = null, carry = {}) {
-  const maze = generateMaze(BASE.mazeSize, seed);
-  const stage = createStage(maze, difficulty);
+  const tutorial = Boolean(carry.tutorial);
+  const stage = tutorial ? createTutorialStage() : createStage(generateMaze(BASE.mazeSize, seed), difficulty);
+  const maze = stage.maze;
   const actor = createActor(maze, getCharacter('default'));
   const origin = { x: actor.x, y: actor.y };
   const shield = carry.shield ?? { value: 0 };
-  const hp = difficulty ? createHp({ turns: maze.turns, ...difficulty, shield }) : null;
+  const hp = tutorial ? createHp({ turns: 0, hpPerTurn: 0, cfg: {...HP, base: TUTORIAL.hp}, minimum: TUTORIAL.minHp, shield }) : difficulty ? createHp({ turns: maze.turns, ...difficulty, shield }) : null;
   if (stage.leaf && carry.leafCollected) stage.leaf.collected = true;
   if (stage.rest && carry.restUsed) stage.rest.used = true;
   let extendedSec = 0, restOrigin = null, trap = null, releasedFloor = null;
   const onTile = (tile, radius) => tile && Math.abs(actor.x-tile.x) < radius && Math.abs(actor.y-tile.y) < radius;
-  const limitSec = difficulty ? stageTimeLimitSec(maze, difficulty) : null;
+  const limitSec = !tutorial && difficulty ? stageTimeLimitSec(maze, difficulty) : null;
   let timeMs = 0;
   let activeSec = 0;
   let touchingRecovery = false;

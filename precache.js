@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '155ed9e2b15e67e3';
+self.PRECACHE_VERSION = 'ac99d71f5e73b884';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -24,6 +24,7 @@ self.PRECACHE_FILES = [
   "assets/pwa/icon-512.png",
   "assets/pwa/icon.svg",
   "assets/toy-wall-atlas.png",
+  "assets/tutorial-hold.png",
   "index.html",
   "manifest.webmanifest",
   "src/audio/audioSettings.js",
@@ -35,6 +36,7 @@ self.PRECACHE_FILES = [
   "src/game/progression.js",
   "src/game/run.js",
   "src/game/stagePlay.js",
+  "src/game/tutorialLessons.js",
   "src/input/escapeInput.js",
   "src/input/pointerSource.js",
   "src/input/stableCalibration.js",
@@ -67,11 +69,13 @@ self.PRECACHE_FILES = [
   "src/ui/runScreens.js",
   "src/ui/settingsScreen.js",
   "src/ui/titleScreen.js",
+  "src/ui/tutorial.js",
   "src/world/characters.js",
   "src/world/materials.js",
   "src/world/recovery.js",
   "src/world/stage.js",
   "src/world/stageFeatures.js",
   "src/world/themes.js",
+  "src/world/tutorialStage.js",
   "style.css"
 ];

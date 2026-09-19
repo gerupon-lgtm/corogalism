@@ -5,9 +5,9 @@ import { drawLeaf, drawFeatureFloors } from '../render/toyFeatures.js';
 import { drawHourglass } from '../render/toyHourglass.js';
 import { createToyBall } from '../render/toyBall.js';
 import { RECOVERY, REST, HOURGLASS } from '../config/gameConfig.js';
-const walls=[['default','標準','いつもの壁。'],['rubber','ゴム','ゴムは無傷。次の壁に注意。'],['stone','石','はねにくい・痛み大きめ。'],['spike','とげ','ぶつかると大きなダメージ。'],['moss','こけ','はねにくい・痛み少なめ。']];
-const items=[['candy','キャンディ',`${RECOVERY.healRatio*100}％回復。満タンなら残る。`],['leaf','葉っぱのまもり','ダメージを肩代わり。'],['hourglass','砂時計',`のこりじかん ＋${HOURGLASS.bonusSec}秒。`]];
-const floors=[['rest','ひとやすみ',`${REST.durationSec}秒じっとすると げんき回復＆じかん＋${REST.durationSec}秒。`],['sticky','とりもち','迷路内連続タップで最短0.5秒で脱出可能。']];
+export const walls=[['default','標準','いつもの壁。'],['rubber','ゴム','ゴムは無傷。次の壁に注意。'],['stone','石','はねにくい・痛み大きめ。'],['spike','とげ','ぶつかると大きなダメージ。'],['moss','こけ','はねにくい・痛み少なめ。']];
+export const items=[['candy','キャンディ',`${RECOVERY.healRatio*100}％回復。満タンなら残る。`],['leaf','葉っぱのまもり','ダメージを肩代わり。'],['hourglass','砂時計',`のこりじかん ＋${HOURGLASS.bonusSec}秒。`]];
+export const floors=[['rest','ひとやすみ',`${REST.durationSec}秒じっとすると げんき回復＆じかん＋${REST.durationSec}秒。`],['sticky','とりもち','迷路内連続タップで最短0.5秒で脱出可能。']];
 const card=([id,title,body])=>`<article class="guide-card"><canvas data-guide-art="${id}" width="144" height="112" aria-hidden="true"></canvas><div><h3>${title}</h3><p>${body}</p></div></article>`;
 export function initGuide(canOpen) {
  const dialog=document.querySelector('#play-guide');
@@ -20,15 +20,7 @@ export function initGuide(canOpen) {
  let scrollY=0,outsideDown=false;
  function draw() {
   for(const canvas of dialog.querySelectorAll('canvas')) {
-   const c=canvas.getContext('2d'),id=canvas.dataset.guideArt;c.clearRect(0,0,144,112);
-   if(walls.some(w=>w[0]===id)) drawToyWall(c,{x:17,y:35,w:110,h:32,materialId:id},{toScreen:(x,y)=>({px:x,py:y}),toPx:n=>n});
-   else if(id==='candy')drawToyCandy(c,72,56,45,0,true);
-   else if(id==='leaf')drawLeaf(c,72,56,40);
-   else if(id==='hourglass')drawHourglass(c,72,56,43);
-   else {
-    const at={x:72,y:58};drawFeatureFloors(c,{rest:id==='rest'?{...at,used:false,progress:0}:null,sticky:id==='sticky'?[at]:[]},{toScreen:(x,y)=>({px:x,py:y}),toPx:n=>n*110});
-    if(id==='sticky')createToyBall().draw(c,72,43,22);
-   }
+   drawGuideArt(canvas,canvas.dataset.guideArt);
   }
 
  }
@@ -43,4 +35,16 @@ export function initGuide(canOpen) {
  dialog.addEventListener('pointerdown',e=>{outsideDown=outside(e);});
  dialog.addEventListener('click',e=>{if(outsideDown&&outside(e))dialog.close();outsideDown=false;});
  dialog.addEventListener('close',()=>{document.body.classList.remove('guide-open');opener.focus({preventScroll:true});window.scrollTo(0,scrollY);});
+}
+
+export function drawGuideArt(canvas,id) {
+   const c=canvas.getContext('2d');c.clearRect(0,0,144,112);
+   if(walls.some(w=>w[0]===id)) drawToyWall(c,{x:17,y:35,w:110,h:32,materialId:id},{toScreen:(x,y)=>({px:x,py:y}),toPx:n=>n});
+   else if(id==='candy')drawToyCandy(c,72,56,45,0,true);
+   else if(id==='leaf')drawLeaf(c,72,56,40);
+   else if(id==='hourglass')drawHourglass(c,72,56,43);
+   else {
+    const at={x:72,y:58};drawFeatureFloors(c,{rest:id==='rest'?{...at,used:false,progress:0}:null,sticky:id==='sticky'?[at]:[]},{toScreen:(x,y)=>({px:x,py:y}),toPx:n=>n*110});
+    if(id==='sticky')createToyBall().draw(c,72,43,22);
+   }
 }

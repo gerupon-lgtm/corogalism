@@ -13,6 +13,7 @@ export function createClearScreen(root) {
     show() { el.hidden = false; },
     hide() { el.hidden = true; },
     setResult(v) {
+      const tutorial = v.gameMode === 'tutorial';
       const challenge = v.gameMode === 'challenge';
       el.querySelector('#clear-heading').textContent = 'クリア！';
       el.querySelector('#clear-best-field').hidden = challenge;
@@ -29,6 +30,7 @@ export function createClearScreen(root) {
       retryBtn.classList.remove('primary');
       retryBtn.classList.add('text-button');
       retryBtn.textContent = '同じ迷路をもう一度';
+      if (tutorial) { el.querySelector('#clear-heading').textContent = 'できた！'; el.querySelector('#clear-note').textContent = 'いろいろな素材を試せたかな？'; nextBtn.textContent = 'モード選択へ'; retryBtn.textContent = 'もう一度あそぶ'; }
       time.textContent = `${(v.timeMs / 1000).toFixed(2)} 秒`;
       best.textContent = v.bestMs != null ? `${(v.bestMs / 1000).toFixed(2)} 秒` : '—';
       seed.textContent = String(v.seed);

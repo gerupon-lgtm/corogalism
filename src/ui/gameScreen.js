@@ -37,16 +37,19 @@ export function createGameScreen(root) {
       el.querySelector('#game-status').textContent = v.paused ? '一時停止中。再開ボタンで続けます。'
         : v.preparing ? '準備ができたら、3・2・1でスタート！'
         : !v.started ? '動き出すとタイム計測が始まります。' : '';
+      if (v.tutorial && !v.paused && !v.preparing) el.querySelector('#game-status').textContent = '好きなペースで、ゴールまで。';
       if (v.hp) {
         hpBar.value = v.hp.ratio;
         hpBar.setAttribute('aria-valuetext', hpLabel(v.hp));
         root.querySelector('#hud-hp').textContent = hpLabel(v.hp);
         const stock = root.querySelector('#hud-shield');
         if (stock) { stock.textContent = String(Math.ceil(v.shield ?? 0)); stock.parentElement?.setAttribute('aria-label', `葉っぱのまもり ${Math.ceil(v.shield ?? 0)}`); }
-        timeBar.value = v.remainingSec / v.limitSec;
-        timeBar.setAttribute('aria-valuetext', `${v.remainingSec.toFixed(1)} 秒`);
-        root.querySelector('#hud-remaining').textContent = v.remainingSec.toFixed(1);
-        root.querySelector('#time-meter-block').classList.toggle('urgent', timeBar.value <= UI.urgentTimeRatio);
+        if (v.limitSec !== null) {
+          timeBar.value = v.remainingSec / v.limitSec;
+          timeBar.setAttribute('aria-valuetext', `${v.remainingSec.toFixed(1)} 秒`);
+          root.querySelector('#hud-remaining').textContent = v.remainingSec.toFixed(1);
+          root.querySelector('#time-meter-block').classList.toggle('urgent', timeBar.value <= UI.urgentTimeRatio);
+        }
         hpBlock.classList.toggle('urgent', v.hp.ratio <= UI.lowHpRatio);
       }
       if (v.now >= damageUntil) {

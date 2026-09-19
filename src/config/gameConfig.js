@@ -155,3 +155,6 @@ export const REST = { durationSec: 2, healRatio: 0.2, speed: 0.12, drift: 0.08, 
 export const STICKY = { firstStage: 3, interval: 8, durationSec: 3, shortenSec: 0.5, minSec: 0.5, radius: 0.37, pathMin: 0.25, pathMax: 0.7, endpointClearance: 1.5,
   tapMinMs: 60, tapMaxMs: 350, tapTravelPx: 48, tapHoldMs: 220, motionAssistCooldownMs: 400,
   motionThreshold: 6, motionReset: 2, motionGapMs: 250, touchSuppressMs: 450 };
+
+/** チュートリアル。説明秒数は実機確認後にここだけで調整できる。 */
+export const TUTORIAL = { lessonMs: 4000, hp: 100, minHp: 1, size: 7 };

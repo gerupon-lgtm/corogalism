@@ -19,7 +19,7 @@ export function initialHp(turns, hpPerTurn, cfg = HP) {
   return cfg.base + hpPerTurn * turns;
 }
 
-export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg = HP, damageCapRatio = cfg.capRatio } = {}) {
+export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg = HP, damageCapRatio = cfg.capRatio, minimum = null } = {}) {
   const max = initialHp(turns, hpPerTurn, cfg);
   const cap = max * Math.min(cfg.capRatio, damageCapRatio);
   let value = max;
@@ -55,7 +55,7 @@ export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg 
       const incoming = Math.min(cap, raw);
       const absorbed = Math.min(shield?.value ?? 0, incoming);
       if (shield) shield.value -= absorbed;
-      const dealt = incoming - absorbed;
+      const dealt = minimum === null ? incoming - absorbed : Math.min(incoming - absorbed, Math.max(0, value - minimum));
       value -= dealt;
       lastDamageAt = nowSec;
       if (dealt > 0) tookDamage = true;
