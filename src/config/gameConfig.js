@@ -157,4 +157,4 @@ export const STICKY = { firstStage: 3, interval: 8, durationSec: 3, shortenSec: 
   motionThreshold: 6, motionReset: 2, motionGapMs: 250, touchSuppressMs: 450 };
 
 /** チュートリアル。説明秒数は実機確認後にここだけで調整できる。 */
-export const TUTORIAL = { lessonMs: 4000, hp: 100, minHp: 1, size: 7 };
+export const TUTORIAL = { lessonMs: 4000, contactDelayMs: 700, pauseMs: 1000, lessonGapMs: 4000, hp: 100, minHp: 1, size: 7 };

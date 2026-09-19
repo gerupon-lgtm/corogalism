@@ -27,8 +27,15 @@ test('練習の回復・葉っぱ・休憩・とりもち・砂時計を実際�
  p.teleport(6.5,6.5);advance(p);assert.equal(p.status,'clear');
 });
 
-test('同時接触の説明は重複せず順に保持し、再挑戦時にリセット',async()=>{
- const {createLessonQueue}=await import('../src/game/tutorialLessons.js');const q=createLessonQueue();
- q.contact('stone');q.contact('rubber');q.contact('stone');assert.equal(q.next(),'stone');q.contact('stone');assert.equal(q.next(),'rubber');assert.equal(q.next(),undefined);
- q.reset();q.contact('stone');assert.equal(q.next(),'stone');
+test('説明は反応を見せてから表示し、1秒で再開・4秒で終了・間隔中はため込まない',async()=>{
+ const {createLessonTiming}=await import('../src/game/tutorialLessons.js');const t=createLessonTiming(TUTORIAL);
+ t.contact('rubber');t.tick(699);assert.equal(t.active,null);assert.equal(t.blocking,false);t.tick(1);assert.equal(t.active,'rubber');assert.equal(t.blocking,true);
+ t.contact('stone');t.tick(999);assert.equal(t.blocking,true);t.tick(1);assert.equal(t.blocking,false);assert.equal(t.active,'rubber');t.tick(3000);assert.equal(t.active,null);
+ t.contact('moss');t.tick(4000);t.tick(1000);assert.equal(t.active,null);t.contact('rubber');t.tick(1000);assert.equal(t.active,null);
+ t.contact('stone');t.tick(700);assert.equal(t.active,'stone');t.dismiss();assert.equal(t.blocking,false);assert.equal(t.active,null);
+ t.reset();t.contact('rubber');t.tick(700);assert.equal(t.active,'rubber');
+});
+test('特殊壁は各1区間で、壁の大半を標準にする',()=>{
+ const s=createTutorialStage();for(const id of ['rubber','stone','spike','moss'])assert.equal(s.walls.filter(w=>w.materialId===id).length,1);
+ assert.ok(s.walls.filter(w=>w.materialId==='default').length/s.walls.length>.8);
 });
