@@ -24,8 +24,12 @@ try{
  await teleport(3.5,.5);await p.clock.runFor(700);assert.equal(await lesson(),'candy');
  assert.ok(await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations().length)>0,'update highlight starts');
  assert.equal(await p.locator('#tutorial-lesson').evaluate(el=>el.classList.contains('is-updated')),true);
- assert.equal(await p.locator('#tutorial-lesson h2').evaluate(el=>getComputedStyle(el,'::after').opacity),'1');
+ assert.equal(await p.locator('#tutorial-lesson h2').evaluate(el=>getComputedStyle(el,'::after').content),'none');
+ await p.clock.runFor(250);
+ assert.ok(await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations()[0].effect.getKeyframes().some(k=>k.boxShadow.includes('150px'))),'whole card highlight');
+ await p.locator('#tutorial-lesson').evaluate(el=>{const a=el.getAnimations()[0];a.pause();a.currentTime=360;});
  await p.screenshot({path:`docs/verification/tutorial-pacing/playing-${width}.png`});
+ await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations()[0]?.play());
  await teleport(5.5,2.5);await p.clock.runFor(720);assert.equal(await lesson(),'leaf');await teleport(.5,.5);await teleport(3.5,.5);await p.clock.runFor(1000);assert.equal(await lesson(),'leaf','repeat material does not replace current explanation');
  // 次の更新待ちも、手動ポーズ中は進めない。
  await teleport(3.5,3.5);await click('btn-pause');await p.clock.runFor(5000);assert.equal(await lesson(),'leaf');await click('btn-resume');await ready();await p.clock.runFor(720);assert.equal(await lesson(),'rest');

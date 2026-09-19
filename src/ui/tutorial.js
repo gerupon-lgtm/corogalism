@@ -1,4 +1,4 @@
-/** 接触説明の差し替えと穏やかな更新通知。物理時間とは独立し、非表示タブでは進めない。 */
+/** 接触説明の差し替えとカード全体の更新通知。物理時間とは独立し、非表示タブでは進めない。 */
 import { TUTORIAL, REST, STICKY, RECOVERY, LEAF, HOURGLASS } from '../config/gameConfig.js';
 import { walls, items, floors, drawGuideArt } from './guide.js';
 import { createLessonTiming } from '../game/tutorialLessons.js';
@@ -19,14 +19,17 @@ export function createTutorialUi() {
    panel.querySelector('.tutorial-context').textContent=walls.some(w=>w[0]===id)?'速さと壁の素材で、げんきの減り方が変わります。':['hourglass','rest'].includes(id)?'時間の加算はチャレンジで有効です。':'';
    drawGuideArt(panel.querySelector('canvas'),id);
    panel.dataset.lesson=id;
-   noticeMs=TUTORIAL.updateNoticeMs;
+   noticeMs=TUTORIAL.flashMs;
    flash?.cancel();
-   if(!matchMedia('(prefers-reduced-motion: reduce)').matches) flash=panel.animate([
-    {boxShadow:'0 3px #8e7957, inset 0 0 0 0px #d69426',borderColor:'#c9b18b'},
-    {boxShadow:'0 3px #8e7957, 0 0 10px #e5b75099, inset 0 0 0 3px #d69426',borderColor:'#b67b20',offset:.12},
-    {boxShadow:'0 3px #8e7957, 0 0 10px #e5b75099, inset 0 0 0 3px #d69426',borderColor:'#b67b20',offset:.45},
-    {boxShadow:'0 3px #8e7957, inset 0 0 0 0px #d69426',borderColor:'#c9b18b'},
-   ],{duration:TUTORIAL.flashMs,easing:'ease-out'});
+   if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const quiet={boxShadow:'0 3px #8e7957, 0 0 18px 4px #ffc94700, inset 0 0 0 150px #ffd15a00',borderColor:'#c9b18b'};
+    const bright={boxShadow:'0 3px #8e7957, 0 0 18px 4px #ffc947bb, inset 0 0 0 150px #ffd15ab3',borderColor:'#e79a19'};
+    flash=panel.animate([
+     {...quiet,offset:0},{...bright,offset:.10},{...bright,offset:.25},
+     {...quiet,offset:.45},{...bright,offset:.60},{...bright,offset:.75},
+     {...quiet,offset:1},
+    ],{duration:TUTORIAL.flashMs,easing:'ease-in-out'});
+   }
   }
   panel.classList.toggle('is-updated',noticeMs>0);
   lastActive=id;
