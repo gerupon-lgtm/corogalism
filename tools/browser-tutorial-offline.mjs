@@ -8,7 +8,7 @@ try{
  await p.evaluate(()=>document.fonts.ready);await p.screenshot({path:'docs/verification/tutorial/title.png'});
  await ctx.setOffline(true);await p.goto(base+'?debug=1');await p.waitForFunction(()=>!!window.__corogalism);await p.locator('#btn-tutorial').click();
  assert.equal(await p.locator('.tutorial-hold').evaluate(i=>i.complete&&i.naturalWidth>0),true);
- await p.locator('#btn-tutorial-start').click();await p.waitForFunction(()=>window.__corogalism.state.countdownMs===0);
+ await p.locator('#btn-tutorial-start').click();await p.waitForFunction(()=>{const s=window.__corogalism.state;return s.gameMode==='tutorial'&&s.screen==='game'&&s.countdownMs===0&&!s.paused;});
  await p.evaluate(()=>window.__corogalism.teleport(1.5,4.5));await p.waitForFunction(()=>window.__corogalism.state.tutorialOpen);
  assert.match(await p.locator('.tutorial-copy').innerText(),/0.5秒/);assert.deepEqual(errors,[]);
  console.log('PASS: offline tutorial image, modules, fixed stage and contact explanation');

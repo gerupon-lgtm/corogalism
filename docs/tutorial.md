@@ -14,3 +14,5 @@
 検証: test/tutorial.test.js、tools/browser-tutorial.mjs。実機で4秒の読みやすさと傾き姿勢を確認予定。
 
 画像: assets/tutorial-hold.png。内蔵image_genで承認図の縦持ちイラストを単独素材化。生成指示: portrait phone, face up, far top edge raised slightly, two hands, cream background, existing forest toy style, no text.
+
+公開: ce0b0c0、正式URLで3画面幅・センサー3経路・オフライン確認済み。120単体テスト。表示4秒は実機評価待ち。
