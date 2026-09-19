@@ -157,4 +157,4 @@ export const STICKY = { firstStage: 3, interval: 8, durationSec: 3, shortenSec: 
   motionThreshold: 6, motionReset: 2, motionGapMs: 250, touchSuppressMs: 450 };
 
 /** チュートリアル。表示前の間と更新時のハイライト時間を調整できる。 */
-export const TUTORIAL = { contactDelayMs: 700, flashMs: 650, hp: 100, minHp: 1, size: 7 };
+export const TUTORIAL = { contactDelayMs: 700, flashMs: 1200, updateNoticeMs: 2400, hp: 100, minHp: 1, size: 7 };

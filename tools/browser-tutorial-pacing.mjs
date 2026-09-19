@@ -19,10 +19,12 @@ try{
  assert.ok((await state()).actor.vy<0);assert.equal((await state()).tutorialOpen,false);
  const time=(await state()).timeMs;await p.clock.runFor(750);assert.equal(await lesson(),'rubber');assert.ok((await state()).timeMs>=time+700);
  await p.evaluate(()=>window.__corogalism.setTilt(0,-1));const before=await state();await p.clock.runFor(400);assert.ok((await state()).timeMs>=before.timeMs+380);assert.notEqual((await state()).actor.y,before.actor.y);
- await teleport(.5,4.5);await p.clock.runFor(6000);assert.equal(await lesson(),'rubber');
+ await teleport(.5,4.5);await p.clock.runFor(6000);assert.equal(await lesson(),'rubber');assert.equal(await p.locator('#tutorial-lesson').evaluate(el=>el.classList.contains('is-updated')),false);
  assert.deepEqual(await p.locator('#board').boundingBox(),box);assert.equal(await p.evaluate(()=>scrollY),scroll);
  await teleport(3.5,.5);await p.clock.runFor(700);assert.equal(await lesson(),'candy');
  assert.ok(await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations().length)>0,'update highlight starts');
+ assert.equal(await p.locator('#tutorial-lesson').evaluate(el=>el.classList.contains('is-updated')),true);
+ assert.equal(await p.locator('#tutorial-lesson h2').evaluate(el=>getComputedStyle(el,'::after').opacity),'1');
  await p.screenshot({path:`docs/verification/tutorial-pacing/playing-${width}.png`});
  await teleport(5.5,2.5);await p.clock.runFor(720);assert.equal(await lesson(),'leaf');await teleport(.5,.5);await teleport(3.5,.5);await p.clock.runFor(1000);assert.equal(await lesson(),'leaf','repeat material does not replace current explanation');
  // 次の更新待ちも、手動ポーズ中は進めない。
