@@ -34,8 +34,9 @@ test('説明は0.7秒後に更新し、残し続け、各素材は初回だけ',
  t.contact('moss');t.contact('spike');t.contact('moss');t.tick(700);assert.equal(t.active,'moss');t.tick(700);assert.equal(t.active,'spike');t.tick(60000);assert.equal(t.active,'spike');
  t.reset();assert.equal(t.active,null);t.contact('rubber');t.tick(700);assert.equal(t.active,'rubber');
 });
-test('体験用のゴムとトゲを増やし、壁の大半を標準にする',()=>{
- const s=createTutorialStage();for(const [id,count] of [['rubber',3],['spike',3],['stone',1],['moss',1]])assert.equal(s.walls.filter(w=>w.materialId===id).length,count);
+test('ゴムとトゲは助走先の縦壁だけにし、壁の大半を標準にする',()=>{
+ const s=createTutorialStage();for(const [id,count] of [['rubber',2],['spike',2],['stone',1],['moss',1]])assert.equal(s.walls.filter(w=>w.materialId===id).length,count);
+ assert.ok(s.walls.filter(w=>['rubber','spike'].includes(w.materialId)).every(w=>w.h>w.w));
  assert.ok(s.walls.filter(w=>w.materialId==='default').length/s.walls.length>.8);
 });
 
@@ -48,4 +49,11 @@ test('横通路の助走でゴムの反発とトゲの被弾を体験できる',
   if(id==='rubber'){assert.ok(p.actor.vx*direction<0);assert.equal(p.hp.value,p.hp.max);}
   else assert.ok(p.hp.value<p.hp.max);
  }
+});
+
+test('ひとやすみは標準壁の角へゆっくり寄せて回復できる',()=>{
+ const p=createStagePlay(0,null,{tutorial:true});p.hp.applyImpact(4,{materialId:'stone'},1);
+ const initial=p.hp.value;p.teleport(4,4.5);
+ for(let i=0;i<1200&&!p.stage.rest.used;i++)p.advance({dt:1/120,elapsedMs:1000/120,tilt:{x:-.1,y:-.1},base:BASE});
+ assert.equal(p.stage.rest.used,true);assert.ok(p.hp.value>initial);
 });

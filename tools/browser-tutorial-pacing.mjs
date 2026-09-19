@@ -14,11 +14,11 @@ try{
  const lesson=()=>p.locator('#tutorial-lesson').getAttribute('data-lesson');
  await click('btn-tutorial');await click('btn-tutorial-start');await ready();await p.evaluate(()=>document.fonts.ready);
  const box=await p.locator('#board').boundingBox(),scroll=await p.evaluate(()=>scrollY);
- await teleport(2.5,1.5);await p.evaluate(()=>window.__corogalism.setTilt(0,1));
- for(let n=0;n<100;n++){await p.clock.runFor(16);if((await state()).actor.vy<0)break;}
- assert.ok((await state()).actor.vy<0);assert.equal((await state()).tutorialOpen,false);
+ await teleport(4.5,1.5);await p.evaluate(()=>window.__corogalism.setTilt(1,0));
+ for(let n=0;n<100;n++){await p.clock.runFor(16);if((await state()).actor.vx<0)break;}
+ assert.ok((await state()).actor.vx<0);assert.equal((await state()).tutorialOpen,false);
  const time=(await state()).timeMs;await p.clock.runFor(750);assert.equal(await lesson(),'rubber');assert.ok((await state()).timeMs>=time+700);
- await p.evaluate(()=>window.__corogalism.setTilt(0,-1));const before=await state();await p.clock.runFor(400);assert.ok((await state()).timeMs>=before.timeMs+380);assert.notEqual((await state()).actor.y,before.actor.y);
+ await p.evaluate(()=>window.__corogalism.setTilt(-1,0));const before=await state();await p.clock.runFor(400);assert.ok((await state()).timeMs>=before.timeMs+380);assert.notEqual((await state()).actor.x,before.actor.x);
  await teleport(.5,4.5);await p.clock.runFor(6000);assert.equal(await lesson(),'rubber');assert.equal(await p.locator('#tutorial-lesson').evaluate(el=>el.classList.contains('is-updated')),false);
  assert.deepEqual(await p.locator('#board').boundingBox(),box);assert.equal(await p.evaluate(()=>scrollY),scroll);
  await teleport(3.5,.5);await p.clock.runFor(700);assert.equal(await lesson(),'candy');
@@ -32,7 +32,7 @@ try{
  await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations()[0]?.play());
  await teleport(5.5,2.5);await p.clock.runFor(720);assert.equal(await lesson(),'leaf');await teleport(.5,.5);await teleport(3.5,.5);await p.clock.runFor(1000);assert.equal(await lesson(),'leaf','repeat material does not replace current explanation');
  // 次の更新待ちも、手動ポーズ中は進めない。
- await teleport(3.5,3.5);await click('btn-pause');await p.clock.runFor(5000);assert.equal(await lesson(),'leaf');await click('btn-resume');await ready();await p.clock.runFor(720);assert.equal(await lesson(),'rest');
+ await teleport(3.5,4.5);await click('btn-pause');await p.clock.runFor(5000);assert.equal(await lesson(),'leaf');await click('btn-resume');await ready();await p.clock.runFor(720);assert.equal(await lesson(),'rest');
  await teleport(1.5,4.5);await p.clock.runFor(750);assert.equal(await lesson(),'sticky');const trap=(await state()).trap.elapsed;await p.clock.runFor(1100);assert.ok((await state()).trap.elapsed>=trap+1);await p.clock.runFor(1800);assert.equal((await state()).trap,null);assert.equal(await lesson(),'sticky');
  const panel=await p.locator('#tutorial-lesson').boundingBox();assert.ok(panel.y>=box.y+box.height);assert.ok(panel.y+panel.height<=height+2);assert.deepEqual(await p.locator('#board').boundingBox(),box);
  assert.equal(await p.locator('#tutorial-lesson button').count(),0);assert.equal(await p.locator('#tutorial-lesson progress').count(),0);
