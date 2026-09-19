@@ -34,7 +34,18 @@ test('説明は0.7秒後に更新し、残し続け、各素材は初回だけ',
  t.contact('moss');t.contact('spike');t.contact('moss');t.tick(700);assert.equal(t.active,'moss');t.tick(700);assert.equal(t.active,'spike');t.tick(60000);assert.equal(t.active,'spike');
  t.reset();assert.equal(t.active,null);t.contact('rubber');t.tick(700);assert.equal(t.active,'rubber');
 });
-test('特殊壁は各1区間で、壁の大半を標準にする',()=>{
- const s=createTutorialStage();for(const id of ['rubber','stone','spike','moss'])assert.equal(s.walls.filter(w=>w.materialId===id).length,1);
+test('体験用のゴムとトゲを増やし、壁の大半を標準にする',()=>{
+ const s=createTutorialStage();for(const [id,count] of [['rubber',3],['spike',3],['stone',1],['moss',1]])assert.equal(s.walls.filter(w=>w.materialId===id).length,count);
  assert.ok(s.walls.filter(w=>w.materialId==='default').length/s.walls.length>.8);
+});
+
+test('横通路の助走でゴムの反発とトゲの被弾を体験できる',()=>{
+ for(const [x,y,direction,id] of [[2.5,1.5,1,'rubber'],[5.5,3.5,-1,'spike']]){
+  const p=createStagePlay(0,null,{tutorial:true});p.teleport(x,y);
+  let hit=null;
+  for(let i=0;i<600&&!hit;i++)p.advance({dt:1/120,elapsedMs:1000/120,tilt:{x:direction*.5,y:0},base:BASE,onImpact(speed,wall){hit={speed,id:wall.materialId};}});
+  assert.ok(hit,'静止から一定の傾きで通路の先へ到達');assert.equal(hit.id,id);assert.ok(hit.speed>1.2,'ダメージ閾値を超える助走速度');
+  if(id==='rubber'){assert.ok(p.actor.vx*direction<0);assert.equal(p.hp.value,p.hp.max);}
+  else assert.ok(p.hp.value<p.hp.max);
+ }
 });
