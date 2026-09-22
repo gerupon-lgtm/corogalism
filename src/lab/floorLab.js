@@ -45,7 +45,7 @@ $('pointer').onclick = () => pointerMode();
 $('calibrate').onclick = () => { tilt.reset(); sensor.calibrate(); $('status').textContent = '今の姿勢で少し静止してください。'; scheduleFallback(requestId); };
 function reset(x = 0.5, y = 0.5) { Object.assign(actor, { x, y, vx: 0, vy: 0 }); tilt.reset(); won = false; }
 $('reset').onclick = () => reset();
-$('plaza').onclick = () => reset(2.7, 5.7);
+$('plaza').onclick = () => { const cell = stage.maze.path[Math.floor(stage.maze.path.length / 2)]; reset(cell.x + .5, cell.y + .5); };
 $('pause').onclick = () => { paused = !paused; tilt.reset(); $('pause').textContent = paused ? '再開' : '一時停止'; };
 function updateFloor() {
   applyFloor(stage, type, settings);
@@ -61,7 +61,7 @@ for (const [key, option] of Object.entries(FLOOR_OPTIONS)) {
 for (const key of Object.keys(settings)) $(key).oninput = () => { settings[key] = Number($(key).value); updateFloor(); };
 $('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); };
 $('copy').onclick = async () => {
-  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 3, floor: type, mode, ...settings }, null, 2);
+  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 4, floor: type, mode, ...settings }, null, 2);
   $('settings-text').hidden = false; $('settings-text').value = text;
   try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'コピーしました。この設定と感想を送ってください。'; }
   catch { $('settings-text').focus(); $('settings-text').select(); $('copy-status').textContent = '下の設定値を選択してコピーしてください。'; }
@@ -89,10 +89,10 @@ function draw(now) {
   for (let y = 0; y < 7; y++) for (let x = 0; x < 7; x++) {
     const p = camera.toScreen(x, y); ctx.strokeStyle = '#e8ddc8'; ctx.strokeRect(p.px, p.py, camera.toPx(1), camera.toPx(1));
   }
-  drawFloorVisuals(ctx, camera, { type, settings, actor, time: visualTime, reduced: reducedMotion.matches });
-  for (const wall of stage.walls) { const p = camera.toScreen(wall.x, wall.y); ctx.fillStyle = '#ab865f'; ctx.fillRect(p.px, p.py, camera.toPx(wall.w), camera.toPx(wall.h)); }
-  circle(5.5, .5, .34, '#618c6b'); label('GOAL', 5.5, .57, '#fff');
-  label('START', .6, .5); label('広場', 4.5, 6.6);
+  drawFloorVisuals(ctx, camera, { type, settings, actor, time: visualTime, reduced: reducedMotion.matches, stage });
+  for (const wall of stage.walls) { const p = camera.toScreen(wall.x, wall.y); ctx.fillStyle = '#b45b76'; ctx.fillRect(p.px, p.py, camera.toPx(wall.w), camera.toPx(wall.h)); }
+  circle(6.5, 6.5, .34, '#618c6b'); label('GOAL', 6.5, 6.57, '#fff');
+  label('START', .6, .5);
   const p = camera.toScreen(actor.x, actor.y), r = camera.toPx(actor.r);
   const gradient = ctx.createRadialGradient(p.px - r * .3, p.py - r * .4, r * .08, p.px, p.py, r);
   gradient.addColorStop(0, '#fff'); gradient.addColorStop(.3, '#a6dccd'); gradient.addColorStop(1, '#326754');
@@ -106,7 +106,7 @@ function frame(now) {
     // 描画頻度による操作差を抑え、小さい刻みで既存の物理を進める。
     const count = Math.max(1, Math.ceil(dt / (1 / 120)));
     for (let i = 0; i < count; i++) { tilt.update(dt / count, BASE.inputSmoothing); stepPhysics({ actor, stage, tilt: tilt.value, base: BASE, dt: dt / count }); }
-    if (!won && Math.hypot(actor.x - 5.5, actor.y - .5) < .35) { won = true; $('status').textContent = 'ゴール！ スタートへ戻るか、ほかの床でも試してみよう。'; }
+    if (!won && Math.hypot(actor.x - 6.5, actor.y - 6.5) < .35) { won = true; $('status').textContent = 'ゴール！ スタートへ戻るか、ほかの床でも試してみよう。'; }
   }
   draw(now); requestAnimationFrame(frame);
 }

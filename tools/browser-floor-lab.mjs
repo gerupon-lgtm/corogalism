@@ -19,10 +19,11 @@ try {
       assert.equal(await page.evaluate(() => window.__floorLab.actor.x), .5);
     }
     await page.locator('[data-type=gravity]').click(); await page.locator('#plaza').click();
+    const start = await page.evaluate(() => ({x:window.__floorLab.actor.x,y:window.__floorLab.actor.y}));
     const box = await page.locator('#board').boundingBox();
     await page.mouse.move(box.x + box.width * .8, box.y + box.height * .5); await page.mouse.down();
     await page.clock.runFor(350); await page.mouse.up();
-    assert.ok(await page.evaluate(() => window.__floorLab.actor.x > 2.7));
+    assert.ok(await page.evaluate(start => Math.hypot(window.__floorLab.actor.x-start.x,window.__floorLab.actor.y-start.y) > .01, start));
     await page.locator('#pause').click(); const before = await page.evaluate(() => window.__floorLab.actor.x);
     await page.clock.runFor(400); assert.equal(await page.evaluate(() => window.__floorLab.actor.x), before);
     await page.locator('#pause').click();

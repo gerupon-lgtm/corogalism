@@ -1,10 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createFloorLab, applyFloor } from '../src/lab/floorModel.js';
+import { createFloorLab, applyFloor as applyActualFloor } from '../src/lab/floorModel.js';
 import { sampleZone } from '../src/world/stage.js';
 import { BASE, FLOOR_LAB } from '../src/config/gameConfig.js';
 import { stepPhysics } from '../src/physics/integrator.js';
 import { checkReachability } from '../src/maze/validator.js';
+// 摩擦・慣性・単一の力場の検証は壁のない床で分離して測る。
+function applyFloor(stage, type, settings) {
+  stage.walls = [];
+  applyActualFloor(stage, type, settings);
+  if (type === 'gravity' || type === 'repulsion') stage.zones = stage.zones.filter(z => z.x === 4.5 && z.y === 4.5);
+}
+
 
 test('氷は逆入力後も滑り、減速してから反転する。速いほど停止距離が長い', () => {
   function brake(type, speed) {
@@ -33,7 +40,7 @@ test('氷の発進は通常と同じ加速度で始まり、斜め入力時に�
   for (let i = 0; i < 24; i++) stepPhysics({ actor, stage, tilt: { x: 0, y: -1 }, base: BASE, dt: 1 / 240 });
   assert.ok(actor.vx > 2.8);
   assert.ok(actor.vy < 0 && actor.vy > -1);
-  Object.assign(actor, { x: 2.5, y: 4.5 });
+  applyActualFloor(stage, 'normal', FLOOR_LAB);
   assert.equal(sampleZone(stage, actor).accelK, 1);
 });
 
@@ -71,4 +78,26 @@ test('広場の横をかすめる球は引力で内側、斥力で外側に曲�
     assert.ok(type === 'gravity' ? actor.y < 5.1 : actor.y > 5.1);
     applyFloor(stage, 'normal', FLOOR_LAB); assert.equal(stage.zones.length, 0);
   }
+});
+
+
+test('固定迷路は全壁ゴム・全面床で、切替後も同じ迷路を使う', () => {
+  const { stage } = createFloorLab();
+  const before = JSON.stringify(stage.maze);
+  assert.ok(stage.walls.every(w => w.materialId === 'rubber'));
+  assert.ok(stage.maze.turns > 5);
+  for (const type of ['ice', 'sand']) {
+    applyActualFloor(stage, type, FLOOR_LAB);
+    assert.equal(stage.zones[0].cells.length, 49);
+    for (let y=0;y<7;y++) for(let x=0;x<7;x++) {
+      assert.equal(sampleZone(stage,{x:x+.5,y:y+.5,vx:0,vy:0}).frictionK,FLOOR_LAB[type]);
+    }
+  }
+  applyActualFloor(stage,'gravity',FLOOR_LAB);
+  assert.equal(stage.zones.length,16);
+  for(let y=.2;y<7;y+=.25) for(let x=.2;x<7;x+=.25) {
+    const z=sampleZone(stage,{x,y});
+    assert.ok(Math.hypot(z.forceX,z.forceY)<=FLOOR_LAB.force+1e-9);
+  }
+  assert.equal(JSON.stringify(stage.maze),before);
 });

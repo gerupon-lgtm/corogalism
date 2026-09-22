@@ -1,7 +1,8 @@
-import { PATCH_CELLS } from './floorModel.js';
+import { sampleZone } from '../world/stage.js';
+import { PATCH_CELLS, FIELD_CENTERS } from './floorModel.js';
 
 // 物理に触れず、セル座標の描画だけを担当する。
-export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, reduced }) {
+export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, reduced, stage }) {
   ctx.save();
   ctx.scale(camera.toPx(1), camera.toPx(1));
   const circle = (x, y, r, fill) => {
@@ -53,7 +54,9 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     }
   }
   if (type === 'gravity' || type === 'repulsion') {
-    const inward=type==='gravity', x=4.5, y=4.5, radius=settings.radius;
+    for (const {x,y} of FIELD_CENTERS) {
+    ctx.globalAlpha=1;
+    const inward=type==='gravity', radius=settings.radius;
     const rgb=inward?'127,102,175':'208,122,75';
     const color=inward?'#8066a6':'#b5683f';
     const membrane=ctx.createRadialGradient(x,y,0,x,y,radius);
@@ -80,12 +83,12 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     disk.addColorStop(1,inward?'#e0d4eb':'#a76945');
     circle(x,y,.29,disk);
     ctx.strokeStyle=inward?'#f4eaff':'#9b603e'; ctx.lineWidth=.025; circle(x,y,.31);
-    const dx=x-actor.x,dy=y-actor.y,d=Math.hypot(dx,dy);
-    if(d>0.02&&d<radius) {
-      const a=Math.atan2(dy,dx)+(inward?0:Math.PI), u=d/radius;
-      ctx.globalAlpha=4*u*(1-u);
-      // 球の手前を隠さず、力が働く方向へ短い矢印を添える。
-      arrow(actor.x+Math.cos(a)*(actor.r+.16),actor.y+Math.sin(a)*(actor.r+.16),a,.22,color);
+    }
+    const force = sampleZone(stage, actor), magnitude = Math.hypot(force.forceX, force.forceY);
+    if (magnitude > .01) {
+      const a = Math.atan2(force.forceY, force.forceX);
+      ctx.globalAlpha = Math.min(1, magnitude / settings.force);
+      arrow(actor.x+Math.cos(a)*(actor.r+.16),actor.y+Math.sin(a)*(actor.r+.16),a,.22,type==='gravity'?'#8066a6':'#b5683f');
     }
   }
   ctx.restore();

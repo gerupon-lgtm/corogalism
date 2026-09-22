@@ -103,6 +103,19 @@ export function sampleZone(stage, actor) {
   if (!stage.zones.length) return NEUTRAL_ZONE;
   const cx = Math.floor(actor.x);
   const cy = Math.floor(actor.y);
+  const radial = stage.zones.filter(z => z.kind === 'radial');
+  if (radial.length > 1) {
+    let forceX = 0, forceY = 0, limit = 0;
+    for (const z of radial) {
+      const dx = z.x - actor.x, dy = z.y - actor.y, distance = Math.hypot(dx, dy);
+      limit = Math.max(limit, Math.abs(z.strength));
+      if (distance >= z.radius) continue;
+      const scale = z.strength * 4 * (1 - distance / z.radius) / z.radius;
+      forceX += dx * scale; forceY += dy * scale;
+    }
+    const scale = Math.min(1, limit / (Math.hypot(forceX, forceY) || 1));
+    return { ...NEUTRAL_ZONE, forceX: forceX * scale, forceY: forceY * scale };
+  }
   for (const z of stage.zones) {
     if (z.kind === 'radial') {
       const dx = z.x - actor.x, dy = z.y - actor.y;
