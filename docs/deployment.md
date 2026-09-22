@@ -275,3 +275,8 @@ T-247公開完了: アプリe61583b、[Pages35706033174](https://github.com/geru
 ## T-248 床の質感・力の可視化
 
 おためし2を公開。アプリd0c28cd、[Pages35707709692](https://github.com/gerupon-lgtm/corogalism/actions/runs/35707709692)成功。変更資材5件のSHA256一致、precache84資材。127テスト成功。正式URLのbrowser-floor-visualsで4種類の描画・停止・動きを減らす設定を確認。browser-floor-labで3幅・センサー3経路・設定コピー・旧PWA案内・オフライン起動成功。検証のセンサー開始前にページ初期化待ちを追加し、通信待ちによるテストの先走りを修正した。実機の見た目の評価はユーザー試遊待ち。
+
+
+## T-249 氷の慣性・外周線の撤去
+
+おためし3公開。アプリ8bb632f、[Pages35709185177](https://github.com/gerupon-lgtm/corogalism/actions/runs/35709185177)成功。変更資材7件SHA256一致。129テスト成功。公開URLのbrowser-floor-visualsとbrowser-floor-labで4床・停止・動きを減らす設定、3画面幅・センサー3経路・旧PWA案内・オフライン確認成功。氷0.08と速度に応じた加減速の実機の手触りはユーザー試遊待ち。
