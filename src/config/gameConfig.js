@@ -17,6 +17,9 @@ export const BASE = {
   mazeSize: 7,           // フェーズ1固定。generateMaze はサイズを引数で受ける
 };
 
+/** T-247: おためし専用。正式な床の採用値ではない。 */
+export const FLOOR_LAB = { ice: 0.2, sand: 2.4, force: 5, radius: 1.6 };
+
 /**
  * 実効値のクランプ範囲。
  * 根拠: フェーズ0プロトタイプのスライダー範囲＝人が実機で触って操作が成立した範囲。

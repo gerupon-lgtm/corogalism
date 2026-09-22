@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>床のおためし | コロガリズム</title>
+  <link rel="stylesheet" href="floor-lab.css">
+</head>
+<body><main>
+  <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし 1</span></header>
+  <h1>床のおためし</h1>
+  <p class="intro">すべる、止まる、引かれる、押される。同じコースで比べよう。</p>
+  <nav id="floors" aria-label="床を選ぶ"></nav>
+  <p id="hint"></p>
+  <div class="board"><canvas id="board" aria-label="床の試遊コース。画面操作では進みたい方向を押し続けます。"></canvas></div>
+  <p id="status" role="status">画面操作：盤面の中心から進みたい方向を押し続けてください。</p>
+  <div class="buttons"><button id="reset">スタートへ</button><button id="plaza">広場へ</button><button id="pause">一時停止</button></div>
+  <div class="buttons"><button id="sensor">傾きで遊ぶ</button><button id="pointer">画面で遊ぶ</button><button id="calibrate" disabled>傾きを合わせる</button></div>
+  <details open><summary>床の強さを調整</summary>
+    <label>氷の滑りやすさ <output id="ice-value"></output><input id="ice" type="range" min="0.08" max="0.8" step="0.04" value="0.2"></label>
+    <label>砂の止まりやすさ <output id="sand-value"></output><input id="sand" type="range" min="1.2" max="3.2" step="0.1" value="2.4"></label>
+    <label>引く・押す強さ <output id="force-value"></output><input id="force" type="range" min="1" max="12" step="0.5" value="5"></label>
+    <label>力の届く範囲 <output id="radius-value"></output><input id="radius" type="range" min="0.8" max="2" step="0.1" value="1.6"></label>
+    <p class="note">氷は小さい数値ほど滑ります。輪の中で引力・斥力が働きます。</p>
+    <div class="buttons"><button id="defaults">初期値に戻す</button><button id="copy">設定をコピー</button></div>
+    <textarea id="settings-text" aria-label="共有する設定値" readonly hidden></textarea>
+    <p id="copy-status" role="status"></p>
+  </details>
+  <footer>時間制限・げんき消費・記録保存はありません。本編への採用前の試遊ページです。</footer>
+</main><script type="module" src="src/lab/floorLab.js"></script></body></html>

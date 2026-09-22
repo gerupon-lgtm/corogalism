@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '285c114ec0a187a3';
+self.PRECACHE_VERSION = '8b7598cca7095333';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -25,6 +25,8 @@ self.PRECACHE_FILES = [
   "assets/pwa/icon.svg",
   "assets/toy-wall-atlas.png",
   "assets/tutorial-hold.png",
+  "floor-lab.css",
+  "floor-lab.html",
   "index.html",
   "manifest.webmanifest",
   "src/audio/audioSettings.js",
@@ -42,6 +44,8 @@ self.PRECACHE_FILES = [
   "src/input/stableCalibration.js",
   "src/input/tiltSource.js",
   "src/input/tiltVector.js",
+  "src/lab/floorLab.js",
+  "src/lab/floorModel.js",
   "src/main.js",
   "src/maze/generator.js",
   "src/maze/path.js",

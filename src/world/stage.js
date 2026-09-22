@@ -104,6 +104,14 @@ export function sampleZone(stage, actor) {
   const cx = Math.floor(actor.x);
   const cy = Math.floor(actor.y);
   for (const z of stage.zones) {
+    if (z.kind === 'radial') {
+      const dx = z.x - actor.x, dy = z.y - actor.y;
+      const distance = Math.hypot(dx, dy);
+      if (distance >= z.radius) continue;
+      // 中心でも境界でも力は0。中心を横切る際に方向が不連続にならない。
+      const scale = z.strength * 4 * (1 - distance / z.radius) / z.radius;
+      return { ...NEUTRAL_ZONE, ...z, forceX: dx * scale, forceY: dy * scale };
+    }
     if (z.cells.some((c) => c.x === cx && c.y === cy)) return z;
   }
   return NEUTRAL_ZONE;

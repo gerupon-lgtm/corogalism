@@ -11,7 +11,7 @@ async function walk(dir) {
   }
   return files;
 }
-const files=['index.html','style.css','manifest.webmanifest',...await walk('src/'),...await walk('assets/')].sort();
+const files=['index.html','style.css','floor-lab.html','floor-lab.css','manifest.webmanifest',...await walk('src/'),...await walk('assets/')].sort();
 const hash=createHash('sha256');
 for(const f of [...files,'sw.js']) {hash.update(f);hash.update(await readFile(new URL(f,base)));}
 const version=hash.digest('hex').slice(0,16);
