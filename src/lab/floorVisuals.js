@@ -1,5 +1,4 @@
 import { sampleZone } from '../world/stage.js';
-import { PATCH_CELLS, FIELD_CENTERS } from './floorModel.js';
 
 // 物理に触れず、セル座標の描画だけを担当する。
 export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, reduced, stage }) {
@@ -15,8 +14,9 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     line([[-length/2,0],[length/2,0]]);
     line([[length/2-.07,-.055],[length/2,0],[length/2-.07,.055]]); ctx.restore();
   };
-  if (type === 'ice' || type === 'sand') {
-    for (const {x,y} of PATCH_CELLS) {
+  {
+    const patches = stage.zones.filter(z=>z.kind === 'ice' || z.kind === 'sand').flatMap(z=>z.cells.map(c=>({...c,type:z.kind})));
+    for (const {x,y,type} of patches) {
       ctx.save(); ctx.beginPath(); ctx.rect(x+.025,y+.025,.95,.95); ctx.clip();
       const tint = ctx.createLinearGradient(x,y,x+1,y+1);
       tint.addColorStop(0, type === 'ice' ? '#e6fbfc' : '#f6dfaa');
@@ -42,7 +42,7 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
       }
       ctx.restore();
     }
-    const onSand = type === 'sand' && PATCH_CELLS.some(c=>c.x===Math.floor(actor.x)&&c.y===Math.floor(actor.y));
+    const onSand = patches.some(c=>c.type==='sand'&&c.x===Math.floor(actor.x)&&c.y===Math.floor(actor.y));
     const speed = Math.hypot(actor.vx,actor.vy);
     if (onSand && speed > .15 && !reduced) {
       const angle=Math.atan2(actor.vy,actor.vx);
@@ -53,10 +53,10 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
       }
     }
   }
-  if (type === 'gravity' || type === 'repulsion') {
-    for (const {x,y} of FIELD_CENTERS) {
+  if (stage.zones.some(z=>z.kind==='radial')) {
+    for (const {x,y,radius,strength,corner} of stage.zones.filter(z=>z.kind==='radial')) {
     ctx.globalAlpha=1;
-    const inward=type==='gravity', radius=settings.radius;
+    const inward=strength>0;
     const rgb=inward?'127,102,175':'208,122,75';
     const color=inward?'#8066a6':'#b5683f';
     const membrane=ctx.createRadialGradient(x,y,0,x,y,radius);
@@ -75,6 +75,8 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     }
     ctx.globalAlpha=1;
     // 凹んだすり鉢と凸のドームを陰影・輪郭で区別する。
+    ctx.save();
+    if (corner) { ctx.translate(x,y); ctx.scale(.6,.6); ctx.translate(-x,-y); }
     circle(x,y+.035,.36,'#6a4d4430');
     circle(x,y,.35,inward?'#b5a2ce':'#dcb493');
     const disk=ctx.createRadialGradient(x-.1,y-.12,.025,x,y,.31);
@@ -83,12 +85,13 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     disk.addColorStop(1,inward?'#e0d4eb':'#a76945');
     circle(x,y,.29,disk);
     ctx.strokeStyle=inward?'#f4eaff':'#9b603e'; ctx.lineWidth=.025; circle(x,y,.31);
+    ctx.restore();
     }
     const force = sampleZone(stage, actor), magnitude = Math.hypot(force.forceX, force.forceY);
     if (magnitude > .01) {
       const a = Math.atan2(force.forceY, force.forceX);
       ctx.globalAlpha = Math.min(1, magnitude / settings.force);
-      arrow(actor.x+Math.cos(a)*(actor.r+.16),actor.y+Math.sin(a)*(actor.r+.16),a,.22,type==='gravity'?'#8066a6':'#b5683f');
+      arrow(actor.x+Math.cos(a)*(actor.r+.16),actor.y+Math.sin(a)*(actor.r+.16),a,.22,stage.zones.find(z=>z.kind==='radial').strength>0?'#8066a6':'#b5683f');
     }
   }
   ctx.restore();

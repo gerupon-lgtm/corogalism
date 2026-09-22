@@ -103,39 +103,28 @@ export function sampleZone(stage, actor) {
   if (!stage.zones.length) return NEUTRAL_ZONE;
   const cx = Math.floor(actor.x);
   const cy = Math.floor(actor.y);
-  const radial = stage.zones.filter(z => z.kind === 'radial');
-  if (radial.length > 1) {
-    let forceX = 0, forceY = 0, limit = 0;
-    for (const z of radial) {
-      const dx = z.x - actor.x, dy = z.y - actor.y, distance = Math.hypot(dx, dy);
-      limit = Math.max(limit, Math.abs(z.strength));
-      if (distance >= z.radius) continue;
-      const scale = z.strength * 4 * (1 - distance / z.radius) / z.radius;
-      forceX += dx * scale; forceY += dy * scale;
-    }
-    const scale = Math.min(1, limit / (Math.hypot(forceX, forceY) || 1));
-    return { ...NEUTRAL_ZONE, forceX: forceX * scale, forceY: forceY * scale };
-  }
+  let result = { ...NEUTRAL_ZONE };
   for (const z of stage.zones) {
-    if (z.kind === 'radial') {
-      const dx = z.x - actor.x, dy = z.y - actor.y;
-      const distance = Math.hypot(dx, dy);
-      if (distance >= z.radius) continue;
-      // 中心でも境界でも力は0。中心を横切る際に方向が不連続にならない。
-      const scale = z.strength * 4 * (1 - distance / z.radius) / z.radius;
-      return { ...NEUTRAL_ZONE, ...z, forceX: dx * scale, forceY: dy * scale };
+    if (z.kind === 'radial' || !z.cells?.some(c => c.x === cx && c.y === cy)) continue;
+    result = { ...result, ...z };
+    if (z.kind === 'ice') {
+      const speed = Math.hypot(actor.vx, actor.vy);
+      result.accelK = z.minAccelK + (1 - z.minAccelK) / (1 + (speed / z.transitionSpeed) ** 2);
     }
-    if (z.cells.some((c) => c.x === cx && c.y === cy)) {
-      if (z.kind === 'ice') {
-        // 速度がある間は傾きによる加減速を弱め、静止に近づくほど通常の操作性へ戻す。
-        const speed = Math.hypot(actor.vx, actor.vy);
-        const accelK = z.minAccelK + (1 - z.minAccelK) / (1 + (speed / z.transitionSpeed) ** 2);
-        return { ...z, accelK };
-      }
-      return z;
-    }
+    break;
   }
-  return NEUTRAL_ZONE;
+  // 床の摩擦・加速と、力場の外力を同時に解決する。
+  let forceX = 0, forceY = 0, limit = 0;
+  for (const z of stage.zones) {
+    if (z.kind !== 'radial') continue;
+    const dx = z.x - actor.x, dy = z.y - actor.y, distance = Math.hypot(dx, dy);
+    limit = Math.max(limit, Math.abs(z.strength));
+    if (distance >= z.radius) continue;
+    const scale = z.strength * 4 * (1 - distance / z.radius) / z.radius;
+    forceX += dx * scale; forceY += dy * scale;
+  }
+  const scale = Math.min(1, limit / (Math.hypot(forceX, forceY) || 1));
+  return { ...result, forceX: result.forceX + forceX * scale, forceY: result.forceY + forceY * scale };
 }
 
 /** ゴールの中心（マス単位） */

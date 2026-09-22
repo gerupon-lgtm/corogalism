@@ -5,6 +5,38 @@ import { sampleZone } from '../src/world/stage.js';
 import { BASE, FLOOR_LAB } from '../src/config/gameConfig.js';
 import { stepPhysics } from '../src/physics/integrator.js';
 import { checkReachability } from '../src/maze/validator.js';
+import { PATTERNS } from '../src/lab/floorModel.js';
+import { resolveParams } from '../src/physics/resolveParams.js';
+
+test('複合パターンは同一迷路・安全壁で床の対比と方向に沿う力を配置', () => {
+  const {stage, actor} = createFloorLab();
+  const maze = JSON.stringify(stage.maze);
+  for (const pattern of Object.keys(PATTERNS)) {
+    applyActualFloor(stage, 'normal', FLOOR_LAB, pattern);
+    assert.equal(JSON.stringify(stage.maze), maze);
+    assert.ok(stage.walls.every(w=>w.materialId==='rubber'));
+    if (pattern==='iceRubber') assert.equal(stage.zones[0].cells.length,49);
+    if (pattern==='iceSand') {
+      assert.equal(stage.zones.length,2);
+      assert.equal(new Set(stage.zones.flatMap(z=>z.cells.map(c=>`${c.x},${c.y}`))).size,49);
+      assert.ok(stage.zones.every(z=>z.cells.length>0));
+    }
+    for (const site of stage.labSites) {
+      Object.assign(actor,{x:site.cell.x+.5,y:site.cell.y+.5,vx:0,vy:0});
+      const z=sampleZone(stage,actor);
+      assert.ok(z.forceX*site.dx+z.forceY*site.dy<0, pattern);
+      const p=resolveParams({base:BASE,character:actor.character,zone:z});
+      assert.ok(p.accel>Math.hypot(p.forceX,p.forceY));
+      if(pattern.startsWith('ice')) {
+        assert.equal(z.frictionK,FLOOR_LAB.ice);
+        assert.equal(stage.zones.filter(z=>z.kind==='radial').length,1);
+        assert.equal(stage.zones.find(z=>z.kind==='ice').cells.length,4);
+        actor.vx=3;
+        assert.ok(sampleZone(stage,actor).accelK<.5);
+      }
+    }
+  }
+});
 // 摩擦・慣性・単一の力場の検証は壁のない床で分離して測る。
 function applyFloor(stage, type, settings) {
   stage.walls = [];

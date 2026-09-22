@@ -36,3 +36,8 @@ T-247で氷・砂・重力・反重力の別ページ試遊を実装。`floor-la
 - T-209の旧バージョンの序盤再試遊: 最新のやさしい／通常モードの評価に読み替える。
 
 参照: docs/tasks.md、docs/deployment.md、docs/tutorial-continuous.md、docs/leaf-floors-pwa.md、docs/sensor-ideas.md、AGENTS.md。
+
+
+## 床の追加判断（T-251）
+
+全面氷＋全面ゴムはユーザー採用決定済み。本編への組み込み、出現タイミング・時間の調整が次の作業。おためし5で氷＋砂、折れ点の重力・反重力、短い氷＋力場を評価する。これらの正式採用は未確定。強い床効果に石・トゲを重ねない方針で試遊中。

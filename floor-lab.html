@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="floor-lab.css">
 </head>
 <body><main>
-  <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし 4</span></header>
+  <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし 5</span></header>
   <h1>床のおためし</h1>
-  <p class="intro">すべる、止まる、引かれる、押される。全面ゴム壁の同じ迷路で、床を丸ごと切り替えて比べよう。</p>
+  <p class="intro">すべる、止まる、引かれる、押される。全面ゴム壁の同じ迷路で、床と力場の組み合わせを比べよう。</p>
+  <label for="pattern">配置パターン</label><select id="pattern" style="width:100%;padding:10px;margin:8px 0;font:inherit"></select>
   <nav id="floors" aria-label="床を選ぶ"></nav>
   <p id="hint"></p>
   <div class="board"><canvas id="board" aria-label="床の試遊コース。画面操作では進みたい方向を押し続けます。"></canvas></div>

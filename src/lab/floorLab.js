@@ -4,7 +4,7 @@ import { createFixedCamera } from '../render/camera.js';
 import { createTiltVector } from '../input/tiltVector.js';
 import { createTiltSource } from '../input/tiltSource.js';
 import { createPointerSource } from '../input/pointerSource.js';
-import { createFloorLab, applyFloor, FLOOR_OPTIONS, PATCH_CELLS } from './floorModel.js';
+import { createFloorLab, applyFloor, FLOOR_OPTIONS, PATTERNS } from './floorModel.js';
 
 import { drawFloorVisuals } from './floorVisuals.js';
 
@@ -12,6 +12,7 @@ const $ = id => document.getElementById(id);
 const canvas = $('board'), ctx = canvas.getContext('2d');
 const { stage, actor } = createFloorLab();
 const settings = { ...FLOOR_LAB }, tilt = createTiltVector();
+let pattern = 'single';
 let type = 'normal', mode = 'pointer', paused = false, last = 0, sensorTimer, requestId = 0;
 let camera, won = false, visualTime = 0;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -45,14 +46,18 @@ $('pointer').onclick = () => pointerMode();
 $('calibrate').onclick = () => { tilt.reset(); sensor.calibrate(); $('status').textContent = '今の姿勢で少し静止してください。'; scheduleFallback(requestId); };
 function reset(x = 0.5, y = 0.5) { Object.assign(actor, { x, y, vx: 0, vy: 0 }); tilt.reset(); won = false; }
 $('reset').onclick = () => reset();
-$('plaza').onclick = () => { const cell = stage.maze.path[Math.floor(stage.maze.path.length / 2)]; reset(cell.x + .5, cell.y + .5); };
+$('plaza').onclick = () => { const cell = stage.maze.path[stage.labSites.length ? Math.max(0, stage.labSites[0].index-2) : Math.floor(stage.maze.path.length / 2)]; reset(cell.x + .5, cell.y + .5); };
 $('pause').onclick = () => { paused = !paused; tilt.reset(); $('pause').textContent = paused ? '再開' : '一時停止'; };
 function updateFloor() {
-  applyFloor(stage, type, settings);
-  $('hint').textContent = FLOOR_OPTIONS[type].hint;
+  applyFloor(stage, type, settings, pattern);
+  $('hint').textContent = pattern === 'single' ? FLOOR_OPTIONS[type].hint : PATTERNS[pattern].hint;
+  $('floors').hidden = pattern !== 'single';
+  $('plaza').textContent = stage.labSites.length ? '試験区間へ' : '迷路の途中へ';
   for (const button of $('floors').children) button.setAttribute('aria-pressed', String(button.dataset.type === type));
   for (const key of Object.keys(settings)) { $(key).value = settings[key]; $(key + '-value').textContent = settings[key].toFixed(2); }
 }
+for (const [key, option] of Object.entries(PATTERNS)) { const el = document.createElement('option'); el.value = key; el.textContent = option.name; $('pattern').append(el); }
+$('pattern').onchange = () => { pattern = $('pattern').value; updateFloor(); reset(); };
 for (const [key, option] of Object.entries(FLOOR_OPTIONS)) {
   const button = document.createElement('button'); button.textContent = option.name; button.dataset.type = key;
   button.onclick = () => { type = key; updateFloor(); reset(); };
@@ -61,7 +66,7 @@ for (const [key, option] of Object.entries(FLOOR_OPTIONS)) {
 for (const key of Object.keys(settings)) $(key).oninput = () => { settings[key] = Number($(key).value); updateFloor(); };
 $('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); };
 $('copy').onclick = async () => {
-  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 4, floor: type, mode, ...settings }, null, 2);
+  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 5, pattern, floor: type, mode, ...settings }, null, 2);
   $('settings-text').hidden = false; $('settings-text').value = text;
   try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'コピーしました。この設定と感想を送ってください。'; }
   catch { $('settings-text').focus(); $('settings-text').select(); $('copy-status').textContent = '下の設定値を選択してコピーしてください。'; }
@@ -113,4 +118,4 @@ function frame(now) {
 document.addEventListener('visibilitychange', () => { tilt.reset(); last = 0; if (document.hidden) { paused = true; $('pause').textContent = '再開'; } });
 window.addEventListener('blur', () => { tilt.reset(); paused = true; $('pause').textContent = '再開'; });
 pointerMode(); updateFloor(); requestAnimationFrame(frame);
-if (new URLSearchParams(location.search).has('debug')) window.__floorLab = { stage, actor, settings, get type() { return type; }, get mode() { return mode; } };
+if (new URLSearchParams(location.search).has('debug')) window.__floorLab = { stage, actor, settings, get pattern() { return pattern; }, get type() { return type; }, get mode() { return mode; } };
