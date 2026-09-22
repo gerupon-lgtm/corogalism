@@ -398,11 +398,15 @@ async function selectMode(mode) {
     if (!inputReady) {
       // モードボタンのクリックから直接iOS許可を求める。
       const motionPermission = escapeInput.requestPermission();
-      tiltAllowed = await enableTilt();
+      const tiltPermission = enableTilt();
+      // センサー許可をユーザー操作中に要求した後、await前に全画面を要求する。
+      portrait.requestOnStart();
+      tiltAllowed = await tiltPermission;
       await motionPermission;
       applyMode(settings.mode);
       inputReady = true;
     }
+    portrait.requestOnStart();
     if (mode === 'tutorial' && settings.mode === 'tilt') tiltSource.calibrate();
     startGame(mode, mode === 'practice' ? initialSeed() : seed);
     // 初回センサー確認でボタンを無効化していても、遷移完了後に操作音を1回鳴らす。
@@ -505,4 +509,4 @@ settingsUi.render(settings);
 renderSound();
 requestAnimationFrame(frame);
 
-initPortraitLock();
+const portrait = initPortraitLock();

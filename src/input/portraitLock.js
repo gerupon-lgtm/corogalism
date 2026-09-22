@@ -2,10 +2,10 @@
 export function initPortraitLock() {
   const button = document.getElementById('portrait-lock');
   const note = document.getElementById('portrait-note');
-  if (!button || !note) return;
+  if (!button || !note) return { requestOnStart() {} };
   const orientation = window.screen?.orientation;
   const fallback = '固定できない場合は、端末の自動回転をOFF（縦向きロック）にしてください。傾き操作はそのまま使えます。';
-  let busy = false;
+  let busy = false, automaticAttempted = false;
   async function lock() {
     if (typeof orientation?.lock !== 'function') return false;
     try { await orientation.lock('portrait-primary'); return true; }
@@ -20,7 +20,6 @@ export function initPortraitLock() {
         note.textContent = await lock() ? '縦向きに固定しました。' : fallback;
         return;
       }
-      if (typeof orientation?.lock !== 'function') { note.textContent = fallback; return; }
       if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
         try { await document.documentElement.requestFullscreen(); }
         catch { /* 全画面が拒否されても固定だけは試す */ }
@@ -34,5 +33,15 @@ export function initPortraitLock() {
     if (document.fullscreenElement) void request(false);
     else note.textContent = '全画面を解除しました。' + fallback;
   });
-  void request(false);
+  // 起動時のロック待ちが開始ボタンのユーザー操作を妨げないようにする。
+  void lock().then(locked => {
+    if (!automaticAttempted && !busy) note.textContent = locked ? '縦向きに固定しました。' : fallback;
+  });
+  return {
+    requestOnStart() {
+      if (automaticAttempted) return;
+      automaticAttempted = true;
+      void request(true);
+    },
+  };
 }

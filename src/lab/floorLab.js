@@ -46,7 +46,9 @@ function scheduleFallback(id) {
 }
 $('sensor').onclick = async () => {
   const id = ++requestId;
-  const permission = await sensor.requestPermission();
+  const pendingPermission = sensor.requestPermission();
+  portrait.requestOnStart();
+  const permission = await pendingPermission;
   if (id !== requestId) return;
   if (permission === 'denied' || permission === 'unsupported') { pointerMode('センサーを利用できないため、画面操作で遊べます。'); return; }
   pointer.stop(); tilt.reset(); if (mode !== 'tilt' && trial.started) trial.practice = true; mode = 'tilt'; sensor.calibrate();
@@ -55,7 +57,7 @@ $('sensor').onclick = async () => {
   $('status').textContent = '縦持ちで遊ぶ姿勢のまま、少し静止してください。';
   scheduleFallback(id);
 };
-$('pointer').onclick = () => pointerMode();
+$('pointer').onclick = () => { portrait.requestOnStart(); pointerMode(); };
 $('calibrate').onclick = () => { tilt.reset(); sensor.calibrate(); $('status').textContent = '今の姿勢で少し静止してください。'; scheduleFallback(requestId); };
 function reset(x = 0.5, y = 0.5) { Object.assign(actor, { x, y, vx: 0, vy: 0 }); tilt.reset(); won = false; trial = createTimeTrial(); trial.practice = x !== .5 || y !== .5; refreshTrial(); if (pattern.startsWith('timeTrial')) $('status').textContent = trial.practice ? '途中から練習中。自己ベストには記録しません。' : '動き始めると計測します。砂の手前まで勢いをつけてみよう。'; }
 $('reset').onclick = () => reset();
@@ -146,4 +148,4 @@ window.addEventListener('blur', () => { tilt.reset(); paused = true; $('pause').
 pointerMode(); updateFloor(); requestAnimationFrame(frame);
 if (new URLSearchParams(location.search).has('debug')) window.__floorLab = { stage, actor, settings, get trial() { return trial; }, get pattern() { return pattern; }, get type() { return type; }, get mode() { return mode; } };
 
-initPortraitLock();
+const portrait = initPortraitLock();
