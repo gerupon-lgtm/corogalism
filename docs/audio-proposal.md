@@ -1,5 +1,7 @@
 # BGM・効果音の検討履歴
 
+**履歴資料:** 以下は試聴提案時点の記録。BGM/SEは実装・公開・実機試聴済み。現在の動作は[audio-implementation.md](audio-implementation.md)、完了報告は[verification/device-checks.md](verification/device-checks.md)を参照。
+
 **現行v0.2.6:** v2の承認を受けゲームへ接続済み。確定仕様は `audio-implementation.md`。以下は提案・試聴時点の履歴。
 
 **試聴版v2:** v1の好評を受け、4分音符が分かる控えめなパーカッションを追加。100 BPMの各拍を刻む。`design/2026-09-12-audio-prototypes/v2/` にBGMとミックスを保存し、試聴ページも更新。
