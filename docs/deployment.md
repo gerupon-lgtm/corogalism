@@ -285,3 +285,8 @@ T-247公開完了: アプリe61583b、[Pages35706033174](https://github.com/geru
 ## T-250 全ゴム壁・全面床の迷路
 
 おためし4公開。アプリb087c40、[Pages35710206900](https://github.com/gerupon-lgtm/corogalism/actions/runs/35710206900)成功。変更資材6件SHA256一致。130テスト成功。公開URLのbrowser-floor-visualsとbrowser-floor-labで4床・演出停止、3画面幅・センサー3経路・旧PWA案内・オフライン起動確認成功。実機の迷路での手触りはユーザー試遊待ち。
+
+
+## T-251 床と力場の組み合わせ
+
+おためし5公開。アプリ4cbf9aa、[Pages35711953170](https://github.com/gerupon-lgtm/corogalism/actions/runs/35711953170)成功。変更資材7件SHA256一致。131テスト成功。正式URLで6パターン×3幅、試験区間への移動・コピー・全面比較への復帰、センサー3経路・旧PWA案内・オフライン起動確認成功。全氷＋全ゴムの採用決定を記録済み、本編への配置は後続作業。
