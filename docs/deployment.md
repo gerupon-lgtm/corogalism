@@ -290,3 +290,8 @@ T-247公開完了: アプリe61583b、[Pages35706033174](https://github.com/geru
 ## T-251 床と力場の組み合わせ
 
 おためし5公開。アプリ4cbf9aa、[Pages35711953170](https://github.com/gerupon-lgtm/corogalism/actions/runs/35711953170)成功。変更資材7件SHA256一致。131テスト成功。正式URLで6パターン×3幅、試験区間への移動・コピー・全面比較への復帰、センサー3経路・旧PWA案内・オフライン起動確認成功。全氷＋全ゴムの採用決定を記録済み、本編への配置は後続作業。
+
+
+## T-252 氷＋砂タイムトライアル
+
+おためし6公開。アプリ51435b9、[Pages35713658500](https://github.com/gerupon-lgtm/corogalism/actions/runs/35713658500)成功。変更資材5件SHA256一致、precache85資材。134テスト成功。正式URLのbrowser-floor-trialで3幅の計測・一時停止・完走保存・再読み込み・途中移動除外・設定変更を確認。browser-floor-labで3幅・センサー3経路・旧PWA案内・オフライン起動成功。本編のダメージ仕様は変更していない。
