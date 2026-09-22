@@ -3,8 +3,8 @@
 
 [hidden]{display:none!important}
 
-/* T-256: 本編と同じカメラ回避余白。全画面解除時は通常の余白へ戻る。 */
+/* T-257: 全画面の上余白は既存余白を含め合計32px以上。T-256: 本編と同じカメラ回避余白。全画面解除時は通常の余白へ戻る。 */
 :root{--camera-top:env(safe-area-inset-top,0px)}
-:root:fullscreen{--camera-top:max(32px,env(safe-area-inset-top,0px))}
-@media(display-mode:fullscreen){:root{--camera-top:max(32px,env(safe-area-inset-top,0px))}}
+:root:fullscreen{--camera-top:max(16px,calc(env(safe-area-inset-top,0px) - 16px))}
+@media(display-mode:fullscreen){:root{--camera-top:max(16px,calc(env(safe-area-inset-top,0px) - 16px))}}
 main{padding-top:calc(16px + var(--camera-top));padding-left:calc(16px + env(safe-area-inset-left,0px));padding-right:calc(16px + env(safe-area-inset-right,0px));padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))}

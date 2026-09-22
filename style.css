@@ -478,10 +478,10 @@ body[data-game-mode="tutorial"] #game-status{display:none}
  .tutorial-lesson.is-updated{border-color:#e79a19;box-shadow:0 3px #8e7957, inset 0 0 0 150px #ffd15a80}
 }
 
-/* T-256: 全画面では時計バー相当を予約。端末通知が大きければそちらを優先する。 */
+/* T-257: 全画面の上余白は既存余白を含め合計32px以上。T-256: 全画面では時計バー相当を予約。端末通知が大きければそちらを優先する。 */
 :root{--camera-top:env(safe-area-inset-top,0px)}
-:root:fullscreen{--camera-top:max(32px,env(safe-area-inset-top,0px))}
-@media(display-mode:fullscreen){:root{--camera-top:max(32px,env(safe-area-inset-top,0px))}}
+:root:fullscreen{--camera-top:max(18px,calc(env(safe-area-inset-top,0px) - 14px))}
+@media(display-mode:fullscreen){:root{--camera-top:max(18px,calc(env(safe-area-inset-top,0px) - 14px))}}
 .wrap{padding-top:calc(14px + var(--camera-top));padding-left:calc(14px + env(safe-area-inset-left,0px));padding-right:calc(14px + env(safe-area-inset-right,0px))}
 .play-guide{top:var(--camera-top);bottom:env(safe-area-inset-bottom,0px);max-height:calc(100dvh - 28px - var(--camera-top) - env(safe-area-inset-bottom,0px))}
 
