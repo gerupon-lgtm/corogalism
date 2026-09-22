@@ -8,13 +8,37 @@ import { checkReachability } from '../src/maze/validator.js';
 import { PATTERNS } from '../src/lab/floorModel.js';
 import { resolveParams } from '../src/physics/resolveParams.js';
 
+test('補助カーブは内側を開いて全セル到達可能、力場が出口方向の移動を増やす', () => {
+  const {stage,actor}=createFloorLab();
+  const original=JSON.stringify(stage.maze);
+  applyActualFloor(stage,'normal',FLOOR_LAB,'timeTrialAssist');
+  assert.equal(checkReachability(stage.maze).ok,true);
+  assert.equal(stage.zones.filter(z=>z.kind==='radial').length,6);
+  for(const site of stage.labSites) {
+    const prev=stage.maze.path[site.index-1], next=stage.maze.path[site.index+1];
+    const inner={x:prev.x+next.x-site.cell.x,y:prev.y+next.y-site.cell.y};
+    const a=stage.maze.cells[prev.y*7+prev.x],b=stage.maze.cells[inner.y*7+inner.x];
+    assert.equal(a[inner.x>prev.x?'r':inner.x<prev.x?'l':inner.y>prev.y?'b':'t'],0);
+    assert.equal(b[next.x>inner.x?'r':next.x<inner.x?'l':next.y>inner.y?'b':'t'],0);
+    const run=assisted=>{
+      Object.assign(actor,{x:site.cell.x+.5,y:site.cell.y+.5,vx:(site.cell.x-prev.x)*2,vy:(site.cell.y-prev.y)*2});
+      const trialStage={...stage,zones:assisted?stage.zones:stage.zones.filter(z=>z.kind!=='radial')};
+      for(let i=0;i<24;i++) stepPhysics({actor,stage:trialStage,tilt:{x:0,y:0},base:BASE,dt:1/120});
+      return (actor.x-site.cell.x-.5)*site.dx+(actor.y-site.cell.y-.5)*site.dy;
+    };
+    assert.ok(run(true)>run(false)+.01);
+  }
+  applyActualFloor(stage,'normal',FLOOR_LAB,'timeTrial');
+  assert.equal(JSON.stringify(stage.maze),original);
+});
+
 test('複合パターンは同一迷路・安全壁で床の対比と方向に沿う力を配置', () => {
   const {stage, actor} = createFloorLab();
   const maze = JSON.stringify(stage.maze);
   for (const pattern of Object.keys(PATTERNS)) {
     applyActualFloor(stage, 'normal', FLOOR_LAB, pattern);
-    assert.equal(JSON.stringify(stage.maze), maze);
-    assert.ok(stage.walls.every(w=>w.materialId===(pattern==='timeTrial'?'default':'rubber')));
+    if (pattern !== 'timeTrialAssist') assert.equal(JSON.stringify(stage.maze), maze);
+    assert.ok(stage.walls.every(w=>w.materialId===(pattern.startsWith('timeTrial')?'default':'rubber')));
     if (pattern==='iceRubber') assert.equal(stage.zones[0].cells.length,49);
     if (pattern==='iceSand') {
       assert.equal(stage.zones.length,2);
@@ -24,7 +48,7 @@ test('複合パターンは同一迷路・安全壁で床の対比と方向に�
     for (const site of stage.labSites) {
       Object.assign(actor,{x:site.cell.x+.5,y:site.cell.y+.5,vx:0,vy:0});
       const z=sampleZone(stage,actor);
-      assert.ok(z.forceX*site.dx+z.forceY*site.dy<0, pattern);
+      assert.ok(pattern === 'timeTrialAssist' ? z.forceX*site.dx+z.forceY*site.dy>0 : z.forceX*site.dx+z.forceY*site.dy<0, pattern);
       const p=resolveParams({base:BASE,character:actor.character,zone:z});
       assert.ok(p.accel>Math.hypot(p.forceX,p.forceY));
       if(pattern.startsWith('ice')) {

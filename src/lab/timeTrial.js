@@ -9,7 +9,8 @@ export function advanceTrial(trial, elapsedMs, moved, goal) {
   trial.elapsedMs += Math.max(0, elapsedMs);
   if (goal) trial.finished = true;
 }
-export function trialKey(settings, mode) {
+export function trialKey(settings, mode, pattern = 'timeTrial') {
+  if (pattern === 'timeTrialAssist') return `corogalism-floor-assist-v1-250-${mode}-${settings.ice}-${settings.sand}-${settings.force}-${settings.radius}`;
   return `corogalism-floor-trial-v1-250-${mode}-${settings.ice}-${settings.sand}`;
 }
 export function readTrialBest(storage, key) {

@@ -10,7 +10,7 @@ p.on('pageerror',e=>errors.push(e.message));
 await p.goto((process.env.BASE_URL||'http://127.0.0.1:8765/')+'floor-lab.html?debug=1');
 await p.waitForFunction(()=>!!window.__floorLab);
 await p.locator('#pause').click();
-for(const pattern of ['iceRubber','iceSand','cornerGravity','cornerRepulsion','iceGravity','iceRepulsion']) {
+for(const pattern of ['timeTrialAssist','iceRubber','iceSand','cornerGravity','cornerRepulsion','iceGravity','iceRepulsion']) {
 await p.locator('#pattern').selectOption(pattern);
 assert.equal(await p.locator('#floors').isVisible(),false);
 assert.equal(await p.evaluate(()=>window.__floorLab.pattern),pattern);

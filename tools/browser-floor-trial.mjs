@@ -7,9 +7,10 @@ await mkdir('docs/verification/floor-trial',{recursive:true});
 for(const width of [320,390,576]){
  const p=await b.newPage({viewport:{width,height:900},serviceWorkers:'block'}),errors=[];
  p.on('pageerror',e=>errors.push(e.message));await p.clock.install();await p.clock.pauseAt(Date.now()+1000);
- const url=(process.env.BASE_URL||'http://127.0.0.1:8765/')+'floor-lab.html?pattern=timeTrial&debug=1';
+ const pattern=process.env.TRIAL_PATTERN||'timeTrial';
+ const url=(process.env.BASE_URL||'http://127.0.0.1:8765/')+'floor-lab.html?pattern='+pattern+'&debug=1';
  await p.goto(url);await p.waitForFunction(()=>!!window.__floorLab);
- assert.equal(await p.locator('#pattern').inputValue(),'timeTrial');
+ assert.equal(await p.locator('#pattern').inputValue(),pattern);
  await p.clock.runFor(1000);assert.equal(await p.locator('#trial-time').textContent(),'0.00');
  await p.evaluate(()=>Object.assign(window.__floorLab.actor,{x:.53,vx:.4}));await p.clock.runFor(300);
  assert.ok(await p.evaluate(()=>window.__floorLab.trial.elapsedMs>0));

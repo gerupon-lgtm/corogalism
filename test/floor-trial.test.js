@@ -19,4 +19,7 @@ test('通常完走だけ保存し、遅い記録・練習・破損保存・保�
   assert.equal(readTrialBest(blocked,'a'),null); assert.equal(saveTrialBest(blocked,'a',t),false);
   assert.notEqual(trialKey({ice:.08,sand:3.2},'tilt'),trialKey({ice:.08,sand:3.2},'pointer'));
   assert.notEqual(trialKey({ice:.08,sand:3.2},'tilt'),trialKey({ice:.2,sand:3.2},'tilt'));
+  const settings={ice:.08,sand:3.2,force:6,radius:1.6};
+  assert.notEqual(trialKey(settings,'tilt'),trialKey(settings,'tilt','timeTrialAssist'));
+  assert.notEqual(trialKey(settings,'tilt','timeTrialAssist'),trialKey({...settings,force:5},'tilt','timeTrialAssist'));
 });

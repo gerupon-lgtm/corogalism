@@ -13,13 +13,14 @@ const $ = id => document.getElementById(id);
 const canvas = $('board'), ctx = canvas.getContext('2d');
 const { stage, actor } = createFloorLab();
 const settings = { ...FLOOR_LAB }, tilt = createTiltVector();
-let pattern = new URLSearchParams(location.search).get('pattern') === 'timeTrial' ? 'timeTrial' : 'single';
+const requestedPattern = new URLSearchParams(location.search).get('pattern');
+let pattern = ['timeTrial', 'timeTrialAssist'].includes(requestedPattern) ? requestedPattern : 'single';
 let trial = createTimeTrial();
 const trialStorage = { getItem: key => localStorage.getItem(key), setItem: (key, value) => localStorage.setItem(key, value) };
 function refreshTrial() {
-  $('trial-info').hidden = pattern !== 'timeTrial';
+  $('trial-info').hidden = !pattern.startsWith('timeTrial');
   $('trial-time').textContent = (trial.elapsedMs / 1000).toFixed(2);
-  const best = readTrialBest(trialStorage, trialKey(settings, mode));
+  const best = readTrialBest(trialStorage, trialKey(settings, mode, pattern));
   $('trial-best').textContent = best === null ? '—' : (best / 1000).toFixed(2) + ' 秒';
   $('trial-note').textContent = trial.practice ? '途中移動・操作変更あり：練習のため記録しません。スタートへ戻すと再計測できます。' : '動き始めると計測開始。同じ床設定・操作方法ごとに記録します。';
 }
@@ -55,7 +56,7 @@ $('sensor').onclick = async () => {
 };
 $('pointer').onclick = () => pointerMode();
 $('calibrate').onclick = () => { tilt.reset(); sensor.calibrate(); $('status').textContent = '今の姿勢で少し静止してください。'; scheduleFallback(requestId); };
-function reset(x = 0.5, y = 0.5) { Object.assign(actor, { x, y, vx: 0, vy: 0 }); tilt.reset(); won = false; trial = createTimeTrial(); trial.practice = x !== .5 || y !== .5; refreshTrial(); if (pattern === 'timeTrial') $('status').textContent = trial.practice ? '途中から練習中。自己ベストには記録しません。' : '動き始めると計測します。砂の手前まで勢いをつけてみよう。'; }
+function reset(x = 0.5, y = 0.5) { Object.assign(actor, { x, y, vx: 0, vy: 0 }); tilt.reset(); won = false; trial = createTimeTrial(); trial.practice = x !== .5 || y !== .5; refreshTrial(); if (pattern.startsWith('timeTrial')) $('status').textContent = trial.practice ? '途中から練習中。自己ベストには記録しません。' : '動き始めると計測します。砂の手前まで勢いをつけてみよう。'; }
 $('reset').onclick = () => reset();
 $('plaza').onclick = () => { const cell = stage.maze.path[stage.labSites.length ? Math.max(0, stage.labSites[0].index-2) : Math.floor(stage.maze.path.length / 2)]; reset(cell.x + .5, cell.y + .5); };
 $('pause').onclick = () => { paused = !paused; tilt.reset(); $('pause').textContent = paused ? '再開' : '一時停止'; };
@@ -76,10 +77,10 @@ for (const [key, option] of Object.entries(FLOOR_OPTIONS)) {
   button.onclick = () => { type = key; updateFloor(); reset(); };
   $('floors').append(button);
 }
-for (const key of Object.keys(settings)) $(key).oninput = () => { settings[key] = Number($(key).value); updateFloor(); if (pattern === 'timeTrial') reset(); };
+for (const key of Object.keys(settings)) $(key).oninput = () => { settings[key] = Number($(key).value); updateFloor(); if (pattern.startsWith('timeTrial')) reset(); };
 $('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); };
 $('copy').onclick = async () => {
-  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 6, pattern, floor: type, mode, ...settings }, null, 2);
+  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 7, pattern, floor: type, mode, ...settings }, null, 2);
   $('settings-text').hidden = false; $('settings-text').value = text;
   try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'コピーしました。この設定と感想を送ってください。'; }
   catch { $('settings-text').focus(); $('settings-text').select(); $('copy-status').textContent = '下の設定値を選択してコピーしてください。'; }
@@ -120,23 +121,23 @@ function draw(now) {
 function frame(now) {
   const elapsed = Math.max(0, now - (last || now));
   const dt = Math.min(elapsed / 1000, .05); last = now;
-  if (!(pattern === 'timeTrial' && trial.finished) && !paused && !document.hidden && !(mode === 'tilt' && sensor.needsCalibration)) {
+  if (!(pattern.startsWith('timeTrial') && trial.finished) && !paused && !document.hidden && !(mode === 'tilt' && sensor.needsCalibration)) {
     visualTime += dt * 1000;
     // 描画頻度による操作差を抑え、小さい刻みで既存の物理を進める。
     const count = Math.max(1, Math.ceil(dt / (1 / 120)));
     for (let i = 0; i < count; i++) { tilt.update(dt / count, BASE.inputSmoothing); stepPhysics({ actor, stage, tilt: tilt.value, base: BASE, dt: dt / count }); }
-    if (pattern === 'timeTrial') {
+    if (pattern.startsWith('timeTrial')) {
       const wasFinished = trial.finished;
       advanceTrial(trial, elapsed, Math.hypot(actor.x-.5,actor.y-.5)>.02, Math.hypot(actor.x-6.5,actor.y-6.5)<.35);
       if (!wasFinished && trial.finished) {
-        const saved = saveTrialBest(trialStorage, trialKey(settings,mode), trial);
+        const saved = saveTrialBest(trialStorage, trialKey(settings,mode,pattern), trial);
         $('status').textContent = `ゴール！ ${(trial.elapsedMs/1000).toFixed(2)}秒。` + (trial.practice ? '練習のため記録対象外です。' : saved ? '自己ベストを確認しました。' : '端末に記録を保存できませんでした。');
         won = true;
       }
     }
     if (!won && Math.hypot(actor.x - 6.5, actor.y - 6.5) < .35) { won = true; $('status').textContent = 'ゴール！ スタートへ戻るか、ほかの床でも試してみよう。'; }
   }
-  if (pattern === 'timeTrial') refreshTrial();
+  if (pattern.startsWith('timeTrial')) refreshTrial();
   draw(now); requestAnimationFrame(frame);
 }
 document.addEventListener('visibilitychange', () => { tilt.reset(); last = 0; if (document.hidden) { paused = true; $('pause').textContent = '再開'; } });
