@@ -6,12 +6,15 @@ import { createTiltSource } from '../input/tiltSource.js';
 import { createPointerSource } from '../input/pointerSource.js';
 import { createFloorLab, applyFloor, FLOOR_OPTIONS, PATCH_CELLS } from './floorModel.js';
 
+import { drawFloorVisuals } from './floorVisuals.js';
+
 const $ = id => document.getElementById(id);
 const canvas = $('board'), ctx = canvas.getContext('2d');
 const { stage, actor } = createFloorLab();
 const settings = { ...FLOOR_LAB }, tilt = createTiltVector();
 let type = 'normal', mode = 'pointer', paused = false, last = 0, sensorTimer, requestId = 0;
-let camera, won = false;
+let camera, won = false, visualTime = 0;
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const pointer = createPointerSource(canvas);
 const sensor = createTiltSource({ onCalibrated: () => { $('status').textContent = '傾き操作中。縦持ちでゆっくり傾けてください。'; } });
 const receive = (x, y) => tilt.setRaw(x, y);
@@ -58,7 +61,7 @@ for (const [key, option] of Object.entries(FLOOR_OPTIONS)) {
 for (const key of Object.keys(settings)) $(key).oninput = () => { settings[key] = Number($(key).value); updateFloor(); };
 $('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); };
 $('copy').onclick = async () => {
-  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 1, floor: type, mode, ...settings }, null, 2);
+  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 2, floor: type, mode, ...settings }, null, 2);
   $('settings-text').hidden = false; $('settings-text').value = text;
   try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'コピーしました。この設定と感想を送ってください。'; }
   catch { $('settings-text').focus(); $('settings-text').select(); $('copy-status').textContent = '下の設定値を選択してコピーしてください。'; }
@@ -86,22 +89,7 @@ function draw(now) {
   for (let y = 0; y < 7; y++) for (let x = 0; x < 7; x++) {
     const p = camera.toScreen(x, y); ctx.strokeStyle = '#e8ddc8'; ctx.strokeRect(p.px, p.py, camera.toPx(1), camera.toPx(1));
   }
-  if (type === 'ice' || type === 'sand') for (const cell of PATCH_CELLS) {
-    const p = camera.toScreen(cell.x, cell.y); ctx.fillStyle = FLOOR_OPTIONS[type].color;
-    ctx.fillRect(p.px, p.py, camera.toPx(1), camera.toPx(1));
-    label(type === 'ice' ? '╱ ╱' : '· ∴ ·', cell.x + .5, cell.y + .6);
-  }
-  if (type === 'gravity' || type === 'repulsion') {
-    circle(4.5, 4.5, settings.radius, FLOOR_OPTIONS[type].color);
-    circle(4.5, 4.5, settings.radius, '#887a91', true);
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const phase = reduced ? .5 : (now / 2400) % 1;
-    for (let i = 0; i < 3; i++) {
-      const q = (phase + i / 3) % 1;
-      circle(4.5, 4.5, settings.radius * (type === 'gravity' ? 1 - q : q), '#98869c', true);
-    }
-    label(type === 'gravity' ? '→ ● ←' : '← ● →', 4.5, 4.55, '#56445b');
-  }
+  drawFloorVisuals(ctx, camera, { type, settings, actor, time: visualTime, reduced: reducedMotion.matches });
   for (const wall of stage.walls) { const p = camera.toScreen(wall.x, wall.y); ctx.fillStyle = '#ab865f'; ctx.fillRect(p.px, p.py, camera.toPx(wall.w), camera.toPx(wall.h)); }
   circle(5.5, .5, .34, '#618c6b'); label('GOAL', 5.5, .57, '#fff');
   label('START', .6, .5); label('広場', 4.5, 6.6);
@@ -114,6 +102,7 @@ function draw(now) {
 function frame(now) {
   const dt = Math.min((now - (last || now)) / 1000, .05); last = now;
   if (!paused && !document.hidden && !(mode === 'tilt' && sensor.needsCalibration)) {
+    visualTime += dt * 1000;
     // 描画頻度による操作差を抑え、小さい刻みで既存の物理を進める。
     const count = Math.max(1, Math.ceil(dt / (1 / 120)));
     for (let i = 0; i < count; i++) { tilt.update(dt / count, BASE.inputSmoothing); stepPhysics({ actor, stage, tilt: tilt.value, base: BASE, dt: dt / count }); }

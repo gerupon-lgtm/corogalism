@@ -30,7 +30,7 @@ try {
     await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', { value: { writeText: async () => { throw Error('denied'); } }, configurable: true }));
     await page.locator('#copy').click();
     assert.equal(JSON.parse(await page.locator('#settings-text').inputValue()).force, 7);
-    await page.locator('#defaults').click(); assert.equal(await page.evaluate(() => window.__floorLab.settings.force), 5);
+    await page.locator('#defaults').click(); assert.equal(await page.evaluate(() => window.__floorLab.settings.force), 6);
     await page.locator('#board').scrollIntoViewIfNeeded(); await page.clock.runFor(32);
     await page.evaluate(() => scrollTo(0, 0)); await page.screenshot({ fullPage: true, path: `docs/verification/floor-lab/${width}.png` });
     assert.deepEqual(errors, []); await page.close(); console.log('PASS floor lab width ' + width);

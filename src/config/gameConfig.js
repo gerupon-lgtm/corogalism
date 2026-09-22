@@ -18,7 +18,7 @@ export const BASE = {
 };
 
 /** T-247: おためし専用。正式な床の採用値ではない。 */
-export const FLOOR_LAB = { ice: 0.2, sand: 2.4, force: 5, radius: 1.6 };
+export const FLOOR_LAB = { ice: 0.72, sand: 3.2, force: 6, radius: 1.6 };
 
 /**
  * 実効値のクランプ範囲。
