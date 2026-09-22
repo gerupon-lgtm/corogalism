@@ -1,3 +1,4 @@
+import { initPortraitLock } from './input/portraitLock.js';
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
 import { BASE, TUNING, UI, CHALLENGE_LEVELS } from './config/gameConfig.js';
 import { createEscapeInput } from './input/escapeInput.js';
@@ -503,3 +504,5 @@ settingsUi.setTiltAvailable(false, 'モードを選んだときに、傾きセ�
 settingsUi.render(settings);
 renderSound();
 requestAnimationFrame(frame);
+
+initPortraitLock();

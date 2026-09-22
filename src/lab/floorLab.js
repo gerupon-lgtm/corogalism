@@ -1,3 +1,4 @@
+import { initPortraitLock } from '../input/portraitLock.js';
 import { createTimeTrial, advanceTrial, trialKey, readTrialBest, saveTrialBest } from './timeTrial.js';
 import { BASE, FLOOR_LAB } from '../config/gameConfig.js';
 import { stepPhysics } from '../physics/integrator.js';
@@ -144,3 +145,5 @@ document.addEventListener('visibilitychange', () => { tilt.reset(); last = 0; if
 window.addEventListener('blur', () => { tilt.reset(); paused = true; $('pause').textContent = '再開'; });
 pointerMode(); updateFloor(); requestAnimationFrame(frame);
 if (new URLSearchParams(location.search).has('debug')) window.__floorLab = { stage, actor, settings, get trial() { return trial; }, get pattern() { return pattern; }, get type() { return type; }, get mode() { return mode; } };
+
+initPortraitLock();

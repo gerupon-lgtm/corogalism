@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'acac97c76e4851f1';
+self.PRECACHE_VERSION = 'ca2434babc212d81';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -41,6 +41,7 @@ self.PRECACHE_FILES = [
   "src/game/tutorialLessons.js",
   "src/input/escapeInput.js",
   "src/input/pointerSource.js",
+  "src/input/portraitLock.js",
   "src/input/stableCalibration.js",
   "src/input/tiltSource.js",
   "src/input/tiltVector.js",
