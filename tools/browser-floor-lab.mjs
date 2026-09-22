@@ -49,6 +49,12 @@ try {
     } else { await page.clock.runFor(6500); assert.equal(await page.evaluate(() => window.__floorLab.mode), 'pointer'); }
     await page.close(); console.log('PASS floor lab sensor ' + sensor);
   }
+  const oldPage = await browser.newPage({ serviceWorkers: 'block' });
+  await oldPage.route('**/src/config/gameConfig.js', route => route.fulfill({ contentType: 'text/javascript', body: 'export const BASE = {};' }));
+  await oldPage.goto(base + 'floor-lab.html');
+  await oldPage.waitForFunction(() => document.getElementById('status').textContent.includes('ゲームの更新が必要'));
+  assert.equal(await oldPage.locator('#sensor').isDisabled(), true);
+  await oldPage.close(); console.log('PASS old PWA update guidance');
   const offline = await browser.newContext();
   const page = await offline.newPage();
   await page.goto(base); await page.evaluate(() => navigator.serviceWorker.ready);
