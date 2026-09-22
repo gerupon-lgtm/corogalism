@@ -270,3 +270,8 @@ browser-screen-fit:393×820/390×780/360×800/320×568。トップ・両モー�
 本編v0.5.6を維持し、独立URL `/floor-lab.html` を追加。127テスト成功。browser-floor-labで320/390/576幅、床切替・画面操作・停止・調整・コピー失敗時の代替、センサー許可/拒否/無信号、既存PWA保存後のオフライン起動成功。browser-tutorialで3幅とセンサー3経路の回帰確認成功。precache82資材。実機の手触り評価と正式採用判断は公開後に行う。
 
 T-247公開完了: アプリe61583b、[Pages35706033174](https://github.com/gerupon-lgtm/corogalism/actions/runs/35706033174)成功。正式URL https://corogalism.sikumilab.com/floor-lab.html 。実行資材8件のSHA256一致。正式URLのbrowser-floor-labで3幅、操作・調整・コピー代替、センサー3経路、旧PWA更新案内、保存後オフライン起動が成功。最終precacheは83資材。端末実機の手触りはユーザー試遊待ち。
+
+
+## T-248 床の質感・力の可視化
+
+おためし2を公開。アプリd0c28cd、[Pages35707709692](https://github.com/gerupon-lgtm/corogalism/actions/runs/35707709692)成功。変更資材5件のSHA256一致、precache84資材。127テスト成功。正式URLのbrowser-floor-visualsで4種類の描画・停止・動きを減らす設定を確認。browser-floor-labで3幅・センサー3経路・設定コピー・旧PWA案内・オフライン起動成功。検証のセンサー開始前にページ初期化待ちを追加し、通信待ちによるテストの先走りを修正した。実機の見た目の評価はユーザー試遊待ち。

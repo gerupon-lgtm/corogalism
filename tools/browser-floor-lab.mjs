@@ -39,7 +39,7 @@ try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
     await page.addInitScript(sensor => Object.defineProperty(window, 'DeviceOrientationEvent', { value: class { static async requestPermission() { return sensor === 'denied' ? 'denied' : 'granted'; } }, configurable: true }), sensor);
     await page.clock.install(); await page.clock.pauseAt(Date.now() + 1000);
-    await page.goto(base + 'floor-lab.html?debug=1'); await page.locator('#sensor').click();
+    await page.goto(base + 'floor-lab.html?debug=1'); await page.waitForFunction(() => !!window.__floorLab); await page.locator('#sensor').click();
     if (sensor === 'granted') {
       for (let i = 0; i < 15; i++) { await page.evaluate(() => { const e = new Event('deviceorientation'); Object.assign(e, { beta: 15, gamma: 0 }); dispatchEvent(e); }); await page.clock.runFor(100); }
       assert.equal(await page.evaluate(() => window.__floorLab.mode), 'tilt');
