@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'c02829abe4eb2e77';
+self.PRECACHE_VERSION = '5615560d9f470047';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -48,6 +48,7 @@ self.PRECACHE_FILES = [
   "src/lab/floorLab.js",
   "src/lab/floorModel.js",
   "src/lab/floorVisuals.js",
+  "src/lab/timeTrial.js",
   "src/main.js",
   "src/maze/generator.js",
   "src/maze/path.js",

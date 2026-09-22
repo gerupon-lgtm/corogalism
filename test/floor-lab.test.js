@@ -14,7 +14,7 @@ test('複合パターンは同一迷路・安全壁で床の対比と方向に�
   for (const pattern of Object.keys(PATTERNS)) {
     applyActualFloor(stage, 'normal', FLOOR_LAB, pattern);
     assert.equal(JSON.stringify(stage.maze), maze);
-    assert.ok(stage.walls.every(w=>w.materialId==='rubber'));
+    assert.ok(stage.walls.every(w=>w.materialId===(pattern==='timeTrial'?'default':'rubber')));
     if (pattern==='iceRubber') assert.equal(stage.zones[0].cells.length,49);
     if (pattern==='iceSand') {
       assert.equal(stage.zones.length,2);
@@ -132,4 +132,22 @@ test('固定迷路は全壁ゴム・全面床で、切替後も同じ迷路を�
     assert.ok(Math.hypot(z.forceX,z.forceY)<=FLOOR_LAB.force+1e-9);
   }
   assert.equal(JSON.stringify(stage.maze),before);
+});
+
+
+test('タイムトライアルは角の手前だけ砂、角と残りの床は氷、壁は通常', () => {
+  const {stage} = createFloorLab();
+  applyActualFloor(stage,'normal',FLOOR_LAB,'timeTrial');
+  const sand=stage.zones.find(z=>z.kind==='sand').cells;
+  assert.equal(sand.length,3);
+  for(const cell of sand) {
+    const i=stage.maze.path.findIndex(p=>p.x===cell.x&&p.y===cell.y);
+    const corner=stage.maze.path[i+1], next=stage.maze.path[i+2];
+    assert.notEqual((corner.x-cell.x)*(next.y-corner.y),(corner.y-cell.y)*(next.x-corner.x));
+    assert.ok(!sand.some(p=>p.x===corner.x&&p.y===corner.y));
+  }
+  assert.equal(stage.zones.find(z=>z.kind==='ice').cells.length,46);
+  assert.ok(stage.walls.every(w=>w.materialId==='default'));
+  applyActualFloor(stage,'ice',FLOOR_LAB,'single');
+  assert.ok(stage.walls.every(w=>w.materialId==='rubber'));
 });

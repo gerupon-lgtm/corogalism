@@ -23,6 +23,7 @@ export const PATCH_CELLS = Array.from({ length: 49 }, (_, i) => ({ x: i % 7, y: 
 export const FIELD_CENTERS = [0.5, 2.5, 4.5, 6.5].flatMap(y => [0.5, 2.5, 4.5, 6.5].map(x => ({ x, y })));
 
 export const PATTERNS = {
+  timeTrial: { name: '氷＋砂 タイムトライアル', hint: '通常壁・ほぼ全面氷。曲がり角の直前の砂で減速。検証ページのみ壁ダメージなし・時間制限なし。' },
   single: { name: '全面の床比較', hint: '' },
   iceRubber: { name: '全面氷＋ゴム', hint: '採用決定の組み合わせ。反発と慣性を制御してゴールへ。' },
   iceSand: { name: '氷＋砂', hint: '氷で滑走し、曲がり角の手前と角の砂でブレーキ。' },
@@ -47,11 +48,17 @@ export function cornerSites(maze) {
 
 export function applyFloor(stage, type, settings, pattern = 'single') {
   stage.zones = [];
+  for (const wall of stage.walls) wall.materialId = pattern === 'timeTrial' ? 'default' : 'rubber';
   stage.labPattern = pattern;
   stage.labSites = [];
   if (pattern !== 'single') {
     const sites = cornerSites(stage.maze);
     const floor = (kind, cells) => { if (cells.length) stage.zones.push({ kind, cells, ...(kind === 'ice' ? ICE_LAB : {}), frictionK: settings[kind], forceX: 0, forceY: 0 }); };
+    if (pattern === 'timeTrial') {
+      const sand = sites.map(site => stage.maze.path[site.index-1]);
+      floor('sand', sand);
+      floor('ice', PATCH_CELLS.filter(c=>!sand.some(s=>s.x===c.x&&s.y===c.y)));
+    }
     if (pattern === 'iceRubber') floor('ice', PATCH_CELLS);
     if (pattern === 'iceSand') {
       const sand = sites.flatMap(site => stage.maze.path.slice(site.index-1,site.index+1));
