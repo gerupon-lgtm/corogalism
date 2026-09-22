@@ -61,7 +61,7 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     membrane.addColorStop(.5,`rgba(${rgb},0.20)`);
     membrane.addColorStop(1,`rgba(${rgb},0.015)`);
     circle(x,y,radius,membrane);
-    ctx.strokeStyle=`rgba(${rgb},0.60)`; ctx.lineWidth=.02; ctx.setLineDash([.055,.065]); circle(x,y,radius); ctx.setLineDash([]);
+
     // 中間で最も強い物理の分布と、流れの濃さを合わせる。
     for(let i=0;i<12;i++) {
       const angle=i*Math.PI/6;

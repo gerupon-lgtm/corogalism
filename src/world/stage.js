@@ -112,7 +112,15 @@ export function sampleZone(stage, actor) {
       const scale = z.strength * 4 * (1 - distance / z.radius) / z.radius;
       return { ...NEUTRAL_ZONE, ...z, forceX: dx * scale, forceY: dy * scale };
     }
-    if (z.cells.some((c) => c.x === cx && c.y === cy)) return z;
+    if (z.cells.some((c) => c.x === cx && c.y === cy)) {
+      if (z.kind === 'ice') {
+        // 速度がある間は傾きによる加減速を弱め、静止に近づくほど通常の操作性へ戻す。
+        const speed = Math.hypot(actor.vx, actor.vy);
+        const accelK = z.minAccelK + (1 - z.minAccelK) / (1 + (speed / z.transitionSpeed) ** 2);
+        return { ...z, accelK };
+      }
+      return z;
+    }
   }
   return NEUTRAL_ZONE;
 }

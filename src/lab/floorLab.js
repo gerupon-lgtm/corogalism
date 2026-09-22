@@ -61,7 +61,7 @@ for (const [key, option] of Object.entries(FLOOR_OPTIONS)) {
 for (const key of Object.keys(settings)) $(key).oninput = () => { settings[key] = Number($(key).value); updateFloor(); };
 $('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); };
 $('copy').onclick = async () => {
-  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 2, floor: type, mode, ...settings }, null, 2);
+  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 3, floor: type, mode, ...settings }, null, 2);
   $('settings-text').hidden = false; $('settings-text').value = text;
   try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'コピーしました。この設定と感想を送ってください。'; }
   catch { $('settings-text').focus(); $('settings-text').select(); $('copy-status').textContent = '下の設定値を選択してコピーしてください。'; }

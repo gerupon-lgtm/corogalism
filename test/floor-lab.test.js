@@ -6,6 +6,37 @@ import { BASE, FLOOR_LAB } from '../src/config/gameConfig.js';
 import { stepPhysics } from '../src/physics/integrator.js';
 import { checkReachability } from '../src/maze/validator.js';
 
+test('氷は逆入力後も滑り、減速してから反転する。速いほど停止距離が長い', () => {
+  function brake(type, speed) {
+    const { stage, actor } = createFloorLab(); applyFloor(stage, type, FLOOR_LAB);
+    Object.assign(actor, { x: 3.1, y: 4.5, vx: speed, vy: 0 });
+    let time = 0;
+    while (actor.vx > 0 && time < 2) {
+      stepPhysics({ actor, stage, tilt: { x: -1, y: 0 }, base: BASE, dt: 1 / 240 });
+      time += 1 / 240;
+    }
+    assert.ok(actor.vx <= 0);
+    return { time, distance: actor.x - 3.1 };
+  }
+  const normal = brake('normal', 3), slow = brake('ice', 1.5), fast = brake('ice', 3);
+  assert.ok(fast.time > normal.time * 2);
+  assert.ok(fast.distance > normal.distance * 2);
+  assert.ok(fast.time > slow.time);
+  assert.ok(fast.distance > slow.distance * 2);
+});
+
+test('氷の発進は通常と同じ加速度で始まり、斜め入力時には横滑りを残す', () => {
+  const { stage, actor } = createFloorLab(); applyFloor(stage, 'ice', FLOOR_LAB);
+  Object.assign(actor, { x: 3.5, y: 4.5, vx: 0, vy: 0 });
+  assert.equal(sampleZone(stage, actor).accelK, 1);
+  Object.assign(actor, { vx: 3, vy: 0 });
+  for (let i = 0; i < 24; i++) stepPhysics({ actor, stage, tilt: { x: 0, y: -1 }, base: BASE, dt: 1 / 240 });
+  assert.ok(actor.vx > 2.8);
+  assert.ok(actor.vy < 0 && actor.vy > -1);
+  Object.assign(actor, { x: 2.5, y: 4.5 });
+  assert.equal(sampleZone(stage, actor).accelK, 1);
+});
+
 test('おためし固定コースは全セル到達可能', () => {
   assert.equal(checkReachability(createFloorLab().stage.maze).ok, true);
 });
