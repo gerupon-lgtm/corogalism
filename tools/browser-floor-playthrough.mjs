@@ -4,7 +4,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
 const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const base=process.env.BASE_URL||'http://127.0.0.1:8765/';
-const rows=[];await mkdir('docs/verification/floor-challenge',{recursive:true});
+const rows=[],output=process.env.PLAY_OUTPUT||'docs/verification/floor-challenge';await mkdir(output,{recursive:true});
 try{for(const level of (process.env.PLAY_LEVEL?[process.env.PLAY_LEVEL]:['normal','easy'])){
  const p=await b.newPage({viewport:{width:390,height:844},serviceWorkers:'block'}),errors=[];
  p.on('pageerror',e=>errors.push(e.message));
@@ -32,16 +32,16 @@ try{for(const level of (process.env.PLAY_LEVEL?[process.env.PLAY_LEVEL]:['normal
    await p.mouse.move(rect.x+rect.width/2+x*rect.width*.49,rect.y+rect.height/2+y*rect.height*.49);
    await p.clock.runFor(180);s=await state();steps++;
    if(s.hp.value<lastHp)hit++;lastHp=s.hp.value;
-   if([3,4,5,8,10].includes(n)&&steps===20)await p.screenshot({path:`docs/verification/floor-challenge/play-${level}-${n}.png`});
+   if([3,4,5,8,10].includes(n)&&steps===20)await p.screenshot({path:`${output}/play-${level}-${n}.png`});
    if(n===2&&steps===8){await p.mouse.up();await click('btn-pause');await click('btn-pause-guide');await p.locator('.guide-x').click();assert.equal((await state()).paused,true);await click('btn-resume');await ready();await p.mouse.down();}
   }
   await p.mouse.up();rows.push({level,seed:Number(process.env.PLAY_SEED||77),stage:n,theme:s.theme.id,result:s.status,seconds:+(s.timeMs/1000).toFixed(2),limit:s.limitSec,hp:+s.hp.value.toFixed(1),maxHp:s.hp.max,damageEvents:hit});
   console.log(JSON.stringify(rows.at(-1)));
   assert.equal(s.status,'clear',JSON.stringify(rows.at(-1)));
   if(n===Number(process.env.PLAY_STAGES||16)){await click('btn-clear-exit');assert.equal((await state()).screen,'run-result');
-   if(level==='easy')assert.equal(await p.locator('#flow-preview').isVisible(),true);
-   await p.screenshot({path:`docs/verification/floor-challenge/result-${level}.png`});
+   if(level==='easy'&&Number(process.env.PLAY_STAGES||16)>=8)assert.equal(await p.locator('#flow-preview').isVisible(),true);
+   await p.screenshot({path:`${output}/result-${level}.png`});
   }else{await click('btn-next');await ready();}
  }
  assert.deepEqual(errors,[]);await p.close();
-}}finally{await writeFile(`docs/verification/floor-challenge/browser-playthrough${process.env.TEST_SUFFIX||''}.json`,JSON.stringify(rows,null,2));await b.close()}
+}}finally{await writeFile(`${output}/browser-playthrough${process.env.TEST_SUFFIX||''}.json`,JSON.stringify(rows,null,2));await b.close()}

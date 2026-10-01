@@ -32,4 +32,4 @@
 
 既存のchallenge4幅、floor-lab3幅とセンサー／オフライン、tutorial3幅とセンサーの回帰成功。静止キャッシュの更新・動的力場の重なり・非ゲーム画面停止・候補生成の読み取りレビューでCritical/Important指摘なし。
 
-公開後に正式URLの資材一致、実pointer操作、ガイドと通常／やさしいの演出を確認する。実端末の快適さはユーザーの再試遊で確認する。
+公開アプリ3320947、[Pages36905578032成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/36905578032)。正式URLの実行資材28個がHTTP200・SHA-256一致。[ハッシュ](floor-performance/deploy-hashes.json)。公開版でもCPU6x／倍率1・3の静止画再描画回帰が成功し、砂面中央値1.0／1.1ms。[公開版測定](floor-performance/live.json)。公開版を実pointerでやさしい1–3面まで通し確認した。[記録](floor-performance/browser-playthrough-live-v061.json)。実端末の快適さはユーザーの再試遊で確認する。
