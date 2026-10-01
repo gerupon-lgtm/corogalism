@@ -4,7 +4,7 @@ import os
 root=Path('.')
 paths=['index.html','package.json','style.css','precache.js','sw.js','src/main.js','src/config/gameConfig.js','src/pwa.js','src/world/floorThemes.js','src/world/themes.js','src/world/stage.js','src/world/materials.js','src/world/recovery.js','src/world/stageFeatures.js','src/game/challenge.js','src/game/progression.js','src/game/stagePlay.js','src/render/floorArt.js','src/render/floorVisuals.js','src/render/canvasRenderer.js','src/render/materialAppearance.js','src/render/toyWorld.js','src/audio/floorJingle.js','src/audio/soundManager.js','src/ui/guide.js','src/ui/floorPresentation.js','src/ui/runScreens.js','src/record/storage.js']
 def check(path):
- url='https://corogalism.sikumilab.com/'+path+'?verify=v061-verified'
+ url='https://corogalism.sikumilab.com/'+path+'?verify=v062-verified'
  with urllib.request.urlopen(url,timeout=40) as r: data=r.read();status=r.status
  actual=hashlib.sha256(data).hexdigest();expected=hashlib.sha256((root/path).read_bytes()).hexdigest()
  return dict(path=path,status=status,sha256=actual,match=actual==expected)
