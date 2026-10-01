@@ -1,0 +1,170 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "sha256": "1647a95718cef5907ad0a9a5dbea446786fcbb9fa4dd94696cd65b4721dc3292",
+    "match": true
+  },
+  {
+    "path": "package.json",
+    "status": 200,
+    "sha256": "3605a60cf0ea21654740faeefe7ba4d66d0f272480ef57b67f861a45f13cabea",
+    "match": true
+  },
+  {
+    "path": "style.css",
+    "status": 200,
+    "sha256": "a73ad5d7014af3fd2cd9006155981e44f3ce89c9a324dae1f1b2cb51ac52f792",
+    "match": true
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "sha256": "344b941ca1c4ec5827709e51aba5f7dddb91f10baa1abbf7ca564dcc824079bb",
+    "match": true
+  },
+  {
+    "path": "sw.js",
+    "status": 200,
+    "sha256": "b903b31888196f8e817e859f87874bcb7954cf9bda79eae3072e816fa614654c",
+    "match": true
+  },
+  {
+    "path": "src/main.js",
+    "status": 200,
+    "sha256": "72b5ab77a82f3d7287160744558e2f883c26edbdce5867b316efb0d08106e80d",
+    "match": true
+  },
+  {
+    "path": "src/config/gameConfig.js",
+    "status": 200,
+    "sha256": "8de4a4aab1147d3aba807145174246ad3197549af6fe10801f9c961c50939ee4",
+    "match": true
+  },
+  {
+    "path": "src/pwa.js",
+    "status": 200,
+    "sha256": "caf76321329a9f0f875ddf85cabfc3293ff677f0b0877bbf95da9885db55c369",
+    "match": true
+  },
+  {
+    "path": "src/world/floorThemes.js",
+    "status": 200,
+    "sha256": "071ff2c163e9e34089d7af3965350260f9c30740e4f389971cbdbdafd7dc4039",
+    "match": true
+  },
+  {
+    "path": "src/world/themes.js",
+    "status": 200,
+    "sha256": "934d61f6b0284931026d83545f63f4037cec5f85b5dfb5bb1c7d99714cf911a7",
+    "match": true
+  },
+  {
+    "path": "src/world/stage.js",
+    "status": 200,
+    "sha256": "48ab2d67647cfd0db9991e9164d9cd72f99dec5e14da4bad7d5dca36e151d2e0",
+    "match": true
+  },
+  {
+    "path": "src/world/materials.js",
+    "status": 200,
+    "sha256": "0136dbcaa4b662170be2e6a0703fe6818fa5bdc1848559d993b373c3b323137b",
+    "match": true
+  },
+  {
+    "path": "src/world/recovery.js",
+    "status": 200,
+    "sha256": "73017c2a4aed16e4aa089763e6a17a684656f9020a583bfc731567e54a984021",
+    "match": true
+  },
+  {
+    "path": "src/world/stageFeatures.js",
+    "status": 200,
+    "sha256": "daada32cec48556a043d4b416f6fef2acf2e22e59b58d5bc453e10337510ec7a",
+    "match": true
+  },
+  {
+    "path": "src/game/challenge.js",
+    "status": 200,
+    "sha256": "7ffd7bb3c8c32ef99d4e858bc86ce7fe813356c75e9357e34d88f1a987e5c92f",
+    "match": true
+  },
+  {
+    "path": "src/game/progression.js",
+    "status": 200,
+    "sha256": "63bafba0ec2a75f6b353396a93b214fa040e14fec17ca709c13682d7b3791af9",
+    "match": true
+  },
+  {
+    "path": "src/game/stagePlay.js",
+    "status": 200,
+    "sha256": "5e8467726b61eea243fd2115e0f3e7c49e6bcfd44a9c4841f8e66dcf53c80b4b",
+    "match": true
+  },
+  {
+    "path": "src/render/floorArt.js",
+    "status": 200,
+    "sha256": "255533c802ba58e689207950eef03578fcc0129cee1d130656e09bba131cc75c",
+    "match": true
+  },
+  {
+    "path": "src/render/floorVisuals.js",
+    "status": 200,
+    "sha256": "d660aaafc9b708a10e0999d59fad20702003cdcdd409dfe96d844d7936ee019c",
+    "match": true
+  },
+  {
+    "path": "src/render/canvasRenderer.js",
+    "status": 200,
+    "sha256": "f6573b38987a3c3c4bf661bb7e9b872a10c10b788b52d34c7de27e0939b328ed",
+    "match": true
+  },
+  {
+    "path": "src/render/materialAppearance.js",
+    "status": 200,
+    "sha256": "808669afec22ea1ad0dd723c4831d3a1d6e2e2816229dc889beea1392962a139",
+    "match": true
+  },
+  {
+    "path": "src/render/toyWorld.js",
+    "status": 200,
+    "sha256": "dd0d8c3d122d77ffe0cd391132262b7bbf9eb0059f4412d394961b037047c0ce",
+    "match": true
+  },
+  {
+    "path": "src/audio/floorJingle.js",
+    "status": 200,
+    "sha256": "d5df6620efc0df790fedf1eacb68ad8f152dacc8c13b2aea1a5bdefdfc324ada",
+    "match": true
+  },
+  {
+    "path": "src/audio/soundManager.js",
+    "status": 200,
+    "sha256": "741ec6e6e59eb08f79a3f50c9660c3d68c0bb7a8d90bdff521cf705c121cc79e",
+    "match": true
+  },
+  {
+    "path": "src/ui/guide.js",
+    "status": 200,
+    "sha256": "0172b75be1b3c0360a8fa6772cb4ddead368a90321ad6292a5b64a5249626bf9",
+    "match": true
+  },
+  {
+    "path": "src/ui/floorPresentation.js",
+    "status": 200,
+    "sha256": "7cdd76a24fea48ea0cb16b7c692d325de8accc3e8a8a14474d6b53a9323e391d",
+    "match": true
+  },
+  {
+    "path": "src/ui/runScreens.js",
+    "status": 200,
+    "sha256": "b3a548275900844e2666c729b02a91f4418a96fdc067dc97dad81067326e2ef4",
+    "match": true
+  },
+  {
+    "path": "src/record/storage.js",
+    "status": 200,
+    "sha256": "23a4db935e9658aada75946a5b819aee23b02c745343a29c3524d6e08531d39b",
+    "match": true
+  }
+]
