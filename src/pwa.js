@@ -26,10 +26,14 @@ export function initPwa(isTitle) {
   });
   const registrationReady = navigator.serviceWorker.register('./sw.js', { updateViaCache:'none' }).then(reg => {
     registration=reg;render();
-    reg.addEventListener('updatefound', () => {
+    const watchWorker=()=>{
       const worker=reg.installing;
-      worker?.addEventListener('statechange', () => { render(); if(worker.state==='redundant') status.textContent='オフライン準備を完了できませんでした。オンラインでは遊べます。'; });
-    });
+      if(!worker)return;
+      const changed=()=>{render();if(worker.state==='redundant')status.textContent='オフライン準備を完了できませんでした。オンラインでは遊べます。';};
+      worker.addEventListener('statechange',changed);changed();
+    };
+    reg.addEventListener('updatefound',watchWorker);
+    watchWorker();
     navigator.serviceWorker.ready.then(() => { status.textContent='オフラインでも遊べます。ホーム画面への追加はブラウザのメニューから。'; render(); });
   }).catch(() => { status.textContent='オフライン準備を完了できませんでした。オンラインでは遊べます。'; });
   checkButton.addEventListener('click', async () => {

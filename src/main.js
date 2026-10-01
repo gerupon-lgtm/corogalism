@@ -176,7 +176,7 @@ function calibrate() {
 
 function renderDifficulty() {
   for (const button of root.querySelectorAll('[data-level]')) button.setAttribute('aria-pressed', String(button.dataset.level === settings.challengeLevel));
-  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'げんき消費が少なめ。9面から時間にもゆとり。' : 'いつもの手応えで挑戦。';
+  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'げんきと時間に、もっとゆとり。' : 'ほどよい手応え。先には光の滑走路も。';
   find('challenge-level-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
   runUi.setModeBests(loadRunBests(settings.challengeLevel), tiltDeniedReason);
 }
@@ -261,7 +261,7 @@ function updateCountdown() {
   const label = preparing ? 'READY' : String(Math.ceil(countdownMs / 1000));
   find('countdown-layer').classList.toggle('is-preparing', preparing);
   if (counting && audibleCountdown !== label) sound.tick(Number(label));
-  else if (audibleCountdown !== null && !visible && countdownMs === 0 && isPlaying()) sound.tick(0,floorPresentation.cue);
+  else if (audibleCountdown !== null && !visible && countdownMs === 0 && isPlaying()) {sound.tick(0,floorPresentation.cue);floorPresentation.dismiss();}
   audibleCountdown = counting ? label : null;
   if (visible && find('countdown-number').textContent !== label) {
     find('countdown-number').textContent = label;

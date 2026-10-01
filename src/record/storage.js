@@ -87,7 +87,7 @@ export function loadRunBests(level = 'normal') {
   };
 }
 
-// 通常は従来キーを維持し、既存記録をそのまま引き継ぐ。
+// 床ルールの新記録。旧キーは参考表示用に別途保持する。
 function runBestsKey(level) { return level === 'easy' ? `${RUN_BESTS_KEY}-easy` : RUN_BESTS_KEY; }
 
 function isBetterRun(candidate, previous) {

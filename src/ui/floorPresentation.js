@@ -17,7 +17,7 @@ export function createFloorPresentation(root){
    const show=Boolean(theme?.floorPattern&&!seen.has(theme.id));currentCue=show?(theme.special?'flowStart':'floorStart'):theme?.special?'flowStart':null;
    intro.hidden=!show;layer.classList.toggle('has-floor-intro',show);
    if(show){seen.add(theme.id);intro.querySelector('strong').textContent=theme.label;intro.querySelector('p').textContent=theme.introHint;
-    const id=theme.special?'specialFlow':theme.floorPattern.startsWith('ice')?'iceSand':theme.floorPattern.toLowerCase().includes('repulsion')?'repulsion':theme.floorPattern.toLowerCase().includes('gravity')?'gravity':'sand';
+    const id=theme.special?'specialFlow':theme.floorPattern==='iceRubber'?'ice':theme.floorPattern.startsWith('ice')?'iceSand':theme.floorPattern.toLowerCase().includes('repulsion')?'repulsion':theme.floorPattern.toLowerCase().includes('gravity')?'gravity':'sand';
     drawFloorArt(intro.querySelector('canvas'),id);
    }
   },
@@ -26,6 +26,7 @@ export function createFloorPresentation(root){
    preview.classList.remove('is-revealed');
    if(show){drawFloorArt(preview.querySelector('canvas'),'specialFlow');void preview.offsetWidth;preview.classList.add('is-revealed');}
   },
+  dismiss(){currentCue=null;intro.hidden=true;layer.classList.remove('has-floor-intro');},
   get cue(){return currentCue;},
  };
 }

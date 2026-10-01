@@ -16,31 +16,42 @@ export function cornerSites(maze, max=3, gap=5) {
  return sites;
 }
 export function prepareFloorMaze(input, theme) {
- if(!theme.floorPattern)return input;
- let maze=input;
- if(theme.firstVisit||theme.special){
-  const candidates=[input];
-  for(let i=1;i<FLOOR_CHALLENGE.mazeCandidates;i++)candidates.push(generateMaze(input.size,(input.seed+Math.imul(i,40503))>>>0));
-  // 適地があり、短い経路を優先。無限再抽選はしない。
-  maze=candidates.sort((a,b)=>theme.special?Math.min(3,cornerSites(b,4,3).length)-Math.min(3,cornerSites(a,4,3).length)||a.pathLength-b.pathLength:(cornerSites(b).length>0)-(cornerSites(a).length>0)||a.pathLength-b.pathLength)[0];
- }
- const sites=cornerSites(maze,theme.special?4:theme.firstVisit?1:theme.floorPattern==='iceAssist'?2:3,theme.special?3:5);
- if(theme.assist){
-  const open=(a,b)=>{
-   const dx=b.x-a.x,dy=b.y-a.y;
-   const [s,o]=dx===1?['r','l']:dx===-1?['l','r']:dy===1?['b','t']:['t','b'];
-   maze.cells[a.y*maze.size+a.x][s]=0;maze.cells[b.y*maze.size+b.x][o]=0;
-  };
-  for(const {prev,cell,next} of sites){
-   const inner={x:prev.x+next.x-cell.x,y:prev.y+next.y-cell.y};
-   if(inner.x<0||inner.y<0||inner.x>=maze.size||inner.y>=maze.size)continue;
-   open(prev,inner);open(inner,next);
+ if(!theme.floorPattern&&theme.id!=='basic')return input;
+ const max=theme.special?4:theme.firstVisit?1:theme.floorPattern==='iceAssist'?2:3,gap=theme.special?3:5;
+ const candidates=[input];
+ if(theme.firstVisit||theme.special||theme.id==='basic')for(let i=1;i<FLOOR_CHALLENGE.mazeCandidates;i++)candidates.push(generateMaze(input.size,(input.seed+Math.imul(i,40503))>>>0));
+ const isOpen=(m,a,b)=>!m.cells[a.y*m.size+a.x][b.x>a.x?'r':b.x<a.x?'l':b.y>a.y?'b':'t'];
+ for(const maze of candidates){
+  if(theme.assist){
+   const open=(a,b)=>{
+    const [side,other]=b.x>a.x?['r','l']:b.x<a.x?['l','r']:b.y>a.y?['b','t']:['t','b'];
+    maze.cells[a.y*maze.size+a.x][side]=0;maze.cells[b.y*maze.size+b.x][other]=0;
+   };
+   let widened=0;
+   for(const {prev,cell,next} of cornerSites(maze,49,1)){
+    const saved=maze.cells.map(c=>({...c}));
+    const inner={x:prev.x+next.x-cell.x,y:prev.y+next.y-cell.y};
+    open(prev,inner);open(inner,next);
+    const updated={...maze,path:solvePath(maze)};
+    const valid=cornerSites(updated,49,1).some(s=>{
+     const q={x:s.prev.x+s.next.x-s.cell.x,y:s.prev.y+s.next.y-s.cell.y};
+     return isOpen(maze,s.prev,q)&&isOpen(maze,q,s.next);
+    });
+    if(!valid)maze.cells=saved;
+    else if(++widened>=max)break;
+   }
   }
+  if(!checkReachability(maze).ok)throw new Error('床テーマの到達性が不正です');
+  maze.path=solvePath(maze);maze.pathLength=maze.path.length;maze.turns=countTurns(maze.path);
+  // 壁を開けると近道が生まれる。最終経路上の広い曲がり角から改めて配置する。
+  maze.floorSites=cornerSites(maze,49,1).filter(s=>{
+   if(!theme.assist)return true;
+   const inner={x:s.prev.x+s.next.x-s.cell.x,y:s.prev.y+s.next.y-s.cell.y};
+   return isOpen(maze,s.prev,inner)&&isOpen(maze,inner,s.next);
+  }).reduce((chosen,s)=>{if(!chosen.length||s.index-chosen.at(-1).index>=gap)chosen.push(s);return chosen;},[]).slice(0,max);
  }
- if(!checkReachability(maze).ok)throw new Error('床テーマの到達性が不正です');
- maze.path=solvePath(maze);maze.pathLength=maze.path.length;maze.turns=countTurns(maze.path);
- maze.floorSites=sites;
- return maze;
+ return candidates.sort((a,b)=>theme.special?Math.min(3,b.floorSites.length)-Math.min(3,a.floorSites.length)||a.pathLength-b.pathLength:
+  (b.floorSites.length>0)-(a.floorSites.length>0)||a.pathLength-b.pathLength)[0];
 }
 export function addFloorTheme(stage,theme){
  if(!theme.floorPattern)return;

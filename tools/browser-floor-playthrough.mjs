@@ -44,4 +44,4 @@ try{for(const level of (process.env.PLAY_LEVEL?[process.env.PLAY_LEVEL]:['normal
   }else{await click('btn-next');await ready();}
  }
  assert.deepEqual(errors,[]);await p.close();
-}}finally{await writeFile('docs/verification/floor-challenge/browser-playthrough.json',JSON.stringify(rows,null,2));await b.close()}
+}}finally{await writeFile(`docs/verification/floor-challenge/browser-playthrough${process.env.TEST_SUFFIX||''}.json`,JSON.stringify(rows,null,2));await b.close()}

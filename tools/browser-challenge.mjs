@@ -16,7 +16,7 @@ async function setup(width, sensor = false) {
   }, sensor);
   const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
   await page.clock.install(); await page.clock.pauseAt(new Date(Date.now() + 1000));
-  await page.goto(new URL('?debug=1&seed=1', base).href); await page.clock.runFor(32);
+  await page.goto(new URL('?debug=1&seed=1', base).href); await page.waitForLoadState('networkidle'); await page.clock.runFor(32);
   const state = () => page.evaluate(() => window.__corogalism.state);
   const click = async id => { await page.locator(`#${id}`).click({ force: true }); await page.clock.runFor(32); };
   const ready = async () => { const s = await state(); await page.clock.runFor(s.prepareMs + s.countdownMs + 32); };

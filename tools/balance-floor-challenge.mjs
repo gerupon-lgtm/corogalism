@@ -5,16 +5,20 @@ import {BASE} from '../src/config/gameConfig.js';
 import {createTiltVector} from '../src/input/tiltVector.js';
 export function measuredPlay(seed,n,level,imperfect=true){
  const p=createStagePlay(seed,challengeDifficulty(n,level)),path=p.stage.maze.path;
- const input=createTiltVector();let wp=1,nextResponse=0,response=0;
+ const input=createTiltVector();let wp=1,nextResponse=0,response=0,late=null;
  const dt=1/60;
  for(let frame=0;frame<(p.limitSec+3)*60&&p.status==='playing';frame++){
   if(frame>=nextResponse){
    const a=p.actor,t=path[wp];let dx=t.x+.5-a.x,dy=t.y+.5-a.y,dist=Math.hypot(dx,dy);
-   if(dist<.24&&wp<path.length-1){wp++;const t=path[wp];dx=t.x+.5-a.x;dy=t.y+.5-a.y;dist=Math.hypot(dx,dy);}
+   if(dist<.24&&wp<path.length-1){
+    const prev=path[wp-1],cur=path[wp],next=path[wp+1];
+    if(imperfect&&wp%4===0&&(cur.x-prev.x)*(next.y-cur.y)!==(cur.y-prev.y)*(next.x-cur.x))late={x:(cur.x-prev.x)*.8,y:(cur.y-prev.y)*.8};
+    wp++;const t=path[wp];dx=t.x+.5-a.x;dy=t.y+.5-a.y;dist=Math.hypot(dx,dy);}
    const ice=p.stage.zones.some(z=>z.kind==='ice'&&z.cells.some(c=>c.x===Math.floor(a.x)&&c.y===Math.floor(a.y)));
    const target=Math.min(ice?1.35:1.7,dist*3.2);
    let x=(dx/(dist||1)*target-a.vx)*.65,y=(dy/(dist||1)*target-a.vy)*.65;
    if(imperfect&&response%31===12){x+=.12;y-=.1;}
+   if(late){x=late.x;y=late.y;late=null;}
    const norm=Math.max(1,Math.hypot(x,y));input.setRaw(x/norm,y/norm);
    nextResponse=frame+(imperfect?11:1);response++;
   }

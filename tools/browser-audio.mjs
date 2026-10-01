@@ -25,7 +25,7 @@ async function open({ failure, delayed = false } = {}) {
   const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
   const requests = []; page.on('request', r => { if (r.url().includes('/assets/audio/')) requests.push(r.url()); });
   await page.clock.install(); await page.clock.pauseAt(new Date(Date.now() + 1000));
-  await page.goto(new URL('?debug=1&seed=123', base).href); await page.clock.runFor(32);
+  await page.goto(new URL('?debug=1&seed=123', base).href); await page.waitForLoadState('networkidle'); await page.clock.runFor(32);
   const state = () => page.evaluate(() => window.__corogalism.state);
   const click = async id => { await page.locator(`#${id}`).click(); await page.clock.runFor(32); };
   const ready = async () => { const s = await state(); await page.clock.runFor(s.prepareMs + s.countdownMs + 32); };
@@ -37,7 +37,7 @@ try {
   assert.equal((await state()).audio.context, 'none'); assert.equal(requests.length, 0);
   await click('btn-mode-settings'); await click('btn-settings-sound');
   await page.waitForFunction(() => window.__corogalism.state.audio.loaded, null, { polling: 50 });
-  assert.equal((await state()).audio.buffers, 14); assert.equal((await state()).audio.context, 'running');
+  assert.equal((await state()).audio.buffers, 18); assert.equal((await state()).audio.context, 'running');
   assert.equal((await state()).audio.music, false);
   await page.screenshot({ path: fileURLToPath(new URL('settings-390.png', output)), fullPage: true });
   await click('btn-settings-close'); assert.equal((await state()).audio.music, false);
@@ -120,11 +120,11 @@ try {
     assert.equal((await app.state()).screen, 'clear'); await app.context.close();
   }
   const slow = await open({ delayed: true }); await slow.click('btn-practice'); await slow.click('btn-sound');
-  for (let i = 0; slow.pending.length < 14 && i < 100; i++) await new Promise(resolve => setTimeout(resolve, 50));
-  assert.equal(slow.pending.length, 14);
+  for (let i = 0; slow.pending.length < 15 && i < 100; i++) await new Promise(resolve => setTimeout(resolve, 50));
+  assert.equal(slow.pending.length, 15);
   await slow.click('btn-sound'); await Promise.all(slow.pending.map(route => route.continue()));
   await slow.page.waitForFunction(() => window.__corogalism.state.audio.loaded, null, { polling: 50 });
   assert.equal((await slow.state()).audio.music, false); assert.equal((await slow.state()).audio.voices, 0);
   await slow.context.close(); assert.deepEqual(errors, []);
-  console.log('PASS: every BGM start uses offset 0 and loops, start SE + 0.2s gap, cancellation during delay, active play only; opt-in loading, 14 decoded sounds, countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
+  console.log('PASS: every BGM start uses offset 0 and loops, start SE + 0.2s gap, cancellation during delay, active play only; opt-in loading, 18 buffers (15 decoded + 3 synthesized), countdown/rolling/impact/clear/fail/continue, pause/settings/visibility stop, independent persisted volume, approved toolbar, missing API/fetch failure and mute during loading.');
 } finally { await browser.close(); }

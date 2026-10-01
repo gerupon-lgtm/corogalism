@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '12ffe73ccf73ea1a';
+self.PRECACHE_VERSION = 'fe5affd928a9afb3';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -30,6 +30,7 @@ self.PRECACHE_FILES = [
   "index.html",
   "manifest.webmanifest",
   "src/audio/audioSettings.js",
+  "src/audio/floorJingle.js",
   "src/audio/selectBuffer.js",
   "src/audio/soundManager.js",
   "src/config/gameConfig.js",
@@ -63,6 +64,8 @@ self.PRECACHE_FILES = [
   "src/render/ballRotation.js",
   "src/render/camera.js",
   "src/render/canvasRenderer.js",
+  "src/render/floorArt.js",
+  "src/render/floorVisuals.js",
   "src/render/materialAppearance.js",
   "src/render/toyBall.js",
   "src/render/toyCandy.js",
@@ -71,6 +74,7 @@ self.PRECACHE_FILES = [
   "src/render/toyWorld.js",
   "src/ui/clearScreen.js",
   "src/ui/featureHintPosition.js",
+  "src/ui/floorPresentation.js",
   "src/ui/gameScreen.js",
   "src/ui/guide.js",
   "src/ui/hpDisplay.js",
@@ -79,6 +83,7 @@ self.PRECACHE_FILES = [
   "src/ui/titleScreen.js",
   "src/ui/tutorial.js",
   "src/world/characters.js",
+  "src/world/floorThemes.js",
   "src/world/materials.js",
   "src/world/recovery.js",
   "src/world/stage.js",

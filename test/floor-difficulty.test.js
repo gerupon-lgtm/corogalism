@@ -14,7 +14,7 @@ test('通常もゆるめ、床負荷と折れ回数を時間へ反映する',()=
  for(const n of [1,4,6,8,10,16,40])for(const level of ['normal','easy']){
   const p=createStagePlay(7919,challengeDifficulty(n,level));
   assert.ok(p.limitSec>=(level==='normal'?25:30));
-  assert.ok(p.limitSec>stageTimeLimitSec(p.stage.maze,old));
+  assert.ok(p.limitSec>stageTimeLimitSec(p.stage.maze,difficultyAt(n)));
  }
 });
 test('コルクは通常と同じ反発で低ダメージ、閾値と上限を維持',()=>{
@@ -35,4 +35,24 @@ test('新旧ルールの記録を混ぜず旧ベストを保持する',()=>{
  assert.deepEqual(loadLegacyRunBests().noContinue,old.noContinue);
  assert.deepEqual(JSON.parse(map.get('corogalism-run-bests')),old);
  delete globalThis.localStorage;
+});
+
+test('序盤も短い経路を選び、元の同じ経路より時間を短縮しない',()=>{
+ for(let seed=1;seed<=100;seed++)for(const n of [1,2,5,7,8]){
+  const p=createStagePlay(seed,challengeDifficulty(n,'normal'));
+  assert.ok(p.limitSec>stageTimeLimitSec(p.stage.maze,difficultyAt(n)));
+  for(const s of p.stage.maze.floorSites||[]){
+   assert.deepEqual(p.stage.maze.path[s.index-1],s.prev);
+   assert.deepEqual(p.stage.maze.path[s.index],s.cell);
+   assert.deepEqual(p.stage.maze.path[s.index+1],s.next);
+  }
+ }
+});
+
+test('力場初登場と通常限定面には最終経路の広い角と力場を必ず置く（各1000シード）',()=>{
+ for(const n of [5,7,8,10])for(let seed=0;seed<1000;seed++){
+  const p=createStagePlay(seed,challengeDifficulty(n,'normal'));
+  assert.ok(p.stage.maze.floorSites.length,`${n}:${seed}`);
+  assert.ok(p.stage.zones.some(z=>z.kind==='radial'),`${n}:${seed}`);
+ }
 });
