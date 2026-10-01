@@ -4,7 +4,7 @@ import { challengeDifficulty } from '../src/game/challenge.js';
 import { createStagePlay } from '../src/game/stagePlay.js';
 import { createRecovery } from '../src/world/recovery.js';
 import { themeAt } from '../src/world/themes.js';
-import { BASE, RECOVERY } from '../src/config/gameConfig.js';
+import { BASE, RECOVERY, FLOOR_CHALLENGE } from '../src/config/gameConfig.js';
 import { playStage } from '../tools/balance.mjs';
 
 test('新テーマの序盤10面は両難易度で丁寧に完走できる（各10シード）', () => {
@@ -13,14 +13,14 @@ test('新テーマの序盤10面は両難易度で丁寧に完走できる（各
   }
 });
 
-test('やさしいは衝突速度・素材によらず通常の半分。迷路・物理は共通', () => {
-  for (const stage of [1, 4, 10, 30]) for (const materialId of ['default','rubber','moss','stone','spike']) for (const speed of [1, 2, 6, 30]) {
+test('やさしいは衝突速度・素材によらず素材ダメージを難易度係数で軽減。基本面の迷路・物理は共通', () => {
+  for (const stage of [1, 4, 12, 16]) for (const materialId of ['default','rubber','moss','stone','spike']) for (const speed of [1, 2, 6, 30]) {
     const normal = createStagePlay(123, challengeDifficulty(stage, 'normal'));
     const easy = createStagePlay(123, challengeDifficulty(stage, 'easy'));
     assert.deepEqual(easy.stage.walls, normal.stage.walls);
     assert.deepEqual(easy.actor, normal.actor);
     assert.equal(easy.hp.max, normal.hp.max);
-    assert.equal(easy.hp.applyImpact(speed, { materialId }, 1), normal.hp.applyImpact(speed, { materialId }, 1) * 0.5);
+    assert.ok(Math.abs(easy.hp.applyImpact(speed,{materialId},1)-normal.hp.applyImpact(speed,{materialId},1)*FLOOR_CHALLENGE.damageFactor.easy/FLOOR_CHALLENGE.damageFactor.normal)<1e-8);
   }
 });
 
@@ -41,7 +41,7 @@ test('キャンディの抽選・経路後半の位置は固定で、確率を�
     assert.ok(createRecovery(a.stage.maze, 1));
   }
   assert.ok(counts.easy > 440 && counts.easy < 560, JSON.stringify(counts));
-  assert.ok(counts.normal > 150 && counts.normal < 250, JSON.stringify(counts));
+  assert.ok(counts.normal > 340 && counts.normal < 460, JSON.stringify(counts));
 });
 
 const tick = (p, extra = {}) => p.advance({ dt: 0, elapsedMs: 10, tilt: { x: 0, y: 0 }, base: BASE, ...extra });
@@ -77,13 +77,14 @@ test('死亡・時間切れ時の接触では回復も復活もしない', () =>
 });
 
 test('面には1種類の主役素材。外周・入口・出口は標準。序盤から段階的に紹介', () => {
-  assert.deepEqual([1,2,3,4,5,10].map(n => themeAt(n).id), ['basic','basic','sticky','bounce','careful','trial']);
+  assert.deepEqual([1,2,3,4,5,10].map(n => themeAt(n).id), ['basic','basic','sand','iceRubber','gravityAssist','specialFlow']);
   for (let n = 1; n <= 30; n++) for (let seed = 1; seed <= 10; seed++) {
     const { stage } = createStagePlay(seed, challengeDifficulty(n, 'normal'));
+    if(stage.theme.floorPattern){assert.ok(stage.walls.every(w=>['cork','rubber'].includes(w.materialId)));continue;}
     const ids = new Set(stage.walls.map(w => w.materialId));
     assert.ok(ids.size <= 2);
     assert.ok([...ids].every(id => id === 'default' || id === stage.theme.material));
-    if (stage.theme.id !== 'basic') assert.ok(ids.has(stage.theme.material));
+    if (stage.theme.material !== 'default') assert.ok(ids.has(stage.theme.material));
     for (const w of stage.walls) if (w.x < 0 || w.y < 0 || w.x + w.w > 7 || w.y + w.h > 7) assert.equal(w.materialId, 'default');
   }
 });

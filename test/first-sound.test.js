@@ -30,11 +30,11 @@ test('resume待ちの操作音は1件だけ保持し、停止・ミュート・�
   let ctx, starts = 0;
   const param = () => ({ value: 0, cancelScheduledValues() {}, setTargetAtTime() {} });
   class FakeAudio {
-    constructor() { ctx = this; this.state = 'suspended'; this.currentTime = 0; }
+    constructor() { ctx = this; this.state = 'suspended'; this.currentTime = 0; this.sampleRate=44100; }
     createGain() { return { gain: param(), connect() {}, disconnect() {} }; }
     createDynamicsCompressor() { return { threshold: param(), ratio: param(), connect() {} }; }
     createBuffer(ch, frames) { return { getChannelData: () => new Float32Array(frames) }; }
-    createBufferSource() { return { connect() {}, disconnect() {}, start() { starts++; }, stop() {} }; }
+    createBufferSource() { return { playbackRate:param(),connect() {}, disconnect() {}, start() { starts++; }, stop() {} }; }
     addEventListener() {}
     resume() { return new Promise(resolve => { this.ready = () => { this.state = 'running'; resolve(); }; }); }
   }

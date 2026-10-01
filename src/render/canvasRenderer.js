@@ -5,7 +5,8 @@ import { drawHourglass } from './toyHourglass.js';
 import { createToyBall } from './toyBall.js';
 import { drawLeaf, drawFeatureFloors, drawGuard, drawTrap } from './toyFeatures.js';
 import { drawToyCandy } from './toyCandy.js';
-import { drawToyFloor, drawToyGoal, drawConfetti, wallTextureReady } from './toyWorld.js';
+import { drawFloorVisuals } from './floorVisuals.js';
+import { drawToyWall, drawToyFloor, drawToyGoal, drawConfetti, wallTextureReady } from './toyWorld.js';
 
 export function createRenderer(canvas) {
   const ctx = canvas.getContext('2d');
@@ -14,7 +15,7 @@ export function createRenderer(canvas) {
   const ball = createToyBall();
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let viewportPx = 0, dpr = 1, cachedStage = null, clearAt = null, lastActor = null;
-  let cachedTextureReady = false;
+  let cachedTextureReady = false, visualTime=0,visualLast=null;
 
   function resize(px) {
     const next = Math.max(1, Math.round(px)), ratio = Math.min(window.devicePixelRatio || 1, 3);
@@ -28,17 +29,22 @@ export function createRenderer(canvas) {
     return viewportPx;
   }
 
-  function draw({ stage, actor, camera, pointerTilt, status = 'playing', shield = 0, trap = null, now = performance.now() }) {
+  function draw({ stage, actor, camera, pointerTilt, status = 'playing', shield = 0, trap = null, now = performance.now(), animationActive=true }) {
     const textureReady = wallTextureReady();
     if (stage !== cachedStage || textureReady !== cachedTextureReady) {
       drawToyFloor(bg,stage,camera,viewportPx);cachedStage=stage;cachedTextureReady=textureReady;
     }
-    if (actor !== lastActor) {clearAt=null;lastActor=actor;}
+    if (actor !== lastActor) {clearAt=null;lastActor=actor;visualTime=0;visualLast=now;}
+    if(animationActive&&visualLast!==null)visualTime+=Math.min(100,now-visualLast);visualLast=now;
     if (status === 'clear' && clearAt === null) clearAt=now;
     if (status !== 'clear') clearAt=null;
     const elapsed=clearAt===null ? -1 : now-clearAt;
     const progress=elapsed<0 ? 0 : reducedMotion.matches ? 1 : Math.min(1,elapsed/UI.goalSettleMs);
     ctx.drawImage(background,0,0,viewportPx,viewportPx);
+    if(stage.zones.length){
+      drawFloorVisuals(ctx,camera,{actor,time:visualTime,reduced:reducedMotion.matches,stage,settings:{force:6}});
+      for(const wall of stage.walls)drawToyWall(ctx,wall,camera);
+    }
     drawFeatureFloors(ctx,stage,camera);
     if (stage.leaf && !stage.leaf.collected) { const at=camera.toScreen(stage.leaf.x,stage.leaf.y);drawLeaf(ctx,at.px,at.py,camera.toPx(.3)); }
     if (stage.hourglass && !stage.hourglass.collected) {
@@ -61,6 +67,7 @@ export function createRenderer(canvas) {
     const ease=1-Math.pow(1-progress,3);
     ball.draw(ctx,p.px+(gs.px-p.px)*ease,p.py+(gs.py-p.py)*ease,camera.toPx(actor.r)*(1-.15*ease));
     drawTrap(ctx,p.px,p.py,camera.toPx(actor.r),trap);
+    if(stage.theme?.special&&status==='clear'){ctx.save();ctx.strokeStyle='#99e5e9';ctx.lineWidth=2;ctx.globalAlpha=.55;ctx.beginPath();ctx.arc(gs.px,gs.py,camera.toPx(.45)+(reducedMotion.matches?0:Math.min(elapsed,800)/800*camera.toPx(1)),0,Math.PI*2);ctx.stroke();ctx.restore();}
     if(elapsed>=0 && !reducedMotion.matches) drawConfetti(ctx,gs,camera.toPx(1),elapsed,UI.clearCelebrationMs);
   }
   return { resize, draw, get viewportPx() {return viewportPx;} };

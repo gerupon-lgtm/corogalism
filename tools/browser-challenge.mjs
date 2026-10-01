@@ -12,7 +12,7 @@ async function setup(width, sensor = false) {
   await context.addInitScript(sensor => {
     Object.defineProperty(window, 'DeviceOrientationEvent', { value: sensor ? class {} : undefined, configurable: true });
     window.emit = (beta, gamma) => { const e = new Event('deviceorientation'); Object.assign(e, { beta, gamma }); window.dispatchEvent(e); };
-    localStorage.setItem('corogalism-run-bests', JSON.stringify({ noContinue: { stages: 8, totalTimeMs: 8000, at: '2026-09-12T00:00:00Z' } }));
+    localStorage.setItem('corogalism-run-bests-floor-v1', JSON.stringify({ noContinue: { stages: 8, totalTimeMs: 8000, at: '2026-09-12T00:00:00Z' } }));
   }, sensor);
   const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
   await page.clock.install(); await page.clock.pauseAt(new Date(Date.now() + 1000));
@@ -51,7 +51,7 @@ try {
     assert.equal(await page.locator('#recovery-feedback').textContent(), displayedRecovery ? `げんき +${displayedRecovery}` : 'げんきを少し回復');
     await page.screenshot({ path: fileURLToPath(new URL(`heal-${width}.png`, output)), fullPage: true });
     for (let n = 1; n < 4; n++) { await clear(); await click('btn-next'); await ready(); }
-    assert.equal((await state()).theme.id, 'bounce');
+    assert.equal((await state()).theme.id, 'iceRubber');
     assert.ok((await state()).walls.some(w => w.materialId === 'rubber'));
     await page.screenshot({ path: fileURLToPath(new URL(`rubber-${width}.png`, output)), fullPage: true });
     await click('btn-game-exit'); assert.match(await page.locator('#run-category').textContent(), /やさしい/);

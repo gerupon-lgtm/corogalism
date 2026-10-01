@@ -22,12 +22,12 @@ import { challengeDifficulty } from '../src/game/challenge.js';
  */
 export function playStage(seed, stageIndex, urgency, level = null) {
   const d = level ? challengeDifficulty(stageIndex, level) : difficultyAt(stageIndex);
-  const maze = generateMaze(BASE.mazeSize, seed);
-  const stage = createStage(maze, d);
+  const stage = createStage(generateMaze(BASE.mazeSize, seed), d);
+  const maze = stage.maze;
   const actor = createActor(maze, getCharacter('default'));
   const path = maze.path.map((c) => ({ x: c.x + 0.5, y: c.y + 0.5 }));
   const goal = goalCenter(maze);
-  const limitSec = stageTimeLimitSec(maze, d);
+  const limitSec = stageTimeLimitSec(maze, d, stage);
   const hp = createHp({ turns: maze.turns, ...d });
 
   let wp = 1;

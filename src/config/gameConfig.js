@@ -90,8 +90,8 @@ export const RUN = {
 
 /** やさしいは被弾を軽減し、9面以降の制限時間に秒数を加算する。 */
 export const CHALLENGE_LEVELS = {
-  easy: { label: 'やさしい', damageFactor: 0.5, recoveryChance: 0.5 },
-  normal: { label: '通常', damageFactor: 1, recoveryChance: 0.2 },
+  easy: { label: 'やさしい', damageFactor: 0.4, recoveryChance: 0.5 },
+  normal: { label: '通常', damageFactor: 0.65, recoveryChance: 0.4 },
 };
 export const EASY_TIME = { firstStage: 9, stepSec: 3, maxBonusSec: 12 };
 export const HOURGLASS = { firstStage: 9, bonusSec: 5, chance: { easy: 0.5, normal: 0.2 }, pathMin: 0.55, pathMax: 0.85, radius: 0.22 };
@@ -162,3 +162,13 @@ export const STICKY = { firstStage: 3, interval: 8, durationSec: 3, shortenSec: 
 
 /** チュートリアル。表示前の間と更新時のハイライト時間を調整できる。 */
 export const TUTORIAL = { contactDelayMs: 700, flashMs: 1800, hp: 100, minHp: 1, size: 7 };
+
+/** T-258: 本編採用値。labの調整値とは分離する。 */
+export const FLOOR_CHALLENGE = {
+ ice:0.08, sand:3.2, iceMotion:{minAccelK:0.28,transitionSpeed:1.2}, radius:1.6,
+ assistForce:3.3, hinderForce:3.3, mazeCandidates:6,
+ secPerCellStart:0.8,secPerCellEnd:0.55,timeStages:40,minSec:{normal:25,easy:30},
+ turnSec:0.55,sandSec:0.8,hinderSec:2,introSec:6,
+ damageFactor:{normal:0.65,easy:0.4},damageStep:0.015,damageMax:1.4,hpPerTurn:4,
+ recoveryChance:{normal:0.4,easy:0.5},
+};

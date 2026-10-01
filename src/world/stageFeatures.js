@@ -2,6 +2,7 @@
 import { LEAF, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
 import { createRng } from '../maze/rng.js';
 import { solvePath } from '../maze/path.js';
+import { stableFloorPoint, pickupPoint } from './floorThemes.js';
 // XORだけの初期化だと抽選同士に相関が出るため、非線形に混ぜる。
 function featureSeed(seed, salt) {
   let h = (seed ^ salt) >>> 0;
@@ -15,7 +16,7 @@ export function addStageFeatures(stage, difficulty) {
   const { maze } = stage, path = solvePath(maze), occupied = new Set();
   const key = p => `${p.x},${p.y}`;
   if (stage.recovery) occupied.add(key(stage.recovery));
-  function place(salt, chance, min, max, prefer = () => 0, eligible = () => true) {
+  function place(salt, chance, min, max, prefer = () => 0, eligible = p=>pickupPoint(stage,p)) {
     const rng = createRng(featureSeed(maze.seed, salt));
     if (rng() >= chance) return null;
     const candidates = path.map((p, i) => ({ x: p.x + .5, y: p.y + .5, i }))
@@ -36,7 +37,7 @@ export function addStageFeatures(stage, difficulty) {
       const previous = path.slice(Math.max(0,p.i-3),p.i);
       return previous.some(c => danger.some(w => Math.hypot(c.x+.5-Math.max(w.x,Math.min(c.x+.5,w.x+w.w)),
         c.y+.5-Math.max(w.y,Math.min(c.y+.5,w.y+w.h))) < .6)) ? 1 : 0;
-    });
+    }, p=>stableFloorPoint(stage,p));
   if (rest) stage.rest = { ...rest, used: false, progress: 0 };
   if (stage.theme.id === 'sticky') {
     const clearOfEnds = p => Math.hypot(p.x-.5,p.y-.5) > STICKY.endpointClearance
@@ -45,7 +46,7 @@ export function addStageFeatures(stage, difficulty) {
       p => p.i/(path.length-1) >= STICKY.pathMin && p.i/(path.length-1) <= STICKY.pathMax ? 1 : 0, clearOfEnds);
     if (first) stage.sticky.push(first);
     // 初登場は必ず1個。以後は経路外に余裕がある場合だけ2個目。
-    if (difficulty.stage > STICKY.firstStage) {
+    if (difficulty.stage > 11) {
       const route = new Set(path.map(p => `${p.x+.5},${p.y+.5}`));
       const rng = createRng((maze.seed ^ 0x69abc532) >>> 0);
       const cells = maze.cells.map((_,i) => ({x:i%maze.size+.5,y:Math.floor(i/maze.size)+.5}))

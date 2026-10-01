@@ -22,7 +22,7 @@ export function drawToyWall(ctx, wall, camera) {
   ctx.shadowColor='transparent';ctx.shadowOffsetY=0;ctx.shadowBlur=0;
   ctx.beginPath(); ctx.rect(0,0,w,h); ctx.clip();
   if (!horizontal) { ctx.translate(w,0); ctx.rotate(Math.PI/2); }
-  if (wallTextureReady()) {
+  if (wallTextureReady() && wall.materialId !== 'cork') {
     const [top,bottom]=materialBands[wall.materialId] || materialBands.default;
     const sy=wallAtlas.naturalHeight*top, sh=wallAtlas.naturalHeight*(bottom-top);
     rounded(ctx,0,0,length,thickness,thickness*.22);ctx.clip();
@@ -55,7 +55,9 @@ export function drawToyWall(ctx, wall, camera) {
   ctx.fillStyle = gradient;
   rounded(ctx,0,0,length,thickness,thickness*.23); ctx.fill(); ctx.clip();
   const step = thickness*2.3;
-  if (wall.materialId === 'stone') {
+  if (wall.materialId === 'cork') {
+    for(let n=0;n<length*2;n++){const x=(n*7.13)%length,y=thickness*(.1+((n*31)%80)/100);ctx.fillStyle=n%3?'#8d624455':'#ffefd18a';circle(ctx,x,y,thickness*(.025+(n%4)*.017));}
+  } else if (wall.materialId === 'stone') {
     for(let p=0;p<length;p+=step) {
       ctx.strokeStyle='#5e483877'; ctx.lineWidth=.8;
       rounded(ctx,p+.4,.5,step-.8,thickness-1,thickness*.25); ctx.stroke();

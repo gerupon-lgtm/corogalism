@@ -7,7 +7,7 @@
  *
  * 純粋関数。
  */
-import { DIFFICULTY, HP } from '../config/gameConfig.js';
+import { DIFFICULTY, HP, FLOOR_CHALLENGE as C } from '../config/gameConfig.js';
 
 const lerpDown = (start, end, stages, n) =>
   Math.max(end, start - (start - end) * (n - 1) / Math.max(1, stages - 1));
@@ -38,6 +38,11 @@ export function difficultyAt(stage, cfg = DIFFICULTY) {
 }
 
 /** 制限時間（秒）。経路長で正規化する（生成された迷路による難易度のばらつきを消す） */
-export function stageTimeLimitSec(maze, difficulty) {
+export function stageTimeLimitSec(maze, difficulty, stage=null) {
+  if(difficulty.themed){
+    const load=stage?.floorLoad||{};
+    const extra=maze.turns*C.turnSec+(load.sandCells||0)*C.sandSec+(load.hinderFields||0)*C.hinderSec+(stage?.theme.firstVisit?C.introSec:0);
+    return Math.max(C.minSec[difficulty.level]||25,maze.pathLength*difficulty.secPerCell+extra)+(difficulty.level==='easy'?5:0);
+  }
   return maze.pathLength * difficulty.secPerCell + (difficulty.timeBonusSec ?? 0);
 }

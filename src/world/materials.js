@@ -10,6 +10,7 @@ export const MATERIALS = {
   default: { id: 'default', frictionK: 1.0, restitutionK: 1.0, accelK: 1.0, damageK: 1.0 },
   // 壁の素材（フェーズ2）。反発とダメージを別々に振ることで、壁そのものがギミックになる
   rubber:  { id: 'rubber',  frictionK: 1.0, restitutionK: 2.6, accelK: 1.0, damageK: 0.0 }, // よく跳ねるが痛くない
+  cork: { id: 'cork', frictionK:1, restitutionK:1, accelK:1, damageK:0.25 },
   stone:   { id: 'stone',   frictionK: 1.0, restitutionK: 0.7, accelK: 1.0, damageK: 1.4 }, // 跳ねないが痛い
   spike:   { id: 'spike',   frictionK: 1.0, restitutionK: 1.2, accelK: 1.0, damageK: 2.0 }, // 跳ねて痛い
   moss:    { id: 'moss',    frictionK: 1.0, restitutionK: 0.5, accelK: 1.0, damageK: 0.2 }, // 安全地帯

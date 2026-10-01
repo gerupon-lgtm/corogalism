@@ -6,9 +6,10 @@
 import { TUNING } from '../config/gameConfig.js';
 import { getMaterial } from './materials.js';
 import { createRng } from '../maze/rng.js';
-import { assignTheme } from './themes.js';
+import { themeAt, assignTheme } from './themes.js';
 import { addStageFeatures } from './stageFeatures.js';
 import { createRecovery } from './recovery.js';
+import { prepareFloorMaze, addFloorTheme, pickupPoint } from './floorThemes.js';
 
 const NEUTRAL_ZONE = { id: 'none', frictionK: 1, restitutionK: 1, accelK: 1, forceX: 0, forceY: 0 };
 
@@ -32,6 +33,8 @@ export function buildWalls(maze, wallThickness = TUNING.wallThickness) {
 }
 
 export function createStage(maze, difficulty) {
+  const theme=difficulty?.themed?themeAt(difficulty.stage,difficulty.level):null;
+  if(theme)maze=prepareFloorMaze(maze,theme);
   const stage = {
     maze,
     floors: new Array(maze.size * maze.size).fill('default'),
@@ -41,7 +44,8 @@ export function createStage(maze, difficulty) {
   };
   if (difficulty?.themed) assignTheme(stage, difficulty);
   else if (difficulty) assignWallMaterials(stage, difficulty);
-  stage.recovery = difficulty ? createRecovery(maze, difficulty.recoveryChance ?? 0) : null;
+  if(theme)addFloorTheme(stage,theme);
+  stage.recovery = difficulty ? createRecovery(maze, difficulty.recoveryChance ?? 0, undefined, p=>pickupPoint(stage,p)) : null;
   addStageFeatures(stage, difficulty);
   return stage;
 }

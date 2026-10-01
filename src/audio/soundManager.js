@@ -1,5 +1,6 @@
 import { AUDIO } from '../config/gameConfig.js';
 import { normalizeAudioSettings } from './audioSettings.js';
+import { createFloorJingle } from './floorJingle.js';
 import { createSelectBuffer } from './selectBuffer.js';
 
 const files = {
@@ -43,12 +44,12 @@ export function createSoundManager(initial, onStatus = () => {}) {
     } catch { /* 既に終了した短い音も停止対象にできる。 */ }
   }
 
-  function startVoice(name, { loop = false, offset = 0, duration, gain = 1, delay = 0 } = {}) {
+  function startVoice(name, { loop = false, offset = 0, duration, gain = 1, delay = 0, rate = 1 } = {}) {
     const buffer = buffers.get(name) || (name === 'select' ? instantSelect : null);
     if (!available() || !buffer) return null;
     try {
       const source = context.createBufferSource(), node = context.createGain();
-      source.buffer = buffer; source.loop = loop;
+      source.buffer = buffer; source.loop = loop; source.playbackRate.value=rate;
       node.gain.value = gain;
       source.connect(node); node.connect(name === 'bgm' ? bgmGain : seGain);
       const voice = { source, gain: node, at: context.currentTime + delay, offset };
@@ -106,7 +107,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
       finally { clearTimeout(timeout); }
     })).then(() => {
       loaded = true; loading = null;
-      onStatus(buffers.size === Object.keys(files).length ? '' : '一部の音を読み込めませんでした。音をOFF→ONにすると再試行できます。');
+      onStatus(Object.keys(files).every(name=>buffers.has(name)) ? '' : '一部の音を読み込めませんでした。音をOFF→ONにすると再試行できます。');
       sync();
     });
   }
@@ -126,6 +127,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
         musicNode.connect(limiter); effectsNode.connect(limiter); limiter.connect(next.destination);
         context = next; bgmGain = musicNode; seGain = effectsNode;
         instantSelect = createSelectBuffer(context);
+        buffers.set('floorStart',createFloorJingle(context));buffers.set('flowStart',createFloorJingle(context,true));buffers.set('flowGoal',createFloorJingle(context,true));
         context.addEventListener('statechange', () => { if (context.state !== 'running') stopEffects(); sync(); });
       }
       if (context.state !== 'running') context.resume().then(sync).catch(() => onStatus('音ボタンを押して再開してください。'));
@@ -161,16 +163,17 @@ export function createSoundManager(initial, onStatus = () => {}) {
     },
     effect,
     stopEffects,
-    tick(number) {
+    tick(number,cue=null) {
       if (number === 0) musicStart = { time: performance.now() / 1000, audioTime: context?.currentTime };
+      if(number===0&&cue){effect(cue);return;}
       effect('countdown', number === 0 ? { offset: 3, duration: AUDIO.startCueSec } : { offset: 0, duration: 0.55 });
     },
-    clear() { effect('goal'); effect('clear', { delay: 0.18 }); },
+    clear(special=false) { effect('goal'); effect(special?'flowGoal':'clear', { delay: 0.18 }); },
     impact(speed, wall) {
       if (!available() || speed < AUDIO.impactMinSpeed || context.currentTime - lastImpact < AUDIO.impactIntervalSec) return;
       lastImpact = context.currentTime;
-      const name = wall.materialId === 'default' ? 'wall' : wall.materialId;
-      effect(name, { gain: 0.25 + 0.75 * Math.min(1, speed / AUDIO.impactFullSpeed) });
+      const name = ['default','cork'].includes(wall.materialId) ? 'wall' : wall.materialId;
+      effect(name, { rate:wall.materialId==='cork'?.7:1, gain: 0.25 + 0.75 * Math.min(1, speed / AUDIO.impactFullSpeed) });
     },
     get state() { return { enabled: prefs.soundEnabled, context: context?.state || 'none', loaded,
       buffers: buffers.size, music: Boolean(music), rolling: Boolean(rolling), voices: voices.size,

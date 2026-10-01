@@ -9,7 +9,7 @@ test('10タップで5回短縮し、拘束開始から500msで脱出する', t =
  const previous=globalThis.window;globalThis.window=new EventTarget();
  t.after(()=>{if(previous===undefined)delete globalThis.window;else globalThis.window=previous;});
  let stamp=0;t.mock.method(performance,'now',()=>stamp);
- const board=new EventTarget(),play=createStagePlay(7919,challengeDifficulty(3,'easy'));
+ const board=new EventTarget(),play=createStagePlay(7919,challengeDifficulty(11,'easy'));
  const tile=play.stage.sticky[0];play.teleport(tile.x,tile.y);
  const advance=ms=>{stamp+=ms;play.advance({dt:0,elapsedMs:ms,tilt:{x:0,y:0},base:BASE});};
  advance(0);assert.ok(play.trap);

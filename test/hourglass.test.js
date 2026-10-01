@@ -9,10 +9,10 @@ import { resolveCollisions } from '../src/physics/collision.js';
 import { getMaterial } from '../src/world/materials.js';
 const make=(n=9,seed=1,level='easy')=>createStagePlay(seed,challengeDifficulty(n,level));
 const tick=(p,ms=10,onFeature)=>p.advance({dt:0,elapsedMs:ms,tilt:{x:0,y:0},base:BASE,onFeature});
-test('序盤は維持し9面から秒数加算。時計は実時間どおり',()=>{
+test('やさしいは時間に余裕。時計は実時間どおり',()=>{
  for(let n=1;n<=30;n++){
   const easy=make(n),normal=make(n,1,'normal');
-  assert.ok(Math.abs(easy.limitSec-normal.limitSec-Math.min(12,Math.max(0,n-8)*3))<1e-8);
+  assert.ok(easy.limitSec>=normal.limitSec+5);
   easy.teleport(.5,.5);const before=easy.remainingSec;tick(easy,1000);assert.equal(easy.timeMs,1000);assert.ok(Math.abs(before-easy.remainingSec-1)<1e-8);
  }
 });

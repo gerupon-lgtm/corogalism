@@ -1,5 +1,6 @@
 /** S-105 / S-106 / S-107。ランの進行と記録計算は呼び出し側が担う。 */
 import { CHALLENGE_LEVELS } from '../config/gameConfig.js';
+import { loadLegacyRunBests } from '../record/storage.js';
 const seconds = (ms) => `${(ms / 1000).toFixed(2)} 秒`;
 const bestLabel = (best) => best ? `${best.stages}面 / ${seconds(best.totalTimeMs)}` : '記録なし';
 
@@ -20,6 +21,10 @@ export function createRunScreens(root) {
       renderModeBest(find('mode-best-no'), bests.noContinue);
       renderModeBest(find('mode-best-continue'), bests.withContinue);
       find('mode-note').textContent = note;
+      const level=document.querySelector('[data-level=easy][aria-pressed=true]')?'easy':'normal';
+      const old=loadLegacyRunBests(level);
+      const legacy=find('mode-legacy');
+      if(legacy){legacy.hidden=!old.noContinue&&!old.withContinue;legacy.textContent=`旧ルールの記録：ノーコン ${bestLabel(old.noContinue)} ／ 続行 ${bestLabel(old.withContinue)}`;}
     },
     setOver(run) {
       find('over-heading').textContent = run.canContinue ? 'もう一度！' : 'おつかれさま！';

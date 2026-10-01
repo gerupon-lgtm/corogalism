@@ -486,3 +486,31 @@ body[data-game-mode="tutorial"] #game-status{display:none}
 .play-guide{top:var(--camera-top);bottom:env(safe-area-inset-bottom,0px);max-height:calc(100dvh - 28px - var(--camera-top) - env(safe-area-inset-bottom,0px))}
 
 @media(max-width:360px){.wrap{padding-left:calc(10px + env(safe-area-inset-left,0px));padding-right:calc(10px + env(safe-area-inset-right,0px))}}
+
+/* T-258: 開始待ち時間の中で新しい遊びを紹介する。 */
+.countdown-layer.has-floor-intro{display:flex;flex-direction:column;justify-content:center;gap:6px;background:#15231ee8;padding:10px}
+.floor-intro{display:flex;flex-direction:column;align-items:center;gap:3px;color:#fff2d7;text-align:center;width:100%;max-width:270px}
+.floor-intro canvas{width:100%;max-width:180px;height:64px;object-fit:cover;border-radius:12px}
+.floor-intro strong{font-size:15px;line-height:1.4}.floor-intro p{font-size:11px;line-height:1.5;margin:0}
+.has-floor-intro .countdown-medallion{width:64px;min-height:64px;aspect-ratio:1;border-width:2px;box-shadow:0 3px 0 #a86a37}
+.has-floor-intro #countdown-number{font-size:25px}.has-floor-intro .countdown-label{display:none}.has-floor-intro .countdown-caption{font-size:9px;white-space:nowrap}.has-floor-intro.is-preparing #countdown-number{font-size:15px}
+.flow-preview{position:relative;isolation:isolate;border-radius:17px;overflow:hidden;background:#253b34;color:#fff0ce;min-height:96px;flex-shrink:0;border:1px solid #769e8b}
+.flow-preview canvas{display:block;width:100%;height:110px;object-fit:cover;opacity:.78}.flow-preview>div{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:14px;background:linear-gradient(90deg,#12251dee,transparent)}
+.flow-preview span{font-size:18px;letter-spacing:.05em;font-weight:700}.flow-preview small{font-size:10px;color:#bdd8c5;margin-top:5px}
+.flow-preview.is-revealed::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,#bdfaf13f 48%,transparent 66%);animation:flow-reveal .8s ease-out both;pointer-events:none}
+@keyframes flow-reveal{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@media(prefers-reduced-motion:reduce){.flow-preview.is-revealed::after{animation:none;display:none}}
+#mode-legacy{font-size:10px!important;color:#8b7150;line-height:1.7}
+
+/* 遊びが見えるガイド。絵と読みやすさを優先し、余白の重複を抑える。 */
+.guide-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:8px 0 12px}
+.guide-showcase article{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.guide-showcase canvas{width:100%;height:auto;border-radius:10px}.guide-showcase strong{font-size:12px;line-height:1.5}.guide-showcase span{font-size:10px;line-height:1.5;color:#7b694f}
+.guide-floor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.guide-floor-grid .guide-card{display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:7px;background:#fffaf0}
+.guide-floor-grid .guide-card canvas{width:100%;height:70px;object-fit:cover;border-radius:8px}
+.guide-floor-grid .guide-card h3{font-size:15px}.guide-floor-grid .guide-card p{font-size:12px;line-height:1.65}
+.guide-wall-grid .guide-card{min-height:70px;padding:6px;align-items:center}.guide-wall-grid h3{font-size:13px}.guide-wall-grid p{font-size:11px;line-height:1.6}
+.guide-tip{font-size:11px;line-height:1.65;margin:7px 3px;color:#7b694f}
+.guide-heading{position:sticky;top:-14px;z-index:2;background:linear-gradient(#fff1d6,#f5e7cc);padding:8px 0 6px;margin-top:-7px;border-radius:12px}
+.guide-heading .guide-x{right:0;top:3px;background:#fff7e2}.guide-heading h2{padding-right:25px}

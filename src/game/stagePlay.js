@@ -20,7 +20,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
   if (stage.rest && carry.restUsed) stage.rest.used = true;
   let extendedSec = 0, restOrigin = null, trap = null, releasedFloor = null;
   const onTile = (tile, radius) => tile && Math.abs(actor.x-tile.x) < radius && Math.abs(actor.y-tile.y) < radius;
-  const limitSec = !tutorial && difficulty ? stageTimeLimitSec(maze, difficulty) : null;
+  const limitSec = !tutorial && difficulty ? stageTimeLimitSec(maze, difficulty, stage) : null;
   let timeMs = 0;
   let activeSec = 0;
   let touchingRecovery = false;

@@ -70,6 +70,7 @@
   </section>
     </div>
     <div id="countdown-layer" class="countdown-layer" role="status" aria-live="polite" hidden>
+      <div id="floor-intro" class="floor-intro" hidden><canvas width="240" height="96" aria-hidden="true"></canvas><strong></strong><p></p></div>
       <div class="countdown-medallion"><span class="countdown-label">READY</span><strong id="countdown-number">3</strong><span class="countdown-caption" id="countdown-caption">まもなくスタート</span><button id="btn-calibration-pointer" type="button" hidden>タッチで遊ぶ</button></div>
     </div>
     <div id="board-overlay" class="board-overlay" hidden><div class="pause-card"><span id="board-status"></span><button id="btn-pause-calibrate" type="button">この角度を基準にする</button><button id="btn-pause-guide" type="button">あそびのガイド</button><button id="btn-resume" type="button">▶ 再開</button></div></div>
@@ -91,7 +92,7 @@
       <button class="mode-card challenge-start" id="btn-challenge" type="button"><span id="challenge-level-label">通常</span>でスタート</button>
     </div>
     <p class="menu-instruction">楽に持てる角度でモードを選んでください。</p>
-    <p class="note" id="mode-note"></p>
+    <p class="note" id="mode-legacy" hidden></p><p class="note" id="mode-note"></p>
     <details id="mode-records" class="mode-records"><summary>自己ベストを見る</summary><div class="difficulty-switch record-switch" role="group" aria-label="記録の難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
     <dl class="result record-cards">
       <div><dt>ノーコンティニュー記録</dt><dd id="mode-best-no">—</dd></div>
@@ -143,6 +144,7 @@
     <span id="run-badge" class="best-badge" hidden>自己ベスト更新</span>
     <p id="run-category" class="lead"></p>
     <dl class="result run-score"><div class="run-stage-score"><dt>クリア面数</dt><dd id="run-stages">0 面</dd></div><div><dt>合計クリアタイム</dt><dd id="run-time">0.00 秒</dd></div><div><dt>ノーミス</dt><dd id="run-no-damage">0 面</dd></div></dl>
+    <aside id="flow-preview" class="flow-preview" hidden><canvas width="360" height="128" aria-hidden="true"></canvas><div><span>もうひとつの滑走</span><small>通常モード・特別面</small></div></aside>
     <p id="run-best" class="note"></p><p id="run-save-note" class="note" role="status"></p>
     <div class="row"><button class="primary" id="btn-run-again" type="button">新しいランに挑戦</button><button class="ghost" id="btn-run-modes" type="button">モード選択</button></div>
   </section>

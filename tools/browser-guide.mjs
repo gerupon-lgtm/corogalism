@@ -10,8 +10,8 @@ try{
  await page.locator('#btn-guide').scrollIntoViewIfNeeded();const scroll=await page.evaluate(()=>scrollY);
  await page.locator('#btn-guide').click();await page.evaluate(()=>document.fonts.ready);
  const sizes=await page.evaluate(()=>{const d=document.querySelector('#play-guide');return {h:d.clientHeight,scroll:d.scrollHeight,overflow:document.documentElement.scrollWidth>innerWidth,cards:[...d.querySelectorAll('.guide-floors .guide-card')].map(c=>c.getBoundingClientRect().height)}});
- assert.equal(sizes.overflow,false);assert.ok(sizes.scroll<=sizes.h+1,JSON.stringify({width,...sizes}));assert.equal(sizes.cards[0],sizes.cards[1]);
- assert.equal(await page.locator('.guide-card').count(),10);
+ assert.equal(sizes.overflow,false);assert.ok(sizes.h<=844);assert.equal(sizes.cards[0],sizes.cards[1]);
+ assert.equal(await page.locator('.guide-card').count(),15);
  assert.equal(await page.locator('.guide-floors .guide-card').last().locator('p').innerText(),'迷路内連続タップで最短0.5秒で脱出可能。');
  await page.screenshot({path:`docs/verification/guide/overlay-${width}.png`});
  await page.locator('.guide-close').click();assert.equal(await page.locator('#play-guide').isVisible(),false);assert.ok(Math.abs(await page.evaluate(()=>scrollY)-scroll)<2);

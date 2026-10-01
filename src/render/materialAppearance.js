@@ -17,6 +17,7 @@ export const WALL_MATERIAL_APPEARANCE = Object.freeze({
     pattern: '#087985',
     motif: 'bubble',
   }),
+  cork:Object.freeze({label:'コルク',fill:'#cfa779',edge:'#fae4bd',pattern:'#906440',motif:'grain'}),
   stone: Object.freeze({
     label: '石',
     fill: '#BB9A75',

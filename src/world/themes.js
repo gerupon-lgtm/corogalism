@@ -1,16 +1,31 @@
-import { STAGE_THEMES, STICKY } from '../config/gameConfig.js';
+import { STAGE_THEMES } from '../config/gameConfig.js';
 import { createRng } from '../maze/rng.js';
 import { solvePath } from '../maze/path.js';
 
-export function themeAt(stage, cfg = STAGE_THEMES) {
-  const n = Math.max(1, Math.floor(stage));
-  const id = n >= STICKY.firstStage && (n - STICKY.firstStage) % STICKY.interval === 0 ? 'sticky' : n <= cfg.introStages ? 'basic' : cfg.cycle[(n - cfg.introStages - 1) % cfg.cycle.length];
-  return { id, ...cfg.definitions[id] };
+const floorDefs = {
+ sand:{label:'砂でブレーキ',floorPattern:'sand',introHint:'砂の上で勢いが落ちます。'},
+ iceRubber:{label:'氷とゴムの迷路',floorPattern:'iceRubber',introHint:'早めに逆へ傾けてブレーキ。'},
+ gravityAssist:{label:'引力のカーブ',floorPattern:'gravityAssist',assist:true,introHint:'紫の重力が出口へ引きます。'},
+ iceSand:{label:'氷と砂の迷路',floorPattern:'iceSand',introHint:'砂で減速して、角を曲がろう。'},
+ repulsionAssist:{label:'押し出すカーブ',floorPattern:'repulsionAssist',assist:true,introHint:'橙の反重力が後ろから押します。'},
+ iceAssist:{label:'氷と力場の迷路',floorPattern:'iceAssist',assist:true,introHint:'氷の勢いと、引く・押す力を使おう。'},
+ gravityHinder:{label:'引力を抜ける迷路',floorPattern:'gravityHinder',introHint:'引かれる方向を読んで、横から抜けよう。'},
+ repulsionHinder:{label:'斥力を抜ける迷路',floorPattern:'repulsionHinder',introHint:'押される方向を読んで、回り込もう。'},
+ specialFlow:{label:'光の滑走路',floorPattern:'specialFlow',assist:true,special:true,introHint:'広いカーブを、光の軌道に乗って。'},
+};
+const intro=['basic','basic','sand','iceRubber','gravityAssist','iceSand','repulsionAssist','iceAssist','rest','iceSand','sticky','careful','gravityHinder','rest','repulsionHinder','iceAssist'];
+const cycle=['trial','rest','iceRubber','basic','iceSand','bounce','gravityHinder','rest','repulsionHinder','iceAssist','sticky','careful','sand','rest','iceAssist','basic'];
+export function themeAt(stage, level='normal') {
+ const n=Math.max(1,Math.floor(stage));
+ const id=level==='normal'&&n%10===0?'specialFlow':n<=intro.length?intro[n-1]:cycle[(n-intro.length-1)%cycle.length];
+ const definition=floorDefs[id]||STAGE_THEMES.definitions[id];
+ const first=Object.keys(floorDefs).includes(id)&&!intro.slice(0,n-1).includes(id)&&n<=16;
+ return {id,material:'default',ratio:0,...definition,firstVisit:first};
 }
 
 /** 経路上の曲がり角に接する壁を優先。外周とスタート・ゴールの周囲は標準のまま。 */
 export function assignTheme(stage, difficulty) {
-  const theme = themeAt(difficulty.stage);
+  const theme = themeAt(difficulty.stage, difficulty.level);
   stage.theme = theme;
   if (theme.material === 'default') return;
   const { maze, wallThickness: wt } = stage;

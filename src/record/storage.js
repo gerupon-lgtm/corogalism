@@ -9,7 +9,8 @@ import { normalizeAudioSettings } from '../audio/audioSettings.js';
 
 const SETTINGS_KEY = 'corogalism-settings';
 const BESTS_KEY = 'corogalism-bests';
-const RUN_BESTS_KEY = 'corogalism-run-bests';
+const LEGACY_RUN_KEY='corogalism-run-bests';
+const RUN_BESTS_KEY = 'corogalism-run-bests-floor-v1';
 
 const DEFAULT_SETTINGS = {
   mode: 'tilt',
@@ -117,6 +118,7 @@ export function saveRunBest(result) {
   }
 
   const best = {
+    rulesVersion: 'floor-v1',
     stages: result.stages,
     totalTimeMs: result.totalTimeMs,
     at: new Date().toISOString(),
@@ -124,4 +126,10 @@ export function saveRunBest(result) {
   bests[category] = best;
   const saved = write(runBestsKey(result.level), bests);
   return { updated: true, saved, best };
+}
+
+/** 旧記録は読み取り専用。新しいルールのベストとは比較しない。 */
+export function loadLegacyRunBests(level='normal'){
+ const stored=read(level==='easy'?`${LEGACY_RUN_KEY}-easy`:LEGACY_RUN_KEY,{});
+ return {noContinue:isRunBest(stored.noContinue)?stored.noContinue:null,withContinue:isRunBest(stored.withContinue)?stored.withContinue:null};
 }

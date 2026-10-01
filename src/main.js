@@ -2,6 +2,7 @@ import { initPortraitLock } from './input/portraitLock.js';
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
 import { BASE, TUNING, UI, CHALLENGE_LEVELS } from './config/gameConfig.js';
 import { createEscapeInput } from './input/escapeInput.js';
+import { createFloorPresentation } from './ui/floorPresentation.js';
 import { initGuide } from './ui/guide.js';
 import { initPwa } from './pwa.js';
 import { createSoundManager } from './audio/soundManager.js';
@@ -71,6 +72,7 @@ let audibleCountdown = null;
 let lastFrame = performance.now();
 let shield = { value: 0 };
 const tutorial = createTutorialUi();
+const floorPresentation=createFloorPresentation(root);
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 
@@ -259,7 +261,7 @@ function updateCountdown() {
   const label = preparing ? 'READY' : String(Math.ceil(countdownMs / 1000));
   find('countdown-layer').classList.toggle('is-preparing', preparing);
   if (counting && audibleCountdown !== label) sound.tick(Number(label));
-  else if (audibleCountdown !== null && !visible && countdownMs === 0 && isPlaying()) sound.tick(0);
+  else if (audibleCountdown !== null && !visible && countdownMs === 0 && isPlaying()) sound.tick(0,floorPresentation.cue);
   audibleCountdown = counting ? label : null;
   if (visible && find('countdown-number').textContent !== label) {
     find('countdown-number').textContent = label;
@@ -271,6 +273,7 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
   play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, shield, tutorial: gameMode === 'tutorial' });
+  floorPresentation.setStage(run?play.stage.theme:null);
   paused = false;
   handled = false;
   countdownMs = UI.startCountdownMs;
@@ -285,6 +288,7 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
 
 function startGame(mode, useSeed = seed) {
   tutorial.reset();
+  floorPresentation.resetRun();
   gameMode = mode;
   activeLevel = settings.challengeLevel;
   run = mode === 'challenge' ? createRun(useSeed) : null;
@@ -332,7 +336,7 @@ function finishStage() {
     clear.setResult({ gameMode, timeMs: play.timeMs, bestMs: best?.timeMs, isNewBest: Boolean(updated && best), seed });
   }
   showScreen('clear');
-  sound.clear();
+  sound.clear(Boolean(play.stage.theme?.special));
 }
 
 function failStage() {
@@ -349,6 +353,7 @@ function finishRun() {
   if (!run) { showModes(); return; }
   saveRunProgress();
   runUi.setResult(runResult(), recordStatus);
+  floorPresentation.setResult(runResult());
   showScreen('run-result');
 }
 
@@ -381,6 +386,7 @@ function frame(now) {
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
   }
   if (play && camera && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, shield: shield.value, trap: play.trap, now,
+    animationActive:isPlaying()&&play.status==='playing',
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
     mode: settings.mode, tutorial: gameMode === 'tutorial', started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, shield: shield.value, now });
@@ -496,6 +502,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,
         run: run ? { ...run.result(), stageIndex: run.stageIndex, continuesLeft: run.continuesLeft, runSeed: run.runSeed } : null,
         actor: { x: play.actor.x, y: play.actor.y, vx: play.actor.vx, vy: play.actor.vy, r: play.actor.r },
+        maze:{size:play.stage.maze.size,path:play.stage.maze.path,cells:play.stage.maze.cells},zones:play.stage.zones,
         goal: goalCenter(play.stage.maze), walls: play.stage.walls.map((wall) => ({ ...wall })) };
     },
     teleport(x, y) { play.teleport(x, y); },
