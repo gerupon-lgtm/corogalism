@@ -100,7 +100,7 @@ export function drawToyWall(ctx, wall, camera) {
   rounded(ctx,.4,.4,length-.8,thickness-.8,thickness*.2);ctx.stroke();ctx.restore();
 }
 
-export function drawToyFloor(ctx, stage, camera, viewport) {
+export function drawToyFloor(ctx, stage, camera, viewport, includeWalls=true) {
   ctx.fillStyle='#24362e'; ctx.fillRect(0,0,viewport,viewport);
   const size=stage.maze.size;
   for(let y=0;y<size;y++) for(let x=0;x<size;x++) {
@@ -110,7 +110,7 @@ export function drawToyFloor(ctx, stage, camera, viewport) {
     ctx.fillStyle=gradient;ctx.fillRect(p.px,p.py,cell,cell);
     ctx.strokeStyle='#ffffff08';ctx.lineWidth=.7;ctx.strokeRect(p.px+.7,p.py+.7,cell-1.4,cell-1.4);
   }
-  for(const wall of stage.walls) drawToyWall(ctx,wall,camera);
+  if(includeWalls)for(const wall of stage.walls) drawToyWall(ctx,wall,camera);
 }
 
 /** カップの縁はゴール半径内。中央のチェック模様が到達地点を示す。 */

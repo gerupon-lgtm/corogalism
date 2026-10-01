@@ -1,5 +1,6 @@
 /** 本編の床テーマ。迷路の加工と配置を決定的に行う。DOM・描画を持たない。 */
 import { FLOOR_CHALLENGE } from '../config/gameConfig.js';
+import { createRng } from '../maze/rng.js';
 import { generateMaze } from '../maze/generator.js';
 import { solvePath, countTurns } from '../maze/path.js';
 import { checkReachability } from '../maze/validator.js';
@@ -18,8 +19,8 @@ export function cornerSites(maze, max=3, gap=5) {
 export function prepareFloorMaze(input, theme) {
  if(!theme.floorPattern&&theme.id!=='basic')return input;
  const max=theme.special?4:theme.firstVisit?1:theme.floorPattern==='iceAssist'?2:3,gap=theme.special?3:5;
- const candidates=[input];
- if(theme.firstVisit||theme.special||theme.id==='basic')for(let i=1;i<FLOOR_CHALLENGE.mazeCandidates;i++)candidates.push(generateMaze(input.size,(input.seed+Math.imul(i,40503))>>>0));
+ const candidates=[input],candidateRng=createRng((input.seed^0x6a09e667)>>>0);
+ if(theme.firstVisit||theme.special||theme.id==='basic')for(let i=1;i<FLOOR_CHALLENGE.mazeCandidates;i++)candidates.push(generateMaze(input.size,Math.floor(candidateRng()*0x100000000)>>>0));
  const isOpen=(m,a,b)=>!m.cells[a.y*m.size+a.x][b.x>a.x?'r':b.x<a.x?'l':b.y>a.y?'b':'t'];
  for(const maze of candidates){
   if(theme.assist){
@@ -49,6 +50,10 @@ export function prepareFloorMaze(input, theme) {
    const inner={x:s.prev.x+s.next.x-s.cell.x,y:s.prev.y+s.next.y-s.cell.y};
    return isOpen(maze,s.prev,inner)&&isOpen(maze,inner,s.next);
   }).reduce((chosen,s)=>{if(!chosen.length||s.index-chosen.at(-1).index>=gap)chosen.push(s);return chosen;},[]).slice(0,max);
+  // 初登場に力場がない候補だけなら、同じ乱数列から有限の追加候補を試す。
+  if(theme.assist&&maze===candidates.at(-1)&&!candidates.some(m=>m.floorSites?.length)&&candidates.length<FLOOR_CHALLENGE.mazeCandidates*4){
+   for(let i=0,count=Math.min(FLOOR_CHALLENGE.mazeCandidates,FLOOR_CHALLENGE.mazeCandidates*4-candidates.length);i<count;i++)candidates.push(generateMaze(input.size,Math.floor(candidateRng()*0x100000000)>>>0));
+  }
  }
  return candidates.sort((a,b)=>theme.special?Math.min(3,b.floorSites.length)-Math.min(3,a.floorSites.length)||a.pathLength-b.pathLength:
   (b.floorSites.length>0)-(a.floorSites.length>0)||a.pathLength-b.pathLength)[0];

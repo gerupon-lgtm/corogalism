@@ -12,6 +12,7 @@ export function createRenderer(canvas) {
   const ctx = canvas.getContext('2d');
   const background = document.createElement('canvas');
   const bg = background.getContext('2d');
+  const wallLayer=document.createElement('canvas'),walls=wallLayer.getContext('2d');
   const ball = createToyBall();
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let viewportPx = 0, dpr = 1, cachedStage = null, clearAt = null, lastActor = null;
@@ -21,10 +22,10 @@ export function createRenderer(canvas) {
     const next = Math.max(1, Math.round(px)), ratio = Math.min(window.devicePixelRatio || 1, 3);
     if (viewportPx === next && dpr === ratio) return viewportPx;
     viewportPx = next; dpr = ratio;
-    canvas.width = background.width = Math.round(viewportPx*dpr);
-    canvas.height = background.height = Math.round(viewportPx*dpr);
+    canvas.width = background.width = wallLayer.width = Math.round(viewportPx*dpr);
+    canvas.height = background.height = wallLayer.height = Math.round(viewportPx*dpr);
     canvas.style.width = `${viewportPx}px`; canvas.style.height = `${viewportPx}px`;
-    ctx.setTransform(dpr,0,0,dpr,0,0); bg.setTransform(dpr,0,0,dpr,0,0);
+    ctx.setTransform(dpr,0,0,dpr,0,0); bg.setTransform(dpr,0,0,dpr,0,0);walls.setTransform(dpr,0,0,dpr,0,0);
     cachedStage = null;
     return viewportPx;
   }
@@ -32,7 +33,12 @@ export function createRenderer(canvas) {
   function draw({ stage, actor, camera, pointerTilt, status = 'playing', shield = 0, trap = null, now = performance.now(), animationActive=true }) {
     const textureReady = wallTextureReady();
     if (stage !== cachedStage || textureReady !== cachedTextureReady) {
-      drawToyFloor(bg,stage,camera,viewportPx);cachedStage=stage;cachedTextureReady=textureReady;
+      drawToyFloor(bg,stage,camera,viewportPx,false);
+      drawFloorVisuals(bg,camera,{actor,time:0,reduced:true,stage,settings:{force:6},dynamicLayer:false});
+      walls.clearRect(0,0,viewportPx,viewportPx);
+      for(const wall of stage.walls)drawToyWall(walls,wall,camera);
+      if(!stage.zones.length)bg.drawImage(wallLayer,0,0,viewportPx,viewportPx);
+      cachedStage=stage;cachedTextureReady=textureReady;
     }
     if (actor !== lastActor) {clearAt=null;lastActor=actor;visualTime=0;visualLast=now;}
     if(animationActive&&visualLast!==null)visualTime+=Math.min(100,now-visualLast);visualLast=now;
@@ -42,8 +48,8 @@ export function createRenderer(canvas) {
     const progress=elapsed<0 ? 0 : reducedMotion.matches ? 1 : Math.min(1,elapsed/UI.goalSettleMs);
     ctx.drawImage(background,0,0,viewportPx,viewportPx);
     if(stage.zones.length){
-      drawFloorVisuals(ctx,camera,{actor,time:visualTime,reduced:reducedMotion.matches,stage,settings:{force:6}});
-      for(const wall of stage.walls)drawToyWall(ctx,wall,camera);
+      drawFloorVisuals(ctx,camera,{actor,time:visualTime,reduced:reducedMotion.matches,stage,settings:{force:6},staticLayer:false});
+      ctx.drawImage(wallLayer,0,0,viewportPx,viewportPx);
     }
     drawFeatureFloors(ctx,stage,camera);
     if (stage.leaf && !stage.leaf.collected) { const at=camera.toScreen(stage.leaf.x,stage.leaf.y);drawLeaf(ctx,at.px,at.py,camera.toPx(.3)); }

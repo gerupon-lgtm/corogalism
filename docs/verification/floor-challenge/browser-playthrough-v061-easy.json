@@ -1,0 +1,98 @@
+[
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 1,
+    "theme": "basic",
+    "result": "clear",
+    "seconds": 10.34,
+    "limit": 35,
+    "hp": 76,
+    "maxHp": 76,
+    "damageEvents": 0
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 2,
+    "theme": "basic",
+    "result": "clear",
+    "seconds": 13.46,
+    "limit": 35,
+    "hp": 68,
+    "maxHp": 68,
+    "damageEvents": 2
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 3,
+    "theme": "sand",
+    "result": "clear",
+    "seconds": 9.39,
+    "limit": 35,
+    "hp": 64,
+    "maxHp": 64,
+    "damageEvents": 0
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 4,
+    "theme": "iceRubber",
+    "result": "clear",
+    "seconds": 8.86,
+    "limit": 35,
+    "hp": 60,
+    "maxHp": 60,
+    "damageEvents": 0
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 5,
+    "theme": "gravityAssist",
+    "result": "clear",
+    "seconds": 11.79,
+    "limit": 35,
+    "hp": 76,
+    "maxHp": 76,
+    "damageEvents": 0
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 6,
+    "theme": "iceSand",
+    "result": "clear",
+    "seconds": 10.67,
+    "limit": 35,
+    "hp": 72,
+    "maxHp": 72,
+    "damageEvents": 0
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 7,
+    "theme": "repulsionAssist",
+    "result": "clear",
+    "seconds": 20.58,
+    "limit": 42.434615384615384,
+    "hp": 108,
+    "maxHp": 108,
+    "damageEvents": 0
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 8,
+    "theme": "iceAssist",
+    "result": "clear",
+    "seconds": 15.1,
+    "limit": 36.45769230769231,
+    "hp": 104,
+    "maxHp": 104,
+    "damageEvents": 0
+  }
+]

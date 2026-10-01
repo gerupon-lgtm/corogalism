@@ -385,7 +385,7 @@ function frame(now) {
     if (!handled && play.status === 'clear') finishStage();
     else if (!handled && run && ['dead', 'timeout'].includes(play.status)) failStage();
   }
-  if (play && camera && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, shield: shield.value, trap: play.trap, now,
+  if (play && camera && ['game', 'clear', 'over'].includes(screen) && !boardEl.hidden) renderer.draw({ stage: play.stage, actor: play.actor, camera, status: play.status, shield: shield.value, trap: play.trap, now,
     animationActive:isPlaying()&&play.status==='playing',
     pointerTilt: isPlaying() && settings.mode === 'pointer' && pointerSource.active ? tilt.value : null });
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,

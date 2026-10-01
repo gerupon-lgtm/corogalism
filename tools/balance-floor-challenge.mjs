@@ -36,4 +36,4 @@ for(const level of ['normal','easy'])for(let n=1;n<=20;n++){
   failures:cases.filter(r=>r.result!=='clear').map(r=>({seed:r.seed,result:r.result})),minHp:Math.min(...cleared.map(r=>r.hp)),minMargin:Math.min(...cleared.map(r=>r.limit-r.seconds))}));
 }
 await mkdir('docs/verification/floor-challenge',{recursive:true});
-await writeFile('docs/verification/floor-challenge/balance.json',JSON.stringify(rows,null,2));
+await writeFile(process.env.BALANCE_OUTPUT||'docs/verification/floor-challenge/balance.json',JSON.stringify(rows,null,2));

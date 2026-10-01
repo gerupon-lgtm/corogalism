@@ -1,7 +1,7 @@
 import { sampleZone } from '../world/stage.js';
 
 // 物理に触れず、セル座標の描画だけを担当する。
-export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, reduced, stage }) {
+export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, reduced, stage, staticLayer=true, dynamicLayer=true }) {
   ctx.save();
   ctx.scale(camera.toPx(1), camera.toPx(1));
   const circle = (x, y, r, fill) => {
@@ -16,7 +16,7 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
   };
   {
     const patches = stage.zones.filter(z=>z.kind === 'ice' || z.kind === 'sand').flatMap(z=>z.cells.map(c=>({...c,type:z.kind})));
-    for (const {x,y,type} of patches) {
+    if(staticLayer)for (const {x,y,type} of patches) {
       ctx.save(); ctx.beginPath(); ctx.rect(x+.025,y+.025,.95,.95); ctx.clip();
       const tint = ctx.createLinearGradient(x,y,x+1,y+1);
       tint.addColorStop(0, type === 'ice' ? '#e6fbfc' : '#f6dfaa');
@@ -44,7 +44,7 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     }
     const onSand = patches.some(c=>c.type==='sand'&&c.x===Math.floor(actor.x)&&c.y===Math.floor(actor.y));
     const speed = Math.hypot(actor.vx,actor.vy);
-    if (onSand && speed > .15 && !reduced) {
+    if (dynamicLayer && onSand && speed > .15 && !reduced) {
       const angle=Math.atan2(actor.vy,actor.vx);
       for(let i=0;i<7;i++) {
         const age=(time/650+i/7)%1, side=Math.sin(i*13)*.12;
@@ -53,7 +53,7 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
       }
     }
   }
-  if (stage.zones.some(z=>z.kind==='radial')) {
+  if (dynamicLayer && stage.zones.some(z=>z.kind==='radial')) {
     for (const {x,y,radius,strength,corner} of stage.zones.filter(z=>z.kind==='radial')) {
     ctx.globalAlpha=1;
     const inward=strength>0;

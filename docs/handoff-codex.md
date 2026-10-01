@@ -2,6 +2,9 @@
 
 ## 現在地
 
+- T-259 / v0.6.1: やさしい3面の処理落ち報告を受け、静止床・壁をキャッシュ化。面候補の増分共有が起こす迷路重複も修正。物理は変更なし。[検証](verification/floor-performance.md)。
+
+
 - T-258 / v0.6.0: 床素材チャレンジ・コルク壁・両難易度の緩和・通常限定「光の滑走路」・控えめな結果プレビュー・ガイド改修。現行仕様は[floor-challenge.md](floor-challenge.md)、検証は[verification/floor-challenge.md](verification/floor-challenge.md)。旧記録を保存したまま新記録と分離。迷路形状は固定しない。
 
 

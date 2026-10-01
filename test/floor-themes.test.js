@@ -1,3 +1,4 @@
+import { stageSeed } from '../src/game/run.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createStagePlay } from '../src/game/stagePlay.js';
@@ -29,5 +30,16 @@ test('加工後の最短経路・折れ数とBFSを全テーマ・複数シー�
     assert.ok(Math.hypot(z.x-6.5,z.y-6.5)>z.radius+.35);
    }
   }
+ }
+});
+
+test('隣接面の候補選択で同じ迷路を使い回さない',()=>{
+ for(const runSeed of [1,77,100,56382,...Array.from({length:100},(_,i)=>(i+1)*7919)]){
+  const layouts=[];
+  for(let n=1;n<=4;n++){
+   const p=createStagePlay(stageSeed(runSeed,n),challengeDifficulty(n,'easy'));
+   layouts.push(JSON.stringify(p.stage.maze.cells));
+  }
+  assert.equal(new Set(layouts).size,4,`run=${runSeed}`);
  }
 });
