@@ -42,7 +42,8 @@ export function stageTimeLimitSec(maze, difficulty, stage=null) {
   if(difficulty.themed){
     const load=stage?.floorLoad||{};
     const extra=maze.turns*C.turnSec+(load.sandCells||0)*C.sandSec+(load.hinderFields||0)*C.hinderSec+(stage?.theme.firstVisit?C.introSec:0);
-    return Math.max(C.minSec[difficulty.level]||25,maze.pathLength*difficulty.secPerCell+extra,maze.pathLength*difficultyAt(difficulty.stage).secPerCell+2)+(difficulty.level==='easy'?5:0);
+    const limit=Math.max(C.minSec[difficulty.level]||25,maze.pathLength*difficulty.secPerCell+extra,maze.pathLength*difficultyAt(difficulty.stage).secPerCell+2)+(difficulty.level==='easy'?5:0);
+    return stage?.theme.learning?Math.max(C.learningSeconds,limit):limit;
   }
   return maze.pathLength * difficulty.secPerCell + (difficulty.timeBonusSec ?? 0);
 }

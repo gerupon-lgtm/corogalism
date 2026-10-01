@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
 const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 try{
-for(const mode of ['practice','challenge','tutorial','lab-pointer','lab-sensor']) for(const outcome of ['success','denied','unsupported']) {
+for(const mode of ['practice','floor-practice','challenge','tutorial','lab-pointer','lab-sensor']) for(const outcome of ['success','denied','unsupported']) {
  const p=await b.newPage({viewport:{width:390,height:844},serviceWorkers:'block'}),errors=[];
  p.on('pageerror',e=>errors.push(e.message));
  await p.addInitScript(outcome=>{

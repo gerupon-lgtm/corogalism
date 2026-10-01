@@ -31,6 +31,13 @@ try {
  await context.setOffline(true);await page.goto(base+'?debug=1&seed=1');
  await page.locator('#btn-practice').click();await page.waitForTimeout(3800);assert.equal(await page.evaluate(()=>window.__corogalism.state.screen),'game');
  assert.equal(await page.evaluate(async()=>{const r=await fetch('assets/audio/bgm.wav');return (await r.arrayBuffer()).byteLength;}),6773804);
+ await page.locator('#btn-game-exit').click();await page.locator('#btn-floor-practice').click();
+ await page.waitForFunction(()=>{const s=window.__corogalism.state;return s.screen==='game'&&!s.prepareMs&&!s.countdownMs;});
+ for(const kind of ['sand','ice','gravity','repulsion']){
+  await page.locator(`[data-floor=${kind}]`).click();
+  assert.equal(await page.evaluate(()=>window.__corogalism.state.theme.practiceKind),kind);
+ }
+ assert.equal(await page.evaluate(()=>window.__corogalism.state.hp),null);
  assert.ok((await page.evaluate(()=>caches.keys())).length===1);await context.setOffline(false);
  epoch=2;await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});
  await page.waitForFunction(async()=>Boolean((await navigator.serviceWorker.getRegistration()).waiting));
@@ -42,6 +49,8 @@ try {
  assert.equal(await second.locator('body').getAttribute('data-fixture'),'2');assert.equal(await page.locator('body').getAttribute('data-fixture'),'2');
  await second.close();await page.locator('#btn-pwa-update').click();await page.waitForFunction(()=>document.body.dataset.fixture==='3');
  assert.deepEqual(await page.evaluate(()=>caches.keys()),['corogalism-fixture-3']);assert.deepEqual(errors,[]);
+ // controllerchangeのreload直後にクリックすると初期登録の更新が先行し、手動更新と競合する。
+ await page.waitForFunction(async()=>!(await navigator.serviceWorker.getRegistration()).installing);
  broken=true;epoch=4;await page.locator('#btn-pwa-check').click();await page.waitForFunction(()=>document.querySelector('#pwa-check-result').textContent.includes('確認できません'));assert.equal(await page.locator('body').getAttribute('data-fixture'),'3');await context.close();
  broken=true;const failed=await browser.newContext();await failed.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true}));
  const fallback=await failed.newPage();await fallback.goto(base);await fallback.waitForFunction(()=>document.querySelector('#pwa-status').textContent.includes('完了できません'));

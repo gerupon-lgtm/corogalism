@@ -1,5 +1,6 @@
 /** 本編の床テーマ。迷路の加工と配置を決定的に行う。DOM・描画を持たない。 */
 import { FLOOR_CHALLENGE } from '../config/gameConfig.js';
+import {learningSandCells,learningFieldPoints} from './floorLearning.js';
 import { createRng } from '../maze/rng.js';
 import { generateMaze } from '../maze/generator.js';
 import { solvePath, countTurns } from '../maze/path.js';
@@ -62,7 +63,7 @@ export function addFloorTheme(stage,theme){
  if(!theme.floorPattern)return;
  const cfg=FLOOR_CHALLENGE,all=stage.maze.cells.map((_,i)=>({x:i%stage.maze.size,y:Math.floor(i/stage.maze.size)}));
  const sites=stage.maze.floorSites||cornerSites(stage.maze),pattern=theme.floorPattern;
- const sand=pattern==='sand'?sites.flatMap(s=>[s.prev,s.cell]):pattern.includes('Sand')||theme.special||pattern==='iceAssist'?sites.map(s=>s.prev):[];
+ const sand=theme.learning&&pattern!=='iceRubber'&&(pattern==='sand'||pattern.includes('Sand')||pattern==='iceAssist')?learningSandCells(stage.maze):pattern==='sand'?sites.flatMap(s=>[s.prev,s.cell]):pattern.includes('Sand')||theme.special||pattern==='iceAssist'?sites.map(s=>s.prev):[];
  const isIce=pattern.startsWith('ice')||theme.special;
  const floor=(kind,cells)=>{if(cells.length)stage.zones.push({kind,cells,frictionK:cfg[kind],...(kind==='ice'?cfg.iceMotion:{}),forceX:0,forceY:0});};
  floor('sand',sand);
@@ -74,7 +75,12 @@ export function addFloorTheme(stage,theme){
   if(stage.zones.some(z=>z.kind==='radial'&&Math.hypot(z.x-x,z.y-y)<radius*.75))return;
   stage.zones.push({kind:'radial',x,y,radius,strength,corner:true});
  };
- for(const s of sites){
+ if(theme.learning){
+  if(pattern!=='sand'&&!pattern.includes('Sand')&&pattern!=='iceRubber')for(const [i,p]of learningFieldPoints(stage.maze).entries()){
+   const strength=pattern.toLowerCase().includes('repulsion')?-cfg.assistForce:pattern==='iceAssist'&&i%2?-cfg.assistForce:cfg.assistForce;
+   field({x:p.x-.5,y:p.y-.5},strength);
+  }
+ }else for(const s of sites){
   if(theme.assist){
    if(pattern!=='repulsionAssist')field(s.next,cfg.assistForce);
    if(pattern!=='gravityAssist')field(s.prev,-cfg.assistForce);

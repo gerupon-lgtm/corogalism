@@ -1,5 +1,6 @@
 /** 1面の実行状態。DOMを持たず、既存の物理・HP・時間を接続する。 */
 import { BASE, TUNING, RECOVERY, LEAF, REST, STICKY, HOURGLASS, TUTORIAL, HP } from '../config/gameConfig.js';
+import {createFloorPracticeStage} from '../world/floorPractice.js';
 import { createTutorialStage } from '../world/tutorialStage.js';
 import { generateMaze } from '../maze/generator.js';
 import { createStage, createActor, goalCenter } from '../world/stage.js';
@@ -9,18 +10,19 @@ import { createHp } from './hp.js';
 import { stageTimeLimitSec } from './progression.js';
 
 export function createStagePlay(seed, difficulty = null, carry = {}) {
-  const tutorial = Boolean(carry.tutorial);
-  const stage = tutorial ? createTutorialStage() : createStage(generateMaze(BASE.mazeSize, seed), difficulty);
+  const floorPractice = Boolean(carry.floorPractice);
+  const tutorial = !floorPractice && Boolean(carry.tutorial);
+  const stage = floorPractice ? createFloorPracticeStage(carry.floorPractice) : tutorial ? createTutorialStage() : createStage(generateMaze(BASE.mazeSize, seed), difficulty);
   const maze = stage.maze;
   const actor = createActor(maze, getCharacter('default'));
   const origin = { x: actor.x, y: actor.y };
   const shield = carry.shield ?? { value: 0 };
-  const hp = tutorial ? createHp({ turns: 0, hpPerTurn: 0, cfg: {...HP, base: TUTORIAL.hp}, minimum: TUTORIAL.minHp, shield }) : difficulty ? createHp({ turns: maze.turns, ...difficulty, shield }) : null;
+  const hp = floorPractice ? null : tutorial ? createHp({ turns: 0, hpPerTurn: 0, cfg: {...HP, base: TUTORIAL.hp}, minimum: TUTORIAL.minHp, shield }) : difficulty ? createHp({ turns: maze.turns, ...difficulty, shield }) : null;
   if (stage.leaf && carry.leafCollected) stage.leaf.collected = true;
   if (stage.rest && carry.restUsed) stage.rest.used = true;
   let extendedSec = 0, restOrigin = null, trap = null, releasedFloor = null;
   const onTile = (tile, radius) => tile && Math.abs(actor.x-tile.x) < radius && Math.abs(actor.y-tile.y) < radius;
-  const limitSec = !tutorial && difficulty ? stageTimeLimitSec(maze, difficulty, stage) : null;
+  const limitSec = !floorPractice && !tutorial && difficulty ? stageTimeLimitSec(maze, difficulty, stage) : null;
   let timeMs = 0;
   let activeSec = 0;
   let touchingRecovery = false;

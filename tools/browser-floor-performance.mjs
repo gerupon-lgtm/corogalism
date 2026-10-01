@@ -31,6 +31,7 @@ try{for(const dpr of [1,3]){
   return results;
  });rows.push({dpr,cpuSlowdown:6,rows:r});console.log(JSON.stringify(rows.at(-1)));await p.close();
 }
-await mkdir('docs/verification/floor-performance',{recursive:true});await writeFile('docs/verification/floor-performance/'+(process.env.PERF_LABEL||'current')+'.json',JSON.stringify(rows,null,2));
+const output=process.env.PERF_OUTPUT||'docs/verification/floor-performance';
+await mkdir(output,{recursive:true});await writeFile(output+'/'+(process.env.PERF_LABEL||'current')+'.json',JSON.stringify(rows,null,2));
 if(process.env.PERF_BEFORE!=='1')for(const {rows:r} of rows){assert.ok(r[1].gradients<=r[0].gradients*1.5,'砂面の静止画を毎フレーム描き直さない');assert.ok(r[2].gradients<=r[0].gradients*1.5,'氷面の静止画を毎フレーム描き直さない');}
 }finally{await b.close()}

@@ -15,8 +15,9 @@ export function createClearScreen(root) {
     setResult(v) {
       const tutorial = v.gameMode === 'tutorial';
       const challenge = v.gameMode === 'challenge';
+      const floorPractice=v.gameMode==='floor-practice';
       el.querySelector('#clear-heading').textContent = 'クリア！';
-      el.querySelector('#clear-best-field').hidden = challenge;
+      el.querySelector('#clear-best-field').hidden = challenge||floorPractice;
       el.querySelector('#clear-hp-field').hidden = !challenge;
       el.querySelector('#clear-hp').textContent = challenge ? hpLabel(v.hp) : '—';
       el.querySelector('#clear-note').textContent = challenge
@@ -31,6 +32,7 @@ export function createClearScreen(root) {
       retryBtn.classList.add('text-button');
       retryBtn.textContent = '同じ迷路をもう一度';
       if (tutorial) { el.querySelector('#clear-heading').textContent = 'できた！'; el.querySelector('#clear-note').textContent = 'いろいろな素材を試せたかな？'; nextBtn.textContent = 'モード選択へ'; retryBtn.textContent = 'もう一度あそぶ'; }
+      if(floorPractice){el.querySelector('#clear-note').textContent='床を切り替えて、何度でも試せます。';nextBtn.textContent='続けて試す';retryBtn.textContent='同じ床をもう一度';}
       time.textContent = `${(v.timeMs / 1000).toFixed(2)} 秒`;
       best.textContent = v.bestMs != null ? `${(v.bestMs / 1000).toFixed(2)} 秒` : '—';
       seed.textContent = String(v.seed);

@@ -1,0 +1,52 @@
+[
+  {
+    "stage": 3,
+    "seeds": 1000,
+    "minimumTime": 90
+  },
+  {
+    "stage": 4,
+    "seeds": 1000,
+    "minimumTime": 90
+  },
+  {
+    "stage": 5,
+    "seeds": 1000,
+    "minimumTime": 90,
+    "minFields": 2,
+    "maxFields": 3
+  },
+  {
+    "stage": 6,
+    "seeds": 1000,
+    "minimumTime": 90
+  },
+  {
+    "stage": 7,
+    "seeds": 1000,
+    "minimumTime": 90,
+    "minFields": 2,
+    "maxFields": 3
+  },
+  {
+    "stage": 8,
+    "seeds": 1000,
+    "minimumTime": 90,
+    "minFields": 2,
+    "maxFields": 3
+  },
+  {
+    "stage": 13,
+    "seeds": 1000,
+    "minimumTime": 90,
+    "minFields": 2,
+    "maxFields": 3
+  },
+  {
+    "stage": 15,
+    "seeds": 1000,
+    "minimumTime": 90,
+    "minFields": 2,
+    "maxFields": 3
+  }
+]

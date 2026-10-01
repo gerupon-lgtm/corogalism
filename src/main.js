@@ -1,3 +1,4 @@
+import {FLOOR_LESSONS,floorContact,createFloorContactGuide} from './world/floorLearning.js';
 import { initPortraitLock } from './input/portraitLock.js';
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
 import { BASE, TUNING, UI, CHALLENGE_LEVELS } from './config/gameConfig.js';
@@ -73,6 +74,8 @@ let lastFrame = performance.now();
 let shield = { value: 0 };
 const tutorial = createTutorialUi();
 const floorPresentation=createFloorPresentation(root);
+const floorContactGuide=createFloorContactGuide();
+let floorPracticeKind='normal';
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 
@@ -222,6 +225,7 @@ function showScreen(name) {
   root.body.classList.toggle('board-session', boardSession);
   boardEl.hidden = !boardSession;
   find('play-toolbar').hidden = !boardSession;
+  find('floor-practice-tools').hidden = !boardSession || gameMode!=='floor-practice';
   find('play-hint').hidden = !boardSession;
   find('btn-pause').disabled = name !== 'game';
   find('toast-layer').hidden = !ended;
@@ -272,20 +276,32 @@ function updateCountdown() {
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
-  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, shield, tutorial: gameMode === 'tutorial' });
+  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, shield, tutorial: gameMode === 'tutorial',floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
   floorPresentation.setStage(run?play.stage.theme:null);
+  floorContactGuide.reset();find('floor-contact-hint').hidden=true;
+  renderFloorPractice();
   paused = false;
   handled = false;
   countdownMs = UI.startCountdownMs;
   prepareMs = delayMs;
   game.setPaused(false);
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
-  find('play-mode-label').textContent = gameMode === 'tutorial' ? 'はじめて' : run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
+  find('play-mode-label').textContent = gameMode === 'tutorial' ? 'はじめて' : gameMode==='floor-practice'?'床の練習':run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
   find('stage-theme').textContent = play.stage.theme?.label || '';
   find('recovery-feedback').textContent = '';
   resize();
 }
 
+function renderFloorPractice(){
+ for(const b of root.querySelectorAll('[data-floor]'))b.setAttribute('aria-pressed',String(b.dataset.floor===floorPracticeKind));
+}
+function changePracticeFloor(kind){
+ if(gameMode!=='floor-practice'||!isPlaying()||play.status!=='playing'||!Object.hasOwn(FLOOR_LESSONS,kind))return;
+ const {x,y,vx,vy}=play.actor;
+ floorPracticeKind=kind;play=createStagePlay(seed,null,{floorPractice:kind});
+ Object.assign(play.actor,{x,y,vx,vy});floorContactGuide.reset();find('floor-contact-hint').hidden=true;
+ find('stage-theme').textContent=play.stage.theme.label;renderFloorPractice();resize();
+}
 function startGame(mode, useSeed = seed) {
   tutorial.reset();
   floorPresentation.resetRun();
@@ -327,6 +343,8 @@ function finishStage() {
     run.clearStage({ timeMs: play.timeMs, noDamage: !play.hp.tookDamage });
     saveRunProgress();
     clear.setResult({ gameMode, stageIndex, hp: play.hp, noDamage: !play.hp.tookDamage, timeMs: play.timeMs, seed });
+  } else if (gameMode === 'floor-practice') {
+    clear.setResult({gameMode,timeMs:play.timeMs,seed});
   } else if (gameMode === 'tutorial') {
     tutorial.reset();
     clear.setResult({ gameMode, timeMs: play.timeMs, seed });
@@ -391,6 +409,14 @@ function frame(now) {
   if (['game', 'clear', 'over'].includes(screen)) game.setHud({ timeMs: play.timeMs, wallHits: play.wallHits, tiltMagnitude: tilt.magnitude,
     mode: settings.mode, tutorial: gameMode === 'tutorial', started: play.started, paused, preparing: countdownMs > 0, hp: play.hp, remainingSec: play.remainingSec, limitSec: play.limitSec, shield: shield.value, now });
   if (play && camera) game.setFeatureHint(play, camera, isPlaying() && play.status === 'playing', escapeInput.motionAvailable);
+  const floorActive=isPlaying()&&play?.status==='playing'&&Boolean(play.stage.theme?.learning||gameMode==='floor-practice');
+  const kind=floorActive?floorContact(play.stage,play.actor):null;
+  const text=floorContactGuide.tick(kind==='normal'&&gameMode!=='floor-practice'?null:kind,elapsedMs,floorActive);
+  const floorHint=find('floor-contact-hint');
+  floorHint.hidden=!floorActive||!text||Boolean(find('recovery-feedback').textContent);
+  if(floorHint.textContent!==text)floorHint.textContent=text;
+  floorHint.classList.toggle('at-bottom',Boolean(play&&play.actor.y<2.5));
+  if(gameMode==='floor-practice')for(const b of root.querySelectorAll('#floor-practice-tools button'))b.disabled=!isPlaying()||play.status!=='playing';
   updateAudio();
   requestAnimationFrame(frame);
 }
@@ -398,7 +424,7 @@ function frame(now) {
 async function selectMode(mode) {
   if (starting) return;
   starting = true;
-  const controls = ['btn-practice', 'btn-challenge', 'btn-mode-settings', 'btn-tutorial-start'].map(find);
+  const controls = ['btn-floor-practice','btn-practice', 'btn-challenge', 'btn-mode-settings', 'btn-tutorial-start'].map(find);
   controls.forEach(el => { el.disabled = true; });
   try {
     if (!inputReady) {
@@ -443,6 +469,9 @@ for (const button of root.querySelectorAll('[data-level]')) button.addEventListe
 });
 find('btn-calibration-pointer').addEventListener('click', () => applyMode('pointer'));
 find('btn-pause-calibrate').addEventListener('click', calibrate);
+find('btn-floor-practice').addEventListener('click',()=>selectMode('floor-practice'));
+for(const button of root.querySelectorAll('[data-floor]'))button.addEventListener('click',()=>changePracticeFloor(button.dataset.floor));
+find('btn-floor-reset').addEventListener('click',()=>{if(gameMode==='floor-practice'&&isPlaying()){loadStage(seed);showScreen('game');}});
 find('btn-practice').addEventListener('click', () => selectMode('practice'));
 find('btn-mode-settings').addEventListener('click', () => toSettings('mode'));
 game.onPause(() => { if (screen === 'game') { setPaused(!paused); if (paused) sound.effect('pause'); } });
@@ -452,7 +481,7 @@ game.onSettings(() => toSettings(screen));
 find('btn-game-exit').addEventListener('click', finishRun);
 find('btn-clear-exit').addEventListener('click', finishRun);
 clear.onRetry(() => { if (screen === 'clear' && !run) { if (gameMode === 'tutorial') startGame('tutorial', seed); else { loadStage(seed); showScreen('game'); } } });
-clear.onNext(() => { if (screen === 'clear' && gameMode === 'tutorial') { showModes(); return; } if (screen === 'clear') { loadStage(run ? run.currentSeed() : nextSeed()); showScreen('game'); } });
+clear.onNext(() => { if (screen === 'clear' && gameMode === 'tutorial') { showModes(); return; } if (screen === 'clear') { loadStage(run ? run.currentSeed() : gameMode==='floor-practice'?seed:nextSeed()); showScreen('game'); } });
 find('btn-continue').addEventListener('click', () => {
   const alreadyContinued = run?.usedContinue;
   if (screen === 'over' && run?.useContinue()) {
