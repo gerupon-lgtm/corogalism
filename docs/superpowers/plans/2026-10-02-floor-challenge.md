@@ -1,6 +1,6 @@
 # 床素材チャレンジ Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. この計画は主担当が同じセッションで実装する想定。別エージェントの起動は実行方式の選択後に判断する。
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking. この計画は主担当が同じセッションで実装する想定。別エージェントの起動は実行方式の選択後に判断する。
 
 **Goal:** 氷・砂・力場・コルクを本編へ追加し、両難易度の余裕、通常限定の楽しさ、絵で伝わるガイドを作って検証後に公開する。
 
@@ -33,7 +33,7 @@
 
 **Interfaces:** `themeAt(stage, level='normal')` は `id,label,material,ratio,floorPattern,special,introHint` を返す。`prepareFloorMaze(maze, theme)` は加工後mazeを返す。`addFloorTheme(stage, theme)` はzonesと床テーマ情報を配置する。
 
-- [ ] テーマ順・加工後の経路・再現性・候補不足を先に検証する。
+- [x] テーマ順・加工後の経路・再現性・候補不足を先に検証する。
 
 ```js
 for (const seed of [1, 250, 7919, 65535]) {
@@ -48,9 +48,9 @@ assert.equal(themeAt(10, 'normal').special, true);
 assert.equal(Boolean(themeAt(10, 'easy').special), false);
 ```
 
-- [ ] `node --test test/floor-themes.test.js` の失敗を確認する。
-- [ ] 仕様の1–16面と後続巡回を実装する。最大6シード候補、曲がり角最大3個、開始／ゴールの保護、妨害配置の脱出可能性を実装する。
-- [ ] 加工はcellsの両側を変更し、`solvePath`と`countTurns`でメタデータを更新してから壁とアイテムを作る。
+- [x] `node --test test/floor-themes.test.js` の失敗を確認する。
+- [x] 仕様の1–16面と後続巡回を実装する。最大6シード候補、曲がり角最大3個、開始／ゴールの保護、妨害配置の脱出可能性を実装する。
+- [x] 加工はcellsの両側を変更し、`solvePath`と`countTurns`でメタデータを更新してから壁とアイテムを作る。
 
 ```js
 const modified = prepareFloorMaze(maze, theme);
@@ -61,9 +61,9 @@ modified.turns = countTurns(path);
 if (!checkReachability(modified).ok) throw new Error('床テーマの到達性が不正です');
 ```
 
-- [ ] カメラに依存しない床セル判定、速度依存の氷加速、既存radial合成を利用する。RESTは氷・力場外の候補に限定し、とりもちは専用テーマだけにする。
-- [ ] 複数シードで力場の中心・半径・力の上限・開始／ゴール保護、経路不足でも有限時間で生成されることを検証する。
-- [ ] 上記テストと既存maze/floor-lab/featuresを実行して、T-258を含むコミットを作る。
+- [x] カメラに依存しない床セル判定、速度依存の氷加速、既存radial合成を利用する。RESTは氷・力場外の候補に限定し、とりもちは専用テーマだけにする。
+- [x] 複数シードで力場の中心・半径・力の上限・開始／ゴール保護、経路不足でも有限時間で生成されることを検証する。
+- [x] 上記テストと既存maze/floor-lab/featuresを実行して、T-258を含むコミットを作る。
 
 ## Task 2: コルク・難易度・記録
 
@@ -71,7 +71,7 @@ if (!checkReachability(modified).ok) throw new Error('床テーマの到達性�
 
 **Interfaces:** `stageTimeLimitSec(maze, difficulty, stage=null)` は床の経路負荷込みの制限秒を返す。`loadRunBests`/`saveRunBest` は新ルールを扱い、`loadLegacyRunBests(level)` が旧キーを読み取り専用で返す。
 
-- [ ] コルクの低ダメージと通常壁相当の反発、最低時間、通常10面の到達余裕、旧記録保存を先に検証する。
+- [x] コルクの低ダメージと通常壁相当の反発、最低時間、通常10面の到達余裕、旧記録保存を先に検証する。
 
 ```js
 const normal = createStagePlay(7919, challengeDifficulty(10, 'normal'));
@@ -83,10 +83,10 @@ saveRunBest({stages: 3, totalTimeMs: 12000, usedContinue: false, level: 'normal'
 assert.deepEqual(JSON.parse(localStorage.getItem('corogalism-run-bests')), legacy);
 ```
 
-- [ ] 失敗を確認してから、コルク係数0.25・反発1.0と独立した粒模様のCanvas描画を実装する。既存atlasの標準壁へフォールバックしてコルクに見えなくなることを避ける。
-- [ ] 時間0.8→0.55秒/セルを40面で補間し、最低通常25秒・やさしい30秒、折れ数・砂セル・妨害場数・初登場の加算をconfigへ集約する。通常ダメージ0.65、やさしい0.4、上限倍率1.4、折れ数HP係数4.0、通常回復40%を初期値にする。
-- [ ] 新規キー `corogalism-run-bests-floor-v1[-easy]` を使い、保存に `rulesVersion:'floor-v1'` を付ける。旧記録は結果／記録一覧の小さな旧ルール欄で読めるようにする。
-- [ ] ストレージ不正値・書込拒否、通常／やさしい、ノーコン／コンティニューの独立性を検証し、既存HP/physics/storageと新テストを実行してコミットする。
+- [x] 失敗を確認してから、コルク係数0.25・反発1.0と独立した粒模様のCanvas描画を実装する。既存atlasの標準壁へフォールバックしてコルクに見えなくなることを避ける。
+- [x] 時間0.8→0.55秒/セルを40面で補間し、最低通常25秒・やさしい30秒、折れ数・砂セル・妨害場数・初登場の加算をconfigへ集約する。通常ダメージ0.65、やさしい0.4、上限倍率1.4、折れ数HP係数4.0、通常回復40%を初期値にする。
+- [x] 新規キー `corogalism-run-bests-floor-v1[-easy]` を使い、保存に `rulesVersion:'floor-v1'` を付ける。旧記録は結果／記録一覧の小さな旧ルール欄で読めるようにする。
+- [x] ストレージ不正値・書込拒否、通常／やさしい、ノーコン／コンティニューの独立性を検証し、既存HP/physics/storageと新テストを実行してコミットする。
 
 ## Task 3: 共通描画・アイキャッチ・通常限定予告
 
@@ -94,12 +94,12 @@ assert.deepEqual(JSON.parse(localStorage.getItem('corogalism-run-bests')), legac
 
 **Interfaces:** 共通床描画は既存lab描画の引数形を維持する。`createFloorPresentation(root)` は `setStage(theme,{firstVisit})`、`setResult(result)`、`resetRun()` を返す。`createFloorJingle(context, special=false)` は0.8秒以内のAudioBufferを返す。`sound.tick(number, cue=null)` と `sound.clear(special=false)` を既存呼出と互換に拡張する。
 
-- [ ] 共通化後に本編・labの同じ素材が同じ描画になること、停止中は力場の描画時計も停止することをブラウザで確認する。
-- [ ] READY／カウントダウンの既存枠内へ素材画と一言を載せる。テーマ初登場をラン内で記録し、コンティニューとPAUSE再開で再紹介しない。
-- [ ] Web Audioで短い音階のジングルを作り、スタートSEと置き換える。BGM開始規則・音OFF・SE音量・非表示停止を維持する。コルクの接触音も既存wall音の低い音色として追加する。
-- [ ] 通常特別面のゴール粒演出を実装し、reduced-motionでは静止表示にする。
-- [ ] 結果の予告は8面クリア後、3回に1回以下、保存不可はページ内1回。結果画面が初めから操作でき、予告には押すボタンを設けない。
-- [ ] 予告表示頻度、音声失敗、PAUSE→ガイド→閉じる→再開、コンティニュー、音OFFの回帰を実行してコミットする。
+- [x] 共通化後に本編・labの同じ素材が同じ描画になること、停止中は力場の描画時計も停止することをブラウザで確認する。
+- [x] READY／カウントダウンの既存枠内へ素材画と一言を載せる。テーマ初登場をラン内で記録し、コンティニューとPAUSE再開で再紹介しない。
+- [x] Web Audioで短い音階のジングルを作り、スタートSEと置き換える。BGM開始規則・音OFF・SE音量・非表示停止を維持する。コルクの接触音も既存wall音の低い音色として追加する。
+- [x] 通常特別面のゴール粒演出を実装し、reduced-motionでは静止表示にする。
+- [x] 結果の予告は8面クリア後、3回に1回以下、保存不可はページ内1回。結果画面が初めから操作でき、予告には押すボタンを設けない。
+- [x] 予告表示頻度、音声失敗、PAUSE→ガイド→閉じる→再開、コンティニュー、音OFFの回帰を実行してコミットする。
 
 ## Task 4: 楽しさを伝えるガイド
 
@@ -107,10 +107,10 @@ assert.deepEqual(JSON.parse(localStorage.getItem('corogalism-run-bests')), legac
 
 **Interfaces:** `initGuide(canOpen)` と `drawGuideArt(canvas,id)` を維持し、素材一覧にコルク・氷・砂・重力・反重力を追加する。
 
-- [ ] 既存ガイドのDOM・フォーカス・スクロール復帰を読んで、新素材の追加で壊れないことを確認する。
-- [ ] 冒頭に3つの絵「すべる」「曲がる」「軌道が変わる」を置く。床の比較、6壁の2列カード、3アイテムの短いカード、ひとやすみ／とりもちを配置する。
-- [ ] 色だけに頼らない内向き／外向き矢印と「引く／押す」を描き、氷の慣性・砂の減速を短文にする。コルク・ゴム・こけの反発差を絵と文で説明する。
-- [ ] 320×568／390×844／576×1024で全ガイドをスクロールして読む。横はみ出し、文字切れ、絵の識別、上の閉じる操作と最下部の閉じる操作を確認する。
+- [x] 既存ガイドのDOM・フォーカス・スクロール復帰を読んで、新素材の追加で壊れないことを確認する。
+- [x] 冒頭に3つの絵「すべる」「曲がる」「軌道が変わる」を置く。床の比較、6壁の2列カード、3アイテムの短いカード、ひとやすみ／とりもちを配置する。
+- [x] 色だけに頼らない内向き／外向き矢印と「引く／押す」を描き、氷の慣性・砂の減速を短文にする。コルク・ゴム・こけの反発差を絵と文で説明する。
+- [x] 320×568／390×844／576×1024で全ガイドをスクロールして読む。横はみ出し、文字切れ、絵の識別、上の閉じる操作と最下部の閉じる操作を確認する。
 
 ```js
 await page.locator('#btn-guide').click();
@@ -121,16 +121,16 @@ await page.locator('.guide-close').click();
 assert.equal(await page.locator('#btn-guide').evaluate(el => el === document.activeElement), true);
 ```
 
-- [ ] スクリーンショットで、スクロール量より楽しさの伝達が優先されたか確認し、必要なら絵や文量を調整する。guide/challengeの回帰を実行してコミットする。
+- [x] スクリーンショットで、スクロール量より楽しさの伝達が優先されたか確認し、必要なら絵や文量を調整する。guide/challengeの回帰を実行してコミットする。
 
 ## Task 5: プレイ検証・調整・公開
 
 **Files:** 新規 `tools/balance-floor-challenge.mjs`、`tools/browser-floor-playthrough.mjs`、`docs/verification/floor-challenge.md`。変更 `tools/balance.mjs`、既存ブラウザテスト、`docs/tasks.md`、`docs/handoff-codex.md`、`docs/remaining-work.md`、`docs/deployment.md`、`package.json`、`index.html`、`precache.js`。
 
-- [ ] balance.mjsで生成前mazeを保持したまま加工後stageを操縦しないよう、path/goal/HP/timeをstage.mazeから読む。
-- [ ] 30シード×両難易度×1–20面を、通常の操縦に加え180ms程度の遅れ・曲がり損ね・遅いブレーキで測定する。失敗をdead/timeout/進路回復失敗に分類し、初登場・通常10面までの時間と配置を調整する。
-- [ ] ブラウザではCanvas上のpointer入力で通しプレイする。開発用にstage/経路を読むことは許すが、teleport・HP書換え・途中の面飛ばしをクリア根拠にしない。実操作のシード、クリア時間、残りげんき、失敗と立て直しを記録する。
-- [ ] 個別テーマ・記録保存・センサー拒否/無信号・音声・オフライン・全画面とガイドを確認する。古いテーマ順や旧記録を前提とした既存テストは新仕様に更新し、検証の目的を削らない。
-- [ ] `node --test`、新ブラウザ検証、既存tutorial/floor-lab/audio/portraitを実行し、失敗を直す。人間の傾き体感は未検証と明記する。
-- [ ] バージョンをv0.6.0へ更新し、`node tools/update-precache.mjs`、差分確認を行う。実測値とガイド画像を記録してT-258コミットを作る。
-- [ ] mainをpushしてPages成功を待ち、公開URLでガイド・通常10面の特別表示・主要操作・実行資材一致を確認する。公開証跡と残る実機評価を文書へ反映する。
+- [x] balance.mjsで生成前mazeを保持したまま加工後stageを操縦しないよう、path/goal/HP/timeをstage.mazeから読む。
+- [x] 30シード×両難易度×1–20面を、通常の操縦に加え180ms程度の遅れ・曲がり損ね・遅いブレーキで測定する。失敗をdead/timeout/進路回復失敗に分類し、初登場・通常10面までの時間と配置を調整する。
+- [x] ブラウザではCanvas上のpointer入力で通しプレイする。開発用にstage/経路を読むことは許すが、teleport・HP書換え・途中の面飛ばしをクリア根拠にしない。実操作のシード、クリア時間、残りげんき、失敗と立て直しを記録する。
+- [x] 個別テーマ・記録保存・センサー拒否/無信号・音声・オフライン・全画面とガイドを確認する。古いテーマ順や旧記録を前提とした既存テストは新仕様に更新し、検証の目的を削らない。
+- [x] `node --test`、新ブラウザ検証、既存tutorial/floor-lab/audio/portraitを実行し、失敗を直す。人間の傾き体感は未検証と明記する。
+- [x] バージョンをv0.6.0へ更新し、`node tools/update-precache.mjs`、差分確認を行う。実測値とガイド画像を記録してT-258コミットを作る。
+- [x] mainをpushしてPages成功を待ち、公開URLでガイド・通常10面の特別表示・主要操作・実行資材一致を確認する。公開証跡と残る実機評価を文書へ反映する。
