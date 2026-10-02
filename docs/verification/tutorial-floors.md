@@ -20,4 +20,13 @@
 
 指摘0。チュートリアル全要素・取得物と力場の分離・床練習維持・通常時間維持を確認。独立検証で100シード×60面の6000ケースがやさしい最低40秒／初登場床45秒、整数秒、従来経路保証以上を満たす。
 
-実端末の傾きの体感は公開版で追加評価する。公開証跡は完了後に追記する。
+## 公開確認
+
+アプリ `285dca0`、[Pages36954383041成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/36954383041)。正式URL https://corogalism.sikumilab.com/ 。
+
+- 実行資材33個がHTTP200・SHA-256一致。[資材証跡](tutorial-floors/deploy-hashes.json)。
+- 新床4種とコルクの接触説明・絵・ポーズ／再開・枠内表示を3幅で確認。実pointerのみのチュートリアル通しは20.416秒でクリアし、新床4種の説明を確認。[公開版実操作](tutorial-floors/live/tutorial-pointer.json)。
+- やさしい1–3面も位置／HP移動なしで実pointerクリア。制限時間は41／46／46秒。[結果](tutorial-floors/live/browser-playthrough-v064-live-easy.json)。
+- 公開v0.6.4・PWA93資材、`fba575a209d57426` の保存後にネットワークを切り、床の練習5素材と新チュートリアルの起動／氷の説明を確認。[オフライン](tutorial-floors/live-offline.txt)。未処理例外なし。
+
+実端末の傾きの体感は公開版で追加評価する。

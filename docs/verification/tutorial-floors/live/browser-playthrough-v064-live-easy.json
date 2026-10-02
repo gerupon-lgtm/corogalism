@@ -1,0 +1,38 @@
+[
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 1,
+    "theme": "basic",
+    "result": "clear",
+    "seconds": 10.34,
+    "limit": 41,
+    "hp": 76,
+    "maxHp": 76,
+    "damageEvents": 0
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 2,
+    "theme": "basic",
+    "result": "clear",
+    "seconds": 13.49,
+    "limit": 46,
+    "hp": 68,
+    "maxHp": 68,
+    "damageEvents": 1
+  },
+  {
+    "level": "easy",
+    "seed": 77,
+    "stage": 3,
+    "theme": "sand",
+    "result": "clear",
+    "seconds": 10.72,
+    "limit": 46,
+    "hp": 64,
+    "maxHp": 64,
+    "damageEvents": 0
+  }
+]

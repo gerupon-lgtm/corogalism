@@ -4,13 +4,13 @@
 センサーが使えない場合は、盤面のタッチ／クリックで同じゲームを遊べます。
 Vanilla JavaScript・Canvas、ビルド不要。バックエンド・外部API・生成AIは使いません。
 
-v0.6.3では、やさしいの初登場床面を90秒・複数配置にし、タイトルの「床の練習」で普通・砂・氷・重力・反重力を時間制限なしで比較できます。[仕様](docs/floor-learning.md)、[検証](docs/verification/floor-learning.md)。
+v0.6.4では「はじめてのあそび方」で全素材を体験できます。やさしいの時間は最低40秒・床の初登場45秒＋面の負担に応じて加算。「床の練習」では5素材を時間制限なしで比較できます。[現行仕様](docs/tutorial-floors-and-time.md)、[検証](docs/verification/tutorial-floors.md)。
 
 | フェーズ | 状態 |
 |---|---|
 | フェーズ0（操作感） | 合格。Pixel 6a / iPhone XRで過去に確認済み |
 | フェーズ1（迷路生成・タイムアタック） | 完了・公開済み（従来の引き継ぎ記録） |
-| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.3 公開済み。床の体験と練習を追加。実機の体感評価はdocs/remaining-work.md** |
+| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.4 公開済み。チュートリアルとやさしいの時間を調整。実機の体感評価はdocs/remaining-work.md** |
 
 このフォルダをGit初期化し、既存のリモート履歴に接続してフェーズ2をmainへpushしました。
 リポジトリは [gerupon-lgtm/corogalism](https://github.com/gerupon-lgtm/corogalism)、
