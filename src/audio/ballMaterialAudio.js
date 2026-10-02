@@ -1,4 +1,5 @@
 /** 試遊専用。低音に中低域を重ね、スマホでも重い転がりを感じられる音にする。 */
+import { BALL_LAB_AUDIO } from '../config/gameConfig.js';
 const rate=22050;
 const tau=Math.PI*2;
 function random(seed){let s=seed;return()=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296*2-1;};}
@@ -78,7 +79,7 @@ export function createBallMaterialAudio(){
     source.connect(gain);gain.connect(output);source.onended=()=>{source.disconnect();gain.disconnect()};source.start();
     loop={source,gain};current=key;log(key);
    }
-   loop.gain.gain.setTargetAtTime(Math.min(.9,.1+Math.sqrt(speed/7)*.7),context.currentTime,.06);
+   loop.gain.gain.setTargetAtTime(BALL_LAB_AUDIO.rollingGain*Math.min(.9,.1+Math.sqrt(speed/7)*.7),context.currentTime,.06);
    loop.source.playbackRate.setTargetAtTime(.7+Math.min(1,speed/7)*.6,context.currentTime,.06);
    }catch{failed=true;stop();}
   },

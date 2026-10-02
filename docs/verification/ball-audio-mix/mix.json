@@ -1,0 +1,32 @@
+[
+  {
+    "before": true,
+    "samples": [
+      {
+        "kind": "metal",
+        "rolling": 0.4728211637052461,
+        "impact": 0.5689891576766968
+      },
+      {
+        "kind": "superball",
+        "rolling": 0.47237404663269733,
+        "impact": 0.572504997253418
+      }
+    ]
+  },
+  {
+    "before": false,
+    "samples": [
+      {
+        "kind": "metal",
+        "rolling": 0.11820529092631152,
+        "impact": 0.5689891576766968
+      },
+      {
+        "kind": "superball",
+        "rolling": 0.11809351165817433,
+        "impact": 0.572504997253418
+      }
+    ]
+  }
+]
