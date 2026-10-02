@@ -22,8 +22,8 @@ export function themeAt(stage, level='normal') {
  const first=Object.keys(floorDefs).includes(id)&&!intro.slice(0,n-1).includes(id)&&n<=16;
  const theme={id,material:'default',ratio:0,...definition,firstVisit:first,learning:level==='easy'&&first};
  if(theme.learning){
-  const hints={sand:'砂と普通の床を往復して、減速を試そう。',iceRubber:'90秒の余裕で、逆へ傾けるブレーキを試そう。',gravityAssist:'紫の重力へ近づき、引かれる感じを試そう。',repulsionAssist:'橙の反重力へ近づき、押される感じを試そう。',iceSand:'砂で減速、氷で滑走。何度か往復してみよう。',iceAssist:'離れた力場で、引く・押すを比べてみよう。'};
-  theme.introHint=hints[id]||'90秒の余裕で、力の向きを試してみよう。';
+  const hints={sand:'砂で減速して、曲がり角へ。',iceRubber:'早めに逆へ傾けて、氷の勢いを抑えよう。',gravityAssist:'紫の重力の向きを見ながら進もう。',repulsionAssist:'橙の反重力が押す向きを見て進もう。',iceSand:'砂で減速、氷で滑走。',iceAssist:'引く・押す力を見ながら、氷を滑ろう。'};
+  theme.introHint=hints[id]||'力の向きを見て、横から抜けよう。';
   if(id==='gravityAssist'||id==='gravityHinder')theme.label='重力を試す迷路';
   if(id==='repulsionAssist'||id==='repulsionHinder')theme.label='反重力を試す迷路';
  }

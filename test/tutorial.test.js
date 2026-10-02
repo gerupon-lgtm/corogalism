@@ -5,9 +5,12 @@ import { checkReachability } from '../src/maze/validator.js';
 import { createStagePlay } from '../src/game/stagePlay.js';
 import { BASE, TUTORIAL } from '../src/config/gameConfig.js';
 const advance=(p,elapsedMs=16)=>p.advance({dt:0,elapsedMs,tilt:{x:0,y:0},base:BASE});
-test('固定練習面は全セル到達可能・壁5種・床2種・アイテム3種',()=>{
+test('固定練習面は全セル到達可能・壁6種・床6種・アイテム3種',()=>{
  const s=createTutorialStage();assert.deepEqual(s,createTutorialStage());assert.equal(checkReachability(s.maze).ok,true);
- assert.deepEqual(new Set(s.walls.map(w=>w.materialId)),new Set(['default','rubber','stone','moss','spike']));
+ assert.deepEqual(new Set(s.walls.map(w=>w.materialId)),new Set(['default','rubber','cork','stone','moss','spike']));
+ assert.deepEqual(new Set(s.zones.map(z=>z.kind)),new Set(['sand','ice','radial']));
+ assert.deepEqual(s.zones.filter(z=>z.kind==='radial').map(z=>Math.sign(z.strength)),[1,-1]);
+ for(const f of s.zones.filter(z=>z.kind==='radial'))for(const t of [s.rest,...s.sticky,s.recovery,s.leaf,s.hourglass])assert.ok(Math.hypot(f.x-t.x,f.y-t.y)>f.radius+.3,'力場と静止／取得体験を分離');
  for(const tile of [s.rest,...s.sticky,s.recovery,s.leaf,s.hourglass]){assert.ok(tile.x>0&&tile.x<7&&tile.y>0&&tile.y<7);}
 });
 test('練習は時間制限と死亡なし・通常の速度と素材によるダメージ差を保持',()=>{

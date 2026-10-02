@@ -166,8 +166,9 @@ export const TUTORIAL = { contactDelayMs: 700, flashMs: 1800, hp: 100, minHp: 1,
 /** T-258: 本編採用値。labの調整値とは分離する。 */
 export const FLOOR_CHALLENGE = {
  ice:0.08, sand:3.2, iceMotion:{minAccelK:0.28,transitionSpeed:1.2}, radius:1.6,
- assistForce:3.3, hinderForce:3.3, mazeCandidates:6,learningSeconds:90,
- secPerCellStart:0.8,secPerCellEnd:0.55,timeStages:40,minSec:{normal:25,easy:30},
+ assistForce:3.3, hinderForce:3.3, mazeCandidates:6,learningSeconds:45,
+ secPerCellStart:0.8,secPerCellEnd:0.55,timeStages:40,minSec:{normal:25,easy:35},
+ easySecPerCell:1.6,easyTurnSec:1,easyThinkingSec:8,easyFieldSec:1.5,
  turnSec:0.55,sandSec:0.8,hinderSec:2,introSec:6,
  damageFactor:{normal:0.65,easy:0.4},damageStep:0.015,damageMax:1.4,hpPerTurn:4,
  recoveryChance:{normal:0.4,easy:0.5},

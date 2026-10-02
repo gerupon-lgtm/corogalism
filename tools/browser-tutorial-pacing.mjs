@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdir} from 'node:fs/promises';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
 const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
-await mkdir('docs/verification/tutorial-pacing',{recursive:true});
+const output=process.env.TUTORIAL_OUTPUT||'docs/verification/tutorial-pacing';await mkdir(output,{recursive:true});
 try{
  for(const [width,height] of [[320,568],[390,844],[576,1024]]){
  const ctx=await browser.newContext({viewport:{width,height},hasTouch:true,serviceWorkers:'block'});await ctx.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true}));
@@ -17,7 +17,8 @@ try{
  await teleport(4.5,1.5);await p.evaluate(()=>window.__corogalism.setTilt(1,0));
  for(let n=0;n<100;n++){await p.clock.runFor(16);if((await state()).actor.vx<0)break;}
  assert.ok((await state()).actor.vx<0);assert.equal((await state()).tutorialOpen,false);
- const time=(await state()).timeMs;await p.clock.runFor(750);assert.equal(await lesson(),'rubber');assert.ok((await state()).timeMs>=time+700);
+ // 助走途中の重力、続いてゴムの説明が順に出る。
+ const time=(await state()).timeMs;await p.clock.runFor(1500);assert.equal(await lesson(),'rubber');assert.ok((await state()).timeMs>=time+1400);
  await p.evaluate(()=>window.__corogalism.setTilt(-1,0));const before=await state();await p.clock.runFor(400);assert.ok((await state()).timeMs>=before.timeMs+380);assert.notEqual((await state()).actor.x,before.actor.x);
  await teleport(.5,4.5);await p.clock.runFor(6000);assert.equal(await lesson(),'rubber');assert.equal(await p.locator('#tutorial-lesson').evaluate(el=>el.classList.contains('is-updated')),false);
  assert.deepEqual(await p.locator('#board').boundingBox(),box);assert.equal(await p.evaluate(()=>scrollY),scroll);
@@ -28,15 +29,15 @@ try{
  await p.clock.runFor(250);
  assert.ok(await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations()[0].effect.getKeyframes().some(k=>k.boxShadow.includes('150px'))),'whole card highlight');
  await p.locator('#tutorial-lesson').evaluate(el=>{const a=el.getAnimations()[0];a.pause();a.currentTime=360;});
- await p.screenshot({path:`docs/verification/tutorial-pacing/playing-${width}.png`});
+ await p.screenshot({path:`${output}/playing-${width}.png`});
  await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations()[0]?.play());
- await teleport(5.5,2.5);await p.clock.runFor(720);assert.equal(await lesson(),'leaf');await teleport(.5,.5);await teleport(3.5,.5);await p.clock.runFor(1000);assert.equal(await lesson(),'leaf','repeat material does not replace current explanation');
+ await teleport(3.5,2.5);await p.clock.runFor(720);assert.equal(await lesson(),'leaf');await teleport(.5,.5);await teleport(3.5,.5);await p.clock.runFor(1000);assert.equal(await lesson(),'leaf','repeat material does not replace current explanation');
  // 次の更新待ちも、手動ポーズ中は進めない。
  await teleport(3.5,4.5);await click('btn-pause');await p.clock.runFor(5000);assert.equal(await lesson(),'leaf');await click('btn-resume');await ready();await p.clock.runFor(720);assert.equal(await lesson(),'rest');
  await teleport(1.5,4.5);await p.clock.runFor(750);assert.equal(await lesson(),'sticky');const trap=(await state()).trap.elapsed;await p.clock.runFor(1100);assert.ok((await state()).trap.elapsed>=trap+1);await p.clock.runFor(1800);assert.equal((await state()).trap,null);assert.equal(await lesson(),'sticky');
  const panel=await p.locator('#tutorial-lesson').boundingBox();assert.ok(panel.y>=box.y+box.height);assert.ok(panel.y+panel.height<=height+2);assert.deepEqual(await p.locator('#board').boundingBox(),box);
  assert.equal(await p.locator('#tutorial-lesson button').count(),0);assert.equal(await p.locator('#tutorial-lesson progress').count(),0);
- await p.emulateMedia({reducedMotion:'reduce'});await teleport(4.5,5.5);await p.clock.runFor(720);assert.equal(await lesson(),'hourglass');assert.equal(await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations().length),0);
+ await p.emulateMedia({reducedMotion:'reduce'});await teleport(2.5,5.5);await p.clock.runFor(720);assert.equal(await lesson(),'hourglass');assert.equal(await p.locator('#tutorial-lesson').evaluate(el=>el.getAnimations().length),0);
  await teleport(6.5,6.5);assert.equal((await state()).screen,'clear');assert.equal(await p.evaluate(()=>localStorage.getItem('corogalism-run-bests')),null);
  await click('btn-retry');await ready();assert.equal((await state()).tutorialOpen,false);await teleport(3.5,.5);await p.clock.runFor(720);assert.equal(await lesson(),'candy');
  assert.deepEqual(errors,[]);await ctx.close();console.log('PASS persistent tutorial '+width);

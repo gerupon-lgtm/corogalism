@@ -1,5 +1,5 @@
 /** 広い通路を蛇行して進む固定の練習面。全セルをBFS検証する。 */
-import { TUTORIAL } from '../config/gameConfig.js';
+import { TUTORIAL, FLOOR_CHALLENGE as C } from '../config/gameConfig.js';
 import { checkReachability } from '../maze/validator.js';
 import { solvePath, countTurns } from '../maze/path.js';
 import { createStage } from './stage.js';
@@ -14,7 +14,7 @@ export function createTutorialStage() {
  maze.path=solvePath(maze);maze.pathLength=maze.path.length;maze.turns=countTurns(maze.path);
  const stage=createStage(maze);
  // 標準壁主体。ゴム・トゲは横通路の先だけに置き、助走後の反発・被弾を体験する。
- for(const [y,x,materialId] of [[2,4,'stone'],[6,1,'moss']]){
+ for(const [y,x,materialId] of [[2,4,'stone'],[4,3,'cork'],[6,1,'moss']]){
   const wall=stage.walls.find(w=>Math.abs(w.y-(y-stage.wallThickness/2))<.001&&Math.abs(w.x-(x-stage.wallThickness/2))<.001&&w.w>w.h);
   wall.materialId=materialId;
  }
@@ -25,11 +25,16 @@ export function createTutorialStage() {
   wall.materialId=materialId;
  }
  stage.recovery={x:3.5,y:.5,collected:false};
- stage.leaf={x:5.5,y:2.5,collected:false};
+ stage.leaf={x:3.5,y:2.5,collected:false};
  // 標準壁2面の内角に寄せて静止しやすくし、助走の直線から外す。
  stage.rest={x:3.5,y:4.5,used:false,progress:0};
  stage.sticky=[{x:1.5,y:4.5}];
- stage.hourglass={x:4.5,y:5.5,collected:false};
+ stage.hourglass={x:2.5,y:5.5,collected:false};
+ // 床は短い区間に分け、普通の床へ戻って違いを確かめられるようにする。
+ stage.zones.push({kind:'sand',cells:[{x:2,y:1},{x:3,y:1}],frictionK:C.sand,forceX:0,forceY:0});
+ stage.zones.push({kind:'ice',cells:[{x:2,y:3},{x:3,y:3},{x:4,y:3}],frictionK:C.ice,...C.iceMotion,forceX:0,forceY:0});
+ // 取得物・休憩・とりもちから離し、力場の影響範囲も重ねない。
+ for(const [x,y,strength]of [[5.5,1.5,C.assistForce],[5.5,5.5,-C.assistForce]])stage.zones.push({kind:'radial',x,y,radius:C.radius,strength,corner:true});
  stage.theme={id:'tutorial',label:'素材にふれてみよう'};
  return stage;
 }

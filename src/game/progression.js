@@ -42,8 +42,10 @@ export function stageTimeLimitSec(maze, difficulty, stage=null) {
   if(difficulty.themed){
     const load=stage?.floorLoad||{};
     const extra=maze.turns*C.turnSec+(load.sandCells||0)*C.sandSec+(load.hinderFields||0)*C.hinderSec+(stage?.theme.firstVisit?C.introSec:0);
-    const limit=Math.max(C.minSec[difficulty.level]||25,maze.pathLength*difficulty.secPerCell+extra,maze.pathLength*difficultyAt(difficulty.stage).secPerCell+2)+(difficulty.level==='easy'?5:0);
-    return stage?.theme.learning?Math.max(C.learningSeconds,limit):limit;
+    let limit=Math.max(C.minSec[difficulty.level]||25,maze.pathLength*difficulty.secPerCell+extra,maze.pathLength*difficultyAt(difficulty.stage).secPerCell+2)+(difficulty.level==='easy'?5:0);
+    if(difficulty.level==='easy')limit=Math.max(limit,maze.pathLength*C.easySecPerCell+maze.turns*C.easyTurnSec+C.easyThinkingSec+(load.sandCells||0)*C.sandSec+(stage?.zones.filter(z=>z.kind==='radial').length||0)*C.easyFieldSec+(stage?.theme.firstVisit?C.introSec:0));
+    const result=stage?.theme.learning?Math.max(C.learningSeconds,limit):limit;
+    return difficulty.level==='easy'?Math.ceil(result):result;
   }
   return maze.pathLength * difficulty.secPerCell + (difficulty.timeBonusSec ?? 0);
 }

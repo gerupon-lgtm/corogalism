@@ -4,23 +4,26 @@ import {challengeDifficulty} from '../src/game/challenge.js';
 import {BASE} from '../src/config/gameConfig.js';
 import {createTiltVector} from '../src/input/tiltVector.js';
 export function measuredPlay(seed,n,level,imperfect=true){
+ const careful=process.env.BALANCE_PROFILE==='careful';
  const p=createStagePlay(seed,challengeDifficulty(n,level)),path=p.stage.maze.path;
- const input=createTiltVector();let wp=1,nextResponse=0,response=0,late=null;
+ const input=createTiltVector();let wp=1,nextResponse=0,response=0,late=null,thinkingUntil=0;
  const dt=1/60;
- for(let frame=0;frame<(p.limitSec+3)*60&&p.status==='playing';frame++){
+ for(let frame=0;frame<(p.limitSec+p.extendedSec+3)*60&&p.status==='playing';frame++){
   if(frame>=nextResponse){
    const a=p.actor,t=path[wp];let dx=t.x+.5-a.x,dy=t.y+.5-a.y,dist=Math.hypot(dx,dy);
    if(dist<.24&&wp<path.length-1){
     const prev=path[wp-1],cur=path[wp],next=path[wp+1];
     if(imperfect&&wp%4===0&&(cur.x-prev.x)*(next.y-cur.y)!==(cur.y-prev.y)*(next.x-cur.x))late={x:(cur.x-prev.x)*.8,y:(cur.y-prev.y)*.8};
-    wp++;const t=path[wp];dx=t.x+.5-a.x;dy=t.y+.5-a.y;dist=Math.hypot(dx,dy);}
+    wp++;if(careful&&wp%4===0)thinkingUntil=frame+36;
+    const t=path[wp];dx=t.x+.5-a.x;dy=t.y+.5-a.y;dist=Math.hypot(dx,dy);}
    const ice=p.stage.zones.some(z=>z.kind==='ice'&&z.cells.some(c=>c.x===Math.floor(a.x)&&c.y===Math.floor(a.y)));
-   const target=Math.min(ice?1.35:1.7,dist*3.2);
+   const target=Math.min(ice?(careful?1:1.35):(careful?1.1:1.7),dist*3.2);
    let x=(dx/(dist||1)*target-a.vx)*.65,y=(dy/(dist||1)*target-a.vy)*.65;
    if(imperfect&&response%31===12){x+=.12;y-=.1;}
    if(late){x=late.x;y=late.y;late=null;}
+   if(frame<thinkingUntil){x=0;y=0;}
    const norm=Math.max(1,Math.hypot(x,y));input.setRaw(x/norm,y/norm);
-   nextResponse=frame+(imperfect?11:1);response++;
+   nextResponse=frame+(careful?18:imperfect?11:1);response++;
   }
   input.update(dt,BASE.inputSmoothing);
   p.advance({dt,elapsedMs:1000*dt,tilt:input.value,base:BASE});
@@ -29,7 +32,7 @@ export function measuredPlay(seed,n,level,imperfect=true){
  return {seed,level,stage:n,theme:p.stage.theme.id,result:p.status,seconds:+(p.timeMs/1000).toFixed(2),limit:+p.limitSec.toFixed(2),hp:+p.hp.value.toFixed(1),maxHp:p.hp.max};
 }
 const rows=[];
-for(const level of ['normal','easy'])for(let n=1;n<=20;n++){
+for(const level of (process.env.BALANCE_LEVEL?[process.env.BALANCE_LEVEL]:['normal','easy']))for(let n=1;n<=20;n++){
  const cases=Array.from({length:Number(process.env.BALANCE_SEEDS||30)},(_,i)=>measuredPlay((i+1)*7919,n,level,true));
  rows.push(...cases);const cleared=cases.filter(r=>r.result==='clear');
  console.log(JSON.stringify({level,stage:n,theme:cases[0].theme,clear:cleared.length,total:cases.length,

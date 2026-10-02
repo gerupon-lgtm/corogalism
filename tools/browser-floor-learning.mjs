@@ -45,7 +45,7 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  await click('btn-game-exit');assert.equal((await state()).screen,'mode');
  await click('btn-challenge');await ready();
  for(let n=1;n<3;n++){await p.evaluate(()=>{const s=window.__corogalism.state;window.__corogalism.teleport(s.goal.x,s.goal.y)});await p.clock.runFor(32);await click('btn-next');await ready();}
- assert.ok((await state()).limitSec>=90);assert.ok((await state()).zones.find(z=>z.kind==='sand').cells.length>=4);
+ assert.ok((await state()).limitSec>=45&&(await state()).limitSec<90);assert.ok((await state()).zones.find(z=>z.kind==='sand').cells.length>=4);
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);assert.deepEqual(errors,[]);
  console.log('PASS floor learning '+width);await p.close();
 }}finally{await b.close()}

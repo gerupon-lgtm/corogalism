@@ -1,11 +1,12 @@
 /** 接触説明の差し替えとカード全体の更新通知。物理時間とは独立し、非表示タブでは進めない。 */
 import { TUTORIAL, REST, STICKY, RECOVERY, LEAF, HOURGLASS } from '../config/gameConfig.js';
-import { walls, items, floors, drawGuideArt } from './guide.js';
+import { walls, items, floors, floorMaterials, drawGuideArt } from './guide.js';
+import { floorContact } from '../world/floorLearning.js';
 import { createLessonTiming } from '../game/tutorialLessons.js';
 export function createTutorialUi() {
  const panel=document.querySelector('#tutorial-lesson');
  const timing=createLessonTiming(TUTORIAL);
- const entries=new Map([...walls,...items,...floors].map(([id,title,body])=>[id,{title,body}]));
+ const entries=new Map([...walls,...items,...floors,...floorMaterials].map(([id,title,body])=>[id,{title,body}]));
  let lastActive=null,flash=null,noticeMs=0;let touching=new Set();
  function render(){
   const id=timing.active;
@@ -42,6 +43,8 @@ export function createTutorialUi() {
    const a=play.actor,s=play.stage;
    const near=(t,r)=>t&&Math.abs(a.x-t.x)<r&&Math.abs(a.y-t.y)<r;
    const current=new Set();
+   const floor=floorContact(s,a);
+   if(floorMaterials.some(([id])=>id===floor)){current.add(floor);if(!touching.has(floor))this.contact(floor);}
    for(const [id,tile,r] of [['sticky',s.sticky[0],STICKY.radius],['rest',s.rest,REST.radius],['candy',s.recovery,a.r+RECOVERY.radius],['leaf',s.leaf,a.r+LEAF.radius],['hourglass',s.hourglass,a.r+HOURGLASS.radius]])if(near(tile,r)&&!tile.collected){current.add(id);if(!touching.has(id))this.contact(id);}
    touching=current;
   },
