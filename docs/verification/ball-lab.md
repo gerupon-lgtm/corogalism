@@ -22,4 +22,10 @@
 
 ローカルでHTTP配信し、`PLAYWRIGHT_MODULE`にPlaywrightのES module、`BASE_URL`に配信URLを設定して上記browserツールを実行。実行資材変更時は`node tools/update-precache.mjs`。正式URLのハッシュ照合は`tools/verify-floor-deploy.py`。
 
-公開確認はデプロイ後に追記する。
+## 公開確認
+
+アプリ`8945fa2`、[Pages37000568875成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37000568875)。正式URLの[ボールのおためし](https://corogalism.sikumilab.com/ball-lab.html)。PWA100資材、`a03734f607a797b2`。
+
+- 実行資材43個がHTTP200・SHA-256一致。[証跡](ball-lab/deploy-hashes.json)。
+- 公開版でも3幅の実pointerで金属の惰性、スーパーボール×ゴム壁の反発、各音源・音量・ミュート・ポーズ・位置／速度保持・記録非保存を確認。未処理例外なし。[実操作](ball-lab/live/browser.json)、[結果](ball-lab/live-browser.txt)。
+- ネットワークを切った後も100資材のキャッシュから起動し、スーパーボール×氷＋力場×ゴムで移動と音を確認。旧共有物理を模擬した更新案内も成功。[オフライン](ball-lab/live-offline.txt)。

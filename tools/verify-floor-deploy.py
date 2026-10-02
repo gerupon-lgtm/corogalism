@@ -9,6 +9,6 @@ def check(path):
  actual=hashlib.sha256(data).hexdigest();expected=hashlib.sha256((root/path).read_bytes()).hexdigest()
  return dict(path=path,status=status,sha256=actual,match=actual==expected)
 with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool: rows=list(pool.map(check,paths))
-Path(os.environ.get('DEPLOY_HASH_OUTPUT','docs/verification/floor-performance/deploy-hashes.json')).write_text(json.dumps(rows,indent=2))
+Path(os.environ.get('DEPLOY_HASH_OUTPUT','docs/verification/floor-performance/deploy-hashes.json')).write_text(json.dumps(rows,indent=2)+'\n',newline='\n')
 print('files',len(rows),'matched',sum(r['match'] for r in rows))
 assert all(r['status']==200 and r['match'] for r in rows)
