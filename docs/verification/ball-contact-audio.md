@@ -15,3 +15,13 @@
 ## 再実行
 
 `node --test`、`node tools/verify-ball-contact-audio.mjs`。HTTP配信先を`BASE_URL`、Playwright moduleを`PLAYWRIGHT_MODULE`へ設定し、`browser-ball-contact-audio.mjs`・`browser-ball-lab.mjs`・`browser-ball-offline.mjs`・`browser-ball-audio-failure.mjs`・`render-ball-audio.mjs`を実行。`CONTACT_OUTPUT`／`BALL_OUTPUT`／`AUDIO_OUTPUT`で出力先を指定し、旧証跡を上書きしない。実行資材変更時は`node tools/update-precache.mjs`。
+
+## 公開確認
+
+アプリ`e474c1a`、[Pages37029479828成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37029479828)。[おためし3](https://corogalism.sikumilab.com/ball-lab.html)。PWA100資材、`ad7e785ced29dac7`。
+
+- 実行資材44個がHTTP200・SHA-256一致。[照合](ball-contact-audio/deploy-hashes.json)。
+- 公開版でも3幅36ケースの柔らかい球の音源開始0、壁での発音、硬い3素材の実pointer移動／発音、素材切替・ミュート・ポーズ停止を確認。未処理例外0。[ログ](ball-contact-audio/live-browser.txt)、[状態](ball-contact-audio/live/browser-contact.json)。
+- 100資材の完全オフラインで、ゴム球の移動中は音源0、壁で従来音、ビー玉に替えると氷の転がり音を確認。旧共有物理の更新案内も成功。[ログ](ball-contact-audio/live-offline.txt)。
+
+既存PWAでは本編の「更新チェック」でv0.6.8へ更新し、おためし3を開き直す。実端末での音色の感じ方は追加試遊する。
