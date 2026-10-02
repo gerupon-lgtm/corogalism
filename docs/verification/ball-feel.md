@@ -20,4 +20,12 @@
 
 `node --test`、`node tools/verify-ball-feel.mjs`。HTTP配信先を`BASE_URL`、Playwright moduleを`PLAYWRIGHT_MODULE`へ設定し、`tools/browser-ball-feel.mjs`・`browser-ball-lab.mjs`・`browser-ball-audio-failure.mjs`・`browser-ball-offline.mjs`・`browser-tutorial.mjs`を実行。`AUDIO_OUTPUT`で音色デモの出力先を指定できる。実行資材変更時はprecacheを更新する。
 
-公開確認はデプロイ後に追記する。
+## 公開確認
+
+アプリ`102bb53`、[Pages37025355041成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37025355041)。[おためし2](https://corogalism.sikumilab.com/ball-lab.html)。PWA100資材、`35598379742c0068`。
+
+- 実行資材44個がHTTP200・SHA-256一致。共有の衝突コードも照合。[証跡](ball-feel/deploy-hashes.json)。
+- 公開版の実pointerでも木・スポンジ・ゴム球の余韻と、右壁に到達後の反発収束、音の速度しきい値・ポーズ停止を確認。未処理例外なし。[結果](ball-feel/live-feel.txt)、[状態](ball-feel/live/browser-feel.json)。
+- 100資材の完全オフラインで氷＋力場×ゴム×ゴム球の移動と音を確認。初版／v0.6.6の共有物理は更新案内へ着地。[結果](ball-feel/live-offline.txt)。
+
+既存PWAでは本編の「更新チェック」でv0.6.7へ更新し、おためし2を開き直す。

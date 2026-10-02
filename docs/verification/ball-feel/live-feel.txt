@@ -1,0 +1,1 @@
+PASS wood/sponge/superball coasting and settling; rolling threshold and pause
