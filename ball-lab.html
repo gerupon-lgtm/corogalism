@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja"><head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="robots" content="noindex,nofollow"><link rel="manifest" href="manifest.webmanifest">
+ <title>ボールのおためし | コロガリズム</title>
+ <link rel="stylesheet" href="floor-lab.css"><link rel="stylesheet" href="ball-lab.css">
+</head><body><main>
+ <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし1</span></header>
+ <h1>ボールのおためし</h1><p class="intro">音と動きで、ボール素材をくらべよう。</p>
+ <nav id="balls" aria-label="ボールの素材"></nav><p id="hint"></p>
+ <div class="choices">
+  <label>面<select id="layout"><option value="plaza">広場</option><option value="maze">迷路</option></select></label>
+  <label>床<select id="floor"></select></label><label>壁<select id="wall"></select></label>
+ </div>
+ <div class="buttons toolbar"><button id="sound" aria-pressed="true">音ON</button><button id="sensor">傾きで遊ぶ</button><button id="pointer" hidden>画面操作へ</button><button id="calibrate" hidden>傾きを合わせる</button></div>
+ <div class="board"><canvas id="board" aria-label="ボール素材の試遊。盤面の中心から進みたい方向を押し続けます。"></canvas><span id="pause-label" hidden>一時停止中</span></div>
+ <div class="buttons"><button id="reset">スタートへ</button><button id="pause">一時停止</button><button id="test-area">力場の近くへ</button></div>
+ <p id="status" role="status">盤面の中心から進みたい方向を押し続けてください。動いている間は転がる音が鳴ります。</p>
+ <p id="sound-note" class="note" role="status" hidden>この環境では音を再生できません。動きはそのまま試せます。</p>
+ <details><summary>音量と設定の共有</summary>
+  <label>音量 <output id="volume-value">60%</output><input id="volume" type="range" min="0" max="1" step="0.05" value="0.6"></label>
+  <button id="copy">設定をコピー</button><textarea id="settings-text" aria-label="共有する設定" readonly hidden></textarea><p id="copy-status" role="status"></p>
+  <button id="portrait-lock">縦向きで全画面</button><p id="portrait-note" class="note" role="status">対応端末では縦向きに固定します。</p>
+ </details>
+ <footer>時間制限・げんき消費なし。ゴール後も続けて試せます。<br>本編に採用する前のおためしです。<a href="floor-lab.html">床のおためし</a></footer>
+</main><script type="module" src="src/lab/ballBoot.js"></script></body></html>

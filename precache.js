@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'fba575a209d57426';
+self.PRECACHE_VERSION = 'a03734f607a797b2';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -25,11 +25,14 @@ self.PRECACHE_FILES = [
   "assets/pwa/icon.svg",
   "assets/toy-wall-atlas.png",
   "assets/tutorial-hold.png",
+  "ball-lab.css",
+  "ball-lab.html",
   "floor-lab.css",
   "floor-lab.html",
   "index.html",
   "manifest.webmanifest",
   "src/audio/audioSettings.js",
+  "src/audio/ballMaterialAudio.js",
   "src/audio/floorJingle.js",
   "src/audio/selectBuffer.js",
   "src/audio/soundManager.js",
@@ -46,6 +49,9 @@ self.PRECACHE_FILES = [
   "src/input/stableCalibration.js",
   "src/input/tiltSource.js",
   "src/input/tiltVector.js",
+  "src/lab/ballBoot.js",
+  "src/lab/ballLab.js",
+  "src/lab/ballLabStage.js",
   "src/lab/boot.js",
   "src/lab/floorLab.js",
   "src/lab/floorModel.js",
@@ -82,6 +88,7 @@ self.PRECACHE_FILES = [
   "src/ui/settingsScreen.js",
   "src/ui/titleScreen.js",
   "src/ui/tutorial.js",
+  "src/world/ballMaterials.js",
   "src/world/characters.js",
   "src/world/floorLearning.js",
   "src/world/floorPractice.js",

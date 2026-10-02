@@ -33,8 +33,9 @@ export function stepPhysics({ actor, stage, tilt, base, dt, onImpact }) {
   actor.vy *= damp;
 
   const speed = Math.hypot(actor.vx, actor.vy);
-  if (speed > TUNING.maxSpeed) {
-    const k = TUNING.maxSpeed / speed;
+  const maxSpeed=Number.isFinite(actor.character?.maxSpeed)?Math.min(TUNING.maxSpeed,Math.max(TUNING.characterMinSpeed,actor.character.maxSpeed)):TUNING.maxSpeed;
+  if (speed > maxSpeed) {
+    const k = maxSpeed / speed;
     actor.vx *= k;
     actor.vy *= k;
   }

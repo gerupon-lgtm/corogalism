@@ -1,0 +1,1 @@
+PASS: complete offline launch/audio; update waits for title; other tab protected; failed precache leaves online game usable.

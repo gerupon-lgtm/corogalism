@@ -5,9 +5,10 @@ export function createToyBall() {
   const sprite = document.createElement('canvas');
   const context = sprite.getContext('2d');
   let quaternion = [0, 0, 0, 1];
-  let previous = null, previousActor = null, pixels = 0, dirty = true;
+  let previous = null, previousActor = null, previousAppearance=null, pixels = 0, dirty = true;
 
   function update(actor) {
+    if(actor.character?.appearance!==previousAppearance){previousAppearance=actor.character?.appearance;dirty=true;}
     if (actor !== previousActor) {
       quaternion = [0, 0, 0, 1]; previous = null; dirty = true;
     }
@@ -36,6 +37,16 @@ export function createToyBall() {
       const band = seam > .48;
       const dot = u*.43 + v*.12 + t*.895 > .991;
       let base = dot ? [255,233,193] : band ? [255,209,161] : [255,113,69];
+      const appearance=previousActor?.character?.appearance;
+      let gloss=1;
+      if(appearance==='metal'){
+        const brushed=Math.sin(v*190+t*70)*5;base=[133+brushed,151+brushed,162+brushed];
+      }else if(appearance==='wood'){
+        const grain=Math.sin(v*42+Math.sin(u*7)*3+t*4)*13;base=[184+grain,120+grain*.7,62+grain*.3];gloss=.25;
+      }else if(appearance==='superball')base=dot?[255,243,150]:band?[67,211,194]:[237,76,137];
+      else if(appearance==='sponge'){
+        const pore=Math.sin(u*71)*Math.sin(v*57)*Math.sin(t*67)>.5?-.24:0;base=[175*(1+pore),210*(1+pore),132*(1+pore)];gloss=.08;
+      }
       // 曲線の継ぎ目は浅い溝。照明やハイライトと一緒には回転しない。
       const groove = Math.abs(seam-.48) < .016 && !dot ? .74 : 1;
       const light = Math.max(0, -.38*x-.48*y+.79*z);
@@ -46,7 +57,7 @@ export function createToyBall() {
       const pearl = (Math.sin(u*397+v*239+t*127)*.5+.5)*light*3;
       const offset = (j*pixels+i)*4;
       for (let c=0; c<3; c++) {
-        const reflection = Math.min(.97, shine*.95+soft+rim);
+        const reflection = Math.min(.97, (shine*.95+soft)*gloss+rim);
         bitmap.data[offset+c] = base[c]*shade*(1-reflection)+255*reflection+pearl+(c===2 ? rim*35 : 0);
       }
       bitmap.data[offset+3] = Math.min(255, (1-Math.sqrt(rr))*pixels*255);

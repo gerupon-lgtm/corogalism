@@ -2,9 +2,9 @@ import json, hashlib, urllib.request, concurrent.futures
 from pathlib import Path
 import os
 root=Path('.')
-paths=['index.html','package.json','style.css','precache.js','sw.js','src/main.js','src/config/gameConfig.js','src/pwa.js','src/world/floorThemes.js','src/world/floorLearning.js','src/world/floorPractice.js','src/world/themes.js','src/world/stage.js','src/world/materials.js','src/world/recovery.js','src/world/stageFeatures.js','src/game/challenge.js','src/game/progression.js','src/game/stagePlay.js','src/render/floorArt.js','src/render/floorVisuals.js','src/render/canvasRenderer.js','src/render/materialAppearance.js','src/render/toyWorld.js','src/audio/floorJingle.js','src/audio/soundManager.js','src/world/tutorialStage.js','src/ui/tutorial.js','src/ui/guide.js','src/ui/clearScreen.js','src/ui/floorPresentation.js','src/ui/runScreens.js','src/record/storage.js']
+paths=['index.html','ball-lab.html','ball-lab.css','src/lab/ballBoot.js','src/lab/ballLab.js','src/lab/ballLabStage.js','src/world/ballMaterials.js','src/audio/ballMaterialAudio.js','src/physics/resolveParams.js','src/physics/integrator.js','src/render/toyBall.js','package.json','style.css','precache.js','sw.js','src/main.js','src/config/gameConfig.js','src/pwa.js','src/world/floorThemes.js','src/world/floorLearning.js','src/world/floorPractice.js','src/world/themes.js','src/world/stage.js','src/world/materials.js','src/world/recovery.js','src/world/stageFeatures.js','src/game/challenge.js','src/game/progression.js','src/game/stagePlay.js','src/render/floorArt.js','src/render/floorVisuals.js','src/render/canvasRenderer.js','src/render/materialAppearance.js','src/render/toyWorld.js','src/audio/floorJingle.js','src/audio/soundManager.js','src/world/tutorialStage.js','src/ui/tutorial.js','src/ui/guide.js','src/ui/clearScreen.js','src/ui/floorPresentation.js','src/ui/runScreens.js','src/record/storage.js']
 def check(path):
- url='https://corogalism.sikumilab.com/'+path+'?verify=v064-verified'
+ url='https://corogalism.sikumilab.com/'+path+'?verify=v065-verified'
  with urllib.request.urlopen(url,timeout=40) as r: data=r.read();status=r.status
  actual=hashlib.sha256(data).hexdigest();expected=hashlib.sha256((root/path).read_bytes()).hexdigest()
  return dict(path=path,status=status,sha256=actual,match=actual==expected)

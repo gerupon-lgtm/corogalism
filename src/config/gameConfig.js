@@ -30,6 +30,8 @@ export const CLAMP = {
   friction:    { min: 0.2, max: 8.0 },
   restitution: { min: 0.0, max: 0.7 },
   rubberRestitution: { min: 0.0, max: 0.9 }, // ゴムだけ強い反発を許可
+  characterRestitution: { min: 0, max: 0.96 }, // おためし素材の反発も1未満に保つ
+  fieldResponse: { min: 0, max: 3 },
   accel:       { min: 4,   max: 60  }, // マス/s²
 };
 
@@ -37,6 +39,7 @@ export const CLAMP = {
 export const TUNING = {
   wallThickness: 0.24,   // セルに対する壁の厚み比
   maxSpeed: 30,          // マス/s。トンネリング防止の速度上限
+  characterMinSpeed: 0.5, // 素材別速度上限の下限
   maxDt: 1 / 20,         // s。タブ復帰時などの巨大なdtを切る
   wallHitSpeed: 2.0,     // マス/s。これを超える法線速度の衝突を「壁ヒット」と数える
   goalRadius: 0.30,      // セル比。ゴール判定の半径

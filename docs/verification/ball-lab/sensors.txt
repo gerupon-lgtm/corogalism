@@ -1,0 +1,4 @@
+PASS ball sensor granted
+PASS ball sensor denied
+PASS ball sensor silent
+PASS ball sensor unsupported

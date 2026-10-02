@@ -21,15 +21,18 @@ export function resolveParams({ base, character, material, zone } = {}) {
   const ch = { ...NEUTRAL, ...(character || {}) };
   const mt = { ...NEUTRAL, ...(material || {}) };
   const zn = { ...NEUTRAL, ...(zone || {}) };
+  const fieldK = Number.isFinite(ch.fieldK) ? clamp(ch.fieldK, CLAMP.fieldResponse) : 1;
 
   return {
     accel: clamp(base.tiltSensitivity * ch.accelK * mt.accelK * zn.accelK, CLAMP.accel),
     friction: clamp(base.friction * ch.frictionK * mt.frictionK * zn.frictionK, CLAMP.friction),
     restitution: clamp(
       base.wallRestitution * ch.restitutionK * mt.restitutionK * zn.restitutionK,
-      mt.id === 'rubber' ? CLAMP.rubberRestitution : CLAMP.restitution
+      Number.isFinite(ch.restitutionLimit)
+        ? { min: CLAMP.characterRestitution.min, max: clamp(ch.restitutionLimit, CLAMP.characterRestitution) }
+        : mt.id === 'rubber' ? CLAMP.rubberRestitution : CLAMP.restitution
     ),
-    forceX: zn.forceX,
-    forceY: zn.forceY,
+    forceX: zn.forceX * fieldK,
+    forceY: zn.forceY * fieldK,
   };
 }

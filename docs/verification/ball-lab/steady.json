@@ -1,0 +1,86 @@
+[
+  {
+    "dpr": 1,
+    "cpuSlowdown": 6,
+    "rows": [
+      {
+        "stage": 2,
+        "theme": "basic",
+        "gradients": 160,
+        "medianMs": 0.9000000953674316,
+        "p95Ms": 5.8999998569488525,
+        "mazeSeed": 644014595,
+        "wallCount": 64
+      },
+      {
+        "stage": 3,
+        "theme": "sand",
+        "gradients": 80,
+        "medianMs": 0.6000001430511475,
+        "p95Ms": 1.3999998569488525,
+        "mazeSeed": 506547384,
+        "wallCount": 64
+      },
+      {
+        "stage": 4,
+        "theme": "iceRubber",
+        "gradients": 160,
+        "medianMs": 1.5,
+        "p95Ms": 9,
+        "mazeSeed": 102436,
+        "wallCount": 64
+      },
+      {
+        "stage": 8,
+        "theme": "iceAssist",
+        "gradients": 120,
+        "medianMs": 2.5,
+        "p95Ms": 10.5,
+        "mazeSeed": 734918263,
+        "wallCount": 63
+      }
+    ]
+  },
+  {
+    "dpr": 3,
+    "cpuSlowdown": 6,
+    "rows": [
+      {
+        "stage": 2,
+        "theme": "basic",
+        "gradients": 160,
+        "medianMs": 0.8999998569488525,
+        "p95Ms": 2.5,
+        "mazeSeed": 644014595,
+        "wallCount": 64
+      },
+      {
+        "stage": 3,
+        "theme": "sand",
+        "gradients": 80,
+        "medianMs": 0.9000000953674316,
+        "p95Ms": 5.5,
+        "mazeSeed": 506547384,
+        "wallCount": 64
+      },
+      {
+        "stage": 4,
+        "theme": "iceRubber",
+        "gradients": 160,
+        "medianMs": 1.7000000476837158,
+        "p95Ms": 5.5,
+        "mazeSeed": 102436,
+        "wallCount": 64
+      },
+      {
+        "stage": 8,
+        "theme": "iceAssist",
+        "gradients": 120,
+        "medianMs": 2.5999999046325684,
+        "p95Ms": 10.799999952316284,
+        "mazeSeed": 734918263,
+        "wallCount": 63
+      }
+    ]
+  }
+]
