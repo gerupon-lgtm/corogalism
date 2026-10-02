@@ -12,7 +12,7 @@ v0.6.5の[ボールのおためし](ball-lab.html)では、金属の重いゴロ
 |---|---|
 | フェーズ0（操作感） | 合格。Pixel 6a / iPhone XRで過去に確認済み |
 | フェーズ1（迷路生成・タイムアタック） | 完了・公開済み（従来の引き継ぎ記録） |
-| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.5 公開済み。別ページでボール素材を試遊。実機の体感評価はdocs/remaining-work.md** |
+| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.6 公開済み。ボール素材試遊の転がり音を控えめに調整。実機の体感評価はdocs/remaining-work.md** |
 
 このフォルダをGit初期化し、既存のリモート履歴に接続してフェーズ2をmainへpushしました。
 リポジトリは [gerupon-lgtm/corogalism](https://github.com/gerupon-lgtm/corogalism)、

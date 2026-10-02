@@ -1,0 +1,1 @@
+PASS rolling gain 25%; impact gain unchanged (metal/superball)
