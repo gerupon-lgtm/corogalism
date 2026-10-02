@@ -12,3 +12,13 @@
 ## 再実行
 
 `node --test`、`node tools/verify-wood-knock.mjs`。HTTP配信先を`BASE_URL`、Playwright moduleを`PLAYWRIGHT_MODULE`へ設定すると比較WAVも生成する。`tools/browser-wood-knock.mjs`と`browser-ball-offline.mjs`を実行する。`WOOD_OUTPUT`で出力先を指定し、過去の証跡を上書きしない。実行資材変更時はprecacheを更新する。過去版の「全衝突PCM一致」の比較は、木の音を維持した当時の結果。
+
+## 公開確認
+
+アプリ`31b9224`、[Pages37064593466成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37064593466)。[おためし5](https://corogalism.sikumilab.com/ball-lab.html)。PWA100資材、`29b0af0e93e8eefd`。
+
+- 実行資材44件がHTTP200・SHA-256一致。[照合](wood-knock/deploy-hashes.json)。試聴WAV2件も公開先と一致。[音声照合](wood-knock/sample-hashes.json)。
+- 公開URLの3幅でも実pointerの木×標準壁、4壁×2速度の24ケースの短い衝突音、ミュート／ポーズ停止、revision5共有を確認。未処理例外0。[ログ](wood-knock/live-browser.txt)、[状態](wood-knock/live/browser.json)。
+- 公開PWAの100資材の完全オフラインで新しい木×石壁の衝突音が鳴る。金属／ビー玉の転がり、ゴム球の無音と壁音、旧共有物理の更新案内も成功。[ログ](wood-knock/live-offline.txt)。
+
+既存PWAでは本編の「更新チェック」でv0.6.10へ更新し、おためし5を開き直す。

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/verification/wood-knock/samples/wood-before.wav",
+    "status": 200,
+    "sha256": "f62afa3207bb36be8c504ddb200c672a0c435922fe2a5b0e8a30e8c36ac8e458",
+    "match": true
+  },
+  {
+    "path": "docs/verification/wood-knock/samples/wood-after.wav",
+    "status": 200,
+    "sha256": "9b38abe1bc6bf0a3515573748a79bba5a0350c6c4169ab4cc06fd29dc6b3eda8",
+    "match": true
+  }
+]
