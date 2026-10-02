@@ -1,0 +1,6 @@
+PASS rendered metal-normal-before.wav
+PASS rendered metal-normal-after.wav
+PASS rendered metal-ice-before.wav
+PASS rendered metal-ice-after.wav
+PASS rendered metal-sand-before.wav
+PASS rendered metal-sand-after.wav

@@ -5,12 +5,29 @@ const tau=Math.PI*2;
 function random(seed){let s=seed;return()=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296*2-1;};}
 // 無音も素材の個性。柔らかい球に擦れのループを割り当てない。
 const rollingProfiles={
- metal:{seed:811,hz:150,second:330,low:.8,rough:.16,body:.055,decay:.015,tail:.075,attack:.002,interval:.022,jitter:.044,gain:1.2},
+ metal:{continuous:true},
  wood:{seed:1259,hz:310,second:680,low:.25,rough:.07,body:.11,decay:.0045,tail:.025,attack:.0007,interval:.072,jitter:.085,gain:.9},
  default:{seed:2017,hz:1800,second:3400,low:0,rough:.045,body:.11,decay:.0016,tail:.01,attack:.00025,interval:.052,jitter:.075,gain:.8},
 };
+function createMetalRollingBuffer(context,floor){
+ const n=rate*4,noise=random(811),white=Float32Array.from({length:n},noise);
+ const b=context.createBuffer(1,n,rate),data=b.getChannelData(0),coefficient=hz=>1-Math.exp(-tau*hz/rate);
+ const lowA=coefficient(45),bodyA=coefficient(floor==='ice'?210:floor==='sand'?190:260),surfaceA=coefficient(500),smoothA=coefficient(700);
+ const pressureA=1-Math.exp(-1/(rate*.24)),gain=floor==='ice'?.3:floor==='sand'?.425:.75;
+ let low=0,body=0,surface=0,pressure=0,shaped=0;
+ // 金属は打音を連打しない。低い接触の連続成分と、ゆっくりした荷重の揺れ。
+ // 同じ周期を一度通してフィルタを安定させ、継ぎ目で状態をリセットしない。
+ for(let pass=0;pass<2;pass++)for(let i=0;i<n;i++){
+  const w=white[i];low+=lowA*(w-low);body+=bodyA*(w-body);surface+=surfaceA*(w-surface);pressure+=pressureA*(w-pressure);
+  const texture=((body-low)*.8+(surface-body)*.1)*(1+Math.max(-.18,Math.min(.18,pressure*12)));
+  shaped+=smoothA*(texture-shaped);
+  if(pass)data[i]=Math.tanh(shaped*gain);
+ }
+ return b;
+}
 export function createRollingBuffer(context,kind='metal',floor='normal'){
  const profile=rollingProfiles[kind];if(!profile)return null;
+ if(profile.continuous)return createMetalRollingBuffer(context,floor);
  const n=rate*4,noise=random(profile.seed),b=context.createBuffer(1,n,rate),data=b.getChannelData(0);
  const spacing=floor==='ice'?1.7:1,softness=floor==='sand'?.6:1,floorGain=floor==='ice'?.45:floor==='sand'?.65:1;
  // 接触ごとに短い音を作る。木・ガラスの隙間に常時ノイズを重ねない。

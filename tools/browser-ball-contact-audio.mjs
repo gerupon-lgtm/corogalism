@@ -12,9 +12,10 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
   window.__audioStarts=[];const create=AudioContext.prototype.createBufferSource;
   AudioContext.prototype.createBufferSource=function(){const s=create.call(this),start=s.start.bind(s);s.start=(...args)=>{window.__audioStarts.push({loop:s.loop,length:s.buffer.length});return start(...args)};return s;};
  });
- await p.clock.install();await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);await p.clock.pauseAt(Date.now()+1000);
+ await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab).catch(async e=>{console.error(JSON.stringify({errors,status:await p.locator('#status').textContent()}));throw e});
+ await p.clock.install();await p.clock.pauseAt(Date.now()+1000);
  const state=()=>p.evaluate(()=>window.__ballLab.state),starts=()=>p.evaluate(()=>window.__audioStarts.length);
- assert.match(await p.locator('header span').textContent(),/おためし3/);
+ assert.match(await p.locator('header span').textContent(),/おためし4/);
  await p.locator('[data-ball=metal]').click();await p.waitForFunction(()=>window.__ballLab.state.sound.context==='running');
  await p.evaluate(()=>window.__ballLab.teleport(2,.5,2,0));await p.clock.runFor(100);assert.equal((await state()).sound.rolling,true);
  const hardToSoft=(await state()).actor;await p.locator('[data-ball=sponge]').click();assert.deepEqual((await state()).actor,hardToSoft);

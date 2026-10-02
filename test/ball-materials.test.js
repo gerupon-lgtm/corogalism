@@ -78,6 +78,15 @@ test('柔らかい球は床によらず転がり音を持たず、衝突音は�
   assert.ok(rms(createImpactBuffer(context,id,'rubber'))>.001);
  }
 });
+test('金属の転がりは短い打音の強弱を繰り返さず、床によらずつながる',()=>{
+ for(const floor of ['normal','ice','sand']){
+  const b=createRollingBuffer(context,'metal',floor),data=b.getChannelData(0),window=Math.round(b.sampleRate*.02),levels=[];
+  for(let start=0;start+window<=data.length;start+=window){let sum=0;for(let i=0;i<window;i++)sum+=data[start+i]**2;levels.push(Math.sqrt(sum/window));}
+  const mean=levels.reduce((sum,v)=>sum+v,0)/levels.length;
+  const variation=Math.sqrt(levels.reduce((sum,v)=>sum+(v-mean)**2,0)/levels.length)/mean;
+  assert.ok(variation<.3,`${floor}: 20msごとの音量変動係数 ${variation}`);
+ }
+});
 test('硬い球は金属の低域、木の乾いた接触、ガラスの細かな高域を分ける',()=>{
  for(const id of ['metal','wood','default'])for(const floor of ['normal','ice','sand']){
   const b=createRollingBuffer(context,id,floor);assert.ok(rms(b)>.001);

@@ -1,0 +1,302 @@
+{
+  "baseline": "e474c1a",
+  "unchangedFiles": [
+    "src/physics/integrator.js",
+    "src/physics/resolveParams.js",
+    "src/physics/collision.js",
+    "src/config/gameConfig.js",
+    "src/world/ballMaterials.js"
+  ],
+  "impacts": [
+    {
+      "kind": "metal",
+      "wall": "default",
+      "sha256": "ea4a30866fb93f1b0e0615ca4d332a1097859a55cb0b419c31fa2b292888bbec"
+    },
+    {
+      "kind": "metal",
+      "wall": "rubber",
+      "sha256": "cc3de5190fa219d22e087d27339b3ec6786ff85011b112284a483e8da930ace2"
+    },
+    {
+      "kind": "metal",
+      "wall": "stone",
+      "sha256": "b51e7458d0a002dda4534cc34a0920e0dbf98c48d8566b0211fdd51de4bb3788"
+    },
+    {
+      "kind": "metal",
+      "wall": "cork",
+      "sha256": "2b8d840a44eeacaa4027c75efc989f71bd33586b405f2de8b342dea64bf3f168"
+    },
+    {
+      "kind": "default",
+      "wall": "default",
+      "sha256": "765a386aca617588b05124402b21dd46d7521015f2a7194264e443a29de029b2"
+    },
+    {
+      "kind": "default",
+      "wall": "rubber",
+      "sha256": "bbd140009c792fe2adaebd4df3b5de202edd8f60036d71efb9c81eeb348bd24b"
+    },
+    {
+      "kind": "default",
+      "wall": "stone",
+      "sha256": "bddd4f8a2d12b323ae2d39eaf3285141a99746f1c4fb562d6548a09bc832c0e5"
+    },
+    {
+      "kind": "default",
+      "wall": "cork",
+      "sha256": "9be0cf2bde184f12d3aa7719be9f04256e2867f2e666fe6cec582db2188263e4"
+    },
+    {
+      "kind": "wood",
+      "wall": "default",
+      "sha256": "3c75ab275bc237fd025a551f773f18035860c69ab8cdd9c89afb4bb5d4ee443a"
+    },
+    {
+      "kind": "wood",
+      "wall": "rubber",
+      "sha256": "021aac56d8ddaea76620f17f2059c1f225a0d1379b9ec0d29b98f17f829425d1"
+    },
+    {
+      "kind": "wood",
+      "wall": "stone",
+      "sha256": "0f6e840c6c8edf9d8d481f6f3c9cac9b80cecb00e8d9c70cf0e31ac08ed81dd6"
+    },
+    {
+      "kind": "wood",
+      "wall": "cork",
+      "sha256": "33facf8374eb1f0b16109c907614e2a4c9726716efc5921e13614c97665ca2a4"
+    },
+    {
+      "kind": "superball",
+      "wall": "default",
+      "sha256": "3fbe298ec5ea610b9db4d70c97dc88be8ad6339d8032a766975926eed5902482"
+    },
+    {
+      "kind": "superball",
+      "wall": "rubber",
+      "sha256": "941f5463f1571e9acb557401e823b637758716508da7b1a272fb79ec9d6ef293"
+    },
+    {
+      "kind": "superball",
+      "wall": "stone",
+      "sha256": "9eb7a652a1268cf96db21cd1682fcc2a1558fc68f4ad83c6e61e21d67d4dc1ea"
+    },
+    {
+      "kind": "superball",
+      "wall": "cork",
+      "sha256": "4bf041191bcbe0ef88123ec28d3053cb923247dd3aae0e441af685c3375d878c"
+    },
+    {
+      "kind": "sponge",
+      "wall": "default",
+      "sha256": "a1934dc6bbfd1df7820f3fa9809c46fdbe69c92dfcf9f8ed51bb78b0cf1c47f5"
+    },
+    {
+      "kind": "sponge",
+      "wall": "rubber",
+      "sha256": "5e85157cae7d86779eeca35db77c6c833adba343de53ce8f1476e1fe37299e3c"
+    },
+    {
+      "kind": "sponge",
+      "wall": "stone",
+      "sha256": "d006138a998429976cc0470324962fbf936c472c5e6bc07af2982c05cada3d44"
+    },
+    {
+      "kind": "sponge",
+      "wall": "cork",
+      "sha256": "2547fc2cb79ad0de5f1da67b4c110e893a21da1516dc886eff0e34af44aa8101"
+    }
+  ],
+  "otherRolling": [
+    {
+      "kind": "default",
+      "floor": "normal",
+      "sha256": "5c8dc58435a985902b1233ae3a1893d0fcaf02b710ccce0ca60541ff924fd103"
+    },
+    {
+      "kind": "default",
+      "floor": "ice",
+      "sha256": "b54255617cffcd8a833b4acd22df268b2d6731fff2baaea16a4026ebc1eba9f4"
+    },
+    {
+      "kind": "default",
+      "floor": "sand",
+      "sha256": "51922ada511adfba94e9b896e4764e2016eed8b9081b6a8810277188bba19b81"
+    },
+    {
+      "kind": "wood",
+      "floor": "normal",
+      "sha256": "dc4e32ecf4318d7be383437fa2d32396a6d6b0b675490f1f62d1eb0d2790b182"
+    },
+    {
+      "kind": "wood",
+      "floor": "ice",
+      "sha256": "25748acea878f10200f4672c844a6adff9a9c425f2cb933cbbce4e771766530a"
+    },
+    {
+      "kind": "wood",
+      "floor": "sand",
+      "sha256": "8b7becc45cdd158e089a36a0ab48b6a7c1950bb67c5e70580a3bf68d974f7a7f"
+    },
+    {
+      "kind": "superball",
+      "floor": "normal",
+      "sha256": null
+    },
+    {
+      "kind": "superball",
+      "floor": "ice",
+      "sha256": null
+    },
+    {
+      "kind": "superball",
+      "floor": "sand",
+      "sha256": null
+    },
+    {
+      "kind": "sponge",
+      "floor": "normal",
+      "sha256": null
+    },
+    {
+      "kind": "sponge",
+      "floor": "ice",
+      "sha256": null
+    },
+    {
+      "kind": "sponge",
+      "floor": "sand",
+      "sha256": null
+    }
+  ],
+  "rolling": [
+    {
+      "floor": "normal",
+      "playbackRate": 0.7,
+      "before": {
+        "rms": 0.04332858324093673,
+        "peak": 0.3233845174307653,
+        "variation": 0.6215826141024409
+      },
+      "after": {
+        "rms": 0.04398681030822247,
+        "peak": 0.1822069019079185,
+        "variation": 0.17611697467831766
+      }
+    },
+    {
+      "floor": "normal",
+      "playbackRate": 1,
+      "before": {
+        "rms": 0.0438954870213493,
+        "peak": 0.3318691551685333,
+        "variation": 0.5399085531678973
+      },
+      "after": {
+        "rms": 0.04405816496199594,
+        "peak": 0.1828533560037613,
+        "variation": 0.1544679956532762
+      }
+    },
+    {
+      "floor": "normal",
+      "playbackRate": 1.3,
+      "before": {
+        "rms": 0.04332491408002052,
+        "peak": 0.32534128427505493,
+        "variation": 0.4542551707232789
+      },
+      "after": {
+        "rms": 0.04400446998791428,
+        "peak": 0.18204528838396072,
+        "variation": 0.13412482097366665
+      }
+    },
+    {
+      "floor": "ice",
+      "playbackRate": 0.7,
+      "before": {
+        "rms": 0.015335818553108794,
+        "peak": 0.14991873502724928,
+        "variation": 0.9925578960586174
+      },
+      "after": {
+        "rms": 0.015479069123748718,
+        "peak": 0.06333329081535208,
+        "variation": 0.1839141557878298
+      }
+    },
+    {
+      "floor": "ice",
+      "playbackRate": 1,
+      "before": {
+        "rms": 0.015576763843956563,
+        "peak": 0.14991873502731323,
+        "variation": 0.9158913143331661
+      },
+      "after": {
+        "rms": 0.015501680834269222,
+        "peak": 0.06369669735431671,
+        "variation": 0.16101194813342154
+      }
+    },
+    {
+      "floor": "ice",
+      "playbackRate": 1.3,
+      "before": {
+        "rms": 0.015369875327873676,
+        "peak": 0.14991873502731323,
+        "variation": 0.8020563635022759
+      },
+      "after": {
+        "rms": 0.015485647882186924,
+        "peak": 0.06324243918061256,
+        "variation": 0.13903111977733718
+      }
+    },
+    {
+      "floor": "sand",
+      "playbackRate": 0.7,
+      "before": {
+        "rms": 0.020223781734000235,
+        "peak": 0.19161377847185973,
+        "variation": 0.8268788881199941
+      },
+      "after": {
+        "rms": 0.02050937733707433,
+        "peak": 0.08264326751231948,
+        "variation": 0.18713441821406773
+      }
+    },
+    {
+      "floor": "sand",
+      "playbackRate": 1,
+      "before": {
+        "rms": 0.020553986197225732,
+        "peak": 0.19310826063156128,
+        "variation": 0.703737860766267
+      },
+      "after": {
+        "rms": 0.020538272577913276,
+        "peak": 0.08319079875946045,
+        "variation": 0.16363199093167263
+      }
+    },
+    {
+      "floor": "sand",
+      "playbackRate": 1.3,
+      "before": {
+        "rms": 0.020245037174575285,
+        "peak": 0.18431756645441055,
+        "variation": 0.5689756870852393
+      },
+      "after": {
+        "rms": 0.02051830536520539,
+        "peak": 0.08250638470053673,
+        "variation": 0.14100603838045037
+      }
+    }
+  ]
+}

@@ -11,7 +11,7 @@ try{for(const level of ['normal','easy']){
  await p.addInitScript(level=>{Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined});localStorage.setItem('corogalism-settings',JSON.stringify({mode:'pointer',challengeLevel:level,soundEnabled:true}));},level);
  await p.clock.install();await p.clock.pauseAt(Date.now()+1000);
  await p.goto(base+'?debug=1&seed=77');await p.waitForLoadState('networkidle');await p.clock.runFor(32);
- await p.waitForFunction(()=>!!window.__corogalism);assert.match(await p.locator('.head .badge').textContent(),/0.6.8/);
+ await p.waitForFunction(()=>!!window.__corogalism);assert.match(await p.locator('.head .badge').textContent(),/0.6.9/);
  const state=()=>p.evaluate(()=>window.__corogalism.state);
  const click=async id=>{await p.locator('#'+id).click();await p.clock.runFor(32)};
  const ready=async()=>{const s=await state();await p.clock.runFor(s.prepareMs+s.countdownMs+100)};

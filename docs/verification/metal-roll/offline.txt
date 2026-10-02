@@ -1,0 +1,3 @@
+{"offline":true,"names":["corogalism-8a3e04ed2a9f099b"],"files":100,"softBall":{"enabled":true,"volume":0.6,"failed":false,"context":"running","rolling":false,"voices":0,"buffers":0,"events":[]},"impact":{"enabled":true,"volume":0.6,"failed":false,"context":"running","rolling":false,"voices":1,"buffers":1,"events":["hit:superball:rubber"]},"glass":{"enabled":true,"volume":0.6,"failed":false,"context":"running","rolling":true,"voices":0,"buffers":2,"events":["hit:superball:rubber","roll:default:ice"]},"metal":{"enabled":true,"volume":0.6,"failed":false,"context":"running","rolling":true,"voices":0,"buffers":3,"events":["hit:superball:rubber","roll:default:ice","roll:metal:ice"]}}
+PASS old physics guard
+PASS old physics guard

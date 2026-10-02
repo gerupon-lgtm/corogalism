@@ -1,0 +1,44 @@
+[
+  {
+    "name": "metal-normal-before.wav",
+    "peak": 0.024786213412880898,
+    "seconds": 8,
+    "speed": 3,
+    "volume": 0.6
+  },
+  {
+    "name": "metal-normal-after.wav",
+    "peak": 0.014135039411485195,
+    "seconds": 8,
+    "speed": 3,
+    "volume": 0.6
+  },
+  {
+    "name": "metal-ice-before.wav",
+    "peak": 0.011500556021928787,
+    "seconds": 8,
+    "speed": 3,
+    "volume": 0.6
+  },
+  {
+    "name": "metal-ice-after.wav",
+    "peak": 0.004923906642943621,
+    "seconds": 8,
+    "speed": 3,
+    "volume": 0.6
+  },
+  {
+    "name": "metal-sand-before.wav",
+    "peak": 0.014529993757605553,
+    "seconds": 8,
+    "speed": 3,
+    "volume": 0.6
+  },
+  {
+    "name": "metal-sand-after.wav",
+    "peak": 0.006430840585380793,
+    "seconds": 8,
+    "speed": 3,
+    "volume": 0.6
+  }
+]

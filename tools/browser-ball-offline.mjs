@@ -16,7 +16,9 @@ try{
  const hit=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(hit.events.includes('hit:superball:rubber'));
  await p.locator('[data-ball=default]').click();await p.evaluate(()=>window.__ballLab.teleport(2,.5,2,0));await p.waitForTimeout(150);
  const glass=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(glass.events.includes('roll:default:ice'));
- assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass}));await c.close();
+ await p.locator('[data-ball=metal]').click();await p.evaluate(()=>window.__ballLab.teleport(2,.5,2,0));await p.waitForTimeout(150);
+ const metal=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(metal.events.includes('roll:metal:ice'));assert.equal(metal.rolling,true);
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal}));await c.close();
  for(const source of ['export function resolveParams() {}','// ch.fieldK\nexport function resolveParams() {}']){
   const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/physics/resolveParams.js',route=>route.fulfill({contentType:'text/javascript',body:source}));
   await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));

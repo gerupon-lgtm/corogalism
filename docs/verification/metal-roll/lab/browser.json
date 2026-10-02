@@ -1,0 +1,86 @@
+[
+  {
+    "width": 320,
+    "movingVx": 3.0777750396600974,
+    "coastingVx": 2.3859679844411352,
+    "sound": {
+      "enabled": true,
+      "volume": 1,
+      "failed": false,
+      "context": "running",
+      "rolling": false,
+      "voices": 0,
+      "buffers": 6,
+      "events": [
+        "roll:metal:normal",
+        "roll:wood:normal",
+        "hit:superball:rubber",
+        "hit:superball:rubber",
+        "hit:superball:rubber",
+        "roll:metal:normal",
+        "hit:metal:stone",
+        "roll:metal:normal",
+        "hit:metal:cork",
+        "roll:metal:normal",
+        "roll:metal:ice"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "movingVx": 3.0523291532728014,
+    "coastingVx": 2.3494956470026658,
+    "sound": {
+      "enabled": true,
+      "volume": 1,
+      "failed": false,
+      "context": "running",
+      "rolling": false,
+      "voices": 0,
+      "buffers": 6,
+      "events": [
+        "roll:metal:normal",
+        "roll:wood:normal",
+        "hit:superball:rubber",
+        "hit:superball:rubber",
+        "hit:superball:rubber",
+        "roll:metal:normal",
+        "hit:metal:stone",
+        "roll:metal:normal",
+        "hit:metal:cork",
+        "roll:metal:normal",
+        "roll:metal:ice"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "width": 576,
+    "movingVx": 3.0523291532728014,
+    "coastingVx": 2.3494956470026658,
+    "sound": {
+      "enabled": true,
+      "volume": 1,
+      "failed": false,
+      "context": "running",
+      "rolling": false,
+      "voices": 0,
+      "buffers": 6,
+      "events": [
+        "roll:metal:normal",
+        "roll:wood:normal",
+        "hit:superball:rubber",
+        "hit:superball:rubber",
+        "hit:superball:rubber",
+        "roll:metal:normal",
+        "hit:metal:stone",
+        "roll:metal:normal",
+        "hit:metal:cork",
+        "roll:metal:normal",
+        "roll:metal:ice"
+      ]
+    },
+    "errors": []
+  }
+]

@@ -1,0 +1,11 @@
+PASS rendered metal-normal-before.wav
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:8767/src/audio/ballMaterialAudio.js
+    at C:\Users\user\Documents\AI連携ゲーム\corogalism\tools\render-metal-roll.mjs:11:24 {
+  log: []
+}
+
+Node.js v24.18.0

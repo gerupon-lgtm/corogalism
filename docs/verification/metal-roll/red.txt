@@ -1,0 +1,27 @@
+✖ 金属の転がりは短い打音の強弱を繰り返さず、床によらずつながる (32.9108ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 457.4048
+
+✖ failing tests:
+
+test at test\ball-materials.test.js:81:1
+✖ 金属の転がりは短い打音の強弱を繰り返さず、床によらずつながる (32.9108ms)
+  AssertionError [ERR_ASSERTION]: normal: 20msごとの音量変動係数 0.5399085531678973
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/ball-materials.test.js:87:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
