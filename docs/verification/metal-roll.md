@@ -16,3 +16,13 @@
 ## 再実行
 
 `node --test`、`node tools/verify-metal-roll.mjs`。HTTP配信先を`BASE_URL`、Playwright moduleを`PLAYWRIGHT_MODULE`へ設定し、`tools/render-metal-roll.mjs`・`browser-ball-contact-audio.mjs`・`browser-ball-lab.mjs`・`browser-ball-offline.mjs`・`browser-ball-audio-failure.mjs`を実行。`METAL_OUTPUT`／`CONTACT_OUTPUT`／`BALL_OUTPUT`で出力先を指定し、過去の証跡を上書きしない。実行資材変更時はprecacheを更新する。
+
+## 公開確認
+
+アプリ`a913759`、[Pages37033800668成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37033800668)。[おためし4](https://corogalism.sikumilab.com/ball-lab.html)。PWA100資材、`8a3e04ed2a9f099b`。
+
+- 実行資材44個がHTTP200・SHA-256一致。[照合](metal-roll/deploy-hashes.json)。
+- 公開URLの3幅でも金属・木・ビー玉の実pointer移動／発音、柔らかい2球×6床の無音源、壁での発音、ミュート・ポーズ停止を確認。読み込みtimeout・取得失敗・未処理例外なし。[ログ](metal-roll/live-browser.txt)、[状態](metal-roll/live/browser-contact.json)。
+- 100資材の完全オフラインで新しい金属の氷の転がり音、ビー玉の音、ゴム球の無音と壁音を確認。旧物理の更新案内も成功。[ログ](metal-roll/live-offline.txt)。
+
+既存PWAは本編の「更新チェック」でv0.6.9へ更新し、おためし4を開き直す。音色の実機での聞こえ方は追加評価する。
