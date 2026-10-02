@@ -33,7 +33,7 @@ node --test
 node tools/balance.mjs
 ```
 
-自動テスト153件成功。ブラウザ確認の再実行手順・結果・画面画像は [検証記録](docs/verification/README.md)。
+自動テスト156件成功。ブラウザ確認の再実行手順・結果・画面画像は [検証記録](docs/verification/README.md)。
 スマートフォンの傾きセンサー確認はHTTPSの公開先で行います。LANのHTTP配信では利用できません。
 
 ## 遊び方

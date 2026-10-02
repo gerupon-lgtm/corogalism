@@ -21,7 +21,14 @@ export const BASE = {
 export const ICE_LAB = { minAccelK: 0.28, transitionSpeed: 1.2 };
 export const FLOOR_LAB = { ice: 0.08, sand: 3.2, force: 6, radius: 1.6 };
 /** ボールのおためし。連続音だけ控えめにし、壁の衝突音は維持する。 */
-export const BALL_LAB_AUDIO = { rollingGain: 0.25 };
+export const BALL_LAB_AUDIO = { rollingGain: 0.25, rollingMinSpeed: 0.12, rollingFullSpeed: 6 };
+/** 反発は衝突速度で収束させる。回数を数えて恣意的に弱めない。 */
+export const BALL_LAB_BOUNCE = {
+  metal: { stopSpeed: 0.35, fullSpeed: 2 },
+  superball: { stopSpeed: 0.55, fullSpeed: 3.5 },
+  wood: { stopSpeed: 0.4, fullSpeed: 2.2 },
+  sponge: { stopSpeed: 0.4, fullSpeed: 2 },
+};
 
 /**
  * 実効値のクランプ範囲。
@@ -34,6 +41,7 @@ export const CLAMP = {
   rubberRestitution: { min: 0.0, max: 0.9 }, // ゴムだけ強い反発を許可
   characterRestitution: { min: 0, max: 0.96 }, // おためし素材の反発も1未満に保つ
   fieldResponse: { min: 0, max: 3 },
+  bounceSpeed: { min: 0.05, max: 10 },
   accel:       { min: 4,   max: 60  }, // マス/s²
 };
 

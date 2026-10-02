@@ -13,7 +13,9 @@ try{
  const r=await p.locator('#board').boundingBox();await p.mouse.move(r.x+r.width*.7,r.y+r.height/2);await p.mouse.down();await p.waitForTimeout(350);await p.mouse.up();await p.waitForTimeout(350);
  const state=await p.evaluate(()=>window.__ballLab.state);assert.ok(state.actor.x>.7);assert.ok(state.sound.events.includes('roll:superball:ice'));assert.equal(state.sound.context,'running');assert.deepEqual(errors,[]);
  console.log(JSON.stringify({offline:true,...cache,sound:state.sound}));await c.close();
- const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/physics/resolveParams.js',route=>route.fulfill({contentType:'text/javascript',body:'export function resolveParams() {}'}));
- await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));
- assert.equal(await old.evaluate(()=>!!window.__ballLab),false);assert.equal(await old.locator('button:not(:disabled)').count(),0);console.log('PASS old physics guard');
+ for(const source of ['export function resolveParams() {}','// ch.fieldK\nexport function resolveParams() {}']){
+  const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/physics/resolveParams.js',route=>route.fulfill({contentType:'text/javascript',body:source}));
+  await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));
+  assert.equal(await old.evaluate(()=>!!window.__ballLab),false);assert.equal(await old.locator('button:not(:disabled)').count(),0);await old.close();console.log('PASS old physics guard');
+ }
 }finally{await b.close()}

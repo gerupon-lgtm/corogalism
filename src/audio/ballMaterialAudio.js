@@ -1,21 +1,25 @@
-/** 試遊専用。低音に中低域を重ね、スマホでも重い転がりを感じられる音にする。 */
+/** 試遊専用。転がりは不規則な接触音。衝突の音色は維持する。 */
 import { BALL_LAB_AUDIO } from '../config/gameConfig.js';
 const rate=22050;
 const tau=Math.PI*2;
 function random(seed){let s=seed;return()=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296*2-1;};}
 export function createRollingBuffer(context,kind='metal',floor='normal'){
- const n=rate*2,cross=Math.round(rate*.05),noise=random(713),samples=new Float32Array(n+cross);let low=0;
+ const n=rate*4,cross=Math.round(rate*.08),noise=random(713),samples=new Float32Array(n+cross);
+ const profile=kind==='metal'?{hz:210,decay:.985,ring:.012}:kind==='wood'?{hz:340,decay:.962,ring:.01}:kind==='superball'?{hz:125,decay:.945,ring:.006}:{hz:480,decay:.94,ring:kind==='sponge'?0:.006};
+ const feedback1=2*profile.decay*Math.cos(tau*profile.hz/rate),feedback2=-(profile.decay**2);
+ let low=0,rough=0,r1=0,r2=0,next=0,texture=0;
  for(let i=0;i<samples.length;i++){
-  const t=i/rate,w=noise();low=low*.96+w*.04;
-  const pulse=.65+.2*Math.sin(tau*8*t)+.12*Math.sin(tau*13*t);
-  let v;
-  if(kind==='metal')v=(.44*Math.sin(tau*74*t)+.22*Math.sin(tau*148*t)+.14*Math.sin(tau*222*t))*pulse+low*1.1+w*.018;
-  else if(kind==='wood')v=(.2*Math.sin(tau*166*t)+.12*Math.sin(tau*332*t))*pulse+low*.9+w*.03*Math.max(0,Math.sin(tau*19*t));
-  else if(kind==='superball')v=(.18*Math.sin(tau*124*t)+.1*Math.sin(tau*248*t))*pulse+low*.65+w*.015;
-  else if(kind==='sponge')v=low*.45+w*.018;
-  else v=(.15*Math.sin(tau*194*t)+low*.65+w*.025)*pulse;
-  if(floor==='ice')v=v*.72+Math.sin(tau*(kind==='metal'?296:388)*t)*.025;
-  if(floor==='sand')v=v*.6+w*.12+low*.6;
+  const w=noise();low=low*.955+w*.045;rough=rough*.78+w*.22;texture=texture*.998+w*.002;
+  let impulse=0;
+  if(i>=next){impulse=profile.ring*noise()*(floor==='ice'?.25:1);next=i+Math.round(rate*(.04+(noise()+1)*.065));}
+  const ring=impulse+feedback1*r1+feedback2*r2;r2=r1;r1=ring;
+  let v=kind==='metal'?low*1.8+(rough-low)*.12+ring:
+   kind==='wood'?low*.8+(rough-low)*.18+ring:
+   kind==='superball'?low*.55+(rough-low)*.08+ring:
+   kind==='sponge'?low*.22+(rough-low)*.035:low*.3+(rough-low)*.3+ring;
+  v*=.8+Math.min(.4,Math.abs(texture)*7);
+  if(floor==='ice')v*=.45;
+  if(floor==='sand')v=v*.65+(rough-low)*.23;
   samples[i]=Math.tanh(v);
  }
  const b=context.createBuffer(1,n,rate),data=b.getChannelData(0);data.set(samples.subarray(cross));
@@ -71,7 +75,7 @@ export function createBallMaterialAudio(){
   stop,
   rolling(kind,floor,speed){
    try{
-   if(!available()||speed<.04){stopLoop();return;}
+   if(!available()||speed<BALL_LAB_AUDIO.rollingMinSpeed){stopLoop();return;}
    const key=`roll:${kind}:${floor}`;
    if(current!==key){
     stopLoop();const source=context.createBufferSource(),gain=context.createGain();
@@ -79,7 +83,8 @@ export function createBallMaterialAudio(){
     source.connect(gain);gain.connect(output);source.onended=()=>{source.disconnect();gain.disconnect()};source.start();
     loop={source,gain};current=key;log(key);
    }
-   loop.gain.gain.setTargetAtTime(BALL_LAB_AUDIO.rollingGain*Math.min(.9,.1+Math.sqrt(speed/7)*.7),context.currentTime,.06);
+   const motion=Math.min(1,Math.max(0,(speed-BALL_LAB_AUDIO.rollingMinSpeed)/(BALL_LAB_AUDIO.rollingFullSpeed-BALL_LAB_AUDIO.rollingMinSpeed)));
+   loop.gain.gain.setTargetAtTime(BALL_LAB_AUDIO.rollingGain*.8*Math.pow(motion,.8),context.currentTime,.06);
    loop.source.playbackRate.setTargetAtTime(.7+Math.min(1,speed/7)*.6,context.currentTime,.06);
    }catch{failed=true;stop();}
   },

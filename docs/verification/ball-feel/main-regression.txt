@@ -1,0 +1,6 @@
+PASS persistent tutorial 320
+PASS persistent tutorial 390
+PASS persistent tutorial 576
+PASS tutorial sensor: granted
+PASS tutorial sensor: denied
+PASS tutorial sensor: silent

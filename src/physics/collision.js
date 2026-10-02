@@ -5,7 +5,7 @@
  * 最近点への押し出しと法線方向の速度反射で解決する。
  *
  * 反発係数は壁ごとに変わり得るため、呼び出し側から
- * restitutionOf(wall) を受け取る（resolveParams への依存を持たない）。
+ * restitutionOf(wall, impactSpeed) を受け取る（resolveParams への依存を持たない）。
  *
  * onImpact(speed, wall) を渡すと、衝突のたびに法線方向の速度（マス/s）と
  * ぶつかった壁を通知する。HPのような「ぶつかり方」に依存する仕組みは
@@ -49,7 +49,7 @@ export function resolveCollisions(actor, walls, restitutionOf, onImpact) {
     if (vn < 0) {
       if (onImpact) onImpact(-vn, w);
       if (-vn > TUNING.wallHitSpeed) hits++;
-      const rest = restitutionOf(w);
+      const rest = restitutionOf(w, -vn);
       actor.vx -= (1 + rest) * vn * nx;
       actor.vy -= (1 + rest) * vn * ny;
     }

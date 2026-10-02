@@ -1,0 +1,79 @@
+✔ 金属は初動が鈍く、水平で勢いが残り、スポンジは速く止まる (6.3581ms)
+✔ 素材による力場の初動と反発が異なる、既存の係数は維持 (1.7745ms)
+✔ 全240組合せで到達性・同じ球径・有限値・速度上限・盤内を維持 (253.8154ms)
+✖ 弱い接触では跳ね返りが収まり、最初の強いゴム球の反発は保つ (1.5389ms)
+✖ 木とスポンジは入力を離しても急停止せず、素材の順に滑らかに減速する (10.5627ms)
+✖ 転がり音は一定音程の持続音を主成分にしない (362.4446ms)
+✔ 転がり音は全素材と床で有限、金属には低域、壁ごとに衝突の響きを変える (190.5732ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 4
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 968.2628
+
+✖ failing tests:
+
+test at test\ball-materials.test.js:51:1
+✖ 弱い接触では跳ね返りが収まり、最初の強いゴム球の反発は保つ (1.5389ms)
+  AssertionError [ERR_ASSERTION]: superball: 微小接触で振動しない
+  + actual - expected
+
+  + -0.28129588051608373
+  - 0
+
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/ball-materials.test.js:55:24)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: -0.28129588051608373,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\ball-materials.test.js:60:1
+✖ 木とスポンジは入力を離しても急停止せず、素材の順に滑らかに減速する (10.5627ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(vel.wood>.8&&vel.wood<1.5)
+
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/ball-materials.test.js:66:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\ball-materials.test.js:68:1
+✖ 転がり音は一定音程の持続音を主成分にしない (362.4446ms)
+  AssertionError [ERR_ASSERTION]: metal: 固定音程が目立たない
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/ball-materials.test.js:72:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

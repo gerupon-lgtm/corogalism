@@ -1,7 +1,8 @@
 // 旧PWAの物理と新しい試遊素材を混在させない。
 try{
  const source=await fetch(new URL('../physics/resolveParams.js',import.meta.url));
- if(!source.ok||!(await source.text()).includes('ch.fieldK')){
+ const code=await source.text();
+ if(!source.ok||!code.includes('ch.fieldK')||!code.includes('ch.bounce')){
   document.getElementById('status').textContent='ゲームの更新が必要です。上の「コロガリズムへ」から「更新チェック」で更新したあと、このページを開き直してください。';
   document.querySelectorAll('button,select,input').forEach(el=>el.disabled=true);
  }else await import('./ballLab.js');

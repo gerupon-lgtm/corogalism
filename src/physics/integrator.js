@@ -41,12 +41,13 @@ export function stepPhysics({ actor, stage, tilt, base, dt, onImpact }) {
   }
 
   // 壁ごとの反発は、その壁の素材とキャラから解決する
-  const restitutionOf = (wall) =>
+  const restitutionOf = (wall, impactSpeed) =>
     resolveParams({
       base,
       character: actor.character,
       material: getMaterial(wall.materialId),
       zone,
+      impactSpeed,
     }).restitution;
 
   const sub = Math.max(1, Math.ceil((Math.hypot(actor.vx, actor.vy) * step) / (actor.r * 0.6)));

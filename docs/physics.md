@@ -1,5 +1,7 @@
 # 物理パラメータの契約（フェーズ1の中核）
 
+**v0.6.7 / T-265:** おためし素材の任意属性`bounce:{stopSpeed,fullSpeed}`を追加。衝突コールバックは壁と法線衝突速度をresolveParamsへ渡し、smoothstepの速度係数を最終反発率へ掛ける。弱い接触ほど反発0へ収束し、増幅しない。速度範囲は`CLAMP.bounceSpeed`（0.05–10）。属性未指定の本編ビー玉は従来どおり。[仕様](ball-feel.md)。
+
 **v0.4.9:** ゴムのみ反発上限0.9・damageK=0。無傷接触ではダメージ無敵時間を開始しない。他素材の上限とダメージは維持。[rubber-and-candy.md](rubber-and-candy.md)参照。
 
 **v0.6.5 / T-263:** [ボールのおためし](ball-material-lab.md)のため、任意のキャラ属性`fieldK`（既定1）、`restitutionLimit`（未指定時は壁別の従来上限）、`maxSpeed`（既定30）を追加。外力に力場倍率を掛け、反発上限と速度上限を素材別に指定できる。安全範囲はgameConfigの`CLAMP.fieldResponse`（0–3）・`CLAMP.characterRestitution`（0–0.96）・`TUNING.characterMinSpeed`（0.5）／`maxSpeed`（30）。既存キャラと本編の値は変更なし。以下は未指定時の基準契約。
