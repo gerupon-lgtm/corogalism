@@ -1,0 +1,409 @@
+{
+  "baseline": "a913759",
+  "unchangedFiles": [
+    "src/physics/integrator.js",
+    "src/physics/resolveParams.js",
+    "src/physics/collision.js",
+    "src/config/gameConfig.js",
+    "src/world/ballMaterials.js"
+  ],
+  "impacts": [
+    {
+      "kind": "metal",
+      "wall": "default",
+      "unchanged": true,
+      "before": {
+        "peak": 0.5502837300300598,
+        "lateFraction": 0.19305032198730052,
+        "t99Ms": 204.58049886621316
+      },
+      "after": {
+        "peak": 0.5502837300300598,
+        "lateFraction": 0.19305032198730052,
+        "t99Ms": 204.58049886621316
+      },
+      "sha256": "ea4a30866fb93f1b0e0615ca4d332a1097859a55cb0b419c31fa2b292888bbec"
+    },
+    {
+      "kind": "metal",
+      "wall": "rubber",
+      "unchanged": true,
+      "before": {
+        "peak": 0.285492479801178,
+        "lateFraction": 0.061607137549077505,
+        "t99Ms": 102.40362811791383
+      },
+      "after": {
+        "peak": 0.285492479801178,
+        "lateFraction": 0.061607137549077505,
+        "t99Ms": 102.40362811791383
+      },
+      "sha256": "cc3de5190fa219d22e087d27339b3ec6786ff85011b112284a483e8da930ace2"
+    },
+    {
+      "kind": "metal",
+      "wall": "stone",
+      "unchanged": true,
+      "before": {
+        "peak": 0.8044289946556091,
+        "lateFraction": 0.40021311205215415,
+        "t99Ms": 327.66439909297054
+      },
+      "after": {
+        "peak": 0.8044289946556091,
+        "lateFraction": 0.40021311205215415,
+        "t99Ms": 327.66439909297054
+      },
+      "sha256": "b51e7458d0a002dda4534cc34a0920e0dbf98c48d8566b0211fdd51de4bb3788"
+    },
+    {
+      "kind": "metal",
+      "wall": "cork",
+      "unchanged": true,
+      "before": {
+        "peak": 0.20204280316829681,
+        "lateFraction": 0.04659236915176362,
+        "t99Ms": 90.8843537414966
+      },
+      "after": {
+        "peak": 0.20204280316829681,
+        "lateFraction": 0.04659236915176362,
+        "t99Ms": 90.8843537414966
+      },
+      "sha256": "2b8d840a44eeacaa4027c75efc989f71bd33586b405f2de8b342dea64bf3f168"
+    },
+    {
+      "kind": "wood",
+      "wall": "default",
+      "unchanged": false,
+      "before": {
+        "peak": 0.39823251962661743,
+        "lateFraction": 0.02777197522092211,
+        "t99Ms": 75.73696145124717
+      },
+      "after": {
+        "peak": 0.4580637514591217,
+        "lateFraction": 0.000005638620538525891,
+        "t99Ms": 23.174603174603174
+      },
+      "sha256": "1d8c6f0ef0a1710b6c20e413b26bc2fff41da0f8c742116ad43304ed6825313d"
+    },
+    {
+      "kind": "wood",
+      "wall": "rubber",
+      "unchanged": false,
+      "before": {
+        "peak": 0.24300812184810638,
+        "lateFraction": 0.027265261283285373,
+        "t99Ms": 75.01133786848072
+      },
+      "after": {
+        "peak": 0.27743712067604065,
+        "lateFraction": 8.307350188720941e-7,
+        "t99Ms": 19.773242630385486
+      },
+      "sha256": "40897aa1e70165de6b3eab5d41402339c2a66c72bb032f1372a672c311efc00b"
+    },
+    {
+      "kind": "wood",
+      "wall": "stone",
+      "unchanged": false,
+      "before": {
+        "peak": 0.5510733127593994,
+        "lateFraction": 0.028651536461413205,
+        "t99Ms": 76.64399092970521
+      },
+      "after": {
+        "peak": 0.6327285766601562,
+        "lateFraction": 0.000051202373069663157,
+        "t99Ms": 28.20861678004535
+      },
+      "sha256": "c35ea538adc1a2c2628b6dde4ba1254e95346ba6ef3ba89a1e1e2ce8bd110b67"
+    },
+    {
+      "kind": "wood",
+      "wall": "cork",
+      "unchanged": false,
+      "before": {
+        "peak": 0.1862563043832779,
+        "lateFraction": 0.027150744649298276,
+        "t99Ms": 74.96598639455783
+      },
+      "after": {
+        "peak": 0.21169346570968628,
+        "lateFraction": 4.3263958313896016e-7,
+        "t99Ms": 18.95691609977324
+      },
+      "sha256": "84a9760a617dcbab23627bfeb3d7d0a699a2af99a11c1699f37578d1220a763a"
+    },
+    {
+      "kind": "default",
+      "wall": "default",
+      "unchanged": true,
+      "before": {
+        "peak": 0.33681929111480713,
+        "lateFraction": 0.09559469873843114,
+        "t99Ms": 115.55555555555556
+      },
+      "after": {
+        "peak": 0.33681929111480713,
+        "lateFraction": 0.09559469873843114,
+        "t99Ms": 115.55555555555556
+      },
+      "sha256": "765a386aca617588b05124402b21dd46d7521015f2a7194264e443a29de029b2"
+    },
+    {
+      "kind": "default",
+      "wall": "rubber",
+      "unchanged": true,
+      "before": {
+        "peak": 0.20330411195755005,
+        "lateFraction": 0.09426110902261925,
+        "t99Ms": 114.96598639455782
+      },
+      "after": {
+        "peak": 0.20330411195755005,
+        "lateFraction": 0.09426110902261925,
+        "t99Ms": 114.96598639455782
+      },
+      "sha256": "bbd140009c792fe2adaebd4df3b5de202edd8f60036d71efb9c81eeb348bd24b"
+    },
+    {
+      "kind": "default",
+      "wall": "stone",
+      "unchanged": true,
+      "before": {
+        "peak": 0.4741743505001068,
+        "lateFraction": 0.09792127321834528,
+        "t99Ms": 116.28117913832199
+      },
+      "after": {
+        "peak": 0.4741743505001068,
+        "lateFraction": 0.09792127321834528,
+        "t99Ms": 116.28117913832199
+      },
+      "sha256": "bddd4f8a2d12b323ae2d39eaf3285141a99746f1c4fb562d6548a09bc832c0e5"
+    },
+    {
+      "kind": "default",
+      "wall": "cork",
+      "unchanged": true,
+      "before": {
+        "peak": 0.1554243415594101,
+        "lateFraction": 0.09396050621723069,
+        "t99Ms": 114.92063492063492
+      },
+      "after": {
+        "peak": 0.1554243415594101,
+        "lateFraction": 0.09396050621723069,
+        "t99Ms": 114.92063492063492
+      },
+      "sha256": "9be0cf2bde184f12d3aa7719be9f04256e2867f2e666fe6cec582db2188263e4"
+    },
+    {
+      "kind": "superball",
+      "wall": "default",
+      "unchanged": true,
+      "before": {
+        "peak": 0.497404009103775,
+        "lateFraction": 0.2565706450249539,
+        "t99Ms": 196.0090702947846
+      },
+      "after": {
+        "peak": 0.497404009103775,
+        "lateFraction": 0.2565706450249539,
+        "t99Ms": 196.0090702947846
+      },
+      "sha256": "3fbe298ec5ea610b9db4d70c97dc88be8ad6339d8032a766975926eed5902482"
+    },
+    {
+      "kind": "superball",
+      "wall": "rubber",
+      "unchanged": true,
+      "before": {
+        "peak": 0.3168388307094574,
+        "lateFraction": 0.25156638813418813,
+        "t99Ms": 194.1950113378685
+      },
+      "after": {
+        "peak": 0.3168388307094574,
+        "lateFraction": 0.25156638813418813,
+        "t99Ms": 194.1950113378685
+      },
+      "sha256": "941f5463f1571e9acb557401e823b637758716508da7b1a272fb79ec9d6ef293"
+    },
+    {
+      "kind": "superball",
+      "wall": "stone",
+      "unchanged": true,
+      "before": {
+        "peak": 0.6560669541358948,
+        "lateFraction": 0.2741993761949045,
+        "t99Ms": 199.13832199546485
+      },
+      "after": {
+        "peak": 0.6560669541358948,
+        "lateFraction": 0.2741993761949045,
+        "t99Ms": 199.13832199546485
+      },
+      "sha256": "9eb7a652a1268cf96db21cd1682fcc2a1558fc68f4ad83c6e61e21d67d4dc1ea"
+    },
+    {
+      "kind": "superball",
+      "wall": "cork",
+      "unchanged": true,
+      "before": {
+        "peak": 0.24670657515525818,
+        "lateFraction": 0.24665035487616635,
+        "t99Ms": 192.7437641723356
+      },
+      "after": {
+        "peak": 0.24670657515525818,
+        "lateFraction": 0.24665035487616635,
+        "t99Ms": 192.7437641723356
+      },
+      "sha256": "4bf041191bcbe0ef88123ec28d3053cb923247dd3aae0e441af685c3375d878c"
+    },
+    {
+      "kind": "sponge",
+      "wall": "default",
+      "unchanged": true,
+      "before": {
+        "peak": 0.12456025183200836,
+        "lateFraction": 0.003341782550507929,
+        "t99Ms": 50.476190476190474
+      },
+      "after": {
+        "peak": 0.12456025183200836,
+        "lateFraction": 0.003341782550507929,
+        "t99Ms": 50.476190476190474
+      },
+      "sha256": "a1934dc6bbfd1df7820f3fa9809c46fdbe69c92dfcf9f8ed51bb78b0cf1c47f5"
+    },
+    {
+      "kind": "sponge",
+      "wall": "rubber",
+      "unchanged": true,
+      "before": {
+        "peak": 0.07359053939580917,
+        "lateFraction": 0.0033351899989731166,
+        "t99Ms": 50.430839002267575
+      },
+      "after": {
+        "peak": 0.07359053939580917,
+        "lateFraction": 0.0033351899989731166,
+        "t99Ms": 50.430839002267575
+      },
+      "sha256": "5e85157cae7d86779eeca35db77c6c833adba343de53ce8f1476e1fe37299e3c"
+    },
+    {
+      "kind": "sponge",
+      "wall": "stone",
+      "unchanged": true,
+      "before": {
+        "peak": 0.18177588284015656,
+        "lateFraction": 0.0033534618498634056,
+        "t99Ms": 50.476190476190474
+      },
+      "after": {
+        "peak": 0.18177588284015656,
+        "lateFraction": 0.0033534618498634056,
+        "t99Ms": 50.476190476190474
+      },
+      "sha256": "d006138a998429976cc0470324962fbf936c472c5e6bc07af2982c05cada3d44"
+    },
+    {
+      "kind": "sponge",
+      "wall": "cork",
+      "unchanged": true,
+      "before": {
+        "peak": 0.05598348006606102,
+        "lateFraction": 0.003333714340333872,
+        "t99Ms": 50.34013605442177
+      },
+      "after": {
+        "peak": 0.05598348006606102,
+        "lateFraction": 0.003333714340333872,
+        "t99Ms": 50.34013605442177
+      },
+      "sha256": "2547fc2cb79ad0de5f1da67b4c110e893a21da1516dc886eff0e34af44aa8101"
+    }
+  ],
+  "rolling": [
+    {
+      "kind": "metal",
+      "floor": "normal",
+      "sha256": "b1871236b92bd238fe190d219e41d4ce975c877e37cc9abe208fb2b6e373964e"
+    },
+    {
+      "kind": "metal",
+      "floor": "ice",
+      "sha256": "7840719b43ee1dcbdd973b700a76bd8d477d69b6d22dbb16323d6612c70f3f61"
+    },
+    {
+      "kind": "metal",
+      "floor": "sand",
+      "sha256": "366ddff900f42fca091095ce6419b97dd013523fef0fabc2baa54a0fb5226c53"
+    },
+    {
+      "kind": "wood",
+      "floor": "normal",
+      "sha256": "dc4e32ecf4318d7be383437fa2d32396a6d6b0b675490f1f62d1eb0d2790b182"
+    },
+    {
+      "kind": "wood",
+      "floor": "ice",
+      "sha256": "25748acea878f10200f4672c844a6adff9a9c425f2cb933cbbce4e771766530a"
+    },
+    {
+      "kind": "wood",
+      "floor": "sand",
+      "sha256": "8b7becc45cdd158e089a36a0ab48b6a7c1950bb67c5e70580a3bf68d974f7a7f"
+    },
+    {
+      "kind": "default",
+      "floor": "normal",
+      "sha256": "5c8dc58435a985902b1233ae3a1893d0fcaf02b710ccce0ca60541ff924fd103"
+    },
+    {
+      "kind": "default",
+      "floor": "ice",
+      "sha256": "b54255617cffcd8a833b4acd22df268b2d6731fff2baaea16a4026ebc1eba9f4"
+    },
+    {
+      "kind": "default",
+      "floor": "sand",
+      "sha256": "51922ada511adfba94e9b896e4764e2016eed8b9081b6a8810277188bba19b81"
+    },
+    {
+      "kind": "superball",
+      "floor": "normal",
+      "sha256": null
+    },
+    {
+      "kind": "superball",
+      "floor": "ice",
+      "sha256": null
+    },
+    {
+      "kind": "superball",
+      "floor": "sand",
+      "sha256": null
+    },
+    {
+      "kind": "sponge",
+      "floor": "normal",
+      "sha256": null
+    },
+    {
+      "kind": "sponge",
+      "floor": "ice",
+      "sha256": null
+    },
+    {
+      "kind": "sponge",
+      "floor": "sand",
+      "sha256": null
+    }
+  ]
+}

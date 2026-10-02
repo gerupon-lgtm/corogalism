@@ -87,6 +87,15 @@ test('金属の転がりは短い打音の強弱を繰り返さず、床によ�
   assert.ok(variation<.3,`${floor}: 20msごとの音量変動係数 ${variation}`);
  }
 });
+test('木の壁音は乾いた短い打音で、低い響きや長い余韻を残さない',()=>{
+ for(const wall of ['default','rubber','stone','cork']){
+  const b=createImpactBuffer(context,'wood',wall),data=b.getChannelData(0);let total=0,late=0,peakHz=0,peak=0;
+  for(let i=0;i<data.length;i++){total+=data[i]**2;if(i>=b.sampleRate*.06)late+=data[i]**2;}
+  assert.ok(late/total<.001,`${wall}: 60ms以降の余韻が短い`);
+  for(let hz=100;hz<=1200;hz+=10){let real=0,imag=0;for(let i=0;i<Math.round(b.sampleRate*.06);i++){const a=2*Math.PI*hz*i/b.sampleRate;real+=data[i]*Math.cos(a);imag+=data[i]*Math.sin(a)}const v=Math.hypot(real,imag);if(v>peak){peak=v;peakHz=hz}}
+  assert.ok(peakHz>=300&&peakHz<=700,`${wall}: 低いボンではなく短いコン`);
+ }
+});
 test('硬い球は金属の低域、木の乾いた接触、ガラスの細かな高域を分ける',()=>{
  for(const id of ['metal','wood','default'])for(const floor of ['normal','ice','sand']){
   const b=createRollingBuffer(context,id,floor);assert.ok(rms(b)>.001);

@@ -1,4 +1,4 @@
-/** 試遊専用。硬い球だけ接触の質感を鳴らす。衝突の音色は維持する。 */
+/** 試遊専用。素材ごとの転がりと衝突の質感を合成する。 */
 import { BALL_LAB_AUDIO } from '../config/gameConfig.js';
 const rate=22050;
 const tau=Math.PI*2;
@@ -53,11 +53,15 @@ export function createImpactBuffer(context,kind='metal',wall='default'){
  for(let i=0;i<n;i++){
   const t=i/rate,w=noise();low=.7*low+.3*w;let v;
   if(kind==='metal')v=(.42*Math.sin(tau*116*t)*Math.exp(-t*26)+soft*(.27*Math.sin(tau*446*t)+.16*Math.sin(tau*1094*t)) *Math.exp(-t/(.12*soft)) +low*.35*Math.exp(-t*85));
-  else if(kind==='wood')v=(.42*Math.sin(tau*185*t)+low*.35)*Math.exp(-t*32);
+  else if(kind==='wood'){
+   // 低いボンという余韻を残さず、短く乾いたコン。柔らかい壁ではさらに収束。
+   const decay=95+(1-soft)*45;
+   v=.54*Math.sin(tau*420*t)*Math.exp(-t*decay)+.16*Math.sin(tau*980*t)*Math.exp(-t*165)+(w-low)*.1*Math.exp(-t*500);
+  }
   else if(kind==='superball'){phase+=tau*(82+180*Math.exp(-t*9))*soft/rate;v=.65*Math.sin(phase)*Math.exp(-t*12)+low*.1*Math.exp(-t*60);}
   else if(kind==='sponge')v=low*.32*Math.exp(-t*48);
   else v=(.35*Math.sin(tau*660*t)+low*.24)*Math.exp(-t*20);
-  const attack=Math.min(1,i/(rate*.002)),tail=Math.min(1,(n-1-i)/(rate*.02));
+  const attack=Math.min(1,i/(rate*(kind==='wood'?.0006:.002))),tail=Math.min(1,(n-1-i)/(rate*.02));
   data[i]=Math.tanh(v*soft)*attack*tail;
  }
  return b;

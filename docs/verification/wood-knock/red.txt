@@ -1,0 +1,27 @@
+✖ 木の壁音は乾いた短い打音で、低い響きや長い余韻を残さない (5.4862ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 135.8421
+
+✖ failing tests:
+
+test at test\ball-materials.test.js:90:1
+✖ 木の壁音は乾いた短い打音で、低い響きや長い余韻を残さない (5.4862ms)
+  AssertionError [ERR_ASSERTION]: default: 60ms以降の余韻が短い
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/ball-materials.test.js:94:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

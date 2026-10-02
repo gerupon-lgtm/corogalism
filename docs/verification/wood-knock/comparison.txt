@@ -1,0 +1,69 @@
+PASS wood 4 sounds changed; other 16 impacts, all 15 rolling states and physics unchanged
+[
+  {
+    "kind": "wood",
+    "wall": "default",
+    "unchanged": false,
+    "before": {
+      "peak": 0.39823251962661743,
+      "lateFraction": 0.02777197522092211,
+      "t99Ms": 75.73696145124717
+    },
+    "after": {
+      "peak": 0.4580637514591217,
+      "lateFraction": 0.000005638620538525891,
+      "t99Ms": 23.174603174603174
+    },
+    "sha256": "1d8c6f0ef0a1710b6c20e413b26bc2fff41da0f8c742116ad43304ed6825313d"
+  },
+  {
+    "kind": "wood",
+    "wall": "rubber",
+    "unchanged": false,
+    "before": {
+      "peak": 0.24300812184810638,
+      "lateFraction": 0.027265261283285373,
+      "t99Ms": 75.01133786848072
+    },
+    "after": {
+      "peak": 0.27743712067604065,
+      "lateFraction": 8.307350188720941e-7,
+      "t99Ms": 19.773242630385486
+    },
+    "sha256": "40897aa1e70165de6b3eab5d41402339c2a66c72bb032f1372a672c311efc00b"
+  },
+  {
+    "kind": "wood",
+    "wall": "stone",
+    "unchanged": false,
+    "before": {
+      "peak": 0.5510733127593994,
+      "lateFraction": 0.028651536461413205,
+      "t99Ms": 76.64399092970521
+    },
+    "after": {
+      "peak": 0.6327285766601562,
+      "lateFraction": 0.000051202373069663157,
+      "t99Ms": 28.20861678004535
+    },
+    "sha256": "c35ea538adc1a2c2628b6dde4ba1254e95346ba6ef3ba89a1e1e2ce8bd110b67"
+  },
+  {
+    "kind": "wood",
+    "wall": "cork",
+    "unchanged": false,
+    "before": {
+      "peak": 0.1862563043832779,
+      "lateFraction": 0.027150744649298276,
+      "t99Ms": 74.96598639455783
+    },
+    "after": {
+      "peak": 0.21169346570968628,
+      "lateFraction": 4.3263958313896016e-7,
+      "t99Ms": 18.95691609977324
+    },
+    "sha256": "84a9760a617dcbab23627bfeb3d7d0a699a2af99a11c1699f37578d1220a763a"
+  }
+]
+PASS rendered wood before, peak 0.195
+PASS rendered wood after, peak 0.224
