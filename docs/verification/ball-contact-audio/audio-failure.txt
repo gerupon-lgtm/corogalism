@@ -1,0 +1,3 @@
+PASS audio failure constructor
+PASS audio failure rolling
+PASS audio failure impact

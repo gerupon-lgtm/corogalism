@@ -6,7 +6,7 @@ try{
  await c.addInitScript(()=>{Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined});localStorage.setItem('corogalism-settings',JSON.stringify({mode:'pointer'}));});
  const p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
  const base=process.env.BASE_URL||'https://corogalism.sikumilab.com/';
- await p.goto(base);assert.equal(await p.locator('.badge').textContent(),'v0.6.7');
+ await p.goto(base);assert.equal(await p.locator('.badge').textContent(),'v0.6.8');
  await p.evaluate(()=>navigator.serviceWorker.ready);await p.waitForFunction(()=>navigator.serviceWorker.controller);
  const cache=await p.evaluate(async()=>{const names=await caches.keys();return {names,files:(await (await caches.open(names[0])).keys()).length}});
  assert.equal(cache.files,100);
@@ -21,5 +21,5 @@ try{
  assert.equal(await p.evaluate(()=>window.__corogalism.state.zones.length),4);
  await p.evaluate(()=>window.__corogalism.teleport(3.5,3.5));
  await p.waitForFunction(()=>document.querySelector('#tutorial-lesson').dataset.lesson==='ice');
- assert.deepEqual(errors,[]);console.log(JSON.stringify({version:'0.6.7',offlineFloors:5,offlineTutorial:true,...cache}));
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({version:'0.6.8',offlineFloors:5,offlineTutorial:true,...cache}));
 }finally{await b.close()}

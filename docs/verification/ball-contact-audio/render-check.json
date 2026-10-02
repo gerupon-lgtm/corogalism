@@ -1,0 +1,32 @@
+[
+  {
+    "kind": "default-demo",
+    "frames": 132300,
+    "rmsBeforeWall": 0.0007387984927360597,
+    "peakBeforeWall": 0.020386364329966124
+  },
+  {
+    "kind": "metal-demo",
+    "frames": 132300,
+    "rmsBeforeWall": 0.005978468814137133,
+    "peakBeforeWall": 0.05038605914487136
+  },
+  {
+    "kind": "sponge-demo",
+    "frames": 132300,
+    "rmsBeforeWall": 0.0,
+    "peakBeforeWall": 0.0
+  },
+  {
+    "kind": "superball-demo",
+    "frames": 132300,
+    "rmsBeforeWall": 0.0,
+    "peakBeforeWall": 0.0
+  },
+  {
+    "kind": "wood-demo",
+    "frames": 132300,
+    "rmsBeforeWall": 0.0015012522672026034,
+    "peakBeforeWall": 0.0347605822931608
+  }
+]

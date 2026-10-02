@@ -3,12 +3,13 @@ const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
 const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const output=process.env.AUDIO_OUTPUT||'docs/verification/ball-lab';await mkdir(output,{recursive:true});
 try{const p=await b.newPage({serviceWorkers:'block'});await p.goto((process.env.BASE_URL||'http://127.0.0.1:8767/')+'ball-lab.html');
- for(const kind of ['metal','superball','wood','sponge']){
+ for(const kind of ['metal','wood','default','superball','sponge']){
   const values=await p.evaluate(async kind=>{
    const {createRollingBuffer,createImpactBuffer}=await import('/src/audio/ballMaterialAudio.js');
    const {BALL_LAB_AUDIO:A}=await import('/src/config/gameConfig.js');
    const rate=22050,c=new OfflineAudioContext(1,rate*6,rate),limiter=c.createDynamicsCompressor();limiter.threshold.value=-16;limiter.ratio.value=8;limiter.connect(c.destination);
-   const roll=c.createBufferSource(),gain=c.createGain();roll.buffer=createRollingBuffer(c,kind,'normal');roll.loop=true;roll.playbackRate.setValueAtTime(.7,0);roll.playbackRate.linearRampToValueAtTime(1.1,3);gain.gain.setValueAtTime(0,0);gain.gain.linearRampToValueAtTime(A.rollingGain*.8,3);gain.gain.linearRampToValueAtTime(0,6);roll.connect(gain);gain.connect(limiter);roll.start();
+   const buffer=createRollingBuffer(c,kind,'normal');
+   if(buffer){const roll=c.createBufferSource(),gain=c.createGain();roll.buffer=buffer;roll.loop=true;roll.playbackRate.setValueAtTime(.7,0);roll.playbackRate.linearRampToValueAtTime(1.1,3);gain.gain.setValueAtTime(0,0);gain.gain.linearRampToValueAtTime(A.rollingGain*.8,3);gain.gain.linearRampToValueAtTime(0,6);roll.connect(gain);gain.connect(limiter);roll.start();}
    for(const [t,wall]of [[3.5,'stone'],[4.5,'rubber'],[5.2,'cork']]){const s=c.createBufferSource(),g=c.createGain();s.buffer=createImpactBuffer(c,kind,wall);g.gain.value=.7;s.connect(g);g.connect(limiter);s.start(t)}
    const data=(await c.startRendering()).getChannelData(0);return Array.from(data);
   },kind);

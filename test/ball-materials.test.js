@@ -66,20 +66,30 @@ test('木とスポンジは入力を離しても急停止せず、素材の順�
  assert.ok(vel.wood>.8&&vel.wood<1.5);assert.ok(vel.sponge>.35&&vel.sponge<vel.wood);
 });
 test('転がり音は一定音程の持続音を主成分にしない',()=>{
- for(const id of ['metal','wood','superball']){
+ for(const id of ['metal','wood','default']){
   const b=createRollingBuffer(context,id),data=b.getChannelData(0);let peak=0;
   for(let hz=40;hz<=450;hz+=2){let s=0,c=0;for(let i=0;i<data.length;i++){const angle=2*Math.PI*hz*i/b.sampleRate;s+=data[i]*Math.sin(angle);c+=data[i]*Math.cos(angle)}peak=Math.max(peak,Math.hypot(s,c)*2/data.length)}
   assert.ok(peak/rms(b)<.35,`${id}: 固定音程が目立たない`);
  }
 });
-test('転がり音は全素材と床で有限、金属には低域、壁ごとに衝突の響きを変える',()=>{
- for(const id of Object.keys(BALL_MATERIALS))for(const floor of ['normal','ice','sand']){
+test('柔らかい球は床によらず転がり音を持たず、衝突音は残す',()=>{
+ for(const id of ['superball','sponge'])for(const floor of ['normal','ice','sand']){
+  assert.equal(createRollingBuffer(context,id,floor),null,`${id}/${floor}: 転がるだけでは鳴らさない`);
+  assert.ok(rms(createImpactBuffer(context,id,'rubber'))>.001);
+ }
+});
+test('硬い球は金属の低域、木の乾いた接触、ガラスの細かな高域を分ける',()=>{
+ for(const id of ['metal','wood','default'])for(const floor of ['normal','ice','sand']){
   const b=createRollingBuffer(context,id,floor);assert.ok(rms(b)>.001);
   assert.ok(b.getChannelData(0).every(v=>Number.isFinite(v)&&Math.abs(v)<1));
  }
  const metal=createRollingBuffer(context,'metal'),marble=createRollingBuffer(context,'default');
  const lowRms=b=>{let low=0,sum=0;for(const x of b.getChannelData(0)){low=.98*low+.02*x;sum+=low*low}return Math.sqrt(sum/b.length)};
- assert.ok(lowRms(metal)>lowRms(marble)*2);assert.ok(rms(metal)>rms(createRollingBuffer(context,'sponge'))*3);
+ assert.ok(lowRms(metal)>lowRms(marble)*2);
+ const highFraction=b=>{let low=0,sum=0;for(const x of b.getChannelData(0)){low=.84*low+.16*x;sum+=(x-low)**2}return Math.sqrt(sum/b.length)/rms(b)};
+ const wood=createRollingBuffer(context,'wood');
+ assert.ok(highFraction(marble)>highFraction(wood)*1.5,'ガラスは木より明るい接触音');
+ for(const b of [wood,marble])assert.ok(b.getChannelData(0).filter(v=>v===0).length>b.length*.1,'接触の間を無音にし、常時の擦れを重ねない');
  assert.ok(rms(createImpactBuffer(context,'metal','stone'))>rms(createImpactBuffer(context,'metal','cork'))*2);
  for(const id of Object.keys(BALL_MATERIALS))for(const wall of Object.keys(BALL_LAB_WALLS))assert.ok(createImpactBuffer(context,id,wall).getChannelData(0).every(v=>Number.isFinite(v)&&Math.abs(v)<1));
 });

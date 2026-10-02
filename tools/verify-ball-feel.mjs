@@ -32,10 +32,12 @@ for(const kind of Object.keys(BALL_MATERIALS))for(const wall of ['default','rubb
 }
 const tones=[];
 for(const before of [true,false])for(const kind of ['metal','wood','superball']){
- const buffer=(before?audioBefore.createRollingBuffer:createRollingBuffer)(context,kind),data=buffer.getChannelData(0),rms=Math.sqrt(data.reduce((sum,x)=>sum+x*x,0)/data.length);let peak=0;
+ const buffer=(before?audioBefore.createRollingBuffer:createRollingBuffer)(context,kind);
+ if(!buffer){tones.push({before,kind,silent:true});continue;}
+ const data=buffer.getChannelData(0),rms=Math.sqrt(data.reduce((sum,x)=>sum+x*x,0)/data.length);let peak=0;
  for(let hz=40;hz<=450;hz+=2){let s=0,c=0;for(let i=0;i<data.length;i++){const a=2*Math.PI*hz*i/buffer.sampleRate;s+=data[i]*Math.sin(a);c+=data[i]*Math.cos(a)}peak=Math.max(peak,Math.hypot(s,c)*2/data.length)}
  tones.push({before,kind,rms,dominantToneRatio:peak/rms});
 }
-const output='docs/verification/ball-feel';await mkdir(output,{recursive:true});await writeFile(output+'/comparison.json',JSON.stringify({rows,impacts,tones},null,2));
+const output=process.env.FEEL_VERIFY_OUTPUT||'docs/verification/ball-feel';await mkdir(output,{recursive:true});await writeFile(output+'/comparison.json',JSON.stringify({rows,impacts,tones},null,2));
 for(const r of rows.filter(r=>!r.before))console.log(JSON.stringify({id:r.id,held:r.held,bounces:r.bounces.slice(0,5),end:r.end}));
 console.log('PASS impact PCM unchanged: '+impacts.length);console.log(JSON.stringify(tones));

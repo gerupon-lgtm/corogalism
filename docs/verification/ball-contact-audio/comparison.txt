@@ -1,0 +1,132 @@
+PASS unchanged physics and 20 impact PCM buffers
+[
+  {
+    "kind": "metal",
+    "floor": "normal",
+    "silent": false,
+    "rms": 0.04389548702135034,
+    "peak": 0.3318691551685333,
+    "lowFraction": 0.44668028710037205,
+    "highFraction": 0.4989292799382055,
+    "silentFraction": 0,
+    "sha256": "a26ecb06b422961c39ecd5a06f870bd0e7c41957fed30c1b5d9c67116241974e"
+  },
+  {
+    "kind": "metal",
+    "floor": "ice",
+    "silent": false,
+    "rms": 0.015576763843956953,
+    "peak": 0.14991873502731323,
+    "lowFraction": 0.44442863919064823,
+    "highFraction": 0.5035790729783101,
+    "silentFraction": 0.1055328798185941,
+    "sha256": "ae511f352792b6c08dfce527ee9f90da1deb8c69ec42f38fd7e00041811aecd8"
+  },
+  {
+    "kind": "metal",
+    "floor": "sand",
+    "silent": false,
+    "rms": 0.020553986197226034,
+    "peak": 0.19310826063156128,
+    "lowFraction": 0.4458857305386938,
+    "highFraction": 0.5047902141088784,
+    "silentFraction": 0.09680272108843538,
+    "sha256": "b9de21b32a701646b483de2512e8033677ed7427004fe8e984a739aeb531a44c"
+  },
+  {
+    "kind": "superball",
+    "floor": "normal",
+    "silent": true
+  },
+  {
+    "kind": "superball",
+    "floor": "ice",
+    "silent": true
+  },
+  {
+    "kind": "superball",
+    "floor": "sand",
+    "silent": true
+  },
+  {
+    "kind": "wood",
+    "floor": "normal",
+    "silent": false,
+    "rms": 0.010195260395086657,
+    "peak": 0.16524091362953186,
+    "lowFraction": 0.2941860109988088,
+    "highFraction": 0.45402465386210716,
+    "silentFraction": 0.7821428571428571,
+    "sha256": "dc4e32ecf4318d7be383437fa2d32396a6d6b0b675490f1f62d1eb0d2790b182"
+  },
+  {
+    "kind": "wood",
+    "floor": "ice",
+    "silent": false,
+    "rms": 0.0036467163748662326,
+    "peak": 0.07490592449903488,
+    "lowFraction": 0.29297124342299213,
+    "highFraction": 0.45321626626012884,
+    "silentFraction": 0.8692857142857143,
+    "sha256": "25748acea878f10200f4672c844a6adff9a9c425f2cb933cbbce4e771766530a"
+  },
+  {
+    "kind": "wood",
+    "floor": "sand",
+    "silent": false,
+    "rms": 0.004700641874514173,
+    "peak": 0.08870681375265121,
+    "lowFraction": 0.3198988544154068,
+    "highFraction": 0.45502382640176875,
+    "silentFraction": 0.8656009070294785,
+    "sha256": "8b7becc45cdd158e089a36a0ab48b6a7c1950bb67c5e70580a3bf68d974f7a7f"
+  },
+  {
+    "kind": "sponge",
+    "floor": "normal",
+    "silent": true
+  },
+  {
+    "kind": "sponge",
+    "floor": "ice",
+    "silent": true
+  },
+  {
+    "kind": "sponge",
+    "floor": "sand",
+    "silent": true
+  },
+  {
+    "kind": "default",
+    "floor": "normal",
+    "silent": false,
+    "rms": 0.0051893285804308735,
+    "peak": 0.09621977061033249,
+    "lowFraction": 0.04246174445797142,
+    "highFraction": 0.8663473633315919,
+    "silentFraction": 0.8857823129251701,
+    "sha256": "5c8dc58435a985902b1233ae3a1893d0fcaf02b710ccce0ca60541ff924fd103"
+  },
+  {
+    "kind": "default",
+    "floor": "ice",
+    "silent": false,
+    "rms": 0.00165313835661472,
+    "peak": 0.041345447301864624,
+    "lowFraction": 0.04207003079047179,
+    "highFraction": 0.8664433385978805,
+    "silentFraction": 0.9354421768707483,
+    "sha256": "b54255617cffcd8a833b4acd22df268b2d6731fff2baaea16a4026ebc1eba9f4"
+  },
+  {
+    "kind": "default",
+    "floor": "sand",
+    "silent": false,
+    "rms": 0.0024263766760827454,
+    "peak": 0.045726899057626724,
+    "lowFraction": 0.04682570745433978,
+    "highFraction": 0.8634727819884987,
+    "silentFraction": 0.9307256235827664,
+    "sha256": "51922ada511adfba94e9b896e4764e2016eed8b9081b6a8810277188bba19b81"
+  }
+]

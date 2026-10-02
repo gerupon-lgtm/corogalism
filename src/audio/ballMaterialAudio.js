@@ -1,29 +1,32 @@
-/** 試遊専用。転がりは不規則な接触音。衝突の音色は維持する。 */
+/** 試遊専用。硬い球だけ接触の質感を鳴らす。衝突の音色は維持する。 */
 import { BALL_LAB_AUDIO } from '../config/gameConfig.js';
 const rate=22050;
 const tau=Math.PI*2;
 function random(seed){let s=seed;return()=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296*2-1;};}
+// 無音も素材の個性。柔らかい球に擦れのループを割り当てない。
+const rollingProfiles={
+ metal:{seed:811,hz:150,second:330,low:.8,rough:.16,body:.055,decay:.015,tail:.075,attack:.002,interval:.022,jitter:.044,gain:1.2},
+ wood:{seed:1259,hz:310,second:680,low:.25,rough:.07,body:.11,decay:.0045,tail:.025,attack:.0007,interval:.072,jitter:.085,gain:.9},
+ default:{seed:2017,hz:1800,second:3400,low:0,rough:.045,body:.11,decay:.0016,tail:.01,attack:.00025,interval:.052,jitter:.075,gain:.8},
+};
 export function createRollingBuffer(context,kind='metal',floor='normal'){
- const n=rate*4,cross=Math.round(rate*.08),noise=random(713),samples=new Float32Array(n+cross);
- const profile=kind==='metal'?{hz:210,decay:.985,ring:.012}:kind==='wood'?{hz:340,decay:.962,ring:.01}:kind==='superball'?{hz:125,decay:.945,ring:.006}:{hz:480,decay:.94,ring:kind==='sponge'?0:.006};
- const feedback1=2*profile.decay*Math.cos(tau*profile.hz/rate),feedback2=-(profile.decay**2);
- let low=0,rough=0,r1=0,r2=0,next=0,texture=0;
- for(let i=0;i<samples.length;i++){
-  const w=noise();low=low*.955+w*.045;rough=rough*.78+w*.22;texture=texture*.998+w*.002;
-  let impulse=0;
-  if(i>=next){impulse=profile.ring*noise()*(floor==='ice'?.25:1);next=i+Math.round(rate*(.04+(noise()+1)*.065));}
-  const ring=impulse+feedback1*r1+feedback2*r2;r2=r1;r1=ring;
-  let v=kind==='metal'?low*1.8+(rough-low)*.12+ring:
-   kind==='wood'?low*.8+(rough-low)*.18+ring:
-   kind==='superball'?low*.55+(rough-low)*.08+ring:
-   kind==='sponge'?low*.22+(rough-low)*.035:low*.3+(rough-low)*.3+ring;
-  v*=.8+Math.min(.4,Math.abs(texture)*7);
-  if(floor==='ice')v*=.45;
-  if(floor==='sand')v=v*.65+(rough-low)*.23;
-  samples[i]=Math.tanh(v);
+ const profile=rollingProfiles[kind];if(!profile)return null;
+ const n=rate*4,noise=random(profile.seed),b=context.createBuffer(1,n,rate),data=b.getChannelData(0);
+ const spacing=floor==='ice'?1.7:1,softness=floor==='sand'?.6:1,floorGain=floor==='ice'?.45:floor==='sand'?.65:1;
+ // 接触ごとに短い音を作る。木・ガラスの隙間に常時ノイズを重ねない。
+ for(let start=0;start<n;){
+  const strength=(.65+(noise()+1)*.3)*profile.gain*floorGain,polarity=noise()<0?-1:1;
+  const length=Math.round(rate*profile.tail*softness);let low=0,rough=0;
+  for(let i=0;i<length;i++){
+   const t=i/rate,w=noise();low=low*.945+w*.055;rough=rough*.8+w*.2;
+   const body=polarity*profile.body*(Math.sin(tau*profile.hz*t)+.35*Math.sin(tau*profile.second*t));
+   const envelope=Math.min(1,t/profile.attack)*Math.exp(-t/(profile.decay*softness))*Math.min(1,(length-1-i)/(rate*.001));
+   // 末尾の粒を先頭へ回して接触音の余韻をループ境界でも連続させる。
+   data[(start+i)%n]+=(low*profile.low+(rough-low)*profile.rough+body)*envelope*strength;
+  }
+  start+=Math.round(rate*(profile.interval+(noise()+1)*.5*profile.jitter)*spacing);
  }
- const b=context.createBuffer(1,n,rate),data=b.getChannelData(0);data.set(samples.subarray(cross));
- for(let i=0;i<cross;i++){const f=i/cross;data[n-cross+i]=samples[n+i]*(1-f)+samples[i]*f;}
+ for(let i=0;i<n;i++)data[i]=Math.tanh(data[i]);
  return b;
 }
 export function createImpactBuffer(context,kind='metal',wall='default'){
@@ -75,7 +78,7 @@ export function createBallMaterialAudio(){
   stop,
   rolling(kind,floor,speed){
    try{
-   if(!available()||speed<BALL_LAB_AUDIO.rollingMinSpeed){stopLoop();return;}
+   if(!rollingProfiles[kind]||!available()||speed<BALL_LAB_AUDIO.rollingMinSpeed){stopLoop();return;}
    const key=`roll:${kind}:${floor}`;
    if(current!==key){
     stopLoop();const source=context.createBufferSource(),gain=context.createGain();

@@ -8,13 +8,13 @@ v0.6.4では「はじめてのあそび方」で全素材を体験できます�
 
 v0.6.5の[ボールのおためし](ball-lab.html)では、金属の重いゴロゴロと長い惰性、スーパーボールの反発などを5素材で比較できます。床・壁・面を切り替え、時間制限なしで音と動きを試せます。[仕様](docs/ball-material-lab.md)、[検証](docs/verification/ball-lab.md)。
 
-v0.6.7の「おためし2」では、転がる音の質感と反発の減衰を見直し、木・スポンジの初動と止まり方を緩和しました。[変更と検証](docs/verification/ball-feel.md)。
+v0.6.8の「おためし3」では、スーパーボール・スポンジの転がりを無音にし、ビー玉・木・金属の接触音を分けました。壁の音と動きは維持しています。[変更と検証](docs/verification/ball-contact-audio.md)。
 
 | フェーズ | 状態 |
 |---|---|
 | フェーズ0（操作感） | 合格。Pixel 6a / iPhone XRで過去に確認済み |
 | フェーズ1（迷路生成・タイムアタック） | 完了・公開済み（従来の引き継ぎ記録） |
-| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.7 公開済み。ボール素材試遊の音と反発を再設計。実機の体感評価はdocs/remaining-work.md** |
+| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.8。ボール素材試遊の転がり音を素材の有無から再考。実機の体感評価はdocs/remaining-work.md** |
 
 このフォルダをGit初期化し、既存のリモート履歴に接続してフェーズ2をmainへpushしました。
 リポジトリは [gerupon-lgtm/corogalism](https://github.com/gerupon-lgtm/corogalism)、
@@ -35,7 +35,7 @@ node --test
 node tools/balance.mjs
 ```
 
-自動テスト156件成功。ブラウザ確認の再実行手順・結果・画面画像は [検証記録](docs/verification/README.md)。
+自動テスト157件成功。ブラウザ確認の再実行手順・結果・画面画像は [検証記録](docs/verification/README.md)。
 スマートフォンの傾きセンサー確認はHTTPSの公開先で行います。LANのHTTP配信では利用できません。
 
 ## 遊び方

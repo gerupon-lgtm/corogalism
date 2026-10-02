@@ -7,8 +7,9 @@ const rows=[];
 try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  const p=await b.newPage({viewport:{width,height},serviceWorkers:'block'}),errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined}));
- await p.clock.install();await p.clock.pauseAt(Date.now()+1000);
+ await p.clock.install();
  await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);await p.evaluate(()=>document.fonts.ready);
+ await p.clock.pauseAt(Date.now()+1000);
  const state=()=>p.evaluate(()=>window.__ballLab.state);
  const click=async id=>{await p.locator('#'+id).click();await p.clock.runFor(32)};
  const records=await p.evaluate(()=>JSON.stringify({...localStorage}));
@@ -33,6 +34,8 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  await p.mouse.move(r.x+r.width/2,r.y+r.height/2);await p.mouse.down();await p.mouse.move(r.x+r.width*.8,r.y+r.height/2);await p.clock.runFor(1200);await p.mouse.up();
  await p.waitForTimeout(150);await p.clock.runFor(2200);
  assert.ok((await state()).sound.events.includes('hit:superball:rubber'),'実pointerでゴム壁へ跳ねる');
+ assert.equal((await state()).sound.rolling,false,'ゴム球は転がり音を鳴らさない');
+ assert.ok(!(await state()).sound.events.some(e=>e.startsWith('roll:superball:')));
  assert.ok(Math.hypot((await state()).actor.vx,(await state()).actor.vy)>1,'手離し後も跳ねて転がる');
  // 衝突音の組合せの機能確認。実操作の慣性比較とは分離する。
  for(const wall of ['stone','cork']){
@@ -50,7 +53,7 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  await p.evaluate(()=>{Object.defineProperty(document,'hidden',{get:()=>true,configurable:true});document.dispatchEvent(new Event('visibilitychange'))});await p.clock.runFor(500);
  assert.equal((await state()).paused,true);assert.equal((await state()).sound.rolling,false);
  await p.evaluate(()=>{Object.defineProperty(document,'hidden',{get:()=>false,configurable:true});document.dispatchEvent(new Event('visibilitychange'))});
- await click('copy');assert.equal(JSON.parse(await p.locator('#settings-text').inputValue()).page,'corogalism-ball-lab');
+ await click('copy');const shared=JSON.parse(await p.locator('#settings-text').inputValue());assert.equal(shared.page,'corogalism-ball-lab');assert.equal(shared.revision,3);
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  assert.equal(await p.evaluate(()=>JSON.stringify({...localStorage})),records);assert.deepEqual(errors,[]);
  rows.push({width,movingVx:moving.actor.vx,coastingVx:coasting.actor.vx,sound:(await state()).sound,errors});console.log('PASS ball lab '+width);await p.close();

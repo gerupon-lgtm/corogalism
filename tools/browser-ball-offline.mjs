@@ -11,8 +11,12 @@ try{
  await c.setOffline(true);await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);
  await p.locator('[data-ball=superball]').click();await p.locator('#floor').selectOption('mixed');await p.locator('#wall').selectOption('rubber');
  const r=await p.locator('#board').boundingBox();await p.mouse.move(r.x+r.width*.7,r.y+r.height/2);await p.mouse.down();await p.waitForTimeout(350);await p.mouse.up();await p.waitForTimeout(350);
- const state=await p.evaluate(()=>window.__ballLab.state);assert.ok(state.actor.x>.7);assert.ok(state.sound.events.includes('roll:superball:ice'));assert.equal(state.sound.context,'running');assert.deepEqual(errors,[]);
- console.log(JSON.stringify({offline:true,...cache,sound:state.sound}));await c.close();
+ const state=await p.evaluate(()=>window.__ballLab.state);assert.ok(state.actor.x>.7);assert.equal(state.sound.rolling,false);assert.ok(!state.sound.events.some(e=>e.startsWith('roll:superball:')));assert.equal(state.sound.context,'running');
+ await p.evaluate(()=>window.__ballLab.teleport(6.2,.5,4,0));await p.waitForTimeout(350);
+ const hit=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(hit.events.includes('hit:superball:rubber'));
+ await p.locator('[data-ball=default]').click();await p.evaluate(()=>window.__ballLab.teleport(2,.5,2,0));await p.waitForTimeout(150);
+ const glass=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(glass.events.includes('roll:default:ice'));
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass}));await c.close();
  for(const source of ['export function resolveParams() {}','// ch.fieldK\nexport function resolveParams() {}']){
   const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/physics/resolveParams.js',route=>route.fulfill({contentType:'text/javascript',body:source}));
   await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));

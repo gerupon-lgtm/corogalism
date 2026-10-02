@@ -1,0 +1,257 @@
+{
+  "baseline": "102bb53",
+  "physicsUnchanged": true,
+  "impacts": [
+    {
+      "kind": "metal",
+      "wall": "default",
+      "sha256": "ea4a30866fb93f1b0e0615ca4d332a1097859a55cb0b419c31fa2b292888bbec",
+      "unchanged": true
+    },
+    {
+      "kind": "metal",
+      "wall": "rubber",
+      "sha256": "cc3de5190fa219d22e087d27339b3ec6786ff85011b112284a483e8da930ace2",
+      "unchanged": true
+    },
+    {
+      "kind": "metal",
+      "wall": "stone",
+      "sha256": "b51e7458d0a002dda4534cc34a0920e0dbf98c48d8566b0211fdd51de4bb3788",
+      "unchanged": true
+    },
+    {
+      "kind": "metal",
+      "wall": "cork",
+      "sha256": "2b8d840a44eeacaa4027c75efc989f71bd33586b405f2de8b342dea64bf3f168",
+      "unchanged": true
+    },
+    {
+      "kind": "superball",
+      "wall": "default",
+      "sha256": "3fbe298ec5ea610b9db4d70c97dc88be8ad6339d8032a766975926eed5902482",
+      "unchanged": true
+    },
+    {
+      "kind": "superball",
+      "wall": "rubber",
+      "sha256": "941f5463f1571e9acb557401e823b637758716508da7b1a272fb79ec9d6ef293",
+      "unchanged": true
+    },
+    {
+      "kind": "superball",
+      "wall": "stone",
+      "sha256": "9eb7a652a1268cf96db21cd1682fcc2a1558fc68f4ad83c6e61e21d67d4dc1ea",
+      "unchanged": true
+    },
+    {
+      "kind": "superball",
+      "wall": "cork",
+      "sha256": "4bf041191bcbe0ef88123ec28d3053cb923247dd3aae0e441af685c3375d878c",
+      "unchanged": true
+    },
+    {
+      "kind": "wood",
+      "wall": "default",
+      "sha256": "3c75ab275bc237fd025a551f773f18035860c69ab8cdd9c89afb4bb5d4ee443a",
+      "unchanged": true
+    },
+    {
+      "kind": "wood",
+      "wall": "rubber",
+      "sha256": "021aac56d8ddaea76620f17f2059c1f225a0d1379b9ec0d29b98f17f829425d1",
+      "unchanged": true
+    },
+    {
+      "kind": "wood",
+      "wall": "stone",
+      "sha256": "0f6e840c6c8edf9d8d481f6f3c9cac9b80cecb00e8d9c70cf0e31ac08ed81dd6",
+      "unchanged": true
+    },
+    {
+      "kind": "wood",
+      "wall": "cork",
+      "sha256": "33facf8374eb1f0b16109c907614e2a4c9726716efc5921e13614c97665ca2a4",
+      "unchanged": true
+    },
+    {
+      "kind": "sponge",
+      "wall": "default",
+      "sha256": "a1934dc6bbfd1df7820f3fa9809c46fdbe69c92dfcf9f8ed51bb78b0cf1c47f5",
+      "unchanged": true
+    },
+    {
+      "kind": "sponge",
+      "wall": "rubber",
+      "sha256": "5e85157cae7d86779eeca35db77c6c833adba343de53ce8f1476e1fe37299e3c",
+      "unchanged": true
+    },
+    {
+      "kind": "sponge",
+      "wall": "stone",
+      "sha256": "d006138a998429976cc0470324962fbf936c472c5e6bc07af2982c05cada3d44",
+      "unchanged": true
+    },
+    {
+      "kind": "sponge",
+      "wall": "cork",
+      "sha256": "2547fc2cb79ad0de5f1da67b4c110e893a21da1516dc886eff0e34af44aa8101",
+      "unchanged": true
+    },
+    {
+      "kind": "default",
+      "wall": "default",
+      "sha256": "765a386aca617588b05124402b21dd46d7521015f2a7194264e443a29de029b2",
+      "unchanged": true
+    },
+    {
+      "kind": "default",
+      "wall": "rubber",
+      "sha256": "bbd140009c792fe2adaebd4df3b5de202edd8f60036d71efb9c81eeb348bd24b",
+      "unchanged": true
+    },
+    {
+      "kind": "default",
+      "wall": "stone",
+      "sha256": "bddd4f8a2d12b323ae2d39eaf3285141a99746f1c4fb562d6548a09bc832c0e5",
+      "unchanged": true
+    },
+    {
+      "kind": "default",
+      "wall": "cork",
+      "sha256": "9be0cf2bde184f12d3aa7719be9f04256e2867f2e666fe6cec582db2188263e4",
+      "unchanged": true
+    }
+  ],
+  "rolling": [
+    {
+      "kind": "metal",
+      "floor": "normal",
+      "silent": false,
+      "rms": 0.04389548702135034,
+      "peak": 0.3318691551685333,
+      "lowFraction": 0.44668028710037205,
+      "highFraction": 0.4989292799382055,
+      "silentFraction": 0,
+      "sha256": "a26ecb06b422961c39ecd5a06f870bd0e7c41957fed30c1b5d9c67116241974e"
+    },
+    {
+      "kind": "metal",
+      "floor": "ice",
+      "silent": false,
+      "rms": 0.015576763843956953,
+      "peak": 0.14991873502731323,
+      "lowFraction": 0.44442863919064823,
+      "highFraction": 0.5035790729783101,
+      "silentFraction": 0.1055328798185941,
+      "sha256": "ae511f352792b6c08dfce527ee9f90da1deb8c69ec42f38fd7e00041811aecd8"
+    },
+    {
+      "kind": "metal",
+      "floor": "sand",
+      "silent": false,
+      "rms": 0.020553986197226034,
+      "peak": 0.19310826063156128,
+      "lowFraction": 0.4458857305386938,
+      "highFraction": 0.5047902141088784,
+      "silentFraction": 0.09680272108843538,
+      "sha256": "b9de21b32a701646b483de2512e8033677ed7427004fe8e984a739aeb531a44c"
+    },
+    {
+      "kind": "superball",
+      "floor": "normal",
+      "silent": true
+    },
+    {
+      "kind": "superball",
+      "floor": "ice",
+      "silent": true
+    },
+    {
+      "kind": "superball",
+      "floor": "sand",
+      "silent": true
+    },
+    {
+      "kind": "wood",
+      "floor": "normal",
+      "silent": false,
+      "rms": 0.010195260395086657,
+      "peak": 0.16524091362953186,
+      "lowFraction": 0.2941860109988088,
+      "highFraction": 0.45402465386210716,
+      "silentFraction": 0.7821428571428571,
+      "sha256": "dc4e32ecf4318d7be383437fa2d32396a6d6b0b675490f1f62d1eb0d2790b182"
+    },
+    {
+      "kind": "wood",
+      "floor": "ice",
+      "silent": false,
+      "rms": 0.0036467163748662326,
+      "peak": 0.07490592449903488,
+      "lowFraction": 0.29297124342299213,
+      "highFraction": 0.45321626626012884,
+      "silentFraction": 0.8692857142857143,
+      "sha256": "25748acea878f10200f4672c844a6adff9a9c425f2cb933cbbce4e771766530a"
+    },
+    {
+      "kind": "wood",
+      "floor": "sand",
+      "silent": false,
+      "rms": 0.004700641874514173,
+      "peak": 0.08870681375265121,
+      "lowFraction": 0.3198988544154068,
+      "highFraction": 0.45502382640176875,
+      "silentFraction": 0.8656009070294785,
+      "sha256": "8b7becc45cdd158e089a36a0ab48b6a7c1950bb67c5e70580a3bf68d974f7a7f"
+    },
+    {
+      "kind": "sponge",
+      "floor": "normal",
+      "silent": true
+    },
+    {
+      "kind": "sponge",
+      "floor": "ice",
+      "silent": true
+    },
+    {
+      "kind": "sponge",
+      "floor": "sand",
+      "silent": true
+    },
+    {
+      "kind": "default",
+      "floor": "normal",
+      "silent": false,
+      "rms": 0.0051893285804308735,
+      "peak": 0.09621977061033249,
+      "lowFraction": 0.04246174445797142,
+      "highFraction": 0.8663473633315919,
+      "silentFraction": 0.8857823129251701,
+      "sha256": "5c8dc58435a985902b1233ae3a1893d0fcaf02b710ccce0ca60541ff924fd103"
+    },
+    {
+      "kind": "default",
+      "floor": "ice",
+      "silent": false,
+      "rms": 0.00165313835661472,
+      "peak": 0.041345447301864624,
+      "lowFraction": 0.04207003079047179,
+      "highFraction": 0.8664433385978805,
+      "silentFraction": 0.9354421768707483,
+      "sha256": "b54255617cffcd8a833b4acd22df268b2d6731fff2baaea16a4026ebc1eba9f4"
+    },
+    {
+      "kind": "default",
+      "floor": "sand",
+      "silent": false,
+      "rms": 0.0024263766760827454,
+      "peak": 0.045726899057626724,
+      "lowFraction": 0.04682570745433978,
+      "highFraction": 0.8634727819884987,
+      "silentFraction": 0.9307256235827664,
+      "sha256": "51922ada511adfba94e9b896e4764e2016eed8b9081b6a8810277188bba19b81"
+    }
+  ]
+}

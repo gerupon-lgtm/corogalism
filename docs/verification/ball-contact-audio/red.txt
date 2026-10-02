@@ -1,0 +1,63 @@
+✔ 金属は初動が鈍く、水平で勢いが残り、スポンジは速く止まる (7.0051ms)
+✔ 素材による力場の初動と反発が異なる、既存の係数は維持 (1.8901ms)
+✔ 全240組合せで到達性・同じ球径・有限値・速度上限・盤内を維持 (305.7289ms)
+✔ 弱い接触では跳ね返りが収まり、最初の強いゴム球の反発は保つ (0.55ms)
+✔ 木とスポンジは入力を離しても急停止せず、素材の順に滑らかに減速する (1.216ms)
+✔ 転がり音は一定音程の持続音を主成分にしない (2250.9955ms)
+✖ 柔らかい球は床によらず転がり音を持たず、衝突音は残す (11.3854ms)
+✖ 硬い球は金属の低域、木の乾いた接触、ガラスの細かな高域を分ける (120.2407ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2829.5603
+
+✖ failing tests:
+
+test at test\ball-materials.test.js:75:1
+✖ 柔らかい球は床によらず転がり音を持たず、衝突音は残す (11.3854ms)
+  AssertionError [ERR_ASSERTION]: superball/normal: 転がるだけでは鳴らさない
+  + actual - expected
+  
+  + {
+  +   getChannelData: [Function: getChannelData],
+  +   length: 88200,
+  +   sampleRate: 22050
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/ball-materials.test.js:77:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [Object],
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\ball-materials.test.js:81:1
+✖ 硬い球は金属の低域、木の乾いた接触、ガラスの細かな高域を分ける (120.2407ms)
+  AssertionError [ERR_ASSERTION]: ガラスは木より明るい接触音
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/ball-materials.test.js:91:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
