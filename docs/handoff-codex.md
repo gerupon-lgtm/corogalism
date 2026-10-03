@@ -2,7 +2,7 @@
 
 ## 現在地
 
-- T-271 / v0.6.13（公開確認前）: T-269で残っていた氷の速度による傾き加速補正を検証だけ外す。補助コースの力55%も外し、入力25°・なめらかさ0.35・時間刻み・衝突形・続行不能・音に残る条件を明記。ボールおためし7／床おためし9、revision7／9、raw記録motion-2で旧版と分離。本編・チュートリアル・床の練習と以前の調整は維持。171テスト・720条件（停止23件）・Chrome3幅・101資材オフライン確認。[方針と条件](exploration-policy.md)、[検証](verification/ice-response.md)。
+- T-271 / v0.6.13: T-269で残っていた氷の速度による傾き加速補正を検証だけ外す。補助コースの力55%も外し、入力25°・なめらかさ0.35・時間刻み・衝突形・続行不能・音に残る条件を明記。ボールおためし7／床おためし9、revision7／9、raw記録motion-2で旧版と分離。本編・チュートリアル・床の練習と以前の調整は維持。171テスト・720条件（停止23件）・Chrome3幅・101資材オフライン確認。公開104資材一致、公開3幅・完全オフラインも成功（d1a76d3 / Pages37109271687）。[方針と条件](exploration-policy.md)、[検証](verification/ice-response.md)。
 
 - T-270 / v0.6.12: v0.6.11の公開追加確認で見つけた、未訪問の設定URLの床ページが完全オフラインで開けない問題を修正。既知HTMLの保存先解決を統一し、queryの床配置指定を維持。101資材、b5fb0f80c96d1811。両試遊ページと本編への初回移動・操作・発音をローカルと公開URLで確認。公開104資材一致、0d3e633 / Pages37106451916成功。[検証](verification/exploration-offline.md)。試遊の物理・JSON形式はv0.6.11から維持。
 
@@ -55,7 +55,7 @@
 
 - T-247: 別ページ `floor-lab.html` に床のおためしを追加。通常・氷・砂・重力・反重力の切替、強さ調整・設定コピー。仕様は[床のおためし](floor-lab.md)。T-258で本編にも別の採用値で反映。検証ページの調整値とは独立。
 
-- 公開版は **v0.6.12**。正式URL: https://corogalism.sikumilab.com/ 。公開アプリ0d3e633、Pages37106451916成功。ボールおためし6: https://corogalism.sikumilab.com/ball-lab.html 。床おためし8: https://corogalism.sikumilab.com/floor-lab.html 。公開証跡は[deployment.md](deployment.md)。
+- 公開版は **v0.6.13**。正式URL: https://corogalism.sikumilab.com/ 。公開アプリd1a76d3、Pages37109271687成功。ボールおためし7: https://corogalism.sikumilab.com/ball-lab.html 。床おためし9: https://corogalism.sikumilab.com/floor-lab.html 。公開証跡は[deployment.md](deployment.md)。
 - T-257時点の自動検証は135テスト成功。開始時の全画面15経路・縦向き固定8経路を正式URLで模擬確認済み。ローカルのチュートリアル320/390/576幅・センサー3経路も成功。実端末での全画面・固定の成功可否は端末とブラウザに依存する。
 - 2026-09-22、ユーザーから最新チュートリアルの実機試遊・とりもち本体タップ感度・端末別確認について「問題ない、完了」と報告。機種や個別測定値は推測して補わない。
 - 依頼済みの実装・公開・上記実機確認は完了。T-258では床素材を採用しブラウザ操作と遅延操縦で調整。残る評価は新しい両難易度・傾き操作・演出の実機体感。[remaining-work.md](remaining-work.md)を参照。

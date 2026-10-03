@@ -13,4 +13,4 @@ T-269では実効値の上限を外したが、速度に応じて氷の傾き加
 
 ## 公開確認
 
-公開URLの資材一致・同じChrome3幅・同じオフライン操作はデプロイ後に追記する。実機センサーと人の楽しさの評価は追加試遊の対象。停止する条件も検証候補に残す。
+公開v0.6.13（d1a76d3 / [Pages37109271687成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37109271687)）の104資材がHTTP200・SHA-256一致。[資材](ice-response/deploy-hashes.json)。公開Chrome3幅で同じ反応・補助力の切替・操作と共有も成功。[操作](ice-response/public/browser.json)。公開101資材の完全オフラインで同じ操作・発音・混在防止4経路も成功。[オフライン](ice-response/offline-public.json)。実機センサーと人の楽しさの評価は追加試遊の対象。停止する条件も検証候補に残す。
