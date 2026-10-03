@@ -8,12 +8,15 @@
   <link rel="stylesheet" href="floor-lab.css">
 </head>
 <body><main>
-  <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし 7</span></header>
+  <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし8 · v0.6.11</span></header>
   <h1>床のおためし</h1>
   <p class="intro">すべる、止まる、引かれる、押される。同じ迷路で、床と力場の組み合わせを比べよう。</p>
   <label for="pattern">配置パターン</label><select id="pattern" style="width:100%;padding:10px;margin:8px 0;font:inherit"></select>
   <nav id="floors" aria-label="床を選ぶ"></nav>
   <p id="hint"></p>
+  <label>動きの比較<select id="physics"><option value="explore">組み合わせのまま（速度・反発などの制限なし）</option><option value="legacy">以前の調整（比較用）</option></select></label>
+  <label class="check"><input id="settle" type="checkbox">弱い跳ね返りを落ち着かせる</label>
+  <p id="physics-readout" class="note"></p>
   <p id="trial-info" hidden><strong>経過 <span id="trial-time">0.00</span> 秒</strong>　自己ベスト <span id="trial-best">—</span><br><small id="trial-note">動き始めると計測開始。同じ床設定・操作方法ごとに記録します。</small></p>
   <div class="board"><canvas id="board" aria-label="床の試遊コース。画面操作では進みたい方向を押し続けます。"></canvas></div>
   <p id="status" role="status">画面操作：盤面の中心から進みたい方向を押し続けてください。</p>
@@ -21,10 +24,11 @@
   <div class="buttons"><button id="sensor">傾きで遊ぶ</button><button id="pointer">画面で遊ぶ</button><button id="calibrate" disabled>傾きを合わせる</button></div>
   <button id="portrait-lock" type="button">縦向きで全画面</button><p id="portrait-note" class="note" role="status">対応端末では縦向きに固定します。</p>
   <details open><summary>床の強さを調整</summary>
-    <label>氷の滑りやすさ <output id="ice-value"></output><input id="ice" type="range" min="0.08" max="0.8" step="0.04" value="0.08"></label>
-    <label>砂の止まりやすさ <output id="sand-value"></output><input id="sand" type="range" min="1.2" max="3.2" step="0.1" value="3.2"></label>
-    <label>引く・押す強さ <output id="force-value"></output><input id="force" type="range" min="1" max="12" step="0.5" value="6"></label>
-    <label>力の届く範囲 <output id="radius-value"></output><input id="radius" type="range" min="0.8" max="2" step="0.1" value="1.6"></label>
+    <label>氷の滑りやすさ <output id="ice-value"></output><input id="ice" type="number" step="any" value="0.08"></label>
+    <label>砂の止まりやすさ <output id="sand-value"></output><input id="sand" type="number" step="any" value="3.2"></label>
+    <label>引く・押す強さ <output id="force-value"></output><input id="force" type="number" step="any" value="6"></label>
+    <label>力の届く範囲 <output id="radius-value"></output><input id="radius" type="number" step="any" value="1.6"></label>
+    <p id="input-note" class="note" role="status">数値に上限はありません。力場の範囲は0より大きい数値で試せます。</p>
     <p class="note">氷は小さい数値ほど滑ります。輪の中で引力・斥力が働きます。</p>
     <div class="buttons"><button id="defaults">初期値に戻す</button><button id="copy">設定をコピー</button></div>
     <textarea id="settings-text" aria-label="共有する設定値" readonly hidden></textarea>

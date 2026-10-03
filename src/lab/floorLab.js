@@ -9,11 +9,15 @@ import { createPointerSource } from '../input/pointerSource.js';
 import { createFloorLab, applyFloor, FLOOR_OPTIONS, PATTERNS } from './floorModel.js';
 
 import { drawFloorVisuals } from './floorVisuals.js';
+import {applyExploration,describeExploration,haltMessage,crossesGoal} from './exploration.js';
 
 const $ = id => document.getElementById(id);
 const canvas = $('board'), ctx = canvas.getContext('2d');
 const { stage, actor } = createFloorLab();
 const settings = { ...FLOOR_LAB }, tilt = createTiltVector();
+let physics='explore',settleBounce=false,lastHalt=null;
+const observations=[];
+applyExploration(stage,physics,settleBounce);
 const requestedPattern = new URLSearchParams(location.search).get('pattern');
 let pattern = ['timeTrial', 'timeTrialAssist'].includes(requestedPattern) ? requestedPattern : 'single';
 let trial = createTimeTrial();
@@ -21,7 +25,7 @@ const trialStorage = { getItem: key => localStorage.getItem(key), setItem: (key,
 function refreshTrial() {
   $('trial-info').hidden = !pattern.startsWith('timeTrial');
   $('trial-time').textContent = (trial.elapsedMs / 1000).toFixed(2);
-  const best = readTrialBest(trialStorage, trialKey(settings, mode, pattern));
+  const best = readTrialBest(trialStorage, trialKey(settings, mode, pattern, physics, settleBounce));
   $('trial-best').textContent = best === null ? '—' : (best / 1000).toFixed(2) + ' 秒';
   $('trial-note').textContent = trial.practice ? '途中移動・操作変更あり：練習のため記録しません。スタートへ戻すと再計測できます。' : '動き始めると計測開始。同じ床設定・操作方法ごとに記録します。';
 }
@@ -59,12 +63,14 @@ $('sensor').onclick = async () => {
 };
 $('pointer').onclick = () => { portrait.requestOnStart(); pointerMode(); };
 $('calibrate').onclick = () => { tilt.reset(); sensor.calibrate(); $('status').textContent = '今の姿勢で少し静止してください。'; scheduleFallback(requestId); };
-function reset(x = 0.5, y = 0.5) { Object.assign(actor, { x, y, vx: 0, vy: 0 }); tilt.reset(); won = false; trial = createTimeTrial(); trial.practice = x !== .5 || y !== .5; refreshTrial(); if (pattern.startsWith('timeTrial')) $('status').textContent = trial.practice ? '途中から練習中。自己ベストには記録しません。' : '動き始めると計測します。砂の手前まで勢いをつけてみよう。'; }
+function reset(x = 0.5, y = 0.5) { Object.assign(actor, { x, y, vx: 0, vy: 0 }); tilt.reset(); won = false; lastHalt=null; trial = createTimeTrial(); trial.practice = x !== .5 || y !== .5; refreshTrial(); $('status').textContent=paused?'位置と速さを戻しました。「再開」で今の組み合わせを試せます。':'位置と速さを戻しました。今の組み合わせで動きを試せます。';if (pattern.startsWith('timeTrial')) $('status').textContent = trial.practice ? '途中から練習中。自己ベストには記録しません。' : '動き始めると計測します。砂の手前まで勢いをつけてみよう。'; }
 $('reset').onclick = () => reset();
 $('plaza').onclick = () => { const cell = stage.maze.path[stage.labSites.length ? Math.max(0, stage.labSites[0].index-2) : Math.floor(stage.maze.path.length / 2)]; reset(cell.x + .5, cell.y + .5); };
-$('pause').onclick = () => { paused = !paused; tilt.reset(); $('pause').textContent = paused ? '再開' : '一時停止'; };
+$('pause').onclick = () => { paused = !paused; tilt.reset(); $('pause').textContent = paused ? '再開' : '一時停止';if(!paused){lastHalt=null;$('status').textContent='再開しました。今の床で動きを比べてみよう。';} };
 function updateFloor() {
   applyFloor(stage, type, settings, pattern);
+  applyExploration(stage,physics,settleBounce);
+  $('physics-readout').textContent=describeExploration(actor,stage);
   refreshTrial();
   $('hint').textContent = pattern === 'single' ? FLOOR_OPTIONS[type].hint : PATTERNS[pattern].hint;
   $('floors').hidden = pattern !== 'single';
@@ -80,10 +86,16 @@ for (const [key, option] of Object.entries(FLOOR_OPTIONS)) {
   button.onclick = () => { type = key; updateFloor(); reset(); };
   $('floors').append(button);
 }
-for (const key of Object.keys(settings)) $(key).oninput = () => { settings[key] = Number($(key).value); updateFloor(); if (pattern.startsWith('timeTrial')) reset(); };
-$('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); };
+for (const key of Object.keys(settings)) $(key).oninput = () => {
+ const value=$(key).valueAsNumber;
+ if(!Number.isFinite(value)||(key==='radius'&&value<=0)){$('input-note').textContent=key==='radius'?'範囲は0より大きい数値を入力してください。':'計算できる数値を入力してください。';return;}
+ settings[key]=value;$('input-note').textContent='入力した数値で比較中。数値の上限はありません。';updateFloor();if(pattern.startsWith('timeTrial'))reset();
+};
+$('physics').onchange=()=>{physics=$('physics').value;settleBounce=physics==='legacy';$('settle').checked=settleBounce;updateFloor();reset();};
+$('settle').onchange=()=>{settleBounce=$('settle').checked;updateFloor();reset();};
+$('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); $('input-note').textContent='床の数値を初期値に戻しました。'; };
 $('copy').onclick = async () => {
-  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 7, pattern, floor: type, mode, ...settings }, null, 2);
+  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 8, pattern, floor: type, mode, physics, settleBounce, ...settings, observations }, null, 2);
   $('settings-text').hidden = false; $('settings-text').value = text;
   try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'コピーしました。この設定と感想を送ってください。'; }
   catch { $('settings-text').focus(); $('settings-text').select(); $('copy-status').textContent = '下の設定値を選択してコピーしてください。'; }
@@ -128,17 +140,23 @@ function frame(now) {
     visualTime += dt * 1000;
     // 描画頻度による操作差を抑え、小さい刻みで既存の物理を進める。
     const count = Math.max(1, Math.ceil(dt / (1 / 120)));
-    for (let i = 0; i < count; i++) { tilt.update(dt / count, BASE.inputSmoothing); stepPhysics({ actor, stage, tilt: tilt.value, base: BASE, dt: dt / count }); }
-    if (pattern.startsWith('timeTrial')) {
+    let goalCrossed=false;
+    for (let i = 0; i < count; i++) {
+     tilt.update(dt/count,BASE.inputSmoothing);
+     const result=stepPhysics({actor,stage,tilt:tilt.value,base:BASE,dt:dt/count,onTravel:(from,to)=>{if(crossesGoal(from,to,6.5,6.5,.35))goalCrossed=true;}});
+     if(result.halt){lastHalt=result.halt;observations.push({settings:{...settings},physics,settleBounce,pattern,floor:type,actor:{x:actor.x,y:actor.y,vx:actor.vx,vy:actor.vy},halt:result.halt});paused=true;tilt.reset();trial.practice=true;$('pause').textContent='再開';$('status').textContent=haltMessage(result.halt);break;}
+    }
+    $('physics-readout').textContent=describeExploration(actor,stage);
+    if (!paused&&pattern.startsWith('timeTrial')) {
       const wasFinished = trial.finished;
-      advanceTrial(trial, elapsed, Math.hypot(actor.x-.5,actor.y-.5)>.02, Math.hypot(actor.x-6.5,actor.y-6.5)<.35);
+      advanceTrial(trial, elapsed, Math.hypot(actor.x-.5,actor.y-.5)>.02, goalCrossed||Math.hypot(actor.x-6.5,actor.y-6.5)<.35);
       if (!wasFinished && trial.finished) {
-        const saved = saveTrialBest(trialStorage, trialKey(settings,mode,pattern), trial);
+        const saved = saveTrialBest(trialStorage, trialKey(settings,mode,pattern,physics,settleBounce), trial);
         $('status').textContent = `ゴール！ ${(trial.elapsedMs/1000).toFixed(2)}秒。` + (trial.practice ? '練習のため記録対象外です。' : saved ? '自己ベストを確認しました。' : '端末に記録を保存できませんでした。');
         won = true;
       }
     }
-    if (!won && Math.hypot(actor.x - 6.5, actor.y - 6.5) < .35) { won = true; $('status').textContent = 'ゴール！ スタートへ戻るか、ほかの床でも試してみよう。'; }
+    if (!paused&&!won && (goalCrossed||Math.hypot(actor.x - 6.5, actor.y - 6.5) < .35)) { won = true; $('status').textContent = 'ゴール！ スタートへ戻るか、ほかの床でも試してみよう。'; }
   }
   if (pattern.startsWith('timeTrial')) refreshTrial();
   draw(now); requestAnimationFrame(frame);
@@ -146,6 +164,6 @@ function frame(now) {
 document.addEventListener('visibilitychange', () => { tilt.reset(); last = 0; if (document.hidden) { paused = true; $('pause').textContent = '再開'; } });
 window.addEventListener('blur', () => { tilt.reset(); paused = true; $('pause').textContent = '再開'; });
 pointerMode(); updateFloor(); requestAnimationFrame(frame);
-if (new URLSearchParams(location.search).has('debug')) window.__floorLab = { stage, actor, settings, get trial() { return trial; }, get pattern() { return pattern; }, get type() { return type; }, get mode() { return mode; } };
+if (new URLSearchParams(location.search).has('debug')) window.__floorLab = { stage, actor, settings, get physics(){return physics;},get lastHalt(){return lastHalt;},observations,get paused(){return paused;},get trial() { return trial; }, get pattern() { return pattern; }, get type() { return type; }, get mode() { return mode; } };
 
 const portrait = initPortraitLock();

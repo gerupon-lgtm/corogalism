@@ -5,20 +5,36 @@
  <title>ボールのおためし | コロガリズム</title>
  <link rel="stylesheet" href="floor-lab.css"><link rel="stylesheet" href="ball-lab.css">
 </head><body><main>
- <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし5</span></header>
+ <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし6 · v0.6.11</span></header>
  <h1>ボールのおためし</h1><p class="intro">音と動きで、ボール素材をくらべよう。</p>
  <nav id="balls" aria-label="ボールの素材"></nav><p id="hint"></p>
  <div class="choices">
   <label>面<select id="layout"><option value="plaza">広場</option><option value="maze">迷路</option></select></label>
   <label>床<select id="floor"></select></label><label>壁<select id="wall"></select></label>
  </div>
+ <label class="physics-choice">動きの比較<select id="physics"><option value="explore">組み合わせのまま（速度・反発などの制限なし）</option><option value="legacy">以前の調整（比較用）</option></select></label>
+ <label class="check"><input id="settle" type="checkbox">弱い跳ね返りを落ち着かせる</label>
+ <p id="physics-readout" class="note"></p>
  <div class="buttons toolbar"><button id="sound" aria-pressed="true">音ON</button><button id="sensor">傾きで遊ぶ</button><button id="pointer" hidden>画面操作へ</button><button id="calibrate" hidden>傾きを合わせる</button></div>
  <div class="board"><canvas id="board" aria-label="ボール素材の試遊。盤面の中心から進みたい方向を押し続けます。"></canvas><span id="pause-label" hidden>一時停止中</span></div>
  <div class="buttons"><button id="reset">スタートへ</button><button id="pause">一時停止</button><button id="test-area">力場の近くへ</button></div>
  <p id="status" role="status">盤面の中心から進みたい方向を押し続けてください。</p>
  <p id="sound-note" class="note" role="status" hidden>この環境では音を再生できません。動きはそのまま試せます。</p>
- <details><summary>音量と設定の共有</summary>
+ <details><summary>音量・動きの調整・設定の共有</summary>
   <label>音量 <output id="volume-value">60%</output><input id="volume" type="range" min="0" max="1" step="0.05" value="0.6"></label>
+  <div class="numeric-grid">
+   <label>ボールの加速倍率<input id="ball-accelK" type="number" step="any"></label>
+   <label>ボールの減速倍率<input id="ball-frictionK" type="number" step="any"></label>
+   <label>ボールの反発倍率<input id="ball-restitutionK" type="number" step="any"></label>
+   <label>力場への反応倍率<input id="ball-fieldK" type="number" step="any"></label>
+   <label>壁の反発倍率<input id="wall-restitution" type="number" step="any"></label>
+   <label>氷の減速倍率<input id="floor-ice" type="number" step="any"></label>
+   <label>砂の減速倍率<input id="floor-sand" type="number" step="any"></label>
+   <label>力場の強さ<input id="floor-force" type="number" step="any"></label>
+   <label>力場の範囲<input id="floor-radius" type="number" step="any"></label>
+  </div>
+  <p id="input-note" class="note" role="status">数値に上限はありません。反発1倍を超えると、壁に当たって加速する動きも試せます。</p>
+  <button id="material-defaults">動きの数値を初期値に戻す</button>
   <button id="copy">設定をコピー</button><textarea id="settings-text" aria-label="共有する設定" readonly hidden></textarea><p id="copy-status" role="status"></p>
   <button id="portrait-lock">縦向きで全画面</button><p id="portrait-note" class="note" role="status">対応端末では縦向きに固定します。</p>
  </details>

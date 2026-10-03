@@ -9,6 +9,7 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  await p.addInitScript(()=>Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined}));
  await p.clock.install();
  await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);await p.evaluate(()=>document.fonts.ready);
+ await p.locator('#physics').selectOption('legacy');
  await p.clock.pauseAt(Date.now()+1000);
  const state=()=>p.evaluate(()=>window.__ballLab.state);
  const click=async id=>{await p.locator('#'+id).click();await p.clock.runFor(32)};
@@ -53,7 +54,7 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  await p.evaluate(()=>{Object.defineProperty(document,'hidden',{get:()=>true,configurable:true});document.dispatchEvent(new Event('visibilitychange'))});await p.clock.runFor(500);
  assert.equal((await state()).paused,true);assert.equal((await state()).sound.rolling,false);
  await p.evaluate(()=>{Object.defineProperty(document,'hidden',{get:()=>false,configurable:true});document.dispatchEvent(new Event('visibilitychange'))});
- await click('copy');const shared=JSON.parse(await p.locator('#settings-text').inputValue());assert.equal(shared.page,'corogalism-ball-lab');assert.equal(shared.revision,5);
+ await click('copy');const shared=JSON.parse(await p.locator('#settings-text').inputValue());assert.equal(shared.page,'corogalism-ball-lab');assert.equal(shared.revision,6);
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  assert.equal(await p.evaluate(()=>JSON.stringify({...localStorage})),records);assert.deepEqual(errors,[]);
  rows.push({width,movingVx:moving.actor.vx,coastingVx:coasting.actor.vx,sound:(await state()).sound,errors});console.log('PASS ball lab '+width);await p.close();

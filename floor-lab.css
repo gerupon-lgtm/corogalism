@@ -3,6 +3,9 @@
 
 [hidden]{display:none!important}
 
+input[type=number],select{display:block;width:100%;min-width:0;font:inherit;padding:8px;border:1px solid #bca47e;border-radius:8px;background:#fffaf0;color:#44382c;margin-top:5px}
+.numeric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.numeric-grid label{font-size:12px}.check{display:flex;align-items:center;gap:7px;font-size:12px}.check input{flex:none}#physics-readout{font-variant-numeric:tabular-nums;margin:6px 0}#physics{font-size:12px}
+
 /* T-257: 全画面の上余白は既存余白を含め合計32px以上。T-256: 本編と同じカメラ回避余白。全画面解除時は通常の余白へ戻る。 */
 :root{--camera-top:env(safe-area-inset-top,0px)}
 :root:fullscreen{--camera-top:max(16px,calc(env(safe-area-inset-top,0px) - 16px))}

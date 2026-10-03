@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '29b0af0e93e8eefd';
+self.PRECACHE_VERSION = '31f5e8d71a5b1725';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -53,6 +53,7 @@ self.PRECACHE_FILES = [
   "src/lab/ballLab.js",
   "src/lab/ballLabStage.js",
   "src/lab/boot.js",
+  "src/lab/exploration.js",
   "src/lab/floorLab.js",
   "src/lab/floorModel.js",
   "src/lab/floorVisuals.js",

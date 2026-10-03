@@ -127,7 +127,7 @@ export function sampleZone(stage, actor) {
     const scale = z.strength * 4 * (1 - distance / z.radius) / z.radius;
     forceX += dx * scale; forceY += dy * scale;
   }
-  const scale = Math.min(1, limit / (Math.hypot(forceX, forceY) || 1));
+  const scale = stage.physicsPolicy?.unrestricted ? 1 : Math.min(1, limit / (Math.hypot(forceX, forceY) || 1));
   return { ...result, forceX: result.forceX + forceX * scale, forceY: result.forceY + forceY * scale };
 }
 

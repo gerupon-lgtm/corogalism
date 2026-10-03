@@ -30,6 +30,9 @@ export const BALL_LAB_BOUNCE = {
   sponge: { stopSpeed: 0.4, fullSpeed: 2 },
 };
 
+/** 検証専用。動きの上限ではなく、1回の計算が終わらない場合の停止・記録用。 */
+export const LAB_EXPLORATION = { maxSubsteps: 4096 };
+
 /**
  * 実効値のクランプ範囲。
  * 根拠: フェーズ0プロトタイプのスライダー範囲＝人が実機で触って操作が成立した範囲。
@@ -39,7 +42,7 @@ export const CLAMP = {
   friction:    { min: 0.2, max: 8.0 },
   restitution: { min: 0.0, max: 0.7 },
   rubberRestitution: { min: 0.0, max: 0.9 }, // ゴムだけ強い反発を許可
-  characterRestitution: { min: 0, max: 0.96 }, // おためし素材の反発も1未満に保つ
+  characterRestitution: { min: 0, max: 0.96 }, // 本編・以前の調整で使用。制限を外す検証では使用しない
   fieldResponse: { min: 0, max: 3 },
   bounceSpeed: { min: 0.05, max: 10 },
   accel:       { min: 4,   max: 60  }, // マス/s²

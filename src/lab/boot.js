@@ -3,7 +3,7 @@ const status = document.getElementById('status');
 try {
   const config = await fetch(new URL('../config/gameConfig.js', import.meta.url));
   if (!config.ok) throw new Error('設定を取得できませんでした');
-  if (!(await config.text()).includes('export const FLOOR_LAB')) {
+  if (!(await config.text()).includes('export const LAB_EXPLORATION')) {
     status.textContent = 'ゲームの更新が必要です。上の「コロガリズムへ」からトップを開き、「更新をチェック」で更新したあと、このページを開き直してください。';
     document.querySelectorAll('button, input').forEach(element => { element.disabled = true; });
   } else {

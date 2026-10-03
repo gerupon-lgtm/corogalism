@@ -1,0 +1,236 @@
+[
+  {
+    "width": 320,
+    "cases": [
+      {
+        "wall": "default",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 0.000005638620538525891
+          }
+        ]
+      },
+      {
+        "wall": "default",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 0.000005638620538525891
+          }
+        ]
+      },
+      {
+        "wall": "rubber",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 8.307350188720941e-7
+          }
+        ]
+      },
+      {
+        "wall": "rubber",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 8.307350188720941e-7
+          }
+        ]
+      },
+      {
+        "wall": "stone",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 0.000051202373069663157
+          }
+        ]
+      },
+      {
+        "wall": "stone",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 0.000051202373069663157
+          }
+        ]
+      },
+      {
+        "wall": "cork",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 4.3263958313896016e-7
+          }
+        ]
+      },
+      {
+        "wall": "cork",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 4.3263958313896016e-7
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "cases": [
+      {
+        "wall": "default",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 0.000005638620538525891
+          }
+        ]
+      },
+      {
+        "wall": "default",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 0.000005638620538525891
+          }
+        ]
+      },
+      {
+        "wall": "rubber",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 8.307350188720941e-7
+          }
+        ]
+      },
+      {
+        "wall": "rubber",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 8.307350188720941e-7
+          }
+        ]
+      },
+      {
+        "wall": "stone",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 0.000051202373069663157
+          }
+        ]
+      },
+      {
+        "wall": "stone",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 0.000051202373069663157
+          }
+        ]
+      },
+      {
+        "wall": "cork",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 4.3263958313896016e-7
+          }
+        ]
+      },
+      {
+        "wall": "cork",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 4.3263958313896016e-7
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 576,
+    "cases": [
+      {
+        "wall": "default",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 0.000005638620538525891
+          }
+        ]
+      },
+      {
+        "wall": "default",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 0.000005638620538525891
+          }
+        ]
+      },
+      {
+        "wall": "rubber",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 8.307350188720941e-7
+          }
+        ]
+      },
+      {
+        "wall": "rubber",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 8.307350188720941e-7
+          }
+        ]
+      },
+      {
+        "wall": "stone",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 0.000051202373069663157
+          }
+        ]
+      },
+      {
+        "wall": "stone",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 0.000051202373069663157
+          }
+        ]
+      },
+      {
+        "wall": "cork",
+        "speed": 1.5,
+        "hits": [
+          {
+            "lateFraction": 4.3263958313896016e-7
+          }
+        ]
+      },
+      {
+        "wall": "cork",
+        "speed": 4,
+        "hits": [
+          {
+            "lateFraction": 4.3263958313896016e-7
+          }
+        ]
+      }
+    ],
+    "errors": []
+  }
+]

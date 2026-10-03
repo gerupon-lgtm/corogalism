@@ -7,10 +7,14 @@ try{
  const base=process.env.BASE_URL||'http://127.0.0.1:8767/';
  await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);
  await p.evaluate(()=>navigator.serviceWorker.ready);await p.waitForFunction(()=>navigator.serviceWorker.controller);
- const cache=await p.evaluate(async()=>{const names=await caches.keys();return {names,files:(await (await caches.open(names[0])).keys()).length}});assert.equal(cache.files,100);
+ const cache=await p.evaluate(async()=>{const names=await caches.keys();return {names,files:(await (await caches.open(names[0])).keys()).length}});assert.equal(cache.files,101);
  await c.setOffline(true);await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);
+ assert.equal(await p.evaluate(()=>window.__ballLab.state.settings.physics),'explore');
+ await p.locator('[data-ball=metal]').click();await p.locator('#floor').selectOption('normal');await p.evaluate(()=>window.__ballLab.teleport(2,.5,100,0));await p.waitForTimeout(16);
+ assert.ok(await p.evaluate(()=>window.__ballLab.state.actor.vx>6.8),'オフラインでも以前の最高速に丸めない');await p.locator('#reset').click();
+ await p.locator('#physics').selectOption('legacy');
  await p.locator('[data-ball=superball]').click();await p.locator('#floor').selectOption('mixed');await p.locator('#wall').selectOption('rubber');
- const r=await p.locator('#board').boundingBox();await p.mouse.move(r.x+r.width*.7,r.y+r.height/2);await p.mouse.down();await p.waitForTimeout(350);await p.mouse.up();await p.waitForTimeout(350);
+ await p.locator('#board').scrollIntoViewIfNeeded();const r=await p.locator('#board').boundingBox();await p.mouse.move(r.x+r.width*.7,r.y+r.height/2);await p.mouse.down();await p.waitForTimeout(350);await p.mouse.up();await p.waitForTimeout(350);
  const state=await p.evaluate(()=>window.__ballLab.state);assert.ok(state.actor.x>.7);assert.equal(state.sound.rolling,false);assert.ok(!state.sound.events.some(e=>e.startsWith('roll:superball:')));assert.equal(state.sound.context,'running');
  await p.evaluate(()=>window.__ballLab.teleport(6.2,.5,4,0));await p.waitForTimeout(350);
  const hit=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(hit.events.includes('hit:superball:rubber'));

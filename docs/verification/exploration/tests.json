@@ -1,0 +1,117 @@
+[
+  {
+    "exitCode": 0,
+    "summary": [
+      "ℹ tests 21",
+      "ℹ pass 21",
+      "ℹ fail 0",
+      "ℹ duration_ms 10134.2208"
+    ],
+    "seconds": 10.2699795,
+    "files": [
+      "test/audio-settings.test.js",
+      "test/balance.test.js",
+      "test/ball-materials.test.js",
+      "test/ballRotation.test.js",
+      "test/candy-full.test.js"
+    ]
+  },
+  {
+    "exitCode": 0,
+    "summary": [
+      "ℹ tests 24",
+      "ℹ pass 24",
+      "ℹ fail 0",
+      "ℹ duration_ms 4486.3696"
+    ],
+    "seconds": 4.5806233,
+    "files": [
+      "test/challenge.test.js",
+      "test/escape-timing.test.js",
+      "test/exploration.test.js",
+      "test/feature-hint-position.test.js",
+      "test/features.test.js"
+    ]
+  },
+  {
+    "exitCode": 0,
+    "summary": [
+      "ℹ tests 23",
+      "ℹ pass 23",
+      "ℹ fail 0",
+      "ℹ duration_ms 3903.8296"
+    ],
+    "seconds": 3.9914284,
+    "files": [
+      "test/first-sound.test.js",
+      "test/floor-difficulty.test.js",
+      "test/floor-lab.test.js",
+      "test/floor-learning.test.js",
+      "test/floor-presentation.test.js"
+    ]
+  },
+  {
+    "exitCode": 0,
+    "summary": [
+      "ℹ tests 22",
+      "ℹ pass 22",
+      "ℹ fail 0",
+      "ℹ duration_ms 2645.7605"
+    ],
+    "seconds": 2.7489814,
+    "files": [
+      "test/floor-themes.test.js",
+      "test/floor-trial.test.js",
+      "test/hourglass.test.js",
+      "test/hp-display.test.js",
+      "test/maze.test.js"
+    ]
+  },
+  {
+    "exitCode": 0,
+    "summary": [
+      "ℹ tests 48",
+      "ℹ pass 48",
+      "ℹ fail 0",
+      "ℹ duration_ms 933.7984"
+    ],
+    "seconds": 1.0305589,
+    "files": [
+      "test/onboarding.test.js",
+      "test/phase2.test.js",
+      "test/physics.test.js",
+      "test/playthrough.test.js",
+      "test/resolveParams.test.js"
+    ]
+  },
+  {
+    "exitCode": 0,
+    "summary": [
+      "ℹ tests 30",
+      "ℹ pass 30",
+      "ℹ fail 0",
+      "ℹ duration_ms 877.4616"
+    ],
+    "seconds": 0.980987,
+    "files": [
+      "test/rubber-rebound.test.js",
+      "test/stableCalibration.test.js",
+      "test/stagePlay.test.js",
+      "test/storage.test.js",
+      "test/tutorial.test.js"
+    ]
+  },
+  {
+    "exitCode": 0,
+    "summary": [
+      "ℹ tests 1",
+      "ℹ pass 1",
+      "ℹ fail 0",
+      "ℹ duration_ms 1497.8595"
+    ],
+    "seconds": 1.6361348,
+    "files": [
+      "test/wall-clearance.test.js"
+    ]
+  }
+]
