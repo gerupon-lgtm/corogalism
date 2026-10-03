@@ -8,7 +8,7 @@ try{
  await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);
  await p.evaluate(()=>navigator.serviceWorker.ready);await p.waitForFunction(()=>navigator.serviceWorker.controller);
  const cache=await p.evaluate(async()=>{const names=await caches.keys();return {names,files:(await (await caches.open(names[0])).keys()).length}});assert.equal(cache.files,101);
- await c.setOffline(true);await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);
+ await c.setOffline(true);await p.goto(base+'ball-lab.html?debug=1&offline-probe=1');await p.waitForFunction(()=>!!window.__ballLab);
  assert.equal(await p.evaluate(()=>window.__ballLab.state.settings.physics),'explore');
  await p.locator('[data-ball=metal]').click();await p.locator('#floor').selectOption('normal');await p.evaluate(()=>window.__ballLab.teleport(2,.5,100,0));await p.waitForTimeout(16);
  assert.ok(await p.evaluate(()=>window.__ballLab.state.actor.vx>6.8),'オフラインでも以前の最高速に丸めない');await p.locator('#reset').click();
@@ -24,7 +24,13 @@ try{
  const metal=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(metal.events.includes('roll:metal:ice'));assert.equal(metal.rolling,true);
  await p.locator('[data-ball=wood]').click();await p.locator('#wall').selectOption('stone');await p.evaluate(()=>window.__ballLab.teleport(6.2,.5,4,0));await p.waitForTimeout(350);
  const wood=await p.evaluate(()=>window.__ballLab.state.sound);assert.ok(wood.events.includes('hit:wood:stone'));
- assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood}));await c.close();
+ await p.goto(base+'floor-lab.html?debug=1&pattern=timeTrialAssist');await p.waitForFunction(()=>!!window.__floorLab);
+ assert.equal(await p.evaluate(()=>window.__floorLab.physics),'explore');assert.equal(await p.evaluate(()=>window.__floorLab.pattern),'timeTrialAssist');await p.locator('#board').scrollIntoViewIfNeeded();
+ const before=await p.evaluate(()=>({x:window.__floorLab.actor.x,y:window.__floorLab.actor.y})),floorRect=await p.locator('#board').boundingBox();
+ await p.mouse.move(floorRect.x+floorRect.width*.7,floorRect.y+floorRect.height*.6);await p.mouse.down();await p.waitForTimeout(350);await p.mouse.up();
+ const floorActor=await p.evaluate(()=>({x:window.__floorLab.actor.x,y:window.__floorLab.actor.y}));assert.ok(Math.hypot(floorActor.x-before.x,floorActor.y-before.y)>.001,'床ページも完全オフラインで実pointer操作できる');
+ await p.goto(base+'?debug=1&offline-probe=1');await p.waitForFunction(()=>!!window.__corogalism);
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:true}));await c.close();
  for(const source of ['export function resolveParams() {}','// ch.fieldK\nexport function resolveParams() {}']){
   const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/physics/resolveParams.js',route=>route.fulfill({contentType:'text/javascript',body:source}));
   await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));

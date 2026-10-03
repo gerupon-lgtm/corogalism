@@ -1,0 +1,128 @@
+[
+  {
+    "width": 320,
+    "rebounds": {
+      "default": -3.77903244385247,
+      "rubber": -9.822969351955795
+    },
+    "coasting": {
+      "normal": 1.7766812905595601,
+      "ice": 1.9806383278623794
+    },
+    "halt": {
+      "settings": {
+        "ball": "superball",
+        "layout": "plaza",
+        "floor": "ice",
+        "wall": "rubber",
+        "physics": "explore",
+        "settleBounce": false,
+        "floorValues": {
+          "ice": 0.08,
+          "sand": 3.2,
+          "force": 3.3,
+          "radius": 1.6
+        },
+        "ballValues": {},
+        "wallValues": {}
+      },
+      "actor": {
+        "x": 0.395,
+        "y": 0.5,
+        "vx": 577191489264519300,
+        "vy": 0
+      },
+      "halt": {
+        "reason": "precision",
+        "steps": 1347,
+        "remainingSec": 0.006603518081936086,
+        "speed": 577191489264519300
+      }
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "rebounds": {
+      "default": -3.77903244385247,
+      "rubber": -9.822969351955795
+    },
+    "coasting": {
+      "normal": 1.7766812905595601,
+      "ice": 1.9806383278623794
+    },
+    "halt": {
+      "settings": {
+        "ball": "superball",
+        "layout": "plaza",
+        "floor": "ice",
+        "wall": "rubber",
+        "physics": "explore",
+        "settleBounce": false,
+        "floorValues": {
+          "ice": 0.08,
+          "sand": 3.2,
+          "force": 3.3,
+          "radius": 1.6
+        },
+        "ballValues": {},
+        "wallValues": {}
+      },
+      "actor": {
+        "x": 0.395,
+        "y": 0.5,
+        "vx": 577191489264519300,
+        "vy": 0
+      },
+      "halt": {
+        "reason": "precision",
+        "steps": 1347,
+        "remainingSec": 0.006603518081936086,
+        "speed": 577191489264519300
+      }
+    },
+    "errors": []
+  },
+  {
+    "width": 576,
+    "rebounds": {
+      "default": -3.77903244385247,
+      "rubber": -9.822969351955795
+    },
+    "coasting": {
+      "normal": 1.7766812905595601,
+      "ice": 1.9806383278623794
+    },
+    "halt": {
+      "settings": {
+        "ball": "superball",
+        "layout": "plaza",
+        "floor": "ice",
+        "wall": "rubber",
+        "physics": "explore",
+        "settleBounce": false,
+        "floorValues": {
+          "ice": 0.08,
+          "sand": 3.2,
+          "force": 3.3,
+          "radius": 1.6
+        },
+        "ballValues": {},
+        "wallValues": {}
+      },
+      "actor": {
+        "x": 0.395,
+        "y": 0.5,
+        "vx": 577191489264519300,
+        "vy": 0
+      },
+      "halt": {
+        "reason": "precision",
+        "steps": 1347,
+        "remainingSec": 0.006603518081936086,
+        "speed": 577191489264519300
+      }
+    },
+    "errors": []
+  }
+]

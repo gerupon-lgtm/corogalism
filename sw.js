@@ -26,8 +26,10 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cache=await caches.open(CACHE);
     const root=new URL('./',self.registration.scope);
-    const key = event.request.mode === 'navigate' && (url.pathname === root.pathname || url.pathname === root.pathname+'index.html')
-      ? new URL('index.html', root).href : event.request;
+    const page = url.pathname.slice(root.pathname.length);
+    // 設定・検証用のquery付きでも、同じ静的ページを保存済み資材から開ける。
+    const key = event.request.mode === 'navigate' && url.pathname.startsWith(root.pathname) && ['', 'index.html', 'ball-lab.html', 'floor-lab.html'].includes(page)
+      ? new URL(page || 'index.html', root).href : event.request;
     const saved=await cache.match(key);
     return saved || fetch(event.request);
   })());
