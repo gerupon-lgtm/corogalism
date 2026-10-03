@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
 const b=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 try{
@@ -36,4 +37,5 @@ try{
   await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));
   assert.equal(await old.evaluate(()=>!!window.__ballLab),false);assert.equal(await old.locator('button:not(:disabled)').count(),0);await old.close();console.log('PASS old physics guard');
  }
+ if(process.env.OFFLINE_OUTPUT)await writeFile(process.env.OFFLINE_OUTPUT,JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:true,oldCoreGuards:2,errors},null,2)+'\n');
 }finally{await b.close()}
