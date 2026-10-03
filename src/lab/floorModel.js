@@ -85,7 +85,8 @@ export function applyFloor(stage, type, settings, pattern = 'single') {
       stage.labSites=sites;
       for(const site of sites) {
         const prev=stage.maze.path[site.index-1],next=stage.maze.path[site.index+1];
-        for(const [cell,sign] of [[next,1],[prev,-1]]) stage.zones.push({kind:'radial',x:cell.x+.5,y:cell.y+.5,radius:settings.radius,strength:settings.force*.55*sign,corner:true});
+        const forceK = stage.physicsPolicy?.unrestricted ? 1 : .55;
+        for(const [cell,sign] of [[next,1],[prev,-1]]) stage.zones.push({kind:'radial',x:cell.x+.5,y:cell.y+.5,radius:settings.radius,strength:settings.force*forceK*sign,corner:true});
       }
     }
     if (pattern === 'iceRubber') floor('ice', PATCH_CELLS);

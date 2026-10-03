@@ -37,5 +37,10 @@ try{
   await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));
   assert.equal(await old.evaluate(()=>!!window.__ballLab),false);assert.equal(await old.locator('button:not(:disabled)').count(),0);await old.close();console.log('PASS old physics guard');
  }
- if(process.env.OFFLINE_OUTPUT)await writeFile(process.env.OFFLINE_OUTPUT,JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:true,oldCoreGuards:2,errors},null,2)+'\n');
+ for(const [pageName,debugName]of [['ball-lab.html','__ballLab'],['floor-lab.html','__floorLab']]){
+  const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/world/stage.js',route=>route.fulfill({contentType:'text/javascript',body:'export function sampleZone() {}'}));
+  await old.goto(base+pageName+'?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));
+  assert.equal(await old.evaluate(name=>!!window[name],debugName),false);assert.equal(await old.locator('button:not(:disabled), select:not(:disabled), input:not(:disabled)').count(),0);await old.close();console.log('PASS old ice guard '+pageName);
+ }
+ if(process.env.OFFLINE_OUTPUT)await writeFile(process.env.OFFLINE_OUTPUT,JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:true,oldCoreGuards:4,errors},null,2)+'\n');
 }finally{await b.close()}

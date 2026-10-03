@@ -111,7 +111,7 @@ export function sampleZone(stage, actor) {
   for (const z of stage.zones) {
     if (z.kind === 'radial' || !z.cells?.some(c => c.x === cx && c.y === cy)) continue;
     result = { ...result, ...z };
-    if (z.kind === 'ice') {
+    if (z.kind === 'ice' && !stage.physicsPolicy?.unrestricted) {
       const speed = Math.hypot(actor.vx, actor.vy);
       result.accelK = z.minAccelK + (1 - z.minAccelK) / (1 + (speed / z.transitionSpeed) ** 2);
     }

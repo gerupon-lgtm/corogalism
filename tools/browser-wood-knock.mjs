@@ -22,7 +22,7 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  }
  await p.locator('#sound').click();const count=(await hits()).length;await p.evaluate(()=>window.__ballLab.teleport(6.2,.5,4,0));await p.clock.runFor(650);assert.equal((await hits()).length,count);
  await p.locator('#sound').click();await p.locator('#pause').click();await p.evaluate(()=>window.__ballLab.teleport(6.2,.5,4,0));const paused=(await state()).actor;await p.clock.runFor(650);assert.deepEqual((await state()).actor,paused);
- await p.locator('summary').click();await p.locator('#copy').click();assert.equal(JSON.parse(await p.locator('#settings-text').inputValue()).revision,6);
+ await p.locator('summary').click();await p.locator('#copy').click();assert.equal(JSON.parse(await p.locator('#settings-text').inputValue()).revision,7);
  assert.deepEqual(errors,[]);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  await p.clock.runFor(64); // 設定展開によるcanvasのリサイズ後に描画を進めてから撮る。
  if(width===390)await p.screenshot({path:output+'/wood-390.png',fullPage:true});rows.push({width,cases,errors});console.log('PASS wood knock '+width);await p.close();

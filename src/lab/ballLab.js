@@ -90,7 +90,7 @@ $('sensor').onclick=async()=>{
 $('calibrate').onclick=()=>{gesture();sensor.calibrate();tilt.reset();clearTimeout(sensorTimer);const id=requestId;sensorTimer=setTimeout(()=>{if(id===requestId&&sensor.needsCalibration)pointerMode('傾きを確認できなかったため、画面操作に切り替えました。');},6000);$('status').textContent='遊ぶ姿勢で少し静止してください。';};
 canvas.addEventListener('pointerdown',gesture);
 $('copy').onclick=async()=>{
- const text=JSON.stringify({page:'corogalism-ball-lab',revision:6,...settings,mode,sound:sound.state.enabled,volume:sound.state.volume,observations},null,2);
+ const text=JSON.stringify({page:'corogalism-ball-lab',revision:7,...settings,mode,sound:sound.state.enabled,volume:sound.state.volume,observations},null,2);
  $('settings-text').hidden=false;$('settings-text').value=text;
  try{await navigator.clipboard.writeText(text);$('copy-status').textContent='コピーしました。設定と感想を送ってください。';}
  catch{$('settings-text').focus();$('settings-text').select();$('copy-status').textContent='設定を選択してコピーしてください。';}

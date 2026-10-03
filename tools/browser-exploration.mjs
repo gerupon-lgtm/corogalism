@@ -13,6 +13,13 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  const state=()=>page.evaluate(()=>window.__ballLab.state);
  assert.equal((await state()).settings.physics,'explore');assert.equal((await state()).settings.settleBounce,false);
  assert.equal(await page.locator('#wall option').count(),6);
+ // 氷が高速時の傾きの反応を弱めない。減速とは別に実効加速を比較する。
+ const accelAt=()=>page.evaluate(async()=>{const {BASE}=await import('./src/config/gameConfig.js'),{resolveParams}=await import('./src/physics/resolveParams.js'),{sampleMaterial,sampleZone}=await import('./src/world/stage.js');const s=window.__ballLab.state,actor={...s.actor,character:{...((await import('./src/world/ballMaterials.js')).getBallMaterial(s.settings.ball))}};return resolveParams({base:BASE,character:actor.character,material:sampleMaterial(s.stage,actor),zone:sampleZone(s.stage,actor),policy:s.stage.physicsPolicy}).accel;});
+ const accel={};
+ for(const floor of ['normal','ice']){await page.locator('#floor').selectOption(floor);await page.evaluate(()=>window.__ballLab.teleport(3.5,3.5,3,0));accel[floor]=await accelAt();}
+ assert.equal(accel.normal,accel.ice);assert.match(await page.locator('#physics-readout').textContent(),/氷の反応補正 なし/);
+ await page.locator('#physics').selectOption('legacy');await page.evaluate(()=>window.__ballLab.teleport(3.5,3.5,3,0));accel.legacy=await accelAt();assert.ok(accel.legacy<accel.ice);
+ await page.locator('#physics').selectOption('explore');
  await page.locator('[data-ball=superball]').click();await page.locator('#floor').selectOption('ice');
  const rebounds={};
  for(const wall of ['default','rubber']){
@@ -45,13 +52,18 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  assert.equal((await state()).paused,true);assert.ok((await state()).lastHalt);assert.ok(Math.abs((await state()).actor.vx)>30);
  assert.match(await page.locator('#status').textContent(),/速度を丸めず一時停止/);
  await page.locator('#copy').click();const shared=JSON.parse(await page.locator('#settings-text').inputValue());
- assert.equal(shared.revision,6);assert.equal(shared.physics,'explore');assert.ok(shared.observations.length>0);
+ assert.equal(shared.revision,7);assert.equal(shared.physics,'explore');assert.ok(shared.observations.length>0);
  await page.locator('#reset').click();await page.locator('[data-ball=wood]').click();await page.locator('#wall').selectOption('default');await page.locator('#pause').click();await page.clock.runFor(32);
  assert.equal((await state()).paused,false);assert.equal((await state()).lastHalt,null);assert.doesNotMatch(await page.locator('#status').textContent(),/計算|一時停止/);
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:`${output}/ball-${width}.png`,fullPage:true});
  await page.goto(base+'floor-lab.html?debug=1');await page.waitForFunction(()=>!!window.__floorLab);
  assert.equal(await page.evaluate(()=>window.__floorLab.physics),'explore');
+ await page.locator('#pattern').selectOption('timeTrialAssist');
+ const forceLevels=()=>page.evaluate(()=>window.__floorLab.stage.zones.filter(z=>z.kind==='radial').map(z=>Math.abs(z.strength)));
+ assert.ok((await forceLevels()).every(v=>v===6));
+ await page.locator('#physics').selectOption('legacy');assert.ok((await forceLevels()).every(v=>v===6*.55));
+ await page.locator('#physics').selectOption('explore');assert.ok((await forceLevels()).every(v=>v===6));await page.locator('#pattern').selectOption('single');
  for(const [id,value]of [['ice','0.0001'],['sand','20'],['force','24'],['radius','4']]){
   await page.locator('#'+id).fill(value);await page.locator('#'+id).dispatchEvent('input');assert.equal(await page.locator('#'+id).inputValue(),value);assert.equal(await page.locator('#'+id).getAttribute('max'),null);
  }
@@ -60,8 +72,8 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  await page.locator('#physics').selectOption('legacy');assert.equal(await page.evaluate(()=>window.__floorLab.physics),'legacy');
  await page.locator('#physics').selectOption('explore');await page.locator('#defaults').click();await page.locator('#copy').click();
  assert.match(await page.locator('#input-note').textContent(),/初期値に戻しました/);
- assert.equal(JSON.parse(await page.locator('#settings-text').inputValue()).revision,8);
+ assert.equal(JSON.parse(await page.locator('#settings-text').inputValue()).revision,9);
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  await page.screenshot({path:`${output}/floor-${width}.png`,fullPage:true});assert.deepEqual(errors,[]);
- rows.push({width,rebounds,coasting,halt:shared.observations.at(-1),errors});console.log('PASS exploration '+width);await page.close();
+ rows.push({width,accel,rebounds,coasting,halt:shared.observations.at(-1),errors});console.log('PASS exploration '+width);await page.close();
 }}finally{await writeFile(`${output}/browser.json`,JSON.stringify(rows,null,2));await browser.close();}

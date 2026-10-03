@@ -1,5 +1,7 @@
 # 物理パラメータの契約（フェーズ1の中核）
 
+**T-271 / v0.6.13:** 検証の氷は傾きの加速を速度で弱めない。補助コースの力55%も検証だけ外し、残る入力・時間・衝突・音の条件を明示。ボールrevision7／床revision9、旧調整と本編は維持。[再確認した条件](exploration-policy.md)、[検証](verification/ice-response.md)。
+
 **v0.6.11以降 / T-269:** `stage.physicsPolicy`を任意指定。検証ページの`unrestricted:true`では実効値を丸めず、最高速・合成力場の上限も使わない。`settleBounce:false`で速度による反発収束を外せる。未指定の本編は従来どおり。反発後に移動刻みを再計算し、続行不能時は速度を丸めず停止条件を記録。[検証方針](exploration-policy.md)。以下の上限は本編／旧調整の条件で、検証の正解・固定条件ではない。
 
 **v0.6.7 / T-265:** おためし素材の任意属性`bounce:{stopSpeed,fullSpeed}`を追加。衝突コールバックは壁と法線衝突速度をresolveParamsへ渡し、smoothstepの速度係数を最終反発率へ掛ける。弱い接触ほど反発0へ収束し、増幅しない。速度範囲は`CLAMP.bounceSpeed`（0.05–10）。属性未指定の本編ビー玉は従来どおり。[仕様](ball-feel.md)。

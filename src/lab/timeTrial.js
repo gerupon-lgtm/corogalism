@@ -10,7 +10,7 @@ export function advanceTrial(trial, elapsedMs, moved, goal) {
   if (goal) trial.finished = true;
 }
 export function trialKey(settings, mode, pattern = 'timeTrial',physics='legacy',settleBounce=true) {
-  const suffix=physics==='legacy'&&settleBounce?'':`-${physics}-settle-${settleBounce}`;
+  const suffix=physics==='legacy'&&settleBounce?'':`-${physics}${physics==='explore'?'-motion-2':''}-settle-${settleBounce}`;
   if (pattern === 'timeTrialAssist') return `corogalism-floor-assist-v1-250-${mode}-${settings.ice}-${settings.sand}-${settings.force}-${settings.radius}${suffix}`;
   return `corogalism-floor-trial-v1-250-${mode}-${settings.ice}-${settings.sand}${suffix}`;
 }

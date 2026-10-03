@@ -9,6 +9,7 @@ import {createActor,sampleZone} from '../src/world/stage.js';
 import {createBallLabStage} from '../src/lab/ballLabStage.js';
 import {applyExploration,crossesGoal} from '../src/lab/exploration.js';
 import {trialKey} from '../src/lab/timeTrial.js';
+import {createFloorLab,applyFloor} from '../src/lab/floorModel.js';
 
 const raw={unrestricted:true,settleBounce:false};
 const setup=(ball='superball',floor='normal',wall='default')=>{
@@ -38,6 +39,32 @@ test('反発の収束は比較可能な任意設定。弱い衝突も検証前�
  const args={base:BASE,character:getBallMaterial('superball'),material:getMaterial('rubber'),impactSpeed:.5};
  assert.ok(resolveParams({...args,policy:raw}).restitution>2);
  assert.equal(resolveParams({...args,policy:{...raw,settleBounce:true}}).restitution,0);
+});
+test('検証の氷は同じ素材の傾き加速を速さで弱めず、滑る勢いは残す',()=>{
+ for(const ball of ['metal','superball','wood','sponge','default'])for(const speed of [0,3,6]){
+  const normal=setup(ball,'normal'),ice=setup(ball,'ice');
+  for(const s of [normal,ice]){s.stage.walls=[];Object.assign(s.actor,{x:3.5,y:3.5,vx:speed,vy:0});}
+  const a=stepPhysics({...normal,base:BASE,dt:1/120,tilt:{x:0,y:.5}});
+  const b=stepPhysics({...ice,base:BASE,dt:1/120,tilt:{x:0,y:.5}});
+  assert.equal(a.params.accel,b.params.accel);assert.ok(ice.actor.vy>normal.actor.vy);
+  if(speed)assert.ok(ice.actor.vx>normal.actor.vx);
+  applyExploration(ice.stage,'legacy',true);
+  if(speed)assert.ok(sampleZone(ice.stage,ice.actor).accelK<1);
+  delete ice.stage.physicsPolicy;
+  if(speed)assert.ok(sampleZone(ice.stage,ice.actor).accelK<1,'本編の未指定条件は既存の反応を維持');
+ }
+});
+test('床の各氷配置で補正を外し、補助コースの力を設定値どおりにする',()=>{
+ const s=createFloorLab(),settings={ice:.08,sand:3.2,force:6,radius:1.6};
+ for(const pattern of ['single','iceRubber','iceSand','iceGravity','iceRepulsion','timeTrial','timeTrialAssist']){
+  applyExploration(s.stage);applyFloor(s.stage,'ice',settings,pattern);
+  const zone=s.stage.zones.find(z=>z.kind==='ice'),cell=zone.cells[0];Object.assign(s.actor,{x:cell.x+.5,y:cell.y+.5,vx:6,vy:0});
+  assert.equal(sampleZone(s.stage,s.actor).accelK,1);
+  if(pattern==='timeTrialAssist')assert.ok(s.stage.zones.filter(z=>z.kind==='radial').every(z=>Math.abs(z.strength)===6));
+  applyExploration(s.stage,'legacy',true);applyFloor(s.stage,'ice',settings,pattern);
+  assert.ok(sampleZone(s.stage,s.actor).accelK<1);
+  if(pattern==='timeTrialAssist')assert.ok(s.stage.zones.filter(z=>z.kind==='radial').every(z=>Math.abs(z.strength)===6*.55));
+ }
 });
 test('重なった力場も合成のまま計算し、以前の調整は同じ上限を保つ',()=>{
  const s=setup();s.actor.x=3;s.actor.y=3;
@@ -81,4 +108,5 @@ test('以前の記録を維持し、制限なし・収束設定ごとのタイ�
  const old=trialKey(s,'pointer');assert.equal(old,trialKey(s,'pointer','timeTrial','legacy',true));
  assert.notEqual(old,trialKey(s,'pointer','timeTrial','explore',false));
  assert.notEqual(trialKey(s,'pointer','timeTrial','explore',true),trialKey(s,'pointer','timeTrial','explore',false));
+ assert.notEqual(trialKey(s,'pointer','timeTrial','explore',false),old+'-explore-settle-false','氷の補正が残っていた旧検証記録とも分ける');
 });

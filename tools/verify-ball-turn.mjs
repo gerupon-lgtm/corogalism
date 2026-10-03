@@ -18,5 +18,5 @@ for(const floor of ['normal','ice'])for(const ball of Object.keys(BALL_MATERIALS
  assert.ok(points.every(p=>p.x>actor.r&&p.x<7-actor.r&&p.y>actor.r&&p.y<7-actor.r));
  rows.push({floor,ball,conditions:{initialSpeed:3,tilt:{x:0,y:-.5},seconds:1,walls:false,physics:'explore',settleBounce:false},points});
 }
-await writeFile('docs/verification/exploration/turn.json',JSON.stringify(rows,null,2)+'\n');
+await writeFile((process.env.EXPLORATION_OUTPUT||'docs/verification/exploration')+'/turn.json',JSON.stringify(rows,null,2)+'\n');
 console.table(rows.map(({floor,ball,points})=>({floor,ball,forward:+(points.at(-1).x-2.5).toFixed(3),sideways:+(5.5-points.at(-1).y).toFixed(3),forwardSpeed:+points.at(-1).vx.toFixed(3)})));

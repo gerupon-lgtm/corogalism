@@ -22,6 +22,7 @@ for(const physics of ['explore','legacy'])for(const layout of ['plaza','maze'])f
  }
  rows.push({physics,layout,floor,wall,ball,steps,peakSpeed,maxStepMs,halt});
 }
-await mkdir('docs/verification/exploration',{recursive:true});
-await writeFile('docs/verification/exploration/matrix.json',JSON.stringify(rows,null,2));
+const output=process.env.EXPLORATION_OUTPUT||'docs/verification/exploration';
+await mkdir(output,{recursive:true});
+await writeFile(output+'/matrix.json',JSON.stringify(rows,null,2));
 console.log(JSON.stringify({cases:rows.length,halted:rows.filter(r=>r.halt).length,byReason:rows.filter(r=>r.halt).reduce((a,r)=>(a[r.halt.reason]=(a[r.halt.reason]||0)+1,a),{}),maxStepMs:Math.max(...rows.map(r=>r.maxStepMs))}));

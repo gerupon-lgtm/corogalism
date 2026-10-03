@@ -68,8 +68,8 @@ $('reset').onclick = () => reset();
 $('plaza').onclick = () => { const cell = stage.maze.path[stage.labSites.length ? Math.max(0, stage.labSites[0].index-2) : Math.floor(stage.maze.path.length / 2)]; reset(cell.x + .5, cell.y + .5); };
 $('pause').onclick = () => { paused = !paused; tilt.reset(); $('pause').textContent = paused ? '再開' : '一時停止';if(!paused){lastHalt=null;$('status').textContent='再開しました。今の床で動きを比べてみよう。';} };
 function updateFloor() {
-  applyFloor(stage, type, settings, pattern);
   applyExploration(stage,physics,settleBounce);
+  applyFloor(stage, type, settings, pattern);
   $('physics-readout').textContent=describeExploration(actor,stage);
   refreshTrial();
   $('hint').textContent = pattern === 'single' ? FLOOR_OPTIONS[type].hint : PATTERNS[pattern].hint;
@@ -95,7 +95,7 @@ $('physics').onchange=()=>{physics=$('physics').value;settleBounce=physics==='le
 $('settle').onchange=()=>{settleBounce=$('settle').checked;updateFloor();reset();};
 $('defaults').onclick = () => { Object.assign(settings, FLOOR_LAB); updateFloor(); reset(); $('input-note').textContent='床の数値を初期値に戻しました。'; };
 $('copy').onclick = async () => {
-  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 8, pattern, floor: type, mode, physics, settleBounce, ...settings, observations }, null, 2);
+  const text = JSON.stringify({ page: 'corogalism-floor-lab', revision: 9, pattern, floor: type, mode, physics, settleBounce, ...settings, observations }, null, 2);
   $('settings-text').hidden = false; $('settings-text').value = text;
   try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'コピーしました。この設定と感想を送ってください。'; }
   catch { $('settings-text').focus(); $('settings-text').select(); $('copy-status').textContent = '下の設定値を選択してコピーしてください。'; }
