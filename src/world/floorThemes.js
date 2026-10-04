@@ -5,6 +5,7 @@ import { createRng } from '../maze/rng.js';
 import { generateMaze } from '../maze/generator.js';
 import { solvePath, countTurns } from '../maze/path.js';
 import { checkReachability } from '../maze/validator.js';
+import { branchCells, connectedCells } from './branchFloors.js';
 
 export function cornerSites(maze, max=3, gap=5) {
  const sites=[];
@@ -64,6 +65,15 @@ export function addFloorTheme(stage,theme){
  const cfg=FLOOR_CHALLENGE,all=stage.maze.cells.map((_,i)=>({x:i%stage.maze.size,y:Math.floor(i/stage.maze.size)}));
  const sites=stage.maze.floorSites||cornerSites(stage.maze),pattern=theme.floorPattern;
  const sand=theme.learning&&pattern!=='iceRubber'&&(pattern==='sand'||pattern.includes('Sand')||pattern==='iceAssist')?learningSandCells(stage.maze):pattern==='sand'?sites.flatMap(s=>[s.prev,s.cell]):pattern.includes('Sand')||theme.special||pattern==='iceAssist'?sites.map(s=>s.prev):[];
+ if(sand.length){
+  const rng=createRng((stage.maze.seed^0x24b61a97)>>>0),candidates=branchCells(stage.maze);
+  // ルートの砂は残し、脇道にも壁をまたがない短い砂の区間を加える。
+  for(let i=0;i<2&&candidates.length;i++){
+   const at=candidates.splice(Math.floor(rng()*candidates.length),1)[0];sand.push(at);
+   const neighbours=connectedCells(stage.maze,at,candidates);
+   if(neighbours.length){const next=neighbours[Math.floor(rng()*neighbours.length)];sand.push(next);candidates.splice(candidates.indexOf(next),1);}
+  }
+ }
  const isIce=pattern.startsWith('ice')||theme.special;
  const floor=(kind,cells)=>{if(cells.length)stage.zones.push({kind,cells,frictionK:cfg[kind],...(kind==='ice'?cfg.iceMotion:{}),forceX:0,forceY:0});};
  floor('sand',sand);
@@ -88,6 +98,19 @@ export function addFloorTheme(stage,theme){
    const dx=s.next.x-s.cell.x,dy=s.next.y-s.cell.y;
    const sign=pattern==='gravityHinder'?1:-1;
    field({x:s.cell.x-sign*dx*.14,y:s.cell.y-sign*dy*.14},sign*cfg.hinderForce);
+  }
+ }
+ // 追加する力場も同じ素材の実効値。正解ルートから離れた場所を優先する。
+ const signs=[...new Set(stage.zones.filter(z=>z.kind==='radial').map(z=>Math.sign(z.strength)))];
+ const rng=createRng((stage.maze.seed^0x570a1ed3)>>>0);
+ for(const sign of signs){
+  const candidates=branchCells(stage.maze,cfg.radius+.35).map(p=>({x:p.x+.5,y:p.y+.5})).filter(p=>
+   stage.zones.every(z=>z.kind!=='radial'||Math.hypot(p.x-z.x,p.y-z.y)>=cfg.radius*.75));
+  const ranked=candidates.map(p=>({...p,rank:Math.min(cfg.radius+.6,...stage.maze.path.map(c=>Math.hypot(p.x-c.x-.5,p.y-c.y-.5)))+rng()*.2})).sort((a,b)=>b.rank-a.rank);
+  if(ranked.length){
+   const at=ranked[0],before=stage.zones.length;
+   field({x:at.x-.5,y:at.y-.5},sign*(theme.assist?cfg.assistForce:cfg.hinderForce));
+   if(stage.zones.length>before)stage.zones.at(-1).branch=true;
   }
  }
  for(const w of stage.walls)w.materialId=pattern==='iceRubber'?'rubber':'cork';

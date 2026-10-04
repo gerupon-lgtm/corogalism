@@ -3,6 +3,10 @@ import { LEAF, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
 import { createRng } from '../maze/rng.js';
 import { solvePath } from '../maze/path.js';
 import { stableFloorPoint, pickupPoint } from './floorThemes.js';
+import { branchCells } from './branchFloors.js';
+
+/** 従来の1枚目と、脇道に追加した床を同じ処理で使う。固定練習面にも対応。 */
+export function restFloors(stage) { return [stage.rest,...(stage.extraRests||[])].filter(Boolean); }
 // XORだけの初期化だと抽選同士に相関が出るため、非線形に混ぜる。
 function featureSeed(seed, salt) {
   let h = (seed ^ salt) >>> 0;
@@ -11,7 +15,7 @@ function featureSeed(seed, salt) {
   return (h ^ (h >>> 16)) >>> 0;
 }
 export function addStageFeatures(stage, difficulty) {
-  stage.leaf = null; stage.rest = null; stage.sticky = []; stage.hourglass = null;
+  stage.leaf = null; stage.rest = null; stage.extraRests = []; stage.sticky = []; stage.hourglass = null;
   if (!difficulty?.themed) return;
   const { maze } = stage, path = solvePath(maze), occupied = new Set();
   const key = p => `${p.x},${p.y}`;
@@ -38,20 +42,27 @@ export function addStageFeatures(stage, difficulty) {
       return previous.some(c => danger.some(w => Math.hypot(c.x+.5-Math.max(w.x,Math.min(c.x+.5,w.x+w.w)),
         c.y+.5-Math.max(w.y,Math.min(c.y+.5,w.y+w.h))) < .6)) ? 1 : 0;
     }, p=>stableFloorPoint(stage,p));
-  if (rest) stage.rest = { ...rest, used: false, progress: 0 };
+  if (rest) {
+    stage.rest = { ...rest, used: false, progress: 0 };
+    const rng=createRng(featureSeed(maze.seed,0x3a90bdc7));
+    const candidates=branchCells(maze).map(p=>({x:p.x+.5,y:p.y+.5}))
+      .filter(p=>!occupied.has(key(p))&&stableFloorPoint(stage,p));
+    if(candidates.length){
+      const extra=candidates[Math.floor(rng()*candidates.length)];
+      stage.extraRests.push({...extra,used:false,progress:0});occupied.add(key(extra));
+    }
+  }
   if (stage.theme.id === 'sticky') {
     const clearOfEnds = p => Math.hypot(p.x-.5,p.y-.5) > STICKY.endpointClearance
       && Math.hypot(p.x-maze.size+.5,p.y-maze.size+.5) > STICKY.endpointClearance;
     const first = place(0x23ca45b7, 1, 0, 1,
       p => p.i/(path.length-1) >= STICKY.pathMin && p.i/(path.length-1) <= STICKY.pathMax ? 1 : 0, clearOfEnds);
     if (first) stage.sticky.push(first);
-    // 初登場は必ず1個。以後は経路外に余裕がある場合だけ2個目。
-    if (difficulty.stage > 11) {
-      const route = new Set(path.map(p => `${p.x+.5},${p.y+.5}`));
+    // 初登場から、正解ルートの1枚と脇道の1枚で道筋を示さない。
+    if (first) {
       const rng = createRng((maze.seed ^ 0x69abc532) >>> 0);
-      const cells = maze.cells.map((_,i) => ({x:i%maze.size+.5,y:Math.floor(i/maze.size)+.5}))
-        .filter(p => !route.has(key(p)) && !occupied.has(key(p))
-          && clearOfEnds(p));
+      const cells = branchCells(maze,STICKY.endpointClearance).map(p=>({x:p.x+.5,y:p.y+.5}))
+        .filter(p => !occupied.has(key(p)) && clearOfEnds(p));
       if (cells.length) stage.sticky.push(cells[Math.floor(rng()*cells.length)]);
     }
   }

@@ -24,8 +24,9 @@ export function createTutorialStage() {
   const wall=stage.walls.find(w=>Math.abs(w.x-(x-stage.wallThickness/2))<.001&&Math.abs(w.y-(y-stage.wallThickness/2))<.001&&w.h>w.w);
   wall.materialId=materialId;
  }
- stage.recovery={x:3.5,y:.5,collected:false};
- stage.leaf={x:3.5,y:2.5,collected:false};
+ // 取得物は最短ルート上。床の模様・しかけは脇道にも見えるまま。
+ stage.recovery={x:3.5,y:1.5,collected:false};
+ stage.leaf={x:1.5,y:3.5,collected:false};
  // 標準壁2面の内角に寄せて静止しやすくし、助走の直線から外す。
  stage.rest={x:3.5,y:4.5,used:false,progress:0};
  stage.sticky=[{x:1.5,y:4.5}];

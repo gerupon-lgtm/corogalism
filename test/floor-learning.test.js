@@ -6,13 +6,13 @@ import {challengeDifficulty} from '../src/game/challenge.js';
 import {FLOOR_CHALLENGE} from '../src/config/gameConfig.js';
 import {checkReachability} from '../src/maze/validator.js';
 
-test('やさしいの初登場で砂と単独力場を2–3箇所、力場は離し45秒を確保',()=>{
+test('やさしいの初登場はルート上の体験と間隔を維持し、脇道にも追加、45秒を確保',()=>{
  for(let seed=1;seed<=100;seed++)for(const n of [3,5,7]){
   const p=createStagePlay(seed*7919,challengeDifficulty(n,'easy'));
   assert.equal(p.stage.theme.learning,true);assert.ok(p.limitSec>=45);
-  if(n===3){const z=p.stage.zones.find(z=>z.kind==='sand');assert.ok(z.cells.length>=4&&z.cells.length<=6);}
-  else{const fields=p.stage.zones.filter(z=>z.kind==='radial');assert.ok(fields.length>=2&&fields.length<=3);
-   for(let i=0;i<fields.length;i++)for(let j=0;j<i;j++)assert.ok(Math.hypot(fields[i].x-fields[j].x,fields[i].y-fields[j].y)>=fields[i].radius+fields[j].radius);
+  if(n===3){const z=p.stage.zones.find(z=>z.kind==='sand');const route=z.cells.filter(c=>p.stage.maze.path.some(q=>q.x===c.x&&q.y===c.y));assert.ok(route.length>=4&&route.length<=6);assert.ok(z.cells.length>route.length);}
+  else{const fields=p.stage.zones.filter(z=>z.kind==='radial'),route=fields.filter(z=>!z.branch);assert.ok(route.length>=2&&route.length<=3);
+   for(let i=0;i<route.length;i++)for(let j=0;j<i;j++)assert.ok(Math.hypot(route[i].x-route[j].x,route[i].y-route[j].y)>=route[i].radius+route[j].radius);
   }
  }
  assert.equal(createStagePlay(7919,challengeDifficulty(3,'normal')).stage.theme.learning,false);

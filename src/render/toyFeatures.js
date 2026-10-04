@@ -1,5 +1,6 @@
 /** 承認画像の葉っぱ・薄いまもり・ミント床・琥珀のとりもち。 */
 import { REST } from '../config/gameConfig.js';
+import { restFloors } from '../world/stageFeatures.js';
 function leafPath(c) {
   c.beginPath(); c.moveTo(-.65,.65); c.bezierCurveTo(-1,-.2,-.35,-.7,.7,-.85);
   c.bezierCurveTo(.63,.1,.35,.9,-.65,.65); c.closePath();
@@ -20,8 +21,7 @@ function ring(c,x,y,r,progress,color) {
   c.strokeStyle=color;c.beginPath();c.arc(x,y,r,-Math.PI/2,-Math.PI/2+Math.PI*2*Math.min(1,progress));c.stroke();
 }
 export function drawFeatureFloors(c,stage,camera) {
-  const rest=stage.rest;
-  if (rest) {
+  for (const rest of restFloors(stage)) {
     const {px:x,py:y}=camera.toScreen(rest.x,rest.y),r=camera.toPx(.35);
     c.save();c.globalAlpha=rest.used ? .48 : 1;c.shadowColor='#07170d99';c.shadowBlur=3;c.shadowOffsetY=2;
     const g=c.createLinearGradient(x-r,y-r,x+r,y+r);g.addColorStop(0,'#c0d6ab');g.addColorStop(.55,'#94b58b');g.addColorStop(1,'#6f936c');

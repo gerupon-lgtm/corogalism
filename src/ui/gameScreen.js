@@ -2,6 +2,7 @@
 import { UI, RECOVERY, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
 import { featureHintPosition } from './featureHintPosition.js';
 import { hpLabel, damageLabel, recoveryLabel } from './hpDisplay.js';
+import { restFloors } from '../world/stageFeatures.js';
 
 export function createGameScreen(root) {
   const el = root.querySelector('#screen-game');
@@ -89,7 +90,7 @@ export function createGameScreen(root) {
     },
     setFeatureHint(play, camera, visible, motion, now = performance.now()) {
       const hint = root.querySelector('#feature-hint');
-      const resting = play.stage.rest && !play.stage.rest.used && play.stage.rest.progress > 0;
+      const resting = restFloors(play.stage).some(rest=>!rest.used&&rest.progress>0);
       const escaped = escapeActor === play.actor && (!play.trap || play.trap === escapeTrap) && now < escapeUntil;
       hint.hidden = !visible || (!play.trap && !resting && !escaped);
       if (hint.hidden) return;

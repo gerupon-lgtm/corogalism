@@ -8,7 +8,7 @@ try{
  const base=process.env.BASE_URL||'http://127.0.0.1:8767/';
  await p.goto(base+'ball-lab.html?debug=1');await p.waitForFunction(()=>!!window.__ballLab);
  await p.evaluate(()=>navigator.serviceWorker.ready);await p.waitForFunction(()=>navigator.serviceWorker.controller);
- const cache=await p.evaluate(async()=>{const names=await caches.keys();return {names,files:(await (await caches.open(names[0])).keys()).length}});assert.equal(cache.files,101);
+ const cache=await p.evaluate(async()=>{const names=await caches.keys();return {names,files:(await (await caches.open(names[0])).keys()).length}});assert.equal(cache.files,Number(process.env.PRECACHE_COUNT||101));
  await c.setOffline(true);await p.goto(base+'ball-lab.html?debug=1&offline-probe=1');await p.waitForFunction(()=>!!window.__ballLab);
  assert.equal(await p.evaluate(()=>window.__ballLab.state.settings.physics),'explore');
  await p.locator('[data-ball=metal]').click();await p.locator('#floor').selectOption('normal');await p.evaluate(()=>window.__ballLab.teleport(2,.5,100,0));await p.waitForTimeout(16);
@@ -31,7 +31,21 @@ try{
  await p.mouse.move(floorRect.x+floorRect.width*.7,floorRect.y+floorRect.height*.6);await p.mouse.down();await p.waitForTimeout(350);await p.mouse.up();
  const floorActor=await p.evaluate(()=>({x:window.__floorLab.actor.x,y:window.__floorLab.actor.y}));assert.ok(Math.hypot(floorActor.x-before.x,floorActor.y-before.y)>.001,'床ページも完全オフラインで実pointer操作できる');
  await p.goto(base+'?debug=1&offline-probe=1');await p.waitForFunction(()=>!!window.__corogalism);
- assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:true}));await c.close();
+ await p.clock.install();await p.clock.pauseAt(Date.now()+1000);
+ await p.locator('#btn-challenge').click();await p.clock.runFor(3800);
+ for(let n=1;n<3;n++){
+  await p.evaluate(()=>{const g=window.__corogalism.state.goal;window.__corogalism.teleport(g.x,g.y);});
+  await p.clock.runFor(1700);await p.locator('#btn-next').click();await p.clock.runFor(3800);
+ }
+ const mainState=await p.evaluate(()=>window.__corogalism.state),mainSand=mainState.zones.find(z=>z.kind==='sand');
+ const branchSand=mainSand.cells.filter(c=>!mainState.maze.path.some(q=>q.x===c.x&&q.y===c.y)).length;
+ assert.ok(branchSand>0,'オフラインでも脇道の砂を生成');
+ const mainRect=await p.locator('#board').boundingBox(),next=mainState.maze.path[1];
+ await p.mouse.move(mainRect.x+mainRect.width*(.5+(next.x-mainState.maze.path[0].x)*.3),mainRect.y+mainRect.height*(.5+(next.y-mainState.maze.path[0].y)*.3));
+ await p.mouse.down();await p.clock.runFor(400);await p.mouse.up();
+ const mainActor=await p.evaluate(()=>window.__corogalism.state.actor);
+ assert.ok(Math.hypot(mainActor.x-mainState.actor.x,mainActor.y-mainState.actor.y)>.001,'オフラインでも本編を実pointer操作');
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:{stage:3,branchSand,actor:mainActor}}));await c.close();
  for(const source of ['export function resolveParams() {}','// ch.fieldK\nexport function resolveParams() {}']){
   const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/physics/resolveParams.js',route=>route.fulfill({contentType:'text/javascript',body:source}));
   await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));

@@ -1,0 +1,104 @@
+{
+  "version": "0.6.14",
+  "maxFilesPerBatch": 5,
+  "batches": [
+    {
+      "files": [
+        "test/audio-settings.test.js",
+        "test/balance.test.js",
+        "test/ball-materials.test.js",
+        "test/ballRotation.test.js",
+        "test/branch-floors.test.js"
+      ],
+      "tests": 25,
+      "pass": 25,
+      "fail": 0,
+      "exit": 0,
+      "elapsedMs": 11935
+    },
+    {
+      "files": [
+        "test/candy-full.test.js",
+        "test/challenge.test.js",
+        "test/escape-timing.test.js",
+        "test/exploration.test.js",
+        "test/feature-hint-position.test.js"
+      ],
+      "tests": 21,
+      "pass": 21,
+      "fail": 0,
+      "exit": 0,
+      "elapsedMs": 3100
+    },
+    {
+      "files": [
+        "test/features.test.js",
+        "test/first-sound.test.js",
+        "test/floor-difficulty.test.js",
+        "test/floor-lab.test.js",
+        "test/floor-learning.test.js"
+      ],
+      "tests": 27,
+      "pass": 27,
+      "fail": 0,
+      "exit": 0,
+      "elapsedMs": 4837
+    },
+    {
+      "files": [
+        "test/floor-presentation.test.js",
+        "test/floor-themes.test.js",
+        "test/floor-trial.test.js",
+        "test/hourglass.test.js",
+        "test/hp-display.test.js"
+      ],
+      "tests": 14,
+      "pass": 14,
+      "fail": 0,
+      "exit": 0,
+      "elapsedMs": 2219
+    },
+    {
+      "files": [
+        "test/maze.test.js",
+        "test/onboarding.test.js",
+        "test/phase2.test.js",
+        "test/physics.test.js",
+        "test/playthrough.test.js"
+      ],
+      "tests": 49,
+      "pass": 49,
+      "fail": 0,
+      "exit": 0,
+      "elapsedMs": 667
+    },
+    {
+      "files": [
+        "test/resolveParams.test.js",
+        "test/rubber-rebound.test.js",
+        "test/stableCalibration.test.js",
+        "test/stagePlay.test.js",
+        "test/storage.test.js"
+      ],
+      "tests": 32,
+      "pass": 32,
+      "fail": 0,
+      "exit": 0,
+      "elapsedMs": 533
+    },
+    {
+      "files": [
+        "test/tutorial.test.js",
+        "test/wall-clearance.test.js"
+      ],
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "exit": 0,
+      "elapsedMs": 1682
+    }
+  ],
+  "total": 176,
+  "pass": 176,
+  "fail": 0
+}

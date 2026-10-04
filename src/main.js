@@ -12,6 +12,7 @@ import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
 import { challengeDifficulty, normalizeLevel } from './game/challenge.js';
 import { goalCenter } from './world/stage.js';
+import { restFloors } from './world/stageFeatures.js';
 import { createTiltVector } from './input/tiltVector.js';
 import { createTiltSource } from './input/tiltSource.js';
 import { createPointerSource } from './input/pointerSource.js';
@@ -487,7 +488,8 @@ find('btn-continue').addEventListener('click', () => {
   if (screen === 'over' && run?.useContinue()) {
     if (!alreadyContinued) recordStatus = null;
     saveRunProgress();
-    loadStage(run.currentSeed(), UI.continueBeforeCountdownMs, { leafCollected: play.stage.leaf?.collected, restUsed: play.stage.rest?.used });
+    loadStage(run.currentSeed(), UI.continueBeforeCountdownMs, { leafCollected: play.stage.leaf?.collected,
+      restUsedCells:restFloors(play.stage).filter(rest=>rest.used).map(({x,y})=>({x,y})) });
     showScreen('game');
     sound.effect('continue');
   }
@@ -523,7 +525,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
   window.__corogalism = {
     get state() {
       return { seed, timeMs: play.timeMs, wallHits: play.wallHits, started: play.started,
-        audio: sound.state, hourglass: play.stage.hourglass, leaf: play.stage.leaf, rest: play.stage.rest, sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
+        audio: sound.state, hourglass: play.stage.hourglass, leaf: play.stage.leaf, rest: play.stage.rest, rests: restFloors(play.stage), sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
         calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
         tutorialOpen: tutorial.open,
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,

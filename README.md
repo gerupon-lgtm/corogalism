@@ -4,6 +4,8 @@
 センサーが使えない場合は、盤面のタッチ／クリックで同じゲームを遊べます。
 Vanilla JavaScript・Canvas、ビルド不要。バックエンド・外部API・生成AIは使いません。
 
+v0.6.14ではルート上の体験箇所を残し、砂・力場・ひとやすみ・とりもちを脇道にも配置。取得アイテムはルート上です。複数のひとやすみの使用状態もコンティニューで引き継ぎます。[配置仕様](docs/floor-placement.md)、[検証・公開状態](docs/verification/branch-floors.md)、[LP用概要](docs/lp-overview.md)。
+
 v0.6.4では「はじめてのあそび方」で全素材を体験できます。やさしいの時間は最低40秒・床の初登場45秒＋面の負担に応じて加算。「床の練習」では5素材を時間制限なしで比較できます。[現行仕様](docs/tutorial-floors-and-time.md)、[検証](docs/verification/tutorial-floors.md)。
 
 v0.6.5の[ボールのおためし](ball-lab.html)では、金属の重いゴロゴロと長い惰性、スーパーボールの反発などを5素材で比較できます。床・壁・面を切り替え、時間制限なしで音と動きを試せます。[仕様](docs/ball-material-lab.md)、[検証](docs/verification/ball-lab.md)。
@@ -14,7 +16,7 @@ v0.6.10の「おためし5」では、木が壁に当たる音を短く乾いた
 |---|---|
 | フェーズ0（操作感） | 合格。Pixel 6a / iPhone XRで過去に確認済み |
 | フェーズ1（迷路生成・タイムアタック） | 完了・公開済み（従来の引き継ぎ記録） |
-| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.10 公開済み。木の壁音を短く乾いたコンへ変更。実機の体感評価はdocs/remaining-work.md** |
+| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.14で脇道の床配置を追加。公開状態はdocs/verification/branch-floors.md、実機の体感評価はdocs/remaining-work.md** |
 
 このフォルダをGit初期化し、既存のリモート履歴に接続してフェーズ2をmainへpushしました。
 リポジトリは [gerupon-lgtm/corogalism](https://github.com/gerupon-lgtm/corogalism)、
@@ -35,7 +37,7 @@ node --test
 node tools/balance.mjs
 ```
 
-自動テスト159件成功。ブラウザ確認の再実行手順・結果・画面画像は [検証記録](docs/verification/README.md)。
+自動テスト176件成功（最大5ファイルずつ実行）。ブラウザ確認の再実行手順・結果・画面画像は [最新の検証記録](docs/verification/branch-floors.md)。
 スマートフォンの傾きセンサー確認はHTTPSの公開先で行います。LANのHTTP配信では利用できません。
 
 ## 遊び方

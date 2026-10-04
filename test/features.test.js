@@ -53,9 +53,9 @@ test('配置は独立抽選・全テーマで休憩、危険壁で高確率、�
   for(const level of ['easy','normal']){const p=make(1,i*7919,level);if(p.stage.rest)counts[level]++;if(level==='easy'&&p.stage.leaf)counts.leaf++;if(level==='easy'&&p.stage.leaf&&p.stage.rest)counts.both++;if(level==='easy'&&p.stage.leaf&&p.stage.recovery)counts.candyLeaf++;}
   const p=make(12,i*7919,'normal');if(p.stage.rest)counts.danger++;
   for(const n of [11,27,43]){const a=make(n,i*7919);const b=make(n,i*7919);assert.deepEqual(a.stage,b.stage);
-   const points=[a.stage.leaf,a.stage.rest,a.stage.recovery,...a.stage.sticky].filter(Boolean).map(p=>`${p.x},${p.y}`);assert.equal(new Set(points).size,points.length);
+   const points=[a.stage.leaf,a.stage.rest,...a.stage.extraRests,a.stage.recovery,...a.stage.sticky].filter(Boolean).map(p=>`${p.x},${p.y}`);assert.equal(new Set(points).size,points.length);
    for(const t of a.stage.sticky){assert.ok(Math.hypot(t.x-.5,t.y-.5)>STICKY.endpointClearance);assert.ok(Math.hypot(t.x-6.5,t.y-6.5)>STICKY.endpointClearance);}
-   assert.equal(a.stage.theme.id,'sticky');assert.equal(a.stage.sticky.length,n===11?1:a.stage.sticky.length);assert.ok(a.stage.sticky.length>=1&&a.stage.sticky.length<=2);
+   assert.equal(a.stage.theme.id,'sticky');assert.ok(a.stage.sticky.length>=1&&a.stage.sticky.length<=2);
    const route=a.stage.maze.path;assert.equal(a.stage.sticky.filter(p=>route.some(c=>p.x===c.x+.5&&p.y===c.y+.5)).length,1);
    if(a.stage.leaf){const index=route.findIndex(c=>c.x+.5===a.stage.leaf.x&&c.y+.5===a.stage.leaf.y);assert.ok(index/(route.length-1)>=LEAF.pathMin&&index/(route.length-1)<=LEAF.pathMax);}
   }

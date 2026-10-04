@@ -7,6 +7,7 @@ import { createStage, createActor, goalCenter } from '../world/stage.js';
 import { getCharacter } from '../world/characters.js';
 import { stepPhysics } from '../physics/integrator.js';
 import { createHp } from './hp.js';
+import { restFloors } from '../world/stageFeatures.js';
 import { stageTimeLimitSec } from './progression.js';
 
 export function createStagePlay(seed, difficulty = null, carry = {}) {
@@ -20,6 +21,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
   const hp = floorPractice ? null : tutorial ? createHp({ turns: 0, hpPerTurn: 0, cfg: {...HP, base: TUTORIAL.hp}, minimum: TUTORIAL.minHp, shield }) : difficulty ? createHp({ turns: maze.turns, ...difficulty, shield }) : null;
   if (stage.leaf && carry.leafCollected) stage.leaf.collected = true;
   if (stage.rest && carry.restUsed) stage.rest.used = true;
+  for(const rest of restFloors(stage))if(carry.restUsedCells?.some(p=>p.x===rest.x&&p.y===rest.y))rest.used=true;
   let extendedSec = 0, restOrigin = null, trap = null, releasedFloor = null;
   const onTile = (tile, radius) => tile && Math.abs(actor.x-tile.x) < radius && Math.abs(actor.y-tile.y) < radius;
   const limitSec = !floorPractice && !tutorial && difficulty ? stageTimeLimitSec(maze, difficulty, stage) : null;
@@ -40,7 +42,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
       trap.target = Math.max(STICKY.minSec, before - STICKY.shortenSec);
       return trap.target < before;
     },
-    resetRest() { if (stage.rest) stage.rest.progress = 0; restOrigin = null; },
+    resetRest() { for(const rest of restFloors(stage))rest.progress=0; restOrigin = null; },
     get timeMs() { return timeMs; },
     get wallHits() { return wallHits; },
     get started() { return started; },
@@ -87,12 +89,13 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
           const tile = stage.sticky.find(t => t !== releasedFloor && onTile(t, STICKY.radius));
           if (tile) { trap = { tile, elapsed: 0, target: STICKY.durationSec }; actor.vx = 0; actor.vy = 0; }
         }
-        const rest = stage.rest;
-        if (rest && !rest.used && hp.value < hp.max && onTile(rest, REST.radius)
+        const rests=restFloors(stage),rest=rests.find(r=>!r.used&&onTile(r,REST.radius));
+        for(const tile of rests)if(tile!==rest)tile.progress=0;
+        if (rest && hp && hp.value < hp.max
           && Math.hypot(actor.vx,actor.vy) <= REST.speed) {
-          if (!restOrigin) { restOrigin = {x:actor.x,y:actor.y}; rest.progress = 0; }
+          if (!restOrigin||restOrigin.tile!==rest) { restOrigin = {x:actor.x,y:actor.y,tile:rest}; rest.progress = 0; }
           else if (Math.hypot(actor.x-restOrigin.x,actor.y-restOrigin.y) > REST.drift) {
-            rest.progress = 0; restOrigin = {x:actor.x,y:actor.y};
+            rest.progress = 0; restOrigin = {x:actor.x,y:actor.y,tile:rest};
           } else rest.progress += Math.max(0,elapsedMs)/1000;
           if (rest.progress >= REST.durationSec) {
             hp.heal(hp.max * REST.healRatio); rest.used = true; rest.progress = REST.durationSec;

@@ -41,6 +41,14 @@
 }
 ```
 
+## 床のしかけ（v0.6.14）
+
+Stageの`rest`は従来の1枚目、`extraRests`は脇道に置く追加分の配列。各床は`{x,y,used,progress}`を独立して持ち、`restFloors(stage)`でまとめて取得する。固定練習面やガイドのように`extraRests`がない入力にも対応する。
+
+コンティニュー時の`carry.restUsedCells`は使用済み床の座標`[{x,y}]`。再生成した同じ配置で一致する床を使用済みにする。従来の`carry.restUsed`も1枚目用として互換を維持。デバッグ状態の`rests`は全ひとやすみ床の一覧。
+
+脇道へ追加した円形力場には`branch:true`を付ける。力の強さ・半径は同じ面の既存力場と同じで、実際の力の計算と描画を通す。
+
 ## Character（`world/characters.js`）
 
 ```js

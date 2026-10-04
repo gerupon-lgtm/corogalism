@@ -12,6 +12,7 @@ test('固定練習面は全セル到達可能・壁6種・床6種・アイテム
  assert.deepEqual(s.zones.filter(z=>z.kind==='radial').map(z=>Math.sign(z.strength)),[1,-1]);
  for(const f of s.zones.filter(z=>z.kind==='radial'))for(const t of [s.rest,...s.sticky,s.recovery,s.leaf,s.hourglass])assert.ok(Math.hypot(f.x-t.x,f.y-t.y)>f.radius+.3,'力場と静止／取得体験を分離');
  for(const tile of [s.rest,...s.sticky,s.recovery,s.leaf,s.hourglass]){assert.ok(tile.x>0&&tile.x<7&&tile.y>0&&tile.y<7);}
+ for(const item of [s.recovery,s.leaf,s.hourglass])assert.ok(s.maze.path.some(c=>c.x+.5===item.x&&c.y+.5===item.y),'取得物はルート上');
 });
 test('練習は時間制限と死亡なし・通常の速度と素材によるダメージ差を保持',()=>{
  const p=createStagePlay(4,null,{tutorial:true});p.teleport(.5,.5);advance(p,1000000);assert.equal(p.limitSec,null);assert.equal(p.status,'playing');
