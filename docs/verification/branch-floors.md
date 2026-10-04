@@ -22,7 +22,12 @@
 
 ## 公開確認
 
-公開反映と公開版での確認は、ローカル確認の完了後に記録する。実端末のセンサー操作、脇道の見た目、追加力場の手触りは試遊で追加評価する。
+- アプリ`287634c`をmainへ通常pushし、[Pages37169145724成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37169145724)。[正式URL](https://corogalism.sikumilab.com/)の表示はv0.6.14。
+- 公開105資材がHTTP200で、内容のSHA-256はローカルとすべて一致。[配信確認](branch-floors/deploy-hashes.json)。
+- 公開Chromeの320／390／576幅、通常／やさしい各1〜16面＝96画面が成功。6経路で脇道のとりもち脱出・ひとやすみ回復・ポーズ時の進捗リセット・コンティニューの使用状態を確認。取得物はルート上。[公開画面の記録](branch-floors/public/results.json)。面の移動にはデバッグ位置移動を使い、難易度確認は上記の実pointer32面と区別する。
+- 公開版でも102資材を保存後、完全オフラインの未訪問URLで両おためしと本編へ移動できた。本編3面の脇道の砂、画面操作、素材音、旧物理・旧氷処理の混在を止める4経路も成功。[公開オフライン](branch-floors/offline-public.txt)。
+
+実端末のセンサー操作、脇道の見た目、追加力場の手触りは試遊で追加評価する。
 
 ## 再実行
 
@@ -46,4 +51,11 @@ $env:PLAY_STAGES='16'
 node tools/browser-floor-playthrough.mjs
 $env:PRECACHE_COUNT='102'
 node tools/browser-ball-offline.mjs
+
+$env:DEPLOY_HASH_OUTPUT='docs/verification/branch-floors/deploy-hashes.json'
+python tools/verify-floor-deploy.py
+$env:BASE_URL='https://corogalism.sikumilab.com/'
+$env:BRANCH_BROWSER_OUTPUT='docs/verification/branch-floors/public'
+node tools/browser-branch-floors.mjs
+node tools/browser-ball-offline.mjs > docs/verification/branch-floors/offline-public.txt
 ```

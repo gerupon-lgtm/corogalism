@@ -1,0 +1,1034 @@
+[
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 1,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 2,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 3,
+    "theme": "sand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 4,
+    "theme": "iceRubber",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 5,
+    "theme": "gravityAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 6,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 7,
+    "theme": "repulsionAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 8,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 9,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 10,
+    "theme": "specialFlow",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 11,
+    "theme": "sticky",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": {
+      "branchStickyEscaped": true,
+      "impactViaPointer": true,
+      "branchRestHealed": true,
+      "pauseReset": true,
+      "continuePreserved": true,
+      "used": [
+        [
+          6.5,
+          1.5
+        ]
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 12,
+    "theme": "careful",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 13,
+    "theme": "gravityHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 14,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 15,
+    "theme": "repulsionHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "stage": 16,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 1,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 2,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 3,
+    "theme": "sand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 4,
+    "theme": "iceRubber",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 5,
+    "theme": "gravityAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 6,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 7,
+    "theme": "repulsionAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 8,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 9,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 10,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 11,
+    "theme": "sticky",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": {
+      "branchStickyEscaped": true,
+      "impactViaPointer": true,
+      "branchRestHealed": true,
+      "pauseReset": true,
+      "continuePreserved": true,
+      "used": [
+        [
+          6.5,
+          1.5
+        ]
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 12,
+    "theme": "careful",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 13,
+    "theme": "gravityHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 14,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 15,
+    "theme": "repulsionHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "stage": 16,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 1,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 2,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 3,
+    "theme": "sand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 4,
+    "theme": "iceRubber",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 5,
+    "theme": "gravityAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 6,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 7,
+    "theme": "repulsionAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 8,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 9,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 10,
+    "theme": "specialFlow",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 11,
+    "theme": "sticky",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": {
+      "branchStickyEscaped": true,
+      "impactViaPointer": true,
+      "branchRestHealed": true,
+      "pauseReset": true,
+      "continuePreserved": true,
+      "used": [
+        [
+          6.5,
+          1.5
+        ]
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 12,
+    "theme": "careful",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 13,
+    "theme": "gravityHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 14,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 15,
+    "theme": "repulsionHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "stage": 16,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 1,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 2,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 3,
+    "theme": "sand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 4,
+    "theme": "iceRubber",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 5,
+    "theme": "gravityAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 6,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 7,
+    "theme": "repulsionAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 8,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 9,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 10,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 11,
+    "theme": "sticky",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": {
+      "branchStickyEscaped": true,
+      "impactViaPointer": true,
+      "branchRestHealed": true,
+      "pauseReset": true,
+      "continuePreserved": true,
+      "used": [
+        [
+          6.5,
+          1.5
+        ]
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 12,
+    "theme": "careful",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 13,
+    "theme": "gravityHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 14,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 15,
+    "theme": "repulsionHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "stage": 16,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 1,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 2,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 3,
+    "theme": "sand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 4,
+    "theme": "iceRubber",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 5,
+    "theme": "gravityAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 6,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 7,
+    "theme": "repulsionAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 8,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 9,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 10,
+    "theme": "specialFlow",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 11,
+    "theme": "sticky",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": {
+      "branchStickyEscaped": true,
+      "impactViaPointer": true,
+      "branchRestHealed": true,
+      "pauseReset": true,
+      "continuePreserved": true,
+      "used": [
+        [
+          6.5,
+          1.5
+        ]
+      ]
+    }
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 12,
+    "theme": "careful",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 13,
+    "theme": "gravityHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 14,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 15,
+    "theme": "repulsionHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "stage": 16,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 1,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 2,
+    "theme": "basic",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 3,
+    "theme": "sand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 4,
+    "theme": "iceRubber",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 5,
+    "theme": "gravityAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 6,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 7,
+    "theme": "repulsionAssist",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 8,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 9,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 10,
+    "theme": "iceSand",
+    "branchSand": 4,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 11,
+    "theme": "sticky",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": {
+      "branchStickyEscaped": true,
+      "impactViaPointer": true,
+      "branchRestHealed": true,
+      "pauseReset": true,
+      "continuePreserved": true,
+      "used": [
+        [
+          6.5,
+          1.5
+        ]
+      ]
+    }
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 12,
+    "theme": "careful",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 13,
+    "theme": "gravityHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 14,
+    "theme": "rest",
+    "branchSand": 0,
+    "branchFields": 0,
+    "branchRests": 0,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 15,
+    "theme": "repulsionHinder",
+    "branchSand": 0,
+    "branchFields": 1,
+    "branchRests": 1,
+    "restCheck": null
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "stage": 16,
+    "theme": "iceAssist",
+    "branchSand": 4,
+    "branchFields": 2,
+    "branchRests": 0,
+    "restCheck": null
+  }
+]

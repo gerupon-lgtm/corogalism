@@ -1,3 +1,10 @@
+# v0.6.14 特殊床を脇道にも配置（2026-10-04）
+
+- 既存のルート上の床を残し、砂・重力・反重力・ひとやすみ・とりもちを脇道にも配置。取得アイテムはルート上。複数ひとやすみの使用状態をコンティニューでも引き継ぐ。[配置仕様](floor-placement.md)。
+- 176テスト・1,200配置比較・Chrome3幅96画面・通常／やさしい各16面の実pointer通しクリアを確認。キャッシュ`a74ac540b0c6f99a`、102資材。[検証記録](verification/branch-floors.md)。
+- アプリ`287634c`、[Pages37169145724成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37169145724)。正式URLは https://corogalism.sikumilab.com/ 。公開105資材のHTTP200・SHA-256一致を確認。[配信ファイル](verification/branch-floors/deploy-hashes.json)。
+- 公開Chrome3幅・通常／やさしい各16面の96画面、脇道での回復・脱出・コンティニューを確認。102資材の完全オフラインでも両おためし・本編への初回移動、操作、音、脇道の砂が動作。[公開画面](verification/branch-floors/public/results.json)、[公開オフライン](verification/branch-floors/offline-public.txt)。実端末での傾きと体感は試遊の対象。
+
 # v0.6.13 氷の反応補正を検証だけで外す（2026-10-03）
 
 - ボールおためし7／床おためし9で氷の傾き加速補正と補助コースの力55%を解除。以前の調整と本編の既定は維持。残る入力・計算・音の条件を明記。revision7／9、新検証記録はmotion-2。
