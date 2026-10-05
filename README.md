@@ -4,7 +4,9 @@
 センサーが使えない場合は、盤面のタッチ／クリックで同じゲームを遊べます。
 Vanilla JavaScript・Canvas、ビルド不要。バックエンド・外部API・生成AIは使いません。
 
-v0.6.16では、無効なボタンをグレースケールにし、押せる状態になってから300msで滑らかに彩度を戻します。色の途中から操作できます。ジングルを聞く待機時間とボタン名・寸法は維持します。[仕様](docs/results-and-timing.md)、[検証・公開状態](docs/verification/end-grayscale.md)。
+v0.6.17では、「終了して結果を見る」と明記し、終了前に確認を挟みます。「戻る」で元の画面へ戻れ、待機時間と成績を保ちます。チャレンジ中の「○面目」表示も維持しています。[仕様](docs/results-and-timing.md)、[検証・公開状態](docs/verification/run-end-confirm.md)。
+
+v0.6.16の、無効ボタンをグレースケールにし、押せる状態になってから300msで滑らかに彩度を戻す表示も維持しています。[色の確認](docs/verification/end-grayscale.md)。
 
 v0.6.14ではルート上の体験箇所を残し、砂・力場・ひとやすみ・とりもちを脇道にも配置。取得アイテムはルート上です。複数のひとやすみの使用状態もコンティニューで引き継ぎます。[配置仕様](docs/floor-placement.md)、[検証・公開状態](docs/verification/branch-floors.md)、[LP用概要](docs/lp-overview.md)。
 
@@ -18,11 +20,11 @@ v0.6.10の「おためし5」では、木が壁に当たる音を短く乾いた
 |---|---|
 | フェーズ0（操作感） | 合格。Pixel 6a / iPhone XRで過去に確認済み |
 | フェーズ1（迷路生成・タイムアタック） | 完了・公開済み（従来の引き継ぎ記録） |
-| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.16公開済み。無効ボタンの彩度を滑らかに戻す。検証記録はdocs/verification/end-grayscale.md、実機の体感評価はdocs/remaining-work.md** |
+| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.17公開済み。終了前に確認し、取り消して続けられる。検証記録はdocs/verification/run-end-confirm.md、実機の体感評価はdocs/remaining-work.md** |
 
 このフォルダをGit初期化し、既存のリモート履歴に接続してフェーズ2をmainへpushしました。
 リポジトリは [gerupon-lgtm/corogalism](https://github.com/gerupon-lgtm/corogalism)、
-公開先は [コロガリズム](https://corogalism.sikumilab.com/)（GitHub Pages）。公開版v0.6.16の105資材一致を確認済みです（2026-10-05）。ブラウザ動作の結果は[最新の検証記録](docs/verification/end-grayscale.md)、詳細は [デプロイ記録](docs/deployment.md)。
+公開先は [コロガリズム](https://corogalism.sikumilab.com/)（GitHub Pages）。公開版v0.6.17の106資材一致を確認済みです（2026-10-05）。ブラウザ動作の結果は[最新の検証記録](docs/verification/run-end-confirm.md)、詳細は [デプロイ記録](docs/deployment.md)。
 
 ## 起動と検証
 

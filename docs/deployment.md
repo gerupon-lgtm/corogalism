@@ -1,3 +1,10 @@
+# v0.6.17 終了ボタンの明記と確認（2026-10-05）
+
+- 「終了して結果を見る」と明記して確認を挟む。戻るを既定とし、取消で元の画面・成績・待機を保持。プレイ中は一時停止。回数切れと練習は従来どおり。[仕様](results-and-timing.md)。
+- ローカル3幅の12ケース＋追加3経路、22テスト、103資材の完全オフライン成功。キャッシュ`d44def0c6dc1593f`。[検証記録](verification/run-end-confirm.md)。
+- アプリ`751813f`、[Pages37303197697成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37303197697)。公開106資材のHTTP200・SHA-256一致。[配信確認](verification/run-end-confirm/deploy-hashes.json)。
+- 公開Chrome15ケースを一括で成功。公開103資材の完全オフラインでも本編3面、終了確認と取消、両おためしの操作・音を確認。[公開結果](verification/run-end-confirm/public/results.json)、[公開オフライン](verification/run-end-confirm/offline-public.txt)。
+
 # v0.6.16 無効ボタンの色を滑らかに戻す（2026-10-05）
 
 - 無効なボタンを完全なグレースケールにし、有効化から300msで彩度を戻す。途中から操作可能。ジングルを聞く待機時間とボタン名・寸法は維持。[仕様](results-and-timing.md)。
