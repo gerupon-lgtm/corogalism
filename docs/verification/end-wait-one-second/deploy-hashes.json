@@ -1,0 +1,638 @@
+[
+  {
+    "path": "assets/audio/bgm.wav",
+    "status": 200,
+    "sha256": "a6495cbf10f3eaed011f5a13bf7a63a34da83b9d2cbb4e3e78d49a475493de93",
+    "match": true
+  },
+  {
+    "path": "assets/audio/rolling-loop.wav",
+    "status": 200,
+    "sha256": "f0f86d58c5b0eefa9a1d8e359dd4250b2993f3ae7fed3b1f8db1a0822c656833",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-clear.wav",
+    "status": 200,
+    "sha256": "de00a076635abd7715d5bcb571c759367a26ab1d6d9cc5b635dbf65f50cf41db",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-continue.wav",
+    "status": 200,
+    "sha256": "ff6864a8eac26fd92c8bcafccfd1790eb8d3bba0bd31b14fc7a4dde8dd26c304",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-countdown.wav",
+    "status": 200,
+    "sha256": "7935b9a239cd5b35d21201df5540ba54d1827071ebab9e047e2ddcaf2da2a158",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-fail.wav",
+    "status": 200,
+    "sha256": "bb81a48251322d118918d466307f03109ee8beda86aaccf7485356d594e82875",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-goal.wav",
+    "status": 200,
+    "sha256": "eff6148892cd329595a937b17c888e54a649caa59dda1ee9ac560f6bb8d27303",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-hourglass.wav",
+    "status": 200,
+    "sha256": "d4099bf55a4c72e00fba395e4a6128b3d2e202302ee6c0a9d620d96fa4bb4c7a",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-moss.wav",
+    "status": 200,
+    "sha256": "dcc4e0eea51821e3cdfb30370b842a7d18ea275e5a4233794d7418d37a7a6425",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-pause.wav",
+    "status": 200,
+    "sha256": "b1d2fcb32cb20e1ce528bbf8e2c68cade7938eed58fecc34c11fcd540f2f9a30",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-rolling.wav",
+    "status": 200,
+    "sha256": "76ee604866e0e6ed150d06eba08eac5c7f57e3594570a3cbc6fcd5b52943001b",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-rubber.wav",
+    "status": 200,
+    "sha256": "b16ca86903ac9748880a51f3fb8e6326a53a89eb92259a85e50767e5196efcd4",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-select.wav",
+    "status": 200,
+    "sha256": "b5a28b6893153d4e9c251a817cb9495e1233d2343c7b24c51af62f4d6c54d265",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-spike.wav",
+    "status": 200,
+    "sha256": "bb54fa50355e62cb89d36d5dd4b4e70f291816593e5d812ce907ca13a78f31dd",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-stone.wav",
+    "status": 200,
+    "sha256": "2a1e5631677d2a1f0f4b1e549ba3392cc7eecbc2eae7e01219205afd8f2d230d",
+    "match": true
+  },
+  {
+    "path": "assets/audio/se-wall.wav",
+    "status": 200,
+    "sha256": "c4d79afba31535a5a3656fc38a1131b205dd23845f8b519023b976687d89da89",
+    "match": true
+  },
+  {
+    "path": "assets/brand-leaf.svg",
+    "status": 200,
+    "sha256": "d1bbf132cb0cc1627124f8163bc271e66c8e870dd167dc8dca83287e5c999be2",
+    "match": true
+  },
+  {
+    "path": "assets/fonts/MPLUS1p-Black.woff2",
+    "status": 200,
+    "sha256": "cd18ab65ac1841f501b99dc4c92ec8bb48d30015a39a52b0646e86ff51700447",
+    "match": true
+  },
+  {
+    "path": "assets/fonts/MPLUS1p-Bold.woff2",
+    "status": 200,
+    "sha256": "9a68c46dcebf480aea4eeb6f66eca1e64e307a4755ae5318fe777e48ffc70e81",
+    "match": true
+  },
+  {
+    "path": "assets/fonts/MPLUS1p-Regular.woff2",
+    "status": 200,
+    "sha256": "3ceb855ae8a1520280d423beceb8b2d4818a10b2f227b665273d7f12938ffd27",
+    "match": true
+  },
+  {
+    "path": "assets/pwa/icon-192.png",
+    "status": 200,
+    "sha256": "bad864c100b1ac5540169a938d38aa21bb284c1198c461576a59a2483066dbe3",
+    "match": true
+  },
+  {
+    "path": "assets/pwa/icon-512.png",
+    "status": 200,
+    "sha256": "aee8d3348dd23aaecee635fbff68016e3d926ec1234f70260a4d28c9cfbdd3d0",
+    "match": true
+  },
+  {
+    "path": "assets/pwa/icon.svg",
+    "status": 200,
+    "sha256": "a1a3f95193724739bd02258ea01a78f6a096a981d153e415154f0887a09695d5",
+    "match": true
+  },
+  {
+    "path": "assets/toy-wall-atlas.png",
+    "status": 200,
+    "sha256": "dbc6c4de13f7ba2377f8f8aefdd08fce1122f774d678c7c1d9bb8aecb18d01f8",
+    "match": true
+  },
+  {
+    "path": "assets/tutorial-hold.png",
+    "status": 200,
+    "sha256": "561a8db4b205d3afc208932ccaed56cc5e59ecf01d5e505f8dec36fd3b0004c3",
+    "match": true
+  },
+  {
+    "path": "ball-lab.css",
+    "status": 200,
+    "sha256": "2f8473911bf87ae4fed9e20e7cb498816bc39f600eaf65a67d5baf80adedb4bb",
+    "match": true
+  },
+  {
+    "path": "ball-lab.html",
+    "status": 200,
+    "sha256": "a3d4b27efedde53f7c8cd5a7b2c433cacfb0e508e7bd1fdcc9036118cdde3577",
+    "match": true
+  },
+  {
+    "path": "floor-lab.css",
+    "status": 200,
+    "sha256": "6914a5ba91b8f9bb0530f3ac1e24dfb0bcd0538cdf497b53e17a59b93156fbfb",
+    "match": true
+  },
+  {
+    "path": "floor-lab.html",
+    "status": 200,
+    "sha256": "10650a66e01b01c5ddaa820bea7829c9534458b98ef1395683d3165b37f37a66",
+    "match": true
+  },
+  {
+    "path": "index.html",
+    "status": 200,
+    "sha256": "e8ef793ea86af2255b7642f6bee1bf38f59e65606ca8f436c472aee160cf33f7",
+    "match": true
+  },
+  {
+    "path": "manifest.webmanifest",
+    "status": 200,
+    "sha256": "25fe761ddc02da80350fb5ce74a761f0d7d17b44f52aa1b5aa6d68c97a4178e8",
+    "match": true
+  },
+  {
+    "path": "package.json",
+    "status": 200,
+    "sha256": "3e9504e2b1f0515e19651ff41546cedb438481abcb088b46939f0fbcc2f22591",
+    "match": true
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "sha256": "8bd300afb8c27bbb5fd09abf2e2c8b4f3b9bbf58d466d53854f312739d7aa574",
+    "match": true
+  },
+  {
+    "path": "src/audio/audioSettings.js",
+    "status": 200,
+    "sha256": "055fcf66b7280047d667f00a7796e9985f60a05bb33243ab058915a8e14f4c6c",
+    "match": true
+  },
+  {
+    "path": "src/audio/ballMaterialAudio.js",
+    "status": 200,
+    "sha256": "2d3f84a3b4f1df43d9a39864e7657638f4733524b2182c4aaa250eac59e1f494",
+    "match": true
+  },
+  {
+    "path": "src/audio/floorJingle.js",
+    "status": 200,
+    "sha256": "d5df6620efc0df790fedf1eacb68ad8f152dacc8c13b2aea1a5bdefdfc324ada",
+    "match": true
+  },
+  {
+    "path": "src/audio/selectBuffer.js",
+    "status": 200,
+    "sha256": "ea093a621051dffcda164ffc623e41dbd9257745b71925382ee6cbfddb4a3998",
+    "match": true
+  },
+  {
+    "path": "src/audio/soundManager.js",
+    "status": 200,
+    "sha256": "741ec6e6e59eb08f79a3f50c9660c3d68c0bb7a8d90bdff521cf705c121cc79e",
+    "match": true
+  },
+  {
+    "path": "src/config/gameConfig.js",
+    "status": 200,
+    "sha256": "2f5c996ef31d2ba1ff6c2bf40a119c4996720351f3f2211fdb8265bae9beb41b",
+    "match": true
+  },
+  {
+    "path": "src/game/challenge.js",
+    "status": 200,
+    "sha256": "7ffd7bb3c8c32ef99d4e858bc86ce7fe813356c75e9357e34d88f1a987e5c92f",
+    "match": true
+  },
+  {
+    "path": "src/game/hp.js",
+    "status": 200,
+    "sha256": "a553184f497d9a16867d0524bf50268d2739e687f82feaadf1971dd37f77dd47",
+    "match": true
+  },
+  {
+    "path": "src/game/progression.js",
+    "status": 200,
+    "sha256": "56b8040db4986c26e74b6e4e73291ef4a438acbaa9c073e1fdc9cf5a30d133ae",
+    "match": true
+  },
+  {
+    "path": "src/game/run.js",
+    "status": 200,
+    "sha256": "6926e13761e95f4509acd34ab66a249e11ea4988a9bb143018c11bde8bff15fe",
+    "match": true
+  },
+  {
+    "path": "src/game/stagePlay.js",
+    "status": 200,
+    "sha256": "f746557ec921103d0a2cf9ff39d03d9aebaaa5d6a434914240501829aad30be1",
+    "match": true
+  },
+  {
+    "path": "src/game/tutorialLessons.js",
+    "status": 200,
+    "sha256": "e2deda8809c4cd3b99d60c3ddeba996d7b74f2ca314ef9b22a69f771a49a4c11",
+    "match": true
+  },
+  {
+    "path": "src/input/escapeInput.js",
+    "status": 200,
+    "sha256": "5209c53724621c4d70bc51b816a78c2c5da4a27a2ad82720252a62a4c0c8e4d2",
+    "match": true
+  },
+  {
+    "path": "src/input/pointerSource.js",
+    "status": 200,
+    "sha256": "87adf206e9cfa19ae09542f2897997a2eefea31866ad6b73bdd43c7dc6d71c59",
+    "match": true
+  },
+  {
+    "path": "src/input/portraitLock.js",
+    "status": 200,
+    "sha256": "700363715a38cf29ccc5ee58ac0e6ff8c3d5c25a1bb6c2746e4251b3ab115ded",
+    "match": true
+  },
+  {
+    "path": "src/input/stableCalibration.js",
+    "status": 200,
+    "sha256": "f2b0eb8163ed0d7cd2ce13a8ab363a802b8253fbc143a105107884cc6add7203",
+    "match": true
+  },
+  {
+    "path": "src/input/tiltSource.js",
+    "status": 200,
+    "sha256": "075e814a7298c8ad0c6ec24d2a1f57d1c7d37db07b34ef2c966a280d3c24fa92",
+    "match": true
+  },
+  {
+    "path": "src/input/tiltVector.js",
+    "status": 200,
+    "sha256": "b7f6932903e3bbc78144f7d07983f4bc23f53a1f79df887e335abc44d9b96946",
+    "match": true
+  },
+  {
+    "path": "src/lab/ballBoot.js",
+    "status": 200,
+    "sha256": "f609a6b637832411afa188eff857b7d5334fd60bec3c38e5027332c0575aae9c",
+    "match": true
+  },
+  {
+    "path": "src/lab/ballLab.js",
+    "status": 200,
+    "sha256": "f1606a9582d95c8868acf8916286e2bf5c48d3150a8a284d8f2a0e8fa276e6b6",
+    "match": true
+  },
+  {
+    "path": "src/lab/ballLabStage.js",
+    "status": 200,
+    "sha256": "ef18a7753a2ea162a42c2b7b49d0034166d6afafd9972cd6c985f2e3d7c54507",
+    "match": true
+  },
+  {
+    "path": "src/lab/boot.js",
+    "status": 200,
+    "sha256": "b668f1d003ec8058c62524a88429c348bdae6af29463b9db44862568034f46ac",
+    "match": true
+  },
+  {
+    "path": "src/lab/exploration.js",
+    "status": 200,
+    "sha256": "9a292b7c4b0e1aaa36d3d4d6ad01a9ee26049d97ad9ae92d27f78d46ae078634",
+    "match": true
+  },
+  {
+    "path": "src/lab/floorLab.js",
+    "status": 200,
+    "sha256": "f7b48374529ae82ce5a3d7f5e7e51cbfa136b1030bdd0a9302573c881c3d4c77",
+    "match": true
+  },
+  {
+    "path": "src/lab/floorModel.js",
+    "status": 200,
+    "sha256": "c9922ea24193aefb269799b19fc8108ef460b244a188d22826cf2e97f717678b",
+    "match": true
+  },
+  {
+    "path": "src/lab/floorVisuals.js",
+    "status": 200,
+    "sha256": "212e0230dde8915bd733b9e2b59d7b8029cc107397dfd668671094f30f41a4a7",
+    "match": true
+  },
+  {
+    "path": "src/lab/timeTrial.js",
+    "status": 200,
+    "sha256": "bde33da6ecb9b563ce20785d1fec6190b4e2daae7894f390e93488b9bfa826b4",
+    "match": true
+  },
+  {
+    "path": "src/main.js",
+    "status": 200,
+    "sha256": "693a63ac284a483ff2b89fd82a27fd6120b126c19f471e5bf4884610fcb4d24f",
+    "match": true
+  },
+  {
+    "path": "src/maze/generator.js",
+    "status": 200,
+    "sha256": "e8b216def21fa20c444f51907ab0755d130cca31caeeed0e2fe69c51fe75ed6c",
+    "match": true
+  },
+  {
+    "path": "src/maze/path.js",
+    "status": 200,
+    "sha256": "6e535cdedbaf5be961111743b5778a3cfeef15335c5d2b728f156bd07577e2c6",
+    "match": true
+  },
+  {
+    "path": "src/maze/rng.js",
+    "status": 200,
+    "sha256": "451c289c330c42421f6cde659b398720d3ded712160ddd96af63b81da6c2000a",
+    "match": true
+  },
+  {
+    "path": "src/maze/validator.js",
+    "status": 200,
+    "sha256": "9bd493a3b6c955c03625344cdf2b09c00bf439d359f47cc5b0f6f27321dc3cba",
+    "match": true
+  },
+  {
+    "path": "src/physics/collision.js",
+    "status": 200,
+    "sha256": "f91b4fe1467b73518a441f5d6a8380b98ca286d0910f15a479c9f04dafc56b6b",
+    "match": true
+  },
+  {
+    "path": "src/physics/integrator.js",
+    "status": 200,
+    "sha256": "b466fc9dab190cffbe79a1d813d72adf2c00558a2d5c3f963884845f76ff4c1e",
+    "match": true
+  },
+  {
+    "path": "src/physics/resolveParams.js",
+    "status": 200,
+    "sha256": "3199dc81907f70f77004319d0424c35a6368168b979355f131cc6b2ae06ca961",
+    "match": true
+  },
+  {
+    "path": "src/pwa.js",
+    "status": 200,
+    "sha256": "caf76321329a9f0f875ddf85cabfc3293ff677f0b0877bbf95da9885db55c369",
+    "match": true
+  },
+  {
+    "path": "src/record/storage.js",
+    "status": 200,
+    "sha256": "23a4db935e9658aada75946a5b819aee23b02c745343a29c3524d6e08531d39b",
+    "match": true
+  },
+  {
+    "path": "src/render/ballRotation.js",
+    "status": 200,
+    "sha256": "0ddf86357aa8f6c046c8c60738f34ea2968c549d1273d6be7fe25be52cd2d4c5",
+    "match": true
+  },
+  {
+    "path": "src/render/camera.js",
+    "status": 200,
+    "sha256": "bbe7698e42e11760a24aee85953e2283fb533d2799a97c32afc349918d59a4ac",
+    "match": true
+  },
+  {
+    "path": "src/render/canvasRenderer.js",
+    "status": 200,
+    "sha256": "f6573b38987a3c3c4bf661bb7e9b872a10c10b788b52d34c7de27e0939b328ed",
+    "match": true
+  },
+  {
+    "path": "src/render/floorArt.js",
+    "status": 200,
+    "sha256": "255533c802ba58e689207950eef03578fcc0129cee1d130656e09bba131cc75c",
+    "match": true
+  },
+  {
+    "path": "src/render/floorVisuals.js",
+    "status": 200,
+    "sha256": "d660aaafc9b708a10e0999d59fad20702003cdcdd409dfe96d844d7936ee019c",
+    "match": true
+  },
+  {
+    "path": "src/render/materialAppearance.js",
+    "status": 200,
+    "sha256": "808669afec22ea1ad0dd723c4831d3a1d6e2e2816229dc889beea1392962a139",
+    "match": true
+  },
+  {
+    "path": "src/render/toyBall.js",
+    "status": 200,
+    "sha256": "769ab5cf2c8838baebc7f5542df3a5c884ca90556e85bbfda9eebba9b8187e4a",
+    "match": true
+  },
+  {
+    "path": "src/render/toyCandy.js",
+    "status": 200,
+    "sha256": "8213aab0c0ed693a8c315e7275078f078c70fb6dbd4dcad14c1a94e0a5930abb",
+    "match": true
+  },
+  {
+    "path": "src/render/toyFeatures.js",
+    "status": 200,
+    "sha256": "584f42da238a2f315ef01e54f1fc25931fc1416c246cdf311acdf50fd78ad055",
+    "match": true
+  },
+  {
+    "path": "src/render/toyHourglass.js",
+    "status": 200,
+    "sha256": "7538802a217d5514f5cc93cc8227a7caf3255e95c67be2ea502c3a551437df5a",
+    "match": true
+  },
+  {
+    "path": "src/render/toyWorld.js",
+    "status": 200,
+    "sha256": "dd0d8c3d122d77ffe0cd391132262b7bbf9eb0059f4412d394961b037047c0ce",
+    "match": true
+  },
+  {
+    "path": "src/ui/clearScreen.js",
+    "status": 200,
+    "sha256": "045edd66475cc67cd7a165c74bf7a296fa071bb5d2d0e4ea59565369a7d6093f",
+    "match": true
+  },
+  {
+    "path": "src/ui/featureHintPosition.js",
+    "status": 200,
+    "sha256": "4795085d957dbe4ffe5ce90aeee0f0c8ecfc847588d004105ee1443ba6803951",
+    "match": true
+  },
+  {
+    "path": "src/ui/floorPresentation.js",
+    "status": 200,
+    "sha256": "7cdd76a24fea48ea0cb16b7c692d325de8accc3e8a8a14474d6b53a9323e391d",
+    "match": true
+  },
+  {
+    "path": "src/ui/gameScreen.js",
+    "status": 200,
+    "sha256": "b904cb7f135b3c05ec3ae6225e41a0937b1a7dab388ac8467669b4a7bdf19f99",
+    "match": true
+  },
+  {
+    "path": "src/ui/guide.js",
+    "status": 200,
+    "sha256": "4164f467c75cf07099c703fd3b8c06fa622ffb5acd069edf630ef7463f873d84",
+    "match": true
+  },
+  {
+    "path": "src/ui/hpDisplay.js",
+    "status": 200,
+    "sha256": "5838f5231f8ad9948bc529c7ad4540c2e822a3eb6940ac7c3f5030a555fb3068",
+    "match": true
+  },
+  {
+    "path": "src/ui/runEndConfirm.js",
+    "status": 200,
+    "sha256": "c04ce133d8cd665a66ec5d07dac6eb0c12c8232ab329546db62a6364df6595d5",
+    "match": true
+  },
+  {
+    "path": "src/ui/runScreens.js",
+    "status": 200,
+    "sha256": "b3a548275900844e2666c729b02a91f4418a96fdc067dc97dad81067326e2ef4",
+    "match": true
+  },
+  {
+    "path": "src/ui/settingsScreen.js",
+    "status": 200,
+    "sha256": "13b4cab3a22b7231b956fa91fcedd0f6c76e9ac72597e134c54dac0e01a9cd4a",
+    "match": true
+  },
+  {
+    "path": "src/ui/titleScreen.js",
+    "status": 200,
+    "sha256": "6512a5f88e31b80251564fd1064e2ee1443204ccc3d04891824c56178c1b8a2b",
+    "match": true
+  },
+  {
+    "path": "src/ui/tutorial.js",
+    "status": 200,
+    "sha256": "37ba10af8811fb4bf94a35378124cf4811010e00ded9411c75c60fb07c6382a3",
+    "match": true
+  },
+  {
+    "path": "src/world/ballMaterials.js",
+    "status": 200,
+    "sha256": "cbbc1947deff1edb84a5b2eb812821fb05487ddcaafb4b9bc29af6bf936b739e",
+    "match": true
+  },
+  {
+    "path": "src/world/branchFloors.js",
+    "status": 200,
+    "sha256": "c25d7477280dd92c53a053c57a28013758766282395efdc8458e3a243c7b2cfe",
+    "match": true
+  },
+  {
+    "path": "src/world/characters.js",
+    "status": 200,
+    "sha256": "8737213edb88d48b8eab29877fb30e04b041341ba0b2282d89749aa430f3d18e",
+    "match": true
+  },
+  {
+    "path": "src/world/floorLearning.js",
+    "status": 200,
+    "sha256": "6671549ae0c20e30efd4d889503330987ff065f895fe5ea271b4729af115a0ec",
+    "match": true
+  },
+  {
+    "path": "src/world/floorPractice.js",
+    "status": 200,
+    "sha256": "398c3e0306a62a51ff5632e67c7aad5b6ca484283b0b2f45ae7207a03350254a",
+    "match": true
+  },
+  {
+    "path": "src/world/floorThemes.js",
+    "status": 200,
+    "sha256": "ad80c2679eea55061a78b9c45433c35ba010730304d3d61ca296db6712681140",
+    "match": true
+  },
+  {
+    "path": "src/world/materials.js",
+    "status": 200,
+    "sha256": "0136dbcaa4b662170be2e6a0703fe6818fa5bdc1848559d993b373c3b323137b",
+    "match": true
+  },
+  {
+    "path": "src/world/recovery.js",
+    "status": 200,
+    "sha256": "73017c2a4aed16e4aa089763e6a17a684656f9020a583bfc731567e54a984021",
+    "match": true
+  },
+  {
+    "path": "src/world/stage.js",
+    "status": 200,
+    "sha256": "37bb90234b4173852efa9b90f46a090409ab27dac11b15c7310d365790142a07",
+    "match": true
+  },
+  {
+    "path": "src/world/stageFeatures.js",
+    "status": 200,
+    "sha256": "b7bb2acebee470ee481711c73a8d08da6403ab09126b565f32fe2c08d1b190da",
+    "match": true
+  },
+  {
+    "path": "src/world/themes.js",
+    "status": 200,
+    "sha256": "2a3b35f33565babae91bfb2492ee97667081b9dd411fffa50b372b132c3986f9",
+    "match": true
+  },
+  {
+    "path": "src/world/tutorialStage.js",
+    "status": 200,
+    "sha256": "84386bde17a3b7933bd59ca0c2c1cb1bcdbdfb31d65574f4cf0346f7b0fdacac",
+    "match": true
+  },
+  {
+    "path": "style.css",
+    "status": 200,
+    "sha256": "a8c4e8088ca585adae27bed1d69d81ef6d2d9ae4917d19349827637df4554ef8",
+    "match": true
+  },
+  {
+    "path": "sw.js",
+    "status": 200,
+    "sha256": "0ddba9bc69f6e60556d03809afa56a119b2dd7a94f79e4b8c3c11061e44d74e9",
+    "match": true
+  }
+]

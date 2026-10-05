@@ -1,3 +1,10 @@
+# v0.6.18 次の面への待機1秒（2026-10-06）
+
+- 通常・特殊面の「次へ」を1秒後に有効化し、0.3秒で彩度を戻す。コンティニューの1秒と終了確認の取消は維持。[仕様](results-and-timing.md)。
+- ローカル18ケース・終了確認5経路・103資材の完全オフライン成功。キャッシュ`cb508eed4df56984`。[検証記録](verification/end-wait-one-second.md)。
+- アプリ`6bee2df`、[Pages37381379984成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37381379984)。公開106資材のHTTP200・SHA-256一致。[配信確認](verification/end-wait-one-second/deploy-hashes.json)。
+- 公開Chrome3幅・両難易度・音ON／OFFの12ケースと終了確認5経路が成功。公開103資材の完全オフラインでも本編3面、確認の取消、両おためしの操作・音を確認。[公開結果](verification/end-wait-one-second/public/results.json)、[公開オフライン](verification/end-wait-one-second/offline-public.txt)。
+
 # v0.6.17 終了ボタンの明記と確認（2026-10-05）
 
 - 「終了して結果を見る」と明記して確認を挟む。戻るを既定とし、取消で元の画面・成績・待機を保持。プレイ中は一時停止。回数切れと練習は従来どおり。[仕様](results-and-timing.md)。

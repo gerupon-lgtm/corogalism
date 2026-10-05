@@ -1,0 +1,242 @@
+[
+  {
+    "width": 320,
+    "level": "normal",
+    "soundEnabled": false,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "soundEnabled": true,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "soundEnabled": false,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "soundEnabled": true,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "soundEnabled": false,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "soundEnabled": true,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "soundEnabled": false,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "soundEnabled": true,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "soundEnabled": false,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "soundEnabled": true,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "soundEnabled": false,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "soundEnabled": true,
+    "clearWaitMs": 1000,
+    "continueWaitMs": 1000,
+    "disabledTapIgnored": true,
+    "labelsUnchanged": true,
+    "layoutStable": true,
+    "clearActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    },
+    "continueActivation": {
+      "duration": 300,
+      "midpoint": "grayscale(0.197597)",
+      "disabled": false
+    }
+  }
+]
