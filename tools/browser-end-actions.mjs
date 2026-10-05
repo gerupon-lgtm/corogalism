@@ -53,24 +53,47 @@ async function open(width,level,soundEnabled,{audioFailure=false,reduced=false}=
   await page.clock.runFor(waitMs/2);
   assert.equal(await button.isDisabled(),true);assert.equal(await button.textContent(),label);
   assert.ok(Number(await button.evaluate(b=>getComputedStyle(b).opacity))<1);
-  assert.notEqual(await button.evaluate(b=>getComputedStyle(b).filter),'none');
+  assert.equal(await button.evaluate(b=>getComputedStyle(b).filter),'grayscale(1)');
+  assert.ok(await page.locator('button:disabled').evaluateAll(buttons=>buttons
+   .filter(b=>b.getClientRects().length).every(b=>getComputedStyle(b).filter==='grayscale(1)')));
   if(shots)await page.screenshot({path:`${output}/${shots}-waiting.png`});
   await page.clock.runFor(waitMs/2-100);
   assert.equal(await button.isDisabled(),true,'有効化直前もタップを受け付けない');
   await page.clock.runFor(132);
+  const activation=await button.evaluate(b=>{
+   // ブラウザが作る実際の色の遷移を途中で止め、補間値を確認する。
+   // 仮想タイマーと描画時間のずれで、途中の色を取り逃がさない。
+   const filter=getComputedStyle(b).filter;
+   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return {reduced:true,filter,disabled:b.disabled};
+   const animation=b.getAnimations().find(a=>a.transitionProperty==='filter');
+   if(!animation)return {filter,disabled:b.disabled};
+   const duration=animation.effect.getTiming().duration;
+   animation.pause();animation.currentTime=duration/2;
+   const midpoint=getComputedStyle(b).filter;
+   animation.play();
+   return {duration,midpoint,disabled:b.disabled};
+  });
+  assert.equal(activation.disabled,false,'彩度が戻る途中から操作を受け付ける');
+  if(activation.reduced)assert.equal(activation.filter,'none');
+  else{
+   assert.equal(activation.duration,300);
+   const grayscale=Number(activation.midpoint?.match(/^grayscale\(([\d.]+)\)$/)?.[1]);
+   assert.ok(grayscale>0&&grayscale<1,JSON.stringify(activation));
+  }
   assert.equal(await button.isDisabled(),false);assert.equal(await button.textContent(),label);
   assert.equal(await button.evaluate(b=>b.classList.contains('is-waiting')),false);
   assert.deepEqual(await button.evaluate(b=>[b.offsetWidth,b.offsetHeight]),size,'切り替えでボタン寸法を変えない');
   if(focusOther)assert.equal(await page.evaluate(()=>document.activeElement.id),id==='btn-next'?'btn-clear-exit':'btn-run-end');
   else assert.equal(await page.evaluate(()=>document.activeElement.id),id);
-  await page.clock.runFor(160);
+  await page.clock.runFor(300);
   // CSSの描画時間は仮想のsetTimeoutと別に進むため、色の遷移も実時間で待つ。
-  await page.waitForTimeout(250);
+  await page.waitForTimeout(400);
   assert.equal(Number(await button.evaluate(b=>getComputedStyle(b).opacity)),1);
   assert.equal(await button.evaluate(b=>getComputedStyle(b).filter),'none');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   if(shots)await page.screenshot({path:`${output}/${shots}-ready.png`});
   assert.deepEqual(stable(await state()),stable(before));
+  return activation;
  }
  const close=async()=>{assert.deepEqual(errors,[]);await context.close();};
  return {page,state,click,ready,clear,fail,waitButton,close};
@@ -82,10 +105,10 @@ try{
   if(soundEnabled)await p.page.waitForFunction(()=>window.__corogalism.state.audio.loaded,null,{polling:50});
   await p.clear();
   const shots=level==='normal'&&soundEnabled?`${width}-clear`:undefined;
-  await p.waitButton('btn-next',2000,'次の面へ',{shots,focusOther:width===390&&level==='easy'&&!soundEnabled});
+  const clearActivation=await p.waitButton('btn-next',2000,'次の面へ',{shots,focusOther:width===390&&level==='easy'&&!soundEnabled});
   await p.click('btn-next');assert.equal((await p.state()).stageIndex,2);
   assert.ok((await p.state()).prepareMs>0);await p.ready();await p.fail();
-  await p.waitButton('btn-continue',1000,'コンティニュー',{shots:shots?`${width}-over`:undefined});
+  const continueActivation=await p.waitButton('btn-continue',1000,'コンティニュー',{shots:shots?`${width}-over`:undefined});
   await p.click('btn-continue');assert.equal((await p.state()).run.continuesLeft,1);
   assert.ok((await p.state()).prepareMs>1400);assert.equal((await p.state()).countdownMs,3000);
   if(width===390&&level==='normal'&&soundEnabled){
@@ -97,7 +120,7 @@ try{
    assert.equal(await p.page.locator('#btn-continue').evaluate(b=>b.classList.contains('is-waiting')),false);
    assert.equal(await p.page.evaluate(()=>document.activeElement.id),'btn-run-end');
   }
-  rows.push({width,level,soundEnabled,clearWaitMs:2000,continueWaitMs:1000,disabledTapIgnored:true,labelsUnchanged:true,layoutStable:true});
+  rows.push({width,level,soundEnabled,clearWaitMs:2000,continueWaitMs:1000,disabledTapIgnored:true,labelsUnchanged:true,layoutStable:true,clearActivation,continueActivation});
   console.log(JSON.stringify(rows.at(-1)));await p.close();
  }
  for(const [mode,start,label]of [['practice','btn-practice','次の迷路'],['tutorial','btn-tutorial-start','モード選択へ'],['floor-practice','btn-floor-practice','続けて試す']]){
