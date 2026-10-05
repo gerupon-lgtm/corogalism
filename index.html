@@ -23,7 +23,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.6.16</span>
+      <span class="badge">v0.6.17</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -205,6 +205,14 @@
 
 </div>
 <dialog id="play-guide" class="play-guide" aria-labelledby="guide-title"></dialog>
+<dialog id="run-end-confirm" class="play-guide end-run-confirm" aria-labelledby="end-confirm-title" aria-describedby="end-confirm-note">
+  <h2 id="end-confirm-title">ここで終了しますか？</h2>
+  <p id="end-confirm-note">ここまでの成績を確認できます。</p>
+  <div class="row">
+    <button class="primary" id="btn-end-cancel" type="button" autofocus>戻る</button>
+    <button class="ghost" id="btn-end-confirm" type="button">終了して結果を見る</button>
+  </div>
+</dialog>
 <script type="module" src="src/main.js"></script>
 </body>
 </html>

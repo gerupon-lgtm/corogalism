@@ -23,6 +23,7 @@ import { createGameScreen } from './ui/gameScreen.js';
 import { createClearScreen } from './ui/clearScreen.js';
 import { createSettingsScreen } from './ui/settingsScreen.js';
 import { createRunScreens } from './ui/runScreens.js';
+import { createRunEndConfirm } from './ui/runEndConfirm.js';
 
 const root = document;
 const find = (id) => root.querySelector(`#${id}`);
@@ -81,6 +82,7 @@ const floorContactGuide=createFloorContactGuide();
 let floorPracticeKind='normal';
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
+const endConfirm = createRunEndConfirm(root, finishRun);
 
 function initialSeed() {
   const q = new URLSearchParams(location.search).get('seed');
@@ -209,6 +211,7 @@ function updateHint() {
 }
 
 function showScreen(name) {
+  endConfirm.close();
   clearTimeout(endActionTimer);
   endActionTimer = null;
   restoreEndAction?.();
@@ -403,6 +406,15 @@ function finishRun() {
   showScreen('run-result');
 }
 
+function requestFinishRun(event) {
+  if (!['game', 'clear', 'over'].includes(screen)) return;
+  // すでに続けられない場合と練習は、従来どおりそのまま結果・モード選択へ。
+  if (!run || (screen === 'over' && !run.canContinue)) { finishRun(); return; }
+  if (screen === 'game' && !paused) setPaused(true);
+  // クリア・失敗の画面は切り替えない。元の待機とジングルを継続する。
+  endConfirm.open(event.currentTarget);
+}
+
 function frame(now) {
   const elapsedMs = Math.max(0, now - lastFrame);
   tutorial.tick(elapsedMs, screen === 'game' && !paused && countdownMs === 0 && gameMode === 'tutorial');
@@ -506,8 +518,8 @@ game.onPause(() => { if (screen === 'game') { setPaused(!paused); if (paused) so
 find('btn-resume').addEventListener('click', () => { if (screen === 'game' && paused) setPaused(false); });
 game.onCalibrate(calibrate);
 game.onSettings(() => toSettings(screen));
-find('btn-game-exit').addEventListener('click', finishRun);
-find('btn-clear-exit').addEventListener('click', finishRun);
+find('btn-game-exit').addEventListener('click', requestFinishRun);
+find('btn-clear-exit').addEventListener('click', requestFinishRun);
 clear.onRetry(() => { if (screen === 'clear' && !run) { if (gameMode === 'tutorial') startGame('tutorial', seed); else { loadStage(seed); showScreen('game'); } } });
 clear.onNext(() => {
   if (screen !== 'clear' || find('btn-next').disabled) return;
@@ -526,7 +538,7 @@ find('btn-continue').addEventListener('click', () => {
     sound.effect('continue');
   }
 });
-find('btn-run-end').addEventListener('click', finishRun);
+find('btn-run-end').addEventListener('click', requestFinishRun);
 find('btn-run-again').addEventListener('click', () => startGame('challenge', nextSeed()));
 find('btn-run-modes').addEventListener('click', showModes);
 settingsUi.onModeChange(applyMode);

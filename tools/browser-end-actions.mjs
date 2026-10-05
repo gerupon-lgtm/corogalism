@@ -147,8 +147,9 @@ try{
  await p.click('btn-challenge');await p.ready();await p.clear();
  await p.waitButton('btn-next',2000,'次の面へ');await p.click('btn-next');await p.ready();await p.fail();
  assert.equal((await p.state()).audio.context,'none');
- // 待機中の終了は即時。古いタイマーが別画面を戻したり、有効化したりしない。
- await p.click('btn-run-end');assert.equal((await p.state()).screen,'run-result');
+ // 待機中の終了は確認後に進む。古いタイマーが別画面を戻したり、有効化したりしない。
+ await p.click('btn-run-end');assert.equal(await p.page.locator('#run-end-confirm').evaluate(d=>d.open),true);
+ await p.click('btn-end-confirm');assert.equal((await p.state()).screen,'run-result');
  await p.page.clock.runFor(3000);assert.equal((await p.state()).screen,'run-result');
  assert.equal(await p.page.locator('#btn-continue').isDisabled(),true);
  assert.equal(await p.page.locator('#btn-continue').evaluate(b=>b.classList.contains('is-waiting')),false);

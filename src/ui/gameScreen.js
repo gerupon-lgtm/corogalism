@@ -63,7 +63,7 @@ export function createGameScreen(root) {
       root.querySelector('#play-mode-label').textContent = challenge ? 'CHALLENGE' : 'PRACTICE';
       root.querySelector('#hud-stage').textContent = `${stageIndex}面目`;
       root.querySelector('#hud-continues').textContent = `コンティニュー 残り${continuesLeft}回`;
-      el.querySelector('#btn-game-exit').textContent = challenge ? 'ランを終えて結果を見る' : 'モード選択へ戻る';
+      el.querySelector('#btn-game-exit').textContent = challenge ? '終了して結果を見る' : 'モード選択へ戻る';
       hpBlock.classList.remove('damaged');
       damageText.textContent = '';
       damageText.removeAttribute('aria-label');

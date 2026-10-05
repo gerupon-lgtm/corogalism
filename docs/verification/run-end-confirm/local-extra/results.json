@@ -1,0 +1,16 @@
+[
+  {
+    "playingExit": true,
+    "paused": true,
+    "timeAndHpFrozen": true,
+    "cancelKeepsPaused": true
+  },
+  {
+    "practiceExit": true,
+    "noConfirmation": true
+  },
+  {
+    "continuesExhausted": true,
+    "noConfirmation": true
+  }
+]

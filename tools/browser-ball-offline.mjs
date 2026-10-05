@@ -45,7 +45,10 @@ try{
  await p.mouse.down();await p.clock.runFor(400);await p.mouse.up();
  const mainActor=await p.evaluate(()=>window.__corogalism.state.actor);
  assert.ok(Math.hypot(mainActor.x-mainState.actor.x,mainActor.y-mainState.actor.y)>.001,'オフラインでも本編を実pointer操作');
- assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:{stage:3,branchSand,actor:mainActor}}));await c.close();
+ await p.locator('#btn-game-exit').click();assert.equal(await p.locator('#run-end-confirm').evaluate(d=>d.open),true);
+ await p.locator('#btn-end-cancel').click();assert.equal(await p.locator('#run-end-confirm').evaluate(d=>d.open),false);
+ assert.equal(await p.evaluate(()=>window.__corogalism.state.screen),'game');
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({offline:true,...cache,softBall:state.sound,impact:hit,glass,metal,wood,floorActor,main:{stage:3,branchSand,actor:mainActor,confirmationCancelled:true}}));await c.close();
  for(const source of ['export function resolveParams() {}','// ch.fieldK\nexport function resolveParams() {}']){
   const old=await b.newPage({serviceWorkers:'block'});await old.route('**/src/physics/resolveParams.js',route=>route.fulfill({contentType:'text/javascript',body:source}));
   await old.goto(base+'ball-lab.html?debug=1');await old.waitForFunction(()=>document.querySelector('#status').textContent.includes('更新が必要'));

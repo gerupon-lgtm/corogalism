@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'e214650bf9b68d63';
+self.PRECACHE_VERSION = 'd44def0c6dc1593f';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -85,6 +85,7 @@ self.PRECACHE_FILES = [
   "src/ui/gameScreen.js",
   "src/ui/guide.js",
   "src/ui/hpDisplay.js",
+  "src/ui/runEndConfirm.js",
   "src/ui/runScreens.js",
   "src/ui/settingsScreen.js",
   "src/ui/titleScreen.js",

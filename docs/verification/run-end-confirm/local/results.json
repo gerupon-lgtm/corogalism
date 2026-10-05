@@ -1,0 +1,134 @@
+[
+  {
+    "width": 320,
+    "level": "normal",
+    "soundEnabled": false,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 320,
+    "level": "normal",
+    "soundEnabled": true,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "soundEnabled": false,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 320,
+    "level": "easy",
+    "soundEnabled": true,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "soundEnabled": false,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 390,
+    "level": "normal",
+    "soundEnabled": true,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "soundEnabled": false,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 390,
+    "level": "easy",
+    "soundEnabled": true,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "soundEnabled": false,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 576,
+    "level": "normal",
+    "soundEnabled": true,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "soundEnabled": false,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  },
+  {
+    "width": 576,
+    "level": "easy",
+    "soundEnabled": true,
+    "clearCancelled": true,
+    "waitPreserved": true,
+    "overCancelled": true,
+    "continuesPreserved": true,
+    "confirmed": true,
+    "stageVisible": true
+  }
+]

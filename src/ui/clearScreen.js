@@ -23,7 +23,7 @@ export function createClearScreen(root) {
       el.querySelector('#clear-note').textContent = challenge
         ? `${v.stageIndex}面目${v.noDamage ? ' · ノーダメージ！' : ' · お見事！'}`
         : 'ゴールに到着！';
-      el.querySelector('#btn-clear-exit').textContent = challenge ? '結果を見る' : 'モード選択へ';
+      el.querySelector('#btn-clear-exit').textContent = challenge ? '終了して結果を見る' : 'モード選択へ';
       retryBtn.hidden = challenge;
       nextBtn.textContent = challenge ? '次の面へ' : '次の迷路';
       nextBtn.classList.add('primary');
