@@ -35,7 +35,7 @@ try{
  await p.locator('#btn-challenge').click();await p.clock.runFor(3800);
  for(let n=1;n<3;n++){
   await p.evaluate(()=>{const g=window.__corogalism.state.goal;window.__corogalism.teleport(g.x,g.y);});
-  await p.clock.runFor(1700);await p.locator('#btn-next').click();await p.clock.runFor(3800);
+  await p.clock.runFor(2200);await p.locator('#btn-next').click();await p.clock.runFor(3800);
  }
  const mainState=await p.evaluate(()=>window.__corogalism.state),mainSand=mainState.zones.find(z=>z.kind==='sand');
  const branchSand=mainSand.cells.filter(c=>!mainState.maze.path.some(q=>q.x===c.x&&q.y===c.y)).length;

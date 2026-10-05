@@ -4,6 +4,8 @@
 センサーが使えない場合は、盤面のタッチ／クリックで同じゲームを遊べます。
 Vanilla JavaScript・Canvas、ビルド不要。バックエンド・外部API・生成AIは使いません。
 
+v0.6.15では、ジングルを聞いて次へ進む間として「次の面へ」と「コンティニュー」に短い待機を追加しました。ボタン名はそのまま、色の変化だけで押せる状態に戻します。[仕様](docs/results-and-timing.md)、[検証・公開状態](docs/verification/end-actions.md)。
+
 v0.6.14ではルート上の体験箇所を残し、砂・力場・ひとやすみ・とりもちを脇道にも配置。取得アイテムはルート上です。複数のひとやすみの使用状態もコンティニューで引き継ぎます。[配置仕様](docs/floor-placement.md)、[検証・公開状態](docs/verification/branch-floors.md)、[LP用概要](docs/lp-overview.md)。
 
 v0.6.4では「はじめてのあそび方」で全素材を体験できます。やさしいの時間は最低40秒・床の初登場45秒＋面の負担に応じて加算。「床の練習」では5素材を時間制限なしで比較できます。[現行仕様](docs/tutorial-floors-and-time.md)、[検証](docs/verification/tutorial-floors.md)。

@@ -125,6 +125,9 @@ body.board-session .panel{padding:10px;gap:8px}
 .game-toast h2::before,.game-toast h2::after{content:'';width:7px;height:12px;flex:none;border-radius:3px;
   background:#f48858;transform:rotate(-35deg);box-shadow:-7px 6px 0 -2px #eab25d}
 .game-toast h2::after{transform:rotate(35deg);box-shadow:7px 6px 0 -2px #eab25d}
+.game-toast button{transition:opacity 160ms ease,filter 160ms ease}
+.game-toast button.is-waiting{opacity:.72;filter:saturate(.4);cursor:wait}
+.game-toast button.primary.is-waiting:active{transform:none}
 .game-toast .lead,.game-toast .note{margin:0;color:#855840;font-size:11px;line-height:1.4}
 .game-toast .row{display:flex;flex-direction:column-reverse;gap:2px}
 .game-toast button.primary,.game-toast #btn-run-end{flex:none;min-height:40px;padding:8px 5px;
@@ -135,8 +138,8 @@ body.board-session .panel{padding:10px;gap:8px}
 .game-toast button:focus-visible{outline:2px solid #743815;outline-offset:3px}
 .game-toast button.text-button,.game-toast #btn-run-end:not(:first-child){font-size:11px;color:#754b33;
   background:none;border:0;box-shadow:none;text-shadow:none;min-height:26px;padding:3px;text-decoration:none}
-.game-toast #btn-continue:disabled{display:none}
-.game-toast #btn-continue:disabled ~ #btn-run-end{background:linear-gradient(#ffb754,#ed761b);color:#fffaf0;
+.game-toast #btn-continue:disabled:not(.is-waiting){display:none}
+.game-toast #btn-continue:disabled:not(.is-waiting) ~ #btn-run-end{background:linear-gradient(#ffb754,#ed761b);color:#fffaf0;
   min-height:40px;border:1px solid #d86618;border-radius:999px;box-shadow:0 3px 0 #a9531c;font-size:14px}
 .game-toast .result{background:none;border:0;display:flex;justify-content:center;gap:12px;border-radius:0;order:0}
 .game-toast .result div{background:none;padding:0}

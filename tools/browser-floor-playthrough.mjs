@@ -12,7 +12,11 @@ try{for(const level of (process.env.PLAY_LEVEL?[process.env.PLAY_LEVEL]:['normal
  await p.clock.install();await p.clock.pauseAt(Date.now()+1000);
  await p.goto(base+'?debug=1&seed='+(process.env.PLAY_SEED||77));await p.waitForFunction(()=>!!window.__corogalism);
  const state=()=>p.evaluate(()=>window.__corogalism.state);
- const click=async id=>{await p.locator('#'+id).click();await p.clock.runFor(100);};
+ const click=async id=>{
+  const button=p.locator('#'+id);
+  if(id==='btn-next')for(let i=0;i<25&&await button.isDisabled();i++)await p.clock.runFor(100);
+  await button.click();await p.clock.runFor(100);
+ };
  const ready=async()=>{const s=await state();await p.clock.runFor(s.prepareMs+s.countdownMs+100);};
  await click('btn-challenge');await ready();
  for(let n=1;n<=Number(process.env.PLAY_STAGES||16);n++){

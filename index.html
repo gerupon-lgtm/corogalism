@@ -23,7 +23,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.6.14</span>
+      <span class="badge">v0.6.15</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -51,7 +51,7 @@
     <canvas id="canvas" aria-label="7×7の迷路。オレンジのビー玉を右下のカップへ導きます"></canvas>
     <div id="toast-layer" class="toast-layer" hidden>
   <section id="screen-clear" class="game-toast" role="region" aria-labelledby="clear-heading" hidden>
-    <h2><span id="clear-heading">クリア</span><span class="best-badge" id="clear-badge" hidden>自己ベスト更新</span></h2>
+      <h2 tabindex="-1"><span id="clear-heading">クリア</span><span class="best-badge" id="clear-badge" hidden>自己ベスト更新</span></h2>
     <dl class="result">
       <div><dt>タイム</dt><dd id="clear-time">—</dd></div>
       <div id="clear-best-field"><dt>自己ベスト</dt><dd id="clear-best">—</dd></div>
@@ -66,7 +66,7 @@
     <button class="text-button" id="btn-clear-exit" type="button">モード選択へ戻る</button>
   </section>
   <section id="screen-over" class="game-toast" role="region" aria-labelledby="over-heading" hidden>
-    <h2 id="over-heading">ゲームオーバー</h2>
+      <h2 id="over-heading" tabindex="-1">ゲームオーバー</h2>
     <p id="over-note" class="lead"></p>
     <dl class="result two-columns"><div><dt>クリア面数</dt><dd id="over-stages">0 面</dd></div><div><dt>合計クリアタイム</dt><dd id="over-time">0.00 秒</dd></div></dl>
     <button class="primary" id="btn-continue" type="button">コンティニュー</button>

@@ -72,6 +72,8 @@ let countdownMs = 0;
 let prepareMs = 0;
 let audibleCountdown = null;
 let lastFrame = performance.now();
+let endActionTimer = null;
+let restoreEndAction = null;
 let shield = { value: 0 };
 const tutorial = createTutorialUi();
 const floorPresentation=createFloorPresentation(root);
@@ -207,6 +209,10 @@ function updateHint() {
 }
 
 function showScreen(name) {
+  clearTimeout(endActionTimer);
+  endActionTimer = null;
+  restoreEndAction?.();
+  restoreEndAction = null;
   const previousScreen = screen;
   if (previousScreen !== name && manualCalibration) {
     manualCalibration = false;
@@ -248,8 +254,29 @@ function showScreen(name) {
   else if (previousScreen === 'settings') window.scrollTo(0, settingsUi.returnScroll || 0);
   // focus()の既定スクロールを抑え、トースト内から操作を続けられるようにする。
   if (ended) {
-    const button = name === 'clear' ? find('btn-next') : find('btn-continue').disabled ? find('btn-run-end') : find('btn-continue');
-    button.focus({ preventScroll: true });
+    const canAdvance = name === 'clear' || run?.canContinue;
+    if (canAdvance) {
+      const button = name === 'clear' ? find('btn-next') : find('btn-continue');
+      const heading = find(`screen-${name}`).querySelector('h2');
+      const waitMs = name === 'over' ? UI.continueButtonWaitMs
+        : play.stage.theme?.special ? UI.specialClearButtonWaitMs : UI.clearButtonWaitMs;
+      button.disabled = true;
+      button.classList.add('is-waiting');
+      restoreEndAction = () => {
+        button.classList.remove('is-waiting');
+      };
+      heading.focus({ preventScroll: true });
+      // 音OFF・読込失敗でも待機は終わる。別画面へ移るとshowScreenで取り消す。
+      endActionTimer = setTimeout(() => {
+        endActionTimer = null;
+        restoreEndAction?.();
+        restoreEndAction = null;
+        if (screen !== name || (name === 'over' && !run?.canContinue)) return;
+        button.disabled = false;
+        // 待機中にほかの操作へ移った人からフォーカスを奪わない。
+        if (document.activeElement === heading || document.activeElement === document.body) button.focus({ preventScroll: true });
+      }, waitMs);
+    } else find('btn-run-end').focus({ preventScroll: true });
   } else if (boardSession && ['clear', 'over'].includes(previousScreen)) {
     find('btn-pause').focus({ preventScroll: true });
   }
@@ -482,10 +509,15 @@ game.onSettings(() => toSettings(screen));
 find('btn-game-exit').addEventListener('click', finishRun);
 find('btn-clear-exit').addEventListener('click', finishRun);
 clear.onRetry(() => { if (screen === 'clear' && !run) { if (gameMode === 'tutorial') startGame('tutorial', seed); else { loadStage(seed); showScreen('game'); } } });
-clear.onNext(() => { if (screen === 'clear' && gameMode === 'tutorial') { showModes(); return; } if (screen === 'clear') { loadStage(run ? run.currentSeed() : gameMode==='floor-practice'?seed:nextSeed()); showScreen('game'); } });
+clear.onNext(() => {
+  if (screen !== 'clear' || find('btn-next').disabled) return;
+  if (gameMode === 'tutorial') { showModes(); return; }
+  loadStage(run ? run.currentSeed() : gameMode==='floor-practice'?seed:nextSeed());
+  showScreen('game');
+});
 find('btn-continue').addEventListener('click', () => {
   const alreadyContinued = run?.usedContinue;
-  if (screen === 'over' && run?.useContinue()) {
+  if (screen === 'over' && !find('btn-continue').disabled && run?.useContinue()) {
     if (!alreadyContinued) recordStatus = null;
     saveRunProgress();
     loadStage(run.currentSeed(), UI.continueBeforeCountdownMs, { leafCollected: play.stage.leaf?.collected,
