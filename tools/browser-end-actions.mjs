@@ -18,7 +18,7 @@ async function open(width,level,soundEnabled,{audioFailure=false,reduced=false}=
  },{level,soundEnabled,audioFailure});
  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.clock.install();await page.clock.pauseAt(Date.now()+1000);
- await page.goto(base+'?debug=1&seed=123');await page.waitForFunction(()=>!!window.__corogalism);
+ await page.goto(base+'?debug=1&seed=123');await page.waitForFunction(()=>!!window.__corogalism,null,{polling:50});
  assert.equal(await page.locator('.badge').textContent(),'v'+version);
  await page.evaluate(()=>document.fonts.ready);
  const state=()=>page.evaluate(()=>window.__corogalism.state);
@@ -105,7 +105,7 @@ try{
   if(soundEnabled)await p.page.waitForFunction(()=>window.__corogalism.state.audio.loaded,null,{polling:50});
   await p.clear();
   const shots=level==='normal'&&soundEnabled?`${width}-clear`:undefined;
-  const clearActivation=await p.waitButton('btn-next',2000,'次の面へ',{shots,focusOther:width===390&&level==='easy'&&!soundEnabled});
+  const clearActivation=await p.waitButton('btn-next',1000,'次の面へ',{shots,focusOther:width===390&&level==='easy'&&!soundEnabled});
   await p.click('btn-next');assert.equal((await p.state()).stageIndex,2);
   assert.ok((await p.state()).prepareMs>0);await p.ready();await p.fail();
   const continueActivation=await p.waitButton('btn-continue',1000,'コンティニュー',{shots:shots?`${width}-over`:undefined});
@@ -120,16 +120,17 @@ try{
    assert.equal(await p.page.locator('#btn-continue').evaluate(b=>b.classList.contains('is-waiting')),false);
    assert.equal(await p.page.evaluate(()=>document.activeElement.id),'btn-run-end');
   }
-  rows.push({width,level,soundEnabled,clearWaitMs:2000,continueWaitMs:1000,disabledTapIgnored:true,labelsUnchanged:true,layoutStable:true,clearActivation,continueActivation});
+  rows.push({width,level,soundEnabled,clearWaitMs:1000,continueWaitMs:1000,disabledTapIgnored:true,labelsUnchanged:true,layoutStable:true,clearActivation,continueActivation});
   console.log(JSON.stringify(rows.at(-1)));await p.close();
  }
+ if(process.env.END_ACTION_CORE_ONLY!=='1'){
  for(const [mode,start,label]of [['practice','btn-practice','次の迷路'],['tutorial','btn-tutorial-start','モード選択へ'],['floor-practice','btn-floor-practice','続けて試す']]){
   const p=await open(390,'easy',false);
   if(mode==='tutorial')await p.click('btn-tutorial');
   await p.click(start);await p.ready();await p.clear();
-  await p.waitButton('btn-next',2000,label);await p.click('btn-next');
+  await p.waitButton('btn-next',1000,label);await p.click('btn-next');
   assert.equal((await p.state()).screen,mode==='tutorial'?'mode':'game');
-  rows.push({mode,clearWaitMs:2000,labelsUnchanged:true});await p.close();
+  rows.push({mode,clearWaitMs:1000,labelsUnchanged:true});await p.close();
  }
  for(const soundEnabled of [false,true]){
   const p=await open(390,'normal',soundEnabled);await p.click('btn-challenge');await p.ready();
@@ -138,14 +139,14 @@ try{
    assert.equal((await p.state()).stageIndex,n);await p.clear();
    const special=(await p.state()).theme.special;
    if(n===10){assert.equal(special,true);if(soundEnabled)assert.ok((await p.state()).audio.events.includes('flowGoal'));}
-   await p.waitButton('btn-next',special?650:2000,'次の面へ');
+   await p.waitButton('btn-next',1000,'次の面へ');
    await p.click('btn-next');await p.ready();
   }
-  rows.push({specialFlow:true,soundEnabled,clearWaitMs:650,nextStage:11});await p.close();
+  rows.push({specialFlow:true,soundEnabled,clearWaitMs:1000,nextStage:11});await p.close();
  }
  const p=await open(390,'easy',true,{audioFailure:true,reduced:true});
  await p.click('btn-challenge');await p.ready();await p.clear();
- await p.waitButton('btn-next',2000,'次の面へ');await p.click('btn-next');await p.ready();await p.fail();
+ await p.waitButton('btn-next',1000,'次の面へ');await p.click('btn-next');await p.ready();await p.fail();
  assert.equal((await p.state()).audio.context,'none');
  // 待機中の終了は確認後に進む。古いタイマーが別画面を戻したり、有効化したりしない。
  await p.click('btn-run-end');assert.equal(await p.page.locator('#run-end-confirm').evaluate(d=>d.open),true);
@@ -153,6 +154,7 @@ try{
  await p.page.clock.runFor(3000);assert.equal((await p.state()).screen,'run-result');
  assert.equal(await p.page.locator('#btn-continue').isDisabled(),true);
  assert.equal(await p.page.locator('#btn-continue').evaluate(b=>b.classList.contains('is-waiting')),false);
- rows.push({audioFailure:true,reducedMotion:true,clearWaitMs:2000,earlyExit:true,timerCancelled:true});await p.close();
+ rows.push({audioFailure:true,reducedMotion:true,clearWaitMs:1000,earlyExit:true,timerCancelled:true});await p.close();
+ }
  console.log(JSON.stringify({cases:rows.length,result:'pass'}));
 }finally{await writeFile(`${output}/results.json`,JSON.stringify(rows,null,2)+'\n');await browser.close();}

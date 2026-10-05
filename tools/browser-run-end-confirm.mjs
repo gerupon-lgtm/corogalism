@@ -8,6 +8,8 @@ const output=process.env.END_CONFIRM_OUTPUT||'docs/verification/run-end-confirm/
 await mkdir(output,{recursive:true});
 const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const rows=[];
+const widths=(process.env.END_CONFIRM_WIDTHS||'320,390,576').split(',').map(Number);
+const levels=(process.env.END_CONFIRM_LEVELS||'normal,easy').split(',');
 async function open(width,level,soundEnabled){
  const context=await browser.newContext({viewport:{width,height:width===320?568:width===576?1024:844},serviceWorkers:'block'});
  await context.addInitScript(({level,soundEnabled})=>{
@@ -43,13 +45,13 @@ async function open(width,level,soundEnabled){
  return {page,state,click,ready,clear,fail,stable,isOpen,modal,close};
 }
 try{
- if(!process.env.END_CONFIRM_EXTRA_ONLY)for(const width of [320,390,576])for(const level of ['normal','easy'])for(const soundEnabled of [false,true]){
+ if(!process.env.END_CONFIRM_EXTRA_ONLY)for(const width of widths)for(const level of levels)for(const soundEnabled of [false,true]){
   const p=await open(width,level,soundEnabled);await p.click('btn-challenge');await p.ready();
   assert.equal(await p.page.locator('#hud-stage').textContent(),'1面目');assert.equal(await p.page.locator('#hud-stage').isVisible(),true);
   await p.clear();const cleared=p.stable(await p.state());
   assert.equal(await p.page.locator('#btn-clear-exit').textContent(),'終了して結果を見る');
   await p.click('btn-clear-exit');await p.modal();assert.deepEqual(p.stable(await p.state()),cleared);
-  await p.page.clock.runFor(900);assert.equal(await p.page.locator('#btn-next').isDisabled(),true);
+  await p.page.clock.runFor(400);assert.equal(await p.page.locator('#btn-next').isDisabled(),true);
   if(level==='normal'&&soundEnabled)await p.page.screenshot({path:`${output}/${width}-clear-confirm.png`});
   await p.page.keyboard.press('Enter');assert.equal(await p.isOpen(),false,'既定のEnterは戻る');
   await p.page.waitForFunction(()=>document.activeElement.id==='btn-clear-exit');
@@ -60,7 +62,7 @@ try{
   assert.deepEqual(p.stable(await p.state()),cleared);
   await p.page.keyboard.press('Escape');assert.equal(await p.isOpen(),false);
   await p.page.waitForFunction(()=>document.activeElement.id==='btn-clear-exit');
-  await p.page.clock.runFor(1150);assert.equal(await p.page.locator('#btn-next').isDisabled(),false,'取り消しても元の待機をリセットしない');
+  await p.page.clock.runFor(650);assert.equal(await p.page.locator('#btn-next').isDisabled(),false,'取り消しても元の待機をリセットしない');
   assert.deepEqual(p.stable(await p.state()),cleared);
   await p.click('btn-next');assert.equal((await p.state()).stageIndex,2);assert.equal(await p.page.locator('#hud-stage').textContent(),'2面目');await p.ready();await p.fail();
   const failed=p.stable(await p.state());await p.click('btn-run-end');await p.modal();
