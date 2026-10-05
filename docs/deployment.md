@@ -1,3 +1,10 @@
+# v0.6.15 ジングルを聞く間（2026-10-05）
+
+- 通常クリア2秒、光の滑走路0.65秒、コンティニュー1秒のボタン待機を追加。文字・寸法を保ち、控えめな色の変化だけを使う。待機中のコンティニュー非表示を防ぎ、回数切れと区別。[仕様](results-and-timing.md)。
+- 22テスト・ローカル3幅を含む18ケース、実pointerで通常／やさしい各3面クリア、102資材の完全オフライン成功。キャッシュ`68d971c033ccf957`。[検証記録](verification/end-actions.md)。
+- アプリ`2273c08`、[Pages37294857846成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37294857846)。公開105資材のHTTP200・SHA-256一致。[配信ファイル](verification/end-actions/deploy-hashes.json)。
+- 公開Chromeでも3幅を含む18ケース成功。102資材の完全オフラインで両おためしと本編への初回移動、待機後の次面移動、操作・音を確認。[公開結果](verification/end-actions/public/results.json)、[公開オフライン](verification/end-actions/offline-public.txt)。
+
 # v0.6.14 特殊床を脇道にも配置（2026-10-04）
 
 - 既存のルート上の床を残し、砂・重力・反重力・ひとやすみ・とりもちを脇道にも配置。取得アイテムはルート上。複数ひとやすみの使用状態をコンティニューでも引き継ぐ。[配置仕様](floor-placement.md)。
