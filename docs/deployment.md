@@ -1,3 +1,10 @@
+# v0.6.16 無効ボタンの色を滑らかに戻す（2026-10-05）
+
+- 無効なボタンを完全なグレースケールにし、有効化から300msで彩度を戻す。途中から操作可能。ジングルを聞く待機時間とボタン名・寸法は維持。[仕様](results-and-timing.md)。
+- ローカルChrome3幅を含む18ケース、102資材の完全オフライン成功。キャッシュ`e214650bf9b68d63`。[検証記録](verification/end-grayscale.md)。
+- アプリ`8403bb5`、[Pages37300298613成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37300298613)。公開105資材のHTTP200・SHA-256一致。[配信確認](verification/end-grayscale/deploy-hashes.json)。
+- 公開Chrome18ケースでも彩度の途中値と操作成功。102資材の完全オフラインで両おためし・本編への初回移動、次面移動、操作・音を確認。[公開結果](verification/end-grayscale/public/results.json)、[公開オフライン](verification/end-grayscale/offline-public.txt)。
+
 # v0.6.15 ジングルを聞く間（2026-10-05）
 
 - 通常クリア2秒、光の滑走路0.65秒、コンティニュー1秒のボタン待機を追加。文字・寸法を保ち、控えめな色の変化だけを使う。待機中のコンティニュー非表示を防ぎ、回数切れと区別。[仕様](results-and-timing.md)。
