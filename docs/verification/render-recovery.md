@@ -38,7 +38,17 @@ CPU負荷6倍・画素倍率1／3の8条件で描画時間中央値0.6〜3.0ms�
 
 ローカル103資材の完全オフラインで、本編3面・脇道の砂・終了確認の取消・両おためしの操作と音が成功。旧物理・旧氷処理の混在防止4経路も成功。[オフライン結果](render-recovery/offline-local.txt)。
 
-公開結果は完了時に追記する。
+## 公開確認
+
+アプリ`7791dd5`、[Pages37445414686成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37445414686)。正式URL https://corogalism.sikumilab.com/ 。公開106資材はHTTP200・SHA-256がローカルと一致。[配信結果](render-recovery/deploy-hashes.json)。
+
+公開Chromeでも同じ100条件の倍率・画素一致・残像なしが成功。通知なし・画素倍率1の5診断条件も分けて保持している。[公開描画比較](render-recovery/public/recovery.json)。
+
+公開本編12面は390幅・通常・実pointer、576幅・やさしい・模擬センサーの2条件が成功。復元前後の画素差0、成績と球の状態保持、復元後の移動・BGM・画面寸法変更を確認。[公開本編結果](render-recovery/game-public/results.json)、[公開のやさしい12面](render-recovery/game-public/576-easy-tilt-12.png)。
+
+公開103資材の完全オフラインも、本編3面・両おためしの実操作と音・確認の取消・旧処理の混在防止4経路が成功。[公開オフライン](render-recovery/offline-public.txt)。
+
+実端末での発生契機と、同じ端末での再発有無は引き続きユーザーの試遊で確認する。
 
 ## 再実行
 

@@ -1,3 +1,10 @@
+# v0.6.19 描画復元時の縮小・残像（2026-10-06）
+
+- 2D描画領域復元後に倍率と保存画像を作り直し、前の球を消す。音・物理・迷路・時間・次面待機は維持。[修正と検証](verification/render-recovery.md)。
+- 176テスト、ローカル100条件の描画比較・本編12面5条件・CPU負荷6倍の処理時間・103資材オフライン成功。キャッシュ`d95966363629c26e`。
+- アプリ`7791dd5`、[Pages37445414686成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37445414686)。公開106資材HTTP200・SHA-256一致。[配信結果](verification/render-recovery/deploy-hashes.json)。
+- 公開100条件の描画比較、本編12面の通常pointer／やさしい模擬センサー2条件、状態保持・移動・BGM・画面寸法変更、103資材の完全オフラインも成功。[公開本編](verification/render-recovery/game-public/results.json)、[公開オフライン](verification/render-recovery/offline-public.txt)。実端末での初期化の契機は未確認。
+
 # v0.6.18 次の面への待機1秒（2026-10-06）
 
 - 通常・特殊面の「次へ」を1秒後に有効化し、0.3秒で彩度を戻す。コンティニューの1秒と終了確認の取消は維持。[仕様](results-and-timing.md)。

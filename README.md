@@ -4,6 +4,8 @@
 センサーが使えない場合は、盤面のタッチ／クリックで同じゲームを遊べます。
 Vanilla JavaScript・Canvas、ビルド不要。バックエンド・外部API・生成AIは使いません。
 
+v0.6.19では、描画領域の復元後に盤面が縮小し、球の残像が連なる問題へ対応しました。同じ画面寸法でも倍率と保存した盤面を復元します。176テスト・ローカルと公開の描画比較・12面の操作・音・オフラインを確認済みです。実端末での初期化の契機は未確認です。[修正と確認範囲](docs/verification/render-recovery.md)。
+
 v0.6.18では、次の面への待機を1秒に揃えました。1秒後から操作でき、そこから0.3秒で彩度が戻ります。[仕様](docs/results-and-timing.md)、[検証・公開状態](docs/verification/end-wait-one-second.md)。
 
 v0.6.17では、「終了して結果を見る」と明記し、終了前に確認を挟みます。「戻る」で元の画面へ戻れ、待機時間と成績を保ちます。チャレンジ中の「○面目」表示も維持しています。[仕様](docs/results-and-timing.md)、[検証・公開状態](docs/verification/run-end-confirm.md)。
@@ -22,11 +24,11 @@ v0.6.10の「おためし5」では、木が壁に当たる音を短く乾いた
 |---|---|
 | フェーズ0（操作感） | 合格。Pixel 6a / iPhone XRで過去に確認済み |
 | フェーズ1（迷路生成・タイムアタック） | 完了・公開済み（従来の引き継ぎ記録） |
-| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.18公開済み。次の面への待機は1秒＋彩度復帰0.3秒。検証記録はdocs/verification/end-wait-one-second.md、実機の体感評価はdocs/remaining-work.md** |
+| フェーズ2（HP・素材・ラン・制限時間） | **v0.6.19公開済み。描画復元時の縮小・残像へ対応。次面待機は1秒＋彩度復帰0.3秒を維持。検証記録はdocs/verification/render-recovery.md、実機の体感評価はdocs/remaining-work.md** |
 
 このフォルダをGit初期化し、既存のリモート履歴に接続してフェーズ2をmainへpushしました。
 リポジトリは [gerupon-lgtm/corogalism](https://github.com/gerupon-lgtm/corogalism)、
-公開先は [コロガリズム](https://corogalism.sikumilab.com/)（GitHub Pages）。公開版v0.6.18の106資材一致を確認済みです（2026-10-06）。ブラウザ動作の結果は[最新の検証記録](docs/verification/end-wait-one-second.md)、詳細は [デプロイ記録](docs/deployment.md)。
+公開先は [コロガリズム](https://corogalism.sikumilab.com/)（GitHub Pages）。公開版v0.6.19の106資材一致を確認済みです（2026-10-06）。ブラウザ動作の結果は[最新の検証記録](docs/verification/render-recovery.md)、詳細は [デプロイ記録](docs/deployment.md)。
 
 ## 起動と検証
 
