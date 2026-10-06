@@ -1,3 +1,11 @@
+# v0.6.21 迷路の緩急と表示修正（2026-10-07）
+
+- 7/8/9/11/13の大小と5種類の自動生成形状を混ぜ、100面以降も緩急を保つ。後半一律難化なし、時間・初期げんきは既存計算。既存素材を使用し、旧記録を保持して新構成と分離。[仕様](maze-variation.md)。
+- 機能版v0.6.20は185テスト、384操縦条件（316クリア・68失敗も保存）、一定傾き51,840条件で反発前の直行ゴールなし。公開実pointer48面クリア。v0.6.21は長い面名の重なりと固定7×7の読み上げを修正。[確認範囲](verification/maze-variation.md)。
+- アプリ`284000c`、[Pages37511632102成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37511632102)。キャッシュ`33986fd9e8dec901`・106資材。公開109資材HTTP200・SHA-256一致。[配信結果](verification/maze-variation/v0621/deploy-hashes.json)。
+- ローカル本編12面5条件の復元・入力・BGM・寸法変更と完全オフライン成功。公開3幅で長い面名の折り返しと操作ボタンの位置を確認。公開本編12面の通常pointer／やさしい模擬センサー2条件と可変盤面の描画100条件、106資材の完全オフラインも成功。[公開本編](verification/maze-variation/v0621/render-public/results.json)、[公開復元](verification/maze-variation/v0621/recovery-public/recovery.json)、[公開オフライン](verification/maze-variation/v0621/offline-public.json)。実端末の滑らかさと長時間の面白さは未確認。
+- 機能版v0.6.20は`dbb648e`、[Pages37507765827成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37507765827)。[公開48面](verification/maze-variation/v0620/game-public/results.json)と[109資材一致](verification/maze-variation/v0620/deploy-hashes.json)を版ごとに保存。両おためしの物理とrevision7／9は維持し、表示版はv0.6.21。
+
 # v0.6.19 描画復元時の縮小・残像（2026-10-06）
 
 - 2D描画領域復元後に倍率と保存画像を作り直し、前の球を消す。音・物理・迷路・時間・次面待機は維持。[修正と検証](verification/render-recovery.md)。

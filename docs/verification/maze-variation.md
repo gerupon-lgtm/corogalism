@@ -50,7 +50,7 @@ Nodeは最大5ファイルずつ、33ファイルの185テスト成功：[実行
 
 本編12面のローカル5条件はすべて画像変化0、倍率・状態保持・pointer／模擬センサーでの移動・BGM・リサイズを確認：[画面別結果](maze-variation/v0620/render-local/results.json)。ローカルの106資材キャッシュ（`af86a9027855da68`）で未訪問の設定付き両おためし・本編へ完全オフラインで移動し、素材の実入力・音、本編3面への進行・終了確認取消・旧物理混在案内4経路を確認：[オフライン結果](maze-variation/v0620/offline-local.json)。
 
-アプリ`dbb648e`、[Pages37507765827](https://github.com/gerupon-lgtm/corogalism/actions/runs/37507765827)成功。公開109資材（106キャッシュ資材＋precache・SW・package）がすべてHTTP200・SHA-256一致：[配信結果](maze-variation/v0620/deploy-hashes.json)。正式URLの操作・復元・オフラインの追加結果は完了後に追記する。実端末の長時間試遊・読みやすさ・気持ちよさは未確認。
+機能版v0.6.20のアプリ`dbb648e`、[Pages37507765827](https://github.com/gerupon-lgtm/corogalism/actions/runs/37507765827)成功。公開109資材（106キャッシュ資材＋precache・SW・package）がすべてHTTP200・SHA-256一致：[配信結果](maze-variation/v0620/deploy-hashes.json)。表示修正後の公開結果は下記。実端末の長時間試遊・読みやすさ・気持ちよさは未確認。
 
 ## v0.6.21 表示の追加修正
 
@@ -58,6 +58,14 @@ v0.6.20の公開画面で、長い面名が音・ポーズのボタンへ重な�
 
 `tools/browser-stage-labels.mjs` はゲーム画面の表示を待ってから長い面名を入れる。修正前の320幅で文字184pxが領域118.4pxを超えて[失敗](maze-variation/v0621/labels-before/results.json)することを確認。修正後は320・390・576幅で折り返し、ボタンとの重なりと横のはみ出しがない：[表示比較](maze-variation/v0621/labels-local/results.json)。
 
-v0.6.21の実際の12面もローカル5条件で面名・読み上げ・画像復元・状態保持・音・入力・リサイズを確認し、すべて画像変化0：[本編表示](maze-variation/v0621/render-local/results.json)。この確認の1〜11面は診断用の位置移動で進め、プレイ成功率として扱わない。v0.6.20の185テストと公開実pointer48面は計算が同じ機能版の証跡で、v0.6.21の表示検証と分けて保存する。公開確認は追加で記録する。
+v0.6.21の実際の12面もローカル5条件で面名・読み上げ・画像復元・状態保持・音・入力・リサイズを確認し、すべて画像変化0：[本編表示](maze-variation/v0621/render-local/results.json)。この確認の1〜11面は診断用の位置移動で進め、プレイ成功率として扱わない。v0.6.20の185テストと公開実pointer48面は計算が同じ機能版の証跡で、v0.6.21の表示検証と分けて保存する。公開結果は下記に記録する。
 
 v0.6.21の新キャッシュ`33986fd9e8dec901`は106資材。ローカルの完全オフラインで両おためしの未訪問設定URL・入力・音、本編3面・終了確認取消・旧物理混在案内4経路を確認：[保存と操作](maze-variation/v0621/offline-local.json)。
+
+表示修正版のアプリ`284000c`、[Pages37511632102](https://github.com/gerupon-lgtm/corogalism/actions/runs/37511632102)成功。公開109資材すべてHTTP200・SHA-256一致：[v0.6.21配信結果](maze-variation/v0621/deploy-hashes.json)。公開3幅も長い面名とボタンが重ならず、横のはみ出しなし：[公開表示](maze-variation/v0621/labels-public/results.json)。
+
+公開本編12面も通常pointer・やさしい模擬センサーの2条件で、画像変化0・倍率・状態保持・音・入力・リサイズと面名／読み上げを確認：[公開本編](maze-variation/v0621/render-public/results.json)。
+
+公開の可変盤面も105ケースのうち復元の信号がない5診断を別記し、100条件で倍率・盤面全体・球・残像を確認：[公開復元](maze-variation/v0621/recovery-public/recovery.json)。ローカル／旧版との比較と同じ14条件で最大12画素・チャンネル差1の丸め差を記録し、上記の明示した許容で判定した。信号のない5診断は成功数へ含めない。
+
+公開URLから新キャッシュ106資材を保存し、通信を完全に切って、両おためしの未訪問設定URL・実pointer入力・音、本編3面への進行・終了確認取消、旧物理と旧氷処理の混在案内4経路を確認：[公開オフライン](maze-variation/v0621/offline-public.json)。公開ファイルと画面の確認を完了。実端末での長時間の楽しさ・センサーの感触・処理負荷は引き続き試遊の対象とする。

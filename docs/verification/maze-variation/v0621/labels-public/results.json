@@ -1,0 +1,29 @@
+[
+  {
+    "width": 320,
+    "labelWidth": 115.28125,
+    "labelScroll": 115,
+    "labelRight": 125.28125,
+    "actionsLeft": 135.28125,
+    "actionsRight": 310,
+    "pageWidth": 320
+  },
+  {
+    "width": 390,
+    "labelWidth": 180.40625,
+    "labelScroll": 180,
+    "labelRight": 194.40625,
+    "actionsLeft": 204.40625,
+    "actionsRight": 376,
+    "pageWidth": 390
+  },
+  {
+    "width": 576,
+    "labelWidth": 270.40625,
+    "labelScroll": 270,
+    "labelRight": 332.40625,
+    "actionsLeft": 342.40625,
+    "actionsRight": 514,
+    "pageWidth": 576
+  }
+]
