@@ -7,10 +7,10 @@
       "test/ballRotation.test.js",
       "test/branch-floors.test.js"
     ],
-    "tests": 25,
-    "passed": 25,
+    "elapsedMs": 7174,
     "exitCode": 0,
-    "elapsedMs": 6806
+    "tests": 25,
+    "passed": 25
   },
   {
     "files": [
@@ -20,10 +20,10 @@
       "test/exploration.test.js",
       "test/feature-hint-position.test.js"
     ],
-    "tests": 21,
-    "passed": 21,
+    "elapsedMs": 2082,
     "exitCode": 0,
-    "elapsedMs": 2104
+    "tests": 21,
+    "passed": 21
   },
   {
     "files": [
@@ -33,10 +33,10 @@
       "test/floor-lab.test.js",
       "test/floor-learning.test.js"
     ],
-    "tests": 27,
-    "passed": 27,
+    "elapsedMs": 2963,
     "exitCode": 0,
-    "elapsedMs": 3503
+    "tests": 27,
+    "passed": 27
   },
   {
     "files": [
@@ -46,10 +46,10 @@
       "test/hourglass.test.js",
       "test/hp-display.test.js"
     ],
-    "tests": 14,
-    "passed": 14,
+    "elapsedMs": 1499,
     "exitCode": 0,
-    "elapsedMs": 1561
+    "tests": 14,
+    "passed": 14
   },
   {
     "files": [
@@ -59,10 +59,10 @@
       "test/open-floor-pacing.test.js",
       "test/phase2.test.js"
     ],
-    "tests": 53,
-    "passed": 53,
+    "elapsedMs": 749,
     "exitCode": 0,
-    "elapsedMs": 761
+    "tests": 54,
+    "passed": 54
   },
   {
     "files": [
@@ -72,10 +72,10 @@
       "test/rubber-rebound.test.js",
       "test/stableCalibration.test.js"
     ],
-    "tests": 28,
-    "passed": 28,
+    "elapsedMs": 409,
     "exitCode": 0,
-    "elapsedMs": 413
+    "tests": 28,
+    "passed": 28
   },
   {
     "files": [
@@ -84,9 +84,9 @@
       "test/tutorial.test.js",
       "test/wall-clearance.test.js"
     ],
-    "tests": 23,
-    "passed": 23,
+    "elapsedMs": 1156,
     "exitCode": 0,
-    "elapsedMs": 1138
+    "tests": 23,
+    "passed": 23
   }
 ]

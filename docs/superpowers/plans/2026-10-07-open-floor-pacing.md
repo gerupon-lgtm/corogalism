@@ -35,7 +35,7 @@
 
 **Files:** src/world/openFields.js、新src/world/openFloors.js、src/world/floorThemes.js、src/world/stageFeatures.js、test/open-floor-pacing.test.js。
 
-**Interfaces:** spreadOpenSand(maze,cells)、placeOpenFields(stage)、addOpenFeatures(stage)。通常迷路には作用しない。
+**Interfaces:** spreadOpenSand(maze,cells)、placeOpenFields(stage)、addOpenFeatures(stage,{restSelected})。通常迷路には作用しない。休憩の抽選成功と配置成功を分け、全面氷でも足場を作れるようにする。
 
 - [x] 縦／横・狭い区画・大小の砂と力場の両側、休憩足場、とりもち、取得物、再現と継続の失敗テストを作りREDを確認。
 - [x] 床と力場を両区画へ分散。既存の素材係数で動く床として接続。休憩ととりもちを補う。

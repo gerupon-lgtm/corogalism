@@ -21,9 +21,11 @@ export function addStageFeatures(stage, difficulty) {
   const { maze } = stage, path = solvePath(maze), occupied = new Set();
   const key = p => `${p.x},${p.y}`;
   if (stage.recovery) occupied.add(key(stage.recovery));
-  function place(salt, chance, min, max, prefer = () => 0, eligible = p=>pickupPoint(stage,p)) {
+  let restSelected = false;
+  function place(salt, chance, min, max, prefer = () => 0, eligible = p=>pickupPoint(stage,p), onSelected = null) {
     const rng = createRng(featureSeed(maze.seed, salt));
     if (rng() >= chance) return null;
+    onSelected?.();
     const candidates = path.map((p, i) => ({ x: p.x + .5, y: p.y + .5, i }))
       .filter(p => p.i >= Math.max(2, Math.ceil((path.length - 1) * min))
         && p.i <= Math.min(path.length - 3, Math.floor((path.length - 1) * max)) && !occupied.has(key(p)) && eligible(p))
@@ -42,7 +44,7 @@ export function addStageFeatures(stage, difficulty) {
       const previous = path.slice(Math.max(0,p.i-3),p.i);
       return previous.some(c => danger.some(w => Math.hypot(c.x+.5-Math.max(w.x,Math.min(c.x+.5,w.x+w.w)),
         c.y+.5-Math.max(w.y,Math.min(c.y+.5,w.y+w.h))) < .6)) ? 1 : 0;
-    }, p=>stableFloorPoint(stage,p));
+    }, p=>stableFloorPoint(stage,p), ()=>{restSelected=true;});
   if (rest) {
     stage.rest = { ...rest, used: false, progress: 0 };
     const rng=createRng(featureSeed(maze.seed,0x3a90bdc7));
@@ -72,5 +74,5 @@ export function addStageFeatures(stage, difficulty) {
     const at = place(0x4ab297e3, HOURGLASS.chance[difficulty.level] ?? 0, HOURGLASS.pathMin, HOURGLASS.pathMax);
     if (at) stage.hourglass = { ...at, collected: false };
   }
-  addOpenFeatures(stage);
+  addOpenFeatures(stage,{restSelected});
 }

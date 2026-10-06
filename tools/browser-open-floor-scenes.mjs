@@ -11,7 +11,7 @@ try{
  await p.clock.install();await p.clock.pauseAt(Date.now()+1000);
  await p.goto((process.env.BASE_URL||'http://127.0.0.1:8768/')+'?debug=1');await p.waitForLoadState('networkidle');await p.waitForFunction(()=>!!window.__corogalism,null,{polling:50});
  assert.equal(await p.locator('.badge').textContent(),'v'+version);
- for(const width of [320,390,576])for(const [size,themeId]of [[7,'sand'],[13,'sand'],[13,'iceAssist'],[13,'rest'],[13,'sticky']]){
+ for(const width of [320,390,576])for(const [size,themeId]of [[7,'sand'],[7,'iceRubber'],[13,'sand'],[13,'iceAssist'],[13,'rest'],[13,'sticky']]){
   await p.setViewportSize({width,height:width===576?1280:844});
   const row=await p.evaluate(async({size,themeId,version})=>{
    const {createStagePlay}=await import('/src/game/stagePlay.js'),{challengeDifficulty}=await import('/src/game/challenge.js');
@@ -21,7 +21,7 @@ try{
    Object.assign(section.style,{position:'fixed',inset:'0',zIndex:9999,background:'#101a15',padding:'16px',overflow:'auto',display:'flex',flexDirection:'column',alignItems:'center',gap:'12px'});
    const title=document.createElement('p');title.textContent=`配置診断 v${version}｜${size}×${size} ${themeId}`;section.append(title);
    const canvas=document.createElement('canvas');Object.assign(canvas.style,{width:'100%',maxWidth:'560px',border:'2px solid #c5aa75',borderRadius:'14px'});section.append(canvas);document.body.append(section);
-   const play=createStagePlay(913,challengeDifficulty(themeId==='sand'?3:17,'easy'),{variation:{size,shape:'open',themeId}}),stage=play.stage;
+   const play=createStagePlay(themeId==='iceRubber'?5:913,challengeDifficulty(themeId==='sand'?3:17,'easy'),{variation:{size,shape:'open',themeId}}),stage=play.stage;
    const side=q=>q[stage.maze.baffle.axis]<stage.maze.baffle.coord?0:1;
    const sand=stage.zones.filter(z=>z.kind==='sand').flatMap(z=>z.cells),fields=stage.zones.filter(z=>z.kind==='radial'),rests=[stage.rest,...stage.extraRests].filter(Boolean);
    const counts=[0,1].map(room=>({room,sand:sand.filter(c=>side({x:c.x+.5,y:c.y+.5})===room).length,fields:fields.filter(sideField=>side(sideField)===room).length,rests:rests.filter(r=>side(r)===room).length,sticky:stage.sticky.filter(t=>side(t)===room).length}));
@@ -33,7 +33,7 @@ try{
     if(z){const f=sampleZone(stage,{x:z.x+.17,y:z.y,vx:0,vy:0});effects[`field${room}`]=Math.hypot(f.forceX,f.forceY)>.01;}
    }
    const advance=()=>play.advance({dt:1/60,elapsedMs:1000/60,tilt:{x:0,y:0},base:BASE});
-   if(themeId==='rest'){
+   if(['rest','iceRubber'].includes(themeId)){
     const r=rests[0];play.hp.applyImpact(3,{materialId:'stone'},0);const hp=play.hp.value;play.teleport(r.x,r.y);
     for(let i=0;i<130;i++)advance();effects.rest=r.used&&play.hp.value>hp&&play.extendedSec===2;
    }
@@ -44,9 +44,9 @@ try{
    return {width:innerWidth,size,themeId,baffle:stage.maze.baffle,counts,effects,canvasCss:css};
   },{size,themeId,version});
   assert.ok(row.canvasCss>200);for(const value of Object.values(row.effects))assert.equal(value,true,JSON.stringify(row));
-  if(themeId==='sand')assert.ok(row.counts.every(c=>c.sand>=4));if(themeId==='iceAssist')assert.ok(row.counts.every(c=>c.sand>=4&&c.fields>=2));if(themeId==='rest')assert.ok(row.counts.every(c=>c.rests>=1));if(themeId==='sticky')assert.ok(row.counts.every(c=>c.sticky>=2));
+  if(themeId==='sand')assert.ok(row.counts.every(c=>c.sand>=4));if(themeId==='iceAssist')assert.ok(row.counts.every(c=>c.sand>=4&&c.fields>=2));if(['rest','iceRubber'].includes(themeId))assert.ok(row.counts.every(c=>c.rests>=1));if(themeId==='sticky')assert.ok(row.counts.every(c=>c.sticky>=2));
   await p.screenshot({path:`${output}/${width}-${size}-${themeId}.png`});rows.push(row);
  }
  assert.deepEqual(errors,[]);
 }finally{await writeFile(output+'/results.json',JSON.stringify(rows,null,2));await b.close();}
-assert.equal(rows.length,15);console.log(`PASS ${rows.length} scenes`);
+assert.equal(rows.length,18);console.log(`PASS ${rows.length} scenes`);

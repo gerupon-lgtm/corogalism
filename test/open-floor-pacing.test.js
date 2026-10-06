@@ -93,3 +93,30 @@ test('砂・氷・力場の広場にもとりもちを抽選し、壁際で実�
   assert.ok(found>0,theme);assert.ok(absent>0,theme);
  }
 });
+
+test('全面氷の広場でも休憩の抽選成功を保ち、両区画の足場で回復できる',()=>{
+ for(const level of ['easy','normal']){
+  const absent=createStagePlay(1,challengeDifficulty(17,level),{variation:{size:7,shape:'open',themeId:'iceRubber'}});
+  assert.equal(restFloors(absent.stage).length,0,'外れた抽選に休憩を追加しない');
+ }
+ // 既存の休憩抽選で両難易度とも当選する種。配置できる通常床が元々ない例。
+ for(const level of ['easy','normal'])for(const size of [7,13])for(const seed of [5,7,8,9]){
+  const difficulty=challengeDifficulty(17,level),carry={variation:{size,shape:'open',themeId:'iceRubber'}};
+  const p=createStagePlay(seed,difficulty,carry),rests=restFloors(p.stage);
+  const features=[...rests,...p.stage.sticky,p.stage.recovery,p.stage.leaf,p.stage.hourglass].filter(Boolean);
+  assert.equal(new Set(features.map(key)).size,features.length);
+  for(const side of [0,1]){
+   const r=rests.find(r=>room(p.stage.maze,r)===side);
+   assert.ok(r,JSON.stringify({level,size,seed,side,rests}));
+   assert.ok(stableFloorPoint(p.stage,r));
+   p.hp.applyImpact(3,{materialId:'stone'},side*10);const before=p.hp.value;
+   p.teleport(r.x,r.y);
+   for(let i=0;i<130;i++)p.advance({dt:1/60,elapsedMs:1000/60,tilt:{x:0,y:0},base:BASE});
+   assert.ok(r.used);assert.ok(p.hp.value>before);
+  }
+  assert.equal(p.extendedSec,4);
+  const again=createStagePlay(seed,difficulty,{...carry,restUsedCells:rests.map(r=>({x:r.x,y:r.y}))});
+  assert.deepEqual(restFloors(again.stage).map(key),rests.map(key));
+  assert.ok(restFloors(again.stage).every(r=>r.used));
+ }
+});

@@ -35,7 +35,7 @@ export function spreadOpenSand(maze,cells){
  return result;
 }
 
-export function addOpenFeatures(stage){
+export function addOpenFeatures(stage,{restSelected=false}={}){
  const {maze}=stage;if(!maze.baffle)return;
  const rests=()=>[stage.rest,...stage.extraRests].filter(Boolean),allItems=[stage.recovery,stage.leaf,stage.hourglass].filter(Boolean);
  const occupied=new Set([...allItems,...rests(),...stage.sticky].map(p=>key({x:Math.floor(p.x),y:Math.floor(p.y)})));
@@ -43,7 +43,7 @@ export function addOpenFeatures(stage){
  const site=(side,i,count,rng,eligible=()=>true)=>rankedSites(maze,side,i,count,rng,roomCells(maze,side)
   .filter(p=>!occupied.has(key(p))&&eligible({x:p.x+.5,y:p.y+.5})))[0];
  const tile=p=>({x:p.x+.5,y:p.y+.5});
- if(stage.theme.id==='rest'||stage.rest){
+ if(stage.theme.id==='rest'||stage.rest||restSelected){
   const rng=createRng((maze.seed^0x2a094eb3)>>>0);
   for(const side of [0,1])if(!rests().some(p=>room(p)===side)){
    const at=site(side,0,1,rng,p=>!stage.zones.some(z=>z.kind==='radial'&&Math.hypot(p.x-z.x,p.y-z.y)<z.radius));

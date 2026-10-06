@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '96e89f0c0dca5fe0';
+self.PRECACHE_VERSION = 'fec0714cf06746be';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
