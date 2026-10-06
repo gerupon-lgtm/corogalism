@@ -1,0 +1,162 @@
+[
+  {
+    "width": 320,
+    "dpr": 1,
+    "level": "easy",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 86436,
+      "transparent": 0,
+      "matrix": 1,
+      "width": 294,
+      "cssWidth": 294
+    },
+    "resized": {
+      "width": 356,
+      "height": 356,
+      "css": 356,
+      "matrix": 1
+    },
+    "labels": {
+      "width": 132.125,
+      "scroll": 132,
+      "right": 142.125,
+      "actionsLeft": 152.125,
+      "actionsRight": 310,
+      "viewport": 320
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 390,
+    "dpr": 3,
+    "level": "easy",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1140624,
+      "transparent": 0,
+      "matrix": 3,
+      "width": 1068,
+      "cssWidth": 356
+    },
+    "resized": {
+      "width": 882,
+      "height": 882,
+      "css": 294,
+      "matrix": 3
+    },
+    "labels": {
+      "width": 194.125,
+      "scroll": 194,
+      "right": 208.125,
+      "actionsLeft": 218.125,
+      "actionsRight": 376,
+      "viewport": 390
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 576,
+    "dpr": 2.625,
+    "level": "easy",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1371241,
+      "transparent": 0,
+      "matrix": 2.625,
+      "width": 1171,
+      "cssWidth": 446
+    },
+    "resized": {
+      "width": 772,
+      "height": 772,
+      "css": 294,
+      "matrix": 2.625
+    },
+    "labels": {
+      "width": 284.125,
+      "scroll": 284,
+      "right": 346.125,
+      "actionsLeft": 356.125,
+      "actionsRight": 514,
+      "viewport": 576
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 390,
+    "dpr": 3,
+    "level": "normal",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1140624,
+      "transparent": 0,
+      "matrix": 3,
+      "width": 1068,
+      "cssWidth": 356
+    },
+    "resized": {
+      "width": 882,
+      "height": 882,
+      "css": 294,
+      "matrix": 3
+    },
+    "labels": {
+      "width": 194.125,
+      "scroll": 194,
+      "right": 208.125,
+      "actionsLeft": 218.125,
+      "actionsRight": 376,
+      "viewport": 390
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 576,
+    "dpr": 2.625,
+    "level": "easy",
+    "mode": "tilt",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1371241,
+      "transparent": 0,
+      "matrix": 2.625,
+      "width": 1171,
+      "cssWidth": 446
+    },
+    "resized": {
+      "width": 772,
+      "height": 772,
+      "css": 294,
+      "matrix": 2.625
+    },
+    "labels": {
+      "width": 284.125,
+      "scroll": 284,
+      "right": 346.125,
+      "actionsLeft": 356.125,
+      "actionsRight": 514,
+      "viewport": 576
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  }
+]

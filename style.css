@@ -289,7 +289,7 @@ body[data-screen="settings"] footer{display:none}
 .settings-menu :is(button,input):focus-visible{outline-color:#77542e;outline-offset:4px}
 @media(max-width:360px){.settings-menu{padding:20px 13px;gap:18px}.brand-tagline{letter-spacing:.1em}.sub{font-size:10px}}
 /* 音の即時切替はポーズの左。詳細音量は設定カードにまとめる。 */
-.play-actions{display:flex;gap:8px;align-items:center;margin-left:auto}
+.play-actions{display:flex;gap:8px;align-items:center;margin-left:auto;flex-shrink:0}
 .play-actions .pause-button{min-height:34px;display:flex;align-items:center;justify-content:center}
 .sound-button{display:flex;align-items:center;justify-content:center;gap:5px;min-height:34px;padding:5px 13px;
   border:1px solid #c9aa7b;border-radius:999px;background:linear-gradient(#fff4db,#e9d2ac);color:#704c2e;
@@ -341,7 +341,7 @@ body[data-screen="run-result"] footer{display:none}
 .difficulty-switch button[aria-pressed="true"]{background:linear-gradient(#f9ffe5,#dce9ba);border-color:#9bab73;color:#476a36;box-shadow:0 2px 0 #8e9e70}
 .difficulty-note{font-size:12px;color:#785532;text-align:center;margin:6px 0 12px;min-height:1.5em}
 .record-switch{margin-bottom:12px}
-.play-labels{display:flex;flex-direction:column;min-width:0;gap:2px}.stage-theme{font-size:10px;line-height:1.4;letter-spacing:0;color:#d3c7a7;white-space:nowrap}
+.play-labels{display:flex;flex-direction:column;min-width:0;flex:1;gap:2px}.stage-theme{font-size:10px;line-height:1.4;letter-spacing:0;color:#d3c7a7;white-space:normal;overflow-wrap:anywhere}
 .stage-theme:empty,.recovery-feedback:empty{display:none}
 .recovery-feedback{position:absolute;left:50%;top:38%;transform:translateX(-50%);z-index:3;pointer-events:none;border-radius:20px;padding:5px 14px;background:#f3fbdc;color:#42672f;box-shadow:0 3px 0 #8c9d6f;font-size:18px;font-weight:800}
 .countdown-caption{max-width:170px;text-align:center}

@@ -319,6 +319,7 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
   find('play-mode-label').textContent = gameMode === 'tutorial' ? 'はじめて' : gameMode==='floor-practice'?'床の練習':run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
   const variety=play.stage.maze.variation;
+  find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉を右下のカップへ導きます`);
   find('stage-theme').textContent = `${variety?`${variety.size}×${variety.size} ${variety.label}｜`:''}${play.stage.theme?.label || ''}`;
   find('recovery-feedback').textContent = '';
   resize();

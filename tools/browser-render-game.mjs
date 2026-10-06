@@ -41,6 +41,13 @@ try{
   await page.clock.runFor(32);
   await page.evaluate(()=>{const c=document.querySelector('#canvas');window.__beforeRender=c.getContext('2d').getImageData(0,0,c.width,c.height).data});
   const before=await state();
+  assert.ok((await page.locator('#canvas').getAttribute('aria-label')).startsWith(`${before.maze.size}×${before.maze.size}`),'読み上げも現在のマス数');
+  const labels=await page.evaluate(()=>{
+   const label=document.querySelector('.stage-theme'),actions=document.querySelector('.play-actions');
+   const l=label.getBoundingClientRect(),a=actions.getBoundingClientRect();
+   return {width:l.width,scroll:label.scrollWidth,right:l.right,actionsLeft:a.left,actionsRight:a.right,viewport:innerWidth};
+  });
+  assert.ok(labels.width>0&&labels.scroll<=Math.ceil(labels.width)&&labels.right<=labels.actionsLeft+.5&&labels.actionsRight<=labels.viewport,JSON.stringify(labels));
   await page.evaluate(()=>{
    const main=document.querySelector('#canvas'),index=window.__renderCanvases.indexOf(main);
    for(const canvas of window.__renderCanvases.slice(index,index+4)){
@@ -67,7 +74,7 @@ try{
   await page.setViewportSize({width:width===320?390:320,height:844});await page.clock.runFor(32);
   const resized=await page.locator('#canvas').evaluate(c=>({width:c.width,height:c.height,css:c.clientWidth,matrix:c.getContext('2d').getTransform().a}));
   assert.equal(resized.width,resized.height);assert.equal(resized.width,Math.round(resized.css*Math.min(dpr,3)));assert.equal(resized.matrix,Math.min(dpr,3));
-  assert.deepEqual(errors,[]);rows.push({width,dpr,level,mode,stage:12,recovery,resized,audio:moved.audio.context,music:moved.audio.music,continuedMovement:true});console.log(JSON.stringify(rows.at(-1)));await context.close();
+  assert.deepEqual(errors,[]);rows.push({width,dpr,level,mode,stage:12,recovery,resized,labels,audio:moved.audio.context,music:moved.audio.music,continuedMovement:true});console.log(JSON.stringify(rows.at(-1)));await context.close();
  }
 }finally{await writeFile(output+'/results.json',JSON.stringify(rows,null,2));await browser.close()}
 assert.equal(rows.length,scenarios.length);
