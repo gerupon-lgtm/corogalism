@@ -1,0 +1,417 @@
+[
+  {
+    "level": "easy",
+    "stage": 1,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道",
+      "sourceSeed": 980930
+    },
+    "theme": "basic",
+    "label": "基本の迷路",
+    "materials": {
+      "default": 64
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 18.19,
+    "limit": 57,
+    "hp": 75.9,
+    "maxHp": 76,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 3,
+    "profile": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場",
+      "sourceSeed": 61933
+    },
+    "theme": "sand",
+    "label": "砂でブレーキ",
+    "materials": {
+      "rubber": 34
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 11.6,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 4,
+    "profile": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道",
+      "sourceSeed": 102436
+    },
+    "theme": "iceRubber",
+    "label": "氷とゴムの迷路",
+    "materials": {
+      "rubber": 64
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 17.95,
+    "limit": 65,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 5,
+    "profile": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場",
+      "sourceSeed": 142939
+    },
+    "theme": "gravityAssist",
+    "label": "重力を試す迷路",
+    "materials": {
+      "rubber": 34
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 9.07,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 7,
+    "profile": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場",
+      "sourceSeed": 223945
+    },
+    "theme": "repulsionAssist",
+    "label": "反重力を試す迷路",
+    "materials": {
+      "rubber": 34
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 9.1,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 8,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道",
+      "sourceSeed": 264448
+    },
+    "theme": "iceAssist",
+    "label": "氷と力場の迷路",
+    "materials": {
+      "cork": 64
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 17.18,
+    "limit": 71,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 16,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場",
+      "sourceSeed": 588472
+    },
+    "theme": "iceAssist",
+    "label": "氷と力場の迷路",
+    "materials": {
+      "rubber": 55
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.79,
+    "limit": 54,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 100,
+    "profile": {
+      "size": 13,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角",
+      "sourceSeed": 990715
+    },
+    "theme": "careful",
+    "label": "慎重に進む迷路",
+    "materials": {
+      "default": 135,
+      "stone": 22
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 21.01,
+    "limit": 66,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 107,
+    "profile": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道",
+      "sourceSeed": 274233
+    },
+    "theme": "sand",
+    "label": "砂でブレーキ",
+    "materials": {
+      "cork": 100
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 29.68,
+    "limit": 97,
+    "hp": 124,
+    "maxHp": 124,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 1,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道",
+      "sourceSeed": 980930
+    },
+    "theme": "basic",
+    "label": "基本の迷路",
+    "materials": {
+      "default": 64
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 18.19,
+    "limit": 36.375,
+    "hp": 75.9,
+    "maxHp": 76,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 3,
+    "profile": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場",
+      "sourceSeed": 61933
+    },
+    "theme": "sand",
+    "label": "砂でブレーキ",
+    "materials": {
+      "rubber": 34
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 11.01,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 4,
+    "profile": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道",
+      "sourceSeed": 102436
+    },
+    "theme": "iceRubber",
+    "label": "氷とゴムの迷路",
+    "materials": {
+      "rubber": 64
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 17.97,
+    "limit": 31.56923076923077,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 5,
+    "profile": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場",
+      "sourceSeed": 142939
+    },
+    "theme": "gravityAssist",
+    "label": "引力のカーブ",
+    "materials": {
+      "rubber": 34
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 9.04,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 7,
+    "profile": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場",
+      "sourceSeed": 223945
+    },
+    "theme": "repulsionAssist",
+    "label": "押し出すカーブ",
+    "materials": {
+      "rubber": 34
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 9.1,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 8,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道",
+      "sourceSeed": 264448
+    },
+    "theme": "iceAssist",
+    "label": "氷と力場の迷路",
+    "materials": {
+      "cork": 64
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.1,
+    "limit": 27.907692307692308,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 16,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場",
+      "sourceSeed": 588472
+    },
+    "theme": "iceAssist",
+    "label": "氷と力場の迷路",
+    "materials": {
+      "rubber": 55
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.79,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 100,
+    "profile": {
+      "size": 13,
+      "shape": "roomy",
+      "themeId": "specialFlow",
+      "label": "広い曲がり角",
+      "sourceSeed": 990715
+    },
+    "theme": "specialFlow",
+    "label": "光の滑走路",
+    "materials": {
+      "cork": 152
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 21.07,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 107,
+    "profile": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道",
+      "sourceSeed": 274233
+    },
+    "theme": "sand",
+    "label": "砂でブレーキ",
+    "materials": {
+      "cork": 100
+    },
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 29.68,
+    "limit": 37.800000000000004,
+    "hp": 123.5,
+    "maxHp": 124,
+    "wallHits": 0
+  }
+]
