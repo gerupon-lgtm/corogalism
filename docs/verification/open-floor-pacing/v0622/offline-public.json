@@ -1,0 +1,91 @@
+{
+  "offline": true,
+  "names": [
+    "corogalism-fec0714cf06746be"
+  ],
+  "files": 107,
+  "softBall": {
+    "enabled": true,
+    "volume": 0.6,
+    "failed": false,
+    "context": "running",
+    "rolling": false,
+    "voices": 0,
+    "buffers": 2,
+    "events": [
+      "roll:metal:normal",
+      "hit:metal:default"
+    ]
+  },
+  "impact": {
+    "enabled": true,
+    "volume": 0.6,
+    "failed": false,
+    "context": "running",
+    "rolling": false,
+    "voices": 1,
+    "buffers": 3,
+    "events": [
+      "roll:metal:normal",
+      "hit:metal:default",
+      "hit:superball:rubber"
+    ]
+  },
+  "glass": {
+    "enabled": true,
+    "volume": 0.6,
+    "failed": false,
+    "context": "running",
+    "rolling": true,
+    "voices": 0,
+    "buffers": 4,
+    "events": [
+      "roll:metal:normal",
+      "hit:metal:default",
+      "hit:superball:rubber",
+      "roll:default:ice"
+    ]
+  },
+  "metal": {
+    "enabled": true,
+    "volume": 0.6,
+    "failed": false,
+    "context": "running",
+    "rolling": true,
+    "voices": 0,
+    "buffers": 5,
+    "events": [
+      "roll:metal:normal",
+      "hit:metal:default",
+      "hit:superball:rubber",
+      "roll:default:ice",
+      "roll:metal:ice"
+    ]
+  },
+  "wood": {
+    "enabled": true,
+    "volume": 0.6,
+    "failed": false,
+    "context": "running",
+    "rolling": true,
+    "voices": 1,
+    "buffers": 7,
+    "events": [
+      "roll:metal:normal",
+      "hit:metal:default",
+      "hit:superball:rubber",
+      "roll:default:ice",
+      "roll:metal:ice",
+      "roll:wood:ice",
+      "roll:wood:ice",
+      "hit:wood:stone"
+    ]
+  },
+  "floorActor": {
+    "x": 0.8934766824903021,
+    "y": 0.5935985193441206
+  },
+  "main": true,
+  "oldCoreGuards": 4,
+  "errors": []
+}

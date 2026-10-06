@@ -1,8 +1,9 @@
-# v0.6.22 序盤と広場の床（2026-10-07・公開準備）
+# v0.6.22 序盤と広場の床（2026-10-07）
 
 - 序盤8面は7×7、9面から大小。広場の両側へ床を分散し、とりもちはゴール誘導を逆算せず壁際から抽選。[仕様とモード差](open-floor-pacing.md)。
 - 192テスト・操縦384条件・一定傾き51,840、レビュー修正後の本編18面・3幅18配置・本編12面5条件・復元100条件・107資材オフラインをローカル確認。[記録](verification/open-floor-pacing.md)。
-- キャッシュfec0714cf06746be・107資材。両おためしのrevision7／9と物理値を維持し、表示版をv0.6.22へ更新。公開確認は続行中。
+- アプリc63fda8、[Pages37541122539成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37541122539)。キャッシュfec0714cf06746be・107資材。公開110資材HTTP200・SHA-256一致。[配信](verification/open-floor-pacing/v0622/deploy-hashes.json)。両おためしのrevision7／9と物理値を維持し、表示版をv0.6.22へ更新。
+- 公開実pointer24面・3幅18配置・本編12面2条件の入力／BGM／寸法変更・描画復元100条件・107資材完全オフラインを確認。[公開操作](verification/open-floor-pacing/v0622/game-public/results.json)、[復元](verification/open-floor-pacing/v0622/recovery-public/recovery.json)、[オフライン](verification/open-floor-pacing/v0622/offline-public.json)。公開追加不具合なし。実機の長時間の面白さと負荷は未確認。
 
 # v0.6.21 迷路の緩急と表示修正（2026-10-07）
 
