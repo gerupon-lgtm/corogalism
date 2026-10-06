@@ -1,0 +1,118 @@
+[
+  {
+    "batch": 1,
+    "files": [
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\audio-settings.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\balance.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\ball-materials.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\ballRotation.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\branch-floors.test.js"
+    ],
+    "summary": [
+      "ℹ tests 25",
+      "ℹ pass 25",
+      "ℹ fail 0"
+    ],
+    "elapsedSeconds": 9.76,
+    "exitCode": 0
+  },
+  {
+    "batch": 2,
+    "files": [
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\candy-full.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\challenge.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\escape-timing.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\exploration.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\feature-hint-position.test.js"
+    ],
+    "summary": [
+      "ℹ tests 21",
+      "ℹ pass 21",
+      "ℹ fail 0"
+    ],
+    "elapsedSeconds": 2.52,
+    "exitCode": 0
+  },
+  {
+    "batch": 3,
+    "files": [
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\features.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\first-sound.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\floor-difficulty.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\floor-lab.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\floor-learning.test.js"
+    ],
+    "summary": [
+      "ℹ tests 27",
+      "ℹ pass 27",
+      "ℹ fail 0"
+    ],
+    "elapsedSeconds": 5.02,
+    "exitCode": 0
+  },
+  {
+    "batch": 4,
+    "files": [
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\floor-presentation.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\floor-themes.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\floor-trial.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\hourglass.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\hp-display.test.js"
+    ],
+    "summary": [
+      "ℹ tests 14",
+      "ℹ pass 14",
+      "ℹ fail 0"
+    ],
+    "elapsedSeconds": 2.53,
+    "exitCode": 0
+  },
+  {
+    "batch": 5,
+    "files": [
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\maze.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\onboarding.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\phase2.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\physics.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\playthrough.test.js"
+    ],
+    "summary": [
+      "ℹ tests 49",
+      "ℹ pass 49",
+      "ℹ fail 0"
+    ],
+    "elapsedSeconds": 0.92,
+    "exitCode": 0
+  },
+  {
+    "batch": 6,
+    "files": [
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\resolveParams.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\rubber-rebound.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\stableCalibration.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\stagePlay.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\storage.test.js"
+    ],
+    "summary": [
+      "ℹ tests 32",
+      "ℹ pass 32",
+      "ℹ fail 0"
+    ],
+    "elapsedSeconds": 0.73,
+    "exitCode": 0
+  },
+  {
+    "batch": 7,
+    "files": [
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\tutorial.test.js",
+      "C:\\Users\\user\\Documents\\AI連携ゲーム\\corogalism\\test\\wall-clearance.test.js"
+    ],
+    "summary": [
+      "ℹ tests 8",
+      "ℹ pass 8",
+      "ℹ fail 0"
+    ],
+    "elapsedSeconds": 1.22,
+    "exitCode": 0
+  }
+]

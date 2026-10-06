@@ -1,0 +1,122 @@
+[
+  {
+    "width": 320,
+    "dpr": 1,
+    "level": "easy",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 86436,
+      "transparent": 0,
+      "matrix": 1,
+      "width": 294,
+      "cssWidth": 294
+    },
+    "resized": {
+      "width": 356,
+      "height": 356,
+      "css": 356,
+      "matrix": 1
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 390,
+    "dpr": 3,
+    "level": "easy",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1140624,
+      "transparent": 0,
+      "matrix": 3,
+      "width": 1068,
+      "cssWidth": 356
+    },
+    "resized": {
+      "width": 882,
+      "height": 882,
+      "css": 294,
+      "matrix": 3
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 576,
+    "dpr": 2.625,
+    "level": "easy",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1371241,
+      "transparent": 0,
+      "matrix": 2.625,
+      "width": 1171,
+      "cssWidth": 446
+    },
+    "resized": {
+      "width": 772,
+      "height": 772,
+      "css": 294,
+      "matrix": 2.625
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 390,
+    "dpr": 3,
+    "level": "normal",
+    "mode": "pointer",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1140624,
+      "transparent": 0,
+      "matrix": 3,
+      "width": 1068,
+      "cssWidth": 356
+    },
+    "resized": {
+      "width": 882,
+      "height": 882,
+      "css": 294,
+      "matrix": 3
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  },
+  {
+    "width": 576,
+    "dpr": 2.625,
+    "level": "easy",
+    "mode": "tilt",
+    "stage": 12,
+    "recovery": {
+      "changed": 0,
+      "pixels": 1371241,
+      "transparent": 0,
+      "matrix": 2.625,
+      "width": 1171,
+      "cssWidth": 446
+    },
+    "resized": {
+      "width": 772,
+      "height": 772,
+      "css": 294,
+      "matrix": 2.625
+    },
+    "audio": "running",
+    "music": true,
+    "continuedMovement": true
+  }
+]

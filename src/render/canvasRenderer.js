@@ -18,6 +18,26 @@ export function createRenderer(canvas) {
   let viewportPx = 0, dpr = 1, cachedStage = null, clearAt = null, lastActor = null;
   let cachedTextureReady = false, visualTime=0,visualLast=null;
 
+  // 端末側の描画領域の復元では、寸法が同じでも倍率と静止画が失われる。
+  const contexts = [ctx, bg, walls];
+  function invalidate() { cachedStage = null; ball.invalidate(); }
+  for (const context of contexts) {
+    context.canvas.addEventListener('contextlost', invalidate);
+    context.canvas.addEventListener('contextrestored', invalidate);
+  }
+  function prepareContexts() {
+    if (contexts.some(context => context.isContextLost?.())) return false;
+    // 通知を受けられない状態初期化も、描画倍率の変化から検出する。
+    for (const context of contexts) {
+      const transform = context.getTransform();
+      if (transform.a !== dpr || transform.d !== dpr || transform.b || transform.c || transform.e || transform.f) {
+        context.setTransform(dpr,0,0,dpr,0,0);
+        invalidate();
+      }
+    }
+    return true;
+  }
+
   function resize(px) {
     const next = Math.max(1, Math.round(px)), ratio = Math.min(window.devicePixelRatio || 1, 3);
     if (viewportPx === next && dpr === ratio) return viewportPx;
@@ -31,6 +51,7 @@ export function createRenderer(canvas) {
   }
 
   function draw({ stage, actor, camera, pointerTilt, status = 'playing', shield = 0, trap = null, now = performance.now(), animationActive=true }) {
+    if (!prepareContexts()) return;
     const textureReady = wallTextureReady();
     if (stage !== cachedStage || textureReady !== cachedTextureReady) {
       drawToyFloor(bg,stage,camera,viewportPx,false);
@@ -46,6 +67,8 @@ export function createRenderer(canvas) {
     if (status !== 'clear') clearAt=null;
     const elapsed=clearAt===null ? -1 : now-clearAt;
     const progress=elapsed<0 ? 0 : reducedMotion.matches ? 1 : Math.min(1,elapsed/UI.goalSettleMs);
+    // 静止画が一時的に透明になっても、前の球を残さない。
+    ctx.clearRect(0,0,viewportPx,viewportPx);
     ctx.drawImage(background,0,0,viewportPx,viewportPx);
     if(stage.zones.length){
       drawFloorVisuals(ctx,camera,{actor,time:visualTime,reduced:reducedMotion.matches,stage,settings:{force:6},staticLayer:false});

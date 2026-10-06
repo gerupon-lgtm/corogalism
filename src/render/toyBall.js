@@ -6,6 +6,9 @@ export function createToyBall() {
   const context = sprite.getContext('2d');
   let quaternion = [0, 0, 0, 1];
   let previous = null, previousActor = null, previousAppearance=null, pixels = 0, dirty = true;
+  const invalidate = () => { dirty = true; };
+  sprite.addEventListener('contextlost', invalidate);
+  sprite.addEventListener('contextrestored', invalidate);
 
   function update(actor) {
     if(actor.character?.appearance!==previousAppearance){previousAppearance=actor.character?.appearance;dirty=true;}
@@ -66,6 +69,7 @@ export function createToyBall() {
   }
 
   function draw(ctx, x, y, radius) {
+    if (context.isContextLost?.()) return;
     paint(Math.min(96, Math.max(32, Math.ceil(radius*2*(window.devicePixelRatio || 1)))));
     ctx.save();
     const shadow = ctx.createRadialGradient(x+radius*.15, y+radius*.24, radius*.25, x+radius*.15, y+radius*.24, radius*1.18);
@@ -74,5 +78,5 @@ export function createToyBall() {
     ctx.drawImage(sprite, x-radius, y-radius, radius*2, radius*2);
     ctx.restore();
   }
-  return { update, draw };
+  return { update, draw, invalidate };
 }
