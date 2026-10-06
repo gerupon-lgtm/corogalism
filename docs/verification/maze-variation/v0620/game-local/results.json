@@ -1,0 +1,914 @@
+[
+  {
+    "level": "easy",
+    "stage": 1,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道",
+      "sourceSeed": 980930
+    },
+    "theme": "basic",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 18.19,
+    "limit": 57,
+    "hp": 75.9,
+    "maxHp": 76,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 2,
+    "profile": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "basic",
+      "label": "入り組んだ道",
+      "sourceSeed": 21430
+    },
+    "theme": "basic",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 35.92,
+    "limit": 116,
+    "hp": 156,
+    "maxHp": 156,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 3,
+    "profile": {
+      "size": 13,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場",
+      "sourceSeed": 61933
+    },
+    "theme": "sand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 20.72,
+    "limit": 61,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 4,
+    "profile": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道",
+      "sourceSeed": 102436
+    },
+    "theme": "iceRubber",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 54.02,
+    "limit": 183,
+    "hp": 236,
+    "maxHp": 236,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 5,
+    "profile": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場",
+      "sourceSeed": 142939
+    },
+    "theme": "gravityAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 12.26,
+    "limit": 50,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 6,
+    "profile": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道",
+      "sourceSeed": 183442
+    },
+    "theme": "iceSand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 40.54,
+    "limit": 136,
+    "hp": 168,
+    "maxHp": 168,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 7,
+    "profile": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場",
+      "sourceSeed": 223945
+    },
+    "theme": "repulsionAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 10.74,
+    "limit": 46,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 8,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道",
+      "sourceSeed": 264448
+    },
+    "theme": "iceAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 17.36,
+    "limit": 71,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 9,
+    "profile": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路",
+      "sourceSeed": 304951
+    },
+    "theme": "rest",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 13.01,
+    "limit": 49,
+    "hp": 80,
+    "maxHp": 80,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 10,
+    "profile": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角",
+      "sourceSeed": 345454
+    },
+    "theme": "iceSand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 10.66,
+    "limit": 41,
+    "hp": 72,
+    "maxHp": 72,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 11,
+    "profile": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "sticky",
+      "label": "迷路",
+      "sourceSeed": 385957
+    },
+    "theme": "sticky",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 30.9,
+    "limit": 91,
+    "hp": 120,
+    "maxHp": 120,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 12,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場",
+      "sourceSeed": 426460
+    },
+    "theme": "careful",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.42,
+    "limit": 44,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 13,
+    "profile": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道",
+      "sourceSeed": 466963
+    },
+    "theme": "gravityHinder",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 34.5,
+    "limit": 122,
+    "hp": 144,
+    "maxHp": 144,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 14,
+    "profile": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路",
+      "sourceSeed": 507466
+    },
+    "theme": "rest",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 23.7,
+    "limit": 80,
+    "hp": 116,
+    "maxHp": 116,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 15,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道",
+      "sourceSeed": 547969
+    },
+    "theme": "repulsionHinder",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.31,
+    "limit": 66,
+    "hp": 88,
+    "maxHp": 88,
+    "wallHits": 1
+  },
+  {
+    "level": "easy",
+    "stage": 16,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場",
+      "sourceSeed": 588472
+    },
+    "theme": "iceAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.79,
+    "limit": 51,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 97,
+    "profile": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "trial",
+      "label": "すなおな道",
+      "sourceSeed": 869206
+    },
+    "theme": "trial",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 23.47,
+    "limit": 84,
+    "hp": 132,
+    "maxHp": 132,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 98,
+    "profile": {
+      "size": 11,
+      "shape": "classic",
+      "themeId": "iceRubber",
+      "label": "迷路",
+      "sourceSeed": 909709
+    },
+    "theme": "iceRubber",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 49.28,
+    "limit": 164,
+    "hp": 220,
+    "maxHp": 220,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 99,
+    "profile": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceAssist",
+      "label": "入り組んだ道",
+      "sourceSeed": 950212
+    },
+    "theme": "iceAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 24.86,
+    "limit": 87,
+    "hp": 116,
+    "maxHp": 116,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 100,
+    "profile": {
+      "size": 13,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角",
+      "sourceSeed": 990715
+    },
+    "theme": "careful",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 21.01,
+    "limit": 66,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 101,
+    "profile": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "trial",
+      "label": "反発の広場",
+      "sourceSeed": 31215
+    },
+    "theme": "trial",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 12.18,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 102,
+    "profile": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道",
+      "sourceSeed": 71718
+    },
+    "theme": "repulsionHinder",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 29.57,
+    "limit": 107,
+    "hp": 148,
+    "maxHp": 148,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 103,
+    "profile": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角",
+      "sourceSeed": 112221
+    },
+    "theme": "iceSand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 9.46,
+    "limit": 40,
+    "hp": 52,
+    "maxHp": 52,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 104,
+    "profile": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路",
+      "sourceSeed": 152724
+    },
+    "theme": "repulsionHinder",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 34.42,
+    "limit": 121,
+    "hp": 164,
+    "maxHp": 164,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 105,
+    "profile": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角",
+      "sourceSeed": 193227
+    },
+    "theme": "iceRubber",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 10.38,
+    "limit": 40,
+    "hp": 60,
+    "maxHp": 60,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 106,
+    "profile": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路",
+      "sourceSeed": 233730
+    },
+    "theme": "repulsionAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 8.98,
+    "limit": 40,
+    "hp": 64,
+    "maxHp": 64,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 107,
+    "profile": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道",
+      "sourceSeed": 274233
+    },
+    "theme": "sand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 30.22,
+    "limit": 97,
+    "hp": 124,
+    "maxHp": 124,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 108,
+    "profile": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "basic",
+      "label": "広い曲がり角",
+      "sourceSeed": 314736
+    },
+    "theme": "basic",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 9.02,
+    "limit": 40,
+    "hp": 64,
+    "maxHp": 64,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 109,
+    "profile": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "iceSand",
+      "label": "迷路",
+      "sourceSeed": 355239
+    },
+    "theme": "iceSand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 27.49,
+    "limit": 93,
+    "hp": 132,
+    "maxHp": 132,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 110,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場",
+      "sourceSeed": 395742
+    },
+    "theme": "iceAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.6,
+    "limit": 51,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 111,
+    "profile": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "careful",
+      "label": "入り組んだ道",
+      "sourceSeed": 436245
+    },
+    "theme": "careful",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 51.18,
+    "limit": 158,
+    "hp": 196,
+    "maxHp": 196,
+    "wallHits": 0
+  },
+  {
+    "level": "easy",
+    "stage": 112,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場",
+      "sourceSeed": 476748
+    },
+    "theme": "gravityAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.76,
+    "limit": 47,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 1,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道",
+      "sourceSeed": 980930
+    },
+    "theme": "basic",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 18.19,
+    "limit": 36.375,
+    "hp": 75.9,
+    "maxHp": 76,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 2,
+    "profile": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "basic",
+      "label": "入り組んだ道",
+      "sourceSeed": 21430
+    },
+    "theme": "basic",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 35.92,
+    "limit": 63.25859649122807,
+    "hp": 153.6,
+    "maxHp": 156,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 3,
+    "profile": {
+      "size": 13,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場",
+      "sourceSeed": 61933
+    },
+    "theme": "sand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 19.46,
+    "limit": 30.252192982456148,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 4,
+    "profile": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道",
+      "sourceSeed": 102436
+    },
+    "theme": "iceRubber",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 53.84,
+    "limit": 91.50769230769231,
+    "hp": 236,
+    "maxHp": 236,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 5,
+    "profile": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場",
+      "sourceSeed": 142939
+    },
+    "theme": "gravityAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 12.53,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 6,
+    "profile": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道",
+      "sourceSeed": 183442
+    },
+    "theme": "iceSand",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 38.78,
+    "limit": 65.10128205128206,
+    "hp": 168,
+    "maxHp": 168,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 7,
+    "profile": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場",
+      "sourceSeed": 223945
+    },
+    "theme": "repulsionAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 10.74,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 8,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道",
+      "sourceSeed": 264448
+    },
+    "theme": "iceAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.12,
+    "limit": 27.907692307692308,
+    "hp": 84,
+    "maxHp": 84,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 9,
+    "profile": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路",
+      "sourceSeed": 304951
+    },
+    "theme": "rest",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 13.01,
+    "limit": 25,
+    "hp": 80,
+    "maxHp": 80,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 10,
+    "profile": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "specialFlow",
+      "label": "広い曲がり角",
+      "sourceSeed": 345454
+    },
+    "theme": "specialFlow",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 11.09,
+    "limit": 25,
+    "hp": 72,
+    "maxHp": 72,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 11,
+    "profile": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "sticky",
+      "label": "迷路",
+      "sourceSeed": 385957
+    },
+    "theme": "sticky",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 30.9,
+    "limit": 39.7,
+    "hp": 120,
+    "maxHp": 120,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 12,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場",
+      "sourceSeed": 426460
+    },
+    "theme": "careful",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.42,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 13,
+    "profile": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道",
+      "sourceSeed": 466963
+    },
+    "theme": "gravityHinder",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 34.69,
+    "limit": 58.28461538461539,
+    "hp": 144,
+    "maxHp": 144,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 14,
+    "profile": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路",
+      "sourceSeed": 507466
+    },
+    "theme": "rest",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 23.74,
+    "limit": 34.1,
+    "hp": 116,
+    "maxHp": 116,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 15,
+    "profile": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道",
+      "sourceSeed": 547969
+    },
+    "theme": "repulsionHinder",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 14.88,
+    "limit": 31.51538461538462,
+    "hp": 88,
+    "maxHp": 88,
+    "wallHits": 0
+  },
+  {
+    "level": "normal",
+    "stage": 16,
+    "profile": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場",
+      "sourceSeed": 588472
+    },
+    "theme": "iceAssist",
+    "realPointerPlay": true,
+    "result": "clear",
+    "seconds": 15.79,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "wallHits": 0
+  }
+]

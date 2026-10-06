@@ -6,6 +6,7 @@ export function createToyBall() {
   const context = sprite.getContext('2d');
   let quaternion = [0, 0, 0, 1];
   let previous = null, previousActor = null, previousAppearance=null, pixels = 0, dirty = true;
+  let bitmap=null,surface=[];
   const invalidate = () => { dirty = true; };
   sprite.addEventListener('contextlost', invalidate);
   sprite.addEventListener('contextrestored', invalidate);
@@ -27,14 +28,21 @@ export function createToyBall() {
 
   function paint(resolution) {
     if (!dirty && resolution === pixels) return;
-    pixels = resolution; sprite.width = pixels; sprite.height = pixels;
-    const bitmap = context.createImageData(pixels, pixels);
+    if(resolution!==pixels){
+      pixels=resolution;sprite.width=pixels;sprite.height=pixels;
+      bitmap=context.createImageData(pixels,pixels);surface=[];
+      // 球の形と固定照明は回転に依存しない。寸法が変わった時だけ計算する。
+      for(let j=0;j<pixels;j++)for(let i=0;i<pixels;i++){
+        const x=(i+.5)/pixels*2-1,y=(j+.5)/pixels*2-1,rr=x*x+y*y;if(rr>=1)continue;
+        const z=Math.sqrt(1-rr),light=Math.max(0,-.38*x-.48*y+.79*z);
+        const shine=Math.pow(Math.max(0,-.32*x-.4*y+.858*z),48);
+        const soft=Math.pow(Math.max(0,-.24*x-.35*y+.906*z),9)*.21,rim=Math.pow(1-z,3)*.18;
+        surface.push({x,y,z,light,shine,soft,rim,offset:(j*pixels+i)*4});
+        bitmap.data[(j*pixels+i)*4+3]=Math.min(255,(1-Math.sqrt(rr))*pixels*255);
+      }
+    }
     const m = inverseRotation(quaternion);
-    for (let j = 0; j < pixels; j++) for (let i = 0; i < pixels; i++) {
-      const x = (i + .5) / pixels * 2 - 1, y = (j + .5) / pixels * 2 - 1;
-      const rr = x*x+y*y;
-      if (rr >= 1) continue;
-      const z = Math.sqrt(1-rr);
+    for (const {x,y,z,light,shine,soft,rim,offset} of surface) {
       const u = m[0]*x+m[1]*y+m[2]*z, v = m[3]*x+m[4]*y+m[5]*z, t = m[6]*x+m[7]*y+m[8]*z;
       const seam = u + .42 * Math.sin(v*3 + t*1.6);
       const band = seam > .48;
@@ -52,18 +60,12 @@ export function createToyBall() {
       }
       // 曲線の継ぎ目は浅い溝。照明やハイライトと一緒には回転しない。
       const groove = Math.abs(seam-.48) < .016 && !dot ? .74 : 1;
-      const light = Math.max(0, -.38*x-.48*y+.79*z);
       const shade = (.41+.59*light)*groove;
-      const shine = Math.pow(Math.max(0, -.32*x-.4*y+.858*z), 48);
-      const soft = Math.pow(Math.max(0, -.24*x-.35*y+.906*z), 9)*.21;
-      const rim = Math.pow(1-z, 3)*.18;
       const pearl = (Math.sin(u*397+v*239+t*127)*.5+.5)*light*3;
-      const offset = (j*pixels+i)*4;
+      const reflection = Math.min(.97, (shine*.95+soft)*gloss+rim);
       for (let c=0; c<3; c++) {
-        const reflection = Math.min(.97, (shine*.95+soft)*gloss+rim);
         bitmap.data[offset+c] = base[c]*shade*(1-reflection)+255*reflection+pearl+(c===2 ? rim*35 : 0);
       }
-      bitmap.data[offset+3] = Math.min(255, (1-Math.sqrt(rr))*pixels*255);
     }
     context.putImageData(bitmap, 0, 0); dirty = false;
   }

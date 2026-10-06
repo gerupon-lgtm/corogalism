@@ -33,7 +33,7 @@ export function buildWalls(maze, wallThickness = TUNING.wallThickness) {
 }
 
 export function createStage(maze, difficulty) {
-  const theme=difficulty?.themed?themeAt(difficulty.stage,difficulty.level):null;
+  const theme=difficulty?.themed?themeAt(difficulty.stage,difficulty.level,maze.variation?.themeId):null;
   if(theme)maze=prepareFloorMaze(maze,theme);
   const stage = {
     maze,
@@ -42,7 +42,7 @@ export function createStage(maze, difficulty) {
     zones: [], // フェーズ2でも空（ゾーンはフェーズ3以降）
     wallThickness: TUNING.wallThickness,
   };
-  if (difficulty?.themed) assignTheme(stage, difficulty);
+  if (difficulty?.themed) assignTheme(stage, difficulty,theme);
   else if (difficulty) assignWallMaterials(stage, difficulty);
   if(theme)addFloorTheme(stage,theme);
   stage.recovery = difficulty ? createRecovery(maze, difficulty.recoveryChance ?? 0, undefined, p=>pickupPoint(stage,p)) : null;

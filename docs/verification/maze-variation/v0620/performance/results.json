@@ -1,0 +1,202 @@
+[
+  {
+    "revision": "before",
+    "size": 7,
+    "shape": "classic",
+    "medianMs": 11.400000095367432,
+    "p95Ms": 19.09999990463257,
+    "initialMs": 171.90000009536743,
+    "sha256": "98682e06aab7c5bbd265b9bf5fcbe0c8a3bb59e76d75859ccc737381702f0691",
+    "ballHash": "8aa4f81f91e8c8bc0e2ceee9e4b4992965c01cbccef1472d997bc3c13731bdf7"
+  },
+  {
+    "revision": "before",
+    "size": 7,
+    "shape": "open",
+    "medianMs": 11.400000095367432,
+    "p95Ms": 21.799999952316284,
+    "initialMs": 214.29999995231628,
+    "sha256": "67e1fb5117d6967853202931d39e3ab179457b475875b6c81790c451bb069366",
+    "ballHash": "f2a0dc559f2c09a620b0d8612c32e9b7024b2e681866f270ec382833a1af56af"
+  },
+  {
+    "revision": "before",
+    "size": 9,
+    "shape": "classic",
+    "medianMs": 7.6000001430511475,
+    "p95Ms": 18.40000009536743,
+    "initialMs": 158,
+    "sha256": "87ae75ba2ebabdbdb2b68e834f2bf2ec375eb290d1bd28e45bce97319db94007",
+    "ballHash": "7b847005c7c39f145aa486ede6295815f4b05f8d0937faeb8b73da266ef71761"
+  },
+  {
+    "revision": "before",
+    "size": 9,
+    "shape": "open",
+    "medianMs": 9.399999856948853,
+    "p95Ms": 18.90000009536743,
+    "initialMs": 62.700000047683716,
+    "sha256": "71a67fd1cc67e3db245fb47c86ed97e0e928a72d4e06736ee7e152fb23dded41",
+    "ballHash": "1f839856bd567a1d69ea8e66dfd8e63c938aaa1897a19eeddc7acef5d6429098"
+  },
+  {
+    "revision": "before",
+    "size": 11,
+    "shape": "classic",
+    "medianMs": 8.200000047683716,
+    "p95Ms": 18.5,
+    "initialMs": 260.5,
+    "sha256": "17cde1e1c82a5a00d612ba68f7e61b1661b6354ebf4b4cb76dff180973c44a06",
+    "ballHash": "49dae101e47252669dc391324c111e8ef918a2a1d6630cceb91116d328fabc3c"
+  },
+  {
+    "revision": "before",
+    "size": 11,
+    "shape": "open",
+    "medianMs": 5.900000095367432,
+    "p95Ms": 13.299999952316284,
+    "initialMs": 78.40000009536743,
+    "sha256": "d15b132c49ef0517d8b92eb593905b0a825ff5e7f2c3787f2a7970a6c9624c4e",
+    "ballHash": "b6a90b1637c5a41147ddd1b7dab998fae1f656c5c392e6cd0bc7208270176fd8"
+  },
+  {
+    "revision": "before",
+    "size": 13,
+    "shape": "classic",
+    "medianMs": 5.900000095367432,
+    "p95Ms": 11.799999952316284,
+    "initialMs": 227.79999995231628,
+    "sha256": "22ee2f7e9344d95e08253961392c1c2277c22da671d85c5e107a713e5f1a8b00",
+    "ballHash": "0f96e1135900a9b790803951c28b39b5dd4a4d8c4978ebcb876dfcf6dda0a464"
+  },
+  {
+    "revision": "before",
+    "size": 13,
+    "shape": "open",
+    "medianMs": 5.299999952316284,
+    "p95Ms": 14.099999904632568,
+    "initialMs": 82,
+    "sha256": "6846bca60a3b2bf143593a2df6f4f79eb47c558cab9a4554c18fa5e91b910b59",
+    "ballHash": "eb0fffc6c53df7b74e60e356d34ae1c62a8cb3c3aecca82f8ff864cd2669a632"
+  },
+  {
+    "revision": "before",
+    "size": 21,
+    "shape": "classic",
+    "medianMs": 5.5,
+    "p95Ms": 7.799999952316284,
+    "initialMs": 383.5,
+    "sha256": "f7a0aea622b570f415cc0c8182c838428f358e1fc686d7cb5a2a6040023ffe9f",
+    "ballHash": "64974d926b0f2a6f62c9647f2310148f09cfd973f29bf8ef3457feff43f58cad"
+  },
+  {
+    "revision": "before",
+    "size": 21,
+    "shape": "open",
+    "medianMs": 4.299999952316284,
+    "p95Ms": 8.099999904632568,
+    "initialMs": 94.39999985694885,
+    "sha256": "d8773cab66d4357bd61a5ab589c3699ba7deff4a5e4847315df56909de755114",
+    "ballHash": "5a091436ab28f8e181388f3aaafbc7fa865edd343d20607617f552fbddc4d1e1"
+  },
+  {
+    "revision": "after",
+    "size": 7,
+    "shape": "classic",
+    "medianMs": 7.799999952316284,
+    "p95Ms": 13.5,
+    "initialMs": 202.39999985694885,
+    "sha256": "98682e06aab7c5bbd265b9bf5fcbe0c8a3bb59e76d75859ccc737381702f0691",
+    "ballHash": "8aa4f81f91e8c8bc0e2ceee9e4b4992965c01cbccef1472d997bc3c13731bdf7"
+  },
+  {
+    "revision": "after",
+    "size": 7,
+    "shape": "open",
+    "medianMs": 7.200000047683716,
+    "p95Ms": 11,
+    "initialMs": 193.40000009536743,
+    "sha256": "67e1fb5117d6967853202931d39e3ab179457b475875b6c81790c451bb069366",
+    "ballHash": "f2a0dc559f2c09a620b0d8612c32e9b7024b2e681866f270ec382833a1af56af"
+  },
+  {
+    "revision": "after",
+    "size": 9,
+    "shape": "classic",
+    "medianMs": 6.299999952316284,
+    "p95Ms": 11,
+    "initialMs": 139.59999990463257,
+    "sha256": "87ae75ba2ebabdbdb2b68e834f2bf2ec375eb290d1bd28e45bce97319db94007",
+    "ballHash": "7b847005c7c39f145aa486ede6295815f4b05f8d0937faeb8b73da266ef71761"
+  },
+  {
+    "revision": "after",
+    "size": 9,
+    "shape": "open",
+    "medianMs": 5.799999952316284,
+    "p95Ms": 11,
+    "initialMs": 48.5,
+    "sha256": "71a67fd1cc67e3db245fb47c86ed97e0e928a72d4e06736ee7e152fb23dded41",
+    "ballHash": "1f839856bd567a1d69ea8e66dfd8e63c938aaa1897a19eeddc7acef5d6429098"
+  },
+  {
+    "revision": "after",
+    "size": 11,
+    "shape": "classic",
+    "medianMs": 5.599999904632568,
+    "p95Ms": 9.699999809265137,
+    "initialMs": 175.70000004768372,
+    "sha256": "17cde1e1c82a5a00d612ba68f7e61b1661b6354ebf4b4cb76dff180973c44a06",
+    "ballHash": "49dae101e47252669dc391324c111e8ef918a2a1d6630cceb91116d328fabc3c"
+  },
+  {
+    "revision": "after",
+    "size": 11,
+    "shape": "open",
+    "medianMs": 5.8999998569488525,
+    "p95Ms": 11.399999856948853,
+    "initialMs": 57.89999985694885,
+    "sha256": "d15b132c49ef0517d8b92eb593905b0a825ff5e7f2c3787f2a7970a6c9624c4e",
+    "ballHash": "b6a90b1637c5a41147ddd1b7dab998fae1f656c5c392e6cd0bc7208270176fd8"
+  },
+  {
+    "revision": "after",
+    "size": 13,
+    "shape": "classic",
+    "medianMs": 8.900000095367432,
+    "p95Ms": 30.799999952316284,
+    "initialMs": 370.59999990463257,
+    "sha256": "22ee2f7e9344d95e08253961392c1c2277c22da671d85c5e107a713e5f1a8b00",
+    "ballHash": "0f96e1135900a9b790803951c28b39b5dd4a4d8c4978ebcb876dfcf6dda0a464"
+  },
+  {
+    "revision": "after",
+    "size": 13,
+    "shape": "open",
+    "medianMs": 7.6000001430511475,
+    "p95Ms": 16.5,
+    "initialMs": 88.69999980926514,
+    "sha256": "6846bca60a3b2bf143593a2df6f4f79eb47c558cab9a4554c18fa5e91b910b59",
+    "ballHash": "eb0fffc6c53df7b74e60e356d34ae1c62a8cb3c3aecca82f8ff864cd2669a632"
+  },
+  {
+    "revision": "after",
+    "size": 21,
+    "shape": "classic",
+    "medianMs": 10.099999904632568,
+    "p95Ms": 26.5,
+    "initialMs": 712.6000001430511,
+    "sha256": "f7a0aea622b570f415cc0c8182c838428f358e1fc686d7cb5a2a6040023ffe9f",
+    "ballHash": "64974d926b0f2a6f62c9647f2310148f09cfd973f29bf8ef3457feff43f58cad"
+  },
+  {
+    "revision": "after",
+    "size": 21,
+    "shape": "open",
+    "medianMs": 5.299999952316284,
+    "p95Ms": 10.700000047683716,
+    "initialMs": 131.60000014305115,
+    "sha256": "d8773cab66d4357bd61a5ab589c3699ba7deff4a5e4847315df56909de755114",
+    "ballHash": "5a091436ab28f8e181388f3aaafbc7fa865edd343d20607617f552fbddc4d1e1"
+  }
+]

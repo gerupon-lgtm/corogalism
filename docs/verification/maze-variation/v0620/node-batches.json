@@ -1,0 +1,112 @@
+[
+  {
+    "summary": [
+      "ℹ tests 25",
+      "ℹ pass 25",
+      "ℹ fail 0",
+      "ℹ duration_ms 5828.476"
+    ],
+    "files": [
+      "test/audio-settings.test.js",
+      "test/balance.test.js",
+      "test/ball-materials.test.js",
+      "test/ballRotation.test.js",
+      "test/branch-floors.test.js"
+    ],
+    "exitCode": 0
+  },
+  {
+    "summary": [
+      "ℹ tests 21",
+      "ℹ pass 21",
+      "ℹ fail 0",
+      "ℹ duration_ms 2708.817"
+    ],
+    "files": [
+      "test/candy-full.test.js",
+      "test/challenge.test.js",
+      "test/escape-timing.test.js",
+      "test/exploration.test.js",
+      "test/feature-hint-position.test.js"
+    ],
+    "exitCode": 0
+  },
+  {
+    "summary": [
+      "ℹ tests 27",
+      "ℹ pass 27",
+      "ℹ fail 0",
+      "ℹ duration_ms 3028.2696"
+    ],
+    "files": [
+      "test/features.test.js",
+      "test/first-sound.test.js",
+      "test/floor-difficulty.test.js",
+      "test/floor-lab.test.js",
+      "test/floor-learning.test.js"
+    ],
+    "exitCode": 0
+  },
+  {
+    "summary": [
+      "ℹ tests 14",
+      "ℹ pass 14",
+      "ℹ fail 0",
+      "ℹ duration_ms 1484.364"
+    ],
+    "files": [
+      "test/floor-presentation.test.js",
+      "test/floor-themes.test.js",
+      "test/floor-trial.test.js",
+      "test/hourglass.test.js",
+      "test/hp-display.test.js"
+    ],
+    "exitCode": 0
+  },
+  {
+    "summary": [
+      "ℹ tests 56",
+      "ℹ pass 56",
+      "ℹ fail 0",
+      "ℹ duration_ms 655.9391"
+    ],
+    "files": [
+      "test/maze-variation.test.js",
+      "test/maze.test.js",
+      "test/onboarding.test.js",
+      "test/phase2.test.js",
+      "test/physics.test.js"
+    ],
+    "exitCode": 0
+  },
+  {
+    "summary": [
+      "ℹ tests 27",
+      "ℹ pass 27",
+      "ℹ fail 0",
+      "ℹ duration_ms 283.7781"
+    ],
+    "files": [
+      "test/playthrough.test.js",
+      "test/resolveParams.test.js",
+      "test/rubber-rebound.test.js",
+      "test/stableCalibration.test.js",
+      "test/stagePlay.test.js"
+    ],
+    "exitCode": 0
+  },
+  {
+    "summary": [
+      "ℹ tests 15",
+      "ℹ pass 15",
+      "ℹ fail 0",
+      "ℹ duration_ms 1040.9278"
+    ],
+    "files": [
+      "test/storage.test.js",
+      "test/tutorial.test.js",
+      "test/wall-clearance.test.js"
+    ],
+    "exitCode": 0
+  }
+]

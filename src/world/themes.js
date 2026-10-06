@@ -15,9 +15,9 @@ const floorDefs = {
 };
 const intro=['basic','basic','sand','iceRubber','gravityAssist','iceSand','repulsionAssist','iceAssist','rest','iceSand','sticky','careful','gravityHinder','rest','repulsionHinder','iceAssist'];
 const cycle=['trial','rest','iceRubber','basic','iceSand','bounce','gravityHinder','rest','repulsionHinder','iceAssist','sticky','careful','sand','rest','iceAssist','basic'];
-export function themeAt(stage, level='normal') {
+export function themeAt(stage, level='normal',override=null) {
  const n=Math.max(1,Math.floor(stage));
- const id=level==='normal'&&n%10===0?'specialFlow':n<=intro.length?intro[n-1]:cycle[(n-intro.length-1)%cycle.length];
+ const id=level==='normal'&&n%10===0?'specialFlow':override|| (n<=intro.length?intro[n-1]:cycle[(n-intro.length-1)%cycle.length]);
  const definition=floorDefs[id]||STAGE_THEMES.definitions[id];
  const first=Object.keys(floorDefs).includes(id)&&!intro.slice(0,n-1).includes(id)&&n<=16;
  const theme={id,material:'default',ratio:0,...definition,firstVisit:first,learning:level==='easy'&&first};
@@ -31,8 +31,7 @@ export function themeAt(stage, level='normal') {
 }
 
 /** 経路上の曲がり角に接する壁を優先。外周とスタート・ゴールの周囲は標準のまま。 */
-export function assignTheme(stage, difficulty) {
-  const theme = themeAt(difficulty.stage, difficulty.level);
+export function assignTheme(stage, difficulty,theme=themeAt(difficulty.stage,difficulty.level)) {
   stage.theme = theme;
   if (theme.material === 'default') return;
   const { maze, wallThickness: wt } = stage;

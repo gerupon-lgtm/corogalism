@@ -3,6 +3,7 @@ import { BASE, TUNING, RECOVERY, LEAF, REST, STICKY, HOURGLASS, TUTORIAL, HP } f
 import {createFloorPracticeStage} from '../world/floorPractice.js';
 import { createTutorialStage } from '../world/tutorialStage.js';
 import { generateMaze } from '../maze/generator.js';
+import {generateVariedMaze} from '../maze/variation.js';
 import { createStage, createActor, goalCenter } from '../world/stage.js';
 import { getCharacter } from '../world/characters.js';
 import { stepPhysics } from '../physics/integrator.js';
@@ -13,7 +14,7 @@ import { stageTimeLimitSec } from './progression.js';
 export function createStagePlay(seed, difficulty = null, carry = {}) {
   const floorPractice = Boolean(carry.floorPractice);
   const tutorial = !floorPractice && Boolean(carry.tutorial);
-  const stage = floorPractice ? createFloorPracticeStage(carry.floorPractice) : tutorial ? createTutorialStage() : createStage(generateMaze(BASE.mazeSize, seed), difficulty);
+  const stage = floorPractice ? createFloorPracticeStage(carry.floorPractice) : tutorial ? createTutorialStage() : createStage(carry.variation?generateVariedMaze(carry.variation,seed):generateMaze(BASE.mazeSize, seed), difficulty);
   const maze = stage.maze;
   const actor = createActor(maze, getCharacter('default'));
   const origin = { x: actor.x, y: actor.y };
@@ -54,6 +55,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
       activeSec += Math.max(0, elapsedMs) / 1000;
       if (started) timeMs += Math.max(0, elapsedMs);
       let damage = 0;
+      const goal = goalCenter(maze);let crossedGoal=false;
       if (releasedFloor && !onTile(releasedFloor, .5 + actor.r)) releasedFloor = null;
       if (trap) {
         trap.elapsed += Math.max(0, elapsedMs) / 1000;
@@ -62,6 +64,11 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
       }
       const result = trap ? { wallHits: 0 } : stepPhysics({
         actor, stage, tilt, base, dt,
+        onTravel(from,to) {
+          const dx=to.x-from.x,dy=to.y-from.y,length=dx*dx+dy*dy;
+          const t=length?Math.max(0,Math.min(1,((goal.x-from.x)*dx+(goal.y-from.y)*dy)/length)):0;
+          if(Math.hypot(from.x+dx*t-goal.x,from.y+dy*t-goal.y)<TUNING.goalRadius)crossedGoal=true;
+        },
         onImpact(speed, wall) {
           if (hp && !hp.isDead) damage += hp.applyImpact(speed, wall, activeSec);
           onImpact?.(speed, wall);
@@ -70,7 +77,6 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
       wallHits += result.wallHits;
       if (Math.hypot(actor.vx, actor.vy) > TUNING.startMoveSpeed
         || (hp && Math.hypot(actor.x - origin.x, actor.y - origin.y) >= TUNING.challengeStartDistance)) started = true;
-      const goal = goalCenter(maze);
       // 最終フレームでゴールに触れても、死亡・時間切れならクリアにしない。
       if (hp?.isDead) status = 'dead';
       else if (limitSec !== null && timeMs >= (limitSec + extendedSec) * 1000) status = 'timeout';
@@ -112,7 +118,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
           const gained = hp.heal(hp.max * RECOVERY.healRatio);
           if (gained > 0) { item.collected = true; onRecovery?.(gained, { before, after: hp.value }); }
         }
-        if (Math.hypot(actor.x - goal.x, actor.y - goal.y) < TUNING.goalRadius) status = 'clear';
+        if (crossedGoal||Math.hypot(actor.x - goal.x, actor.y - goal.y) < TUNING.goalRadius) status = 'clear';
       }
       return damage;
     },

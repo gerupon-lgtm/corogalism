@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'd95966363629c26e';
+self.PRECACHE_VERSION = 'af86a9027855da68';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -42,6 +42,7 @@ self.PRECACHE_FILES = [
   "src/game/progression.js",
   "src/game/run.js",
   "src/game/stagePlay.js",
+  "src/game/stageVariety.js",
   "src/game/tutorialLessons.js",
   "src/input/escapeInput.js",
   "src/input/pointerSource.js",
@@ -63,6 +64,7 @@ self.PRECACHE_FILES = [
   "src/maze/path.js",
   "src/maze/rng.js",
   "src/maze/validator.js",
+  "src/maze/variation.js",
   "src/physics/collision.js",
   "src/physics/integrator.js",
   "src/physics/resolveParams.js",
@@ -97,6 +99,7 @@ self.PRECACHE_FILES = [
   "src/world/floorPractice.js",
   "src/world/floorThemes.js",
   "src/world/materials.js",
+  "src/world/openFields.js",
   "src/world/recovery.js",
   "src/world/stage.js",
   "src/world/stageFeatures.js",

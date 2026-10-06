@@ -4,7 +4,8 @@
  *
  * 迷路生成やHPは持たない純粋な状態管理。面の生成は呼び出し側が行う。
  */
-import { RUN } from '../config/gameConfig.js';
+import { RUN,MAZE_VARIETY } from '../config/gameConfig.js';
+import {chooseStageVariation} from './stageVariety.js';
 
 /**
  * ラン全体を1つのシードから導出する。
@@ -23,6 +24,7 @@ export function createRun(runSeed, cfg = RUN) {
   let usedContinue = false;
   let over = false;
   let cause = null; // 'dead' | 'timeout'
+  const history={normal:[],easy:[]};let variations={};
 
   return {
     runSeed: runSeed >>> 0,
@@ -38,9 +40,15 @@ export function createRun(runSeed, cfg = RUN) {
 
     /** 現在の面のシード */
     currentSeed() { return stageSeed(this.runSeed, stageIndex); },
+    currentVariation(level='normal') {
+      if(!variations[level])variations[level]=chooseStageVariation({seed:this.currentSeed(),stage:stageIndex,level,history:history[level]});
+      return variations[level];
+    },
 
     /** 面をクリアした */
     clearStage({ timeMs, noDamage }) {
+      for(const [level,profile] of Object.entries(variations)){history[level].push(profile);history[level]=history[level].slice(-MAZE_VARIETY.history);}
+      variations={};
       clearedStages++;
       totalTimeMs += timeMs;
       if (noDamage) noDamageStages++;

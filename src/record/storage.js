@@ -10,7 +10,8 @@ import { normalizeAudioSettings } from '../audio/audioSettings.js';
 const SETTINGS_KEY = 'corogalism-settings';
 const BESTS_KEY = 'corogalism-bests';
 const LEGACY_RUN_KEY='corogalism-run-bests';
-const RUN_BESTS_KEY = 'corogalism-run-bests-floor-v1';
+const FLOOR_RUN_KEY='corogalism-run-bests-floor-v1';
+const RUN_BESTS_KEY = 'corogalism-run-bests-maze-v1';
 
 const DEFAULT_SETTINGS = {
   mode: 'tilt',
@@ -87,7 +88,7 @@ export function loadRunBests(level = 'normal') {
   };
 }
 
-// 床ルールの新記録。旧キーは参考表示用に別途保持する。
+// 面構成が変わった記録。以前の床ルールのキーは削除せず参考表示する。
 function runBestsKey(level) { return level === 'easy' ? `${RUN_BESTS_KEY}-easy` : RUN_BESTS_KEY; }
 
 function isBetterRun(candidate, previous) {
@@ -118,7 +119,7 @@ export function saveRunBest(result) {
   }
 
   const best = {
-    rulesVersion: 'floor-v1',
+    rulesVersion: 'maze-v1',
     stages: result.stages,
     totalTimeMs: result.totalTimeMs,
     at: new Date().toISOString(),
@@ -130,6 +131,7 @@ export function saveRunBest(result) {
 
 /** 旧記録は読み取り専用。新しいルールのベストとは比較しない。 */
 export function loadLegacyRunBests(level='normal'){
- const stored=read(level==='easy'?`${LEGACY_RUN_KEY}-easy`:LEGACY_RUN_KEY,{});
+ const floor=read(level==='easy'?`${FLOOR_RUN_KEY}-easy`:FLOOR_RUN_KEY,{});
+ const stored=isRunBest(floor.noContinue)||isRunBest(floor.withContinue)?floor:read(level==='easy'?`${LEGACY_RUN_KEY}-easy`:LEGACY_RUN_KEY,{});
  return {noContinue:isRunBest(stored.noContinue)?stored.noContinue:null,withContinue:isRunBest(stored.withContinue)?stored.withContinue:null};
 }

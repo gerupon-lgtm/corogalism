@@ -6,6 +6,7 @@ import { generateMaze } from '../maze/generator.js';
 import { solvePath, countTurns } from '../maze/path.js';
 import { checkReachability } from '../maze/validator.js';
 import { branchCells, connectedCells } from './branchFloors.js';
+import {placeOpenFields} from './openFields.js';
 
 export function cornerSites(maze, max=3, gap=5) {
  const sites=[];
@@ -13,7 +14,7 @@ export function cornerSites(maze, max=3, gap=5) {
   const prev=maze.path[i-1],cell=maze.path[i],next=maze.path[i+1];
   if((cell.x-prev.x)*(next.y-cell.y)===(cell.y-prev.y)*(next.x-cell.x))continue;
   if(sites.length&&i-sites.at(-1).index<gap)continue;
-  if(Math.hypot(cell.x,cell.y)<2.5||Math.hypot(cell.x-6,cell.y-6)<2.5)continue;
+  if(Math.hypot(cell.x-maze.start.x,cell.y-maze.start.y)<2.5||Math.hypot(cell.x-maze.goal.x,cell.y-maze.goal.y)<2.5)continue;
   sites.push({index:i,prev,cell,next});if(sites.length===max)break;
  }
  return sites;
@@ -22,21 +23,21 @@ export function prepareFloorMaze(input, theme) {
  if(!theme.floorPattern&&theme.id!=='basic')return input;
  const max=theme.special?4:theme.firstVisit?1:theme.floorPattern==='iceAssist'?2:3,gap=theme.special?3:5;
  const candidates=[input],candidateRng=createRng((input.seed^0x6a09e667)>>>0);
- if(theme.firstVisit||theme.special||theme.id==='basic')for(let i=1;i<FLOOR_CHALLENGE.mazeCandidates;i++)candidates.push(generateMaze(input.size,Math.floor(candidateRng()*0x100000000)>>>0));
+ if(!input.variation&&(theme.firstVisit||theme.special||theme.id==='basic'))for(let i=1;i<FLOOR_CHALLENGE.mazeCandidates;i++)candidates.push(generateMaze(input.size,Math.floor(candidateRng()*0x100000000)>>>0));
  const isOpen=(m,a,b)=>!m.cells[a.y*m.size+a.x][b.x>a.x?'r':b.x<a.x?'l':b.y>a.y?'b':'t'];
  for(const maze of candidates){
-  if(theme.assist){
+  if(theme.assist&&maze.variation?.shape!=='open'){
    const open=(a,b)=>{
     const [side,other]=b.x>a.x?['r','l']:b.x<a.x?['l','r']:b.y>a.y?['b','t']:['t','b'];
     maze.cells[a.y*maze.size+a.x][side]=0;maze.cells[b.y*maze.size+b.x][other]=0;
    };
    let widened=0;
-   for(const {prev,cell,next} of cornerSites(maze,49,1)){
+   for(const {prev,cell,next} of cornerSites(maze,maze.cells.length,1)){
     const saved=maze.cells.map(c=>({...c}));
     const inner={x:prev.x+next.x-cell.x,y:prev.y+next.y-cell.y};
     open(prev,inner);open(inner,next);
     const updated={...maze,path:solvePath(maze)};
-    const valid=cornerSites(updated,49,1).some(s=>{
+    const valid=cornerSites(updated,maze.cells.length,1).some(s=>{
      const q={x:s.prev.x+s.next.x-s.cell.x,y:s.prev.y+s.next.y-s.cell.y};
      return isOpen(maze,s.prev,q)&&isOpen(maze,q,s.next);
     });
@@ -47,13 +48,13 @@ export function prepareFloorMaze(input, theme) {
   if(!checkReachability(maze).ok)throw new Error('床テーマの到達性が不正です');
   maze.path=solvePath(maze);maze.pathLength=maze.path.length;maze.turns=countTurns(maze.path);
   // 壁を開けると近道が生まれる。最終経路上の広い曲がり角から改めて配置する。
-  maze.floorSites=cornerSites(maze,49,1).filter(s=>{
+  maze.floorSites=cornerSites(maze,maze.cells.length,1).filter(s=>{
    if(!theme.assist)return true;
    const inner={x:s.prev.x+s.next.x-s.cell.x,y:s.prev.y+s.next.y-s.cell.y};
    return isOpen(maze,s.prev,inner)&&isOpen(maze,inner,s.next);
   }).reduce((chosen,s)=>{if(!chosen.length||s.index-chosen.at(-1).index>=gap)chosen.push(s);return chosen;},[]).slice(0,max);
   // 初登場に力場がない候補だけなら、同じ乱数列から有限の追加候補を試す。
-  if(theme.assist&&maze===candidates.at(-1)&&!candidates.some(m=>m.floorSites?.length)&&candidates.length<FLOOR_CHALLENGE.mazeCandidates*4){
+  if(!input.variation&&theme.assist&&maze===candidates.at(-1)&&!candidates.some(m=>m.floorSites?.length)&&candidates.length<FLOOR_CHALLENGE.mazeCandidates*4){
    for(let i=0,count=Math.min(FLOOR_CHALLENGE.mazeCandidates,FLOOR_CHALLENGE.mazeCandidates*4-candidates.length);i<count;i++)candidates.push(generateMaze(input.size,Math.floor(candidateRng()*0x100000000)>>>0));
   }
  }
@@ -61,6 +62,7 @@ export function prepareFloorMaze(input, theme) {
   (b.floorSites.length>0)-(a.floorSites.length>0)||a.pathLength-b.pathLength)[0];
 }
 export function addFloorTheme(stage,theme){
+ if(stage.maze.baffle&&!theme.floorPattern){theme={...theme,floorPattern:'iceRubber',label:`${theme.label}・氷`};stage.theme=theme;}
  if(!theme.floorPattern)return;
  const cfg=FLOOR_CHALLENGE,all=stage.maze.cells.map((_,i)=>({x:i%stage.maze.size,y:Math.floor(i/stage.maze.size)}));
  const sites=stage.maze.floorSites||cornerSites(stage.maze),pattern=theme.floorPattern;
@@ -100,6 +102,18 @@ export function addFloorTheme(stage,theme){
    field({x:s.cell.x-sign*dx*.14,y:s.cell.y-sign*dy*.14},sign*cfg.hinderForce);
   }
  }
+ // 小さな曲がり角がなくても、選んだ素材の体験は残す。
+ // 通常の配置で不足した力の向きだけ、経路上の離れた候補で補う。
+ const needed=pattern==='iceAssist'||theme.special?[1,-1]:pattern.toLowerCase().includes('repulsion')?[-1]:pattern.toLowerCase().includes('gravity')?[1]:[];
+ for(const sign of needed){
+  if(stage.zones.some(z=>z.kind==='radial'&&Math.sign(z.strength)===sign))continue;
+  const candidates=[...learningFieldPoints(stage.maze).map(p=>({x:p.x-.5,y:p.y-.5})),...stage.maze.path];
+  for(const p of candidates){
+   const before=stage.zones.length;
+   field(p,sign*(theme.assist?cfg.assistForce:cfg.hinderForce));
+   if(stage.zones.length>before)break;
+  }
+ }
  // 追加する力場も同じ素材の実効値。正解ルートから離れた場所を優先する。
  const signs=[...new Set(stage.zones.filter(z=>z.kind==='radial').map(z=>Math.sign(z.strength)))];
  const rng=createRng((stage.maze.seed^0x570a1ed3)>>>0);
@@ -113,7 +127,11 @@ export function addFloorTheme(stage,theme){
    if(stage.zones.length>before)stage.zones.at(-1).branch=true;
   }
  }
- for(const w of stage.walls)w.materialId=pattern==='iceRubber'?'rubber':'cork';
+ if(stage.maze.baffle){
+  // 選んだ石・トゲ・こけは残し、基本壁だけゴムへ。組合せを消さない。
+  for(const w of stage.walls)if(w.materialId==='default')w.materialId='rubber';
+  placeOpenFields(stage);
+ }else for(const w of stage.walls)w.materialId=pattern==='iceRubber'?'rubber':'cork';
  stage.floorLoad={sandCells:stage.maze.path.filter(c=>sand.some(s=>s.x===c.x&&s.y===c.y)).length,
   hinderFields:theme.assist?0:stage.zones.filter(z=>z.kind==='radial').length};
 }

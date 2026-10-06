@@ -17,6 +17,15 @@ export const BASE = {
   mazeSize: 7,           // フェーズ1固定。generateMaze はサイズを引数で受ける
 };
 
+/** T-278: 初期の出現配分。サイズの計算上限や検証候補の制限ではない。 */
+export const MAZE_VARIETY = {
+ sizes: [[7,3],[8,1.4],[9,1.6],[11,1],[13,.4]],
+ shapes: [['classic',1.4],['intricate',1.5],['short',1.5],['roomy',1.3],['open',1.4]],
+ themes: ['basic','rest','sand','iceRubber','iceSand','bounce','gravityAssist','repulsionAssist','iceAssist','sticky','careful','gravityHinder','repulsionHinder','trial'],
+ history:4, repeatFactor:.22, recentFactor:.65, candidates:6,
+ roomOpening:.28, openFieldClearance:.4,
+};
+
 /** T-247: おためし専用。正式な床の採用値ではない。 */
 export const ICE_LAB = { minAccelK: 0.28, transitionSpeed: 1.2 };
 export const FLOOR_LAB = { ice: 0.08, sand: 3.2, force: 6, radius: 1.6 };

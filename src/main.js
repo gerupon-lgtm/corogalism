@@ -307,7 +307,7 @@ function updateCountdown() {
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
-  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, shield, tutorial: gameMode === 'tutorial',floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
+  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, variation:run?.currentVariation(activeLevel), shield, tutorial: gameMode === 'tutorial',floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
   floorPresentation.setStage(run?play.stage.theme:null);
   floorContactGuide.reset();find('floor-contact-hint').hidden=true;
   renderFloorPractice();
@@ -318,7 +318,8 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   game.setPaused(false);
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
   find('play-mode-label').textContent = gameMode === 'tutorial' ? 'はじめて' : gameMode==='floor-practice'?'床の練習':run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
-  find('stage-theme').textContent = play.stage.theme?.label || '';
+  const variety=play.stage.maze.variation;
+  find('stage-theme').textContent = `${variety?`${variety.size}×${variety.size} ${variety.label}｜`:''}${play.stage.theme?.label || ''}`;
   find('recovery-feedback').textContent = '';
   resize();
 }
@@ -577,7 +578,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,
         run: run ? { ...run.result(), stageIndex: run.stageIndex, continuesLeft: run.continuesLeft, runSeed: run.runSeed } : null,
         actor: { x: play.actor.x, y: play.actor.y, vx: play.actor.vx, vy: play.actor.vy, r: play.actor.r },
-        maze:{size:play.stage.maze.size,path:play.stage.maze.path,cells:play.stage.maze.cells},zones:play.stage.zones,
+        maze:{size:play.stage.maze.size,path:play.stage.maze.path,cells:play.stage.maze.cells,variation:play.stage.maze.variation,baffle:play.stage.maze.baffle},zones:play.stage.zones,
         goal: goalCenter(play.stage.maze), walls: play.stage.walls.map((wall) => ({ ...wall })) };
     },
     teleport(x, y) { play.teleport(x, y); },

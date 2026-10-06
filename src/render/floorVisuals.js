@@ -15,7 +15,7 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
     line([[length/2-.07,-.055],[length/2,0],[length/2-.07,.055]]); ctx.restore();
   };
   {
-    const patches = stage.zones.filter(z=>z.kind === 'ice' || z.kind === 'sand').flatMap(z=>z.cells.map(c=>({...c,type:z.kind})));
+    const patches = staticLayer?stage.zones.filter(z=>z.kind === 'ice' || z.kind === 'sand').flatMap(z=>z.cells.map(c=>({...c,type:z.kind}))):[];
     if(staticLayer)for (const {x,y,type} of patches) {
       ctx.save(); ctx.beginPath(); ctx.rect(x+.025,y+.025,.95,.95); ctx.clip();
       const tint = ctx.createLinearGradient(x,y,x+1,y+1);
@@ -42,7 +42,7 @@ export function drawFloorVisuals(ctx, camera, { type, settings, actor, time, red
       }
       ctx.restore();
     }
-    const onSand = patches.some(c=>c.type==='sand'&&c.x===Math.floor(actor.x)&&c.y===Math.floor(actor.y));
+    const onSand = stage.zones.some(z=>z.kind==='sand'&&z.cells.some(c=>c.x===Math.floor(actor.x)&&c.y===Math.floor(actor.y)));
     const speed = Math.hypot(actor.vx,actor.vy);
     if (dynamicLayer && onSand && speed > .15 && !reduced) {
       const angle=Math.atan2(actor.vy,actor.vx);

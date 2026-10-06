@@ -16,7 +16,7 @@ export function initGuide(canOpen) {
  let opener=document.querySelector('#btn-guide');
  dialog.innerHTML=`<header class="guide-heading"><h2 id="guide-title"><canvas data-guide-art="leaf" width="144" height="112" aria-hidden="true"></canvas> あそびのガイド</h2><button type="button" class="guide-x" aria-label="ガイドを閉じる" autofocus>×</button><p>すべって、曲がって、ゴールへ。</p></header>
  <div class="guide-showcase"><article><canvas width="240" height="140" data-guide-art="slide-demo" aria-hidden="true"></canvas><strong>すべる</strong><span>氷 × はずむ壁</span></article><article><canvas width="240" height="140" data-guide-art="brake-demo" aria-hidden="true"></canvas><strong>曲がる</strong><span>砂でブレーキ</span></article><article><canvas width="240" height="140" data-guide-art="force-demo" aria-hidden="true"></canvas><strong>軌道が変わる</strong><span>引く力・押す力</span></article></div>
- <div class="guide-group"><h2>床で変わる、ころがり方</h2><div class="guide-floor-grid">${floorMaterials.map(card).join('')}</div><p class="guide-tip">氷は早めに減速。力場は色と矢印を見て、流れに乗ろう。床の練習なら、時間を気にせずくらべられます。</p></div>
+ <div class="guide-group"><h2>床で変わる、ころがり方</h2><div class="guide-floor-grid">${floorMaterials.map(card).join('')}</div><p class="guide-tip">小さな迷路も、大きな迷路も。入り組んだ道と反発の広場を行き来しよう。氷は早めに減速、力場は色と矢印が目印。床の練習なら、時間を気にせずくらべられます。</p></div>
  <div class="guide-group guide-walls"><h2>壁のいろいろ</h2><div class="guide-wall-grid">${walls.map(card).join('')}</div></div>
  <p class="guide-tip">壁にぶつかる強さで、げんきの減り方が変わります。</p><div class="guide-group"><h2>うれしいアイテム</h2><div class="guide-list">${items.map(card).join('')}</div></div>
  <div class="guide-group"><h2>床のしかけ</h2><div class="guide-list guide-floors">${floors.map(card).join('')}</div></div>
