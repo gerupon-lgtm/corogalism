@@ -1,0 +1,140 @@
+{
+  "kind": "read-only existing generator; not adoption limits",
+  "sizes": [
+    {
+      "size": 7,
+      "samples": 200,
+      "pathMedian": 25,
+      "pathP90": 37,
+      "turnsMedian": 14,
+      "turnsP90": 23,
+      "walls": 64,
+      "generationMedianMs": 0.034,
+      "generationP95Ms": 0.166,
+      "ballCssPxAt294": 23.1,
+      "ballCssPxAt356": 28
+    },
+    {
+      "size": 8,
+      "samples": 200,
+      "pathMedian": 31,
+      "pathP90": 45,
+      "turnsMedian": 18,
+      "turnsP90": 28,
+      "walls": 81,
+      "generationMedianMs": 0.044,
+      "generationP95Ms": 0.19,
+      "ballCssPxAt294": 20.2,
+      "ballCssPxAt356": 24.5
+    },
+    {
+      "size": 9,
+      "samples": 200,
+      "pathMedian": 37,
+      "pathP90": 53,
+      "turnsMedian": 22,
+      "turnsP90": 33,
+      "walls": 100,
+      "generationMedianMs": 0.032,
+      "generationP95Ms": 0.079,
+      "ballCssPxAt294": 18,
+      "ballCssPxAt356": 21.8
+    },
+    {
+      "size": 10,
+      "samples": 200,
+      "pathMedian": 49,
+      "pathP90": 69,
+      "turnsMedian": 29,
+      "turnsP90": 42,
+      "walls": 121,
+      "generationMedianMs": 0.028,
+      "generationP95Ms": 0.064,
+      "ballCssPxAt294": 16.2,
+      "ballCssPxAt356": 19.6
+    },
+    {
+      "size": 11,
+      "samples": 200,
+      "pathMedian": 51,
+      "pathP90": 81,
+      "turnsMedian": 31,
+      "turnsP90": 50,
+      "walls": 144,
+      "generationMedianMs": 0.035,
+      "generationP95Ms": 0.131,
+      "ballCssPxAt294": 14.7,
+      "ballCssPxAt356": 17.8
+    },
+    {
+      "size": 13,
+      "samples": 200,
+      "pathMedian": 73,
+      "pathP90": 105,
+      "turnsMedian": 45,
+      "turnsP90": 67,
+      "walls": 196,
+      "generationMedianMs": 0.053,
+      "generationP95Ms": 0.173,
+      "ballCssPxAt294": 12.4,
+      "ballCssPxAt356": 15.1
+    },
+    {
+      "size": 15,
+      "samples": 200,
+      "pathMedian": 95,
+      "pathP90": 135,
+      "turnsMedian": 58,
+      "turnsP90": 84,
+      "walls": 256,
+      "generationMedianMs": 0.065,
+      "generationP95Ms": 0.172,
+      "ballCssPxAt294": 10.8,
+      "ballCssPxAt356": 13.1
+    },
+    {
+      "size": 17,
+      "samples": 200,
+      "pathMedian": 111,
+      "pathP90": 167,
+      "turnsMedian": 69,
+      "turnsP90": 103,
+      "walls": 324,
+      "generationMedianMs": 0.077,
+      "generationP95Ms": 0.214,
+      "ballCssPxAt294": 9.5,
+      "ballCssPxAt356": 11.5
+    },
+    {
+      "size": 21,
+      "samples": 200,
+      "pathMedian": 165,
+      "pathP90": 245,
+      "turnsMedian": 101,
+      "turnsP90": 157,
+      "walls": 484,
+      "generationMedianMs": 0.118,
+      "generationP95Ms": 0.307,
+      "ballCssPxAt294": 7.7,
+      "ballCssPxAt356": 9.3
+    }
+  ],
+  "currentEasy": [
+    {
+      "stage": 2,
+      "samples": 200,
+      "pathMedian": 17,
+      "pathP90": 25,
+      "turnsMedian": 9,
+      "turnsP90": 14
+    },
+    {
+      "stage": 12,
+      "samples": 200,
+      "pathMedian": 25,
+      "pathP90": 37,
+      "turnsMedian": 14,
+      "turnsP90": 23
+    }
+  ]
+}
