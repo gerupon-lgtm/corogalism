@@ -18,13 +18,25 @@ test('後半の面数で難しさを上げず、同じ種と履歴なら同じ�
  for(const level of ['easy','normal']){
   const run=createRun(77),profiles=[];
   for(let n=1;n<=150;n++){profiles.push(run.currentVariation(level));run.clearStage({timeMs:1000,noDamage:true});}
-  for(const slice of [profiles.slice(1,16),profiles.slice(96,128)]){
+  for(const slice of [profiles.slice(8,24),profiles.slice(96,128)]){
    assert.ok(new Set(slice.map(p=>p.size)).size>=3);
    assert.ok(slice.some(p=>p.size>=11));
    assert.ok(slice.some(p=>p.shape==='short'));
    assert.ok(new Set(slice.map(p=>p.shape)).size>=3);
   }
   assert.notDeepEqual(profiles.slice(16,32),profiles.slice(32,48));
+ }
+});
+
+test('床の基本紹介8面までは7×7で形を変え、9面以降に大小が混ざる',()=>{
+ for(const level of ['easy','normal'])for(const seed of [1,77,913,7919]){
+  const run=createRun(seed),profiles=[];
+  for(let n=1;n<=40;n++){profiles.push(run.currentVariation(level));run.clearStage({timeMs:1000,noDamage:true});}
+  assert.ok(profiles.slice(0,8).every(p=>p.size===7),JSON.stringify({level,seed,early:profiles.slice(0,8)}));
+  assert.ok(new Set(profiles.slice(0,8).map(p=>p.shape)).size>=3);
+  const later=profiles.slice(8);assert.ok(later.some(p=>p.size===7));assert.ok(later.some(p=>p.size>=11));
+  assert.ok(new Set(later.map(p=>p.size)).size>=4);
+  assert.deepEqual(profiles.slice(0,8).map(p=>p.themeId),['basic','basic','sand','iceRubber','gravityAssist','iceSand','repulsionAssist','iceAssist']);
  }
 });
 

@@ -6,9 +6,6 @@ import {createStagePlay} from '../src/game/stagePlay.js';
 import {challengeDifficulty} from '../src/game/challenge.js';
 import {checkReachability} from '../src/maze/validator.js';
 import {createTiltVector} from '../src/input/tiltVector.js';
-import {stepPhysics} from '../src/physics/integrator.js';
-import {createActor,goalCenter} from '../src/world/stage.js';
-import {getCharacter} from '../src/world/characters.js';
 import {BASE} from '../src/config/gameConfig.js';
 
 const output=process.env.VARIETY_OUTPUT||'docs/verification/maze-variation/v0620';await mkdir(output,{recursive:true});
@@ -40,7 +37,10 @@ for(const level of ['easy','normal'])for(const runSeed of [1,77,913,7919]){
    const p=createStagePlay(run.currentSeed(),challengeDifficulty(n,level),{variation});
    assert.ok(checkReachability(p.stage.maze).ok);assert.equal(p.hp.max,40+4*p.stage.maze.turns);
    for(const z of p.stage.zones.filter(z=>z.kind==='radial'))if(p.stage.maze.baffle){
-    const b=p.stage.maze.baffle;assert.ok(z[b.axis]-z.radius>b.coord);
+    const b=p.stage.maze.baffle,size=p.stage.maze.size;
+    assert.ok(z.x>.5&&z.x<size-.5&&z.y>.5&&z.y<size-.5);
+    assert.ok(Math.hypot(z.x-.5,z.y-.5)>z.radius+.35);
+    assert.ok(Math.hypot(z.x-size+.5,z.y-size+.5)>z.radius+.35);
     assert.ok(z[b.axis==='x'?'y':'x']+z.radius<b.gap);
    }
    balance.push(play(run.currentSeed(),challengeDifficulty(n,level),variation,careful));
@@ -51,13 +51,14 @@ for(const level of ['easy','normal'])for(const runSeed of [1,77,913,7919]){
 }
 let constantCases=0;const directGoals=[];
 for(const size of [7,9,11,13,17,21])for(const seed of [77,913,7919])for(const themeId of ['iceRubber','iceAssist','gravityAssist','repulsionAssist','iceSand','sand','careful','trial','rest','sticky']){
- const p=createStagePlay(seed,challengeDifficulty(107,'easy'),{variation:{size,shape:'open',themeId}}),stage=p.stage,goal=goalCenter(stage.maze);
+ const variation={size,shape:'open',themeId};
  for(let angle=0;angle<96;angle++)for(const magnitude of [.1,.5,1]){
-  const actor=createActor(stage.maze,getCharacter('default')),tilt={x:Math.cos(angle*Math.PI/48)*magnitude,y:Math.sin(angle*Math.PI/48)*magnitude};let bounced=false,goalBeforeBounce=false;
-  for(let f=0;f<1200&&!bounced&&!goalBeforeBounce;f++)stepPhysics({actor,stage,tilt,base:BASE,dt:1/60,onImpact(speed){if(speed>1e-8)bounced=true;},onTravel(from,to){
-   const dx=to.x-from.x,dy=to.y-from.y,l=dx*dx+dy*dy,t=l?Math.max(0,Math.min(1,((goal.x-from.x)*dx+(goal.y-from.y)*dy)/l)):0;
-   if(!bounced&&Math.hypot(from.x+t*dx-goal.x,from.y+t*dy-goal.y)<.3)goalBeforeBounce=true;
-  }});
+  const p=createStagePlay(seed,challengeDifficulty(107,'easy'),{variation}),tilt={x:Math.cos(angle*Math.PI/48)*magnitude,y:Math.sin(angle*Math.PI/48)*magnitude};let bounced=false,goalBeforeBounce=false;
+  // 本編のとりもち停止・自然脱出・延長・通過ゴールを含め、制限時間まで進める。
+  for(let f=0;f<(p.limitSec+p.extendedSec+1)*60&&p.status==='playing'&&!bounced;f++){
+   p.advance({dt:1/60,elapsedMs:1000/60,tilt,base:BASE,onImpact(speed){if(speed>1e-8)bounced=true;}});
+   if(p.status==='clear'&&!bounced)goalBeforeBounce=true;
+  }
   constantCases++;if(goalBeforeBounce)directGoals.push({size,seed,themeId,angle,magnitude});
  }
  console.log(JSON.stringify({size,seed,themeId,constantCases,directGoals:directGoals.length}));

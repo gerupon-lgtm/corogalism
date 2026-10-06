@@ -1,0 +1,95 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createStagePlay} from '../src/game/stagePlay.js';
+import {challengeDifficulty} from '../src/game/challenge.js';
+import {sampleZone} from '../src/world/stage.js';
+import {stableFloorPoint} from '../src/world/floorThemes.js';
+import {restFloors} from '../src/world/stageFeatures.js';
+import {BASE} from '../src/config/gameConfig.js';
+
+const room=(maze,p)=>p[maze.baffle.axis]<maze.baffle.coord?0:1;
+const make=(size,themeId,seed=77,n=17)=>createStagePlay(seed,challengeDifficulty(n,'easy'),{variation:{size,shape:'open',themeId}});
+const key=p=>`${p.x},${p.y}`;
+
+test('広場の砂は両区画の複数箇所にあり、端点を避けて実際に減速する',()=>{
+ for(const size of [7,13,21])for(const theme of ['sand','iceSand','iceAssist'])for(const seed of [5,77,913,7919]){
+  const {stage}=make(size,theme,seed,theme==='sand'?3:17),maze=stage.maze;
+  const cells=stage.zones.filter(z=>z.kind==='sand').flatMap(z=>z.cells);
+  assert.equal(cells.length,new Set(cells.map(key)).size);
+  for(const side of [0,1]){
+   const own=cells.filter(c=>room(maze,{x:c.x+.5,y:c.y+.5})===side);
+   assert.ok(own.length>=4,JSON.stringify({size,theme,seed,side,cells}));
+   const along=maze.baffle.axis==='x'?'y':'x';assert.ok(new Set(own.map(c=>c[along])).size>=2);
+   assert.equal(sampleZone(stage,{x:own[0].x+.5,y:own[0].y+.5,vx:1,vy:0}).frictionK,3.2);
+  }
+  for(const c of cells){assert.ok(c.x>=0&&c.x<size&&c.y>=0&&c.y<size);assert.ok(Math.hypot(c.x,c.y)>1.5&&Math.hypot(c.x-size+1,c.y-size+1)>1.5);}
+ }
+});
+
+test('広場の力場は選んだ向きを両区画へ配置し、端点と出口を保護する',()=>{
+ for(const size of [7,9,13,21])for(const theme of ['gravityAssist','repulsionAssist','iceAssist','gravityHinder','repulsionHinder'])for(const seed of [5,77,913,7919]){
+  const p=make(size,theme,seed),{stage}=p,maze=stage.maze,fields=stage.zones.filter(z=>z.kind==='radial');
+  const signs=theme==='iceAssist'?[1,-1]:theme.startsWith('repulsion')?[-1]:[1];
+  for(const side of [0,1]){
+   const own=fields.filter(z=>room(maze,z)===side);assert.ok(own.length>=2,JSON.stringify({size,theme,seed,side,fields}));
+   for(const sign of signs)assert.ok(own.some(z=>Math.sign(z.strength)===sign));
+   assert.ok(own.some(z=>{const f=sampleZone(stage,{x:z.x+.17,y:z.y,vx:0,vy:0});return Math.hypot(f.forceX,f.forceY)>.01;}));
+  }
+  for(const z of fields){
+   assert.equal(Math.abs(z.strength),3.3);assert.equal(z.radius,1.6);
+   assert.ok(z.x>.5&&z.y>.5&&z.x<size-.5&&z.y<size-.5);
+   assert.ok(Math.hypot(z.x-.5,z.y-.5)>z.radius+.35);
+   assert.ok(Math.hypot(z.x-size+.5,z.y-size+.5)>z.radius+.35);
+   assert.ok(z[maze.baffle.axis==='x'?'y':'x']+z.radius<maze.baffle.gap);
+  }
+  const f=sampleZone(stage,p.actor);assert.equal(f.forceX,0);assert.equal(f.forceY,0);
+ }
+});
+
+test('休憩の広場は両区画に止まれる足場があり、回復と継続での使用状態が働く',()=>{
+ for(const size of [7,13])for(const seed of [77,913,7919]){
+  const p=make(size,'rest',seed),{stage}=p,rests=restFloors(stage);
+  assert.ok(rests.some(r=>room(stage.maze,r)===0));assert.ok(rests.some(r=>room(stage.maze,r)===1));
+  assert.ok(rests.every(r=>stableFloorPoint(stage,r)));
+  assert.equal(new Set(rests.map(key)).size,rests.length);
+  p.hp.applyImpact(3,{materialId:'stone'},0);const before=p.hp.value;
+  const r=rests[0];p.teleport(r.x,r.y);
+  for(let i=0;i<130;i++)p.advance({dt:1/60,elapsedMs:1000/60,tilt:{x:0,y:0},base:BASE});
+  assert.equal(r.used,true);assert.ok(p.hp.value>before);assert.equal(p.extendedSec,2);
+  const continued=createStagePlay(seed,challengeDifficulty(17,'easy'),{variation:{size,shape:'open',themeId:'rest'},restUsedCells:[{x:r.x,y:r.y}]});
+  assert.ok(restFloors(continued.stage).find(q=>key(q)===key(r)).used);
+  assert.deepEqual(rests.map(key),restFloors(continued.stage).map(key));
+ }
+});
+
+test('とりもちの広場は両区画に配置し、取得物は経路上で床と重ならない',()=>{
+ for(const size of [7,13,21])for(const seed of [77,913,7919]){
+  const p=make(size,'sticky',seed),{stage}=p;
+  for(const side of [0,1])assert.ok(stage.sticky.filter(t=>room(stage.maze,t)===side).length>=2);
+  const rests=restFloors(stage),items=[stage.recovery,stage.leaf,stage.hourglass].filter(Boolean);
+  assert.equal(new Set([...rests,...stage.sticky,...items].map(key)).size,rests.length+stage.sticky.length+items.length);
+  for(const item of items)assert.ok(stage.maze.path.some(c=>c.x+.5===item.x&&c.y+.5===item.y));
+  const first=stage.sticky[0];p.teleport(first.x,first.y);p.advance({dt:1/60,elapsedMs:1000/60,tilt:{x:0,y:0},base:BASE});assert.ok(p.trap);
+  const again=make(size,'sticky',seed);assert.deepEqual(again.stage,p.stage);
+ }
+});
+
+test('砂・氷・力場の広場にもとりもちを抽選し、壁際で実際に勢いが止まる',()=>{
+ for(const theme of ['sand','iceRubber','gravityAssist','repulsionAssist']){
+  let found=0,absent=0;
+  for(let i=1;i<=24;i++){
+   const seed=i*7919,p=make(7,theme,seed),{stage}=p;
+   if(!stage.sticky.length){absent++;continue;}found++;
+   const again=make(7,theme,seed);assert.deepEqual(stage.sticky,again.stage.sticky);
+   for(const t of stage.sticky){
+    assert.ok(stage.walls.some(w=>Math.hypot(t.x-Math.max(w.x,Math.min(t.x,w.x+w.w)),t.y-Math.max(w.y,Math.min(t.y,w.y+w.h)))<.8));
+    assert.ok(Math.hypot(t.x-.5,t.y-.5)>1.5&&Math.hypot(t.x-6.5,t.y-6.5)>1.5);
+    assert.ok(![stage.recovery,stage.leaf,stage.hourglass,...restFloors(stage)].filter(Boolean).some(a=>key(a)===key(t)));
+   }
+   const t=stage.sticky[0];p.teleport(t.x,t.y);p.actor.vx=.5;
+   p.advance({dt:1/60,elapsedMs:1000/60,tilt:{x:0,y:0},base:BASE});
+   assert.ok(p.trap);assert.equal(p.actor.vx,0);assert.equal(p.actor.vy,0);
+  }
+  assert.ok(found>0,theme);assert.ok(absent>0,theme);
+ }
+});

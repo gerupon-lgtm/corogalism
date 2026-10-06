@@ -4,6 +4,7 @@ import { createRng } from '../maze/rng.js';
 import { solvePath } from '../maze/path.js';
 import { stableFloorPoint, pickupPoint } from './floorThemes.js';
 import { branchCells } from './branchFloors.js';
+import {addOpenFeatures} from './openFloors.js';
 
 /** 従来の1枚目と、脇道に追加した床を同じ処理で使う。固定練習面にも対応。 */
 export function restFloors(stage) { return [stage.rest,...(stage.extraRests||[])].filter(Boolean); }
@@ -71,4 +72,5 @@ export function addStageFeatures(stage, difficulty) {
     const at = place(0x4ab297e3, HOURGLASS.chance[difficulty.level] ?? 0, HOURGLASS.pathMin, HOURGLASS.pathMax);
     if (at) stage.hourglass = { ...at, collected: false };
   }
+  addOpenFeatures(stage);
 }

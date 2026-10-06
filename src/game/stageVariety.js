@@ -18,7 +18,8 @@ export function chooseStageVariation({seed,stage,level='normal',history=[]}){
  const rng=createRng((seed^0xb7e15162)>>>0);
  if(stage===1)return {size:7,shape:'short',themeId:'basic',label:labels.short};
  const shape=pick(rng,C.shapes.map(([id,w])=>[id,w*varietyWeight(id,'shape',history)]));
- const size=pick(rng,C.sizes.map(([n,w])=>[n,w*varietyWeight(n,'size',history)]));
+ const selectedSize=pick(rng,C.sizes.map(([n,w])=>[n,w*varietyWeight(n,'size',history)]));
+ const size=stage<=C.introSizeStages?7:selectedSize;
  let themeId=themeAt(stage,level).id;
  // 最初の床紹介と通常限定面は維持。紹介後の固定巡回を置き換える。
  if(stage>16&&!(level==='normal'&&stage%10===0)){

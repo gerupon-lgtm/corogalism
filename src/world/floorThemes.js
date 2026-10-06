@@ -7,6 +7,7 @@ import { solvePath, countTurns } from '../maze/path.js';
 import { checkReachability } from '../maze/validator.js';
 import { branchCells, connectedCells } from './branchFloors.js';
 import {placeOpenFields} from './openFields.js';
+import {spreadOpenSand} from './openFloors.js';
 
 export function cornerSites(maze, max=3, gap=5) {
  const sites=[];
@@ -66,7 +67,7 @@ export function addFloorTheme(stage,theme){
  if(!theme.floorPattern)return;
  const cfg=FLOOR_CHALLENGE,all=stage.maze.cells.map((_,i)=>({x:i%stage.maze.size,y:Math.floor(i/stage.maze.size)}));
  const sites=stage.maze.floorSites||cornerSites(stage.maze),pattern=theme.floorPattern;
- const sand=theme.learning&&pattern!=='iceRubber'&&(pattern==='sand'||pattern.includes('Sand')||pattern==='iceAssist')?learningSandCells(stage.maze):pattern==='sand'?sites.flatMap(s=>[s.prev,s.cell]):pattern.includes('Sand')||theme.special||pattern==='iceAssist'?sites.map(s=>s.prev):[];
+ let sand=theme.learning&&pattern!=='iceRubber'&&(pattern==='sand'||pattern.includes('Sand')||pattern==='iceAssist')?learningSandCells(stage.maze):pattern==='sand'?sites.flatMap(s=>[s.prev,s.cell]):pattern.includes('Sand')||theme.special||pattern==='iceAssist'?sites.map(s=>s.prev):[];
  if(sand.length){
   const rng=createRng((stage.maze.seed^0x24b61a97)>>>0),candidates=branchCells(stage.maze);
   // ルートの砂は残し、脇道にも壁をまたがない短い砂の区間を加える。
@@ -76,6 +77,7 @@ export function addFloorTheme(stage,theme){
    if(neighbours.length){const next=neighbours[Math.floor(rng()*neighbours.length)];sand.push(next);candidates.splice(candidates.indexOf(next),1);}
   }
  }
+ if(stage.maze.baffle&&(pattern==='sand'||pattern.includes('Sand')||theme.special||pattern==='iceAssist'))sand=spreadOpenSand(stage.maze,sand);
  const isIce=pattern.startsWith('ice')||theme.special;
  const floor=(kind,cells)=>{if(cells.length)stage.zones.push({kind,cells,frictionK:cfg[kind],...(kind==='ice'?cfg.iceMotion:{}),forceX:0,forceY:0});};
  floor('sand',sand);

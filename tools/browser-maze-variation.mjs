@@ -14,17 +14,20 @@ try{for(const level of (process.env.VARIETY_LEVELS||'easy,normal').split(',')){
   localStorage.setItem('corogalism-run-bests-floor-v1-easy',JSON.stringify({withContinue:{stages:107,totalTimeMs:1600000,at:'2026-10-07T00:00:00Z'}}));
  },level);
  await p.clock.install();await p.clock.pauseAt(Date.now()+1000);await p.goto(base+'?debug=1&seed=77');
+ await p.waitForFunction(()=>!!window.__corogalism,null,{polling:50});
  assert.equal(await p.locator('.badge').textContent(),'v'+version);
  if(level==='easy')assert.match(await p.locator('#mode-legacy').textContent(),/107/);
  const state=()=>p.evaluate(()=>window.__corogalism.state);
- const click=async id=>{const el=p.locator('#'+id);if(['btn-next','btn-continue'].includes(id))await p.clock.runFor(1100);await el.click();await p.clock.runFor(32);};
- const ready=async()=>{const s=await state();await p.clock.runFor(s.prepareMs+s.countdownMs+64);const next=await state();assert.equal(next.prepareMs+next.countdownMs,0);};
+ const click=async(id,diagnostic=false)=>{const el=p.locator('#'+id);if(['btn-next','btn-continue'].includes(id)){if(diagnostic)await p.clock.fastForward(1100);else await p.clock.runFor(1100);}await el.click();await p.clock.runFor(32);};
+ const ready=async(diagnostic=false)=>{if(diagnostic){for(let i=0;i<80;i++){const s=await state();if(!s.prepareMs&&!s.countdownMs)return;await p.clock.fastForward(250);}assert.fail('診断用の面送りも開始待機を完了する');}const s=await state();await p.clock.runFor(s.prepareMs+s.countdownMs+64);const next=await state();assert.equal(next.prepareMs+next.countdownMs,0);};
  await click('btn-challenge');await ready();
- const stop=level==='easy'?112:16;
+ const stop=Number(process.env.VARIETY_STOP_STAGE||(level==='easy'?112:16));
+ const pickedStage=n=>process.env.VARIETY_STAGES?process.env.VARIETY_STAGES.split(',').map(Number).includes(n):n<=16||n>=97;
  for(let n=1;n<=stop;n++){
   let s=await state();assert.equal(s.stageIndex,n);
-  const picked=process.env.VARIETY_STAGES?process.env.VARIETY_STAGES.split(',').map(Number).includes(n):n<=16||n>=97;
-  if(!picked){await p.evaluate(()=>{const s=window.__corogalism.state;window.__corogalism.teleport(s.goal.x,s.goal.y)});await p.clock.runFor(32);assert.equal((await state()).status,'clear');if(n<stop){await click('btn-next');await ready();}continue;}
+  const picked=pickedStage(n);
+  if(!picked){await p.evaluate(()=>{const s=window.__corogalism.state;window.__corogalism.teleport(s.goal.x,s.goal.y)});await p.clock.runFor(32);assert.equal((await state()).status,'clear');if(n<stop){const diagnostic=!pickedStage(n+1);await click('btn-next',diagnostic);await ready(diagnostic);}continue;}
+  if(n<=8)assert.equal(s.maze.size,7);
   const profile=s.maze.variation;assert.equal(s.hp.max,40+s.maze.path.slice(2).filter((c,i)=>{
    const a=s.maze.path[i],b=s.maze.path[i+1];return c.x-b.x!==b.x-a.x||c.y-b.y!==b.y-a.y;
   }).length*4);

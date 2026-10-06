@@ -1,0 +1,92 @@
+[
+  {
+    "files": [
+      "test/audio-settings.test.js",
+      "test/balance.test.js",
+      "test/ball-materials.test.js",
+      "test/ballRotation.test.js",
+      "test/branch-floors.test.js"
+    ],
+    "tests": 25,
+    "passed": 25,
+    "exitCode": 0,
+    "elapsedMs": 6806
+  },
+  {
+    "files": [
+      "test/candy-full.test.js",
+      "test/challenge.test.js",
+      "test/escape-timing.test.js",
+      "test/exploration.test.js",
+      "test/feature-hint-position.test.js"
+    ],
+    "tests": 21,
+    "passed": 21,
+    "exitCode": 0,
+    "elapsedMs": 2104
+  },
+  {
+    "files": [
+      "test/features.test.js",
+      "test/first-sound.test.js",
+      "test/floor-difficulty.test.js",
+      "test/floor-lab.test.js",
+      "test/floor-learning.test.js"
+    ],
+    "tests": 27,
+    "passed": 27,
+    "exitCode": 0,
+    "elapsedMs": 3503
+  },
+  {
+    "files": [
+      "test/floor-presentation.test.js",
+      "test/floor-themes.test.js",
+      "test/floor-trial.test.js",
+      "test/hourglass.test.js",
+      "test/hp-display.test.js"
+    ],
+    "tests": 14,
+    "passed": 14,
+    "exitCode": 0,
+    "elapsedMs": 1561
+  },
+  {
+    "files": [
+      "test/maze-variation.test.js",
+      "test/maze.test.js",
+      "test/onboarding.test.js",
+      "test/open-floor-pacing.test.js",
+      "test/phase2.test.js"
+    ],
+    "tests": 53,
+    "passed": 53,
+    "exitCode": 0,
+    "elapsedMs": 761
+  },
+  {
+    "files": [
+      "test/physics.test.js",
+      "test/playthrough.test.js",
+      "test/resolveParams.test.js",
+      "test/rubber-rebound.test.js",
+      "test/stableCalibration.test.js"
+    ],
+    "tests": 28,
+    "passed": 28,
+    "exitCode": 0,
+    "elapsedMs": 413
+  },
+  {
+    "files": [
+      "test/stagePlay.test.js",
+      "test/storage.test.js",
+      "test/tutorial.test.js",
+      "test/wall-clearance.test.js"
+    ],
+    "tests": 23,
+    "passed": 23,
+    "exitCode": 0,
+    "elapsedMs": 1138
+  }
+]

@@ -1,0 +1,9284 @@
+[
+  {
+    "seed": 468302,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.03,
+    "limit": 52,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 21,
+    "turns": 10
+  },
+  {
+    "seed": 468302,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 39.32,
+    "limit": 52,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 21,
+    "turns": 10
+  },
+  {
+    "seed": 508805,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "basic",
+      "label": "反発の広場"
+    },
+    "theme": "basic",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.87,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 508805,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "basic",
+      "label": "反発の広場"
+    },
+    "theme": "basic",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 12,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 549308,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "sand",
+      "label": "すなおな道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.03,
+    "limit": 62,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 19,
+    "turns": 12
+  },
+  {
+    "seed": 549308,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "sand",
+      "label": "すなおな道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 29.1,
+    "limit": 62,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 19,
+    "turns": 12
+  },
+  {
+    "seed": 589811,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 58
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.05,
+    "limit": 45,
+    "hp": 44,
+    "maxHp": 44,
+    "path": 13,
+    "turns": 1
+  },
+  {
+    "seed": 589811,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 58
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 11.73,
+    "limit": 45,
+    "hp": 44,
+    "maxHp": 44,
+    "path": 13,
+    "turns": 1
+  },
+  {
+    "seed": 630314,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "gravityAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 3,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.15,
+    "limit": 65,
+    "hp": 87.8,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 630314,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "gravityAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 3,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 65.02,
+    "limit": 65,
+    "hp": 82,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 670817,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.98,
+    "limit": 52,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 17,
+    "turns": 6
+  },
+  {
+    "seed": 670817,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 21.45,
+    "limit": 52,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 17,
+    "turns": 6
+  },
+  {
+    "seed": 711320,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 3,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.12,
+    "limit": 62,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 711320,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 3,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 35.95,
+    "limit": 62,
+    "hp": 89,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 751823,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.17,
+    "limit": 56,
+    "hp": 68,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 751823,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 18.62,
+    "limit": 56,
+    "hp": 67.9,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 792326,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 4
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.17,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 792326,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 4
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 16.13,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 832829,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 36.82,
+    "limit": 119,
+    "hp": 160,
+    "maxHp": 160,
+    "path": 49,
+    "turns": 30
+  },
+  {
+    "seed": 832829,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 59.2,
+    "limit": 119,
+    "hp": 149.9,
+    "maxHp": 160,
+    "path": 49,
+    "turns": 30
+  },
+  {
+    "seed": 873332,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 11,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 110
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.32,
+    "limit": 43,
+    "hp": 44,
+    "maxHp": 44,
+    "path": 21,
+    "turns": 1
+  },
+  {
+    "seed": 873332,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 11,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 110
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 40.53,
+    "limit": 43,
+    "hp": 26.2,
+    "maxHp": 44,
+    "path": 21,
+    "turns": 1
+  },
+  {
+    "seed": 913835,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "careful",
+      "label": "入り組んだ道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 65,
+    "limit": 197,
+    "hp": 235.5,
+    "maxHp": 236,
+    "path": 87,
+    "turns": 49
+  },
+  {
+    "seed": 913835,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "careful",
+      "label": "入り組んだ道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 150.52,
+    "limit": 197,
+    "hp": 33.6,
+    "maxHp": 236,
+    "path": 87,
+    "turns": 49
+  },
+  {
+    "seed": 954338,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "gravityHinder",
+      "label": "広い曲がり角"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 3,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.1,
+    "limit": 45,
+    "hp": 59.8,
+    "maxHp": 60,
+    "path": 13,
+    "turns": 5
+  },
+  {
+    "seed": 954338,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "gravityHinder",
+      "label": "広い曲がり角"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 3,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 22.15,
+    "limit": 45,
+    "hp": 53.4,
+    "maxHp": 60,
+    "path": 13,
+    "turns": 5
+  },
+  {
+    "seed": 994841,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 104,
+      "moss": 40
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 34.72,
+    "limit": 111,
+    "hp": 148,
+    "maxHp": 148,
+    "path": 47,
+    "turns": 27
+  },
+  {
+    "seed": 994841,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 104,
+      "moss": 40
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 93.55,
+    "limit": 111,
+    "hp": 148,
+    "maxHp": 148,
+    "path": 47,
+    "turns": 27
+  },
+  {
+    "seed": 35341,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 19.97,
+    "limit": 77,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 35341,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 51.62,
+    "limit": 77,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 75844,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 66
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.87,
+    "limit": 59,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 75844,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 66
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 22.75,
+    "limit": 59,
+    "hp": 86.8,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 116347,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.98,
+    "limit": 58,
+    "hp": 104,
+    "maxHp": 104,
+    "path": 19,
+    "turns": 16
+  },
+  {
+    "seed": 116347,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 35.07,
+    "limit": 58,
+    "hp": 104,
+    "maxHp": 104,
+    "path": 19,
+    "turns": 16
+  },
+  {
+    "seed": 359365,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "trial",
+      "label": "入り組んだ道"
+    },
+    "theme": "trial",
+    "materials": {
+      "default": 60,
+      "spike": 4
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 19.38,
+    "limit": 71,
+    "hp": 116,
+    "maxHp": 116,
+    "path": 27,
+    "turns": 19
+  },
+  {
+    "seed": 359365,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "trial",
+      "label": "入り組んだ道"
+    },
+    "theme": "trial",
+    "materials": {
+      "default": 60,
+      "spike": 4
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 44.95,
+    "limit": 71,
+    "hp": 73.3,
+    "maxHp": 116,
+    "path": 27,
+    "turns": 19
+  },
+  {
+    "seed": 602383,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 38,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.65,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 602383,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 38,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 14.27,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 47913,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "iceSand",
+      "label": "反発の広場"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "rubber": 44
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.92,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 47913,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "iceSand",
+      "label": "反発の広場"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "rubber": 44
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 19.17,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 19982,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 81
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 35.28,
+    "limit": 118,
+    "hp": 164,
+    "maxHp": 164,
+    "path": 49,
+    "turns": 31
+  },
+  {
+    "seed": 19982,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 81
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 59.73,
+    "limit": 118,
+    "hp": 164,
+    "maxHp": 164,
+    "path": 49,
+    "turns": 31
+  },
+  {
+    "seed": 478087,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "repulsionHinder",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "rubber": 39
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.03,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 478087,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "repulsionHinder",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "rubber": 39
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 23.35,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 761608,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "sand",
+      "label": "迷路"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 20.83,
+    "limit": 76,
+    "hp": 120,
+    "maxHp": 120,
+    "path": 27,
+    "turns": 20
+  },
+  {
+    "seed": 761608,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "sand",
+      "label": "迷路"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 42.87,
+    "limit": 76,
+    "hp": 120,
+    "maxHp": 120,
+    "path": 27,
+    "turns": 20
+  },
+  {
+    "seed": 490659,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 42.68,
+    "limit": 138,
+    "hp": 167.7,
+    "maxHp": 168,
+    "path": 57,
+    "turns": 32
+  },
+  {
+    "seed": 490659,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 103.87,
+    "limit": 138,
+    "hp": 124.3,
+    "maxHp": 168,
+    "path": 57,
+    "turns": 32
+  },
+  {
+    "seed": 980930,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 18,
+    "limit": 57,
+    "hp": 75.8,
+    "maxHp": 76,
+    "path": 25,
+    "turns": 9
+  },
+  {
+    "seed": 980930,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 42.92,
+    "limit": 57,
+    "hp": 58.8,
+    "maxHp": 76,
+    "path": 25,
+    "turns": 9
+  },
+  {
+    "seed": 21430,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "basic",
+      "label": "入り組んだ道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 24.08,
+    "limit": 81,
+    "hp": 119.8,
+    "maxHp": 120,
+    "path": 33,
+    "turns": 20
+  },
+  {
+    "seed": 21430,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "basic",
+      "label": "入り組んだ道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 55.23,
+    "limit": 81,
+    "hp": 80.1,
+    "maxHp": 120,
+    "path": 33,
+    "turns": 20
+  },
+  {
+    "seed": 61933,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.45,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 61933,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 21.5,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 102436,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 17.6,
+    "limit": 65,
+    "hp": 84,
+    "maxHp": 84,
+    "path": 25,
+    "turns": 11
+  },
+  {
+    "seed": 102436,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 29.18,
+    "limit": 65,
+    "hp": 84,
+    "maxHp": 84,
+    "path": 25,
+    "turns": 11
+  },
+  {
+    "seed": 142939,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 142939,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 31.27,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 183442,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 26.72,
+    "limit": 100,
+    "hp": 140,
+    "maxHp": 140,
+    "path": 35,
+    "turns": 25
+  },
+  {
+    "seed": 183442,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 42.72,
+    "limit": 100,
+    "hp": 140,
+    "maxHp": 140,
+    "path": 35,
+    "turns": 25
+  },
+  {
+    "seed": 223945,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 223945,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.83,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 264448,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 5,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 17.32,
+    "limit": 71,
+    "hp": 84,
+    "maxHp": 84,
+    "path": 21,
+    "turns": 11
+  },
+  {
+    "seed": 264448,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 5,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.1,
+    "limit": 71,
+    "hp": 82.7,
+    "maxHp": 84,
+    "path": 21,
+    "turns": 11
+  },
+  {
+    "seed": 304951,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.47,
+    "limit": 49,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 304951,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 36.28,
+    "limit": 49,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 345454,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 77
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.55,
+    "limit": 42,
+    "hp": 60,
+    "maxHp": 60,
+    "path": 17,
+    "turns": 5
+  },
+  {
+    "seed": 345454,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 77
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 16.82,
+    "limit": 42,
+    "hp": 60,
+    "maxHp": 60,
+    "path": 17,
+    "turns": 5
+  },
+  {
+    "seed": 385957,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "sticky",
+      "label": "迷路"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 81
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 35.45,
+    "limit": 112,
+    "hp": 152,
+    "maxHp": 152,
+    "path": 47,
+    "turns": 28
+  },
+  {
+    "seed": 385957,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "sticky",
+      "label": "迷路"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 81
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 87.3,
+    "limit": 112,
+    "hp": 90.1,
+    "maxHp": 152,
+    "path": 47,
+    "turns": 28
+  },
+  {
+    "seed": 426460,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 43,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.03,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 426460,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 43,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 18.58,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 466963,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 35.15,
+    "limit": 122,
+    "hp": 143.9,
+    "maxHp": 144,
+    "path": 47,
+    "turns": 26
+  },
+  {
+    "seed": 466963,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 90.88,
+    "limit": 122,
+    "hp": 132.3,
+    "maxHp": 144,
+    "path": 47,
+    "turns": 26
+  },
+  {
+    "seed": 507466,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 50,
+      "moss": 14
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 23.78,
+    "limit": 80,
+    "hp": 115.8,
+    "maxHp": 116,
+    "path": 33,
+    "turns": 19
+  },
+  {
+    "seed": 507466,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 50,
+      "moss": 14
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 61.98,
+    "limit": 80,
+    "hp": 72.6,
+    "maxHp": 116,
+    "path": 33,
+    "turns": 19
+  },
+  {
+    "seed": 547969,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 14.8,
+    "limit": 66,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 547969,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 42.6,
+    "limit": 66,
+    "hp": 86.1,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 588472,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 6,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.5,
+    "limit": 54,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 588472,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 6,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 23.6,
+    "limit": 54,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 628975,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.93,
+    "limit": 63,
+    "hp": 87.9,
+    "maxHp": 88,
+    "path": 23,
+    "turns": 12
+  },
+  {
+    "seed": 628975,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 51,
+    "limit": 63,
+    "hp": 80.4,
+    "maxHp": 88,
+    "path": 23,
+    "turns": 12
+  },
+  {
+    "seed": 871993,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 67
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.23,
+    "limit": 55,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 23,
+    "turns": 10
+  },
+  {
+    "seed": 871993,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 67
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 24.38,
+    "limit": 55,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 23,
+    "turns": 10
+  },
+  {
+    "seed": 115008,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 75,
+      "moss": 25
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 31.27,
+    "limit": 101,
+    "hp": 136,
+    "maxHp": 136,
+    "path": 43,
+    "turns": 24
+  },
+  {
+    "seed": 115008,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 75,
+      "moss": 25
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 74.68,
+    "limit": 101,
+    "hp": 121.3,
+    "maxHp": 136,
+    "path": 43,
+    "turns": 24
+  },
+  {
+    "seed": 560541,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "iceSand",
+      "label": "迷路"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 196
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 40.87,
+    "limit": 131,
+    "hp": 168,
+    "maxHp": 168,
+    "path": 55,
+    "turns": 32
+  },
+  {
+    "seed": 560541,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "iceSand",
+      "label": "迷路"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 196
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 60.23,
+    "limit": 131,
+    "hp": 164.2,
+    "maxHp": 168,
+    "path": 55,
+    "turns": 32
+  },
+  {
+    "seed": 532610,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 32.03,
+    "limit": 106,
+    "hp": 144,
+    "maxHp": 144,
+    "path": 43,
+    "turns": 26
+  },
+  {
+    "seed": 532610,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 52.22,
+    "limit": 106,
+    "hp": 143.8,
+    "maxHp": 144,
+    "path": 43,
+    "turns": 26
+  },
+  {
+    "seed": 990715,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 13,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 135,
+      "stone": 22
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 21.38,
+    "limit": 66,
+    "hp": 84,
+    "maxHp": 84,
+    "path": 29,
+    "turns": 11
+  },
+  {
+    "seed": 990715,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 13,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 135,
+      "stone": 22
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 49.6,
+    "limit": 66,
+    "hp": 48.2,
+    "maxHp": 84,
+    "path": 29,
+    "turns": 11
+  },
+  {
+    "seed": 274233,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 29.67,
+    "limit": 97,
+    "hp": 124,
+    "maxHp": 124,
+    "path": 39,
+    "turns": 21
+  },
+  {
+    "seed": 274233,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 68.18,
+    "limit": 97,
+    "hp": 124,
+    "maxHp": 124,
+    "path": 39,
+    "turns": 21
+  },
+  {
+    "seed": 3284,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 59.48,
+    "limit": 195,
+    "hp": 244,
+    "maxHp": 244,
+    "path": 81,
+    "turns": 51
+  },
+  {
+    "seed": 3284,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 195.02,
+    "limit": 195,
+    "hp": 234.1,
+    "maxHp": 244,
+    "path": 81,
+    "turns": 51
+  },
+  {
+    "seed": 619820,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.98,
+    "limit": 40,
+    "hp": 56,
+    "maxHp": 56,
+    "path": 13,
+    "turns": 4
+  },
+  {
+    "seed": 619820,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 22.62,
+    "limit": 40,
+    "hp": 49.2,
+    "maxHp": 56,
+    "path": 13,
+    "turns": 4
+  },
+  {
+    "seed": 660323,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.67,
+    "limit": 48,
+    "hp": 87.9,
+    "maxHp": 88,
+    "path": 17,
+    "turns": 12
+  },
+  {
+    "seed": 660323,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 31.5,
+    "limit": 48,
+    "hp": 71.1,
+    "maxHp": 88,
+    "path": 17,
+    "turns": 12
+  },
+  {
+    "seed": 700826,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "sand",
+      "label": "広い曲がり角"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.27,
+    "limit": 45,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 700826,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "sand",
+      "label": "広い曲がり角"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 25.38,
+    "limit": 45,
+    "hp": 51.2,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 741329,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.7,
+    "limit": 51,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 17,
+    "turns": 9
+  },
+  {
+    "seed": 741329,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.68,
+    "limit": 51,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 17,
+    "turns": 9
+  },
+  {
+    "seed": 781832,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 781832,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.28,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 822335,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 14.15,
+    "limit": 50,
+    "hp": 56,
+    "maxHp": 56,
+    "path": 17,
+    "turns": 4
+  },
+  {
+    "seed": 822335,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 21.43,
+    "limit": 50,
+    "hp": 56,
+    "maxHp": 56,
+    "path": 17,
+    "turns": 4
+  },
+  {
+    "seed": 862838,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 3,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.53,
+    "limit": 49,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 13,
+    "turns": 9
+  },
+  {
+    "seed": 862838,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 3,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 31.78,
+    "limit": 49,
+    "hp": 74.5,
+    "maxHp": 76,
+    "path": 13,
+    "turns": 9
+  },
+  {
+    "seed": 903341,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 56
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.17,
+    "limit": 49,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 903341,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 56
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.43,
+    "limit": 49,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 943844,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "rest",
+      "label": "入り組んだ道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 63,
+      "moss": 18
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 32.95,
+    "limit": 110,
+    "hp": 159.8,
+    "maxHp": 160,
+    "path": 45,
+    "turns": 30
+  },
+  {
+    "seed": 943844,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "rest",
+      "label": "入り組んだ道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 63,
+      "moss": 18
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 80.6,
+    "limit": 110,
+    "hp": 117.9,
+    "maxHp": 160,
+    "path": 45,
+    "turns": 30
+  },
+  {
+    "seed": 984347,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceSand",
+      "label": "反発の広場"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.2,
+    "limit": 46,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 984347,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceSand",
+      "label": "反発の広場"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 23.05,
+    "limit": 46,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 24847,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 13,
+      "shape": "short",
+      "themeId": "sticky",
+      "label": "すなおな道"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 196
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 41.13,
+    "limit": 126,
+    "hp": 160,
+    "maxHp": 160,
+    "path": 55,
+    "turns": 30
+  },
+  {
+    "seed": 24847,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 13,
+      "shape": "short",
+      "themeId": "sticky",
+      "label": "すなおな道"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 196
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 91.2,
+    "limit": 126,
+    "hp": 112,
+    "maxHp": 160,
+    "path": 55,
+    "turns": 30
+  },
+  {
+    "seed": 65350,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 46,
+      "stone": 4
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.22,
+    "limit": 40,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 65350,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 46,
+      "stone": 4
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 29.78,
+    "limit": 40,
+    "hp": 49,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 105853,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 62.17,
+    "limit": 201,
+    "hp": 232,
+    "maxHp": 232,
+    "path": 83,
+    "turns": 48
+  },
+  {
+    "seed": 105853,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 148.2,
+    "limit": 201,
+    "hp": 232,
+    "maxHp": 232,
+    "path": 83,
+    "turns": 48
+  },
+  {
+    "seed": 146356,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 74,
+      "moss": 26
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 22.27,
+    "limit": 75,
+    "hp": 107.6,
+    "maxHp": 108,
+    "path": 31,
+    "turns": 17
+  },
+  {
+    "seed": 146356,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 74,
+      "moss": 26
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 56.67,
+    "limit": 75,
+    "hp": 76.4,
+    "maxHp": 108,
+    "path": 31,
+    "turns": 17
+  },
+  {
+    "seed": 186859,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 20.88,
+    "limit": 81,
+    "hp": 96,
+    "maxHp": 96,
+    "path": 29,
+    "turns": 14
+  },
+  {
+    "seed": 186859,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 81,
+    "limit": 81,
+    "hp": 94.1,
+    "maxHp": 96,
+    "path": 29,
+    "turns": 14
+  },
+  {
+    "seed": 227362,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.22,
+    "limit": 46,
+    "hp": 68,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 227362,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 46.02,
+    "limit": 46,
+    "hp": 64.4,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 267865,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.82,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 267865,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 26.68,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 510883,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.88,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 510883,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 14.13,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 753901,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 30.18,
+    "limit": 106,
+    "hp": 144,
+    "maxHp": 144,
+    "path": 41,
+    "turns": 26
+  },
+  {
+    "seed": 753901,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 85.38,
+    "limit": 106,
+    "hp": 144,
+    "maxHp": 144,
+    "path": 41,
+    "turns": 26
+  },
+  {
+    "seed": 199431,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "rest",
+      "label": "入り組んだ道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 27.98,
+    "limit": 99,
+    "hp": 152,
+    "maxHp": 152,
+    "path": 39,
+    "turns": 28
+  },
+  {
+    "seed": 199431,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "rest",
+      "label": "入り組んだ道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 61.38,
+    "limit": 99,
+    "hp": 126.3,
+    "maxHp": 152,
+    "path": 39,
+    "turns": 28
+  },
+  {
+    "seed": 171500,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "iceSand",
+      "label": "迷路"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 20.42,
+    "limit": 66,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 27,
+    "turns": 12
+  },
+  {
+    "seed": 171500,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "iceSand",
+      "label": "迷路"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 30.2,
+    "limit": 66,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 27,
+    "turns": 12
+  },
+  {
+    "seed": 629605,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 33.33,
+    "limit": 118,
+    "hp": 180,
+    "maxHp": 180,
+    "path": 45,
+    "turns": 35
+  },
+  {
+    "seed": 629605,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 53.38,
+    "limit": 118,
+    "hp": 180,
+    "maxHp": 180,
+    "path": 45,
+    "turns": 35
+  },
+  {
+    "seed": 913126,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 61
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 25.78,
+    "limit": 84,
+    "hp": 108,
+    "maxHp": 108,
+    "path": 35,
+    "turns": 17
+  },
+  {
+    "seed": 913126,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 61
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 58.82,
+    "limit": 84,
+    "hp": 108,
+    "maxHp": 108,
+    "path": 35,
+    "turns": 17
+  },
+  {
+    "seed": 642177,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 75
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.52,
+    "limit": 51,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 19,
+    "turns": 9
+  },
+  {
+    "seed": 642177,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 75
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 29.38,
+    "limit": 51,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 19,
+    "turns": 9
+  },
+  {
+    "seed": 770623,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.2,
+    "limit": 41,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 15,
+    "turns": 9
+  },
+  {
+    "seed": 770623,
+    "level": "easy",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 28.8,
+    "limit": 41,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 15,
+    "turns": 9
+  },
+  {
+    "seed": 811126,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 17.73,
+    "limit": 62,
+    "hp": 96,
+    "maxHp": 96,
+    "path": 25,
+    "turns": 14
+  },
+  {
+    "seed": 811126,
+    "level": "easy",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 39.97,
+    "limit": 62,
+    "hp": 96,
+    "maxHp": 96,
+    "path": 25,
+    "turns": 14
+  },
+  {
+    "seed": 851629,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 33.07,
+    "limit": 116,
+    "hp": 151.9,
+    "maxHp": 152,
+    "path": 43,
+    "turns": 28
+  },
+  {
+    "seed": 851629,
+    "level": "easy",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 72.23,
+    "limit": 116,
+    "hp": 148.4,
+    "maxHp": 152,
+    "path": 43,
+    "turns": 28
+  },
+  {
+    "seed": 892132,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.87,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 892132,
+    "level": "easy",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 12,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 932635,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 25.08,
+    "limit": 99,
+    "hp": 132,
+    "maxHp": 132,
+    "path": 35,
+    "turns": 23
+  },
+  {
+    "seed": 932635,
+    "level": "easy",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 67.68,
+    "limit": 99,
+    "hp": 132,
+    "maxHp": 132,
+    "path": 35,
+    "turns": 23
+  },
+  {
+    "seed": 973138,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.73,
+    "limit": 46,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 973138,
+    "level": "easy",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 16.73,
+    "limit": 46,
+    "hp": 63.4,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 13638,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 13638,
+    "level": "easy",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 29.98,
+    "limit": 45,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 54141,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 63
+    },
+    "fields": 5,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 32.78,
+    "limit": 119,
+    "hp": 147.9,
+    "maxHp": 148,
+    "path": 41,
+    "turns": 27
+  },
+  {
+    "seed": 54141,
+    "level": "easy",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 63
+    },
+    "fields": 5,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 62.35,
+    "limit": 119,
+    "hp": 143.2,
+    "maxHp": 148,
+    "path": 41,
+    "turns": 27
+  },
+  {
+    "seed": 94644,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 3
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.18,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 94644,
+    "level": "easy",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 3
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.33,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 135147,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 20.92,
+    "limit": 63,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 27,
+    "turns": 9
+  },
+  {
+    "seed": 135147,
+    "level": "easy",
+    "stage": 10,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.2,
+    "limit": 63,
+    "hp": 75.8,
+    "maxHp": 76,
+    "path": 27,
+    "turns": 9
+  },
+  {
+    "seed": 175650,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 70
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.08,
+    "limit": 40,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 15,
+    "turns": 6
+  },
+  {
+    "seed": 175650,
+    "level": "easy",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 70
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 26.72,
+    "limit": 40,
+    "hp": 59.5,
+    "maxHp": 64,
+    "path": 15,
+    "turns": 6
+  },
+  {
+    "seed": 216153,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "careful",
+      "label": "すなおな道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 39.12,
+    "limit": 125,
+    "hp": 168,
+    "maxHp": 168,
+    "path": 53,
+    "turns": 32
+  },
+  {
+    "seed": 216153,
+    "level": "easy",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "careful",
+      "label": "すなおな道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 99.58,
+    "limit": 125,
+    "hp": 101.7,
+    "maxHp": 168,
+    "path": 53,
+    "turns": 32
+  },
+  {
+    "seed": 256656,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "gravityHinder",
+      "label": "反発の広場"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "rubber": 56
+    },
+    "fields": 6,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.4,
+    "limit": 59,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 256656,
+    "level": "easy",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "gravityHinder",
+      "label": "反発の広場"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "rubber": 56
+    },
+    "fields": 6,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 48.23,
+    "limit": 59,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 297159,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 8,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.4,
+    "limit": 49,
+    "hp": 79.7,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 297159,
+    "level": "easy",
+    "stage": 14,
+    "variation": {
+      "size": 8,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 26.1,
+    "limit": 49,
+    "hp": 66.7,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 337662,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 17.62,
+    "limit": 77,
+    "hp": 108,
+    "maxHp": 108,
+    "path": 25,
+    "turns": 17
+  },
+  {
+    "seed": 337662,
+    "level": "easy",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 51.87,
+    "limit": 77,
+    "hp": 108,
+    "maxHp": 108,
+    "path": 25,
+    "turns": 17
+  },
+  {
+    "seed": 378165,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 54
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.5,
+    "limit": 42,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 378165,
+    "level": "easy",
+    "stage": 16,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 54
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 13.53,
+    "limit": 42,
+    "hp": 63.2,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 418668,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 100
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 19.15,
+    "limit": 65,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 418668,
+    "level": "easy",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 100
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.52,
+    "limit": 65,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 661686,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 196
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 70.95,
+    "limit": 224,
+    "hp": 271.8,
+    "maxHp": 272,
+    "path": 95,
+    "turns": 58
+  },
+  {
+    "seed": 661686,
+    "level": "easy",
+    "stage": 23,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 196
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 224.02,
+    "limit": 224,
+    "hp": 265.5,
+    "maxHp": 272,
+    "path": 95,
+    "turns": 58
+  },
+  {
+    "seed": 904704,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.05,
+    "limit": 41,
+    "hp": 68,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 904704,
+    "level": "easy",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.3,
+    "limit": 41,
+    "hp": 66.6,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 350234,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 36,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.92,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 350234,
+    "level": "easy",
+    "stage": 40,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 36,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 14.42,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 322303,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 79
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 14.9,
+    "limit": 54,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 21,
+    "turns": 9
+  },
+  {
+    "seed": 322303,
+    "level": "easy",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 79
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 37.87,
+    "limit": 54,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 21,
+    "turns": 9
+  },
+  {
+    "seed": 780408,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.38,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 780408,
+    "level": "easy",
+    "stage": 100,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.57,
+    "limit": 40,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 63926,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 54
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.58,
+    "limit": 47,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 63926,
+    "level": "easy",
+    "stage": 107,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 54
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 40.98,
+    "limit": 47,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 792980,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "repulsionHinder",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "rubber": 46
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.53,
+    "limit": 44,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 792980,
+    "level": "easy",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "repulsionHinder",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "rubber": 46
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 33.32,
+    "limit": 44,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 468302,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.03,
+    "limit": 30.875,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 21,
+    "turns": 10
+  },
+  {
+    "seed": 468302,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 30.88,
+    "limit": 30.875,
+    "hp": 68.8,
+    "maxHp": 80,
+    "path": 21,
+    "turns": 10
+  },
+  {
+    "seed": 508805,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "basic",
+      "label": "反発の広場"
+    },
+    "theme": "basic",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.87,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 508805,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "basic",
+      "label": "反発の広場"
+    },
+    "theme": "basic",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 12,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 549308,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "sand",
+      "label": "すなおな道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.63,
+    "limit": 29.15641025641026,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 19,
+    "turns": 12
+  },
+  {
+    "seed": 549308,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "sand",
+      "label": "すなおな道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 29.17,
+    "limit": 29.15641025641026,
+    "hp": 86.9,
+    "maxHp": 88,
+    "path": 19,
+    "turns": 12
+  },
+  {
+    "seed": 589811,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 58
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.05,
+    "limit": 25,
+    "hp": 44,
+    "maxHp": 44,
+    "path": 13,
+    "turns": 1
+  },
+  {
+    "seed": 589811,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 58
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 11.73,
+    "limit": 25,
+    "hp": 44,
+    "maxHp": 44,
+    "path": 13,
+    "turns": 1
+  },
+  {
+    "seed": 630314,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "gravityAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 14.9,
+    "limit": 28.861538461538462,
+    "hp": 87.8,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 630314,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "gravityAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 28.87,
+    "limit": 28.861538461538462,
+    "hp": 78.7,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 670817,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.32,
+    "limit": 25,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 17,
+    "turns": 6
+  },
+  {
+    "seed": 670817,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 19.42,
+    "limit": 25,
+    "hp": 60.6,
+    "maxHp": 64,
+    "path": 17,
+    "turns": 6
+  },
+  {
+    "seed": 711320,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.33,
+    "limit": 27.61923076923077,
+    "hp": 91.9,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 711320,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 27.63,
+    "limit": 27.61923076923077,
+    "hp": 85.9,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 751823,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.03,
+    "limit": 25,
+    "hp": 67.9,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 751823,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 15.65,
+    "limit": 25,
+    "hp": 67.1,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 792326,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 4
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.17,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 792326,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 4
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 16.13,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 832829,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "specialFlow",
+      "label": "入り組んだ道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 96
+    },
+    "fields": 6,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 35.35,
+    "limit": 60.088461538461544,
+    "hp": 167.6,
+    "maxHp": 168,
+    "path": 47,
+    "turns": 32
+  },
+  {
+    "seed": 832829,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "specialFlow",
+      "label": "入り組んだ道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 96
+    },
+    "fields": 6,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 54.47,
+    "limit": 60.088461538461544,
+    "hp": 149.3,
+    "maxHp": 168,
+    "path": 47,
+    "turns": 32
+  },
+  {
+    "seed": 873332,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 11,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 110
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.32,
+    "limit": 25,
+    "hp": 44,
+    "maxHp": 44,
+    "path": 21,
+    "turns": 1
+  },
+  {
+    "seed": 873332,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 11,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 110
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 19.4,
+    "maxHp": 44,
+    "path": 21,
+    "turns": 1
+  },
+  {
+    "seed": 913835,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "careful",
+      "label": "入り組んだ道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 65,
+    "limit": 90.41538461538462,
+    "hp": 235.2,
+    "maxHp": 236,
+    "path": 87,
+    "turns": 49
+  },
+  {
+    "seed": 913835,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "careful",
+      "label": "入り組んだ道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "dead",
+    "seconds": 66.53,
+    "limit": 90.41538461538462,
+    "hp": -3.8,
+    "maxHp": 236,
+    "path": 87,
+    "turns": 49
+  },
+  {
+    "seed": 954338,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "gravityHinder",
+      "label": "広い曲がり角"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9,
+    "limit": 25,
+    "hp": 60,
+    "maxHp": 60,
+    "path": 13,
+    "turns": 5
+  },
+  {
+    "seed": 954338,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "gravityHinder",
+      "label": "広い曲がり角"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 24.57,
+    "limit": 25,
+    "hp": 51,
+    "maxHp": 60,
+    "path": 13,
+    "turns": 5
+  },
+  {
+    "seed": 994841,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 104,
+      "moss": 40
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 34.72,
+    "limit": 48.53333333333334,
+    "hp": 147.8,
+    "maxHp": 148,
+    "path": 47,
+    "turns": 27
+  },
+  {
+    "seed": 994841,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 104,
+      "moss": 40
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 48.55,
+    "limit": 48.53333333333334,
+    "hp": 104.2,
+    "maxHp": 148,
+    "path": 47,
+    "turns": 27
+  },
+  {
+    "seed": 35341,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 19.33,
+    "limit": 36.32692307692308,
+    "hp": 91.9,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 35341,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 36.33,
+    "limit": 36.32692307692308,
+    "hp": 76.8,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 75844,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 66
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.87,
+    "limit": 25,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 75844,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 66
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 22.75,
+    "limit": 25,
+    "hp": 83.6,
+    "maxHp": 92,
+    "path": 19,
+    "turns": 13
+  },
+  {
+    "seed": 116347,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.98,
+    "limit": 25,
+    "hp": 104,
+    "maxHp": 104,
+    "path": 19,
+    "turns": 16
+  },
+  {
+    "seed": 116347,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 85.4,
+    "maxHp": 104,
+    "path": 19,
+    "turns": 16
+  },
+  {
+    "seed": 359365,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "trial",
+      "label": "入り組んだ道"
+    },
+    "theme": "trial",
+    "materials": {
+      "default": 60,
+      "spike": 4
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 19.38,
+    "limit": 28.242307692307698,
+    "hp": 116,
+    "maxHp": 116,
+    "path": 27,
+    "turns": 19
+  },
+  {
+    "seed": 359365,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "trial",
+      "label": "入り組んだ道"
+    },
+    "theme": "trial",
+    "materials": {
+      "default": 60,
+      "spike": 4
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 28.25,
+    "limit": 28.242307692307698,
+    "hp": 47.3,
+    "maxHp": 116,
+    "path": 27,
+    "turns": 19
+  },
+  {
+    "seed": 602383,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 38,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.65,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 602383,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 38,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 14.27,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 47913,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 44
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.55,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 47913,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 44
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 19.08,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 19982,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 81
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 35.28,
+    "limit": 44,
+    "hp": 164,
+    "maxHp": 164,
+    "path": 49,
+    "turns": 31
+  },
+  {
+    "seed": 19982,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 81
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 44.02,
+    "limit": 44,
+    "hp": 164,
+    "maxHp": 164,
+    "path": 49,
+    "turns": 31
+  },
+  {
+    "seed": 478087,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 39
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.45,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 478087,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 8,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 39
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.32,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 15,
+    "turns": 2
+  },
+  {
+    "seed": 761608,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "sand",
+      "label": "迷路"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 20.83,
+    "limit": 30.650000000000002,
+    "hp": 120,
+    "maxHp": 120,
+    "path": 27,
+    "turns": 20
+  },
+  {
+    "seed": 761608,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "sand",
+      "label": "迷路"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 35.65,
+    "limit": 30.650000000000002,
+    "hp": 119.4,
+    "maxHp": 120,
+    "path": 27,
+    "turns": 20
+  },
+  {
+    "seed": 490659,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 42.68,
+    "limit": 56.95,
+    "hp": 167.5,
+    "maxHp": 168,
+    "path": 57,
+    "turns": 32
+  },
+  {
+    "seed": 490659,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 56.97,
+    "limit": 56.95,
+    "hp": 134.4,
+    "maxHp": 168,
+    "path": 57,
+    "turns": 32
+  },
+  {
+    "seed": 980930,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 18,
+    "limit": 36.375,
+    "hp": 75.7,
+    "maxHp": 76,
+    "path": 25,
+    "turns": 9
+  },
+  {
+    "seed": 980930,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 36.38,
+    "limit": 36.375,
+    "hp": 49.6,
+    "maxHp": 76,
+    "path": 25,
+    "turns": 9
+  },
+  {
+    "seed": 21430,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "basic",
+      "label": "入り組んだ道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 24.08,
+    "limit": 43.25578947368421,
+    "hp": 119.6,
+    "maxHp": 120,
+    "path": 33,
+    "turns": 20
+  },
+  {
+    "seed": 21430,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "basic",
+      "label": "入り組んだ道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 43.27,
+    "limit": 43.25578947368421,
+    "hp": 75.3,
+    "maxHp": 120,
+    "path": 33,
+    "turns": 20
+  },
+  {
+    "seed": 61933,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.72,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 61933,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 24.97,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 102436,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 17.6,
+    "limit": 31.56923076923077,
+    "hp": 84,
+    "maxHp": 84,
+    "path": 25,
+    "turns": 11
+  },
+  {
+    "seed": 102436,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 29.18,
+    "limit": 31.56923076923077,
+    "hp": 84,
+    "maxHp": 84,
+    "path": 25,
+    "turns": 11
+  },
+  {
+    "seed": 142939,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 142939,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 183442,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 25.27,
+    "limit": 47.428205128205136,
+    "hp": 140,
+    "maxHp": 140,
+    "path": 35,
+    "turns": 25
+  },
+  {
+    "seed": 183442,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceSand",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 40.02,
+    "limit": 47.428205128205136,
+    "hp": 140,
+    "maxHp": 140,
+    "path": 35,
+    "turns": 25
+  },
+  {
+    "seed": 223945,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 223945,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 264448,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.2,
+    "limit": 27.907692307692308,
+    "hp": 84,
+    "maxHp": 84,
+    "path": 21,
+    "turns": 11
+  },
+  {
+    "seed": 264448,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceAssist",
+      "label": "すなおな道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 26.18,
+    "limit": 27.907692307692308,
+    "hp": 77.4,
+    "maxHp": 84,
+    "path": 21,
+    "turns": 11
+  },
+  {
+    "seed": 304951,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.47,
+    "limit": 25,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 304951,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 68.9,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 345454,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "roomy",
+      "themeId": "specialFlow",
+      "label": "広い曲がり角"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 73
+    },
+    "fields": 5,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.23,
+    "limit": 25,
+    "hp": 67.8,
+    "maxHp": 68,
+    "path": 17,
+    "turns": 7
+  },
+  {
+    "seed": 345454,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 9,
+      "shape": "roomy",
+      "themeId": "specialFlow",
+      "label": "広い曲がり角"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 73
+    },
+    "fields": 5,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 19.88,
+    "limit": 25,
+    "hp": 64.8,
+    "maxHp": 68,
+    "path": 17,
+    "turns": 7
+  },
+  {
+    "seed": 385957,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "sticky",
+      "label": "迷路"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 81
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 35.45,
+    "limit": 49.98717948717949,
+    "hp": 152,
+    "maxHp": 152,
+    "path": 47,
+    "turns": 28
+  },
+  {
+    "seed": 385957,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "sticky",
+      "label": "迷路"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 81
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 50,
+    "limit": 49.98717948717949,
+    "hp": 57.9,
+    "maxHp": 152,
+    "path": 47,
+    "turns": 28
+  },
+  {
+    "seed": 426460,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 43,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.03,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 426460,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "careful",
+      "label": "反発の広場"
+    },
+    "theme": "careful",
+    "materials": {
+      "rubber": 43,
+      "stone": 2
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 18.58,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 466963,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 34.22,
+    "limit": 58.28461538461539,
+    "hp": 143.3,
+    "maxHp": 144,
+    "path": 47,
+    "turns": 26
+  },
+  {
+    "seed": 466963,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 58.3,
+    "limit": 58.28461538461539,
+    "hp": 121.9,
+    "maxHp": 144,
+    "path": 47,
+    "turns": 26
+  },
+  {
+    "seed": 507466,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 50,
+      "moss": 14
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 23.78,
+    "limit": 34.1,
+    "hp": 115.7,
+    "maxHp": 116,
+    "path": 33,
+    "turns": 19
+  },
+  {
+    "seed": 507466,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 50,
+      "moss": 14
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 34.1,
+    "limit": 34.1,
+    "hp": 50.3,
+    "maxHp": 116,
+    "path": 33,
+    "turns": 19
+  },
+  {
+    "seed": 547969,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 14.97,
+    "limit": 31.51538461538462,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 547969,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 31.52,
+    "limit": 31.51538461538462,
+    "hp": 87.1,
+    "maxHp": 88,
+    "path": 21,
+    "turns": 12
+  },
+  {
+    "seed": 588472,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 6,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.5,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 588472,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "iceAssist",
+      "label": "反発の広場"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 6,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 23.6,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 628975,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.93,
+    "limit": 30.641025641025646,
+    "hp": 87.9,
+    "maxHp": 88,
+    "path": 23,
+    "turns": 12
+  },
+  {
+    "seed": 628975,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "repulsionHinder",
+      "label": "すなおな道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 30.65,
+    "limit": 30.641025641025646,
+    "hp": 70.8,
+    "maxHp": 88,
+    "path": 23,
+    "turns": 12
+  },
+  {
+    "seed": 871993,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 67
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.23,
+    "limit": 25,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 23,
+    "turns": 10
+  },
+  {
+    "seed": 871993,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceRubber",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 67
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 24.38,
+    "limit": 25,
+    "hp": 80,
+    "maxHp": 80,
+    "path": 23,
+    "turns": 10
+  },
+  {
+    "seed": 115008,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 75,
+      "moss": 25
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 31.27,
+    "limit": 39.882051282051286,
+    "hp": 136,
+    "maxHp": 136,
+    "path": 43,
+    "turns": 24
+  },
+  {
+    "seed": 115008,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 9,
+      "shape": "classic",
+      "themeId": "rest",
+      "label": "迷路"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 75,
+      "moss": 25
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 39.88,
+    "limit": 39.882051282051286,
+    "hp": 98.9,
+    "maxHp": 136,
+    "path": 43,
+    "turns": 24
+  },
+  {
+    "seed": 560541,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "specialFlow",
+      "label": "迷路"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 191
+    },
+    "fields": 5,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 39.22,
+    "limit": 48.35000000000001,
+    "hp": 168,
+    "maxHp": 168,
+    "path": 53,
+    "turns": 32
+  },
+  {
+    "seed": 560541,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "specialFlow",
+      "label": "迷路"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 191
+    },
+    "fields": 5,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 53.37,
+    "limit": 48.35000000000001,
+    "hp": 159.1,
+    "maxHp": 168,
+    "path": 53,
+    "turns": 32
+  },
+  {
+    "seed": 532610,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "iceRubber",
+      "label": "すなおな道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 144
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 30.58,
+    "limit": 37.95,
+    "hp": 144,
+    "maxHp": 144,
+    "path": 43,
+    "turns": 26
+  },
+  {
+    "seed": 532610,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "iceRubber",
+      "label": "すなおな道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 144
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 37.95,
+    "limit": 37.95,
+    "hp": 144,
+    "maxHp": 144,
+    "path": 43,
+    "turns": 26
+  },
+  {
+    "seed": 990715,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 13,
+      "shape": "roomy",
+      "themeId": "specialFlow",
+      "label": "広い曲がり角"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 152
+    },
+    "fields": 6,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 20.9,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 27,
+    "turns": 9
+  },
+  {
+    "seed": 990715,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 13,
+      "shape": "roomy",
+      "themeId": "specialFlow",
+      "label": "広い曲がり角"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 152
+    },
+    "fields": 6,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 64.7,
+    "maxHp": 76,
+    "path": 27,
+    "turns": 9
+  },
+  {
+    "seed": 274233,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 29.67,
+    "limit": 37.800000000000004,
+    "hp": 123.7,
+    "maxHp": 124,
+    "path": 39,
+    "turns": 21
+  },
+  {
+    "seed": 274233,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 100
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 37.8,
+    "limit": 37.800000000000004,
+    "hp": 108.5,
+    "maxHp": 124,
+    "path": 39,
+    "turns": 21
+  },
+  {
+    "seed": 3284,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 59.48,
+    "limit": 80.6,
+    "hp": 241.7,
+    "maxHp": 244,
+    "path": 81,
+    "turns": 51
+  },
+  {
+    "seed": 3284,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 80.6,
+    "limit": 80.6,
+    "hp": 227.9,
+    "maxHp": 244,
+    "path": 81,
+    "turns": 51
+  },
+  {
+    "seed": 619820,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.98,
+    "limit": 25,
+    "hp": 56,
+    "maxHp": 56,
+    "path": 13,
+    "turns": 4
+  },
+  {
+    "seed": 619820,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 22.62,
+    "limit": 25,
+    "hp": 45,
+    "maxHp": 56,
+    "path": 13,
+    "turns": 4
+  },
+  {
+    "seed": 660323,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.67,
+    "limit": 25,
+    "hp": 87.8,
+    "maxHp": 88,
+    "path": 17,
+    "turns": 12
+  },
+  {
+    "seed": 660323,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 74.7,
+    "maxHp": 88,
+    "path": 17,
+    "turns": 12
+  },
+  {
+    "seed": 700826,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "sand",
+      "label": "広い曲がり角"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.72,
+    "limit": 25,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 700826,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "sand",
+      "label": "広い曲がり角"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 741329,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.7,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 17,
+    "turns": 9
+  },
+  {
+    "seed": 741329,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.68,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 17,
+    "turns": 9
+  },
+  {
+    "seed": 781832,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 781832,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 822335,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.15,
+    "limit": 25,
+    "hp": 56,
+    "maxHp": 56,
+    "path": 17,
+    "turns": 4
+  },
+  {
+    "seed": 822335,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "iceSand",
+      "label": "すなおな道"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 16.13,
+    "limit": 25,
+    "hp": 56,
+    "maxHp": 56,
+    "path": 17,
+    "turns": 4
+  },
+  {
+    "seed": 862838,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.57,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 13,
+    "turns": 9
+  },
+  {
+    "seed": 862838,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 62
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 24.28,
+    "limit": 25,
+    "hp": 74.6,
+    "maxHp": 76,
+    "path": 13,
+    "turns": 9
+  },
+  {
+    "seed": 903341,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 56
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.83,
+    "limit": 25,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 903341,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 56
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 12.57,
+    "limit": 25,
+    "hp": 50.6,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 943844,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "rest",
+      "label": "入り組んだ道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 63,
+      "moss": 18
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 32.95,
+    "limit": 50.19230769230769,
+    "hp": 159.6,
+    "maxHp": 160,
+    "path": 45,
+    "turns": 30
+  },
+  {
+    "seed": 943844,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "rest",
+      "label": "入り組んだ道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 63,
+      "moss": 18
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 50.2,
+    "limit": 50.19230769230769,
+    "hp": 107.2,
+    "maxHp": 160,
+    "path": 45,
+    "turns": 30
+  },
+  {
+    "seed": 984347,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 6,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.67,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 984347,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 55
+    },
+    "fields": 6,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 22.45,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 24847,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 13,
+      "shape": "short",
+      "themeId": "sticky",
+      "label": "すなおな道"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 196
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 41.13,
+    "limit": 56.97435897435898,
+    "hp": 157.2,
+    "maxHp": 160,
+    "path": 55,
+    "turns": 30
+  },
+  {
+    "seed": 24847,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 13,
+      "shape": "short",
+      "themeId": "sticky",
+      "label": "すなおな道"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 196
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 56.98,
+    "limit": 56.97435897435898,
+    "hp": 43.3,
+    "maxHp": 160,
+    "path": 55,
+    "turns": 30
+  },
+  {
+    "seed": 65350,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 46,
+      "stone": 4
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.22,
+    "limit": 25,
+    "hp": 52,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 65350,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "careful",
+      "label": "広い曲がり角"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 46,
+      "stone": 4
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 47,
+    "maxHp": 52,
+    "path": 13,
+    "turns": 3
+  },
+  {
+    "seed": 105853,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 61.92,
+    "limit": 96.41538461538462,
+    "hp": 230.2,
+    "maxHp": 232,
+    "path": 83,
+    "turns": 48
+  },
+  {
+    "seed": 105853,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "intricate",
+      "themeId": "gravityHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "cork": 144
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 96.42,
+    "limit": 96.41538461538462,
+    "hp": 180.9,
+    "maxHp": 232,
+    "path": 83,
+    "turns": 48
+  },
+  {
+    "seed": 146356,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 74,
+      "moss": 26
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 22.27,
+    "limit": 31.56666666666667,
+    "hp": 107.4,
+    "maxHp": 108,
+    "path": 31,
+    "turns": 17
+  },
+  {
+    "seed": 146356,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 74,
+      "moss": 26
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 31.57,
+    "limit": 31.56666666666667,
+    "hp": 84.2,
+    "maxHp": 108,
+    "path": 31,
+    "turns": 17
+  },
+  {
+    "seed": 186859,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 21.22,
+    "limit": 38.2974358974359,
+    "hp": 95.8,
+    "maxHp": 96,
+    "path": 29,
+    "turns": 14
+  },
+  {
+    "seed": 186859,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 38.3,
+    "limit": 38.2974358974359,
+    "hp": 94,
+    "maxHp": 96,
+    "path": 29,
+    "turns": 14
+  },
+  {
+    "seed": 227362,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.22,
+    "limit": 25,
+    "hp": 68,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 227362,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 62.1,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 267865,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.82,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 267865,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 510883,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.88,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 510883,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 14.13,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 753901,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 30.18,
+    "limit": 47.741025641025644,
+    "hp": 144,
+    "maxHp": 144,
+    "path": 41,
+    "turns": 26
+  },
+  {
+    "seed": 753901,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "repulsionHinder",
+      "label": "入り組んだ道"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 47.75,
+    "limit": 47.741025641025644,
+    "hp": 116.4,
+    "maxHp": 144,
+    "path": 41,
+    "turns": 26
+  },
+  {
+    "seed": 199431,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "specialFlow",
+      "label": "入り組んだ道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 74
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 21.05,
+    "limit": 28.85,
+    "hp": 128,
+    "maxHp": 128,
+    "path": 29,
+    "turns": 22
+  },
+  {
+    "seed": 199431,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 8,
+      "shape": "intricate",
+      "themeId": "specialFlow",
+      "label": "入り組んだ道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 74
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 33.85,
+    "limit": 28.85,
+    "hp": 124.8,
+    "maxHp": 128,
+    "path": 29,
+    "turns": 22
+  },
+  {
+    "seed": 171500,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "iceSand",
+      "label": "迷路"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 20.42,
+    "limit": 25,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 27,
+    "turns": 12
+  },
+  {
+    "seed": 171500,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "iceSand",
+      "label": "迷路"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 81
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 88,
+    "maxHp": 88,
+    "path": 27,
+    "turns": 12
+  },
+  {
+    "seed": 629605,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "specialFlow",
+      "label": "すなおな道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 96
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 31.87,
+    "limit": 41.5,
+    "hp": 164,
+    "maxHp": 164,
+    "path": 43,
+    "turns": 31
+  },
+  {
+    "seed": 629605,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 9,
+      "shape": "short",
+      "themeId": "specialFlow",
+      "label": "すなおな道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 96
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 41.52,
+    "limit": 41.5,
+    "hp": 164,
+    "maxHp": 164,
+    "path": 43,
+    "turns": 31
+  },
+  {
+    "seed": 913126,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 61
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 25.78,
+    "limit": 28.6,
+    "hp": 108,
+    "maxHp": 108,
+    "path": 35,
+    "turns": 17
+  },
+  {
+    "seed": 913126,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 61
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 28.6,
+    "limit": 28.6,
+    "hp": 87.7,
+    "maxHp": 108,
+    "path": 35,
+    "turns": 17
+  },
+  {
+    "seed": 642177,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 75
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.52,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 19,
+    "turns": 9
+  },
+  {
+    "seed": 642177,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 75
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 71.2,
+    "maxHp": 76,
+    "path": 19,
+    "turns": 9
+  },
+  {
+    "seed": 770623,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.2,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 15,
+    "turns": 9
+  },
+  {
+    "seed": 770623,
+    "level": "normal",
+    "stage": 1,
+    "variation": {
+      "size": 7,
+      "shape": "short",
+      "themeId": "basic",
+      "label": "すなおな道"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 73,
+    "maxHp": 76,
+    "path": 15,
+    "turns": 9
+  },
+  {
+    "seed": 811126,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 17.73,
+    "limit": 33.25438596491228,
+    "hp": 95.9,
+    "maxHp": 96,
+    "path": 25,
+    "turns": 14
+  },
+  {
+    "seed": 811126,
+    "level": "normal",
+    "stage": 2,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "basic",
+      "label": "迷路"
+    },
+    "theme": "basic",
+    "materials": {
+      "default": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 33.27,
+    "limit": 33.25438596491228,
+    "hp": 79.3,
+    "maxHp": 96,
+    "path": 25,
+    "turns": 14
+  },
+  {
+    "seed": 851629,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 31.58,
+    "limit": 56.84871794871796,
+    "hp": 152,
+    "maxHp": 152,
+    "path": 43,
+    "turns": 28
+  },
+  {
+    "seed": 851629,
+    "level": "normal",
+    "stage": 3,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "sand",
+      "label": "入り組んだ道"
+    },
+    "theme": "sand",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 56.85,
+    "limit": 56.84871794871796,
+    "hp": 134.3,
+    "maxHp": 152,
+    "path": 43,
+    "turns": 28
+  },
+  {
+    "seed": 892132,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 8.87,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 892132,
+    "level": "normal",
+    "stage": 4,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "iceRubber",
+      "label": "反発の広場"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 35
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 12,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 932635,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 25.03,
+    "limit": 45.7525641025641,
+    "hp": 132,
+    "maxHp": 132,
+    "path": 35,
+    "turns": 23
+  },
+  {
+    "seed": 932635,
+    "level": "normal",
+    "stage": 5,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "gravityAssist",
+      "label": "迷路"
+    },
+    "theme": "gravityAssist",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 45.77,
+    "limit": 45.7525641025641,
+    "hp": 125.6,
+    "maxHp": 132,
+    "path": 35,
+    "turns": 23
+  },
+  {
+    "seed": 973138,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.05,
+    "limit": 25,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 973138,
+    "level": "normal",
+    "stage": 6,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 51
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 15.43,
+    "limit": 25,
+    "hp": 62.5,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 13638,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 13638,
+    "level": "normal",
+    "stage": 7,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "repulsionAssist",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "rubber": 34
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 54141,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 63
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 30.77,
+    "limit": 52.61025641025641,
+    "hp": 147.9,
+    "maxHp": 148,
+    "path": 41,
+    "turns": 27
+  },
+  {
+    "seed": 54141,
+    "level": "normal",
+    "stage": 8,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "iceAssist",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 63
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 52.62,
+    "limit": 52.61025641025641,
+    "hp": 138.3,
+    "maxHp": 148,
+    "path": 41,
+    "turns": 27
+  },
+  {
+    "seed": 94644,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 3
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.18,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 94644,
+    "level": "normal",
+    "stage": 9,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "rest",
+      "label": "反発の広場"
+    },
+    "theme": "rest",
+    "materials": {
+      "rubber": 41,
+      "moss": 3
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.33,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 135147,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "specialFlow",
+      "label": "入り組んだ道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 61
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 18.72,
+    "limit": 30.307692307692307,
+    "hp": 75.8,
+    "maxHp": 76,
+    "path": 25,
+    "turns": 9
+  },
+  {
+    "seed": 135147,
+    "level": "normal",
+    "stage": 10,
+    "variation": {
+      "size": 7,
+      "shape": "intricate",
+      "themeId": "specialFlow",
+      "label": "入り組んだ道"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "cork": 61
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.67,
+    "limit": 30.307692307692307,
+    "hp": 72.5,
+    "maxHp": 76,
+    "path": 25,
+    "turns": 9
+  },
+  {
+    "seed": 175650,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 70
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.08,
+    "limit": 25,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 15,
+    "turns": 6
+  },
+  {
+    "seed": 175650,
+    "level": "normal",
+    "stage": 11,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "sticky",
+      "label": "広い曲がり角"
+    },
+    "theme": "sticky",
+    "materials": {
+      "default": 70
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 56.7,
+    "maxHp": 64,
+    "path": 15,
+    "turns": 6
+  },
+  {
+    "seed": 216153,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "careful",
+      "label": "すなおな道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 39.12,
+    "limit": 56.26282051282052,
+    "hp": 167.4,
+    "maxHp": 168,
+    "path": 53,
+    "turns": 32
+  },
+  {
+    "seed": 216153,
+    "level": "normal",
+    "stage": 12,
+    "variation": {
+      "size": 11,
+      "shape": "short",
+      "themeId": "careful",
+      "label": "すなおな道"
+    },
+    "theme": "careful",
+    "materials": {
+      "default": 124,
+      "stone": 20
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 56.27,
+    "limit": 56.26282051282052,
+    "hp": 72.2,
+    "maxHp": 168,
+    "path": 53,
+    "turns": 32
+  },
+  {
+    "seed": 256656,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "gravityHinder",
+      "label": "反発の広場"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "rubber": 56
+    },
+    "fields": 6,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 15.4,
+    "limit": 34.28461538461539,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 256656,
+    "level": "normal",
+    "stage": 13,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "gravityHinder",
+      "label": "反発の広場"
+    },
+    "theme": "gravityHinder",
+    "materials": {
+      "rubber": 56
+    },
+    "fields": 6,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 34.3,
+    "limit": 34.28461538461539,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 297159,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 8,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 13.4,
+    "limit": 25,
+    "hp": 79.6,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 297159,
+    "level": "normal",
+    "stage": 14,
+    "variation": {
+      "size": 8,
+      "shape": "short",
+      "themeId": "rest",
+      "label": "すなおな道"
+    },
+    "theme": "rest",
+    "materials": {
+      "default": 62,
+      "moss": 19
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 26.1,
+    "limit": 25,
+    "hp": 48.4,
+    "maxHp": 80,
+    "path": 19,
+    "turns": 10
+  },
+  {
+    "seed": 337662,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 18.08,
+    "limit": 37.10641025641026,
+    "hp": 108,
+    "maxHp": 108,
+    "path": 25,
+    "turns": 17
+  },
+  {
+    "seed": 337662,
+    "level": "normal",
+    "stage": 15,
+    "variation": {
+      "size": 7,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 64
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 37.12,
+    "limit": 37.10641025641026,
+    "hp": 102.1,
+    "maxHp": 108,
+    "path": 25,
+    "turns": 17
+  },
+  {
+    "seed": 378165,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 54
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 9.5,
+    "limit": 25,
+    "hp": 64,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 378165,
+    "level": "normal",
+    "stage": 16,
+    "variation": {
+      "size": 7,
+      "shape": "roomy",
+      "themeId": "iceAssist",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceAssist",
+    "materials": {
+      "cork": 54
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 13.53,
+    "limit": 25,
+    "hp": 62.6,
+    "maxHp": 64,
+    "path": 13,
+    "turns": 6
+  },
+  {
+    "seed": 418668,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 100
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 19.15,
+    "limit": 25.980769230769234,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 418668,
+    "level": "normal",
+    "stage": 17,
+    "variation": {
+      "size": 9,
+      "shape": "intricate",
+      "themeId": "iceRubber",
+      "label": "入り組んだ道"
+    },
+    "theme": "iceRubber",
+    "materials": {
+      "rubber": 100
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 27.52,
+    "limit": 25.980769230769234,
+    "hp": 92,
+    "maxHp": 92,
+    "path": 27,
+    "turns": 13
+  },
+  {
+    "seed": 661686,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 196
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 70.95,
+    "limit": 102.50256410256412,
+    "hp": 271.7,
+    "maxHp": 272,
+    "path": 95,
+    "turns": 58
+  },
+  {
+    "seed": 661686,
+    "level": "normal",
+    "stage": 23,
+    "variation": {
+      "size": 13,
+      "shape": "classic",
+      "themeId": "repulsionHinder",
+      "label": "迷路"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "cork": 196
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 102.52,
+    "limit": 102.50256410256412,
+    "hp": 261.4,
+    "maxHp": 272,
+    "path": 95,
+    "turns": 58
+  },
+  {
+    "seed": 904704,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 11.05,
+    "limit": 25,
+    "hp": 68,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 904704,
+    "level": "normal",
+    "stage": 29,
+    "variation": {
+      "size": 8,
+      "shape": "roomy",
+      "themeId": "iceSand",
+      "label": "広い曲がり角"
+    },
+    "theme": "iceSand",
+    "materials": {
+      "cork": 59
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 17.3,
+    "limit": 25,
+    "hp": 65.8,
+    "maxHp": 68,
+    "path": 15,
+    "turns": 7
+  },
+  {
+    "seed": 350234,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 38
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.65,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 350234,
+    "level": "normal",
+    "stage": 40,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 38
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 16.97,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 322303,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 79
+    },
+    "fields": 2,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 14.9,
+    "limit": 25,
+    "hp": 76,
+    "maxHp": 76,
+    "path": 21,
+    "turns": 9
+  },
+  {
+    "seed": 322303,
+    "level": "normal",
+    "stage": 64,
+    "variation": {
+      "size": 8,
+      "shape": "classic",
+      "themeId": "repulsionAssist",
+      "label": "迷路"
+    },
+    "theme": "repulsionAssist",
+    "materials": {
+      "cork": 79
+    },
+    "fields": 2,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 62.6,
+    "maxHp": 76,
+    "path": 21,
+    "turns": 9
+  },
+  {
+    "seed": 780408,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 10.2,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 780408,
+    "level": "normal",
+    "stage": 100,
+    "variation": {
+      "size": 7,
+      "shape": "open",
+      "themeId": "specialFlow",
+      "label": "反発の広場"
+    },
+    "theme": "specialFlow",
+    "materials": {
+      "rubber": 36
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "clear",
+    "seconds": 18.32,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 13,
+    "turns": 2
+  },
+  {
+    "seed": 63926,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 54
+    },
+    "fields": 0,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 16.58,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 63926,
+    "level": "normal",
+    "stage": 107,
+    "variation": {
+      "size": 11,
+      "shape": "open",
+      "themeId": "sand",
+      "label": "反発の広場"
+    },
+    "theme": "sand",
+    "materials": {
+      "rubber": 54
+    },
+    "fields": 0,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 21,
+    "turns": 2
+  },
+  {
+    "seed": 792980,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "repulsionHinder",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "rubber": 46
+    },
+    "fields": 4,
+    "controller": "180ms-imperfect",
+    "result": "clear",
+    "seconds": 12.53,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  },
+  {
+    "seed": 792980,
+    "level": "normal",
+    "stage": 125,
+    "variation": {
+      "size": 9,
+      "shape": "open",
+      "themeId": "repulsionHinder",
+      "label": "反発の広場"
+    },
+    "theme": "repulsionHinder",
+    "materials": {
+      "rubber": 46
+    },
+    "fields": 4,
+    "controller": "careful-300ms-thinking",
+    "result": "timeout",
+    "seconds": 25,
+    "limit": 25,
+    "hp": 48,
+    "maxHp": 48,
+    "path": 17,
+    "turns": 2
+  }
+]
