@@ -1,0 +1,223 @@
+{
+  "seed": 1,
+  "checks": [
+    {
+      "name": "leaf",
+      "text": "葉っぱのまもりが増えた！",
+      "stage": 1
+    },
+    {
+      "name": "guard",
+      "text": "葉っぱが守ってくれた！",
+      "stage": 1
+    },
+    {
+      "name": "recovery",
+      "text": "げんき +3",
+      "stage": 1
+    },
+    {
+      "name": "resting",
+      "text": "ひとやすみ中…",
+      "stage": 1
+    },
+    {
+      "name": "rest-complete",
+      "text": "げんき回復！ のこりじかん＋2秒",
+      "stage": 1
+    },
+    {
+      "name": "hourglass",
+      "text": "のこりじかん ＋5秒！",
+      "stage": 11
+    },
+    {
+      "name": "trap",
+      "text": "盤面をダブルタップで早く脱出",
+      "stage": 11
+    },
+    {
+      "name": "shortened",
+      "text": "0.5秒短縮！",
+      "stage": 11
+    },
+    {
+      "name": "escaped",
+      "text": "ぬけられた！",
+      "stage": 11
+    },
+    {
+      "name": "floor-sand",
+      "text": "砂で減速。少し傾け続けてみよう。",
+      "stage": 1
+    },
+    {
+      "name": "floor-ice",
+      "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+      "stage": 1
+    },
+    {
+      "name": "floor-gravity",
+      "text": "重力は中心へ引く。傾きを弱めてみよう。",
+      "stage": 1
+    },
+    {
+      "name": "floor-repulsion",
+      "text": "反重力は中心から押す。近づいてみよう。",
+      "stage": 1
+    },
+    {
+      "name": "floor-normal",
+      "text": "普通の床：いつもの転がり方。",
+      "stage": 1
+    }
+  ],
+  "sizes": [
+    {
+      "stage": 1,
+      "size": 7
+    },
+    {
+      "stage": 2,
+      "size": 7
+    },
+    {
+      "stage": 3,
+      "size": 7
+    },
+    {
+      "stage": 4,
+      "size": 7
+    },
+    {
+      "stage": 5,
+      "size": 7
+    },
+    {
+      "stage": 6,
+      "size": 7
+    },
+    {
+      "stage": 7,
+      "size": 7
+    },
+    {
+      "stage": 8,
+      "size": 7
+    },
+    {
+      "stage": 9,
+      "size": 9
+    },
+    {
+      "stage": 10,
+      "size": 9
+    },
+    {
+      "stage": 11,
+      "size": 11
+    },
+    {
+      "stage": 12,
+      "size": 11
+    },
+    {
+      "stage": 13,
+      "size": 7
+    },
+    {
+      "stage": 14,
+      "size": 11
+    },
+    {
+      "stage": 15,
+      "size": 9
+    },
+    {
+      "stage": 16,
+      "size": 8
+    },
+    {
+      "stage": 17,
+      "size": 7
+    },
+    {
+      "stage": 18,
+      "size": 7
+    },
+    {
+      "stage": 19,
+      "size": 9
+    },
+    {
+      "stage": 20,
+      "size": 7
+    },
+    {
+      "stage": 21,
+      "size": 9
+    },
+    {
+      "stage": 22,
+      "size": 7
+    },
+    {
+      "stage": 23,
+      "size": 7
+    },
+    {
+      "stage": 24,
+      "size": 13
+    }
+  ],
+  "large": true,
+  "trapped": true,
+  "audio": {
+    "enabled": true,
+    "context": "running",
+    "loaded": true,
+    "buffers": 18,
+    "music": true,
+    "rolling": false,
+    "voices": 0,
+    "musicDelaySec": 0,
+    "bgmVolume": 0.6,
+    "seVolume": 0.8,
+    "events": [
+      "countdown",
+      "countdown",
+      "select",
+      "select",
+      "countdown",
+      "countdown",
+      "countdown",
+      "countdown",
+      "fail",
+      "continue",
+      "countdown",
+      "countdown",
+      "countdown",
+      "countdown",
+      "select",
+      "select",
+      "select",
+      "select",
+      "select",
+      "countdown",
+      "countdown",
+      "countdown",
+      "countdown",
+      "select",
+      "select",
+      "bgm",
+      "select",
+      "rolling",
+      "rolling",
+      "select",
+      "rolling",
+      "select"
+    ]
+  },
+  "errors": [],
+  "scope": "Contacts use actual generated features and main callbacks. Navigation between stages uses debug teleport; these are not human playthroughs."
+}

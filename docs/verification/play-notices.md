@@ -1,6 +1,6 @@
 # 盤面外の通知の確認（T-280 / v0.6.23）
 
-公開前の作業記録。公開確認は完了後に追記する。
+アプリ6dae785を[Pages37608950020](https://github.com/gerupon-lgtm/corogalism/actions/runs/37608950020)で公開し、公開先の確認も完了。v0.6.23、キャッシュ923e95bd1a46f34b・107資材。
 
 ## 元の問題と比較
 
@@ -9,6 +9,8 @@
 全画面後のresizeを両版で完了させて比較する。最初の測定では320×568の全画面だけキャンバスの古いサイズが残ったため、旧版と新版を同条件で測り直した。比較項目や重なり判定は緩めていない。
 
 ## 確認コマンド
+
+ローカルは別のターミナルで`python -m http.server 8768 --bind 127.0.0.1`を実行してから確認する。
 
 ```powershell
 $env:PLAYWRIGHT_MODULE='file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/.codex-browser/node_modules/playwright/index.mjs'
@@ -30,3 +32,13 @@ node tools/browser-notice-offline.mjs
 - 107資材を保存して完全オフラインへ切り替え、床5種の接触通知・BGM・ポーズ／ガイド・両おためしの画面操作・本編への復帰が成功。[オフライン](play-notices/v0623/local-offline.json)。
 
 [Pixel 6a想定の通常表示](play-notices/v0623/local-pixel6a-browser.png)、[全画面](play-notices/v0623/local-pixel6a-fullscreen.png)、[実際のまもり通知](play-notices/v0623/local-actual-guard.png)、[13×13の表示診断](play-notices/v0623/local-large-maze.png)を保存。実機の傾きや人間の読みやすさを確認済みという意味ではない。
+
+## 公開先の結果
+
+- 公開した110ファイルすべてHTTP200・SHA-256一致。[配信の照合](play-notices/v0623/deploy-hashes.json)。
+- ローカルと同じ8条件112通知が成功。旧版の盤面・キャンバス・数値・ボタン・ページ寸法を維持。[公開の寸法と表示](play-notices/v0623/public.json)。
+- 本編の実際の取得／接触14通知、7/8/9/11/13の面、ポーズ／ガイド／終了取消／コンティニュー／床の練習を確認。BGM／音の読み込み正常、実行エラーなし。[公開の接触と画面遷移](play-notices/v0623/public-flow.json)。
+- 107資材の完全オフラインで床5種の通知・BGM・ポーズ／ガイド・両おためしの画面操作・本編への復帰が成功。[公開のオフライン](play-notices/v0623/public-offline.json)。
+- 統合後のmainでも34ファイルを7回に分けた192テストが成功してからpushした。
+
+[公開の通常表示](play-notices/v0623/public-pixel6a-browser.png)、[全画面](play-notices/v0623/public-pixel6a-fullscreen.png)、[実際のまもり通知](play-notices/v0623/public-actual-guard.png)、[13×13の表示診断](play-notices/v0623/public-large-maze.png)。確認した画像はローカルと同じ表示。実端末Pixel 6aの表示設定や体感評価は未確認として残す。

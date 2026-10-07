@@ -1,0 +1,58 @@
+{
+  "version": "0.6.23",
+  "names": [
+    "corogalism-923e95bd1a46f34b"
+  ],
+  "files": 107,
+  "floors": [
+    {
+      "kind": "sand",
+      "text": "砂で減速。少し傾け続けてみよう。"
+    },
+    {
+      "kind": "ice",
+      "text": "氷は勢いが残る。逆へ傾けてブレーキ。"
+    },
+    {
+      "kind": "gravity",
+      "text": "重力は中心へ引く。傾きを弱めてみよう。"
+    },
+    {
+      "kind": "repulsion",
+      "text": "反重力は中心から押す。近づいてみよう。"
+    },
+    {
+      "kind": "normal",
+      "text": "普通の床：いつもの転がり方。"
+    }
+  ],
+  "audio": {
+    "enabled": true,
+    "context": "running",
+    "loaded": true,
+    "buffers": 18,
+    "music": true,
+    "rolling": false,
+    "voices": 0,
+    "musicDelaySec": 0,
+    "bgmVolume": 0.6,
+    "seVolume": 0.8,
+    "events": [
+      "select",
+      "countdown",
+      "countdown",
+      "countdown",
+      "countdown",
+      "select",
+      "select",
+      "bgm",
+      "select",
+      "rolling",
+      "select",
+      "rolling",
+      "select"
+    ]
+  },
+  "labs": 2,
+  "errors": []
+}
