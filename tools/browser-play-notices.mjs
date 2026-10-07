@@ -3,7 +3,8 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = new URL(process.env.BASE_URL || 'http://127.0.0.1:8768/');
-const output = new URL('../docs/verification/play-notices/v0623/', import.meta.url);
+const version = process.env.NOTICE_VERSION || '0.6.23';
+const output = new URL(`../docs/verification/play-notices/v${version.replaceAll('.', '')}/`, import.meta.url);
 const baselineOnly = process.env.NOTICE_MODE === 'baseline';
 const publicRun = base.protocol === 'https:';
 await mkdir(output, { recursive: true });
@@ -13,7 +14,7 @@ const profiles = [
   { name: 'pixel6a-large-ui', width: 360, height: 800, dpr: 3 },
   { name: 'short-screen', width: 320, height: 568, dpr: 2 },
 ];
-const baseline = baselineOnly ? {} : JSON.parse(await readFile(new URL('baseline.json', output), 'utf8'));
+const baseline = baselineOnly ? {} : JSON.parse(await readFile(new URL('../docs/verification/play-notices/v0623/baseline.json', import.meta.url), 'utf8'));
 const results = [], errors = [];
 const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 try {
@@ -28,6 +29,7 @@ try {
     }, fullscreen);
     await page.clock.install(); await page.clock.pauseAt(Date.now() + 1000);
     await page.goto(new URL('?debug=1&seed=1', base).href);
+    if (!baselineOnly) assert.equal(await page.locator('.badge').textContent(), `v${version}`);
     await page.evaluate(() => document.fonts.ready);
     await page.locator('#btn-challenge').click();
     await page.waitForFunction(() => window.__corogalism?.state.screen === 'game');

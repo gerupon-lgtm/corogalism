@@ -380,10 +380,11 @@ body[data-screen="run-result"] footer{display:none}
 #screen-game{position:relative}
 .play-notices{position:absolute;top:-25px;left:0;right:0;height:16px;z-index:4;
   display:flex;align-items:center;justify-content:center;pointer-events:none;font-size:12px;line-height:16px}
-.play-notices>span{display:block;max-width:100%;padding:0 4px;background:var(--bg);color:#f1dfbd;
+.play-notices>span{display:block;max-width:100%;padding:0 7px;background:linear-gradient(#fff4dd,#efdcbb);color:#735033;
+  border-radius:7px;box-shadow:inset 0 0 0 1px #c6ac83;
   font-weight:700;text-align:center;white-space:nowrap}
 #play-hint.has-play-notice{visibility:hidden}
-.play-notices .feature-hint.is-success{color:#cbdca8}
+.play-notices .feature-hint.is-success{color:#496e38}
 .pwa-notice{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:11px;color:#557344}
 .pwa-notice button{padding:6px 12px;font-size:12px}
 @media(max-width:360px){.meter-name{font-size:9px}.meter-label strong{font-size:16px}.meter-label .shield-stock{font-size:9px}}
