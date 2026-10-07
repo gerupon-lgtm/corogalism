@@ -26,4 +26,10 @@ node tools/browser-notice-offline.mjs
 
 全34ファイルを最大5ファイルずつ7回に分け、192テスト成功・全回終了コード0。[各回の記録](play-notices/v0624/node-batches.json)。表示版v0.6.24、キャッシュbad71ce3a170dc98・107資材。
 
-公開確認は進行中。
+## 公開先の結果
+
+アプリ9c81b9dを[Pages37614057860](https://github.com/gerupon-lgtm/corogalism/actions/runs/37614057860)で公開。配信された110ファイルすべてHTTP200・SHA-256一致。[照合](play-notices/v0624/deploy-hashes.json)。
+
+公開でも同じ8条件112表示が成功。盤面・数値・ボタン・ページの寸法を維持し、横はみ出し・重なり・実行エラーなし。[公開の寸法](play-notices/v0624/public.json)。107資材の完全オフラインで床5種の接触通知・BGM・ポーズ／ガイド・両おためし・本編への復帰も成功。[公開のオフライン](play-notices/v0624/public-offline.json)。
+
+[公開の通常表示](play-notices/v0624/public-pixel6a-browser.png)、[全画面](play-notices/v0624/public-pixel6a-fullscreen.png)を確認。両画像はローカルと同じ。mainへの統合後は通知関連5ファイル17テストも成功。実機Pixel 6aでの見え方は未確認。
