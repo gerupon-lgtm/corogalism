@@ -1,0 +1,1693 @@
+{
+  "results": [
+    {
+      "key": "pixel6a-browser",
+      "geometry": {
+        "viewport": [
+          412,
+          915
+        ],
+        "documentHeight": 915,
+        "board": [
+          14,
+          218.05,
+          384,
+          384
+        ],
+        "canvas": [
+          17,
+          221.05,
+          378,
+          378
+        ],
+        "hud": [
+          23,
+          637.05,
+          366,
+          57
+        ],
+        "controls": [
+          23,
+          786.34,
+          366,
+          44
+        ],
+        "exit": [
+          23,
+          866,
+          366,
+          28
+        ],
+        "fullscreen": false
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            133,
+            608.046875,
+            146,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            127,
+            608.046875,
+            158,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            167.078125,
+            608.046875,
+            77.828125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            139.328125,
+            608.046875,
+            133.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            109.328125,
+            608.046875,
+            193.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            145,
+            608.046875,
+            122,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            103,
+            608.046875,
+            206,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            91,
+            608.046875,
+            230,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            85,
+            608.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            85,
+            608.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            61,
+            608.046875,
+            290,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            165.28125,
+            608.046875,
+            81.421875,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            163,
+            608.046875,
+            86,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            157,
+            608.046875,
+            98,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        }
+      ]
+    },
+    {
+      "key": "pixel6a-fullscreen",
+      "geometry": {
+        "viewport": [
+          412,
+          915
+        ],
+        "documentHeight": 915,
+        "board": [
+          14,
+          236.05,
+          384,
+          384
+        ],
+        "canvas": [
+          17,
+          239.05,
+          378,
+          378
+        ],
+        "hud": [
+          23,
+          655.05,
+          366,
+          57
+        ],
+        "controls": [
+          23,
+          792.34,
+          366,
+          44
+        ],
+        "exit": [
+          23,
+          866,
+          366,
+          28
+        ],
+        "fullscreen": true
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            133,
+            626.046875,
+            146,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            127,
+            626.046875,
+            158,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            167.078125,
+            626.046875,
+            77.828125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            139.328125,
+            626.046875,
+            133.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            109.328125,
+            626.046875,
+            193.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            145,
+            626.046875,
+            122,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            103,
+            626.046875,
+            206,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            91,
+            626.046875,
+            230,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            85,
+            626.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            85,
+            626.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            61,
+            626.046875,
+            290,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            165.28125,
+            626.046875,
+            81.421875,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            163,
+            626.046875,
+            86,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            157,
+            626.046875,
+            98,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        }
+      ]
+    },
+    {
+      "key": "pixel6a-compact-browser",
+      "geometry": {
+        "viewport": [
+          393,
+          873
+        ],
+        "documentHeight": 873,
+        "board": [
+          14,
+          218.05,
+          365,
+          365
+        ],
+        "canvas": [
+          17,
+          221.05,
+          359,
+          359
+        ],
+        "hud": [
+          23,
+          618.05,
+          347,
+          57
+        ],
+        "controls": [
+          23,
+          752.02,
+          347,
+          44
+        ],
+        "exit": [
+          23,
+          824,
+          347,
+          28
+        ],
+        "fullscreen": false
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            123.5,
+            589.046875,
+            146,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            117.5,
+            589.046875,
+            158,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            157.578125,
+            589.046875,
+            77.828125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            129.828125,
+            589.046875,
+            133.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            99.828125,
+            589.046875,
+            193.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            135.5,
+            589.046875,
+            122,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            93.5,
+            589.046875,
+            206,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            81.5,
+            589.046875,
+            230,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            75.5,
+            589.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            75.5,
+            589.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            51.5,
+            589.046875,
+            290,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            155.78125,
+            589.046875,
+            81.421875,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            153.5,
+            589.046875,
+            86,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            147.5,
+            589.046875,
+            98,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        }
+      ]
+    },
+    {
+      "key": "pixel6a-compact-fullscreen",
+      "geometry": {
+        "viewport": [
+          393,
+          873
+        ],
+        "documentHeight": 873,
+        "board": [
+          14,
+          236.05,
+          365,
+          365
+        ],
+        "canvas": [
+          17,
+          239.05,
+          359,
+          359
+        ],
+        "hud": [
+          23,
+          636.05,
+          347,
+          57
+        ],
+        "controls": [
+          23,
+          758.02,
+          347,
+          44
+        ],
+        "exit": [
+          23,
+          824,
+          347,
+          28
+        ],
+        "fullscreen": true
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            123.5,
+            607.046875,
+            146,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            117.5,
+            607.046875,
+            158,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            157.578125,
+            607.046875,
+            77.828125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            129.828125,
+            607.046875,
+            133.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            99.828125,
+            607.046875,
+            193.328125,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            135.5,
+            607.046875,
+            122,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            93.5,
+            607.046875,
+            206,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            81.5,
+            607.046875,
+            230,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            75.5,
+            607.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            75.5,
+            607.046875,
+            242,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            51.5,
+            607.046875,
+            290,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            155.78125,
+            607.046875,
+            81.421875,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            153.5,
+            607.046875,
+            86,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            147.5,
+            607.046875,
+            98,
+            16
+          ],
+          "gapAbove": 6,
+          "gapBelow": 13
+        }
+      ]
+    },
+    {
+      "key": "pixel6a-large-ui-browser",
+      "geometry": {
+        "viewport": [
+          360,
+          800
+        ],
+        "documentHeight": 800,
+        "board": [
+          10,
+          208.05,
+          340,
+          340
+        ],
+        "canvas": [
+          13,
+          211.05,
+          334,
+          334
+        ],
+        "hud": [
+          19,
+          567.05,
+          322,
+          53.8
+        ],
+        "controls": [
+          19,
+          687.95,
+          322,
+          44
+        ],
+        "exit": [
+          19,
+          755,
+          322,
+          28
+        ],
+        "fullscreen": false
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            112.5,
+            552.046875,
+            135,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            107,
+            552.046875,
+            146,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            143.734375,
+            552.046875,
+            72.515625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            118.296875,
+            552.046875,
+            123.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            90.796875,
+            552.046875,
+            178.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            123.5,
+            552.046875,
+            113,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            85,
+            552.046875,
+            190,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            74,
+            552.046875,
+            212,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            68.5,
+            552.046875,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            68.5,
+            552.046875,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            46.5,
+            552.046875,
+            267,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            142.09375,
+            552.046875,
+            75.8125,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            140,
+            552.046875,
+            80,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            134.5,
+            552.046875,
+            91,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        }
+      ]
+    },
+    {
+      "key": "pixel6a-large-ui-fullscreen",
+      "geometry": {
+        "viewport": [
+          360,
+          800
+        ],
+        "documentHeight": 800,
+        "board": [
+          10,
+          226.05,
+          340,
+          340
+        ],
+        "canvas": [
+          13,
+          229.05,
+          334,
+          334
+        ],
+        "hud": [
+          19,
+          585.05,
+          322,
+          53.8
+        ],
+        "controls": [
+          19,
+          693.95,
+          322,
+          44
+        ],
+        "exit": [
+          19,
+          755,
+          322,
+          28
+        ],
+        "fullscreen": true
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            112.5,
+            570.046875,
+            135,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            107,
+            570.046875,
+            146,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            143.734375,
+            570.046875,
+            72.515625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            118.296875,
+            570.046875,
+            123.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            90.796875,
+            570.046875,
+            178.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            123.5,
+            570.046875,
+            113,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            85,
+            570.046875,
+            190,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            74,
+            570.046875,
+            212,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            68.5,
+            570.046875,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            68.5,
+            570.046875,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            46.5,
+            570.046875,
+            267,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            142.09375,
+            570.046875,
+            75.8125,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            140,
+            570.046875,
+            80,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            134.5,
+            570.046875,
+            91,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        }
+      ]
+    },
+    {
+      "key": "short-screen-browser",
+      "geometry": {
+        "viewport": [
+          320,
+          568
+        ],
+        "documentHeight": 647,
+        "board": [
+          46,
+          218.44,
+          228,
+          228
+        ],
+        "canvas": [
+          49,
+          221.44,
+          222,
+          222
+        ],
+        "hud": [
+          19,
+          465.44,
+          282,
+          53.8
+        ],
+        "controls": [
+          19,
+          552.23,
+          282,
+          44
+        ],
+        "exit": [
+          19,
+          602.23,
+          282,
+          28
+        ],
+        "fullscreen": false
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            92.5,
+            450.4375,
+            135,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            87,
+            450.4375,
+            146,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            123.734375,
+            450.4375,
+            72.515625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            98.296875,
+            450.4375,
+            123.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            70.796875,
+            450.4375,
+            178.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            103.5,
+            450.4375,
+            113,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            65,
+            450.4375,
+            190,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            54,
+            450.4375,
+            212,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            48.5,
+            450.4375,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            48.5,
+            450.4375,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            26.5,
+            450.4375,
+            267,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            122.09375,
+            450.4375,
+            75.8125,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            120,
+            450.4375,
+            80,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            114.5,
+            450.4375,
+            91,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        }
+      ]
+    },
+    {
+      "key": "short-screen-fullscreen",
+      "geometry": {
+        "viewport": [
+          320,
+          568
+        ],
+        "documentHeight": 647,
+        "board": [
+          55,
+          236.44,
+          210,
+          210
+        ],
+        "canvas": [
+          58,
+          239.44,
+          204,
+          204
+        ],
+        "hud": [
+          19,
+          465.44,
+          282,
+          53.8
+        ],
+        "controls": [
+          19,
+          552.23,
+          282,
+          44
+        ],
+        "exit": [
+          19,
+          602.23,
+          282,
+          28
+        ],
+        "fullscreen": true
+      },
+      "checks": [
+        {
+          "name": "guard",
+          "text": "葉っぱが守ってくれた！",
+          "bounds": [
+            92.5,
+            450.4375,
+            135,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "leaf",
+          "text": "葉っぱのまもりが増えた！",
+          "bounds": [
+            87,
+            450.4375,
+            146,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "recovery",
+          "text": "げんき +10",
+          "bounds": [
+            123.734375,
+            450.4375,
+            72.515625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "hourglass",
+          "text": "のこりじかん ＋5秒！",
+          "bounds": [
+            98.296875,
+            450.4375,
+            123.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "rest",
+          "text": "げんき回復！ のこりじかん＋2秒",
+          "bounds": [
+            70.796875,
+            450.4375,
+            178.390625,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "full",
+          "text": "げんきはまんたん！",
+          "bounds": [
+            103.5,
+            450.4375,
+            113,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "砂で減速。少し傾け続けてみよう。",
+          "bounds": [
+            65,
+            450.4375,
+            190,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "氷は勢いが残る。逆へ傾けてブレーキ。",
+          "bounds": [
+            54,
+            450.4375,
+            212,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "重力は中心へ引く。傾きを弱めてみよう。",
+          "bounds": [
+            48.5,
+            450.4375,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "floor",
+          "text": "反重力は中心から押す。近づいてみよう。",
+          "bounds": [
+            48.5,
+            450.4375,
+            223,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "trap-priority",
+          "text": "盤面ダブルタップ／本体を軽くトントンで早く脱出",
+          "bounds": [
+            26.5,
+            450.4375,
+            267,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "shortened",
+          "text": "0.5秒短縮！",
+          "bounds": [
+            122.09375,
+            450.4375,
+            75.8125,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "escaped",
+          "text": "ぬけられた！",
+          "bounds": [
+            120,
+            450.4375,
+            80,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        },
+        {
+          "name": "resting",
+          "text": "ひとやすみ中…",
+          "bounds": [
+            114.5,
+            450.4375,
+            91,
+            14
+          ],
+          "gapAbove": 4,
+          "gapBelow": 1
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

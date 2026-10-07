@@ -378,7 +378,7 @@ body[data-screen="run-result"] footer{display:none}
 #hud-damage:empty{visibility:hidden}
 /* T-280: 既存の操作案内へ重ねる。高さを増やさず、盤面と数値の間に収める。 */
 #screen-game{position:relative}
-.play-notices{position:absolute;top:-25px;left:0;right:0;height:16px;z-index:4;
+.play-notices{position:absolute;top:-21px;left:0;right:0;height:16px;z-index:4;
   display:flex;align-items:center;justify-content:center;pointer-events:none;font-size:12px;line-height:16px}
 .play-notices>span{display:block;max-width:100%;padding:0 7px;background:linear-gradient(#fff4dd,#efdcbb);color:#735033;
   border-radius:7px;box-shadow:inset 0 0 0 1px #c6ac83;
@@ -464,7 +464,11 @@ body.board-session #screen-game{padding:8px;gap:6px}#game-status{margin:0}
 .pause-card{touch-action:pan-y}
 
 @media(max-height:800px){body.board-session .wrap{gap:6px}body.board-session #play-hint{display:none}}
-@media(max-height:800px){.play-notices{top:-7px;height:14px;font-size:11px;line-height:14px}}
+@media(max-height:800px){
+  /* 外周の影から離す。下部パネルの上下の余白を振り替え、高さは保つ。 */
+  body.board-session #screen-game{padding-top:12px;padding-bottom:4px}
+  .play-notices{top:-3px;height:14px;font-size:11px;line-height:14px}
+}
 
 @media(max-width:360px){.play-guide .guide-group{padding:6px;margin-top:6px}}
 

@@ -7,6 +7,8 @@ const version = process.env.NOTICE_VERSION || '0.6.23';
 const output = new URL(`../docs/verification/play-notices/v${version.replaceAll('.', '')}/`, import.meta.url);
 const baselineOnly = process.env.NOTICE_MODE === 'baseline';
 const publicRun = base.protocol === 'https:';
+const minimumGap = Number(process.env.NOTICE_MIN_GAP || 0);
+const compactPanelShift = Number(process.env.NOTICE_PANEL_SHIFT || 0);
 await mkdir(output, { recursive: true });
 const profiles = [
   { name: 'pixel6a', width: 412, height: 915, dpr: 2.625 },
@@ -49,8 +51,10 @@ try {
     });
     const before = await geometry();
     if (baselineOnly) { baseline[key] = before; await context.close(); continue; }
-    assert.deepEqual(before, baseline[key], `${key}: unchanged board, controls, and document height`);
-    const checks = await page.evaluate(async () => {
+    const expected = structuredClone(baseline[key]);
+    if (profile.height <= 800) for (const field of ['hud', 'controls', 'exit']) expected[field][1] += compactPanelShift;
+    assert.deepEqual(before, expected, `${key}: unchanged board and document height; specified compact panel shift only`);
+    const checks = await page.evaluate(async minimumGap => {
       const { createGameScreen } = await import('./src/ui/gameScreen.js');
       const ui = createGameScreen(document), state = window.__corogalism.state;
       const boardEl = document.querySelector('#board'), canvas = document.querySelector('#canvas');
@@ -70,11 +74,12 @@ try {
         if (visible.length !== 1) throw new Error(`${name}: expected one visible message, got ${visible.length}`);
         const message = visible[0], r = message.getBoundingClientRect(), b = boardEl.getBoundingClientRect(), h = document.querySelector('#screen-game .hud').getBoundingClientRect();
         if (boardEl.contains(message) || r.top < b.bottom - .1) throw new Error(`${name}: notice covers board`);
+        if (r.top < b.bottom + minimumGap - .1) throw new Error(`${name}: notice clearance ${r.top - b.bottom}px is below ${minimumGap}px`);
         if (r.bottom > h.top + .1 || r.left < 0 || r.right > innerWidth || message.scrollWidth > message.clientWidth + 1) throw new Error(`${name}: notice clips or covers lower HUD`);
         if (content && !content.test(message.textContent)) throw new Error(`${name}: wrong message ${message.textContent}`);
         const caption = document.querySelector('#play-hint');
         if (getComputedStyle(caption).display !== 'none' && getComputedStyle(caption).visibility !== 'hidden') throw new Error(`${name}: original caption overlaps notice`);
-        checks.push({ name, text: message.textContent, bounds: [r.x, r.y, r.width, r.height] });
+        checks.push({ name, text: message.textContent, bounds: [r.x, r.y, r.width, r.height], gapAbove: r.top - b.bottom, gapBelow: h.top - r.bottom });
       }
       for (const kind of ['guard', 'leaf', 'recovery', 'hourglass', 'rest', 'full']) {
         render({ kind }); inspect(kind, kind === 'guard' ? /守/ : null);
@@ -94,9 +99,9 @@ try {
       ui.showFeature('guard', performance.now()); ui.renderNotices?.({ visible: false, floorText: '' });
       if (!document.querySelector('#play-notices')?.hidden) throw new Error('notice remains while paused or counting');
       return checks;
-    });
+    }, minimumGap);
     assert.deepEqual(await geometry(), before, `${key}: message appearance never changes layout`);
-    if (profile.name === 'pixel6a') {
+    if (profile.name === 'pixel6a' || (minimumGap > 0 && profile.name === 'pixel6a-large-ui')) {
       await page.evaluate(async () => { const {createGameScreen}=await import('./src/ui/gameScreen.js'); const ui=createGameScreen(document); ui.showFeature('guard', performance.now()); ui.renderNotices({visible:true,floorText:''}); });
       await page.screenshot({ path: fileURLToPath(new URL(`${publicRun?'public':'local'}-${key}.png`, output)), fullPage: true });
     }
