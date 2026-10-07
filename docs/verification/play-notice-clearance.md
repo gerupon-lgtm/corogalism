@@ -30,4 +30,14 @@ node tools/browser-notice-offline.mjs
 
 [通常表示](play-notices/v0625/local-pixel6a-browser.png)、[全画面](play-notices/v0625/local-pixel6a-fullscreen.png)、[短い画面の通常表示](play-notices/v0625/local-pixel6a-large-ui-browser.png)、[短い画面の全画面](play-notices/v0625/local-pixel6a-large-ui-fullscreen.png)を確認。
 
-表示診断と位置合わせを含む接触確認であり、人間の通しプレイではない。Pixel 6a実機の表示設定・見え方は未確認。公開確認は進行中。
+表示診断と位置合わせを含む接触確認であり、人間の通しプレイではない。Pixel 6a実機の表示設定・見え方は未確認。
+
+## 公開先
+
+アプリa672ce3を[Pages37698998650](https://github.com/gerupon-lgtm/corogalism/actions/runs/37698998650)で公開。110ファイルすべてHTTP200・SHA-256一致。[配信の照合](play-notices/v0625/deploy-hashes.json)。main統合後は通知関連5ファイル17テストも成功してからpushした。
+
+公開でも8条件112表示が成功。外周との隙間は通常6px／短い画面4px。盤面・キャンバス・各部の寸法・ページの高さは維持。短い画面の下部パネル内の座標だけ+4px。通知による配置の変化、下の数値との重なり、横はみ出し、実行エラーなし。[公開の寸法と隙間](play-notices/v0625/public.json)。
+
+107資材の完全オフラインで床5種の実接触通知・BGM・ポーズ／ガイド・両おためし・本編への復帰も成功。[公開のオフライン](play-notices/v0625/public-offline.json)。
+
+[公開の通常表示](play-notices/v0625/public-pixel6a-browser.png)、[全画面](play-notices/v0625/public-pixel6a-fullscreen.png)、[短い画面の通常表示](play-notices/v0625/public-pixel6a-large-ui-browser.png)、[短い画面の全画面](play-notices/v0625/public-pixel6a-large-ui-fullscreen.png)。実機の表示設定・体感は未確認として残す。

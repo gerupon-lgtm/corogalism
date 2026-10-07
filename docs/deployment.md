@@ -2,7 +2,8 @@
 
 - 通知を4px下へ移し、外周の影から少し離す。隙間は通常6px／短い画面4px。短い画面は下部パネル内の上下の余白を振り替え、盤面・パネル・ページの高さを維持。[仕様と理由](verification/play-notice-clearance.md)。
 - ローカル4サイズ×通常／全画面の8条件112表示・107資材オフライン・192テスト成功。
-- 表示版v0.6.25、キャッシュ76b9e37c6f21663b・107資材。両おためしのrevision7／9は維持。公開確認は進行中。
+- アプリa672ce3、[Pages37698998650成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/37698998650)。表示版v0.6.25、キャッシュ76b9e37c6f21663b・107資材。両おためしのrevision7／9は維持。公開110資材すべてHTTP200・SHA-256一致。[照合](verification/play-notices/v0625/deploy-hashes.json)。
+- 公開でも8条件112表示・107資材オフライン成功。外周との隙間は通常6px／短い画面4px、数値との重なりなし。統合後の通知関連17テストも成功。実機の表示設定は未確認。[公開結果と画像](verification/play-notice-clearance.md)。
 
 # v0.6.24 通知のクリーム色の背景（2026-10-07）
 
