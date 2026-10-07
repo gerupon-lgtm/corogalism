@@ -1,6 +1,5 @@
 /** S-102 ゲーム（F-142）。キャリブレーションはプレイ中も実行できる（F-103） */
 import { UI, RECOVERY, REST, STICKY, HOURGLASS } from '../config/gameConfig.js';
-import { featureHintPosition } from './featureHintPosition.js';
 import { hpLabel, damageLabel, recoveryLabel } from './hpDisplay.js';
 import { restFloors } from '../world/stageFeatures.js';
 
@@ -18,6 +17,11 @@ export function createGameScreen(root) {
   const timeBar = root.querySelector('#time-bar');
   const hpBlock = root.querySelector('#hp-meter-block');
   const damageText = root.querySelector('#hud-damage');
+  const noticeRoot = el.querySelector('#play-notices');
+  const playHint = root.querySelector('#play-hint');
+  const recoveryNotice = root.querySelector('#recovery-feedback');
+  const floorNotice = root.querySelector('#floor-contact-hint');
+  const featureNotice = root.querySelector('#feature-hint');
   let damageUntil = 0;
   let recoveryUntil = 0;
   let escapeUntil = 0;
@@ -88,6 +92,24 @@ export function createGameScreen(root) {
       escapeActor = play.actor;
       escapeTrap = play.trap;
     },
+    resetNotices() {
+      recoveryUntil = 0;
+      escapeUntil = 0;
+      escapeActor = escapeTrap = null;
+      recoveryNotice.textContent = floorNotice.textContent = '';
+      for (const notice of [recoveryNotice, floorNotice, featureNotice]) notice.hidden = true;
+      noticeRoot.hidden = true;
+      playHint.classList.remove('has-play-notice');
+    },
+    renderNotices({ visible, floorText = '' }) {
+      if (floorNotice.textContent !== floorText) floorNotice.textContent = floorText;
+      // 脱出などの操作案内、取得／回復、床の説明の順。同じ場所へ重ねない。
+      const selected = !visible ? null : !featureNotice.hidden ? featureNotice
+        : recoveryNotice.textContent ? recoveryNotice : floorText ? floorNotice : null;
+      for (const notice of [recoveryNotice, floorNotice, featureNotice]) notice.hidden = notice !== selected;
+      noticeRoot.hidden = !selected;
+      playHint.classList.toggle('has-play-notice', Boolean(selected));
+    },
     setFeatureHint(play, camera, visible, motion, now = performance.now()) {
       const hint = root.querySelector('#feature-hint');
       const resting = restFloors(play.stage).some(rest=>!rest.used&&rest.progress>0);
@@ -95,14 +117,10 @@ export function createGameScreen(root) {
       hint.hidden = !visible || (!play.trap && !resting && !escaped);
       if (hint.hidden) return;
       hint.classList.toggle('is-success', escaped);
-      const message = escaped ? (play.trap ? `${STICKY.shortenSec}秒短縮！` : 'ぬけられた！') : play.trap ? `☝ 盤面をダブルタップで はやくぬける${motion ? '\nスマホを軽くトントンでもOK' : ''}` : 'ひとやすみ中…';
+      const message = escaped ? (play.trap ? `${STICKY.shortenSec}秒短縮！` : 'ぬけられた！') : play.trap
+        ? motion ? '盤面ダブルタップ／本体を軽くトントンで早く脱出' : '盤面をダブルタップで早く脱出'
+        : 'ひとやすみ中…';
       if (hint.textContent !== message) hint.textContent = message;
-      const at = camera.toScreen(play.actor.x, play.actor.y);
-      const board = root.querySelector('#board');
-      const position = featureHintPosition({ x: at.px, y: at.py, radius: camera.toPx(play.actor.r),
-        width: hint.offsetWidth, height: hint.offsetHeight, boardWidth: board.clientWidth, boardHeight: board.clientHeight });
-      hint.style.left = `${position.left + hint.offsetWidth/2}px`;
-      hint.style.top = `${position.top}px`;
     },
     setPaused(paused) { pauseBtn.textContent = paused ? '▶ 再開' : 'Ⅱ ポーズ'; },
     setOrientationWarning(show) { orientWarn.hidden = !show; },

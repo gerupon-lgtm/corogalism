@@ -1,0 +1,306 @@
+{
+  "pixel6a-browser": {
+    "viewport": [
+      412,
+      915
+    ],
+    "documentHeight": 915,
+    "board": [
+      14,
+      218.05,
+      384,
+      384
+    ],
+    "canvas": [
+      17,
+      221.05,
+      378,
+      378
+    ],
+    "hud": [
+      23,
+      637.05,
+      366,
+      57
+    ],
+    "controls": [
+      23,
+      786.34,
+      366,
+      44
+    ],
+    "exit": [
+      23,
+      866,
+      366,
+      28
+    ],
+    "fullscreen": false
+  },
+  "pixel6a-fullscreen": {
+    "viewport": [
+      412,
+      915
+    ],
+    "documentHeight": 915,
+    "board": [
+      14,
+      236.05,
+      384,
+      384
+    ],
+    "canvas": [
+      17,
+      239.05,
+      378,
+      378
+    ],
+    "hud": [
+      23,
+      655.05,
+      366,
+      57
+    ],
+    "controls": [
+      23,
+      792.34,
+      366,
+      44
+    ],
+    "exit": [
+      23,
+      866,
+      366,
+      28
+    ],
+    "fullscreen": true
+  },
+  "pixel6a-compact-browser": {
+    "viewport": [
+      393,
+      873
+    ],
+    "documentHeight": 873,
+    "board": [
+      14,
+      218.05,
+      365,
+      365
+    ],
+    "canvas": [
+      17,
+      221.05,
+      359,
+      359
+    ],
+    "hud": [
+      23,
+      618.05,
+      347,
+      57
+    ],
+    "controls": [
+      23,
+      752.02,
+      347,
+      44
+    ],
+    "exit": [
+      23,
+      824,
+      347,
+      28
+    ],
+    "fullscreen": false
+  },
+  "pixel6a-compact-fullscreen": {
+    "viewport": [
+      393,
+      873
+    ],
+    "documentHeight": 873,
+    "board": [
+      14,
+      236.05,
+      365,
+      365
+    ],
+    "canvas": [
+      17,
+      239.05,
+      359,
+      359
+    ],
+    "hud": [
+      23,
+      636.05,
+      347,
+      57
+    ],
+    "controls": [
+      23,
+      758.02,
+      347,
+      44
+    ],
+    "exit": [
+      23,
+      824,
+      347,
+      28
+    ],
+    "fullscreen": true
+  },
+  "pixel6a-large-ui-browser": {
+    "viewport": [
+      360,
+      800
+    ],
+    "documentHeight": 800,
+    "board": [
+      10,
+      208.05,
+      340,
+      340
+    ],
+    "canvas": [
+      13,
+      211.05,
+      334,
+      334
+    ],
+    "hud": [
+      19,
+      563.05,
+      322,
+      53.8
+    ],
+    "controls": [
+      19,
+      683.95,
+      322,
+      44
+    ],
+    "exit": [
+      19,
+      751,
+      322,
+      28
+    ],
+    "fullscreen": false
+  },
+  "pixel6a-large-ui-fullscreen": {
+    "viewport": [
+      360,
+      800
+    ],
+    "documentHeight": 800,
+    "board": [
+      10,
+      226.05,
+      340,
+      340
+    ],
+    "canvas": [
+      13,
+      229.05,
+      334,
+      334
+    ],
+    "hud": [
+      19,
+      581.05,
+      322,
+      53.8
+    ],
+    "controls": [
+      19,
+      689.95,
+      322,
+      44
+    ],
+    "exit": [
+      19,
+      751,
+      322,
+      28
+    ],
+    "fullscreen": true
+  },
+  "short-screen-browser": {
+    "viewport": [
+      320,
+      568
+    ],
+    "documentHeight": 647,
+    "board": [
+      46,
+      218.44,
+      228,
+      228
+    ],
+    "canvas": [
+      49,
+      221.44,
+      222,
+      222
+    ],
+    "hud": [
+      19,
+      461.44,
+      282,
+      53.8
+    ],
+    "controls": [
+      19,
+      548.23,
+      282,
+      44
+    ],
+    "exit": [
+      19,
+      598.23,
+      282,
+      28
+    ],
+    "fullscreen": false
+  },
+  "short-screen-fullscreen": {
+    "viewport": [
+      320,
+      568
+    ],
+    "documentHeight": 647,
+    "board": [
+      55,
+      236.44,
+      210,
+      210
+    ],
+    "canvas": [
+      58,
+      239.44,
+      204,
+      204
+    ],
+    "hud": [
+      19,
+      461.44,
+      282,
+      53.8
+    ],
+    "controls": [
+      19,
+      548.23,
+      282,
+      44
+    ],
+    "exit": [
+      19,
+      598.23,
+      282,
+      28
+    ],
+    "fullscreen": true
+  }
+}

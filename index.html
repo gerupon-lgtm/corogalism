@@ -23,7 +23,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.6.22</span>
+      <span class="badge">v0.6.23</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -45,9 +45,7 @@
     <div class="floor-practice-caption"><span>同じ場所で、床をくらべよう</span><button id="btn-floor-reset" type="button">最初へ戻す</button></div>
     <div class="floor-practice-switch" role="group" aria-label="試す床素材"><button data-floor="normal" aria-pressed="true">普通</button><button data-floor="sand" aria-pressed="false">砂</button><button data-floor="ice" aria-pressed="false">氷</button><button data-floor="gravity" aria-pressed="false">重力</button><button data-floor="repulsion" aria-pressed="false">反重力</button></div>
   </div>
-  <div class="board" id="board" hidden><span id="recovery-feedback" class="recovery-feedback" role="status"></span>
-    <span id="floor-contact-hint" class="floor-contact-hint" role="status" hidden></span>
-    <div id="feature-hint" class="feature-hint" role="status" hidden></div>
+  <div class="board" id="board" hidden>
     <canvas id="canvas" aria-label="迷路。オレンジのビー玉を右下のカップへ導きます"></canvas>
     <div id="toast-layer" class="toast-layer" hidden>
   <section id="screen-clear" class="game-toast" role="region" aria-labelledby="clear-heading" hidden>
@@ -118,6 +116,11 @@
 
   <!-- S-102 ゲーム -->
   <section id="screen-game" class="panel" hidden>
+    <div id="play-notices" class="play-notices" hidden>
+      <span id="recovery-feedback" class="recovery-feedback" role="status" hidden></span>
+      <span id="floor-contact-hint" class="floor-contact-hint" role="status" hidden></span>
+      <span id="feature-hint" class="feature-hint" role="status" hidden></span>
+    </div>
     <dl class="hud">
       <div><dt>タイム</dt><dd><span id="hud-time">0.0</span><small>s</small></dd></div>
       <div><dt>壁ヒット</dt><dd id="hud-hits">0</dd></div>

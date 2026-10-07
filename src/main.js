@@ -237,6 +237,7 @@ function showScreen(name) {
   find('play-toolbar').hidden = !boardSession;
   find('floor-practice-tools').hidden = !boardSession || gameMode!=='floor-practice';
   find('play-hint').hidden = !boardSession;
+  game.renderNotices({ visible: false });
   find('btn-pause').disabled = name !== 'game';
   find('toast-layer').hidden = !ended;
   find('challenge-hud').hidden = !boardSession || !['challenge','tutorial'].includes(gameMode);
@@ -309,7 +310,7 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   stageIndex = run ? run.stageIndex : 1;
   play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, variation:run?.currentVariation(activeLevel), shield, tutorial: gameMode === 'tutorial',floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
   floorPresentation.setStage(run?play.stage.theme:null);
-  floorContactGuide.reset();find('floor-contact-hint').hidden=true;
+  floorContactGuide.reset();game.resetNotices();
   renderFloorPractice();
   paused = false;
   handled = false;
@@ -321,7 +322,6 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   const variety=play.stage.maze.variation;
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉を右下のカップへ導きます`);
   find('stage-theme').textContent = `${variety?`${variety.size}×${variety.size} ${variety.label}｜`:''}${play.stage.theme?.label || ''}`;
-  find('recovery-feedback').textContent = '';
   resize();
 }
 
@@ -454,10 +454,7 @@ function frame(now) {
   const floorActive=isPlaying()&&play?.status==='playing'&&Boolean(play.stage.theme?.learning||gameMode==='floor-practice');
   const kind=floorActive?floorContact(play.stage,play.actor):null;
   const text=floorContactGuide.tick(kind==='normal'&&gameMode!=='floor-practice'?null:kind,elapsedMs,floorActive);
-  const floorHint=find('floor-contact-hint');
-  floorHint.hidden=!floorActive||!text||Boolean(find('recovery-feedback').textContent);
-  if(floorHint.textContent!==text)floorHint.textContent=text;
-  floorHint.classList.toggle('at-bottom',Boolean(play&&play.actor.y<2.5));
+  game.renderNotices({ visible: isPlaying() && play?.status === 'playing', floorText: floorActive ? text : '' });
   if(gameMode==='floor-practice')for(const b of root.querySelectorAll('#floor-practice-tools button'))b.disabled=!isPlaying()||play.status!=='playing';
   updateAudio();
   requestAnimationFrame(frame);
