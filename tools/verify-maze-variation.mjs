@@ -7,6 +7,7 @@ import {challengeDifficulty} from '../src/game/challenge.js';
 import {checkReachability} from '../src/maze/validator.js';
 import {createTiltVector} from '../src/input/tiltVector.js';
 import {BASE} from '../src/config/gameConfig.js';
+import {openFieldSiteAllowed} from '../src/world/openFloors.js';
 
 const output=process.env.VARIETY_OUTPUT||'docs/verification/maze-variation/v0620';await mkdir(output,{recursive:true});
 const picked=new Set([...Array.from({length:16},(_,i)=>i+1),17,23,29,40,64,100,107,125]);
@@ -37,11 +38,11 @@ for(const level of ['easy','normal'])for(const runSeed of [1,77,913,7919]){
    const p=createStagePlay(run.currentSeed(),challengeDifficulty(n,level),{variation});
    assert.ok(checkReachability(p.stage.maze).ok);assert.equal(p.hp.max,40+4*p.stage.maze.turns);
    for(const z of p.stage.zones.filter(z=>z.kind==='radial'))if(p.stage.maze.baffle){
-    const b=p.stage.maze.baffle,size=p.stage.maze.size;
+    const size=p.stage.maze.size;
     assert.ok(z.x>.5&&z.x<size-.5&&z.y>.5&&z.y<size-.5);
     assert.ok(Math.hypot(z.x-.5,z.y-.5)>z.radius+.35);
     assert.ok(Math.hypot(z.x-size+.5,z.y-size+.5)>z.radius+.35);
-    assert.ok(z[b.axis==='x'?'y':'x']+z.radius<b.gap);
+    assert.ok(openFieldSiteAllowed(p.stage.maze,z,z.radius));
    }
    balance.push(play(run.currentSeed(),challengeDifficulty(n,level),variation,careful));
   }

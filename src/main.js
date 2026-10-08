@@ -576,7 +576,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,
         run: run ? { ...run.result(), stageIndex: run.stageIndex, continuesLeft: run.continuesLeft, runSeed: run.runSeed } : null,
         actor: { x: play.actor.x, y: play.actor.y, vx: play.actor.vx, vy: play.actor.vy, r: play.actor.r },
-        maze:{size:play.stage.maze.size,path:play.stage.maze.path,cells:play.stage.maze.cells,variation:play.stage.maze.variation,baffle:play.stage.maze.baffle},zones:play.stage.zones,
+        maze:{size:play.stage.maze.size,path:play.stage.maze.path,cells:play.stage.maze.cells,variation:play.stage.maze.variation,baffle:play.stage.maze.baffle,baffles:play.stage.maze.baffles},zones:play.stage.zones,
         goal: goalCenter(play.stage.maze), walls: play.stage.walls.map((wall) => ({ ...wall })) };
     },
     teleport(x, y) { play.teleport(x, y); },

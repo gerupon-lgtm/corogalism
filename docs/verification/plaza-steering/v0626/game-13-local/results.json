@@ -1,0 +1,56 @@
+[
+  {
+    "level": "easy",
+    "stage": 37,
+    "profile": {
+      "size": 13,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場",
+      "sourceSeed": 228725
+    },
+    "theme": "gravityAssist",
+    "label": "引力のカーブ",
+    "materials": {
+      "rubber": 89
+    },
+    "realPointerPlay": true,
+    "controller": "corner-flow",
+    "reboundStart": true,
+    "result": "clear",
+    "seconds": 22.77,
+    "limit": 112,
+    "extendedSec": 0,
+    "budgetSec": 112,
+    "hp": 68,
+    "maxHp": 68,
+    "wallHits": 2
+  },
+  {
+    "level": "normal",
+    "stage": 37,
+    "profile": {
+      "size": 13,
+      "shape": "open",
+      "themeId": "gravityAssist",
+      "label": "反発の広場",
+      "sourceSeed": 228725
+    },
+    "theme": "gravityAssist",
+    "label": "引力のカーブ",
+    "materials": {
+      "rubber": 89
+    },
+    "realPointerPlay": true,
+    "controller": "corner-flow",
+    "reboundStart": true,
+    "result": "clear",
+    "seconds": 22.77,
+    "limit": 31.742307692307694,
+    "extendedSec": 0,
+    "budgetSec": 31.742307692307694,
+    "hp": 68,
+    "maxHp": 68,
+    "wallHits": 2
+  }
+]

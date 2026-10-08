@@ -7,13 +7,13 @@ const base=process.env.BASE_URL||'http://127.0.0.1:8768/',output=process.env.VAR
 const version=JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8')).version;
 await mkdir(output,{recursive:true});const rows=[];
 try{for(const level of (process.env.VARIETY_LEVELS||'easy,normal').split(',')){
- const p=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:3,serviceWorkers:'block'}),errors=[];
+ const p=await browser.newPage({viewport:{width:Number(process.env.VARIETY_WIDTH||390),height:Number(process.env.VARIETY_HEIGHT||844)},deviceScaleFactor:Number(process.env.VARIETY_DPR||3),serviceWorkers:'block'}),errors=[];
  p.on('pageerror',e=>errors.push(e.message));await p.addInitScript(level=>{
   Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined});Element.prototype.requestFullscreen=()=>Promise.reject(Error('fixture'));
   localStorage.setItem('corogalism-settings',JSON.stringify({mode:'pointer',challengeLevel:level,soundEnabled:true}));
   localStorage.setItem('corogalism-run-bests-floor-v1-easy',JSON.stringify({withContinue:{stages:107,totalTimeMs:1600000,at:'2026-10-07T00:00:00Z'}}));
  },level);
- await p.clock.install();await p.clock.pauseAt(Date.now()+1000);await p.goto(base+'?debug=1&seed=77');
+ await p.clock.install();await p.clock.pauseAt(Date.now()+1000);await p.goto(base+'?debug=1&seed='+(process.env.VARIETY_RUN_SEED||'77'));
  await p.waitForFunction(()=>!!window.__corogalism,null,{polling:50});
  assert.equal(await p.locator('.badge').textContent(),'v'+version);
  if(level==='easy')assert.match(await p.locator('#mode-legacy').textContent(),/107/);
@@ -31,6 +31,7 @@ try{for(const level of (process.env.VARIETY_LEVELS||'easy,normal').split(',')){
   const profile=s.maze.variation;assert.equal(s.hp.max,40+s.maze.path.slice(2).filter((c,i)=>{
    const a=s.maze.path[i],b=s.maze.path[i+1];return c.x-b.x!==b.x-a.x||c.y-b.y!==b.y-a.y;
   }).length*4);
+  if(profile.shape==='open')assert.ok(s.maze.baffles?.length>=2,'公開版でも複数の仕切りを使う');
   if(n===3){
    const original=JSON.stringify({maze:s.maze,walls:s.walls,zones:s.zones});
    await p.evaluate(()=>window.__corogalism.setTilt(.1,.1));await p.clock.runFor(1000);
@@ -38,21 +39,30 @@ try{for(const level of (process.env.VARIETY_LEVELS||'easy,normal').split(',')){
    assert.equal((await state()).status,'timeout');await click('btn-continue');await ready();s=await state();
    assert.equal(JSON.stringify({maze:s.maze,walls:s.walls,zones:s.zones}),original);assert.equal(s.run.usedContinue,true);
   }
-  const path=s.maze.path;let wp=1,steps=0;const rect=await p.locator('#board').boundingBox();
+  const flow=process.env.VARIETY_DRIVE==='flow',originalPath=s.maze.path;
+  const path=flow?originalPath.filter((c,i)=>i===0||i===originalPath.length-1||
+   c.x-originalPath[i-1].x!==originalPath[i+1].x-c.x||c.y-originalPath[i-1].y!==originalPath[i+1].y-c.y):originalPath;
+  let wp=1,steps=0;const rect=await p.locator('#board').boundingBox();
   assert.ok(rect.width>200);await p.mouse.move(rect.x+rect.width/2,rect.y+rect.height/2);await p.mouse.down();
+  if(process.env.VARIETY_REBOUND==='1'&&profile.shape==='open'){
+   const axis=s.maze.baffle.axis;
+   await p.mouse.move(rect.x+rect.width*(axis==='x'?.95:.5),rect.y+rect.height*(axis==='y'?.95:.5));
+   for(let i=0;i<12&&s.wallHits===0;i++){await p.clock.runFor(250);s=await state();}
+   assert.ok(s.wallHits>0,'ゴムの反発からpointerで軌道を立て直す');
+  }
   while(s.status==='playing'&&steps<Math.ceil((s.limitSec+10)*1000/180)){
    if(s.trap){await p.mouse.up();await p.locator('#board').dblclick({position:{x:rect.width/2,y:rect.height/2}});await p.mouse.down();}
    const a=s.actor,tg=path[wp],dx=tg.x+.5-a.x,dy=tg.y+.5-a.y,dist=Math.hypot(dx,dy);
    if(dist<.24&&wp<path.length-1){wp++;continue;}
    const ice=s.zones.some(z=>z.kind==='ice'&&z.cells.some(c=>c.x===Math.floor(a.x)&&c.y===Math.floor(a.y)));
-   const speed=Math.min(ice?1.35:1.7,dist*3.2);let x=(dx/(dist||1)*speed-a.vx)*.65,y=(dy/(dist||1)*speed-a.vy)*.65;
+   const speed=Math.min(flow?(ice?2.4:3.2):(ice?1.35:1.7),dist*(flow?2:3.2));let x=(dx/(dist||1)*speed-a.vx)*.65,y=(dy/(dist||1)*speed-a.vy)*.65;
    if(steps%31===12){x+=.12;y-=.1;}const m=Math.max(1,Math.hypot(x,y));x/=m;y/=m;
    await p.mouse.move(rect.x+rect.width/2+x*rect.width*.49,rect.y+rect.height/2+y*rect.height*.49);
    await p.clock.runFor(180);s=await state();steps++;
-   if(steps===20&&[3,4,7,8,12,100,107].includes(n))await p.screenshot({path:`${output}/play-${level}-${n}.png`});
+   if(steps===20&&([3,4,7,8,12,100,107].includes(n)||flow&&profile.shape==='open'))await p.screenshot({path:`${output}/play-${level}-${n}.png`});
    if(n===2&&steps===8){await p.mouse.up();await click('btn-pause');await click('btn-pause-guide');assert.ok(await p.locator('.guide-tip').first().textContent());await p.locator('.guide-x').click();assert.equal((await state()).paused,true);await click('btn-resume');await ready();await p.mouse.move(rect.x+rect.width/2,rect.y+rect.height/2);await p.mouse.down();s=await state();}
   }
-  await p.mouse.up();rows.push({level,stage:n,profile,theme:s.theme.id,label:s.theme.label,materials:s.walls.reduce((a,w)=>(a[w.materialId]=(a[w.materialId]||0)+1,a),{}),realPointerPlay:true,result:s.status,seconds:+(s.timeMs/1000).toFixed(2),limit:s.limitSec,hp:+s.hp.value.toFixed(1),maxHp:s.hp.max,wallHits:s.wallHits});
+  await p.mouse.up();rows.push({level,stage:n,profile,theme:s.theme.id,label:s.theme.label,materials:s.walls.reduce((a,w)=>(a[w.materialId]=(a[w.materialId]||0)+1,a),{}),viewport:p.viewportSize(),dpr:await p.evaluate(()=>devicePixelRatio),realPointerPlay:true,controller:flow?'corner-flow':'cell-cautious',reboundStart:process.env.VARIETY_REBOUND==='1'&&profile.shape==='open',result:s.status,seconds:+(s.timeMs/1000).toFixed(2),limit:s.limitSec,extendedSec:s.extendedSec,budgetSec:s.limitSec+s.extendedSec,hp:+s.hp.value.toFixed(1),maxHp:s.hp.max,wallHits:s.wallHits});
   console.log(JSON.stringify(rows.at(-1)));assert.equal(s.status,'clear',JSON.stringify(rows.at(-1)));
   if(n<stop){await click('btn-next');await ready();}
  }

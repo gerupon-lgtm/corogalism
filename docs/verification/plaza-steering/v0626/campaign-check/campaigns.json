@@ -1,0 +1,7250 @@
+[
+  {
+    "level": "easy",
+    "runSeed": 1,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "rest",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "trial",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "trial",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "repulsionAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "careful",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "rest",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      }
+    ]
+  },
+  {
+    "level": "easy",
+    "runSeed": 77,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "repulsionAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "gravityAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "trial",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "gravityAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      }
+    ]
+  },
+  {
+    "level": "easy",
+    "runSeed": 913,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "rest",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "gravityAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "rest",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      }
+    ]
+  },
+  {
+    "level": "easy",
+    "runSeed": 7919,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "rest",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "careful",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "rest",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "careful",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "gravityAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "gravityAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "iceAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "repulsionAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      }
+    ]
+  },
+  {
+    "level": "normal",
+    "runSeed": 1,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "rest",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "trial",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "trial",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "careful",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "rest",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "rest",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      }
+    ]
+  },
+  {
+    "level": "normal",
+    "runSeed": 77,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "gravityAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "gravityAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "trial",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "gravityAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      }
+    ]
+  },
+  {
+    "level": "normal",
+    "runSeed": 913,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "rest",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "rest",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "bounce",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "basic",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "rest",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "basic",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "basic",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      }
+    ]
+  },
+  {
+    "level": "normal",
+    "runSeed": 7919,
+    "profiles": [
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "basic",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "sand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "repulsionAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "rest",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "careful",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceSand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "sticky",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceSand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "sticky",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "bounce",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "specialFlow",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "gravityHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "basic",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "rest",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceRubber",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "careful",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "repulsionHinder",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "iceAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "sand",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "gravityHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "trial",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "bounce",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "rest",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "sand",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "iceRubber",
+        "label": "反発の広場"
+      },
+      {
+        "size": 13,
+        "shape": "intricate",
+        "themeId": "bounce",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "careful",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "trial",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "specialFlow",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "gravityAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "careful",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "short",
+        "themeId": "iceRubber",
+        "label": "すなおな道"
+      },
+      {
+        "size": 11,
+        "shape": "open",
+        "themeId": "sand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "iceSand",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "sticky",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "bounce",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "iceRubber",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "repulsionHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "iceRubber",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "careful",
+        "label": "反発の広場"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "gravityAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "rest",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "short",
+        "themeId": "careful",
+        "label": "すなおな道"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "iceAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "sand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 8,
+        "shape": "classic",
+        "themeId": "repulsionHinder",
+        "label": "迷路"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "repulsionAssist",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 11,
+        "shape": "intricate",
+        "themeId": "repulsionHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "roomy",
+        "themeId": "gravityAssist",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 13,
+        "shape": "classic",
+        "themeId": "specialFlow",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "iceAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 11,
+        "shape": "roomy",
+        "themeId": "gravityHinder",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "sticky",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 13,
+        "shape": "open",
+        "themeId": "gravityAssist",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 9,
+        "shape": "open",
+        "themeId": "repulsionHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 7,
+        "shape": "short",
+        "themeId": "iceSand",
+        "label": "すなおな道"
+      },
+      {
+        "size": 9,
+        "shape": "classic",
+        "themeId": "trial",
+        "label": "迷路"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "gravityAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "specialFlow",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 7,
+        "shape": "classic",
+        "themeId": "repulsionAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 13,
+        "shape": "roomy",
+        "themeId": "trial",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 11,
+        "shape": "classic",
+        "themeId": "iceAssist",
+        "label": "迷路"
+      },
+      {
+        "size": 9,
+        "shape": "short",
+        "themeId": "repulsionAssist",
+        "label": "すなおな道"
+      },
+      {
+        "size": 7,
+        "shape": "open",
+        "themeId": "gravityHinder",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "intricate",
+        "themeId": "gravityHinder",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 7,
+        "shape": "roomy",
+        "themeId": "sticky",
+        "label": "広い曲がり角"
+      },
+      {
+        "size": 9,
+        "shape": "intricate",
+        "themeId": "rest",
+        "label": "入り組んだ道"
+      },
+      {
+        "size": 8,
+        "shape": "open",
+        "themeId": "iceSand",
+        "label": "反発の広場"
+      },
+      {
+        "size": 8,
+        "shape": "short",
+        "themeId": "specialFlow",
+        "label": "すなおな道"
+      }
+    ]
+  }
+]

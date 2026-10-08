@@ -40,7 +40,9 @@ test('広場の力場は選んだ向きを両区画へ配置し、端点と出�
    assert.ok(z.x>.5&&z.y>.5&&z.x<size-.5&&z.y<size-.5);
    assert.ok(Math.hypot(z.x-.5,z.y-.5)>z.radius+.35);
    assert.ok(Math.hypot(z.x-size+.5,z.y-size+.5)>z.radius+.35);
-   assert.ok(z[maze.baffle.axis==='x'?'y':'x']+z.radius<maze.baffle.gap);
+   for(const b of maze.baffles){
+    assert.ok(Math.hypot(z[b.axis]-b.coord,z[b.axis==='x'?'y':'x']-(b.gapStart+b.gapEnd)/2)>z.radius+.35);
+   }
   }
   const f=sampleZone(stage,p.actor);assert.equal(f.forceX,0);assert.equal(f.forceY,0);
  }

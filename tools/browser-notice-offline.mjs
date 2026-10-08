@@ -50,9 +50,24 @@ try{
   await page.clock.runFor(200);await page.mouse.up();
  }
  await page.goto(new URL('?debug=1',base).href);assert.equal(await page.locator('.badge').textContent(),'v'+version);
+ // 本編の新しい広場も、通信なしで生成・実pointer操作できる。
+ await page.goto(new URL('?debug=1&seed=77',base).href);
+ await page.locator('#btn-challenge').click();await page.clock.runFor(3800);
+ for(let n=1;n<3;n++){
+  await page.evaluate(()=>{const s=window.__corogalism.state;window.__corogalism.teleport(s.goal.x,s.goal.y);});
+  await page.clock.runFor(32);assert.equal(await page.evaluate(()=>window.__corogalism.state.status),'clear');
+  await page.clock.runFor(1100);await page.locator('#btn-next').click();await page.clock.runFor(3800);
+ }
+ const start=await page.evaluate(()=>window.__corogalism.state);
+ assert.equal(start.stageIndex,3);assert.equal(start.maze.variation.shape,'open');assert.ok(start.maze.baffles.length>=2);
+ const board=await page.locator('#board').boundingBox();
+ await page.mouse.move(board.x+board.width*.75,board.y+board.height*.65);await page.mouse.down();await page.clock.runFor(600);await page.mouse.up();
+ const moved=await page.evaluate(()=>window.__corogalism.state);
+ assert.ok(Math.hypot(moved.actor.x-start.actor.x,moved.actor.y-start.actor.y)>.05);
+ const plaza={stage:3,size:moved.maze.size,baffles:moved.maze.baffles.length,realPointerMove:true,diagnosticSkippedStages:2};
  assert.deepEqual(errors,[]);
  await mkdir(output,{recursive:true});
- await writeFile(new URL(`${base.protocol==='https:'?'public':'local'}-offline.json`,output),JSON.stringify({version,...cache,floors,audio,labs:2,errors},null,2)+'\n');
- console.log('PASS offline:107 assets, five external floor messages, BGM, pause/guide, both labs, return to main');
+ await writeFile(new URL(`${base.protocol==='https:'?'public':'local'}-offline.json`,output),JSON.stringify({version,...cache,floors,audio,labs:2,plaza,errors},null,2)+'\n');
+ console.log('PASS offline:107 assets, five external floor messages, BGM, pause/guide, both labs, new main plaza');
  await context.close();
 }finally{await browser.close();}

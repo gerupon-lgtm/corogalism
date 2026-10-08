@@ -25,6 +25,8 @@ export const MAZE_VARIETY = {
  themes: ['basic','rest','sand','iceRubber','iceSand','bounce','gravityAssist','repulsionAssist','iceAssist','sticky','careful','gravityHinder','repulsionHinder','trial'],
  history:4, repeatFactor:.22, recentFactor:.65, candidates:6,
  roomOpening:.28, openFieldClearance:.4, openMixedStickyChance:.35,
+ // 広場の現行候補。複数の出口をずらして切り返しを作り、部屋の広さは残す。
+ openBaffleCounts:[2,3], openRoomMinWidth:2, openGapWidths:[1,2], openIslandEvery:5, openFieldMarkerClearance:.36,
 };
 
 /** T-247: おためし専用。正式な床の採用値ではない。 */

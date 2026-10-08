@@ -1,0 +1,1037 @@
+[
+  {
+    "width": 320,
+    "size": 7,
+    "themeId": "sand",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 3,
+        "gapStart": 6,
+        "gapEnd": 7
+      },
+      {
+        "axis": "y",
+        "coord": 5,
+        "gapStart": 0,
+        "gapEnd": 2
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 14,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 11,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 7,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "sand1": true,
+      "sand2": true,
+      "sticky": true
+    },
+    "canvasCss": 288
+  },
+  {
+    "width": 320,
+    "size": 7,
+    "themeId": "iceRubber",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 2,
+        "gapStart": 6,
+        "gapEnd": 7
+      },
+      {
+        "axis": "y",
+        "coord": 5,
+        "gapStart": 0,
+        "gapEnd": 1
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "rest": true,
+      "sticky": true
+    },
+    "canvasCss": 288
+  },
+  {
+    "width": 320,
+    "size": 13,
+    "themeId": "sand",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 23,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 18,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 16,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 15,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "sand1": true,
+      "sand2": true,
+      "sand3": true,
+      "sticky": true
+    },
+    "canvasCss": 288
+  },
+  {
+    "width": 320,
+    "size": 13,
+    "themeId": "iceAssist",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 21,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 20,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 17,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 17,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "field0": true,
+      "sand1": true,
+      "field1": true,
+      "sand2": true,
+      "field2": true,
+      "sand3": true,
+      "field3": true,
+      "sticky": true
+    },
+    "canvasCss": 288
+  },
+  {
+    "width": 320,
+    "size": 13,
+    "themeId": "rest",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "rest": true,
+      "sticky": true
+    },
+    "canvasCss": 288
+  },
+  {
+    "width": 320,
+    "size": 13,
+    "themeId": "sticky",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 3,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      }
+    ],
+    "effects": {
+      "sticky": true
+    },
+    "canvasCss": 288
+  },
+  {
+    "width": 412,
+    "size": 7,
+    "themeId": "sand",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 3,
+        "gapStart": 6,
+        "gapEnd": 7
+      },
+      {
+        "axis": "y",
+        "coord": 5,
+        "gapStart": 0,
+        "gapEnd": 2
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 14,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 11,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 7,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "sand1": true,
+      "sand2": true,
+      "sticky": true
+    },
+    "canvasCss": 380
+  },
+  {
+    "width": 412,
+    "size": 7,
+    "themeId": "iceRubber",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 2,
+        "gapStart": 6,
+        "gapEnd": 7
+      },
+      {
+        "axis": "y",
+        "coord": 5,
+        "gapStart": 0,
+        "gapEnd": 1
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "rest": true,
+      "sticky": true
+    },
+    "canvasCss": 380
+  },
+  {
+    "width": 412,
+    "size": 13,
+    "themeId": "sand",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 23,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 18,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 16,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 15,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "sand1": true,
+      "sand2": true,
+      "sand3": true,
+      "sticky": true
+    },
+    "canvasCss": 380
+  },
+  {
+    "width": 412,
+    "size": 13,
+    "themeId": "iceAssist",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 21,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 20,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 17,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 17,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "field0": true,
+      "sand1": true,
+      "field1": true,
+      "sand2": true,
+      "field2": true,
+      "sand3": true,
+      "field3": true,
+      "sticky": true
+    },
+    "canvasCss": 380
+  },
+  {
+    "width": 412,
+    "size": 13,
+    "themeId": "rest",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "rest": true,
+      "sticky": true
+    },
+    "canvasCss": 380
+  },
+  {
+    "width": 412,
+    "size": 13,
+    "themeId": "sticky",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 3,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      }
+    ],
+    "effects": {
+      "sticky": true
+    },
+    "canvasCss": 380
+  },
+  {
+    "width": 576,
+    "size": 7,
+    "themeId": "sand",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 3,
+        "gapStart": 6,
+        "gapEnd": 7
+      },
+      {
+        "axis": "y",
+        "coord": 5,
+        "gapStart": 0,
+        "gapEnd": 2
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 14,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 11,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 7,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "sand1": true,
+      "sand2": true,
+      "sticky": true
+    },
+    "canvasCss": 544
+  },
+  {
+    "width": 576,
+    "size": 7,
+    "themeId": "iceRubber",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 2,
+        "gapStart": 6,
+        "gapEnd": 7
+      },
+      {
+        "axis": "y",
+        "coord": 5,
+        "gapStart": 0,
+        "gapEnd": 1
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "rest": true,
+      "sticky": true
+    },
+    "canvasCss": 544
+  },
+  {
+    "width": 576,
+    "size": 13,
+    "themeId": "sand",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 23,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 18,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 16,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 15,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "sand1": true,
+      "sand2": true,
+      "sand3": true,
+      "sticky": true
+    },
+    "canvasCss": 544
+  },
+  {
+    "width": 576,
+    "size": 13,
+    "themeId": "iceAssist",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 21,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 20,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 17,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 17,
+        "fields": 3,
+        "rests": 0,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "sand0": true,
+      "field0": true,
+      "sand1": true,
+      "field1": true,
+      "sand2": true,
+      "field2": true,
+      "sand3": true,
+      "field3": true,
+      "sticky": true
+    },
+    "canvasCss": 544
+  },
+  {
+    "width": 576,
+    "size": 13,
+    "themeId": "rest",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      },
+      {
+        "room": 3,
+        "sand": 0,
+        "fields": 0,
+        "rests": 1,
+        "sticky": 1
+      }
+    ],
+    "effects": {
+      "rest": true,
+      "sticky": true
+    },
+    "canvasCss": 544
+  },
+  {
+    "width": 576,
+    "size": 13,
+    "themeId": "sticky",
+    "baffles": [
+      {
+        "axis": "y",
+        "coord": 4,
+        "gapStart": 11,
+        "gapEnd": 13
+      },
+      {
+        "axis": "y",
+        "coord": 7,
+        "gapStart": 0,
+        "gapEnd": 2
+      },
+      {
+        "axis": "y",
+        "coord": 10,
+        "gapStart": 11,
+        "gapEnd": 13
+      }
+    ],
+    "counts": [
+      {
+        "room": 0,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 1,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 2,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      },
+      {
+        "room": 3,
+        "sand": 0,
+        "fields": 0,
+        "rests": 0,
+        "sticky": 2
+      }
+    ],
+    "effects": {
+      "sticky": true
+    },
+    "canvasCss": 544
+  }
+]

@@ -28,14 +28,26 @@ export function generateVariedMaze(profile,seed){
    if(x<size-1)edge(maze,x,y,'r',0);
    if(y<size-1)edge(maze,x,y,'b',0);
   }
-  const vertical=rng()<.5,coord=Math.max(1,Math.min(size-1,2+Math.floor(rng()*Math.max(1,size-4))));
-  // 最後の1マスに出口を残し、スタートとゴールの直線を遮る。
-  for(let i=0;i<size-1;i++)edge(maze,vertical?coord-1:i,vertical?i:coord-1,vertical?'r':'b',1);
-  maze.baffle={axis:vertical?'x':'y',coord,gap:size-1};
-  // 自由な区画にも短い壁を散らす。孤立を作る閉じ方は取り消す。
-  for(let i=0;i<2+Math.floor(rng()*4);i++){
+  const vertical=rng()<.5,axis=vertical?'x':'y';
+  const selected=C.openBaffleCounts[Math.floor(rng()*C.openBaffleCounts.length)];
+  const count=Math.max(1,Math.min(selected,Math.floor(size/C.openRoomMinWidth)-1));
+  const minWidth=Math.min(C.openRoomMinWidth,Math.floor(size/(count+1))),widths=new Array(count+1).fill(minWidth);
+  for(let extra=size-minWidth*widths.length;extra>0;extra--)widths[Math.floor(rng()*widths.length)]++;
+  maze.baffles=[];let coord=0;
+  for(let n=0;n<count;n++){
+   coord+=widths[n];
+   const width=Math.min(C.openGapWidths[Math.floor(rng()*C.openGapWidths.length)],Math.max(1,Math.floor((size-1)/2)));
+   const gapStart=n%2?0:size-width,gapEnd=gapStart+width;
+   // 遠い出口→手前の出口を交互に置く。単純なL字の近道を両方向とも遮る。
+   for(let i=0;i<size;i++)if(i<gapStart||i>=gapEnd)edge(maze,vertical?coord-1:i,vertical?i:coord-1,vertical?'r':'b',1);
+   maze.baffles.push({axis,coord,gapStart,gapEnd});
+  }
+  maze.baffle=maze.baffles[0];
+  // 全区画から短い壁の候補を抽選。出口・端点を避け、孤立を作る閉じ方は取り消す。
+  for(let i=0;i<Math.max(1,Math.floor(size/C.openIslandEvery));i++){
    const x=Math.floor(rng()*(size-1)),y=Math.floor(rng()*(size-1)),side=rng()<.5?'r':'b';
-   if((vertical?x:y)<coord||x===size-2&&y===size-2)continue;
+   if(Math.hypot(x,y)<1.5||Math.hypot(x-size+1,y-size+1)<1.5)continue;
+   if(maze.baffles.some(b=>Math.abs((vertical?x:y)+.5-b.coord)<1.5&&(vertical?y:x)>=b.gapStart-1&&(vertical?y:x)<b.gapEnd+1))continue;
    const old=maze.cells[y*size+x][side];edge(maze,x,y,side,1);
    if(!checkReachability(maze).ok)edge(maze,x,y,side,old);
   }
