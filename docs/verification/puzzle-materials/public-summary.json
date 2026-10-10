@@ -1,0 +1,172 @@
+{
+  "version": "0.7.2",
+  "base": "https://corogalism.sikumilab.com/",
+  "appCommit": "034c7ce420b6a7a262ce83fe424749146a26fae5",
+  "pagesJob": 38037783701,
+  "exitCodes": {
+    "public-ui": 0,
+    "public-hp0": 0,
+    "public-tutorial": 0,
+    "public-main": 0,
+    "public-offline": 0
+  },
+  "ui": {
+    "cases": 9,
+    "widths": [
+      312,
+      412,
+      576
+    ],
+    "zeroBasedLessonIndices": [
+      0,
+      1,
+      5
+    ],
+    "cardHeight": 150
+  },
+  "tutorialHp0": [
+    {
+      "kind": "moving",
+      "actualPointerContacts": true,
+      "diagnosticRepeatedPositionPlacement": true,
+      "diagnosticGoalPlacement": true,
+      "summary": {
+        "kind": "moving",
+        "impacts": 3,
+        "hp": 0,
+        "clearAt0": true
+      }
+    },
+    {
+      "kind": "basic",
+      "actualPointerContacts": true,
+      "diagnosticRepeatedPositionPlacement": true,
+      "diagnosticGoalPlacement": true,
+      "summary": {
+        "kind": "basic",
+        "impacts": 3,
+        "hp": 0,
+        "clearAt0": true
+      }
+    }
+  ],
+  "tutorialActualPointer": [
+    {
+      "label": "tutorial-1",
+      "seconds": 24.064,
+      "limitSec": null,
+      "hp": {
+        "value": 100,
+        "max": 100
+      },
+      "hits": 0,
+      "materialProfile": "tutorialNormal"
+    },
+    {
+      "label": "tutorial-2",
+      "seconds": 26.416,
+      "limitSec": null,
+      "hp": {
+        "value": 62.41202459864428,
+        "max": 100
+      },
+      "hits": 1,
+      "materialProfile": "tutorialNormal"
+    }
+  ],
+  "mainActualPointer": [
+    {
+      "label": "easy-28",
+      "seconds": 19.872,
+      "limitSec": 74,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "normalRubber",
+      "remainingSec": 59.128
+    },
+    {
+      "label": "easy-41",
+      "seconds": 17.856,
+      "limitSec": 77,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "mixedStandard",
+      "remainingSec": 59.144
+    },
+    {
+      "label": "normal-28",
+      "seconds": 19.872,
+      "limitSec": 46,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "normalRubber",
+      "remainingSec": 26.128
+    },
+    {
+      "label": "normal-41",
+      "seconds": 17.856,
+      "limitSec": 50,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "mixedStandard",
+      "remainingSec": 32.144
+    }
+  ],
+  "catalogue": [
+    {
+      "level": "easy",
+      "stages": 59,
+      "profiles": [
+        "\"iceRubber\"",
+        "\"normalRubber\"",
+        "\"iceSandRubber\"",
+        "\"iceSandCork\"",
+        "\"mixedStandard\"",
+        "\"normalCork\""
+      ]
+    },
+    {
+      "level": "normal",
+      "stages": 59,
+      "profiles": [
+        "\"iceRubber\"",
+        "\"normalRubber\"",
+        "\"iceSandRubber\"",
+        "\"iceSandCork\"",
+        "\"mixedStandard\"",
+        "\"normalCork\""
+      ]
+    }
+  ],
+  "offline": {
+    "cache": "corogalism-2f5e8c567242bec9",
+    "precacheCount": 122,
+    "normalFirstLesson": true,
+    "hints": true,
+    "actualPointer": true
+  },
+  "loadedSourceHashChecks": 90,
+  "uniqueRuntimeFiles": 10,
+  "allLoadedSourcesMatchLocal": true,
+  "pageConsoleRequestHttpErrors": 0,
+  "allCourseControllerAutomated": true,
+  "controller": {
+    "routeIntervalMs": 48,
+    "timingIntervalMs": 16,
+    "physicsRafMs": 16
+  },
+  "realPhoneOrHumanReactionVerified": false,
+  "wallMaterialNote": "mixedStandard draws from candidates; run77 stage41 contains cork25 cotton12 default3 rubber0"
+}

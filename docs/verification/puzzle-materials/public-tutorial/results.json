@@ -1,0 +1,5758 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "phase": "tutorial",
+  "version": "0.7.2",
+  "rows": [
+    {
+      "name": "full-course",
+      "label": "tutorial-1",
+      "actualPointer": true,
+      "teleportDuringCourse": false,
+      "automatedController": true,
+      "humanOrPhoneTest": false,
+      "before": {
+        "timeMs": 0,
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 0,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            }
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            }
+          }
+        ]
+      },
+      "materials": {
+        "profile": "tutorialNormal",
+        "materialLabel": "通常床・通常壁",
+        "counts": {
+          "ice": 0,
+          "sand": 0,
+          "normal": 49
+        },
+        "floors": [],
+        "walls": {
+          "default": 42
+        }
+      },
+      "operations": [
+        {
+          "kind": "route",
+          "via": [
+            {
+              "x": 5.65,
+              "y": 1.4
+            },
+            {
+              "x": 5.65,
+              "y": 2.7
+            },
+            {
+              "x": 1.35,
+              "y": 3.3
+            },
+            {
+              "x": 1.35,
+              "y": 4.7
+            },
+            {
+              "x": 4.5,
+              "y": 6.5
+            },
+            {
+              "x": 4.5,
+              "y": 5.5
+            },
+            {
+              "x": 5.5,
+              "y": 5.5
+            }
+          ],
+          "purpose": "開口と部屋を回って次の仕掛けへ進む"
+        }
+      ],
+      "materialAwareAutomatedController": true,
+      "controller": {
+        "routeIntervalMs": 48,
+        "timingIntervalMs": 16,
+        "physicsRafMs": 16,
+        "cachedStaticGeometry": true
+      },
+      "trace": [
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 0,
+          "timeMs": 0,
+          "actor": {
+            "x": 0.5068121570145103,
+            "y": 0.5068121570145103,
+            "vx": 0.27467892651442155,
+            "vy": 0.27467892651442155,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-0-右下",
+            "phase": "route",
+            "text": "少し右下に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0.46139448306851033,
+              "y": 0.46139448306851033
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7687175574112843,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 2.139398221461475,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 30,
+          "timeMs": 1424,
+          "actor": {
+            "x": 1.8654683323057304,
+            "y": 1.3158044623423584,
+            "vx": 0.9749356247323587,
+            "vy": 0.15506214252414066,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-0-右",
+            "phase": "route",
+            "text": "少し右に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0.1462789688704386,
+              "y": 0.0059980197560140875
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.7488928154464443,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.5851160530643551,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 60,
+          "timeMs": 2864,
+          "actor": {
+            "x": 3.2693756168587402,
+            "y": 1.3938300033686664,
+            "vx": 0.9749356006258713,
+            "vy": 0.011363194520980809,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-0-右",
+            "phase": "route",
+            "text": "少し右に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0.14627897971835796,
+              "y": 0.00043955943375883274
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 2.5914596211999417,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.5851157513459548,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 90,
+          "timeMs": 4304,
+          "actor": {
+            "x": 4.67328290292448,
+            "y": 1.399547843449987,
+            "vx": 0.9749356251700575,
+            "vy": 0.0008326486927732244,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-0-右",
+            "phase": "route",
+            "text": "少し右に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0.14627896867347415,
+              "y": 0.00003224898326361397
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.434026439308535,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.5851157653400385,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 120,
+          "timeMs": 5744,
+          "actor": {
+            "x": 5.559636204439994,
+            "y": 1.3999668420696967,
+            "vx": 0.16642208394467878,
+            "vy": 0.00006099176292615312,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "coast-0",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.7757403772970823,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.028225649586405277,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "reached": true,
+          "timeMs": 6176,
+          "actor": {
+            "x": 5.608743420642644,
+            "y": 1.3999848569755098,
+            "vx": 0.07598193561947286,
+            "vy": 0.000027847370900077788,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-1-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 2.7
+            },
+            "direction": {
+              "x": 0.002939050392858056,
+              "y": 0.584987468683095
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.7839324528626688,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.012886233011627501,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 2.7
+          },
+          "tick": 0,
+          "timeMs": 6224,
+          "actor": {
+            "x": 5.612185380980036,
+            "y": 1.4109496607194847,
+            "vx": 0.06964291705327233,
+            "vy": 0.36239336961887575,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-1-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 2.7
+            },
+            "direction": {
+              "x": 0.0026938444439952233,
+              "y": 0.421922983671506
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.7845066406428054,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.011811213199652837,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 2.7
+          },
+          "tick": 30,
+          "timeMs": 7664,
+          "actor": {
+            "x": 5.647228887251031,
+            "y": 2.526239920606493,
+            "vx": 0.005103559414291065,
+            "vy": 0.3199862600249851,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-vertical-下",
+            "phase": "racket",
+            "text": "少し下に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 5.65,
+              "y": 2.7
+            },
+            "direction": {
+              "x": 0.0006684057377537885,
+              "y": 0.08864881658157897
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.7903525656297385,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.0008655178433403243,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 2.7
+          },
+          "reached": true,
+          "timeMs": 8432,
+          "actor": {
+            "x": 5.649312433381547,
+            "y": 2.65688583900358,
+            "vx": 0.0012662845653581103,
+            "vy": 0.07940295634030584,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-vertical-左下",
+            "phase": "racket",
+            "text": "少し左下に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 1.35,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.5855698280544112,
+              "y": 0.5430714145436404
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.790700135233695,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.00021463397339993584,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 0,
+          "timeMs": 8480,
+          "actor": {
+            "x": 5.638394400866127,
+            "y": 2.670603199378248,
+            "vx": -0.3615989521152765,
+            "vy": 0.4072797213503127,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-vertical-左下",
+            "phase": "racket",
+            "text": "少し左下に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 1.35,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.5855698280544112,
+              "y": 0.5430714145436404
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.698767530138076,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -2.2283607279826034,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 30,
+          "timeMs": 9920,
+          "actor": {
+            "x": 4.272966484327233,
+            "y": 3.2488826144129,
+            "vx": -0.9749356079752406,
+            "vy": 0.09414251750150492,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-2-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.35,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.14627897641114176,
+              "y": 0.0036415141527124835
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 2.734979929084965,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -0.5851157513460381,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 60,
+          "timeMs": 11360,
+          "actor": {
+            "x": 2.8690592000660256,
+            "y": 3.296254031607096,
+            "vx": -0.9749356258755353,
+            "vy": 0.006898880341411324,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-2-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.35,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.14627896835600915,
+              "y": 0.0002668753999784821
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.892413113622647,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -0.5851160530643551,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 90,
+          "timeMs": 12800,
+          "actor": {
+            "x": 1.5981905988867313,
+            "y": 3.2997254929446607,
+            "vx": -0.4567902811760263,
+            "vy": 0.0005054809074566371,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "coast-2",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 1.35,
+              "y": 3.3
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.25160714309717,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -0.07853776514353539,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "reached": true,
+          "timeMs": 13760,
+          "actor": {
+            "x": 1.3934670687055302,
+            "y": 3.2999519305378016,
+            "vx": -0.0800530223784981,
+            "vy": 0.0000885272654183442,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-3-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.35,
+              "y": 4.7
+            },
+            "direction": {
+              "x": -0.003096501764652926,
+              "y": 0.5849601627305618
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.2173846486657998,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -0.013576729745432004,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 4.7
+          },
+          "tick": 0,
+          "timeMs": 13808,
+          "actor": {
+            "x": 1.3898406899206912,
+            "y": 3.3109189266275703,
+            "vx": -0.07337433942545173,
+            "vy": 0.3624305964793024,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-3-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.35,
+              "y": 4.7
+            },
+            "direction": {
+              "x": -0.0028381681871687305,
+              "y": 0.42190623158431395
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.216779701629397,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -0.012443910676465664,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 4.7
+          },
+          "tick": 30,
+          "timeMs": 15248,
+          "actor": {
+            "x": 1.3529195871659991,
+            "y": 4.490692753227758,
+            "vx": -0.005376983547740128,
+            "vy": 0.38538586493276183,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "coast-3",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 1.35,
+              "y": 4.7
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.2106205679027444,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -0.0009118249693351732,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 4.7
+          },
+          "reached": true,
+          "timeMs": 16112,
+          "actor": {
+            "x": 1.350608583155744,
+            "y": 4.65636870734367,
+            "vx": -0.0011208028663422973,
+            "vy": 0.0803553953919195,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-4-右下",
+            "phase": "route",
+            "text": "少し右下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 3.75,
+              "y": 6.5
+            },
+            "direction": {
+              "x": 0.5855043612898541,
+              "y": 0.5488400720736362
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.2102350536098343,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": -0.0001900277981775611,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 0,
+          "timeMs": 16160,
+          "actor": {
+            "x": 1.3615318738333753,
+            "y": 4.670236635312709,
+            "vx": 0.36168826821404815,
+            "vy": 0.4117032318773628,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-4-右下",
+            "phase": "route",
+            "text": "少し右下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 3.75,
+              "y": 6.5
+            },
+            "direction": {
+              "x": 0.4222402793036784,
+              "y": 0.39973354565518676
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.302157599000553,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 2.2281128718926597,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 30,
+          "timeMs": 17600,
+          "actor": {
+            "x": 2.726965357617724,
+            "y": 6.0249999999999995,
+            "vx": -0.5505963527403476,
+            "vy": -1.278246337268145,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-horizontal-右下",
+            "phase": "racket",
+            "text": "少し右下に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 4,
+              "y": 6.5
+            },
+            "direction": {
+              "x": 0.14627897395622433,
+              "y": 0.05134919891407873
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 2.265927524337142,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.5851157513459548,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 60,
+          "timeMs": 19040,
+          "actor": {
+            "x": 3.6753017752793147,
+            "y": 6.399240009475075,
+            "vx": 0.9691762431342595,
+            "vy": 0.18554273091905235,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-horizontal-右",
+            "phase": "racket",
+            "text": "少し右に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 4.5,
+              "y": 6.5
+            },
+            "direction": {
+              "x": 0.14887069058958324,
+              "y": 0.007189762558859155
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.026694460393169,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.6083542943255416,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 90,
+          "timeMs": 20480,
+          "actor": {
+            "x": 4.391212343333673,
+            "y": 6.492615993104228,
+            "vx": 0.20025526903296606,
+            "vy": 0.013599083111249263,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-horizontal-上",
+            "phase": "racket",
+            "text": "少し上に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 4.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.0077940199348596265,
+              "y": -0.5911195874000622
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.716218228802966,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.03431111029422729,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "reached": true,
+          "timeMs": 21200,
+          "actor": {
+            "x": 4.457763514721306,
+            "y": 6.498001102240223,
+            "vx": 0.06751483602682293,
+            "vy": 0.003681381922561776,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-horizontal-上",
+            "phase": "racket",
+            "text": "少し上に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 4.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.007631160538753935,
+              "y": -0.5866566218651529
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.761487466181134,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.04787101381309444,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "timeMs": 21248,
+          "actor": {
+            "x": 4.460967866963296,
+            "y": 6.487170353902987,
+            "vx": 0.06621366281007975,
+            "vy": -0.36011642813271444,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "paddle-racket-horizontal-上",
+            "phase": "racket",
+            "text": "少し上に傾けて、ラケットのそばで調整しよう。",
+            "target": {
+              "x": 4.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.005332771468497762,
+              "y": -0.42294760734027853
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.9079003502116183,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": -2.232476695589208,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.763104426832794,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.03136815193721665,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 5.5
+          },
+          "tick": 30,
+          "timeMs": 22688,
+          "actor": {
+            "x": 4.497104237875277,
+            "y": 5.599004714136132,
+            "vx": 0.005333131653953104,
+            "vy": -0.18233580396762963,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "goal-6-右",
+            "phase": "goal",
+            "text": "少し右に傾けて、カップへ入ろう。",
+            "target": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.5826000907557212,
+              "y": -0.007053130937085754
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.416690976927475,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": -0.03092539073920597,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.7704671441110795,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.0009044802131152885,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 5.5
+          },
+          "reached": true,
+          "timeMs": 23168,
+          "actor": {
+            "x": 4.498788211809456,
+            "y": 5.541430574187153,
+            "vx": 0.0022317536520187536,
+            "vy": -0.07630248479020121,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "goal-6-右",
+            "phase": "goal",
+            "text": "少し右に傾けて、カップへ入ろう。",
+            "target": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.5839957108565916,
+              "y": -0.002951398612847166
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.4070863869577714,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": -0.0129405346709216,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.77074805928671,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0.00037846463540880393,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "timeMs": 23216,
+          "actor": {
+            "x": 4.509832666225532,
+            "y": 5.5379740931777794,
+            "vx": 0.36374622756819625,
+            "vy": -0.06993672048462599,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "goal-6-右",
+            "phase": "goal",
+            "text": "少し右に傾けて、カップへ入ろう。",
+            "target": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.5404210546877929,
+              "y": -0.0028712968541702937
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.40650977758888,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": -0.011861033346494132,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.862438711020702,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 2.222399150063059,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        }
+      ],
+      "final": {
+        "timeMs": 24064,
+        "actor": {
+          "x": 5.208602269393309,
+          "y": 5.50814886936924,
+          "vx": 0.5356655261696821,
+          "vy": -0.01500493575188443,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "status": "clear",
+        "wallHits": 0,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 1.4015350434952953,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "vx": 0,
+            "vy": -0.0024926030915972675,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 4.95,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ]
+      },
+      "summary": {
+        "label": "tutorial-1",
+        "seconds": 24.064,
+        "limitSec": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "hits": 0,
+        "materialProfile": "tutorialNormal"
+      }
+    },
+    {
+      "name": "full-course",
+      "label": "tutorial-2",
+      "actualPointer": true,
+      "teleportDuringCourse": false,
+      "automatedController": true,
+      "humanOrPhoneTest": false,
+      "before": {
+        "timeMs": 0,
+        "actor": {
+          "x": 0.5,
+          "y": 1.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 0,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": [
+          {
+            "id": "gate-1",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 0.8799999999999999,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.8799999999999999,
+            "max": 3.12,
+            "home": 0.8799999999999999,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            }
+          },
+          {
+            "id": "gate-2",
+            "label": "2",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 4.88,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": 2.88,
+            "max": 4.88,
+            "home": 4.88,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            }
+          }
+        ]
+      },
+      "materials": {
+        "profile": "tutorialNormal",
+        "materialLabel": "通常床・通常壁",
+        "counts": {
+          "ice": 0,
+          "sand": 0,
+          "normal": 49
+        },
+        "floors": [],
+        "walls": {
+          "default": 43
+        }
+      },
+      "operations": [
+        {
+          "kind": "hold",
+          "tilt": {
+            "x": 1,
+            "y": 0
+          },
+          "seconds": 1.8,
+          "until": "waiting-1",
+          "purpose": "綿へ球を預け、1の壁を戸袋へ動かす"
+        },
+        {
+          "kind": "route",
+          "via": [
+            {
+              "x": 2.6050000000000004,
+              "y": 3.65
+            },
+            {
+              "x": 1.5,
+              "y": 3.65
+            }
+          ],
+          "purpose": "開口と部屋を回って次の仕掛けへ進む"
+        },
+        {
+          "kind": "route",
+          "via": [
+            {
+              "x": 1.5,
+              "y": 5.5
+            },
+            {
+              "x": 3.5,
+              "y": 5.5
+            }
+          ],
+          "purpose": "開口と部屋を回って次の仕掛けへ進む"
+        },
+        {
+          "kind": "hold",
+          "tilt": {
+            "x": 0,
+            "y": -1
+          },
+          "seconds": 1,
+          "until": "waiting-2",
+          "purpose": "綿へ球を預け、2の壁を戸袋へ動かす"
+        },
+        {
+          "kind": "route",
+          "via": [
+            {
+              "x": 4.45,
+              "y": 5.3950000000000005
+            },
+            {
+              "x": 4.45,
+              "y": 3.5
+            },
+            {
+              "x": 6.5,
+              "y": 3.5
+            },
+            {
+              "x": 6.5,
+              "y": 4.5
+            },
+            {
+              "x": 5.5,
+              "y": 4.5
+            },
+            {
+              "x": 5.5,
+              "y": 5.5
+            }
+          ],
+          "purpose": "開口と部屋を回って次の仕掛けへ進む"
+        }
+      ],
+      "materialAwareAutomatedController": true,
+      "controller": {
+        "routeIntervalMs": 48,
+        "timingIntervalMs": 16,
+        "physicsRafMs": 16,
+        "cachedStaticGeometry": true
+      },
+      "trace": [
+        {
+          "kind": "hold",
+          "purpose": "綿へ球を預け、1の壁を戸袋へ動かす",
+          "tilt": {
+            "x": 1,
+            "y": 0
+          },
+          "reached": true,
+          "timeMs": 0,
+          "actor": {
+            "x": 0.5005825996746668,
+            "y": 1.5,
+            "vx": 0.06473329718520245,
+            "vy": 0,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-1-右下",
+            "phase": "pass",
+            "text": "少し右下に傾けて、開いた通路へ。",
+            "target": {
+              "x": 2.6050000000000004,
+              "y": 3.65
+            },
+            "direction": {
+              "x": 0.555870016266659,
+              "y": 0.5850000000000001
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 0.8955779542527597,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 1.730883805862196,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "hold",
+          "purpose": "綿へ球を預け、1の壁を戸袋へ動かす",
+          "tilt": {
+            "x": 1,
+            "y": 0
+          },
+          "reached": true,
+          "timeMs": 448,
+          "actor": {
+            "x": 1.8674456064217018,
+            "y": 1.5,
+            "vx": 4.649616126219421,
+            "vy": 0,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 0,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-1-右下",
+            "phase": "pass",
+            "text": "少し右下に傾けて、開いた通路へ。",
+            "target": {
+              "x": 2.6050000000000004,
+              "y": 3.65
+            },
+            "direction": {
+              "x": 0.2542774967421356,
+              "y": 0.5850000000000001
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.794708289323784,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 3.9999999999998606,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "hold",
+          "purpose": "綿へ球を預け、1の壁を戸袋へ動かす",
+          "tilt": {
+            "x": 1,
+            "y": 0
+          },
+          "reached": true,
+          "timeMs": 928,
+          "actor": {
+            "x": 2.605,
+            "y": 1.5,
+            "vx": -0.0682586818322882,
+            "vy": 0,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-1-右下",
+            "phase": "pass",
+            "text": "少し右下に傾けて、開いた通路へ。",
+            "target": {
+              "x": 2.6050000000000004,
+              "y": 3.65
+            },
+            "direction": {
+              "x": 0.21890833486953107,
+              "y": 0.5850000000000001
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "hold",
+          "purpose": "綿へ球を預け、1の壁を戸袋へ動かす",
+          "tilt": {
+            "x": 1,
+            "y": 0
+          },
+          "reached": true,
+          "timeMs": 1408,
+          "actor": {
+            "x": 2.605,
+            "y": 1.5,
+            "vx": -0.0684492827971371,
+            "vy": 0,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-1-下",
+            "phase": "pass",
+            "text": "少し下に傾けて、開いた通路へ。",
+            "target": {
+              "x": 2.6050000000000004,
+              "y": 3.65
+            },
+            "direction": {
+              "x": 0.030802177258712097,
+              "y": 0.5850000000000001
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 2.6050000000000004,
+            "y": 3.65
+          },
+          "tick": 0,
+          "timeMs": 1808,
+          "actor": {
+            "x": 2.605,
+            "y": 1.510963798127289,
+            "vx": -0.003584150589044025,
+            "vy": 0.3623762990051356,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-1-下",
+            "phase": "pass",
+            "text": "少し下に傾けて、開いた通路へ。",
+            "target": {
+              "x": 2.6050000000000004,
+              "y": 3.65
+            },
+            "direction": {
+              "x": 0.001612867765070211,
+              "y": 0.42193066544768904
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 2.6050000000000004,
+            "y": 3.65
+          },
+          "tick": 30,
+          "timeMs": 3248,
+          "actor": {
+            "x": 2.605,
+            "y": 2.8764401952727954,
+            "vx": -1.198193337528718e-41,
+            "vy": 0.9749356442727799,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-1-下",
+            "phase": "pass",
+            "text": "少し下に傾けて、開いた通路へ。",
+            "target": {
+              "x": 2.6050000000000004,
+              "y": 3.65
+            },
+            "direction": {
+              "x": 3.9968028886505636e-16,
+              "y": 0.14627896007724908
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 2.6050000000000004,
+            "y": 3.65
+          },
+          "tick": 60,
+          "timeMs": 4688,
+          "actor": {
+            "x": 2.605,
+            "y": 3.588042026240802,
+            "vx": 3.835750204444456e-49,
+            "vy": 0.11410761038135256,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-2-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.5,
+              "y": 3.65
+            },
+            "direction": {
+              "x": -0.5850000000000001,
+              "y": 0.0044137517116693325
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 2.6050000000000004,
+            "y": 3.65
+          },
+          "reached": true,
+          "timeMs": 4880,
+          "actor": {
+            "x": 2.605,
+            "y": 3.606271639338329,
+            "vx": 2.373498521627238e-49,
+            "vy": 0.0805342674098823,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-2-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.5,
+              "y": 3.65
+            },
+            "direction": {
+              "x": -0.5850000000000001,
+              "y": 0.0031151042610568303
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.5,
+            "y": 3.65
+          },
+          "tick": 0,
+          "timeMs": 4928,
+          "actor": {
+            "x": 2.5940362026174326,
+            "y": 3.60991981972785,
+            "vx": -0.3623762743905383,
+            "vy": 0.07381547758783104,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-2-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.5,
+              "y": 3.65
+            },
+            "direction": {
+              "x": -0.4219306765242578,
+              "y": 0.002855197330410824
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.0281549786835344,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -2.22620272874835,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.5,
+            "y": 3.65
+          },
+          "tick": 30,
+          "timeMs": 6368,
+          "actor": {
+            "x": 1.6208483299552707,
+            "y": 3.647062835758426,
+            "vx": -0.2225632986121281,
+            "vy": 0.0054092867453539,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "coast-2",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 1.5,
+              "y": 3.65
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.4769852300727746,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.03775356604612812,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.5,
+            "y": 3.65
+          },
+          "reached": true,
+          "timeMs": 6944,
+          "actor": {
+            "x": 1.5424853768295215,
+            "y": 3.64896742406925,
+            "vx": -0.07824502211858882,
+            "vy": 0.0019017665801765522,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-3-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -0.0030265791932043563,
+              "y": 0.5841442050389206
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.463912283585024,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.013269830401951843,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "timeMs": 6992,
+          "actor": {
+            "x": 1.5389409003451797,
+            "y": 3.659999954746982,
+            "vx": -0.0717171674917256,
+            "vy": 0.36354373843524,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-3-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -0.0027740849393852254,
+              "y": 0.421405317704142
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.4633210018879224,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.012162845633073571,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.5,
+            "y": 5.5
+          },
+          "tick": 30,
+          "timeMs": 8432,
+          "actor": {
+            "x": 1.5028536611602674,
+            "y": 5.018025949040742,
+            "vx": -0.00525554811214606,
+            "vy": 0.8590256598668022,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-3-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 1.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -0.0002420004900376448,
+              "y": 0.08187330048367544
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.4573009686595553,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.0008913816267885899,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 1.5,
+            "y": 5.5
+          },
+          "reached": true,
+          "timeMs": 9776,
+          "actor": {
+            "x": 1.5002489179339902,
+            "y": 5.457744594380282,
+            "vx": -0.00045839599648662716,
+            "vy": 0.07782142501503544,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-4-右",
+            "phase": "route",
+            "text": "少し右に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 3.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.585206278198419,
+              "y": 0.0030102238009804203
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.4568664516921115,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.00007760752848695596,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 3.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "timeMs": 9824,
+          "actor": {
+            "x": 1.511196149949044,
+            "y": 5.461269883743924,
+            "vx": 0.362094933133241,
+            "vy": 0.07132896709236965,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-4-右",
+            "phase": "route",
+            "text": "少し右に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 3.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.42205728009004156,
+              "y": 0.0027590694389020864
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.5487431911020186,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 2.226984219181188,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 3.5,
+            "y": 5.5
+          },
+          "tick": 30,
+          "timeMs": 11264,
+          "actor": {
+            "x": 2.8766549945307576,
+            "y": 5.497161783033012,
+            "vx": 0.9749356072790498,
+            "vy": 0.005227103735083999,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-4-右",
+            "phase": "route",
+            "text": "少し右に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 3.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.12228948164674577,
+              "y": 0.0002021985895014451
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 3.5,
+            "y": 5.5
+          },
+          "tick": 60,
+          "timeMs": 12704,
+          "actor": {
+            "x": 3.4531528103148594,
+            "y": 5.4997919930915415,
+            "vx": 0.08627811113127337,
+            "vy": 0.0003830624580240289,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "open-gate-2",
+            "phase": "open",
+            "text": "少し上に傾けて、2の戸を開こう。",
+            "target": {
+              "x": 3.5,
+              "y": 5.3950000000000005
+            },
+            "direction": {
+              "x": 0,
+              "y": -0.7
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 3.5,
+            "y": 5.5
+          },
+          "reached": true,
+          "timeMs": 12752,
+          "actor": {
+            "x": 3.457061183777069,
+            "y": 5.499809345304914,
+            "vx": 0.07908008112710899,
+            "vy": 0.0003510884292063656,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "open-gate-2",
+            "phase": "open",
+            "text": "少し上に傾けて、2の戸を開こう。",
+            "target": {
+              "x": 3.5,
+              "y": 5.3950000000000005
+            },
+            "direction": {
+              "x": 0,
+              "y": -0.7
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "hold",
+          "purpose": "綿へ球を預け、2の壁を戸袋へ動かす",
+          "tilt": {
+            "x": 0,
+            "y": -1
+          },
+          "reached": true,
+          "timeMs": 12768,
+          "actor": {
+            "x": 3.4582819700160154,
+            "y": 5.497159648080199,
+            "vx": 0.07629913993415781,
+            "vy": -0.16560607654471146,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "open-gate-2",
+            "phase": "open",
+            "text": "少し上に傾けて、2の戸を開こう。",
+            "target": {
+              "x": 3.5,
+              "y": 5.3950000000000005
+            },
+            "direction": {
+              "x": 0,
+              "y": -0.7
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 4.839361017136783,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": -2.5399364289510618,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "hold",
+          "purpose": "綿へ球を預け、2の壁を戸袋へ動かす",
+          "tilt": {
+            "x": 0,
+            "y": -1
+          },
+          "reached": true,
+          "timeMs": 13248,
+          "actor": {
+            "x": 3.4792374614327004,
+            "y": 5.3950000000000005,
+            "vx": 0.023039878103396444,
+            "vy": 0.06844928269741607,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "open-gate-2",
+            "phase": "open",
+            "text": "少し上に傾けて、2の戸を開こう。",
+            "target": {
+              "x": 3.5,
+              "y": 5.3950000000000005
+            },
+            "direction": {
+              "x": 0,
+              "y": -0.7
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.9327896099878337,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": -3.9999999999998925,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "hold",
+          "purpose": "綿へ球を預け、2の壁を戸袋へ動かす",
+          "tilt": {
+            "x": 0,
+            "y": -1
+          },
+          "reached": true,
+          "timeMs": 13728,
+          "actor": {
+            "x": 3.4855496769666052,
+            "y": 5.3950000000000005,
+            "vx": 0.00693947792790569,
+            "vy": 0.0684492827971371,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-2-右",
+            "phase": "pass",
+            "text": "少し右に傾けて、開いた通路へ。",
+            "target": {
+              "x": 4.45,
+              "y": 5.3950000000000005
+            },
+            "direction": {
+              "x": 0.5818772349324425,
+              "y": -0.030802177258711698
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.45,
+            "y": 5.3950000000000005
+          },
+          "tick": 0,
+          "timeMs": 13808,
+          "actor": {
+            "x": 3.4969526193569878,
+            "y": 5.3950000000000005,
+            "vx": 0.3662722216453441,
+            "vy": 0.003584155907893691,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "pass-gate-2-右",
+            "phase": "pass",
+            "text": "少し右に傾けて、開いた通路へ。",
+            "target": {
+              "x": 4.45,
+              "y": 5.3950000000000005
+            },
+            "direction": {
+              "x": 0.42017750025959516,
+              "y": -0.001612870158552161
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.45,
+            "y": 5.3950000000000005
+          },
+          "tick": 30,
+          "timeMs": 15248,
+          "actor": {
+            "x": 4.3570897415318415,
+            "y": 5.3950000000000005,
+            "vx": 0.17111179188392064,
+            "vy": 2.555425194280734e-17,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "coast-5",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 4.45,
+              "y": 5.3950000000000005
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.45,
+            "y": 5.3950000000000005
+          },
+          "reached": true,
+          "timeMs": 15680,
+          "actor": {
+            "x": 4.407580809521683,
+            "y": 5.3950000000000005,
+            "vx": 0.07812317499813375,
+            "vy": 8.678109620980859e-18,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-7-上",
+            "phase": "route",
+            "text": "少し上に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 4.45,
+              "y": 3.5
+            },
+            "direction": {
+              "x": 0.0030218426813254074,
+              "y": -0.5850000000000001
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.45,
+            "y": 3.5
+          },
+          "tick": 0,
+          "timeMs": 15728,
+          "actor": {
+            "x": 4.41111976711525,
+            "y": 5.384036201872711,
+            "vx": 0.07160550780781198,
+            "vy": -0.3623762990051356,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-7-上",
+            "phase": "route",
+            "text": "少し上に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 4.45,
+              "y": 3.5
+            },
+            "direction": {
+              "x": 0.0027697310827599665,
+              "y": -0.42193066544768904
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.45,
+            "y": 3.5
+          },
+          "tick": 30,
+          "timeMs": 17168,
+          "actor": {
+            "x": 4.447150794718529,
+            "y": 4.021557196357657,
+            "vx": 0.005247357419514515,
+            "vy": -0.9109213436172491,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-7-上",
+            "phase": "route",
+            "text": "少し上に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 4.45,
+              "y": 3.5
+            },
+            "direction": {
+              "x": 0.00022143769768659044,
+              "y": -0.08016925397933673
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 4.45,
+            "y": 3.5
+          },
+          "reached": true,
+          "timeMs": 18560,
+          "actor": {
+            "x": 4.449772192203353,
+            "y": 3.542039373639854,
+            "vx": 0.0004195215411609053,
+            "vy": -0.07742359314008943,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-8-右",
+            "phase": "route",
+            "text": "少し右に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 6.5,
+              "y": 3.5
+            },
+            "direction": {
+              "x": 0.5848112153064776,
+              "y": -0.0029948193628284536
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 6.5,
+            "y": 3.5
+          },
+          "tick": 0,
+          "timeMs": 18608,
+          "actor": {
+            "x": 4.460751151587802,
+            "y": 3.538532105943857,
+            "vx": 0.3626338023012964,
+            "vy": -0.07096432044145355,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-8-右",
+            "phase": "route",
+            "text": "少し右に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 6.5,
+              "y": 3.5
+            },
+            "direction": {
+              "x": 0.42181478896441665,
+              "y": -0.00274495115081703
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 6.5,
+            "y": 3.5
+          },
+          "tick": 30,
+          "timeMs": 20048,
+          "actor": {
+            "x": 5.8262435711166765,
+            "y": 3.5028237017761397,
+            "vx": 0.9749356026938696,
+            "vy": -0.005200363562924481,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-8-右",
+            "phase": "route",
+            "text": "少し右に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 6.5,
+              "y": 3.5
+            },
+            "direction": {
+              "x": 0.14627897878775872,
+              "y": -0.00020116799520968152
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 6.5,
+            "y": 3.5
+          },
+          "tick": 60,
+          "timeMs": 21488,
+          "actor": {
+            "x": 6.448542908059303,
+            "y": 3.5002069262302897,
+            "vx": 0.09476814030761484,
+            "vy": -0.0003810994863439242,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-9-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 6.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0.003665719608200551,
+              "y": 0.5851714947688549
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 6.5,
+            "y": 3.5
+          },
+          "reached": true,
+          "timeMs": 21584,
+          "actor": {
+            "x": 6.456770691440696,
+            "y": 3.5001738373149025,
+            "vx": 0.07961506699425379,
+            "vy": -0.00032018712779432833,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-9-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 6.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0.0030795975559590578,
+              "y": 0.5851440842075074
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.88,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 6.5,
+            "y": 4.5
+          },
+          "tick": 0,
+          "timeMs": 21632,
+          "actor": {
+            "x": 6.460377231017161,
+            "y": 3.5111260620451192,
+            "vx": 0.07297292517986896,
+            "vy": 0.362179699731149,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-9-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 6.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0.002822675753613874,
+              "y": 0.42201913512098294
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 2.9718671611781216,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 2.226748245916621,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 6.5,
+            "y": 4.5
+          },
+          "tick": 30,
+          "timeMs": 23072,
+          "actor": {
+            "x": 6.497096373877269,
+            "y": 4.400692818477637,
+            "vx": 0.005347571909117821,
+            "vy": 0.18289284007389892,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "coast-9",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 6.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 3.463563018109101,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0.031019912416524464,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 6.5,
+            "y": 4.5
+          },
+          "reached": true,
+          "timeMs": 23552,
+          "actor": {
+            "x": 6.498784915416349,
+            "y": 4.458442836975282,
+            "vx": 0.002237783212413734,
+            "vy": 0.07653562465622119,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-10-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 5.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": -0.5860070024455861,
+              "y": 0.0029604156269468786
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.12,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 3.473196952194848,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0.01298014821332627,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.5,
+            "y": 4.5
+          },
+          "tick": 0,
+          "timeMs": 23600,
+          "actor": {
+            "x": 6.487901993840159,
+            "y": 4.461909877064893,
+            "vx": -0.36100259062518664,
+            "vy": 0.07015033987989436,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-10-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 5.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": -0.42254883421866607,
+              "y": 0.0027134576956437855
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 3.0280001994646923,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -2.2300163924892646,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 3.4737753056329637,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0.011896832184665751,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.5,
+            "y": 4.5
+          },
+          "tick": 30,
+          "timeMs": 25040,
+          "actor": {
+            "x": 5.599134620150696,
+            "y": 4.497208704955355,
+            "vx": -0.18257497346078608,
+            "vy": 0.0051407208252927565,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "coast-10",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 5.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.5365819241327507,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.03096594264276331,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 3.4796638143009067,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0.0008718934292051284,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.5,
+            "y": 4.5
+          },
+          "reached": true,
+          "timeMs": 25520,
+          "actor": {
+            "x": 5.541484954596027,
+            "y": 4.498831928431668,
+            "vx": -0.07640252972227167,
+            "vy": 0.0021512135334392636,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "goal-11-下",
+            "phase": "goal",
+            "text": "少し下に傾けて、カップへ入ろう。",
+            "target": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -0.0029553207614018205,
+              "y": 0.5840319539099524
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.526964742023899,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.012957464204238489,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 3.4799345920962867,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 0.00036473030101680237,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "kind": "route",
+          "target": {
+            "x": 5.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "timeMs": 25568,
+          "actor": {
+            "x": 5.538023941177193,
+            "y": 4.509873471869265,
+            "vx": -0.07002843267249101,
+            "vy": 0.3636967825547351,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 62.41202459864428,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "goal-11-下",
+            "phase": "goal",
+            "text": "少し下に傾けて、カップへ入ろう。",
+            "target": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -0.0027087523568527353,
+              "y": 0.4213364478503693
+            }
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "label": "1",
+              "bounce": "reflect",
+              "x": 2.5263873731368935,
+              "y": 2.88,
+              "w": 2.24,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.8799999999999999,
+              "max": 3.12,
+              "home": 0.8799999999999999,
+              "vx": -0.011876675818006666,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "gate-2",
+              "label": "2",
+              "bounce": "reflect",
+              "x": 3.88,
+              "y": 3.571630813277287,
+              "w": 0.2400000000000002,
+              "h": 2.24,
+              "axis": "y",
+              "min": 2.88,
+              "max": 4.88,
+              "home": 4.88,
+              "vx": 0,
+              "vy": 2.2225363911189397,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        }
+      ],
+      "final": {
+        "timeMs": 26416,
+        "actor": {
+          "x": 5.508159563083309,
+          "y": 5.208623437692598,
+          "vx": -0.01502464092167522,
+          "vy": 0.5356270657931398,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 62.41202459864428,
+          "max": 100
+        },
+        "status": "clear",
+        "wallHits": 1,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": [
+          {
+            "id": "gate-1",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 2.5214060830961222,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.8799999999999999,
+            "max": 3.12,
+            "home": 0.8799999999999999,
+            "vx": -0.002495552855918959,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "gate-2",
+            "label": "2",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 4.031445689806252,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": 2.88,
+            "max": 4.88,
+            "home": 4.88,
+            "vx": 0,
+            "vy": 0.09175449868831231,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ]
+      },
+      "summary": {
+        "label": "tutorial-2",
+        "seconds": 26.416,
+        "limitSec": null,
+        "hp": {
+          "value": 62.41202459864428,
+          "max": 100
+        },
+        "hits": 1,
+        "materialProfile": "tutorialNormal"
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/config/gameConfig.js": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+        "/src/ui/tutorial.js": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+        "/src/game/stagePlay.js": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+        "/src/game/puzzleTutorial.js": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+        "/src/game/hp.js": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+        "/src/world/puzzleStage.js": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+        "/src/game/puzzleVariety.js": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+        "/src/world/puzzleMaterials.js": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32"
+      }
+    }
+  ]
+}

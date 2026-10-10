@@ -1,0 +1,164 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "c9326108c27ebf7cb2f7eaf4f6c62a8654cb92bbf00d73696131697325f85323",
+    "expectedSha256": "c9326108c27ebf7cb2f7eaf4f6c62a8654cb92bbf00d73696131697325f85323",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "8a857b17ede682c7a3582ecec01f2e679423f75125997cb997072322d9b99586",
+    "expectedSha256": "8a857b17ede682c7a3582ecec01f2e679423f75125997cb997072322d9b99586",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "sw.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "8fb53c882d93ec9163c4af032ab6166f29105e30a9875b666c1e60af64f41b2f",
+    "expectedSha256": "8fb53c882d93ec9163c4af032ab6166f29105e30a9875b666c1e60af64f41b2f",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "package.json",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "sha256": "2cc3969f2ab4f601e7d708161bc394b20fa35aed32150eba6a37837d92f6ae0c",
+    "expectedSha256": "2cc3969f2ab4f601e7d708161bc394b20fa35aed32150eba6a37837d92f6ae0c",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/main.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "3a6f22bff0ac782e4f257dad15c0ff3c256c08e4bc0a8c62d4727e643abbaf27",
+    "expectedSha256": "3a6f22bff0ac782e4f257dad15c0ff3c256c08e4bc0a8c62d4727e643abbaf27",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "style.css",
+    "status": 200,
+    "contentType": "text/css; charset=utf-8",
+    "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+    "expectedSha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/config/gameConfig.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+    "expectedSha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/game/hp.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+    "expectedSha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/game/stagePlay.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+    "expectedSha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/game/puzzleTutorial.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+    "expectedSha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/game/puzzleVariety.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+    "expectedSha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/world/puzzleStage.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+    "expectedSha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/world/puzzleMaterials.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+    "expectedSha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/ui/tutorial.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+    "expectedSha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "src/ui/guide.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "7cdf10431347e46798596444fd90ea2223ec58a1adf9f85d96bbd8b47d70452a",
+    "expectedSha256": "7cdf10431347e46798596444fd90ea2223ec58a1adf9f85d96bbd8b47d70452a",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "floor-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "41118c7c5d01435971dfdbaf524f65030fc6e291944ca4ed69dc1b64a9a2f7f5",
+    "expectedSha256": "41118c7c5d01435971dfdbaf524f65030fc6e291944ca4ed69dc1b64a9a2f7f5",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "ball-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "2dc588e49ba09f7728b1269a41ec9cacd86528c617acf4aee058c3ebdaa96ac9",
+    "expectedSha256": "2dc588e49ba09f7728b1269a41ec9cacd86528c617acf4aee058c3ebdaa96ac9",
+    "match": true,
+    "mimeMatches": true
+  },
+  {
+    "path": "racket-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "878c683bf672b98efdcbff26357919b94cdc512e8df001bda3d4145d0ffec6e1",
+    "expectedSha256": "878c683bf672b98efdcbff26357919b94cdc512e8df001bda3d4145d0ffec6e1",
+    "match": true,
+    "mimeMatches": true
+  }
+]

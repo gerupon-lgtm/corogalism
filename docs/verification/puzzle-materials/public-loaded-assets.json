@@ -1,0 +1,546 @@
+{
+  "checks": 90,
+  "uniqueFiles": 10,
+  "rows": [
+    {
+      "phase": "public-ui",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-ui",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-hp0",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-tutorial",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-main",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/style.css",
+      "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/config/gameConfig.js",
+      "sha256": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/ui/tutorial.js",
+      "sha256": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/game/puzzleTutorial.js",
+      "sha256": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/game/stagePlay.js",
+      "sha256": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/game/puzzleHints.js",
+      "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/world/puzzleStage.js",
+      "sha256": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/game/hp.js",
+      "sha256": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/game/puzzleVariety.js",
+      "sha256": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+      "matchesLocal": true
+    },
+    {
+      "phase": "public-offline",
+      "asset": "/src/world/puzzleMaterials.js",
+      "sha256": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+      "matchesLocal": true
+    }
+  ]
+}

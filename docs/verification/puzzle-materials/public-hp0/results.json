@@ -1,0 +1,667 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "phase": "hp0",
+  "version": "0.7.2",
+  "rows": [
+    {
+      "name": "tutorial-hp0",
+      "kind": "moving",
+      "diagnosticRepeatedPositionPlacement": true,
+      "actualPointerContacts": true,
+      "diagnosticGoalPlacement": true,
+      "placement": {
+        "wall": {
+          "x": -0.12,
+          "y": -0.12,
+          "w": 1.24,
+          "h": 0.24,
+          "materialId": "default"
+        },
+        "point": {
+          "x": 0.5,
+          "y": 1.395,
+          "tilt": {
+            "x": 0,
+            "y": -1
+          }
+        },
+        "distance": 1
+      },
+      "trace": [
+        {
+          "attempt": 0,
+          "timeMs": 1088,
+          "actor": {
+            "x": 0.5,
+            "y": 0.395,
+            "vx": 0,
+            "vy": 0.06844928279713591,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-0-右下",
+            "phase": "route",
+            "text": "少し右下に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0.5850000000000001,
+              "y": 0.5541978227412889
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 0.65,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "attempt": 1,
+          "timeMs": 2800,
+          "actor": {
+            "x": 0.5,
+            "y": 0.395,
+            "vx": 0,
+            "vy": 0.06844928279713755,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 30,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 2,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-0-右下",
+            "phase": "route",
+            "text": "少し右下に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0.5850000000000001,
+              "y": 0.5541978227412881
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 0.65,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "timeMs": 4496,
+          "actor": {
+            "x": 0.5,
+            "y": 0.395,
+            "vx": 0,
+            "vy": 0.06844928279713755,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 0,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 3,
+          "remainingSec": null,
+          "hint": {
+            "id": "route-0-右下",
+            "phase": "route",
+            "text": "少し右下に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.65,
+              "y": 1.4
+            },
+            "direction": {
+              "x": 0.5850000000000001,
+              "y": 0.5541978227412881
+            }
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 0.65,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "vx": 0,
+              "vy": 0,
+              "materialId": "racket",
+              "physicsMaterial": {
+                "frictionK": 1,
+                "accelK": 1,
+                "restitutionK": 3.0857142857142863,
+                "damageK": 0
+              },
+              "blocked": false
+            }
+          ]
+        }
+      ],
+      "original": {
+        "timeMs": 0,
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 0,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            }
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            }
+          }
+        ]
+      },
+      "zero": {
+        "timeMs": 4496,
+        "actor": {
+          "x": 0.5,
+          "y": 0.395,
+          "vx": 0,
+          "vy": 0.06844928279713755,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 0,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 3,
+        "remainingSec": null,
+        "hint": {
+          "id": "route-0-右下",
+          "phase": "route",
+          "text": "少し右下に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "direction": {
+            "x": 0.5850000000000001,
+            "y": 0.5541978227412881
+          }
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 0.65,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ]
+      },
+      "after": {
+        "timeMs": 4800,
+        "actor": {
+          "x": 0.590480279806081,
+          "y": 1.42337741790367,
+          "vx": 0.5209614100490717,
+          "vy": 0.27242992304103125,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 0,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 3,
+        "remainingSec": null,
+        "hint": {
+          "id": "route-0-右",
+          "phase": "route",
+          "text": "少し右に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "direction": {
+            "x": 0.3685114482306851,
+            "y": -0.12124965257759288
+          }
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 0.7534084144563511,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "vx": 0,
+            "vy": 0.4000002330682914,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.8768816592472826,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "vx": 0.6000000606812619,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ]
+      },
+      "summary": {
+        "kind": "moving",
+        "impacts": 3,
+        "hp": 0,
+        "clearAt0": true
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/ui/tutorial.js": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+        "/src/config/gameConfig.js": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+        "/src/game/stagePlay.js": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+        "/src/game/puzzleTutorial.js": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+        "/src/world/puzzleStage.js": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+        "/src/game/hp.js": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+        "/src/game/puzzleVariety.js": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+        "/src/world/puzzleMaterials.js": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32"
+      }
+    },
+    {
+      "name": "tutorial-hp0",
+      "kind": "basic",
+      "diagnosticRepeatedPositionPlacement": true,
+      "actualPointerContacts": true,
+      "diagnosticGoalPlacement": true,
+      "placement": {
+        "wall": {
+          "x": -0.12,
+          "y": -0.12,
+          "w": 1.24,
+          "h": 0.24,
+          "materialId": "default"
+        },
+        "point": {
+          "x": 0.5,
+          "y": 1.395,
+          "tilt": {
+            "x": 0,
+            "y": -1
+          }
+        },
+        "distance": 1
+      },
+      "trace": [
+        {
+          "attempt": 0,
+          "timeMs": 1088,
+          "actor": {
+            "x": 0.5,
+            "y": 0.395,
+            "vx": 0,
+            "vy": 0.06844928279713591,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 65,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 1,
+          "remainingSec": null,
+          "hint": null,
+          "rackets": []
+        },
+        {
+          "attempt": 1,
+          "timeMs": 2800,
+          "actor": {
+            "x": 0.5,
+            "y": 0.395,
+            "vx": 0,
+            "vy": 0.06844928279713755,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 30,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 2,
+          "remainingSec": null,
+          "hint": null,
+          "rackets": []
+        },
+        {
+          "attempt": 2,
+          "timeMs": 4496,
+          "actor": {
+            "x": 0.5,
+            "y": 0.395,
+            "vx": 0,
+            "vy": 0.06844928279713755,
+            "r": 0.275
+          },
+          "hp": {
+            "value": 0,
+            "max": 100
+          },
+          "status": "playing",
+          "wallHits": 3,
+          "remainingSec": null,
+          "hint": null,
+          "rackets": []
+        }
+      ],
+      "original": {
+        "timeMs": 0,
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 0,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": []
+      },
+      "zero": {
+        "timeMs": 4496,
+        "actor": {
+          "x": 0.5,
+          "y": 0.395,
+          "vx": 0,
+          "vy": 0.06844928279713755,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 0,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 3,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": []
+      },
+      "after": {
+        "timeMs": 4800,
+        "actor": {
+          "x": 0.590480279806081,
+          "y": 1.42337741790367,
+          "vx": 0.5209614100490717,
+          "vy": 0.27242992304103125,
+          "r": 0.275
+        },
+        "hp": {
+          "value": 0,
+          "max": 100
+        },
+        "status": "playing",
+        "wallHits": 3,
+        "remainingSec": null,
+        "hint": null,
+        "rackets": []
+      },
+      "summary": {
+        "kind": "basic",
+        "impacts": 3,
+        "hp": 0,
+        "clearAt0": true
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/config/gameConfig.js": "392074b954f23ed480a779a3ee72c312e36d98db27c72a9801388828696dc93d",
+        "/src/ui/tutorial.js": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+        "/src/game/puzzleTutorial.js": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+        "/src/game/stagePlay.js": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+        "/src/world/puzzleStage.js": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+        "/src/game/hp.js": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+        "/src/world/puzzleMaterials.js": "98a6e05fc996cb74194a4430f15076ef8d1c36923123e4b53869c944bb424f32",
+        "/src/game/puzzleVariety.js": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e"
+      }
+    }
+  ]
+}
