@@ -1,0 +1,167 @@
+{
+  "version": "0.7.1",
+  "allMatch": true,
+  "comparisons": 20,
+  "rows": [
+    {
+      "folder": "public-ui",
+      "width": 312,
+      "path": "/style.css",
+      "loadedSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "localSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 312,
+      "path": "/src/ui/tutorial.js",
+      "loadedSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "localSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 312,
+      "path": "/src/config/gameConfig.js",
+      "loadedSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "localSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 312,
+      "path": "/src/game/puzzleHints.js",
+      "loadedSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "localSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 412,
+      "path": "/style.css",
+      "loadedSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "localSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 412,
+      "path": "/src/ui/tutorial.js",
+      "loadedSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "localSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 412,
+      "path": "/src/config/gameConfig.js",
+      "loadedSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "localSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 412,
+      "path": "/src/game/puzzleHints.js",
+      "loadedSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "localSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 576,
+      "path": "/style.css",
+      "loadedSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "localSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 576,
+      "path": "/src/config/gameConfig.js",
+      "loadedSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "localSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 576,
+      "path": "/src/ui/tutorial.js",
+      "loadedSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "localSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "match": true
+    },
+    {
+      "folder": "public-ui",
+      "width": 576,
+      "path": "/src/game/puzzleHints.js",
+      "loadedSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "localSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "match": true
+    },
+    {
+      "folder": "public-course-412",
+      "width": 412,
+      "path": "/style.css",
+      "loadedSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "localSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "match": true
+    },
+    {
+      "folder": "public-course-412",
+      "width": 412,
+      "path": "/src/config/gameConfig.js",
+      "loadedSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "localSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "match": true
+    },
+    {
+      "folder": "public-course-412",
+      "width": 412,
+      "path": "/src/ui/tutorial.js",
+      "loadedSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "localSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "match": true
+    },
+    {
+      "folder": "public-course-412",
+      "width": 412,
+      "path": "/src/game/puzzleHints.js",
+      "loadedSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "localSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "match": true
+    },
+    {
+      "folder": "public-offline",
+      "width": 412,
+      "path": "/style.css",
+      "loadedSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "localSHA256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+      "match": true
+    },
+    {
+      "folder": "public-offline",
+      "width": 412,
+      "path": "/src/config/gameConfig.js",
+      "loadedSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "localSHA256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+      "match": true
+    },
+    {
+      "folder": "public-offline",
+      "width": 412,
+      "path": "/src/ui/tutorial.js",
+      "loadedSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "localSHA256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+      "match": true
+    },
+    {
+      "folder": "public-offline",
+      "width": 412,
+      "path": "/src/game/puzzleHints.js",
+      "loadedSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "localSHA256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+      "match": true
+    }
+  ]
+}

@@ -339,6 +339,8 @@ async function offlineChecks() {
     const files = (await (await caches.open(name)).keys()).map(request => new URL(request.url).pathname);
     return { name, files };
   });
+  if (process.env.PUZZLE_HINT_PRECACHE_COUNT) assert.equal(cache.files.length, Number(process.env.PUZZLE_HINT_PRECACHE_COUNT), '公開確認の保存資材数が一致する');
+  if (process.env.PUZZLE_HINT_CACHE) assert.equal(cache.name, 'corogalism-' + process.env.PUZZLE_HINT_CACHE, '公開確認のキャッシュ世代が一致する');
   assert.ok(cache.files.some(file => file.endsWith('/src/game/puzzleHints.js')), 'ヒントの新モジュールを保存');
   await context.setOffline(true); await page.reload();
   await page.waitForFunction(() => !!window.__corogalism);

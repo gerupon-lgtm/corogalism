@@ -1,0 +1,106 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "96fb165edc78a79bdcf9d0b55a68b69dd13133d5f5a2b14ae2b08992cf10eebf"
+  },
+  {
+    "path": "style.css",
+    "status": 200,
+    "contentType": "text/css; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d"
+  },
+  {
+    "path": "src/main.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "3a6f22bff0ac782e4f257dad15c0ff3c256c08e4bc0a8c62d4727e643abbaf27"
+  },
+  {
+    "path": "src/ui/tutorial.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c"
+  },
+  {
+    "path": "src/game/puzzleHints.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405"
+  },
+  {
+    "path": "src/game/puzzleTutorial.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "bcb1777ebc5802f1363ceb56f2617a00e3fef7aadc0f942176433a6d159b9b8e"
+  },
+  {
+    "path": "src/config/gameConfig.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422"
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "eb6f3bc5993aae499cbdc3d72645a838701d59c9436a833e31ad84ce24eb4d3e"
+  },
+  {
+    "path": "sw.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "8fb53c882d93ec9163c4af032ab6166f29105e30a9875b666c1e60af64f41b2f"
+  },
+  {
+    "path": "floor-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "ffe6553e19f1f8c2f4273e292cb180527343e8a3f8af9dbf3f36e6db62dee98b"
+  },
+  {
+    "path": "ball-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "c20e404ebfc537a610e682de7388f729a6253a796ca587d457d9cb98e527a5bf"
+  },
+  {
+    "path": "racket-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "9ef66b2ac4826fd3e74d13308a3d86d9926dd69b386a760dae444b1b250811f2"
+  },
+  {
+    "path": "package.json",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "match": true,
+    "expectedType": true,
+    "sha256": "7b790832d5c62d952ff8b75d4047a9f9820e779f65caac7ac6ef9df838ec5549"
+  }
+]

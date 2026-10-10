@@ -1,0 +1,482 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "phase": "ui",
+  "version": "0.7.1",
+  "screenshotSeed": 1253254618,
+  "rows": [
+    {
+      "name": "lesson-ui",
+      "width": 312,
+      "index": 5,
+      "kind": "racketTiming",
+      "orientation": {
+        "rotation": 1,
+        "mirror": true
+      },
+      "card": {
+        "top": 475.4375,
+        "bottom": 625.4375,
+        "left": 19,
+        "right": 293,
+        "height": 150,
+        "width": 274,
+        "dataset": {
+          "lesson": "puzzle-racketTiming",
+          "hint": "route-0-左上"
+        },
+        "fields": {
+          "h2": {
+            "top": 486.640625,
+            "bottom": 512.234375,
+            "left": 74,
+            "right": 282,
+            "height": 25.59375,
+            "width": 208,
+            "text": "打ち返して、滑り込もう",
+            "hidden": false
+          },
+          ".tutorial-copy": {
+            "top": 514.4375,
+            "bottom": 553.4375,
+            "left": 30,
+            "right": 282,
+            "height": 39,
+            "width": 252,
+            "text": "ラケットで球を送り、切り返して戸を開こう。",
+            "hidden": false
+          },
+          ".tutorial-hint": {
+            "top": 566.8125,
+            "bottom": 585.65625,
+            "left": 30,
+            "right": 282,
+            "height": 18.84375,
+            "width": 252,
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "hidden": false
+          },
+          ".tutorial-context": {
+            "top": 599.046875,
+            "bottom": 614.4375,
+            "left": 30,
+            "right": 282,
+            "height": 15.390625,
+            "width": 252,
+            "text": "時間・げんき切れなし。綿で狙い直せます。",
+            "hidden": false
+          },
+          ".tutorial-play-state": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "text": "そのまま操作できます",
+            "hidden": true
+          }
+        },
+        "hintCount": 1
+      },
+      "hint": {
+        "id": "route-0-左上",
+        "phase": "route",
+        "text": "少し左上に傾けて、入口へ進もう。",
+        "target": {
+          "x": 5.3,
+          "y": 3.3
+        },
+        "direction": {
+          "x": -0.5850000000000001,
+          "y": -0.5850000000000001
+        }
+      },
+      "contact": {
+        "wallId": "timing-gate",
+        "diagnosticPositionPlacement": true,
+        "actualPointerContact": true,
+        "dynamicContact": true,
+        "afterHint": {
+          "id": "route-0-左下",
+          "phase": "route",
+          "text": "少し左下に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "direction": {
+            "x": -0.5850000000000001,
+            "y": 0.7
+          }
+        }
+      },
+      "pointerReaction": true,
+      "pauseAndSettingsFreeze": true,
+      "priorStageAdvance": "diagnostic-goal-placement"
+    },
+    {
+      "name": "six-lessons",
+      "width": 312,
+      "first": 5,
+      "count": 1,
+      "kinds": [
+        "racketTiming"
+      ],
+      "orientations": [
+        {
+          "rotation": 1,
+          "mirror": true
+        }
+      ],
+      "hints": [
+        {
+          "id": "route-0-左上",
+          "phase": "route",
+          "text": "少し左上に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "direction": {
+            "x": -0.5850000000000001,
+            "y": -0.5850000000000001
+          }
+        }
+      ],
+      "cardHeight": 150,
+      "physicalPhoneTest": false
+    },
+    {
+      "name": "browser-errors",
+      "width": 312,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/ui/tutorial.js": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+        "/src/config/gameConfig.js": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405"
+      }
+    },
+    {
+      "name": "lesson-ui",
+      "width": 412,
+      "index": 5,
+      "kind": "racketTiming",
+      "orientation": {
+        "rotation": 1,
+        "mirror": true
+      },
+      "card": {
+        "top": 583.046875,
+        "bottom": 733.046875,
+        "left": 23,
+        "right": 389,
+        "height": 150,
+        "width": 366,
+        "dataset": {
+          "lesson": "puzzle-racketTiming",
+          "hint": "route-0-左上"
+        },
+        "fields": {
+          "h2": {
+            "top": 594.25,
+            "bottom": 619.84375,
+            "left": 78,
+            "right": 378,
+            "height": 25.59375,
+            "width": 300,
+            "text": "打ち返して、滑り込もう",
+            "hidden": false
+          },
+          ".tutorial-copy": {
+            "top": 622.046875,
+            "bottom": 641.546875,
+            "left": 34,
+            "right": 378,
+            "height": 19.5,
+            "width": 344,
+            "text": "ラケットで球を送り、切り返して戸を開こう。",
+            "hidden": false
+          },
+          ".tutorial-hint": {
+            "top": 664.671875,
+            "bottom": 683.515625,
+            "left": 34,
+            "right": 378,
+            "height": 18.84375,
+            "width": 344,
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "hidden": false
+          },
+          ".tutorial-context": {
+            "top": 706.65625,
+            "bottom": 722.046875,
+            "left": 34,
+            "right": 378,
+            "height": 15.390625,
+            "width": 344,
+            "text": "時間・げんき切れなし。綿で狙い直せます。",
+            "hidden": false
+          },
+          ".tutorial-play-state": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "text": "そのまま操作できます",
+            "hidden": true
+          }
+        },
+        "hintCount": 1
+      },
+      "hint": {
+        "id": "route-0-左上",
+        "phase": "route",
+        "text": "少し左上に傾けて、入口へ進もう。",
+        "target": {
+          "x": 5.3,
+          "y": 3.3
+        },
+        "direction": {
+          "x": -0.5850000000000001,
+          "y": -0.5850000000000001
+        }
+      },
+      "contact": {
+        "wallId": "timing-gate",
+        "diagnosticPositionPlacement": true,
+        "actualPointerContact": true,
+        "dynamicContact": true,
+        "afterHint": {
+          "id": "route-0-左下",
+          "phase": "route",
+          "text": "少し左下に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "direction": {
+            "x": -0.5850000000000001,
+            "y": 0.7
+          }
+        }
+      },
+      "pointerReaction": true,
+      "pauseAndSettingsFreeze": true,
+      "priorStageAdvance": "diagnostic-goal-placement"
+    },
+    {
+      "name": "six-lessons",
+      "width": 412,
+      "first": 5,
+      "count": 1,
+      "kinds": [
+        "racketTiming"
+      ],
+      "orientations": [
+        {
+          "rotation": 1,
+          "mirror": true
+        }
+      ],
+      "hints": [
+        {
+          "id": "route-0-左上",
+          "phase": "route",
+          "text": "少し左上に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "direction": {
+            "x": -0.5850000000000001,
+            "y": -0.5850000000000001
+          }
+        }
+      ],
+      "cardHeight": 150,
+      "physicalPhoneTest": false
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/ui/tutorial.js": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+        "/src/config/gameConfig.js": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405"
+      }
+    },
+    {
+      "name": "lesson-ui",
+      "width": 576,
+      "index": 5,
+      "kind": "racketTiming",
+      "orientation": {
+        "rotation": 1,
+        "mirror": true
+      },
+      "card": {
+        "top": 651.046875,
+        "bottom": 801.046875,
+        "left": 71,
+        "right": 505,
+        "height": 150,
+        "width": 434,
+        "dataset": {
+          "lesson": "puzzle-racketTiming",
+          "hint": "route-0-左上"
+        },
+        "fields": {
+          "h2": {
+            "top": 662.25,
+            "bottom": 687.84375,
+            "left": 126,
+            "right": 494,
+            "height": 25.59375,
+            "width": 368,
+            "text": "打ち返して、滑り込もう",
+            "hidden": false
+          },
+          ".tutorial-copy": {
+            "top": 690.046875,
+            "bottom": 709.546875,
+            "left": 82,
+            "right": 494,
+            "height": 19.5,
+            "width": 412,
+            "text": "ラケットで球を送り、切り返して戸を開こう。",
+            "hidden": false
+          },
+          ".tutorial-hint": {
+            "top": 732.671875,
+            "bottom": 751.515625,
+            "left": 82,
+            "right": 494,
+            "height": 18.84375,
+            "width": 412,
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "hidden": false
+          },
+          ".tutorial-context": {
+            "top": 774.65625,
+            "bottom": 790.046875,
+            "left": 82,
+            "right": 494,
+            "height": 15.390625,
+            "width": 412,
+            "text": "時間・げんき切れなし。綿で狙い直せます。",
+            "hidden": false
+          },
+          ".tutorial-play-state": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "text": "そのまま操作できます",
+            "hidden": true
+          }
+        },
+        "hintCount": 1
+      },
+      "hint": {
+        "id": "route-0-左上",
+        "phase": "route",
+        "text": "少し左上に傾けて、入口へ進もう。",
+        "target": {
+          "x": 5.3,
+          "y": 3.3
+        },
+        "direction": {
+          "x": -0.5850000000000001,
+          "y": -0.5850000000000001
+        }
+      },
+      "contact": {
+        "wallId": "timing-gate",
+        "diagnosticPositionPlacement": true,
+        "actualPointerContact": true,
+        "dynamicContact": true,
+        "afterHint": {
+          "id": "route-0-左下",
+          "phase": "route",
+          "text": "少し左下に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "direction": {
+            "x": -0.5850000000000001,
+            "y": 0.7
+          }
+        }
+      },
+      "pointerReaction": true,
+      "pauseAndSettingsFreeze": true,
+      "priorStageAdvance": "diagnostic-goal-placement"
+    },
+    {
+      "name": "six-lessons",
+      "width": 576,
+      "first": 5,
+      "count": 1,
+      "kinds": [
+        "racketTiming"
+      ],
+      "orientations": [
+        {
+          "rotation": 1,
+          "mirror": true
+        }
+      ],
+      "hints": [
+        {
+          "id": "route-0-左上",
+          "phase": "route",
+          "text": "少し左上に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "direction": {
+            "x": -0.5850000000000001,
+            "y": -0.5850000000000001
+          }
+        }
+      ],
+      "cardHeight": 150,
+      "physicalPhoneTest": false
+    },
+    {
+      "name": "browser-errors",
+      "width": 576,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/config/gameConfig.js": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+        "/src/ui/tutorial.js": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405"
+      }
+    }
+  ]
+}
