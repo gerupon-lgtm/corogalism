@@ -50,7 +50,7 @@ export function createRenderer(canvas) {
     return viewportPx;
   }
 
-  function draw({ stage, actor, camera, pointerTilt, status = 'playing', shield = 0, trap = null, now = performance.now(), animationActive=true }) {
+  function draw({ stage, actor, camera, pointerTilt, status = 'playing', shield = 0, trap = null, now = performance.now(), animationActive=true, drawExtras }) {
     if (!prepareContexts()) return;
     const textureReady = wallTextureReady();
     if (stage !== cachedStage || textureReady !== cachedTextureReady) {
@@ -75,6 +75,7 @@ export function createRenderer(canvas) {
       ctx.drawImage(wallLayer,0,0,viewportPx,viewportPx);
     }
     drawFeatureFloors(ctx,stage,camera);
+    drawExtras?.(ctx,camera);
     if (stage.leaf && !stage.leaf.collected) { const at=camera.toScreen(stage.leaf.x,stage.leaf.y);drawLeaf(ctx,at.px,at.py,camera.toPx(.3)); }
     if (stage.hourglass && !stage.hourglass.collected) {
       const at=camera.toScreen(stage.hourglass.x,stage.hourglass.y);

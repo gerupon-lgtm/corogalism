@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'c079eb6c1e5974fc';
+self.PRECACHE_VERSION = 'b1a0ff3cf63c878d';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -31,6 +31,8 @@ self.PRECACHE_FILES = [
   "floor-lab.html",
   "index.html",
   "manifest.webmanifest",
+  "racket-lab.css",
+  "racket-lab.html",
   "src/audio/audioSettings.js",
   "src/audio/ballMaterialAudio.js",
   "src/audio/floorJingle.js",
@@ -58,6 +60,11 @@ self.PRECACHE_FILES = [
   "src/lab/floorLab.js",
   "src/lab/floorModel.js",
   "src/lab/floorVisuals.js",
+  "src/lab/racketBoot.js",
+  "src/lab/racketLab.js",
+  "src/lab/racketPhysics.js",
+  "src/lab/racketRender.js",
+  "src/lab/racketStage.js",
   "src/lab/timeTrial.js",
   "src/main.js",
   "src/maze/generator.js",

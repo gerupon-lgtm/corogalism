@@ -1,0 +1,457 @@
+[
+  {
+    "width": 312,
+    "height": 720,
+    "realPointer": true,
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.66608799083361,
+      "y": 0.7152776752637247,
+      "vx": 3.2300838269518253,
+      "vy": 0.5963228698342413,
+      "r": 0.275
+    },
+    "rackets": {
+      "before": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 1.9
+        },
+        {
+          "id": "horizontal",
+          "x": 1.2,
+          "y": 6
+        }
+      ],
+      "moving": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2.5170446697311566
+        },
+        {
+          "id": "horizontal",
+          "x": 1.8170449843630136,
+          "y": 6
+        }
+      ],
+      "neutral": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2.533599741541354
+        },
+        {
+          "id": "horizontal",
+          "x": 1.8336000646146629,
+          "y": 6
+        }
+      ]
+    },
+    "share": {
+      "page": "corogalism-racket-lab",
+      "revision": 1,
+      "version": "0.6.28",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4.5,
+      "racketRestitution": 1.2,
+      "aimAngleDeg": 40,
+      "motionTransfer": 0.2,
+      "ballTilt": 0.7,
+      "speedLimit": 24,
+      "cottonRestitution": 0.15,
+      "maxTiltAngleDeg": 30,
+      "layout": "practice",
+      "inputMode": "pointer",
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": true,
+      "completions": [],
+      "observations": []
+    },
+    "render": {
+      "hash": "e2e277aa008e750a1efdc4f30f7a8be3155a0758bc2364932dcf9b7a501b2d99",
+      "width": 266,
+      "height": 266,
+      "transform": 1
+    },
+    "errors": []
+  },
+  {
+    "shots": [
+      {
+        "axis": "y",
+        "offset": 0,
+        "actor": {
+          "x": 5.125,
+          "y": 2.55,
+          "vx": -4.24293565978786,
+          "vy": 0
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "y",
+        "offset": -0.75,
+        "actor": {
+          "x": 5.125,
+          "y": 2.0625,
+          "vx": -3.1900079296005934,
+          "vy": -2.797561871019974
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "y",
+        "offset": 0.75,
+        "actor": {
+          "x": 5.125,
+          "y": 3.0374999999999996,
+          "vx": -3.1900079296005934,
+          "vy": 2.797561871019974
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": 0,
+        "actor": {
+          "x": 2.85,
+          "y": 5.725,
+          "vx": 0,
+          "vy": -4.24293565978786
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": -0.75,
+        "actor": {
+          "x": 2.3625,
+          "y": 5.725,
+          "vx": -2.7975618710199766,
+          "vy": -3.1900079296005917
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": 0.75,
+        "actor": {
+          "x": 3.3375000000000004,
+          "y": 5.725,
+          "vx": 2.7975618710199766,
+          "vy": -3.1900079296005917
+        },
+        "hits": 1,
+        "halt": null
+      }
+    ],
+    "postRacketTilt": {
+      "vyBefore": 0,
+      "vyAfter": -0.0805444638943189
+    },
+    "cottonComparison": [
+      {
+        "scenario": "baseline",
+        "actor": {
+          "x": 6.291199683441447,
+          "y": 3.6566854534280613,
+          "vx": -3.458841980948364,
+          "vy": 0.7686315513218586
+        },
+        "halt": null
+      },
+      {
+        "scenario": "cotton",
+        "actor": {
+          "x": 6.6049999999999995,
+          "y": 3.6566854534280613,
+          "vx": 0,
+          "vy": 0.7686315513218586
+        },
+        "halt": null
+      }
+    ]
+  },
+  {
+    "width": 412,
+    "height": 915,
+    "realPointer": true,
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.6660881032976111,
+      "y": 0.7152776978258275,
+      "vx": 3.2300841283621278,
+      "vy": 0.596322930463919,
+      "r": 0.275
+    },
+    "rackets": {
+      "before": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 1.9
+        },
+        {
+          "id": "horizontal",
+          "x": 1.2,
+          "y": 6
+        }
+      ],
+      "moving": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2.517044738503147
+        },
+        {
+          "id": "horizontal",
+          "x": 1.8170449671700162,
+          "y": 6
+        }
+      ],
+      "neutral": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2.53359981215847
+        },
+        {
+          "id": "horizontal",
+          "x": 1.8336000469603835,
+          "y": 6
+        }
+      ]
+    },
+    "share": {
+      "page": "corogalism-racket-lab",
+      "revision": 1,
+      "version": "0.6.28",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4.5,
+      "racketRestitution": 1.2,
+      "aimAngleDeg": 40,
+      "motionTransfer": 0.2,
+      "ballTilt": 0.7,
+      "speedLimit": 24,
+      "cottonRestitution": 0.15,
+      "maxTiltAngleDeg": 30,
+      "layout": "practice",
+      "inputMode": "pointer",
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": true,
+      "completions": [],
+      "observations": []
+    },
+    "render": {
+      "hash": "aafe4fb0bf29f4a5f4dfce7baecd08956956d098b55386dcd2ba5a0f57c08243",
+      "width": 961,
+      "height": 961,
+      "transform": 2.625
+    },
+    "errors": []
+  },
+  {
+    "width": 576,
+    "height": 1024,
+    "realPointer": true,
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.6660880183020788,
+      "y": 0.7152777053557811,
+      "vx": 3.230083900175322,
+      "vy": 0.5963229526609007,
+      "r": 0.275
+    },
+    "rackets": {
+      "before": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 1.9
+        },
+        {
+          "id": "horizontal",
+          "x": 1.2,
+          "y": 6
+        }
+      ],
+      "moving": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2.517044921436641
+        },
+        {
+          "id": "horizontal",
+          "x": 1.817044921436641,
+          "y": 6
+        }
+      ],
+      "neutral": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2.533599999999999
+        },
+        {
+          "id": "horizontal",
+          "x": 1.8335999999999995,
+          "y": 6
+        }
+      ]
+    },
+    "share": {
+      "page": "corogalism-racket-lab",
+      "revision": 1,
+      "version": "0.6.28",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4.5,
+      "racketRestitution": 1.2,
+      "aimAngleDeg": 40,
+      "motionTransfer": 0.2,
+      "ballTilt": 0.7,
+      "speedLimit": 24,
+      "cottonRestitution": 0.15,
+      "maxTiltAngleDeg": 30,
+      "layout": "practice",
+      "inputMode": "pointer",
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": true,
+      "completions": [],
+      "observations": []
+    },
+    "render": {
+      "hash": "39ac870e2758b057ed19dd2d0acda2d84d22bd8720ff3ece72030f8c1677fe9b",
+      "width": 530,
+      "height": 530,
+      "transform": 1
+    },
+    "errors": []
+  },
+  {
+    "sensor": "granted",
+    "mode": "pointer",
+    "gestures": [
+      "sensor",
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "sensor": "denied",
+    "mode": "pointer",
+    "gestures": [
+      "sensor",
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "sensor": "silent",
+    "mode": "pointer",
+    "gestures": [
+      "sensor",
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "sensor": "unsupported",
+    "mode": "pointer",
+    "gestures": [
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "savedSettings": true,
+    "maxTiltAngleDeg": 31,
+    "soundEnabled": false
+  },
+  {
+    "oldRendererGuard": true
+  },
+  {
+    "offline": true,
+    "cache": {
+      "names": [
+        "corogalism-261a26c566c9fa1a"
+      ],
+      "files": 114,
+      "racketFiles": [
+        "/racket-lab.css",
+        "/racket-lab.html",
+        "/src/lab/racketBoot.js",
+        "/src/lab/racketLab.js",
+        "/src/lab/racketPhysics.js",
+        "/src/lab/racketRender.js",
+        "/src/lab/racketStage.js"
+      ]
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.8397007831414718,
+      "y": 0.8088189874004043,
+      "vx": 1.6269272600852507,
+      "vy": 1.4790252303433773,
+      "r": 0.275
+    },
+    "rackets": [
+      {
+        "id": "vertical",
+        "x": 5.4,
+        "y": 2.4484844660770966
+      },
+      {
+        "id": "horizontal",
+        "x": 1.8033327297513109,
+        "y": 6
+      }
+    ],
+    "errors": []
+  }
+]

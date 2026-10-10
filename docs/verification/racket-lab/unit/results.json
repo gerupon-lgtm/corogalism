@@ -1,0 +1,111 @@
+[
+  {
+    "files": [
+      "racket-physics.test.js",
+      "racket-stage.test.js",
+      "physics.test.js",
+      "resolveParams.test.js",
+      "cotton-wall.test.js"
+    ],
+    "tests": 39,
+    "pass": 39,
+    "fail": 0,
+    "exitCode": 0
+  },
+  {
+    "files": [
+      "audio-settings.test.js",
+      "balance.test.js",
+      "ball-materials.test.js",
+      "ballRotation.test.js",
+      "branch-floors.test.js"
+    ],
+    "tests": 25,
+    "pass": 25,
+    "fail": 0,
+    "elapsedMs": 6930,
+    "exitCode": 0
+  },
+  {
+    "files": [
+      "candy-full.test.js",
+      "challenge.test.js",
+      "escape-timing.test.js",
+      "exploration.test.js",
+      "feature-hint-position.test.js"
+    ],
+    "tests": 21,
+    "pass": 21,
+    "fail": 0,
+    "elapsedMs": 2514,
+    "exitCode": 0
+  },
+  {
+    "files": [
+      "features.test.js",
+      "first-sound.test.js",
+      "floor-difficulty.test.js",
+      "floor-lab.test.js",
+      "floor-learning.test.js"
+    ],
+    "tests": 27,
+    "pass": 27,
+    "fail": 0,
+    "elapsedMs": 4716,
+    "exitCode": 0
+  },
+  {
+    "files": [
+      "floor-presentation.test.js",
+      "floor-themes.test.js",
+      "floor-trial.test.js",
+      "hourglass.test.js",
+      "hp-display.test.js"
+    ],
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "elapsedMs": 2256,
+    "exitCode": 0
+  },
+  {
+    "files": [
+      "maze-variation.test.js",
+      "maze.test.js",
+      "onboarding.test.js",
+      "open-floor-pacing.test.js",
+      "open-plaza.test.js"
+    ],
+    "tests": 33,
+    "pass": 33,
+    "fail": 0,
+    "elapsedMs": 2252,
+    "exitCode": 0
+  },
+  {
+    "files": [
+      "phase2.test.js",
+      "playthrough.test.js",
+      "rubber-rebound.test.js",
+      "stableCalibration.test.js",
+      "stagePlay.test.js"
+    ],
+    "tests": 43,
+    "pass": 43,
+    "fail": 0,
+    "elapsedMs": 610,
+    "exitCode": 0
+  },
+  {
+    "files": [
+      "storage.test.js",
+      "tutorial.test.js",
+      "wall-clearance.test.js"
+    ],
+    "tests": 15,
+    "pass": 15,
+    "fail": 0,
+    "elapsedMs": 1725,
+    "exitCode": 0
+  }
+]

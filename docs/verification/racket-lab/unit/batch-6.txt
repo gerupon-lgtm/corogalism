@@ -1,0 +1,268 @@
+TAP version 13
+# Subtest: 経路の両端がスタートとゴールで、壁を通り抜けていない（F-201）
+ok 1 - 経路の両端がスタートとゴールで、壁を通り抜けていない（F-201）
+  ---
+  duration_ms: 19.9071
+  type: 'test'
+  ...
+# Subtest: 同一シードなら折れ回数も同じ（F-202）
+ok 2 - 同一シードなら折れ回数も同じ（F-202）
+  ---
+  duration_ms: 0.4358
+  type: 'test'
+  ...
+# Subtest: MazeGraph に path / pathLength / turns が入っている
+ok 3 - MazeGraph に path / pathLength / turns が入っている
+  ---
+  duration_ms: 0.4437
+  type: 'test'
+  ...
+# Subtest: 折れ回数は 7×7 で 0〜40 の範囲に収まる（実測は2〜32）
+ok 4 - 折れ回数は 7×7 で 0〜40 の範囲に収まる（実測は2〜32）
+  ---
+  duration_ms: 18.3487
+  type: 'test'
+  ...
+# Subtest: まっすぐな経路なら折れ回数は0
+ok 5 - まっすぐな経路なら折れ回数は0
+  ---
+  duration_ms: 0.9385
+  type: 'test'
+  ...
+# Subtest: 面が進むと制限時間が縮み、HP係数が下がり、危険な壁が増える（F-251）
+ok 6 - 面が進むと制限時間が縮み、HP係数が下がり、危険な壁が増える（F-251）
+  ---
+  duration_ms: 0.9075
+  type: 'test'
+  ...
+# Subtest: 難易度は下限で頭打ちになる（無限に厳しくならない）
+ok 7 - 難易度は下限で頭打ちになる（無限に厳しくならない）
+  ---
+  duration_ms: 0.5264
+  type: 'test'
+  ...
+# Subtest: 迷路サイズは難易度で変わらない（F-252）
+ok 8 - 迷路サイズは難易度で変わらない（F-252）
+  ---
+  duration_ms: 0.6176
+  type: 'test'
+  ...
+# Subtest: 制限時間は経路長に比例する（F-247）
+ok 9 - 制限時間は経路長に比例する（F-247）
+  ---
+  duration_ms: 1.4273
+  type: 'test'
+  ...
+# Subtest: HP初期値が折れ回数から正しく出る（F-211）
+ok 10 - HP初期値が折れ回数から正しく出る（F-211）
+  ---
+  duration_ms: 0.9039
+  type: 'test'
+  ...
+# Subtest: 閾値以下の接触ではHPが減らない（F-213）
+ok 11 - 閾値以下の接触ではHPが減らない（F-213）
+  ---
+  duration_ms: 1.5021
+  type: 'test'
+  ...
+# Subtest: 全力衝突でも1発の上限で止まる（F-214）
+ok 12 - 全力衝突でも1発の上限で止まる（F-214）
+  ---
+  duration_ms: 0.5363
+  type: 'test'
+  ...
+# Subtest: 無敵時間中の2発目は無効（F-215）
+ok 13 - 無敵時間中の2発目は無効（F-215）
+  ---
+  duration_ms: 1.0478
+  type: 'test'
+  ...
+# Subtest: 壁の素材でダメージが変わる（F-221）
+ok 14 - 壁の素材でダメージが変わる（F-221）
+  ---
+  duration_ms: 1.529
+  type: 'test'
+  ...
+# Subtest: 難易度の倍率がダメージに効く
+ok 15 - 難易度の倍率がダメージに効く
+  ---
+  duration_ms: 0.6867
+  type: 'test'
+  ...
+# Subtest: HPが0になると isDead が true
+ok 16 - HPが0になると isDead が true
+  ---
+  duration_ms: 2.8213
+  type: 'test'
+  ...
+# Subtest: 同じ runSeed なら面の並びが常に同じ（F-241）
+ok 17 - 同じ runSeed なら面の並びが常に同じ（F-241）
+  ---
+  duration_ms: 1.0475
+  type: 'test'
+  ...
+# Subtest: 面をクリアすると到達面数と合計タイムが積み上がる（F-246）
+ok 18 - 面をクリアすると到達面数と合計タイムが積み上がる（F-246）
+  ---
+  duration_ms: 2.452
+  type: 'test'
+  ...
+# Subtest: HP0でも時間切れでもランが終わる（F-243, F-248）
+ok 19 - HP0でも時間切れでもランが終わる（F-243, F-248）
+  ---
+  duration_ms: 0.5639
+  type: 'test'
+  ...
+# Subtest: コンティニューは回数制限があり、面数は維持される（F-244）
+ok 20 - コンティニューは回数制限があり、面数は維持される（F-244）
+  ---
+  duration_ms: 0.5953
+  type: 'test'
+  ...
+# Subtest: コンティニューを使うと記録の振り分けが変わる（F-245）
+ok 21 - コンティニューを使うと記録の振り分けが変わる（F-245）
+  ---
+  duration_ms: 0.7117
+  type: 'test'
+  ...
+# Subtest: 同じシード・同じ面なら素材配置も同じ（F-223）
+ok 22 - 同じシード・同じ面なら素材配置も同じ（F-223）
+  ---
+  duration_ms: 2.4958
+  type: 'test'
+  ...
+# Subtest: 面が進むと危険な壁が増える（F-223）
+ok 23 - 面が進むと危険な壁が増える（F-223）
+  ---
+  duration_ms: 4.0757
+  type: 'test'
+  ...
+# Subtest: 難易度を渡さなければ全部 default（フェーズ1の挙動を壊さない）
+ok 24 - 難易度を渡さなければ全部 default（フェーズ1の挙動を壊さない）
+  ---
+  duration_ms: 0.5097
+  type: 'test'
+  ...
+# Subtest: ボールはキャラの sizeRatio から半径を得る
+ok 25 - ボールはキャラの sizeRatio から半径を得る
+  ---
+  duration_ms: 0.5054
+  type: 'test'
+  ...
+# Subtest: 調整済みパラメータで、生成された迷路を完走できる（20シード）
+ok 26 - 調整済みパラメータで、生成された迷路を完走できる（20シード）
+  ---
+  duration_ms: 135.8459
+  type: 'test'
+  ...
+# Subtest: ゴール到達までにボールは盤内に留まる
+ok 27 - ゴール到達までにボールは盤内に留まる
+  ---
+  duration_ms: 27.2386
+  type: 'test'
+  ...
+# Subtest: ゴムだけ0.9まで反発し、他素材の上限0.7を維持
+ok 28 - ゴムだけ0.9まで反発し、他素材の上限0.7を維持
+  ---
+  duration_ms: 4.4844
+  type: 'test'
+  ...
+# Subtest: ゴムは無傷かつ無敵時間を作らず、直後の石の衝突がダメージになる
+ok 29 - ゴムは無傷かつ無敵時間を作らず、直後の石の衝突がダメージになる
+  ---
+  duration_ms: 2.0563
+  type: 'test'
+  ...
+# Subtest: 実物理で1マス以上反発し、先の石でダメージを受ける
+ok 30 - 実物理で1マス以上反発し、先の石でダメージを受ける
+  ---
+  duration_ms: 12.654
+  type: 'test'
+  ...
+# Subtest: 1回の値では確定せず、0.5秒の安定した姿勢を平均する
+ok 31 - 1回の値では確定せず、0.5秒の安定した姿勢を平均する
+  ---
+  duration_ms: 6.9516
+  type: 'test'
+  ...
+# Subtest: 持ち替え中は取り直し、最後に安定した姿勢を採用する
+ok 32 - 持ち替え中は取り直し、最後に安定した姿勢を採用する
+  ---
+  duration_ms: 0.8222
+  type: 'test'
+  ...
+# Subtest: センサー値の途切れと無効な値を安定時間に含めない
+ok 33 - センサー値の途切れと無効な値を安定時間に含めない
+  ---
+  duration_ms: 0.534
+  type: 'test'
+  ...
+# Subtest: 角度の180度境界をまたいでも平均が反転しない
+ok 34 - 角度の180度境界をまたいでも平均が反転しない
+  ---
+  duration_ms: 0.4234
+  type: 'test'
+  ...
+# Subtest: 中断時のresetで以前の測定時間を捨てる
+ok 35 - 中断時のresetで以前の測定時間を捨てる
+  ---
+  duration_ms: 0.6067
+  type: 'test'
+  ...
+# Subtest: 衝突通知は実際の衝突を伝え、音の有無で物理やHPを変えない
+ok 36 - 衝突通知は実際の衝突を伝え、音の有無で物理やHPを変えない
+  ---
+  duration_ms: 13.3061
+  type: 'test'
+  ...
+# Subtest: プラクティスはHP・制限時間なしで、標準の壁だけを使う
+ok 37 - プラクティスはHP・制限時間なしで、標準の壁だけを使う
+  ---
+  duration_ms: 1.7286
+  type: 'test'
+  ...
+# Subtest: 動き始めるまで時間は減らず、開始後は停止したボールにも時間が流れる
+ok 38 - 動き始めるまで時間は減らず、開始後は停止したボールにも時間が流れる
+  ---
+  duration_ms: 2.0539
+  type: 'test'
+  ...
+# Subtest: 制限時間を超えたフレームでゴールにいても時間切れを優先し、終了後は進行しない
+ok 39 - 制限時間を超えたフレームでゴールにいても時間切れを優先し、終了後は進行しない
+  ---
+  duration_ms: 1.5134
+  type: 'test'
+  ...
+# Subtest: 既存の物理衝突からHPが減り、閾値未満の接触は無傷
+ok 40 - 既存の物理衝突からHPが減り、閾値未満の接触は無傷
+  ---
+  duration_ms: 2.2746
+  type: 'test'
+  ...
+# Subtest: HP0はゴールより優先し、同一シードの再開ではHP・時間・素材を復元する
+ok 41 - HP0はゴールより優先し、同一シードの再開ではHP・時間・素材を復元する
+  ---
+  duration_ms: 2.6356
+  type: 'test'
+  ...
+# Subtest: 時間内かつHPが残っていればクリアできる
+ok 42 - 時間内かつHPが残っていればクリアできる
+  ---
+  duration_ms: 1.0584
+  type: 'test'
+  ...
+# Subtest: チャレンジは微速でも実移動で時計が始まり、時間無制限で進めない
+ok 43 - チャレンジは微速でも実移動で時計が始まり、時間無制限で進めない
+  ---
+  duration_ms: 2.7734
+  type: 'test'
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 477.5052

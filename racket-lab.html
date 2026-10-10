@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow"><link rel="manifest" href="manifest.webmanifest">
+  <title>ラケットと綿のおためし | コロガリズム</title>
+  <link rel="stylesheet" href="floor-lab.css"><link rel="stylesheet" href="racket-lab.css">
+</head><body><main>
+  <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし1 · v0.6.28</span></header>
+  <h1>ラケットと綿のおためし</h1>
+  <p class="intro">氷の上で返して、受け止めて、カップへ。いつものビー玉で比べよう。</p>
+  <div class="choices">
+    <label>比べる動き<select id="scenario"><option value="baseline">本編の動き：氷＋ゴム</option><option value="cotton">氷＋ゴム＋綿</option><option value="rackets" selected>氷＋ラケット＋綿</option></select></label>
+    <label>広場<select id="layout"><option value="relay">カップへ中継</option><option value="practice">打ち分けの広場</option></select></label>
+  </div>
+  <label class="check" id="cotton-choice"><input id="mix-cotton" type="checkbox" checked>一部の壁を綿にする</label>
+  <p id="hint">紫の縦ラケットは上下、横ラケットは左右へ。中心でまっすぐ、端で斜めに返せます。</p>
+  <div class="board"><canvas id="board" aria-label="ラケットと綿の試遊盤面。押した方向へ球とラケットが動きます。"></canvas><span id="pause-label" hidden>一時停止中</span></div>
+  <div class="readouts" aria-live="off"><span>経過 <strong id="elapsed">0.00</strong> 秒</span><span>返球 <strong id="racket-hits">0</strong> 回</span><span>速さ <strong id="speed">0.0</strong></span></div>
+  <p id="status" role="status">盤面の中心から進みたい方向を押し続けます。離すとラケットは止まり、球は滑ります。</p>
+  <div class="buttons"><button id="reset">スタートへ</button><button id="pause">一時停止</button><button id="sound" aria-pressed="true">音 ON</button></div>
+  <div class="buttons"><button id="sensor">傾きで遊ぶ</button><button id="pointer" hidden>画面操作へ</button><button id="calibrate" hidden>傾きを合わせる</button></div>
+  <p id="sound-note" class="note" role="status" hidden>この環境では音を再生できません。動きはそのまま試せます。</p>
+  <details><summary>打ち返しと動きを調整</summary>
+    <p class="note">開始値はおためし用です。球は本編と同じビー玉・氷・ゴムの設定。ラケットを使わなくてもゴールできます。</p>
+    <div class="numeric-grid">
+      <label>ラケットの速さ<input id="racket-speed" type="number" step="any" value="4"></label>
+      <label>ラケットの反発<input id="racket-restitution" type="number" step="any" value="1.08"></label>
+      <label>端で返す角度（度）<input id="aim-angle" type="number" step="any" value="55"></label>
+      <label>壁の動きを球へ乗せる倍率<input id="motion-transfer" type="number" step="any" value="0"></label>
+      <label>球へ働く傾き（1で本編）<input id="ball-tilt" type="number" step="any" value="1"></label>
+      <label>速度の上限（0で制限なし）<input id="speed-limit" type="number" step="any" value="30"></label>
+      <label>綿の反発（0で吸収・実効上限0.7）<input id="cotton-restitution" type="number" step="any" value="0"></label>
+      <label>最大入力になる傾き（度）<input id="max-tilt" type="number" step="any" value="25"></label>
+    </div>
+    <p id="settings-note" class="note" role="status"></p>
+    <p class="note">ラケットは線の範囲を移動します。球を挟むとそこで止まります。極端な速さで計算を続けられない時は、理由を表示して一時停止します。</p>
+    <div class="buttons"><button id="defaults">初期値に戻す</button><button id="copy">設定と結果をコピー</button></div>
+    <textarea id="settings-text" aria-label="共有する設定と試遊結果" readonly hidden></textarea><p id="copy-status" role="status"></p>
+    <button id="portrait-lock">縦向きで全画面</button><p id="portrait-note" class="note" role="status">対応端末では縦向きに固定します。</p>
+  </details>
+  <footer>時間制限・げんき消費なし。ゴールまでの経過を比べられます。<br><a href="ball-lab.html">ボール素材のおためし</a> · <a href="floor-lab.html">床のおためし</a></footer>
+</main><script type="module" src="src/lab/racketBoot.js"></script></body></html>
