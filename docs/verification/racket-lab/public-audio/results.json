@@ -1,0 +1,177 @@
+[
+  {
+    "actualAudioContext": true,
+    "realTime": true,
+    "pointerRolling": true,
+    "impactSetup": "debug placement followed by actual pointer",
+    "rolling": {
+      "enabled": true,
+      "volume": 0.6,
+      "failed": false,
+      "context": "running",
+      "rolling": true,
+      "voices": 0,
+      "buffers": 1,
+      "events": [
+        "roll:default:ice"
+      ]
+    },
+    "racket": {
+      "hits": 1,
+      "sound": {
+        "enabled": true,
+        "volume": 0.6,
+        "failed": false,
+        "context": "running",
+        "rolling": true,
+        "voices": 1,
+        "buffers": 2,
+        "events": [
+          "roll:default:ice",
+          "roll:default:ice",
+          "hit:default:rubber"
+        ]
+      }
+    },
+    "cotton": {
+      "enabled": true,
+      "volume": 0.6,
+      "failed": false,
+      "context": "running",
+      "rolling": false,
+      "voices": 0,
+      "buffers": 3,
+      "events": [
+        "roll:default:ice",
+        "roll:default:ice",
+        "hit:default:rubber",
+        "roll:default:ice",
+        "hit:default:cotton"
+      ]
+    },
+    "muteStops": true,
+    "pauseStops": true,
+    "blurStops": true,
+    "emitted": {
+      "starts": [
+        {
+          "loop": true,
+          "length": 88200,
+          "sampleRate": 22050,
+          "currentTime": 0.08,
+          "rms": 0.001440168388572112
+        },
+        {
+          "loop": true,
+          "length": 88200,
+          "sampleRate": 22050,
+          "currentTime": 0.76,
+          "rms": 0.001440168388572112
+        },
+        {
+          "loop": false,
+          "length": 11025,
+          "sampleRate": 22050,
+          "currentTime": 1.0613333333333332,
+          "rms": 0.027904667576453705
+        },
+        {
+          "loop": true,
+          "length": 88200,
+          "sampleRate": 22050,
+          "currentTime": 1.512,
+          "rms": 0.001440168388572112
+        },
+        {
+          "loop": false,
+          "length": 2646,
+          "sampleRate": 22050,
+          "currentTime": 1.792,
+          "rms": 0.003380911198346811
+        },
+        {
+          "loop": true,
+          "length": 88200,
+          "sampleRate": 22050,
+          "currentTime": 2.010666666666667,
+          "rms": 0.001440168388572112
+        },
+        {
+          "loop": true,
+          "length": 88200,
+          "sampleRate": 22050,
+          "currentTime": 2.4106666666666667,
+          "rms": 0.001440168388572112
+        },
+        {
+          "loop": true,
+          "length": 88200,
+          "sampleRate": 22050,
+          "currentTime": 2.8213333333333335,
+          "rms": 0.001440168388572112
+        }
+      ],
+      "stops": [
+        {
+          "loop": true,
+          "currentTime": 0.552
+        },
+        {
+          "loop": true,
+          "currentTime": 1.3706666666666667
+        },
+        {
+          "loop": false,
+          "currentTime": 1.3706666666666667
+        },
+        {
+          "loop": true,
+          "currentTime": 1.792
+        },
+        {
+          "loop": true,
+          "currentTime": 2.050666666666667
+        },
+        {
+          "loop": true,
+          "currentTime": 2.4506666666666668
+        },
+        {
+          "loop": true,
+          "currentTime": 2.832
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "unsupported": true,
+    "movement": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2527940934693935,
+      "y": 0.5,
+      "vx": 2.6596333812599764,
+      "vy": 0,
+      "r": 0.275
+    },
+    "sound": {
+      "enabled": true,
+      "volume": 0.6,
+      "failed": true,
+      "context": "none",
+      "rolling": false,
+      "voices": 0,
+      "buffers": 0,
+      "events": []
+    },
+    "visibleNote": true,
+    "errors": []
+  }
+]

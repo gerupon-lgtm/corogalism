@@ -3,6 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base=new URL(process.env.BASE_URL || 'http://127.0.0.1:8768/');
 const version=process.env.NOTICE_VERSION || '0.6.23';
+const expectedAssets=Number(process.env.PRECACHE_COUNT||107);
 const output=new URL(`../docs/verification/play-notices/v${version.replaceAll('.', '')}/`,import.meta.url);
 const browser=await chromium.launch({executablePath:process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const errors=[];
@@ -19,7 +20,7 @@ try{
   const names=(await caches.keys()).filter(n=>n.startsWith('corogalism-'));
   const files=await (await caches.open(names[0])).keys();return {names,files:files.length};
  });
- assert.equal(cache.files,107);
+ assert.equal(cache.files,expectedAssets);
  await context.setOffline(true);
  await page.goto(new URL('?debug=1&seed=77',base).href);
  await page.clock.install();await page.clock.pauseAt(Date.now()+1000);
@@ -68,6 +69,6 @@ try{
  assert.deepEqual(errors,[]);
  await mkdir(output,{recursive:true});
  await writeFile(new URL(`${base.protocol==='https:'?'public':'local'}-offline.json`,output),JSON.stringify({version,...cache,floors,audio,labs:2,plaza,errors},null,2)+'\n');
- console.log('PASS offline:107 assets, five external floor messages, BGM, pause/guide, both labs, new main plaza');
+ console.log(`PASS offline:${expectedAssets} assets, five external floor messages, BGM, pause/guide, both labs, new main plaza`);
  await context.close();
 }finally{await browser.close();}

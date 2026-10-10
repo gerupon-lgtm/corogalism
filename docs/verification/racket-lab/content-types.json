@@ -1,0 +1,26 @@
+[
+  {
+    "path": "racket-lab.html",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "correct": true
+  },
+  {
+    "path": "src/lab/racketLab.js",
+    "status": 200,
+    "type": "application/javascript; charset=utf-8",
+    "correct": true
+  },
+  {
+    "path": "racket-lab.css",
+    "status": 200,
+    "type": "text/css; charset=utf-8",
+    "correct": true
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "type": "application/javascript; charset=utf-8",
+    "correct": true
+  }
+]

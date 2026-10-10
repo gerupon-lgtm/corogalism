@@ -1,3 +1,10 @@
+# v0.6.28 ラケットと綿のおためし（2026-10-10）
+
+- [専用試遊](https://corogalism.sikumilab.com/racket-lab.html)を追加。本編やさしいのビー玉・氷・ゴムを基準に、綿・縦横ラケットを3状態／2広場で比較。おためし1・共有revision1、表示版v0.6.28。[仕様](racket-lab.md)、[確認と未確認](verification/racket-lab.md)。
+- 217テスト、ローカル／公開各3幅の画面操作・開始からゴール・中心／端・センサー4模擬・音源開始停止・114資材の未訪問URLオフラインを確認。数値編集・共有・ゴール後切替も正常。本編のルール・生成・物理・記録は維持。
+- アプリ18fc1ca、[Pages38011239381成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38011239381)。キャッシュb1a0ff3cf63c878d・114資材。公開117資材すべてHTTP200・SHA-256一致。[照合](verification/racket-lab/deploy-hashes.json)、[公開操作](verification/racket-lab/public/results.json)、[音](verification/racket-lab/public-audio/results.json)。
+- 本編は公開12面2条件の復元画像0差・操作・BGM・幅変更と、114資材の完全オフラインで練習床5種・盤面外通知・ガイド・両ラボ・広場生成と操作が正常。通路をたどる自動操作ではラケットが遅くなった結果も保持。実機のラケットの恩恵・音の自然さ・楽しさは未確認。
+
 # v0.6.27 綿壁のおためし（2026-10-10）
 
 - ボールおためし8へ綿と部分混在を追加。直接開始は[スーパーボール＋ゴム＋氷＋綿](https://corogalism.sikumilab.com/ball-lab.html?preset=cotton)。ボールrevision8／床revision9、表示版v0.6.27。[仕様](cotton-wall-lab.md)、[確認・公開状態](verification/cotton-wall.md)。
