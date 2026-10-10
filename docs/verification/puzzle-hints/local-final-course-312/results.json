@@ -1,0 +1,4764 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "course",
+  "version": "0.7.1",
+  "screenshotSeed": 1253254618,
+  "rows": [
+    {
+      "name": "screenshot-sixth-full-course",
+      "width": 312,
+      "height": 720,
+      "actualPointer": true,
+      "teleportDuringCourse": false,
+      "previousLessons": "diagnostic-goal-placement",
+      "automatedController": true,
+      "humanOrPhysicalPhoneTest": false,
+      "stageSeed": 48,
+      "before": {
+        "seed": 48,
+        "timeMs": 0,
+        "wallHits": 0,
+        "started": false,
+        "audio": {
+          "enabled": false,
+          "context": "none",
+          "loaded": false,
+          "buffers": 0,
+          "music": false,
+          "rolling": false,
+          "voices": 0,
+          "musicDelaySec": 0.8249999999999993,
+          "bgmVolume": 0.6,
+          "seVolume": 0.8,
+          "events": []
+        },
+        "hourglass": null,
+        "leaf": null,
+        "rest": null,
+        "rests": [],
+        "sticky": [],
+        "trap": null,
+        "shield": 0,
+        "extendedSec": 0,
+        "level": "easy",
+        "theme": {
+          "id": "puzzle",
+          "puzzleKind": "racketTiming",
+          "label": "打ち返して滑りこむ",
+          "firstVisit": true,
+          "learning": true,
+          "introHint": "ラケットの勢いと、切り返しを組み合わせよう。"
+        },
+        "recovery": null,
+        "calibration": null,
+        "needsCalibration": true,
+        "tutorialOpen": true,
+        "tutorialHint": {
+          "id": "route-0-左上",
+          "phase": "route",
+          "text": "少し左上に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "direction": {
+            "x": -0.5850000000000001,
+            "y": -0.5850000000000001
+          }
+        },
+        "tilt": {
+          "x": 0,
+          "y": 0
+        },
+        "cleared": false,
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "mode": "pointer",
+        "gameMode": "tutorial",
+        "screen": "game",
+        "stageIndex": 1,
+        "wakeLock": {
+          "supported": true,
+          "active": true,
+          "held": true,
+          "pending": false,
+          "lastError": null
+        },
+        "status": "playing",
+        "remainingSec": null,
+        "limitSec": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "run": null,
+        "actor": {
+          "x": 6.5,
+          "y": 6.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "maze": {
+          "size": 7,
+          "path": [
+            {
+              "x": 6,
+              "y": 6
+            },
+            {
+              "x": 6,
+              "y": 5
+            },
+            {
+              "x": 6,
+              "y": 4
+            },
+            {
+              "x": 6,
+              "y": 3
+            },
+            {
+              "x": 6,
+              "y": 2
+            },
+            {
+              "x": 6,
+              "y": 1
+            },
+            {
+              "x": 5,
+              "y": 1
+            },
+            {
+              "x": 4,
+              "y": 1
+            },
+            {
+              "x": 3,
+              "y": 1
+            },
+            {
+              "x": 3,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 2
+            },
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 1,
+              "y": 3
+            },
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 2,
+              "y": 4
+            }
+          ],
+          "cells": [
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            }
+          ],
+          "variation": {
+            "puzzleKind": "racketTiming",
+            "puzzleEase": "relaxed",
+            "puzzleTutorial": true,
+            "puzzleFirstVisit": true,
+            "difficulty": null,
+            "shape": "puzzle"
+          }
+        },
+        "zones": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08,
+            "minAccelK": 0.28,
+            "transitionSpeed": 1.2,
+            "forceX": 0,
+            "forceY": 0
+          }
+        ],
+        "goal": {
+          "x": 2.5,
+          "y": 4.5
+        },
+        "walls": [
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 1.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 2.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 4.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 4.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          }
+        ],
+        "puzzle": {
+          "kind": "racketTiming",
+          "ease": "relaxed",
+          "label": "打ち返して滑りこむ",
+          "hint": "ラケットの勢いと、切り返しを組み合わせよう。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 2,
+          "timingCount": 1,
+          "operationDistance": 2,
+          "openingSeconds": 0.5,
+          "rotation": 1,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 6.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 2.5,
+              "y": 4.5
+            },
+            "course": [
+              {
+                "x": 5.3,
+                "y": 3.3
+              },
+              {
+                "x": 3.55,
+                "y": 0.5
+              },
+              {
+                "x": 3.55,
+                "y": 5.5
+              },
+              {
+                "x": 0.5,
+                "y": 5.5
+              },
+              {
+                "x": 0.5,
+                "y": 4.5
+              },
+              {
+                "x": 2.5,
+                "y": 4.5
+              },
+              {
+                "x": 2.5,
+                "y": 4.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 4.395,
+                "y": 2.6500000000000004
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "timing-gate": 1.88
+              },
+              "closed": {
+                "timing-gate": -0.1200000000000001
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 4.65,
+                "y": 1
+              },
+              "to": {
+                "x": 3.35,
+                "y": 1
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.3,
+                  "y": 3.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.3,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 1.7000000000000002
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": 0.7
+              },
+              "condition": {
+                "axis": "x",
+                "max": 3.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.55,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.55,
+                  "y": 5.5
+                },
+                {
+                  "x": 0.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 0.5,
+                  "y": 4.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 4.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 4.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "rackets": [
+          {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.88,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-vertical",
+            "x": 4.3,
+            "y": 0.45999999999999996,
+            "w": 1.6000000000000005,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 4.3,
+            "max": 4.75,
+            "home": 4.3,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.45999999999999996,
+            "y": 1.3000000000000007,
+            "w": 0.2400000000000002,
+            "h": 1.5999999999999996,
+            "axis": "x",
+            "min": 0.45999999999999996,
+            "max": 3.3099999999999996,
+            "home": 0.45999999999999996,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ],
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        },
+        "puzzleCourse": {
+          "index": 5,
+          "isLast": true,
+          "lesson": {
+            "id": "puzzle-racketTiming",
+            "puzzleKind": "racketTiming",
+            "puzzleEase": "relaxed",
+            "title": "打ち返して、滑り込もう",
+            "body": "ラケットで球を送り、切り返して戸を開こう。",
+            "art": "timing-demo",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "本編では、普通の迷路・一つのしかけ・組み合わせが登場します。やさしいでも通常でも遊べます。",
+            "nextLabel": "あそび方を終える"
+          }
+        }
+      },
+      "trace": [
+        {
+          "step": "follow-initial-displayed-direction",
+          "recommendation": {
+            "id": "route-0-左上",
+            "phase": "route",
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.5850000000000001,
+              "y": -0.5850000000000001
+            }
+          },
+          "distanceBefore": 3.4176014981270124,
+          "distanceAfter": 3.331537043475543,
+          "timeMs": 128,
+          "actor": {
+            "x": 6.432972031249235,
+            "y": 6.4329719833501136,
+            "vx": -0.5190688598522334,
+            "vy": -0.5190692307860693,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.7449803450382093,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.5850000749833828,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "route-0-左上",
+            "phase": "route",
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.351419013066495,
+              "y": -0.35141884614626884
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "tick": 0,
+          "timeMs": 144,
+          "actor": {
+            "x": 6.423729049529457,
+            "y": 6.423728995812761,
+            "vx": -0.5776863574861331,
+            "vy": -0.5776867210845478,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.72728241798376,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.10612044090308,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "route-0-左上",
+            "phase": "route",
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.32504113913124016,
+              "y": -0.32504097551195354
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "tick": 60,
+          "timeMs": 1104,
+          "actor": {
+            "x": 5.4652923672487494,
+            "y": 5.348592288245996,
+            "vx": -0.6466719916101766,
+            "vy": -1.2356593806444502,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.3880900430811685,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.11790436011199779,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "route-0-",
+            "phase": "route",
+            "text": "水平に戻して、球を落ち着かせよう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": 0.07865730525306654,
+              "y": -0.04161341782174044
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "tick": 120,
+          "timeMs": 2064,
+          "actor": {
+            "x": 5.288899837382861,
+            "y": 4.153462017517235,
+            "vx": 0.008882689311363864,
+            "vy": -1.2476890223627497,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.2923599692167356,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.09419068871246994,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "coast-0",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "tick": 180,
+          "timeMs": 3024,
+          "actor": {
+            "x": 5.2990171859692605,
+            "y": 3.3636803943991804,
+            "vx": 0.003201446135290826,
+            "vy": -0.21249893057402364,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.5484464602001775,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.1679561493026921,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-0-下",
+            "phase": "brake",
+            "text": "弱く下に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.0015506603729667817,
+              "y": 0.119927683975539
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 5.3,
+            "y": 3.3
+          },
+          "reached": true,
+          "timeMs": 3264,
+          "actor": {
+            "x": 5.299537102795811,
+            "y": 3.329593300209518,
+            "vx": 0.0014726960343370203,
+            "vy": -0.09543017599940065,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.5747232318859965,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.07134977432843304,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-0-下",
+            "phase": "brake",
+            "text": "弱く下に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.0015506603729667817,
+              "y": 0.119927683975539
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "weak-left-up",
+          "tilt": {
+            "x": -0.2,
+            "y": -0.3
+          },
+          "tick": 0,
+          "timeMs": 3280,
+          "actor": {
+            "x": 5.29901173224227,
+            "y": 3.3272767592647026,
+            "vx": -0.03283565959634118,
+            "vy": -0.14478380905098734,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.562948130952539,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.7359438083410913,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-0-下",
+            "phase": "brake",
+            "text": "弱く下に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 5.3,
+              "y": 3.3
+            },
+            "direction": {
+              "x": -0.0015506603729667817,
+              "y": 0.119927683975539
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "weak-left-up",
+          "tilt": {
+            "x": -0.2,
+            "y": -0.3
+          },
+          "tick": 15,
+          "timeMs": 3520,
+          "actor": {
+            "x": 5.20446639385637,
+            "y": 3.1633386076738113,
+            "vx": -0.6629650705020215,
+            "vy": -1.084527620591706,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.279216255154714,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.1999995393344176,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "prepare-timing-gate-forward-左上",
+            "phase": "build-momentum",
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "target": {
+              "x": 4.65,
+              "y": 1.2
+            },
+            "direction": {
+              "x": -0.2,
+              "y": -0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "weak-left-up",
+          "tilt": {
+            "x": -0.2,
+            "y": -0.3
+          },
+          "tick": 30,
+          "timeMs": 3760,
+          "actor": {
+            "x": 4.991784467793495,
+            "y": 2.82324094354543,
+            "vx": -1.059808225965314,
+            "vy": -1.6755705326604302,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.9912163365810618,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.1999996655607525,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "prepare-timing-gate-forward-左上",
+            "phase": "build-momentum",
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "target": {
+              "x": 4.65,
+              "y": 1.2
+            },
+            "direction": {
+              "x": -0.2,
+              "y": -0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "weak-left-up",
+          "tilt": {
+            "x": -0.2,
+            "y": -0.3
+          },
+          "tick": 45,
+          "timeMs": 4000,
+          "actor": {
+            "x": 4.697596108021236,
+            "y": 2.361871347648871,
+            "vx": -1.3610584849345209,
+            "vy": -2.1234219810381045,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.7032164168464732,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.1999996655607872,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "prepare-timing-gate-forward-左上",
+            "phase": "build-momentum",
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "target": {
+              "x": 4.65,
+              "y": 1.2
+            },
+            "direction": {
+              "x": -0.2,
+              "y": -0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "weak-left-up",
+          "tilt": {
+            "x": -0.2,
+            "y": -0.3
+          },
+          "tick": 60,
+          "timeMs": 4240,
+          "actor": {
+            "x": 4.395029922371889,
+            "y": 1.8031665940938186,
+            "vx": 0.0018701482430489682,
+            "vy": -2.502524325769918,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.41521649711188424,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.1999996655607872,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "prepare-timing-gate-forward-左上",
+            "phase": "build-momentum",
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "target": {
+              "x": 4.65,
+              "y": 1.2
+            },
+            "direction": {
+              "x": -0.2,
+              "y": -0.13386405340353688
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "cutback-card",
+          "card": {
+            "top": 475.4375,
+            "bottom": 625.4375,
+            "left": 19,
+            "right": 293,
+            "height": 150,
+            "width": 274,
+            "dataset": {
+              "lesson": "puzzle-racketTiming",
+              "hint": "cut-timing-gate"
+            },
+            "fields": {
+              "h2": {
+                "top": 486.640625,
+                "bottom": 512.234375,
+                "left": 74,
+                "right": 282,
+                "height": 25.59375,
+                "width": 208,
+                "text": "打ち返して、滑り込もう",
+                "hidden": false
+              },
+              ".tutorial-copy": {
+                "top": 514.4375,
+                "bottom": 553.4375,
+                "left": 30,
+                "right": 282,
+                "height": 39,
+                "width": 252,
+                "text": "ラケットで球を送り、切り返して戸を開こう。",
+                "hidden": false
+              },
+              ".tutorial-hint": {
+                "top": 566.8125,
+                "bottom": 585.65625,
+                "left": 30,
+                "right": 282,
+                "height": 18.84375,
+                "width": 252,
+                "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+                "hidden": false
+              },
+              ".tutorial-context": {
+                "top": 599.046875,
+                "bottom": 614.4375,
+                "left": 30,
+                "right": 282,
+                "height": 15.390625,
+                "width": 252,
+                "text": "時間・げんき切れなし。綿で狙い直せます。",
+                "hidden": false
+              },
+              ".tutorial-play-state": {
+                "top": 0,
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "height": 0,
+                "width": 0,
+                "text": "そのまま操作できます",
+                "hidden": true
+              }
+            },
+            "hintCount": 1
+          },
+          "timeMs": 4480,
+          "actor": {
+            "x": 4.3950000000000005,
+            "y": 1.1553430112688519,
+            "vx": 0.022751159897655446,
+            "vy": -2.86352564786933,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.1272165773772953,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.1999996655607872,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "weak-left-up",
+          "tilt": {
+            "x": -0.2,
+            "y": -0.3
+          },
+          "tick": 75,
+          "timeMs": 4480,
+          "actor": {
+            "x": 4.3950000000000005,
+            "y": 1.1553430112688519,
+            "vx": 0.022751159897655446,
+            "vy": -2.86352564786933,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.1272165773772953,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.1999996655607872,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "gentle-down-reverse-and-left",
+          "tilt": {
+            "x": -0.7,
+            "y": 0.3
+          },
+          "tick": 0,
+          "timeMs": 4496,
+          "actor": {
+            "x": 4.3950000000000005,
+            "y": 1.1098091475320457,
+            "vx": 0.03423386856293191,
+            "vy": -2.8458664835503797,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.13240017386555625,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.323974780516309,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "gentle-down-reverse-and-left",
+          "tilt": {
+            "x": -0.7,
+            "y": 0.3
+          },
+          "tick": 15,
+          "timeMs": 4736,
+          "actor": {
+            "x": 4.3950000000000005,
+            "y": 0.9765978911284027,
+            "vx": 0.03963531541171341,
+            "vy": -2.2357489633924943,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.4123430620146172,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 1.1999994272760204,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "gentle-down-reverse-and-left",
+          "tilt": {
+            "x": -0.7,
+            "y": 0.3
+          },
+          "tick": 30,
+          "timeMs": 4976,
+          "actor": {
+            "x": 4.3950000000000005,
+            "y": 0.9765972450678786,
+            "vx": 0.06489662757660566,
+            "vy": -1.552661481397636,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.7003429795576384,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 1.1999996655607248,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "gentle-down-reverse-and-left",
+          "tilt": {
+            "x": -0.7,
+            "y": 0.3
+          },
+          "tick": 45,
+          "timeMs": 5216,
+          "actor": {
+            "x": 4.394999999,
+            "y": 0.976596919367165,
+            "vx": -0.04031564725875552,
+            "vy": -0.699281994882946,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.9883428992922269,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 1.1999996655607872,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "gentle-down-reverse-and-left",
+          "tilt": {
+            "x": -0.7,
+            "y": 0.3
+          },
+          "tick": 60,
+          "timeMs": 5456,
+          "actor": {
+            "x": 4.320884483285291,
+            "y": 1.0845375067194538,
+            "vx": -0.7755258945584195,
+            "vy": 0.6437949588418616,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.2763428190268173,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 1.199999665560794,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "gentle-down-reverse-and-left",
+          "tilt": {
+            "x": -0.7,
+            "y": 0.3
+          },
+          "tick": 75,
+          "timeMs": 5696,
+          "actor": {
+            "x": 3.983603072323298,
+            "y": 1.250919349408541,
+            "vx": -2.0485818980252004,
+            "vy": 0.9550498935048449,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.564342738761408,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 1.199999665560794,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "gentle-down-reverse-and-left",
+          "tilt": {
+            "x": -0.7,
+            "y": 0.3
+          },
+          "tick": 90,
+          "timeMs": 5936,
+          "actor": {
+            "x": 3.358200711771994,
+            "y": 1.5369837247651392,
+            "vx": -3.0518827295078714,
+            "vy": 1.38142308998188,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.8523426584959986,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 1.199999665560794,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 0.5
+          },
+          "tick": 0,
+          "timeMs": 5952,
+          "actor": {
+            "x": 3.3098232778834147,
+            "y": 1.5584899872256037,
+            "vx": -3.023589618036194,
+            "vy": 1.3441414037790345,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.8309033275040687,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.3399581869956156,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "cut-timing-gate",
+            "phase": "cutback",
+            "urgent": true,
+            "text": "今、左へ寄せつつ弱く下へ切り返そう。",
+            "target": {
+              "x": 3.35,
+              "y": 1
+            },
+            "direction": {
+              "x": -0.7,
+              "y": 0.3
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 0.5
+          },
+          "tick": 60,
+          "timeMs": 6912,
+          "actor": {
+            "x": 2.9698689569246786,
+            "y": 1.0769201383558549,
+            "vx": 1.1379862758817727,
+            "vy": -1.2028309935597128,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.6169611358010717,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.01211585971889334,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "route-2-右上",
+            "phase": "route",
+            "text": "少し右上に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 3.55,
+              "y": 0.5
+            },
+            "direction": {
+              "x": 0.16529674847386405,
+              "y": -0.06765065661120005
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 0.5
+          },
+          "tick": 120,
+          "timeMs": 7872,
+          "actor": {
+            "x": 3.5227506130189674,
+            "y": 0.523977289076259,
+            "vx": 0.0950870903127474,
+            "vy": -0.08596535671265972,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.9444406549387453,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.07632158853144305,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-2-左下",
+            "phase": "brake",
+            "text": "弱く左下に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 3.55,
+              "y": 0.5
+            },
+            "direction": {
+              "x": -0.1168419117188271,
+              "y": 0.12059305690286744
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 0.5
+          },
+          "reached": true,
+          "timeMs": 7952,
+          "actor": {
+            "x": 3.529160143155422,
+            "y": 0.5182174161874527,
+            "vx": 0.07114978601921408,
+            "vy": -0.06366702933555096,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.9494489576605848,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.05451309494089451,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-2-左下",
+            "phase": "brake",
+            "text": "弱く左下に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 3.55,
+              "y": 0.5
+            },
+            "direction": {
+              "x": -0.1168419117188271,
+              "y": 0.12059305690286744
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 5.5
+          },
+          "tick": 0,
+          "timeMs": 7968,
+          "actor": {
+            "x": 3.530235389887685,
+            "y": 0.5189062127452702,
+            "vx": 0.06720292076644624,
+            "vy": 0.04304978486359525,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 0.9747056552976153,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 1.5785436023144084,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-2-左下",
+            "phase": "brake",
+            "text": "弱く左下に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 3.55,
+              "y": 0.5
+            },
+            "direction": {
+              "x": -0.1168419117188271,
+              "y": 0.12059305690286744
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 5.5
+          },
+          "tick": 60,
+          "timeMs": 8928,
+          "actor": {
+            "x": 3.550255590986275,
+            "y": 1.561462939663405,
+            "vx": 0.0018742100187195293,
+            "vy": 1.2445038164173334,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.3926964485664233,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.10082132860059212,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "route-3-下",
+            "phase": "route",
+            "text": "少し下に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 3.55,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -0.006018605616199231,
+              "y": 0.08056384991437159
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 5.5
+          },
+          "tick": 120,
+          "timeMs": 9888,
+          "actor": {
+            "x": 3.550098070294267,
+            "y": 2.758791601446369,
+            "vx": -0.0003374255111325562,
+            "vy": 1.2477846363353968,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.4840621431544634,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.0939917924460687,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "coast-3",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 3.55,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 5.5
+          },
+          "tick": 180,
+          "timeMs": 10848,
+          "actor": {
+            "x": 3.5499957812076057,
+            "y": 3.9566768376670316,
+            "vx": -0.0000016853853823378631,
+            "vy": 1.2477997603058033,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.5742694336451357,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.09396069670376817,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "coast-3",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 3.55,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 5.5
+          },
+          "tick": 240,
+          "timeMs": 11808,
+          "actor": {
+            "x": 3.5499995388780117,
+            "y": 5.133593883299311,
+            "vx": 0.0000019999485870863964,
+            "vy": 1.0179044431481887,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.5799697872474905,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.4925245555409685,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "coast-3",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 3.55,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 3.55,
+            "y": 5.5
+          },
+          "reached": true,
+          "timeMs": 12592,
+          "actor": {
+            "x": 3.5500000024176988,
+            "y": 5.469569597083086,
+            "vx": 1.0457416286030536e-7,
+            "vy": 0.09824048706566989,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.3444455003761338,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.07360001798431548,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-3-上",
+            "phase": "brake",
+            "text": "弱く上に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 3.55,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -3.078206991507872e-7,
+              "y": -0.1216020055723677
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "timeMs": 12608,
+          "actor": {
+            "x": 3.5483962609501143,
+            "y": 5.47106131385475,
+            "vx": -0.10023384172403432,
+            "vy": 0.09323229822900289,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.3433320767138446,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.06958897889307314,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-3-上",
+            "phase": "brake",
+            "text": "弱く上に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 3.55,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -3.078206991507872e-7,
+              "y": -0.1216020055723677
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 5.5
+          },
+          "tick": 60,
+          "timeMs": 13568,
+          "actor": {
+            "x": 2.5002050523323747,
+            "y": 5.5002687146215825,
+            "vx": -1.2445898951880732,
+            "vy": 0.0030996032858470945,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.316041666702126,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -0.007174645439936289,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "route-4-左",
+            "phase": "route",
+            "text": "少し左に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 0.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": -0.08454488085575665,
+              "y": -0.008751175438963513
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 5.5
+          },
+          "tick": 120,
+          "timeMs": 14528,
+          "actor": {
+            "x": 1.302861812325402,
+            "y": 5.500147834030321,
+            "vx": -1.2477850103792076,
+            "vy": -0.0004912954269858773,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.3146838442510924,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.0003538466654684491,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "coast-4",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 0.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 5.5
+          },
+          "tick": 180,
+          "timeMs": 15488,
+          "actor": {
+            "x": 0.5558488165176748,
+            "y": 5.49999939594191,
+            "vx": -0.1852919482968794,
+            "vy": -0.000003922548847092834,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.314840064013115,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.00001095961965624781,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-4-右",
+            "phase": "brake",
+            "text": "弱く右に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 0.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.12133510722808884,
+              "y": 0.00002839729967822911
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 5.5
+          },
+          "reached": true,
+          "timeMs": 15680,
+          "actor": {
+            "x": 0.5302975137616239,
+            "y": 5.499999219068499,
+            "vx": -0.09779293771019491,
+            "vy": 5.598103065966815e-7,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.3148411226485255,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.000002035999188687576,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-4-右",
+            "phase": "brake",
+            "text": "弱く右に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 0.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.12133510722808884,
+              "y": 0.00002839729967822911
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 4.5
+          },
+          "tick": 0,
+          "timeMs": 15696,
+          "actor": {
+            "x": 0.5288125722711584,
+            "y": 5.498395415334339,
+            "vx": -0.09280884315409267,
+            "vy": -0.10023773338503794,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.2910671170405288,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": -1.4858753504997935,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "brake-4-右",
+            "phase": "brake",
+            "text": "弱く右に傾けて、勢いを落とそう。",
+            "target": {
+              "x": 0.5,
+              "y": 5.5
+            },
+            "direction": {
+              "x": 0.12133510722808884,
+              "y": 0.00002839729967822911
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 4.5
+          },
+          "tick": 60,
+          "timeMs": 16656,
+          "actor": {
+            "x": 0.50001661325912,
+            "y": 4.640781891329194,
+            "vx": -0.0022225020869233916,
+            "vy": -0.4647257920257188,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.1493008456036735,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.3527829003561467,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "route-5-上",
+            "phase": "route",
+            "text": "少し上に傾けて、次の通路へ進もう。",
+            "target": {
+              "x": 0.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0.008711567333282547,
+              "y": -0.08454295882846752
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 0.5,
+            "y": 4.5
+          },
+          "reached": true,
+          "timeMs": 17136,
+          "actor": {
+            "x": 0.49986957614255534,
+            "y": 4.530322805307635,
+            "vx": 0.0002592958705708799,
+            "vy": -0.09713014673104892,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.2343387979538507,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.07170061124191218,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "goal-6-右",
+            "phase": "goal",
+            "text": "少し右に傾けて、カップへ入ろう。",
+            "target": {
+              "x": 2.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0.5848833168582431,
+              "y": 0.01641804125210073
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 2.5,
+            "y": 4.5
+          },
+          "tick": 0,
+          "timeMs": 17152,
+          "actor": {
+            "x": 0.5014773199734807,
+            "y": 4.528846952573954,
+            "vx": 0.10048398943283231,
+            "vy": -0.09224079585505954,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.2354247596376762,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.06787260523909155,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "goal-6-右",
+            "phase": "goal",
+            "text": "少し右に傾けて、カップへ入ろう。",
+            "target": {
+              "x": 2.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0.5397822047552255,
+              "y": 0.015546100818218512
+            }
+          },
+          "status": "playing"
+        },
+        {
+          "step": "route",
+          "target": {
+            "x": 2.5,
+            "y": 4.5
+          },
+          "tick": 60,
+          "timeMs": 18112,
+          "actor": {
+            "x": 1.5497004706402886,
+            "y": 4.499749734452895,
+            "vx": 1.2445904603454132,
+            "vy": -0.0031464240850630765,
+            "r": 0.275
+          },
+          "gate": {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.2624133975911007,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.007190694500044947,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          "hint": {
+            "id": "coast-6",
+            "phase": "coast",
+            "text": "水平に戻して、球の勢いで進もう。",
+            "target": {
+              "x": 2.5,
+              "y": 4.5
+            },
+            "direction": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "status": "playing"
+        }
+      ],
+      "final": {
+        "seed": 48,
+        "timeMs": 18672,
+        "wallHits": 0,
+        "started": true,
+        "audio": {
+          "enabled": false,
+          "context": "none",
+          "loaded": false,
+          "buffers": 0,
+          "music": false,
+          "rolling": false,
+          "voices": 0,
+          "musicDelaySec": 0,
+          "bgmVolume": 0.6,
+          "seVolume": 0.8,
+          "events": []
+        },
+        "hourglass": null,
+        "leaf": null,
+        "rest": null,
+        "rests": [],
+        "sticky": [],
+        "trap": null,
+        "shield": 0,
+        "extendedSec": 0,
+        "level": "easy",
+        "theme": {
+          "id": "puzzle",
+          "puzzleKind": "racketTiming",
+          "label": "打ち返して滑りこむ",
+          "firstVisit": true,
+          "learning": true,
+          "introHint": "ラケットの勢いと、切り返しを組み合わせよう。"
+        },
+        "recovery": null,
+        "calibration": null,
+        "needsCalibration": true,
+        "tutorialOpen": false,
+        "tutorialHint": null,
+        "tilt": {
+          "x": 0,
+          "y": 0
+        },
+        "cleared": true,
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "mode": "pointer",
+        "gameMode": "tutorial",
+        "screen": "clear",
+        "stageIndex": 1,
+        "wakeLock": {
+          "supported": true,
+          "active": false,
+          "held": false,
+          "pending": false,
+          "lastError": null
+        },
+        "status": "clear",
+        "remainingSec": null,
+        "limitSec": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "run": null,
+        "actor": {
+          "x": 2.2038354942734446,
+          "y": 4.499590401714778,
+          "vx": 0.8852866161281493,
+          "vy": 0.0007749058143866396,
+          "r": 0.275
+        },
+        "maze": {
+          "size": 7,
+          "path": [
+            {
+              "x": 6,
+              "y": 6
+            },
+            {
+              "x": 6,
+              "y": 5
+            },
+            {
+              "x": 6,
+              "y": 4
+            },
+            {
+              "x": 6,
+              "y": 3
+            },
+            {
+              "x": 6,
+              "y": 2
+            },
+            {
+              "x": 6,
+              "y": 1
+            },
+            {
+              "x": 5,
+              "y": 1
+            },
+            {
+              "x": 4,
+              "y": 1
+            },
+            {
+              "x": 3,
+              "y": 1
+            },
+            {
+              "x": 3,
+              "y": 2
+            },
+            {
+              "x": 2,
+              "y": 2
+            },
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 1,
+              "y": 3
+            },
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 2,
+              "y": 4
+            }
+          ],
+          "cells": [
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            }
+          ],
+          "variation": {
+            "puzzleKind": "racketTiming",
+            "puzzleEase": "relaxed",
+            "puzzleTutorial": true,
+            "puzzleFirstVisit": true,
+            "difficulty": null,
+            "shape": "puzzle"
+          }
+        },
+        "zones": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08,
+            "minAccelK": 0.28,
+            "transitionSpeed": 1.2,
+            "forceX": 0,
+            "forceY": 0
+          }
+        ],
+        "goal": {
+          "x": 2.5,
+          "y": 4.5
+        },
+        "walls": [
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 1.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 2.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 4.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 4.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          }
+        ],
+        "puzzle": {
+          "kind": "racketTiming",
+          "ease": "relaxed",
+          "label": "打ち返して滑りこむ",
+          "hint": "ラケットの勢いと、切り返しを組み合わせよう。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 2,
+          "timingCount": 1,
+          "operationDistance": 2,
+          "openingSeconds": 0.5,
+          "rotation": 1,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 6.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 2.5,
+              "y": 4.5
+            },
+            "course": [
+              {
+                "x": 5.3,
+                "y": 3.3
+              },
+              {
+                "x": 3.55,
+                "y": 0.5
+              },
+              {
+                "x": 3.55,
+                "y": 5.5
+              },
+              {
+                "x": 0.5,
+                "y": 5.5
+              },
+              {
+                "x": 0.5,
+                "y": 4.5
+              },
+              {
+                "x": 2.5,
+                "y": 4.5
+              },
+              {
+                "x": 2.5,
+                "y": 4.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 4.395,
+                "y": 2.6500000000000004
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "timing-gate": 1.88
+              },
+              "closed": {
+                "timing-gate": -0.1200000000000001
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 4.65,
+                "y": 1
+              },
+              "to": {
+                "x": 3.35,
+                "y": 1
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.3,
+                  "y": 3.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.3,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 1.7000000000000002
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": 0.7
+              },
+              "condition": {
+                "axis": "x",
+                "max": 3.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.55,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.55,
+                  "y": 5.5
+                },
+                {
+                  "x": 0.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 0.5,
+                  "y": 4.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 4.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 4.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "rackets": [
+          {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 3.88,
+            "y": 1.2638641586486892,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "vx": 0,
+            "vy": 0.000172233133408084,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-vertical",
+            "x": 4.647561565423066,
+            "y": 0.45999999999999996,
+            "w": 1.6000000000000005,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 4.3,
+            "max": 4.75,
+            "home": 4.3,
+            "vx": -0.5275912339388622,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 2.0152920738375473,
+            "y": 1.3000000000000007,
+            "w": 0.2400000000000002,
+            "h": 1.5999999999999996,
+            "axis": "x",
+            "min": 0.45999999999999996,
+            "max": 3.3099999999999996,
+            "home": 0.45999999999999996,
+            "vx": -0.52759123393889,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ],
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 12.50299308534072,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        },
+        "puzzleCourse": {
+          "index": 5,
+          "isLast": true,
+          "lesson": {
+            "id": "puzzle-racketTiming",
+            "puzzleKind": "racketTiming",
+            "puzzleEase": "relaxed",
+            "title": "打ち返して、滑り込もう",
+            "body": "ラケットで球を送り、切り返して戸を開こう。",
+            "art": "timing-demo",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "本編では、普通の迷路・一つのしかけ・組み合わせが登場します。やさしいでも通常でも遊べます。",
+            "nextLabel": "あそび方を終える"
+          }
+        }
+      },
+      "summary": {
+        "seconds": 18.672,
+        "wallHits": 0,
+        "hintIds": [
+          "route-0-左上",
+          "route-0-",
+          "coast-0",
+          "brake-0-下",
+          "prepare-timing-gate-forward-左上",
+          "cut-timing-gate",
+          "route-2-右上",
+          "brake-2-左下",
+          "route-3-下",
+          "coast-3",
+          "brake-3-上",
+          "route-4-左",
+          "coast-4",
+          "brake-4-右",
+          "route-5-上",
+          "goal-6-右",
+          "coast-6"
+        ],
+        "directions": [
+          "{\"x\":-0.351419013066495,\"y\":-0.35141884614626884}",
+          "{\"x\":-0.32504113913124016,\"y\":-0.32504097551195354}",
+          "{\"x\":0.07865730525306654,\"y\":-0.04161341782174044}",
+          "{\"x\":0,\"y\":0}",
+          "{\"x\":-0.0015506603729667817,\"y\":0.119927683975539}",
+          "{\"x\":-0.2,\"y\":-0.3}",
+          "{\"x\":-0.2,\"y\":-0.13386405340353688}",
+          "{\"x\":-0.7,\"y\":0.3}",
+          "{\"x\":0.16529674847386405,\"y\":-0.06765065661120005}",
+          "{\"x\":-0.1168419117188271,\"y\":0.12059305690286744}",
+          "{\"x\":-0.006018605616199231,\"y\":0.08056384991437159}",
+          "{\"x\":-3.078206991507872e-7,\"y\":-0.1216020055723677}",
+          "{\"x\":-0.08454488085575665,\"y\":-0.008751175438963513}",
+          "{\"x\":0.12133510722808884,\"y\":0.00002839729967822911}",
+          "{\"x\":0.008711567333282547,\"y\":-0.08454295882846752}",
+          "{\"x\":0.5848833168582431,\"y\":0.01641804125210073}",
+          "{\"x\":0.5397822047552255,\"y\":0.015546100818218512}"
+        ],
+        "humanOrPhysicalPhoneTest": false
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 312,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/config/gameConfig.js": "e5874439da45c720b834d0e46305745df3649a7424ccc3320fbf214bc7c3b422",
+        "/src/ui/tutorial.js": "cee4214a1a4ff75090df479e5d8068798af107b326efe8757f88bae77c0ade0c",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405"
+      }
+    }
+  ]
+}

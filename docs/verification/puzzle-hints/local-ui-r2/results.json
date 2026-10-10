@@ -1,0 +1,13 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "ui",
+  "version": "0.7.1",
+  "screenshotSeed": 1253254618,
+  "rows": [
+    {
+      "name": "failure",
+      "error": "TimeoutError: page.waitForFunction: Timeout 30000ms exceeded.",
+      "state": null
+    }
+  ]
+}

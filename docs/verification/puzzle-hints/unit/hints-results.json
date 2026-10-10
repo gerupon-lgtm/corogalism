@@ -1,0 +1,12 @@
+{
+  "files": [
+    "test/puzzle-hints.test.js"
+  ],
+  "counts": {
+    "tests": 12,
+    "pass": 12,
+    "fail": 0
+  },
+  "exitCode": 0,
+  "elapsedSec": 0.62
+}

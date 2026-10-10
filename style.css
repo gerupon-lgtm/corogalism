@@ -500,13 +500,14 @@ body[data-game-mode="tutorial"] .tutorial-lesson{display:block}
 .tutorial-lesson .tutorial-copy{margin:0;font-size:13px;line-height:1.5}.tutorial-context{margin:3px 0 0;font-size:11px;line-height:1.4}
 .tutorial-play-state{grid-column:1/4;font-size:11px;color:#806847}
 /* 続きの紹介だけ、絵と題名の下で本文を全幅へ。150pxの枠と文字サイズは保つ。 */
-.is-puzzle-course .tutorial-message{grid-template-columns:36px 1fr;grid-template-rows:30px minmax(0,1fr) auto auto;gap:2px 8px}
+.is-puzzle-course .tutorial-message{grid-template-columns:36px 1fr;grid-template-rows:26px auto minmax(0,1fr) auto;gap:2px 8px}
 .is-puzzle-course .tutorial-text{display:contents}
-.is-puzzle-course canvas{width:36px;height:28px;grid-column:1;grid-row:1}
+.is-puzzle-course canvas{width:36px;height:26px;grid-column:1;grid-row:1}
 .is-puzzle-course h2{grid-column:2;grid-row:1;margin:0}
 .is-puzzle-course .tutorial-copy{grid-column:1/-1;grid-row:2;align-self:start}
-.is-puzzle-course .tutorial-context{grid-column:1/-1;grid-row:3;margin:0}
-.is-puzzle-course .tutorial-play-state{grid-column:1/-1;grid-row:4}
+.is-puzzle-course .tutorial-hint{grid-column:1/-1;grid-row:3;align-self:center;margin:0;font-size:13px;line-height:1.45;font-weight:800;color:#754b83;text-wrap:pretty}
+.is-puzzle-course .tutorial-context{grid-column:1/-1;grid-row:4;margin:0}
+.is-puzzle-course .tutorial-play-state{display:none}
 body[data-game-mode="tutorial"] #game-status{display:none}
 
 /* 動きを減らす設定では、点滅の代わりに金色の面を短く表示。 */

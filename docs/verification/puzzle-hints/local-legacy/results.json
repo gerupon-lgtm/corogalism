@@ -1,0 +1,25 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "legacy",
+  "version": "0.7.1",
+  "screenshotSeed": 1253254618,
+  "rows": [
+    {
+      "name": "legacy-regression",
+      "oldTutorialPointer": true,
+      "continuation": "puzzle-tutorial",
+      "practiceUnchanged": true,
+      "diagnosticOriginalGoalPlacement": true
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      }
+    }
+  ]
+}

@@ -3,13 +3,23 @@ import { TUTORIAL, REST, STICKY, RECOVERY, LEAF, HOURGLASS } from '../config/gam
 import { walls, movingWalls, items, floors, floorMaterials, drawGuideArt } from './guide.js';
 import { floorContact } from '../world/floorLearning.js';
 import { createLessonTiming } from '../game/tutorialLessons.js';
+import { createPuzzleHints } from '../game/puzzleHints.js';
 export function createTutorialUi() {
  const panel=document.querySelector('#tutorial-lesson');
  const timing=createLessonTiming(TUTORIAL);
  const entries=new Map([...walls,...movingWalls,...items,...floors,...floorMaterials].map(([id,title,body])=>[id,{title,body,art:id}]));
- let lastActive=null,flash=null,noticeMs=0,openingLesson=null;let touching=new Set();
+ let lastActive=null,flash=null,noticeMs=0,openingLesson=null,puzzleHints=null;let touching=new Set();
+ const hintEl=panel.querySelector('.tutorial-hint');
+ function renderHint(){
+  const hint=puzzleHints?.current;
+  hintEl.hidden=!openingLesson;
+  const text=openingLesson?(hint?.text??'球の動きを見ながら、少しずつ傾けよう。'):'';
+  if(hintEl.textContent!==text)hintEl.textContent=text;
+  if(hint)panel.dataset.hint=hint.id;else delete panel.dataset.hint;
+ }
  function render(){
-  const id=timing.active??openingLesson?.id??null;
+  // 動く壁のコースでは、接触しても面の目的と操作ヒントを残す。
+  const id=openingLesson?.id??timing.active??null;
   panel.classList.toggle('has-lesson',Boolean(id));
   panel.querySelector('.tutorial-message').hidden=!id;
   panel.querySelector('.tutorial-idle').hidden=Boolean(id);
@@ -17,7 +27,7 @@ export function createTutorialUi() {
    const entry=entries.get(id);
    panel.querySelector('h2').textContent=entry.title+(walls.some(w=>w[0]===id)?'の壁':'');
    panel.querySelector('.tutorial-copy').textContent=entry.body;
-   panel.querySelector('.tutorial-context').textContent=openingLesson?'時間・げんき切れなし。':entry.context??(id==='cotton'?'壁に沿う動きは残ります。':movingWalls.some(w=>w[0]===id)?'傾きを戻すと壁は止まり、球は勢いで進みます。':walls.some(w=>w[0]===id)?'速さと壁の素材で、げんきの減り方が変わります。':['hourglass','rest'].includes(id)?'時間の加算はチャレンジで有効です。':'');
+   panel.querySelector('.tutorial-context').textContent=openingLesson?'時間・げんき切れなし。綿で狙い直せます。':entry.context??(id==='cotton'?'壁に沿う動きは残ります。':movingWalls.some(w=>w[0]===id)?'傾きを戻すと壁は止まり、球は勢いで進みます。':walls.some(w=>w[0]===id)?'速さと壁の素材で、げんきの減り方が変わります。':['hourglass','rest'].includes(id)?'時間の加算はチャレンジで有効です。':'');
    drawGuideArt(panel.querySelector('canvas'),entry.art??id);
    panel.dataset.lesson=id;
    noticeMs=TUTORIAL.flashMs;
@@ -34,22 +44,26 @@ export function createTutorialUi() {
   }
   panel.classList.toggle('is-updated',noticeMs>0);
   lastActive=id;
+  renderHint();
  }
  return {
   get open(){return Boolean(timing.active||openingLesson);},
-  reset(context=null){
+  get hint(){return puzzleHints?.current??null;},
+  reset(context=null,stage=null){
    noticeMs=0;timing.reset();touching.clear();flash?.cancel();lastActive=null;delete panel.dataset.lesson;
    openingLesson=context;
+   puzzleHints=openingLesson&&stage?.puzzle?createPuzzleHints(stage):null;
+   panel.setAttribute('aria-label',openingLesson?'面の目的と操作のヒント':'素材の説明');
    panel.classList.toggle('is-puzzle-course',Boolean(openingLesson));
    if(openingLesson)entries.set(openingLesson.id,openingLesson);
    render();
   },
   contact(id){
-   // 続きの紹介では既知の素材で開始説明を隠さず、新しい壁の説明に集中する。
-   if(openingLesson&&!['cotton','racket','gate'].includes(id))return;
+   if(openingLesson)return;
    if(entries.has(id))timing.contact(id);
   },
-  inspect(play){
+  inspect(play,tilt=null,elapsedMs=0){
+   if(puzzleHints){puzzleHints.update({actor:play.actor,tilt,elapsedMs,status:play.status});renderHint();return;}
    const a=play.actor,s=play.stage;
    const near=(t,r)=>t&&Math.abs(a.x-t.x)<r&&Math.abs(a.y-t.y)<r;
    const current=new Set();

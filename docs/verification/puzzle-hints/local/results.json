@@ -1,0 +1,1358 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "ui",
+  "version": "0.7.1",
+  "screenshotSeed": 1253254618,
+  "rows": [
+    {
+      "name": "lesson-ui",
+      "width": 312,
+      "index": 0,
+      "kind": "racket",
+      "orientation": {
+        "rotation": 2,
+        "mirror": true
+      },
+      "card": {
+        "top": 475.4375,
+        "bottom": 625.4375,
+        "left": 19,
+        "right": 293,
+        "height": 150,
+        "width": 274,
+        "dataset": {
+          "lesson": "puzzle-racket",
+          "hint": "route-0-右上"
+        },
+        "fields": {
+          "h2": {
+            "top": 486.640625,
+            "bottom": 512.234375,
+            "left": 74,
+            "right": 282,
+            "height": 25.59375,
+            "width": 208,
+            "text": "動かして、打ち返そう",
+            "hidden": false
+          },
+          ".tutorial-copy": {
+            "top": 514.4375,
+            "bottom": 553.4375,
+            "left": 30,
+            "right": 282,
+            "height": 39,
+            "width": 252,
+            "text": "ラケットの中心と端で、返す向きを変えよう。",
+            "hidden": false
+          },
+          ".tutorial-hint": {
+            "top": 566.8125,
+            "bottom": 585.65625,
+            "left": 30,
+            "right": 282,
+            "height": 18.84375,
+            "width": 252,
+            "text": "少し右上に傾けて、入口へ進もう。",
+            "hidden": false
+          },
+          ".tutorial-context": {
+            "top": 599.046875,
+            "bottom": 614.4375,
+            "left": 30,
+            "right": 282,
+            "height": 15.390625,
+            "width": 252,
+            "text": "時間・げんき切れなし。",
+            "hidden": false
+          },
+          ".tutorial-play-state": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "text": "そのまま操作できます",
+            "hidden": true
+          }
+        },
+        "hintCount": 1
+      },
+      "hint": {
+        "id": "route-0-右上",
+        "phase": "route",
+        "text": "少し右上に傾けて、入口へ進もう。",
+        "target": {
+          "x": 5.65,
+          "y": 5.6
+        },
+        "direction": {
+          "x": 0.5850000000000001,
+          "y": -0.5850000000000001
+        }
+      },
+      "contact": {
+        "wallId": "racket-vertical",
+        "diagnosticPositionPlacement": true,
+        "actualPointerContact": true,
+        "dynamicContact": true,
+        "afterHint": {
+          "id": "route-0-右上",
+          "phase": "route",
+          "text": "少し右上に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.65,
+            "y": 5.6
+          },
+          "direction": {
+            "x": 0.5850000000000001,
+            "y": -0.5850000000000001
+          }
+        }
+      },
+      "pointerReaction": true,
+      "pauseAndSettingsFreeze": true,
+      "priorStageAdvance": "diagnostic-goal-placement"
+    },
+    {
+      "name": "failure",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'playing' !== 'clear'\n",
+      "state": {
+        "seed": 3907690387,
+        "timeMs": 896,
+        "wallHits": 0,
+        "started": true,
+        "audio": {
+          "enabled": false,
+          "context": "none",
+          "loaded": false,
+          "buffers": 0,
+          "music": false,
+          "rolling": false,
+          "voices": 0,
+          "musicDelaySec": 0,
+          "bgmVolume": 0.6,
+          "seVolume": 0.8,
+          "events": []
+        },
+        "hourglass": null,
+        "leaf": null,
+        "rest": null,
+        "rests": [],
+        "sticky": [],
+        "trap": null,
+        "shield": 0,
+        "extendedSec": 0,
+        "level": "easy",
+        "theme": {
+          "id": "puzzle",
+          "puzzleKind": "racket",
+          "label": "ラケットで打ち返す",
+          "firstVisit": true,
+          "learning": true,
+          "introHint": "ラケットの中心と端で、跳ねる向きを変えよう。"
+        },
+        "recovery": null,
+        "calibration": null,
+        "needsCalibration": true,
+        "tutorialOpen": true,
+        "tutorialHint": {
+          "id": "route-0-右上",
+          "phase": "route",
+          "text": "少し右上に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.65,
+            "y": 5.6
+          },
+          "direction": {
+            "x": 0.5850000000000001,
+            "y": -0.5850000000000001
+          }
+        },
+        "tilt": {
+          "x": 0,
+          "y": 0
+        },
+        "cleared": false,
+        "paused": true,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "mode": "pointer",
+        "gameMode": "tutorial",
+        "screen": "game",
+        "stageIndex": 1,
+        "wakeLock": {
+          "supported": true,
+          "active": false,
+          "held": false,
+          "pending": false,
+          "lastError": null
+        },
+        "status": "playing",
+        "remainingSec": null,
+        "limitSec": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "run": null,
+        "actor": {
+          "x": 5.5,
+          "y": 1.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "maze": {
+          "size": 7,
+          "path": [
+            {
+              "x": 0,
+              "y": 6
+            },
+            {
+              "x": 0,
+              "y": 5
+            },
+            {
+              "x": 1,
+              "y": 5
+            },
+            {
+              "x": 2,
+              "y": 5
+            },
+            {
+              "x": 3,
+              "y": 5
+            },
+            {
+              "x": 4,
+              "y": 5
+            },
+            {
+              "x": 5,
+              "y": 5
+            },
+            {
+              "x": 5,
+              "y": 4
+            },
+            {
+              "x": 5,
+              "y": 3
+            },
+            {
+              "x": 4,
+              "y": 3
+            },
+            {
+              "x": 3,
+              "y": 3
+            },
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 1,
+              "y": 3
+            },
+            {
+              "x": 1,
+              "y": 2
+            },
+            {
+              "x": 1,
+              "y": 1
+            },
+            {
+              "x": 1,
+              "y": 0
+            },
+            {
+              "x": 2,
+              "y": 0
+            },
+            {
+              "x": 3,
+              "y": 0
+            },
+            {
+              "x": 4,
+              "y": 0
+            },
+            {
+              "x": 5,
+              "y": 0
+            },
+            {
+              "x": 5,
+              "y": 1
+            }
+          ],
+          "cells": [
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            }
+          ],
+          "variation": {
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "puzzleTutorial": true,
+            "puzzleFirstVisit": true,
+            "difficulty": null,
+            "shape": "puzzle"
+          }
+        },
+        "zones": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08,
+            "minAccelK": 0.28,
+            "transitionSpeed": 1.2,
+            "forceX": 0,
+            "forceY": 0
+          }
+        ],
+        "goal": {
+          "x": 5.5,
+          "y": 1.5
+        },
+        "walls": [
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 4.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 4.88,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 2.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 4.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 0.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 2.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 4.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          }
+        ],
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 2,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 1.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 5.6
+              },
+              {
+                "x": 5.65,
+                "y": 4.3
+              },
+              {
+                "x": 1.3499999999999996,
+                "y": 3.7
+              },
+              {
+                "x": 1.3499999999999996,
+                "y": 2.3
+              },
+              {
+                "x": 4.5,
+                "y": 0.5
+              },
+              {
+                "x": 4.5,
+                "y": 1.5
+              },
+              {
+                "x": 5.5,
+                "y": 1.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 5.6
+                },
+                {
+                  "x": 5.65,
+                  "y": 4.3
+                },
+                {
+                  "x": 1.3499999999999996,
+                  "y": 3.7
+                },
+                {
+                  "x": 1.3499999999999996,
+                  "y": 2.3
+                },
+                {
+                  "x": 4.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 1.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 1.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 3.5846422664943076,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 3.4,
+            "max": 4.75,
+            "home": 3.4,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 2.1289633775158885,
+            "y": 0.45999999999999996,
+            "w": 1.5999999999999996,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7000000000000002,
+            "max": 4.95,
+            "home": 0.7000000000000002,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ],
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 14.002513951619266,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        },
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "ラケットの中心と端で、返す向きを変えよう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        }
+      }
+    }
+  ]
+}

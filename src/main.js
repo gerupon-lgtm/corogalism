@@ -316,7 +316,7 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
   play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, variation:run?.currentVariation(activeLevel), shield, tutorial: gameMode === 'tutorial',tutorialPuzzle:puzzleCourse?.profile,floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
-  if(gameMode==='tutorial')tutorial.reset(puzzleCourse?.lesson);
+  if(gameMode==='tutorial')tutorial.reset(puzzleCourse?.lesson,play.stage);
   floorPresentation.setStage(run?play.stage.theme:null);
   floorContactGuide.reset();game.resetNotices();
   renderFloorPractice();
@@ -452,7 +452,7 @@ function frame(now) {
     const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: (speed,wall) => { sound.impact(speed,wall); if(gameMode==='tutorial')tutorial.contact(wall.materialId==='racket'&&wall.bounce==='reflect'?'gate':wall.materialId); },
       onFeature: kind => { if (gameMode === 'tutorial' && ['leaf', 'hourglass'].includes(kind)) tutorial.contact(kind); game.showFeature(kind, now); if (kind !== 'full') sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
       onRecovery: (_amount, change) => { if (gameMode === 'tutorial') tutorial.contact('candy'); recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
-    if (gameMode === 'tutorial') tutorial.inspect(play);
+    if (gameMode === 'tutorial') tutorial.inspect(play,tilt.value,dt*1000);
     if(play.lastPhysicsResult?.halt){setPaused(true);find('board-status').textContent='計算を続けられないため一時停止しました。';}
     if (guardBefore > shield.value && damage === 0) game.showFeature('guard', now);
     if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);
@@ -590,6 +590,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
         audio: sound.state, hourglass: play.stage.hourglass, leaf: play.stage.leaf, rest: play.stage.rest, rests: restFloors(play.stage), sticky: play.stage.sticky, trap: play.trap, shield: shield.value, extendedSec: play.extendedSec, level: activeLevel, theme: play.stage.theme, recovery: play.stage.recovery,
         calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
         tutorialOpen: tutorial.open,
+        tutorialHint: tutorial.hint, tilt: { ...tilt.value },
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
         wakeLock: screenWakeLock.state,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,

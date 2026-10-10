@@ -207,6 +207,20 @@ export const STICKY = { firstStage: 3, interval: 8, durationSec: 3, shortenSec: 
 /** チュートリアル。表示前の間と更新時のハイライト時間を調整できる。 */
 export const TUTORIAL = { contactDelayMs: 700, flashMs: 1800, hp: 100, minHp: 1, size: 7 };
 
+/** 紹介コースの案内だけに使う値。球・壁の物理は変更しない。 */
+export const PUZZLE_HINTS = {
+  candidateMs: 250, minimumDisplayMs: 900, maxFrameMs: 100,
+  waypointRadius: 0.22, waypointSpeed: 0.8, crossingMargin: 0.06,
+  retryDistance: 2.2, gateOpenTolerance: 0.08,
+  preparationTilt: 0.3, preparationSpeed: 2.8, approachTilt: 0.2, crossingTilt: 0.7, reverseTilt: 0.3,
+  cutOffset: 0.2, predictionSec: 0.04, momentumMinSpeed: 0.3,
+  routeSpeed: 1.3, routeGain: 2, routeDamping: 0.45, routeMaxTilt: 0.7,
+  coastSpeed: 1.5, coastDistance: 0.8, coastAlignment: 0.94,
+  directionDeadZone: 0.08, diagonalRatio: 0.35,
+  paddleDistance: 0.6, paddlePredictionSec: 0.25,
+  navigationStep: 0.25, navigationClearance: 0.03,
+};
+
 /** T-258: 本編採用値。labの調整値とは分離する。 */
 export const FLOOR_CHALLENGE = {
  ice:0.08, sand:3.2, iceMotion:{minAccelK:0.28,transitionSpeed:1.2}, radius:1.6,

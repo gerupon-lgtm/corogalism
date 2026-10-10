@@ -1,0 +1,1424 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "ui",
+  "version": "0.7.1",
+  "screenshotSeed": 1253254618,
+  "rows": [
+    {
+      "name": "lesson-ui",
+      "width": 312,
+      "index": 0,
+      "kind": "racket",
+      "orientation": {
+        "rotation": 2,
+        "mirror": true
+      },
+      "card": {
+        "top": 475.4375,
+        "bottom": 625.4375,
+        "left": 19,
+        "right": 293,
+        "height": 150,
+        "width": 274,
+        "dataset": {
+          "lesson": "puzzle-racket",
+          "hint": "route-0-右上"
+        },
+        "fields": {
+          "h2": {
+            "top": 486.640625,
+            "bottom": 512.234375,
+            "left": 74,
+            "right": 282,
+            "height": 25.59375,
+            "width": 208,
+            "text": "動かして、打ち返そう",
+            "hidden": false
+          },
+          ".tutorial-copy": {
+            "top": 514.4375,
+            "bottom": 553.4375,
+            "left": 30,
+            "right": 282,
+            "height": 39,
+            "width": 252,
+            "text": "ラケットの中心と端で、返す向きを変えよう。",
+            "hidden": false
+          },
+          ".tutorial-hint": {
+            "top": 566.8125,
+            "bottom": 585.65625,
+            "left": 30,
+            "right": 282,
+            "height": 18.84375,
+            "width": 252,
+            "text": "少し右上に傾けて、入口へ進もう。",
+            "hidden": false
+          },
+          ".tutorial-context": {
+            "top": 599.046875,
+            "bottom": 614.4375,
+            "left": 30,
+            "right": 282,
+            "height": 15.390625,
+            "width": 252,
+            "text": "時間・げんき切れなし。",
+            "hidden": false
+          },
+          ".tutorial-play-state": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "text": "そのまま操作できます",
+            "hidden": true
+          }
+        },
+        "hintCount": 1
+      },
+      "hint": {
+        "id": "route-0-右上",
+        "phase": "route",
+        "text": "少し右上に傾けて、入口へ進もう。",
+        "target": {
+          "x": 5.65,
+          "y": 5.6
+        },
+        "direction": {
+          "x": 0.5850000000000001,
+          "y": -0.5850000000000001
+        }
+      },
+      "contact": {
+        "wallId": "racket-vertical",
+        "diagnosticPositionPlacement": true,
+        "actualPointerContact": true,
+        "dynamicContact": true,
+        "afterHint": {
+          "id": "route-0-右上",
+          "phase": "route",
+          "text": "少し右上に傾けて、入口へ進もう。",
+          "target": {
+            "x": 5.65,
+            "y": 5.6
+          },
+          "direction": {
+            "x": 0.5850000000000001,
+            "y": -0.5850000000000001
+          }
+        }
+      },
+      "pointerReaction": true,
+      "pauseAndSettingsFreeze": true,
+      "priorStageAdvance": "diagnostic-goal-placement"
+    },
+    {
+      "name": "lesson-ui",
+      "width": 312,
+      "index": 1,
+      "kind": "sequence",
+      "orientation": {
+        "rotation": 0,
+        "mirror": false
+      },
+      "card": {
+        "top": 475.4375,
+        "bottom": 625.4375,
+        "left": 19,
+        "right": 293,
+        "height": 150,
+        "width": 274,
+        "dataset": {
+          "lesson": "puzzle-sequence",
+          "hint": "pass-gate-1-右下"
+        },
+        "fields": {
+          "h2": {
+            "top": 486.640625,
+            "bottom": 512.234375,
+            "left": 74,
+            "right": 282,
+            "height": 25.59375,
+            "width": 208,
+            "text": "順に動かして、道を開こう",
+            "hidden": false
+          },
+          ".tutorial-copy": {
+            "top": 514.4375,
+            "bottom": 533.9375,
+            "left": 30,
+            "right": 282,
+            "height": 19.5,
+            "width": 252,
+            "text": "綿で球を落ち着かせ、順に戸を開こう。",
+            "hidden": false
+          },
+          ".tutorial-hint": {
+            "top": 557.0625,
+            "bottom": 575.90625,
+            "left": 30,
+            "right": 282,
+            "height": 18.84375,
+            "width": 252,
+            "text": "少し右下に傾けて、開いた通路へ。",
+            "hidden": false
+          },
+          ".tutorial-context": {
+            "top": 599.046875,
+            "bottom": 614.4375,
+            "left": 30,
+            "right": 282,
+            "height": 15.390625,
+            "width": 252,
+            "text": "時間・げんき切れなし。",
+            "hidden": false
+          },
+          ".tutorial-play-state": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "height": 0,
+            "width": 0,
+            "text": "そのまま操作できます",
+            "hidden": true
+          }
+        },
+        "hintCount": 1
+      },
+      "hint": {
+        "id": "pass-gate-1-右下",
+        "phase": "pass",
+        "text": "少し右下に傾けて、開いた通路へ。",
+        "target": {
+          "x": 3.65,
+          "y": 2.605
+        },
+        "direction": {
+          "x": 0.5850000000000001,
+          "y": 0.5850000000000001
+        }
+      },
+      "contact": {
+        "wallId": "gate-1",
+        "diagnosticPositionPlacement": true,
+        "actualPointerContact": true,
+        "dynamicContact": true,
+        "afterHint": {
+          "id": "open-gate-1",
+          "phase": "open",
+          "text": "少し下に傾けて、1の戸を開こう。",
+          "target": {
+            "x": 1.5,
+            "y": 2.605
+          },
+          "direction": {
+            "x": 0,
+            "y": 0.7
+          }
+        }
+      },
+      "pointerReaction": true,
+      "pauseAndSettingsFreeze": true,
+      "priorStageAdvance": "diagnostic-goal-placement"
+    },
+    {
+      "name": "failure",
+      "error": "AssertionError [ERR_ASSERTION]: 診断配置から実 pointer で動く壁に接触した",
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "state": {
+        "seed": 626627333,
+        "timeMs": 480,
+        "wallHits": 0,
+        "started": true,
+        "audio": {
+          "enabled": false,
+          "context": "none",
+          "loaded": false,
+          "buffers": 0,
+          "music": false,
+          "rolling": false,
+          "voices": 0,
+          "musicDelaySec": 0,
+          "bgmVolume": 0.6,
+          "seVolume": 0.8,
+          "events": []
+        },
+        "hourglass": null,
+        "leaf": null,
+        "rest": null,
+        "rests": [],
+        "sticky": [],
+        "trap": null,
+        "shield": 0,
+        "extendedSec": 0,
+        "level": "easy",
+        "theme": {
+          "id": "puzzle",
+          "puzzleKind": "timing",
+          "label": "切り返して滑りこむ",
+          "firstVisit": true,
+          "learning": true,
+          "introHint": "逆へ傾けて道をひらき、球の勢いで滑りこもう。"
+        },
+        "recovery": null,
+        "calibration": null,
+        "needsCalibration": true,
+        "tutorialOpen": true,
+        "tutorialHint": {
+          "id": "route-2-右上",
+          "phase": "route",
+          "text": "少し右上に傾けて、次の通路へ進もう。",
+          "target": {
+            "x": 4.5,
+            "y": 2.3499999999999996
+          },
+          "direction": {
+            "x": 0.5850000000000001,
+            "y": -0.22950000000000031
+          }
+        },
+        "tilt": {
+          "x": 0,
+          "y": 0.6000000418048571
+        },
+        "cleared": false,
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "mode": "pointer",
+        "gameMode": "tutorial",
+        "screen": "game",
+        "stageIndex": 1,
+        "wakeLock": {
+          "supported": true,
+          "active": true,
+          "held": true,
+          "pending": false,
+          "lastError": null
+        },
+        "status": "playing",
+        "remainingSec": null,
+        "limitSec": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "run": null,
+        "actor": {
+          "x": 2,
+          "y": 2.605,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "maze": {
+          "size": 7,
+          "path": [
+            {
+              "x": 0,
+              "y": 6
+            },
+            {
+              "x": 0,
+              "y": 5
+            },
+            {
+              "x": 0,
+              "y": 4
+            },
+            {
+              "x": 0,
+              "y": 3
+            },
+            {
+              "x": 1,
+              "y": 3
+            },
+            {
+              "x": 2,
+              "y": 3
+            },
+            {
+              "x": 3,
+              "y": 3
+            },
+            {
+              "x": 3,
+              "y": 2
+            },
+            {
+              "x": 3,
+              "y": 1
+            },
+            {
+              "x": 3,
+              "y": 0
+            },
+            {
+              "x": 2,
+              "y": 0
+            },
+            {
+              "x": 2,
+              "y": 1
+            }
+          ],
+          "cells": [
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            }
+          ],
+          "variation": {
+            "puzzleKind": "timing",
+            "puzzleEase": "relaxed",
+            "puzzleTutorial": true,
+            "puzzleFirstVisit": true,
+            "difficulty": null,
+            "shape": "puzzle"
+          }
+        },
+        "zones": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08,
+            "minAccelK": 0.28,
+            "transitionSpeed": 1.2,
+            "forceX": 0,
+            "forceY": 0
+          }
+        ],
+        "goal": {
+          "x": 2.5,
+          "y": 1.5
+        },
+        "walls": [
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 3.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 4.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 2.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 1.88,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": -0.12,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 1.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 4.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 6.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": -0.12,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 0.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 1.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 2.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "cotton",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 0,
+              "damageK": 0
+            }
+          },
+          {
+            "x": 3.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 4.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 6.88,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "rubber"
+          },
+          {
+            "x": 5.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "rubber"
+          }
+        ],
+        "puzzle": {
+          "kind": "timing",
+          "ease": "relaxed",
+          "label": "切り返して滑りこむ",
+          "hint": "逆へ傾けて道をひらき、球の勢いで滑りこもう。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 0,
+          "timingCount": 1,
+          "operationDistance": 2,
+          "openingSeconds": 0.5,
+          "rotation": 2,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 2.5,
+              "y": 1.5
+            },
+            "course": [
+              {
+                "x": 1.7000000000000002,
+                "y": 4.3
+              },
+              {
+                "x": 4.5,
+                "y": 2.3499999999999996
+              },
+              {
+                "x": 4.5,
+                "y": 0.5
+              },
+              {
+                "x": 1.5,
+                "y": 0.5
+              },
+              {
+                "x": 1.5,
+                "y": 1.5
+              },
+              {
+                "x": 2.5,
+                "y": 1.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 2.3499999999999996,
+                "y": 3.395
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "timing-gate": 0.8799999999999999
+              },
+              "closed": {
+                "timing-gate": 2.88
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 4,
+                "y": 3.65
+              },
+              "to": {
+                "x": 4,
+                "y": 2.3499999999999996
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 1.7000000000000002,
+                  "y": 4.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": 0.7,
+                "y": -0.3
+              },
+              "condition": {
+                "axis": "x",
+                "min": 3.3
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 2.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 4.5,
+                  "y": 2.3499999999999996
+                },
+                {
+                  "x": 4.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 1.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 1.5,
+                  "y": 1.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 1.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "rackets": [
+          {
+            "id": "timing-gate",
+            "label": "1",
+            "bounce": "reflect",
+            "x": 0.8799999999999999,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.8799999999999999,
+            "max": 2.88,
+            "home": 0.8799999999999999,
+            "vx": 0,
+            "vy": 0,
+            "materialId": "racket",
+            "physicsMaterial": {
+              "frictionK": 1,
+              "accelK": 1,
+              "restitutionK": 3.0857142857142863,
+              "damageK": 0
+            },
+            "blocked": false
+          }
+        ],
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        },
+        "puzzleCourse": {
+          "index": 2,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-timing",
+            "puzzleKind": "timing",
+            "puzzleEase": "relaxed",
+            "title": "切り返して、滑り込もう",
+            "body": "球の勢いを残し、戸を開いて滑り込もう。",
+            "art": "timing-demo",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "壁は切り返しても、球には勢いが残ります。ここからは、しかけを組み合わせよう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        }
+      }
+    }
+  ]
+}

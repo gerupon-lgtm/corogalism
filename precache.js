@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '8adcb71b40886111';
+self.PRECACHE_VERSION = 'a73e087e0c8a56b0';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -42,6 +42,7 @@ self.PRECACHE_FILES = [
   "src/game/challenge.js",
   "src/game/hp.js",
   "src/game/progression.js",
+  "src/game/puzzleHints.js",
   "src/game/puzzleTutorial.js",
   "src/game/puzzleVariety.js",
   "src/game/run.js",
