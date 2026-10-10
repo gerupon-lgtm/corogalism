@@ -12,7 +12,7 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  await page.evaluate(()=>document.fonts.ready);await page.clock.runFor(128);
  const state=()=>page.evaluate(()=>window.__ballLab.state);
  assert.equal((await state()).settings.physics,'explore');assert.equal((await state()).settings.settleBounce,false);
- assert.equal(await page.locator('#wall option').count(),6);
+ assert.equal(await page.locator('#wall option').count(),7);
  // 氷が高速時の傾きの反応を弱めない。減速とは別に実効加速を比較する。
  const accelAt=()=>page.evaluate(async()=>{const {BASE}=await import('./src/config/gameConfig.js'),{resolveParams}=await import('./src/physics/resolveParams.js'),{sampleMaterial,sampleZone}=await import('./src/world/stage.js');const s=window.__ballLab.state,actor={...s.actor,character:{...((await import('./src/world/ballMaterials.js')).getBallMaterial(s.settings.ball))}};return resolveParams({base:BASE,character:actor.character,material:sampleMaterial(s.stage,actor),zone:sampleZone(s.stage,actor),policy:s.stage.physicsPolicy}).accel;});
  const accel={};
@@ -52,7 +52,7 @@ try{for(const [width,height]of [[320,568],[390,844],[576,1024]]){
  assert.equal((await state()).paused,true);assert.ok((await state()).lastHalt);assert.ok(Math.abs((await state()).actor.vx)>30);
  assert.match(await page.locator('#status').textContent(),/速度を丸めず一時停止/);
  await page.locator('#copy').click();const shared=JSON.parse(await page.locator('#settings-text').inputValue());
- assert.equal(shared.revision,7);assert.equal(shared.physics,'explore');assert.ok(shared.observations.length>0);
+ assert.equal(shared.revision,8);assert.equal(shared.physics,'explore');assert.ok(shared.observations.length>0);
  await page.locator('#reset').click();await page.locator('[data-ball=wood]').click();await page.locator('#wall').selectOption('default');await page.locator('#pause').click();await page.clock.runFor(32);
  assert.equal((await state()).paused,false);assert.equal((await state()).lastHalt,null);assert.doesNotMatch(await page.locator('#status').textContent(),/計算|一時停止/);
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

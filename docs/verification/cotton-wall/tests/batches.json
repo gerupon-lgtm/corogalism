@@ -1,0 +1,110 @@
+[
+  {
+    "batch": 1,
+    "files": [
+      "audio-settings.test.js",
+      "balance.test.js",
+      "ball-materials.test.js",
+      "ballRotation.test.js",
+      "branch-floors.test.js"
+    ],
+    "pass": 25,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 8.14
+  },
+  {
+    "batch": 2,
+    "files": [
+      "candy-full.test.js",
+      "challenge.test.js",
+      "cotton-wall.test.js",
+      "escape-timing.test.js",
+      "exploration.test.js"
+    ],
+    "pass": 25,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 2.61
+  },
+  {
+    "batch": 3,
+    "files": [
+      "feature-hint-position.test.js",
+      "features.test.js",
+      "first-sound.test.js",
+      "floor-difficulty.test.js",
+      "floor-lab.test.js"
+    ],
+    "pass": 24,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 4.38
+  },
+  {
+    "batch": 4,
+    "files": [
+      "floor-learning.test.js",
+      "floor-presentation.test.js",
+      "floor-themes.test.js",
+      "floor-trial.test.js",
+      "hourglass.test.js"
+    ],
+    "pass": 14,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 2.52
+  },
+  {
+    "batch": 5,
+    "files": [
+      "hp-display.test.js",
+      "maze-variation.test.js",
+      "maze.test.js",
+      "onboarding.test.js",
+      "open-floor-pacing.test.js"
+    ],
+    "pass": 33,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 2.32
+  },
+  {
+    "batch": 6,
+    "files": [
+      "open-plaza.test.js",
+      "phase2.test.js",
+      "physics.test.js",
+      "playthrough.test.js",
+      "resolveParams.test.js"
+    ],
+    "pass": 49,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 2.07
+  },
+  {
+    "batch": 7,
+    "files": [
+      "rubber-rebound.test.js",
+      "stableCalibration.test.js",
+      "stagePlay.test.js",
+      "storage.test.js",
+      "tutorial.test.js"
+    ],
+    "pass": 30,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 0.68
+  },
+  {
+    "batch": 8,
+    "files": [
+      "wall-clearance.test.js"
+    ],
+    "pass": 1,
+    "fail": 0,
+    "exitCode": 0,
+    "seconds": 1.61
+  }
+]

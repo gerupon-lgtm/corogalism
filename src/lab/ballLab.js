@@ -1,7 +1,7 @@
 import {BALL_MATERIALS,getBallMaterial} from '../world/ballMaterials.js';
 import {createBallLabStage,BALL_LAB_FLOORS,BALL_LAB_WALLS} from './ballLabStage.js';
 import {createActor} from '../world/stage.js';
-import {BASE,FLOOR_CHALLENGE} from '../config/gameConfig.js';
+import {BASE,FLOOR_CHALLENGE,BALL_LAB_COTTON} from '../config/gameConfig.js';
 import {getMaterial} from '../world/materials.js';
 import {applyExploration,describeExploration,haltMessage,crossesGoal} from './exploration.js';
 import {stepPhysics} from '../physics/integrator.js';
@@ -16,7 +16,8 @@ import {createBallMaterialAudio} from '../audio/ballMaterialAudio.js';
 
 const $=id=>document.getElementById(id),canvas=$('board'),renderer=createRenderer(canvas),portrait=initPortraitLock();
 const defaultFloors={ice:FLOOR_CHALLENGE.ice,sand:FLOOR_CHALLENGE.sand,force:FLOOR_CHALLENGE.assistForce,radius:FLOOR_CHALLENGE.radius};
-const settings={ball:'metal',layout:'plaza',floor:'normal',wall:'default',physics:'explore',settleBounce:false,floorValues:{...defaultFloors},ballValues:{},wallValues:{}},tilt=createTiltVector(),sound=createBallMaterialAudio();
+const cottonPreset=new URLSearchParams(location.search).get('preset')==='cotton';
+const settings={ball:cottonPreset?'superball':'metal',layout:'plaza',floor:cottonPreset?'ice':'normal',wall:cottonPreset?'rubber':'default',mixCotton:cottonPreset,cottonCount:BALL_LAB_COTTON.count,physics:'explore',settleBounce:false,floorValues:{...defaultFloors},ballValues:{},wallValues:{}},tilt=createTiltVector(),sound=createBallMaterialAudio();
 let stage=createBallLabStage(settings),actor=createActor(stage.maze,getBallMaterial(settings.ball)),camera,paused=false,last=0,mode='pointer',requestId=0,sensorTimer=null;
 const observations=[];let lastHalt=null;
 applyExploration(stage,settings.physics,settings.settleBounce);
@@ -38,6 +39,13 @@ function refresh(){
  $('test-area').hidden=!['gravity','repulsion','mixed'].includes(settings.floor);
  $('physics-readout').textContent=describeExploration(actor,stage);
  $('physics').value=settings.physics;$('settle').checked=settings.settleBounce;
+ for(const key of ['floor','wall','layout'])$(key).value=settings[key];
+ $('mix-cotton').checked=settings.mixCotton;
+ const cottonWalls=stage.walls.filter(w=>w.materialId==='cotton').length;
+ const cottonBounce=settings.wallValues.cotton??getMaterial('cotton').restitutionK;
+ $('cotton-note').textContent=cottonWalls?`白い綿 ${cottonWalls}／壁 ${stage.walls.length}区間。${cottonBounce===0?'綿は壁へ向かう勢いを吸収し、壁沿いは滑れます。':'綿の反発を調整中。0に戻すと壁へ向かう勢いを吸収します。'}数と反発は下の調整で変えられます。`:'綿を混ぜると、選んだ壁の一部が白い綿に変わります。';
+ $('cotton-count').value=settings.cottonCount;
+ $('cotton-restitution').value=settings.wallValues.cotton??getMaterial('cotton').restitutionK;
  for(const key of ['accelK','frictionK','restitutionK','fieldK'])$('ball-'+key).value=actor.character[key]??1;
  for(const key of Object.keys(defaultFloors))$('floor-'+key).value=settings.floorValues[key];
  $('wall-restitution').value=settings.wallValues[settings.wall]??getMaterial(settings.wall).restitutionK;
@@ -60,6 +68,7 @@ for(const [id,options]of [['floor',BALL_LAB_FLOORS],['wall',BALL_LAB_WALLS]])for
  const option=document.createElement('option');option.value=value;option.textContent=label;$(id).append(option);
 }
 for(const id of ['floor','wall','layout'])$(id).onchange=()=>change(id,$(id).value);
+$('mix-cotton').onchange=()=>change('mixCotton',$('mix-cotton').checked);
 $('physics').onchange=()=>{settings.settleBounce=$('physics').value==='legacy';change('physics',$('physics').value);};
 $('settle').onchange=()=>{settings.settleBounce=$('settle').checked;applyExploration(stage,settings.physics,settings.settleBounce);refresh();};
 function numericInput(id,apply,positive=false){$(id).oninput=()=>{
@@ -72,6 +81,13 @@ for(const key of ['accelK','frictionK','restitutionK','fieldK'])numericInput('ba
 });
 for(const key of Object.keys(defaultFloors))numericInput('floor-'+key,value=>{settings.floorValues[key]=value;change('floor',settings.floor);},key==='radius');
 numericInput('wall-restitution',value=>{settings.wallValues[settings.wall]=value;change('wall',settings.wall);});
+numericInput('cotton-restitution',value=>{settings.wallValues.cotton=value;change('wall',settings.wall);});
+$('cotton-count').oninput=()=>{
+ const value=$('cotton-count').valueAsNumber;
+ if(!Number.isFinite(value)||!Number.isInteger(value)||value<0){$('input-note').textContent='綿の数は0以上の整数を入力してください。';return;}
+ settings.cottonCount=value;change('mixCotton',settings.mixCotton);
+ $('input-note').textContent='綿の配置数を変えました。壁の総数以上なら、すべての壁を綿にします。';
+};
 $('material-defaults').onclick=()=>{settings.ballValues={};settings.wallValues={};settings.floorValues={...defaultFloors};change('ball',settings.ball);change('floor',settings.floor);reset();$('input-note').textContent='動きの数値を初期値に戻しました。';};
 $('sound').onclick=()=>{const enabled=!sound.state.enabled;sound.setEnabled(enabled);$('sound').textContent=enabled?'音ON':'音OFF';$('sound').setAttribute('aria-pressed',String(enabled));};
 $('volume').oninput=()=>{gesture();sound.setVolume(Number($('volume').value));$('volume-value').textContent=Math.round(sound.state.volume*100)+'%'};
@@ -90,7 +106,7 @@ $('sensor').onclick=async()=>{
 $('calibrate').onclick=()=>{gesture();sensor.calibrate();tilt.reset();clearTimeout(sensorTimer);const id=requestId;sensorTimer=setTimeout(()=>{if(id===requestId&&sensor.needsCalibration)pointerMode('傾きを確認できなかったため、画面操作に切り替えました。');},6000);$('status').textContent='遊ぶ姿勢で少し静止してください。';};
 canvas.addEventListener('pointerdown',gesture);
 $('copy').onclick=async()=>{
- const text=JSON.stringify({page:'corogalism-ball-lab',revision:7,...settings,mode,sound:sound.state.enabled,volume:sound.state.volume,observations},null,2);
+ const text=JSON.stringify({page:'corogalism-ball-lab',revision:8,...settings,mode,sound:sound.state.enabled,volume:sound.state.volume,observations},null,2);
  $('settings-text').hidden=false;$('settings-text').value=text;
  try{await navigator.clipboard.writeText(text);$('copy-status').textContent='コピーしました。設定と感想を送ってください。';}
  catch{$('settings-text').focus();$('settings-text').select();$('copy-status').textContent='設定を選択してコピーしてください。';}

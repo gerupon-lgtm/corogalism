@@ -34,7 +34,7 @@ test('素材による力場の初動と反発が異なる、既存の係数は�
  assert.ok(rubber.restitution>.9&&rubber.restitution<1);assert.ok(metal.restitution>sponge.restitution);
  assert.deepEqual(resolveParams({base:BASE,character:getBallMaterial('default')}),{accel:17,friction:2.5,restitution:.35,forceX:0,forceY:0});
 });
-test('以前の調整は全360組合せで到達性・同じ球径・有限値・速度上限・盤内を維持',()=>{
+test('以前の調整は全420組合せで到達性・同じ球径・有限値・速度上限・盤内を維持',()=>{
  for(const layout of ['plaza','maze'])for(const floor of Object.keys(BALL_LAB_FLOORS))for(const wall of Object.keys(BALL_LAB_WALLS))for(const id of Object.keys(BALL_MATERIALS)){
   const stage=createBallLabStage({layout,floor,wall}),a=createActor(stage.maze,getBallMaterial(id));
   assert.equal(checkReachability(stage.maze).ok,true);assert.equal(a.r,.275);

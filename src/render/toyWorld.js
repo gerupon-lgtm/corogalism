@@ -22,7 +22,7 @@ export function drawToyWall(ctx, wall, camera) {
   ctx.shadowColor='transparent';ctx.shadowOffsetY=0;ctx.shadowBlur=0;
   ctx.beginPath(); ctx.rect(0,0,w,h); ctx.clip();
   if (!horizontal) { ctx.translate(w,0); ctx.rotate(Math.PI/2); }
-  if (wallTextureReady() && wall.materialId !== 'cork') {
+  if (wallTextureReady() && !['cork','cotton'].includes(wall.materialId)) {
     const [top,bottom]=materialBands[wall.materialId] || materialBands.default;
     const sy=wallAtlas.naturalHeight*top, sh=wallAtlas.naturalHeight*(bottom-top);
     rounded(ctx,0,0,length,thickness,thickness*.22);ctx.clip();
@@ -55,7 +55,15 @@ export function drawToyWall(ctx, wall, camera) {
   ctx.fillStyle = gradient;
   rounded(ctx,0,0,length,thickness,thickness*.23); ctx.fill(); ctx.clip();
   const step = thickness*2.3;
-  if (wall.materialId === 'cork') {
+  if (wall.materialId === 'cotton') {
+    // 白い綿の房と細い繊維。形は既存の衝突矩形の内側に収める。
+    for(let p=-thickness*.3;p<length;p+=thickness*.72){
+      ctx.fillStyle=p%2?'#fffdf1d9':'#e5e9df';
+      ctx.beginPath();ctx.ellipse(p+thickness*.45,thickness*.42,thickness*.53,thickness*.36,0,0,Math.PI*2);ctx.fill();
+      ctx.strokeStyle='#9cac9e55';ctx.lineWidth=Math.max(.45,thickness*.035);
+      for(let n=0;n<3;n++){const x=p+thickness*(.25+n*.14);ctx.beginPath();ctx.moveTo(x,thickness*.6);ctx.quadraticCurveTo(x+thickness*.15,thickness*.33,x+thickness*.07,thickness*.21);ctx.stroke();}
+    }
+  } else if (wall.materialId === 'cork') {
     for(let n=0;n<length*2;n++){const x=(n*7.13)%length,y=thickness*(.1+((n*31)%80)/100);ctx.fillStyle=n%3?'#8d624455':'#ffefd18a';circle(ctx,x,y,thickness*(.025+(n%4)*.017));}
   } else if (wall.materialId === 'stone') {
     for(let p=0;p<length;p+=step) {

@@ -1,5 +1,7 @@
 # T-263 ボール素材のおためし
 
+**T-284 / v0.6.27 / おためし8:** 綿の壁を追加。基本壁に一部混ぜる切替、綿の配置数と反発の調整、スーパーボール＋ゴム＋氷＋綿で開くリンクを用意。壁へ向かう勢いを吸収し、壁沿いの滑りは残す。本編の配置・物理は維持。共有revision8。[現行の綿壁](cotton-wall-lab.md)、[確認](verification/cotton-wall.md)。以下のrevision7や未実装の綿の記述は以前の履歴。
+
 **T-271 / v0.6.13:** 検証の氷は傾きの加速を速度で弱めない。補助コースの力55%も検証だけ外し、残る入力・時間・衝突・音の条件を明示。ボールrevision7／床revision9、旧調整と本編は維持。[再確認した条件](exploration-policy.md)、[検証](verification/ice-response.md)。
 
 **公開v0.6.12:** 設定付きURLのオフライン初回表示を修正。動きはT-269と同じ。[確認結果](verification/exploration-offline.md)。

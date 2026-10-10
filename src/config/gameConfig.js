@@ -8,6 +8,8 @@
  * 戻り値（実効値）を使う。理由は docs/physics.md §1。
  */
 
+export const BALL_LAB_COTTON = {count:6}; // 試遊の開始値。配置数の上限ではない。
+
 export const BASE = {
   tiltSensitivity: 17,   // 最大傾き時の加速度（マス/s²）
   friction: 2.5,         // 指数減衰の係数。v *= Math.exp(-friction * dt)。クーロン摩擦ではない

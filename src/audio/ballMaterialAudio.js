@@ -47,7 +47,12 @@ export function createRollingBuffer(context,kind='metal',floor='normal'){
  return b;
 }
 export function createImpactBuffer(context,kind='metal',wall='default'){
- const n=Math.round(rate*.5),b=context.createBuffer(1,n,rate),data=b.getChannelData(0),noise=random(331);
+ const n=Math.round(rate*(wall==='cotton'?.12:.5)),b=context.createBuffer(1,n,rate),data=b.getChannelData(0),noise=random(331);
+ if(wall==='cotton'){
+  let low=0;const strength=kind==='metal'?.18:kind==='default'?.14:.11;
+  for(let i=0;i<n;i++){const t=i/rate;low+=.075*(noise()-low);data[i]=low*strength*Math.min(1,t/.002)*Math.exp(-t*65)*Math.min(1,(n-1-i)/(rate*.01));}
+  return b;
+ }
  const soft=wall==='rubber'?.5:wall==='cork'?.38:wall==='stone'?1.25:.85;
  let low=0,phase=0;
  for(let i=0;i<n;i++){

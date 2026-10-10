@@ -5,13 +5,16 @@
  <title>ボールのおためし | コロガリズム</title>
  <link rel="stylesheet" href="floor-lab.css"><link rel="stylesheet" href="ball-lab.css">
 </head><body><main>
- <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし7 · v0.6.26</span></header>
+ <header><a href="./">← コロガリズムへ</a><span>開発中 · おためし8 · v0.6.27</span></header>
  <h1>ボールのおためし</h1><p class="intro">音と動きで、ボール素材をくらべよう。</p>
  <nav id="balls" aria-label="ボールの素材"></nav><p id="hint"></p>
  <div class="choices">
   <label>面<select id="layout"><option value="plaza">広場</option><option value="maze">迷路</option></select></label>
   <label>床<select id="floor"></select></label><label>壁<select id="wall"></select></label>
  </div>
+ <label class="check"><input id="mix-cotton" type="checkbox">壁の一部を綿にする</label>
+ <p id="cotton-note" class="note"></p>
+ <p class="cotton-preset"><a href="ball-lab.html?preset=cotton">スーパーボール＋ゴム壁＋氷＋一部綿で試す</a></p>
  <label class="physics-choice">動きの比較<select id="physics"><option value="explore">素材の数値どおり（氷の反応補正なし）</option><option value="legacy">以前の調整（比較用）</option></select></label>
  <label class="check"><input id="settle" type="checkbox">弱い跳ね返りを落ち着かせる</label>
  <p id="physics-readout" class="note"></p>
@@ -28,6 +31,8 @@
    <label>ボールの反発倍率<input id="ball-restitutionK" type="number" step="any"></label>
    <label>力場への反応倍率<input id="ball-fieldK" type="number" step="any"></label>
    <label>壁の反発倍率<input id="wall-restitution" type="number" step="any"></label>
+   <label>綿壁の数（混ぜる時）<input id="cotton-count" type="number" step="1"></label>
+   <label>綿の反発倍率（0で吸収）<input id="cotton-restitution" type="number" step="any"></label>
    <label>氷の減速倍率<input id="floor-ice" type="number" step="any"></label>
    <label>砂の減速倍率<input id="floor-sand" type="number" step="any"></label>
    <label>力場の強さ<input id="floor-force" type="number" step="any"></label>
