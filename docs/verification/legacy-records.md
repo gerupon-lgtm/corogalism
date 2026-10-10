@@ -14,6 +14,12 @@
 
 ローカルChromeの312／412／576幅で両難易度の６表示、再読み込み、現ルール80面への実保存を確認。旧107面は見え、旧保存本文は同一。空の保存先では記録を作らず、122資材・キャッシュ7da95b332c20edb1のオフライン表示も確認。ゲームのプレイ成績として107面を作った検証ではなく、保存データの読み取り・表示の確認である。
 
-公開前。端末内の実データを取得していないため、ユーザーの107面の保存データが残っているかは未確認。存在するデータだけを表示し、記憶や画像の面数から新しい記録を作らない。
+## 公開
+
+アプリ9ae6958／[Pages38045675592成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38045675592)。公開125資材のHTTP200・SHA-256一致、主要５資材のクエリなしの本文と形式一致を確認。[全資材](legacy-records/deploy-hashes.json)、[本文と形式](legacy-records/canonical-assets.json)。
+
+公開Chromeでも３幅×両難易度の６表示、再読み込み、現ルール80面への実保存、旧本文の保持、空の記録、122資材オフラインの旧107面表示が成功。読み込まれたstorage.js／runScreens.jsの本文は最終ファイルと一致。ページ例外・console・失敗通信・HTTPエラーは０。[公開ブラウザ](legacy-records/public/results.json)。合成した保存データによる確認であり、107面まで実際にプレイした検証ではない。
+
+実装・公開確認完了。端末内の実データを取得していないため、ユーザーの107面の保存データが残っているかは未確認。存在するデータだけを表示し、記憶や画像の面数から新しい記録を作らない。
 
 [修正前](legacy-records/unit-before.txt)、[修正後](legacy-records/unit-after.txt)、[ローカル](legacy-records/local/results.json)、[再現・ブラウザ確認](../../tools/browser-legacy-records.mjs)。

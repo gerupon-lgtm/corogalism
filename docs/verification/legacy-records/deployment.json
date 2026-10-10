@@ -1,0 +1,15 @@
+{
+  "version": "0.7.3",
+  "appCommit": "9ae6958b16ad756f8249ba2676c9790403dc08aa",
+  "pagesRun": 38045675592,
+  "conclusion": "success",
+  "precacheVersion": "7da95b332c20edb1",
+  "precacheCount": 122,
+  "runtimeMatchCount": 125,
+  "relatedTests": 30,
+  "testFileCount": 4,
+  "localBrowserExitCode": 0,
+  "publicBrowserExitCode": 0,
+  "syntheticFixtures": true,
+  "actualUserRecordsVerified": false
+}

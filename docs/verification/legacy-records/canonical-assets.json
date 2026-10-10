@@ -1,0 +1,37 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "3b670f9c296a4d5e376aefdf079c37cd724d4e68d28dbec2221992e902e5162d",
+    "match": true
+  },
+  {
+    "path": "package.json",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "sha256": "f65161605fd828e0218a7f1ce737ad07dc1f2eb5e59d0ca827a0d01ae3329e37",
+    "match": true
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "32bbf2e5ee464b103885995885cd17ea536850a8e5f49d813591feba46d82d89",
+    "match": true
+  },
+  {
+    "path": "src/record/storage.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "1e9354a0e74922bbe026ec30dd6b12f0c42ef523adb6fe9f65d619f1b4bbed33",
+    "match": true
+  },
+  {
+    "path": "src/ui/runScreens.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "930ad9fa81bfc87396679325d346378128114268bfcf7520da060039788a507f",
+    "match": true
+  }
+]
