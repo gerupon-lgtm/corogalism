@@ -9,6 +9,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_EXECU
 const base = process.env.BASE_URL || 'http://127.0.0.1:8774/';
 const output = process.env.WAKE_LOCK_OUTPUT || 'docs/verification/wake-lock/local';
 const phase = process.env.WAKE_LOCK_PHASE || 'main';
+assert.ok(['main', 'native', 'offline', 'all'].includes(phase), '指定された検証の種類が存在する');
 const version = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8')).version;
 const rows = [];
 let activePage = null;
@@ -313,8 +314,8 @@ try {
     await entriesAndTransitions();
     await endScreens();
     await refusalsAndPending();
-    await nativeAndLayout();
   }
+  if (phase === 'main' || phase === 'native' || phase === 'all') await nativeAndLayout();
   if (phase === 'offline' || phase === 'all') await offline();
 } catch (error) {
   rows.push({ name: 'failure', error: String(error), diagnostics: activeFixture?.diagnostics, state: activePage && !activePage.isClosed() ? await state(activePage).catch(() => null) : null });

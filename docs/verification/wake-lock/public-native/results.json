@@ -1,0 +1,244 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "phase": "native",
+  "version": "0.7.0",
+  "rows": [
+    {
+      "name": "native-api-and-layout",
+      "width": 312,
+      "native": true,
+      "ui": {
+        "label": "↔ 動く壁のあそび方 ›",
+        "button": {
+          "left": 28,
+          "right": 284,
+          "width": 256,
+          "scrollWidth": 254,
+          "clientWidth": 254
+        },
+        "badge": {
+          "text": "v0.7.0",
+          "left": 250.96875,
+          "right": 302
+        },
+        "devNoteHidden": true,
+        "phaseTextVisible": false,
+        "docWidth": 312,
+        "viewportWidth": 312,
+        "secureContext": true,
+        "supported": true,
+        "visibilityState": "visible"
+      },
+      "acquired": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "paused": {
+        "supported": true,
+        "active": false,
+        "held": false,
+        "pending": false,
+        "lastError": null
+      },
+      "resumed": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "input": {
+        "before": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "after": {
+          "x": 0.3954357141706459,
+          "y": 0.5,
+          "vx": 0.026090668900951297,
+          "vy": 0,
+          "r": 0.275
+        },
+        "wallHitsBefore": 0,
+        "wallHitsAfter": 0,
+        "reflectedAtWall": true,
+        "actualPointer": true,
+        "teleport": false
+      },
+      "physicalPhoneDimmingUnverified": true
+    },
+    {
+      "name": "diagnostics",
+      "mode": "native",
+      "width": 312,
+      "pageErrors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "native-api-and-layout",
+      "width": 412,
+      "native": true,
+      "ui": {
+        "label": "↔ 動く壁のあそび方 ›",
+        "button": {
+          "left": 32,
+          "right": 380,
+          "width": 348,
+          "scrollWidth": 346,
+          "clientWidth": 346
+        },
+        "badge": {
+          "text": "v0.7.0",
+          "left": 346.96875,
+          "right": 398
+        },
+        "devNoteHidden": true,
+        "phaseTextVisible": false,
+        "docWidth": 412,
+        "viewportWidth": 412,
+        "secureContext": true,
+        "supported": true,
+        "visibilityState": "visible"
+      },
+      "acquired": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "paused": {
+        "supported": true,
+        "active": false,
+        "held": false,
+        "pending": false,
+        "lastError": null
+      },
+      "resumed": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "input": {
+        "before": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "after": {
+          "x": 0.395,
+          "y": 0.5,
+          "vx": 1.2785448641650266,
+          "vy": 0,
+          "r": 0.275
+        },
+        "wallHitsBefore": 0,
+        "wallHitsAfter": 0,
+        "reflectedAtWall": true,
+        "actualPointer": true,
+        "teleport": false
+      },
+      "physicalPhoneDimmingUnverified": true
+    },
+    {
+      "name": "diagnostics",
+      "mode": "native",
+      "width": 412,
+      "pageErrors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "native-api-and-layout",
+      "width": 576,
+      "native": true,
+      "ui": {
+        "label": "↔ 動く壁のあそび方 ›",
+        "button": {
+          "left": 80,
+          "right": 496,
+          "width": 416,
+          "scrollWidth": 414,
+          "clientWidth": 414
+        },
+        "badge": {
+          "text": "v0.7.0",
+          "left": 462.96875,
+          "right": 514
+        },
+        "devNoteHidden": true,
+        "phaseTextVisible": false,
+        "docWidth": 576,
+        "viewportWidth": 576,
+        "secureContext": true,
+        "supported": true,
+        "visibilityState": "visible"
+      },
+      "acquired": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "paused": {
+        "supported": true,
+        "active": false,
+        "held": false,
+        "pending": false,
+        "lastError": null
+      },
+      "resumed": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "input": {
+        "before": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "after": {
+          "x": 0.395,
+          "y": 0.5,
+          "vx": 1.277865840304623,
+          "vy": 0,
+          "r": 0.275
+        },
+        "wallHitsBefore": 0,
+        "wallHitsAfter": 0,
+        "reflectedAtWall": true,
+        "actualPointer": true,
+        "teleport": false
+      },
+      "physicalPhoneDimmingUnverified": true
+    },
+    {
+      "name": "diagnostics",
+      "mode": "native",
+      "width": 576,
+      "pageErrors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    }
+  ]
+}

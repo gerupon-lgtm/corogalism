@@ -1,0 +1,83 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "canonical": true,
+  "rows": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "contentType": "text/html",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "contentType": "text/css",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "src/main.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "src/input/screenWakeLock.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "precache.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "ball-lab.html",
+      "status": 200,
+      "contentType": "text/html",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "floor-lab.html",
+      "status": 200,
+      "contentType": "text/html",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "racket-lab.html",
+      "status": 200,
+      "contentType": "text/html",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "src/lab/racketLab.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "correctContentType": true,
+      "match": true
+    },
+    {
+      "path": "package.json",
+      "status": 200,
+      "contentType": "application/json",
+      "correctContentType": true,
+      "match": true
+    }
+  ]
+}
