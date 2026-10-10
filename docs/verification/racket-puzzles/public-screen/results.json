@@ -1,0 +1,372 @@
+[
+  {
+    "scenario": "baseline",
+    "layout": "relay",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2456813744909057,
+      "y": 0.6376641860576727,
+      "vx": 2.61653815103701,
+      "vy": 0.48305295957979055,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [],
+    "screenshot": "baseline-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 675243,
+    "cyanRatio": 0.7311615003881883,
+    "errors": [],
+    "failedRequests": [],
+    "consoleErrors": [
+      {
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "location": {
+          "url": "https://corogalism.sikumilab.com/favicon.ico",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      }
+    ],
+    "httpErrors": []
+  },
+  {
+    "scenario": "cotton",
+    "layout": "relay",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2365380899204808,
+      "y": 0.6359761958901019,
+      "vx": 2.5403052687374874,
+      "vy": 0.46897920361430295,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [],
+    "screenshot": "cotton-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 654888,
+    "cyanRatio": 0.7091208537759293,
+    "errors": [],
+    "failedRequests": [],
+    "consoleErrors": [],
+    "httpErrors": []
+  },
+  {
+    "scenario": "rackets",
+    "layout": "relay",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2827874143298688,
+      "y": 0.6445145285055337,
+      "vx": 2.6054351915764524,
+      "vy": 0.48100318345656057,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [
+      {
+        "id": "vertical",
+        "x": 5.4,
+        "y": 2,
+        "w": 0.24,
+        "h": 1.3,
+        "axis": "y",
+        "min": 0.8,
+        "max": 2,
+        "home": 1.9,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      },
+      {
+        "id": "horizontal",
+        "x": 4.283229086343593,
+        "y": 6,
+        "w": 1.3,
+        "h": 0.24,
+        "axis": "x",
+        "min": 0.8,
+        "max": 4.85,
+        "home": 3.2,
+        "vx": 0.11077504467557574,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "screenshot": "rackets-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 647079,
+    "cyanRatio": 0.7006651716636655,
+    "errors": [],
+    "failedRequests": [],
+    "consoleErrors": [],
+    "httpErrors": []
+  },
+  {
+    "scenario": "rackets",
+    "layout": "sequence",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2389305632547978,
+      "y": 0.6364178830577055,
+      "vx": 2.6109288820877987,
+      "vy": 0.4820174027445416,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [
+      {
+        "id": "gate-1",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 2.88,
+        "y": 1.0496250028716019,
+        "w": 0.24,
+        "h": 2.3,
+        "axis": "y",
+        "min": 0.85,
+        "max": 3.5,
+        "home": 0.85,
+        "vx": 0,
+        "vy": 0.058923565854512715,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      },
+      {
+        "id": "gate-2",
+        "label": "2",
+        "bounce": "reflect",
+        "x": 4.85,
+        "y": 3.88,
+        "w": 2.3,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2.65,
+        "max": 4.85,
+        "home": 4.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "screenshot": "sequence-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 629242,
+    "cyanRatio": 0.6813510467006164,
+    "errors": [],
+    "failedRequests": [],
+    "consoleErrors": [],
+    "httpErrors": []
+  },
+  {
+    "scenario": "rackets",
+    "layout": "timing",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.283018263753582,
+      "y": 0.6445571468397241,
+      "vx": 2.6053212903475957,
+      "vy": 0.480982155547727,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [
+      {
+        "id": "timing-gate",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 3.0831919979566127,
+        "y": 3.12,
+        "w": 2,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2,
+        "max": 4,
+        "home": 2,
+        "vx": 0.11007947309826033,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "screenshot": "timing-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 649093,
+    "cyanRatio": 0.7028459558580693,
+    "errors": [],
+    "failedRequests": [],
+    "consoleErrors": [],
+    "httpErrors": []
+  }
+]

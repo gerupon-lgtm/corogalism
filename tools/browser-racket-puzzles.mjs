@@ -6,6 +6,8 @@ const browser=await chromium.launch({executablePath:process.env.CHROME_EXECUTABL
 const base=process.env.BASE_URL||'http://127.0.0.1:8772/';
 const output=process.env.RACKET_PUZZLE_OUTPUT||'docs/verification/racket-puzzles/local';
 const viewports=(process.env.RACKET_PUZZLE_VIEWPORTS||'312x720,412x915,576x1024').split(',').map(v=>v.split('x').map(Number));
+const offlineOnly=process.env.RACKET_PUZZLE_OFFLINE_ONLY==='1',expectedRelease=process.env.RACKET_EXPECT_RELEASE||'';
+assert.ok(!offlineOnly||process.env.RACKET_PUZZLE_OFFLINE!=='0','offline-onlyではオフライン確認を無効化しない');
 const rows=[];await mkdir(output,{recursive:true});let active=null,activeErrors=[],activeRequests=[];
 const clamp=(v,limit)=>Math.max(-limit,Math.min(limit,v));
 async function fixture(layout,width=412,height=915,workers='block'){
@@ -184,7 +186,7 @@ async function reflectionChecks(page,layout){
  console.log('PASS puzzle shape/axis reflection '+layout);return shots;
 }
 try{
- for(const [width,height]of viewports)for(const layout of ['sequence','timing']){
+ if(!offlineOnly)for(const [width,height]of viewports)for(const layout of ['sequence','timing']){
   const f=await fixture(layout,width,height);await inspectLayout(f.page,layout,width);
   if(width===412){await reflectionChecks(f.page,layout);if(layout==='sequence')await sequencePassChecks(f.page);else{await timingChecks(f.page);await timingSwitchProbe(f.page);}await completeCourse(f.page,layout);}
   assert.deepEqual(f.errors,[]);await f.context.close();
@@ -196,8 +198,8 @@ try{
   const cache=await page.evaluate(async()=>{const names=await caches.keys(),keys=await(await caches.open(names.find(n=>n.startsWith('corogalism-')))).keys();return {names,files:keys.length};});
   if(process.env.PRECACHE_COUNT)assert.equal(cache.files,Number(process.env.PRECACHE_COUNT));await context.setOffline(true);await page.clock.install();await page.clock.pauseAt(Date.now()+1000);
   for(const layout of ['sequence','timing']){
-   await page.goto(base+'racket-lab.html?debug=1&layout='+layout+'&offline-puzzle=1');await page.waitForFunction(()=>!!window.__racketLab);await page.clock.runFor(32);assert.equal((await snapshot(page)).layout,layout);
-   const before=await snapshot(page),input=await inputControl(page),trace=[];await hold(page,input,{x:.45,y:.45},.35,trace,'offline');await input.release();const after=await snapshot(page);assertLive(after);assert.ok(Math.hypot(after.actor.x-before.actor.x,after.actor.y-before.actor.y)>.01);rows.push({offline:true,layout,cache,before,after});
+   await page.goto(base+'racket-lab.html?debug=1&layout='+layout+'&offline-puzzle=1');await page.waitForFunction(()=>!!window.__racketLab);await page.clock.runFor(32);assert.equal((await snapshot(page)).layout,layout);const releaseText=await page.locator('header span').textContent();if(expectedRelease)assert.ok(releaseText.includes(expectedRelease),'保存した公開修正版をオフライン表示する');
+   const before=await snapshot(page),input=await inputControl(page),trace=[];await hold(page,input,{x:.45,y:.45},.35,trace,'offline');await input.release();const after=await snapshot(page);assertLive(after);assert.ok(Math.hypot(after.actor.x-before.actor.x,after.actor.y-before.actor.y)>.01);rows.push({offline:true,offlineOnly,layout,releaseText,cache,before,after});
   }
   assert.deepEqual(activeErrors,[]);await context.close();console.log('PASS puzzle new URLs offline');
  }

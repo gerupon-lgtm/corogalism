@@ -37,6 +37,85 @@
     "nativePngVerifiedCases": ["relay/baseline", "relay/cotton", "relay/rackets", "sequence/rackets", "timing/rackets"],
     "newPngVisuallyReviewedByBrowserAgent": true
   },
+  "finalPublicVerification": {
+    "baseUrl": "https://corogalism.sikumilab.com/",
+    "applicationCommitReportedByRoot": "e78150d2b1f242f6e85631a7bfabf214f1211159",
+    "applicationHash": "b948188693e4cdd0",
+    "commandsRunSequentiallyOnce": [
+      {"tool": "tools/browser-racket-lab.mjs", "output": "legacy-public/results.json", "exitCode": 0},
+      {"tool": "tools/browser-racket-puzzles.mjs", "output": "public/results.json", "exitCode": 0},
+      {"tool": "tools/browser-racket-screen.mjs", "output": "public-screen/results.json", "exitCode": 0}
+    ],
+    "viewportWidths": [312, 412, 576],
+    "sequencePointerSeconds": 20.912,
+    "timingPointerSeconds": 9.04,
+    "courseTeleport": false,
+    "courseDebugAdvance": false,
+    "courseGateHits": [0, 0],
+    "legacyRelayPointerSeconds": {"baseline": 8.816, "cotton": 8.816, "rackets": 9.04},
+    "legacyLocalizedReplySeconds": {"cotton": 1.008, "rackets": 0.432},
+    "earlyProbePassedAtMs": 640,
+    "lateProbePassedWithinOneSecond": false,
+    "earlyProbePositiveInertiaOnLeft": true,
+    "sampledWallHits": {"early": 0, "late": 1, "exactCounts": false},
+    "modeEnableSafety": [
+      {"layout": "timing", "actor": [4.265, 3.38], "allowed": false, "displacement": 0},
+      {"layout": "timing", "actor": [4.2, 3.5], "allowed": false, "displacement": 0},
+      {"layout": "sequence", "actor": [5.22, 4.38], "allowed": true, "displacement": 0}
+    ],
+    "offlineCacheFiles": 114,
+    "offlineCacheName": "corogalism-b948188693e4cdd0",
+    "legacyAndPuzzlePageErrorAssertionsPassed": true,
+    "nativeScreenCases": [
+      {"layout": "relay", "scenario": "baseline", "cyanRatio": 0.7311615003881883, "canvasTransparent": 0},
+      {"layout": "relay", "scenario": "cotton", "cyanRatio": 0.7091208537759293, "canvasTransparent": 0},
+      {"layout": "relay", "scenario": "rackets", "cyanRatio": 0.7006651716636655, "canvasTransparent": 0},
+      {"layout": "sequence", "scenario": "rackets", "cyanRatio": 0.6813510467006164, "canvasTransparent": 0},
+      {"layout": "timing", "scenario": "rackets", "cyanRatio": 0.7028459558580693, "canvasTransparent": 0}
+    ],
+    "nativeScreenPageErrors": [],
+    "nativeScreenFailedRequests": [],
+    "nativeScreenHttpResponseErrors": [],
+    "nativeScreenConsoleErrors": [
+      {"layout": "relay", "scenario": "baseline", "url": "https://corogalism.sikumilab.com/favicon.ico", "message": "Failed to load resource: the server responded with a status of 404 ()"}
+    ],
+    "nativeScreenHttpObservationLimit": "The browser internal favicon request produced a console 404 but did not appear in Playwright page response events; no claim of zero HTTP errors overall",
+    "consoleAndHttpCapturedScope": "Only the native-clock five-case command captures console errors and HTTP response statuses. Legacy/puzzle commands assert page errors; uncaptured console or HTTP errors are not reported as zero",
+    "favicon404Excluded": false,
+    "newPngVisuallyReviewedByBrowserAgent": true
+  },
+  "finalR1PublicVerification": {
+    "baseUrl": "https://corogalism.sikumilab.com/",
+    "applicationCommitReportedByRoot": "94653b26c135702088f8f66427a1e44f98e0e0d1",
+    "applicationHash": "3e017e477eca5f60",
+    "releaseText": "開発中 · おためし3 · v0.6.30 r1",
+    "scope": "The icon and HTML revision changed; root confirmed all physics and UI JavaScript identical. Repeat native screens and new-cache offline only, keeping the initial full-course evidence",
+    "commandsRunSequentiallyOnce": [
+      {"tool": "tools/browser-racket-screen.mjs", "output": "public-screen-final/results.json", "exitCode": 0},
+      {"tool": "tools/browser-racket-puzzles.mjs", "option": "RACKET_PUZZLE_OFFLINE_ONLY=1", "output": "public-offline-final/results.json", "exitCode": 0}
+    ],
+    "previousFavicon404EvidencePreserved": "public-screen/results.json",
+    "nativeScreenCases": [
+      {"layout": "relay", "scenario": "baseline", "cyanRatio": 0.7310207347748454, "canvasTransparent": 0},
+      {"layout": "relay", "scenario": "cotton", "cyanRatio": 0.7089681772260729, "canvasTransparent": 0},
+      {"layout": "relay", "scenario": "rackets", "cyanRatio": 0.7006489294775106, "canvasTransparent": 0},
+      {"layout": "sequence", "scenario": "rackets", "cyanRatio": 0.6813521295130268, "canvasTransparent": 0},
+      {"layout": "timing", "scenario": "rackets", "cyanRatio": 0.702923918351613, "canvasTransparent": 0}
+    ],
+    "iconCheckedInAllFiveCases": {"url": "https://corogalism.sikumilab.com/assets/pwa/icon-192.png", "status": 200, "contentType": "image/png", "decodedWidth": 192, "decodedHeight": 192},
+    "nativeScreenPageErrors": [],
+    "nativeScreenFailedRequests": [],
+    "nativeScreenConsoleErrors": [],
+    "nativeScreenHttpResponseErrors": [],
+    "offlineCacheFiles": 114,
+    "offlineCacheName": "corogalism-3e017e477eca5f60",
+    "offlineUnvisitedLayouts": ["sequence", "timing"],
+    "offlineRealPointerDisplacements": {"sequence": 0.4827789058283139, "timing": 0.4459354298339974},
+    "offlinePageErrorAssertionPassed": true,
+    "offlineHalt": null,
+    "offlineEmbedded": [],
+    "newPngVisuallyReviewedByBrowserAgent": true
+  },
   "thresholdsPreserved": ["finite state", "no ball embedding", "gate crossing boundary", "reflection tangent tolerance 0.06", "saved PNG ice coverage >0.05"],
   "limitations": ["Automated pointer completion is not proof of human ease or fun", "Synthetic orientation does not verify a physical sensor", "Virtual-clock PNG appearance is not verified; the separate native-clock screen command verifies it"]
 }

@@ -1,6 +1,6 @@
 # T-287 動く壁の通路パズル（2026-10-10・v0.6.30）
 
-実装・単体・ローカルブラウザ操作・通常時計の表示確認を完了。公開配信は確認中。
+実装・単体・ローカル／公開ブラウザ操作・通常時計の表示・配信確認を完了。
 
 ## 仕組みと変更
 
@@ -44,4 +44,18 @@
 
 検証操作自体の不適切な条件も保存。戸の端の試射が隣の綿にも当たって接線速度を失ったため、綿へ先に当たらない向きへ修正し、接線保存の判定は維持した。[試射条件](racket-puzzles/local-final/results.json)。開口へ向かう球を1秒だけ観測して、まだ手前にいる段階で不通過と判定したため、閉／開とも2秒を観測して途中の通過も記録する。[観測時間](racket-puzzles/local-confirmed/results.json)。最大入力を盤面の下端ぴったりで押し始めると盤面外への押下になったため、盤面中心で押し始めてから端へ動かし、最大入力1を保持する。[押下開始点](racket-puzzles/local-complete/results.json)。これらの試験修正でアプリの係数や成功の境界を変更しない。
 
-表示版はおためし3・v0.6.30、共有revision3。直接URLは [順に通路をひらく](https://corogalism.sikumilab.com/racket-lab.html?layout=sequence)、[切り返して滑り込む](https://corogalism.sikumilab.com/racket-lab.html?layout=timing)。
+最終表示版はおためし3・v0.6.30 r1、共有revision3。直接URLは [順に通路をひらく](https://corogalism.sikumilab.com/racket-lab.html?layout=sequence)、[切り返して滑り込む](https://corogalism.sikumilab.com/racket-lab.html?layout=timing)。
+
+## 公開確認
+
+実装公開は[e78150d](https://github.com/gerupon-lgtm/corogalism/commit/e78150d2b1f242f6e85631a7bfabf214f1211159)、[Pages38022606044成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38022606044)。初回キャッシュb948188693e4cdd0・114資材、公開117資材すべてHTTP200・SHA-256一致。[初回配信照合](racket-puzzles/deploy-initial-hashes.json)。HTML／JS／JSONの内容種別も確認。
+
+公開Chromeは旧面・新面・通常時計の3コマンドを順に各1回実行し、すべて終了コード0。[旧面](racket-puzzles/legacy-public/results.json)、[新面](racket-puzzles/public/results.json)、[初回通常時計](racket-puzzles/public-screen/results.json)。新面は3幅、閉／開、早／遅の切り返し、慣性、安全切替3例、未訪問2URLのオフラインが成功。開始から実pointerのみの完走は順番20.912秒、切り返し9.040秒、戸へのヒット0。局所の早い切り返しは640msで通過、遅い方は同じ1秒内で通過しない。切替の球変位は3例とも0。
+
+初回通常時計の5枚は描画正常。ページ例外と失敗通信は空だったが、基準の1例でタブのfavicon.icoの404をconsole.errorとして観測した。responseのHTTP400以上の配列へは現れなかったため、両記録を区別し、未捕捉の要求をゼロと扱わない。console／HTTP状態の記録を追加したのは通常時計の確認で、旧面・新面の全要求を同様に捕捉したという意味ではない。
+
+タブのアイコンは既存PNGを明示して修正し、表示をv0.6.30 r1へ更新。[修正94653b2](https://github.com/gerupon-lgtm/corogalism/commit/94653b26c135702088f8f66427a1e44f98e0e0d1)、[Pages38023045479成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38023045479)。変更はHTMLのアイコン指定・表示版とキャッシュだけで、ゲームのJSは初回公開と同じ。最終キャッシュ3e017e477eca5f60・114資材、公開117資材すべてHTTP200・SHA-256一致。[最終配信照合](racket-puzzles/deploy-hashes.json)。既に成功した同じ物理の全コースや単体確認は繰り返さず、関係する表示と新キャッシュを再確認した。
+
+修正後の通常時計5比較と新キャッシュの未訪問2URLオフラインを、2コマンドを順に各1回実行して両方終了コード0。[最終通常時計](racket-puzzles/public-screen-final/results.json)、[最終オフライン](racket-puzzles/public-offline-final/results.json)。5比較すべてv0.6.30 r1、アイコンPNGがHTTP200／image/png／192×192、ページ例外・失敗通信・console.error・HTTP400以上の記録は空。canvas透明画素0、氷画素率は順番68.1%、切り返し70.3%。[公開の順番面](racket-puzzles/public-screen-final/sequence-412.png)、[公開の切り返し面](racket-puzzles/public-screen-final/timing-412.png)も視認した。新2URLの球は実pointerで移動し、キャッシュ3e017e477eca5f60の114資材を確認。
+
+全試行と観測範囲は[試行一覧](racket-puzzles/browser-attempts.json)、版・配信は[リリース記録](racket-puzzles/release.json)。人間の操作精度・楽しさ・実端末の傾きと負荷は未確認で、ブラウザの自動操作が成功したことと分けて試遊する。

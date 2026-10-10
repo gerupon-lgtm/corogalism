@@ -1,3 +1,10 @@
+# v0.6.30 動く壁の通路パズル（2026-10-10）
+
+- 専用ページへ[順に通路をひらく](https://corogalism.sikumilab.com/racket-lab.html?layout=sequence)と[切り返して滑り込む](https://corogalism.sikumilab.com/racket-lab.html?layout=timing)を追加。氷の慣性・綿への待機・同じ傾きによる戸の開閉を使う。普通の反射と旧ラケットの打ち分けを区別し、ヒット回数による解錠なし。おためし3／共有revision3／最終表示v0.6.30 r1。[仕様と確認](verification/racket-puzzles.md)。
+- 単体54件、ローカル／公開3幅、開始から実pointer完走、戸の閉／開、早／遅の切り返し、安全切替3例、114資材オフライン、通常時計の5比較PNGが成功。公開自動操作の完走は20.912秒／9.040秒。途中切替の配置不具合と公開時のタブアイコン404を修正し、最終の表示5比較の例外・失敗通信・console／HTTPエラー記録は空。
+- 実装e78150d／[Pages38022606044成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38022606044)、アイコン修正94653b2／[Pages38023045479成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38023045479)。最終キャッシュ3e017e477eca5f60・114資材、公開117資材すべてHTTP200・SHA-256一致。[照合](verification/racket-puzzles/deploy-hashes.json)、[公開操作](verification/racket-puzzles/public/results.json)、[最終表示](verification/racket-puzzles/public-screen-final/results.json)、[最終オフライン](verification/racket-puzzles/public-offline-final/results.json)。
+- 旧広場・本編の生成と物理を維持。自動操作の成功を人間の難しさや楽しさと同一視せず、実端末の試遊で続けて評価する。失敗した検証操作と初回の404記録は保存し、修正後の成功と分ける。
+
 # v0.6.29 ラケット広場の下辺の近道（2026-10-10）
 
 - [専用試遊](https://corogalism.sikumilab.com/racket-lab.html)の中継広場を内側カップと下から入る2マス幅の受け口へ変更。横ラケットで上へ返す配置にし、下辺を横へ滑るだけのクリアを防ぐ。おためし2・共有revision2、表示版v0.6.29。[仕様と確認](verification/racket-goal.md)。

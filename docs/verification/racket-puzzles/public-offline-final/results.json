@@ -1,0 +1,200 @@
+[
+  {
+    "offline": true,
+    "offlineOnly": true,
+    "layout": "sequence",
+    "releaseText": "開発中 · おためし3 · v0.6.30 r1",
+    "cache": {
+      "names": [
+        "corogalism-3e017e477eca5f60"
+      ],
+      "files": 114
+    },
+    "before": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 0.85,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "sampledLastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "after": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8413763013792799,
+        "y": 0.8413761748707531,
+        "vx": 1.6282672840837678,
+        "vy": 1.6282666806742918,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 1.4670447385031475,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 1.799999465936633
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.30400000000000016,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "sampledLastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    }
+  },
+  {
+    "offline": true,
+    "offlineOnly": true,
+    "layout": "timing",
+    "releaseText": "開発中 · おためし3 · v0.6.30 r1",
+    "cache": {
+      "names": [
+        "corogalism-3e017e477eca5f60"
+      ],
+      "files": 114
+    },
+    "before": {
+      "layout": "timing",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "timing-gate",
+          "x": 2,
+          "y": 3.12,
+          "w": 2,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2,
+          "max": 4,
+          "home": 2,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "sampledLastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "after": {
+      "layout": "timing",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8153240248339396,
+        "y": 0.8153239079799645,
+        "vx": 1.579476224557774,
+        "vy": 1.5794756392294742,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "timing-gate",
+          "x": 2.588244965042214,
+          "y": 3.12,
+          "w": 2,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2,
+          "max": 4,
+          "home": 2,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 1.800000132252233,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.28800000000000014,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "sampledLastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    }
+  }
+]

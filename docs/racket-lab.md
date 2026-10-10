@@ -4,7 +4,7 @@
 
 T-286では中継広場のカップを外周の角から内側へ移し、下から入る2マス幅の受け口に変更。下辺を滑るだけのゴールを防ぎ、横ラケットで上へ返す操作を試す。打ち分けの開放広場は維持。変更と評価は [verification/racket-goal.md](verification/racket-goal.md)。T-285時点の旧タイムを新配置の評価と混ぜない。
 
-T-287では「順に通路をひらく」「切り返して滑り込む」を別の面として追加。通路を開ける壁は普通の反射を使い、既存のラケットの中心／端の打ち分けと区別する。おためし3／共有revision3。変更と確認は [verification/racket-puzzles.md](verification/racket-puzzles.md)。
+T-287では「順に通路をひらく」「切り返して滑り込む」を別の面として追加。通路を開ける壁は普通の反射を使い、既存のラケットの中心／端の打ち分けと区別する。おためし3／共有revision3。タブのアイコンを補った最終表示はv0.6.30 r1。変更と確認は [verification/racket-puzzles.md](verification/racket-puzzles.md)。
 
 ## 通路のパズル
 
