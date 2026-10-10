@@ -1,0 +1,183 @@
+[
+  {
+    "scenario": "baseline",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2891383866375752,
+      "y": 0.6456870151242484,
+      "vx": 2.611618787448848,
+      "vy": 0.4821447698254891,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [],
+    "screenshot": "baseline-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 675122,
+    "cyanRatio": 0.7310304800865384,
+    "errors": [],
+    "failedRequests": []
+  },
+  {
+    "scenario": "cotton",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2397589145743861,
+      "y": 0.6365708093799682,
+      "vx": 2.610877827385112,
+      "vy": 0.48200797726560374,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [],
+    "screenshot": "cotton-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 654868,
+    "cyanRatio": 0.7090991975277227,
+    "errors": [],
+    "failedRequests": []
+  },
+  {
+    "scenario": "rackets",
+    "realClock": true,
+    "actualPointerMs": 400,
+    "before": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.5,
+      "y": 0.5,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.2392579140115605,
+      "y": 0.6364783170138517,
+      "vx": 2.610901176197172,
+      "vy": 0.4820122878134025,
+      "r": 0.275
+    },
+    "paused": true,
+    "lastHalt": null,
+    "rackets": [
+      {
+        "id": "vertical",
+        "x": 5.4,
+        "y": 2,
+        "w": 0.24,
+        "h": 1.3,
+        "axis": "y",
+        "min": 0.8,
+        "max": 2,
+        "home": 1.9,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      },
+      {
+        "id": "horizontal",
+        "x": 4.281318844312572,
+        "y": 6,
+        "w": 1.3,
+        "h": 0.24,
+        "axis": "x",
+        "min": 0.8,
+        "max": 4.85,
+        "home": 3.2,
+        "vx": 0.3171653634522902,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "screenshot": "rackets-412.png",
+    "canvasTransparent": 0,
+    "width": 961,
+    "height": 961,
+    "cyanPixels": 647219,
+    "cyanRatio": 0.7008167654011116,
+    "errors": [],
+    "failedRequests": []
+  }
+]

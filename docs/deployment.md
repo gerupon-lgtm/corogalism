@@ -1,3 +1,10 @@
+# v0.6.29 ラケット広場の下辺の近道（2026-10-10）
+
+- [専用試遊](https://corogalism.sikumilab.com/racket-lab.html)の中継広場を内側カップと下から入る2マス幅の受け口へ変更。横ラケットで上へ返す配置にし、下辺を横へ滑るだけのクリアを防ぐ。おためし2・共有revision2、表示版v0.6.29。[仕様と確認](verification/racket-goal.md)。
+- 単体46件＋配置8再確認、ローカル／公開の3幅の実操作・下辺3状態非ゴールと折り返し完了・センサー4模擬・114資材オフライン成功。仮想時計の画面採取の失敗は保持し、通常時計で3比較PNGの正常表示を別確認。本編の生成・物理・入力・描画・音は維持。
+- アプリfbc2bde、[Pages38020032972成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38020032972)。キャッシュ3094062a11076d0c・114資材。公開117資材すべてHTTP200・SHA-256一致。[配信照合](verification/racket-goal/deploy-hashes.json)、[公開操作](verification/racket-goal/public/results.json)、[通常時計の表示](verification/racket-goal/public-screen/results.json)。
+- 公開の全コース自動操作は基準8.816秒・綿8.816秒・ラケット8.880秒。局所返球は綿1.008秒・ラケット0.432秒。全体のラケット優位・実機の楽しさは未確認。順に可動壁をどかして通る案は別候補として記録・未実装。
+
 # v0.6.28 ラケットと綿のおためし（2026-10-10）
 
 - [専用試遊](https://corogalism.sikumilab.com/racket-lab.html)を追加。本編やさしいのビー玉・氷・ゴムを基準に、綿・縦横ラケットを3状態／2広場で比較。おためし1・共有revision1、表示版v0.6.28。[仕様](racket-lab.md)、[確認と未確認](verification/racket-lab.md)。

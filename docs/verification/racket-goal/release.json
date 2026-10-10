@@ -1,0 +1,18 @@
+{
+  "version": "0.6.29",
+  "trialRevision": 2,
+  "applicationCommit": "fbc2bde1bb5e8acdef8e8a12fe04d310e2825d09",
+  "pagesRun": 38020032972,
+  "pagesStatus": "completed",
+  "pagesConclusion": "success",
+  "precacheVersion": "3094062a11076d0c",
+  "precacheFiles": 114,
+  "verifiedHttp200AndSha256": 117,
+  "entry": "https://corogalism.sikumilab.com/racket-lab.html",
+  "contentTypes": {
+    "racket-lab.html": "text/html; charset=utf-8",
+    "src/lab/racketStage.js": "application/javascript; charset=utf-8",
+    "precache.js": "application/javascript; charset=utf-8",
+    "package.json": "application/json; charset=utf-8"
+  }
+}
