@@ -1,0 +1,166 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "layout": "plaza",
+    "cottonActor": {
+      "x": 3.5,
+      "y": 0.395,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "rubberActor": {
+      "x": 3.5,
+      "y": 1.2217096013231137,
+      "vx": 0,
+      "vy": 9.87820434841896,
+      "r": 0.275
+    },
+    "cottonCount": 6,
+    "realPointer": true,
+    "errors": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "layout": "maze",
+    "cottonActor": {
+      "x": 3.5,
+      "y": 0.395,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "rubberActor": {
+      "x": 3.5,
+      "y": 1.2217096013231137,
+      "vx": 0,
+      "vy": 9.87820434841896,
+      "r": 0.275
+    },
+    "cottonCount": 6,
+    "realPointer": true,
+    "errors": []
+  },
+  {
+    "width": 412,
+    "height": 915,
+    "layout": "plaza",
+    "cottonActor": {
+      "x": 3.5,
+      "y": 0.395,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "rubberActor": {
+      "x": 3.5,
+      "y": 1.2217097250713842,
+      "vx": 0,
+      "vy": 9.878205827064788,
+      "r": 0.275
+    },
+    "cottonCount": 6,
+    "realPointer": true,
+    "errors": []
+  },
+  {
+    "width": 412,
+    "height": 915,
+    "layout": "maze",
+    "cottonActor": {
+      "x": 3.5,
+      "y": 0.395,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "rubberActor": {
+      "x": 3.5,
+      "y": 1.2217097250713842,
+      "vx": 0,
+      "vy": 9.878205827064788,
+      "r": 0.275
+    },
+    "cottonCount": 6,
+    "realPointer": true,
+    "errors": []
+  },
+  {
+    "width": 576,
+    "height": 1024,
+    "layout": "plaza",
+    "cottonActor": {
+      "x": 3.5,
+      "y": 0.395,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "rubberActor": {
+      "x": 3.5,
+      "y": 1.221709831076336,
+      "vx": 0,
+      "vy": 9.878207093698892,
+      "r": 0.275
+    },
+    "cottonCount": 6,
+    "realPointer": true,
+    "errors": []
+  },
+  {
+    "width": 576,
+    "height": 1024,
+    "layout": "maze",
+    "cottonActor": {
+      "x": 3.5,
+      "y": 0.395,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "rubberActor": {
+      "x": 3.5,
+      "y": 1.2217096985701452,
+      "vx": 0,
+      "vy": 9.87820551040625,
+      "r": 0.275
+    },
+    "cottonCount": 6,
+    "realPointer": true,
+    "errors": []
+  },
+  {
+    "offline": true,
+    "cache": {
+      "names": [
+        "corogalism-c079eb6c1e5974fc"
+      ],
+      "files": 107
+    },
+    "actor": {
+      "x": 3.5,
+      "y": 0.395,
+      "vx": 0,
+      "vy": 0,
+      "r": 0.275
+    },
+    "sound": {
+      "enabled": true,
+      "volume": 0.6,
+      "failed": false,
+      "context": "running",
+      "rolling": false,
+      "voices": 1,
+      "buffers": 1,
+      "events": [
+        "hit:superball:cotton"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "oldCottonGuards": 2
+  }
+]

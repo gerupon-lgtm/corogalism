@@ -34,4 +34,8 @@
 
 ## 公開状態
 
-ローカルの実装・テスト・ブラウザ確認を完了。公開先の操作・資材照合は公開後に追記する。
+アプリ0a94a103f4caf5aefa39d759685df395b3010eac、[Pages38007573478成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38007573478)。表示版v0.6.27／おためし8、キャッシュc079eb6c1e5974fc・107資材。実行資材と公開マーカー110件がすべてHTTP200・SHA-256一致。[照合](cotton-wall/deploy-hashes.json)。
+
+公開URLでも3幅×2面の6ケースで実入力から綿へ接触し、同じ位置のゴムとの反発差を確認。配置数・反発・全綿・コピー・停止時の状態保持・横はみ出しなし・旧資材2経路も成功。未訪問の設定URLを完全オフラインで開き、綿へ衝突して吸収と音を確認した。[公開結果](cotton-wall/public/results.json)、[広場412幅](cotton-wall/public/plaza-412.png)、[迷路412幅](cotton-wall/public/maze-412.png)。
+
+公開版の本編オフライン確認も成功。盤面外の5床通知・BGM・ポーズ／ガイド・両ラボ・新しい広場の生成と操作を確認。[公開結果](play-notices/v0627/public-offline.json)。追加の製品不具合は見つからなかった。実端末の傾き・音の自然さ・長時間の楽しさは今後の試遊で確認する。

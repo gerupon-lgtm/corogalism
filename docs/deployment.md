@@ -1,7 +1,9 @@
 # v0.6.27 綿壁のおためし（2026-10-10）
 
 - ボールおためし8へ綿と部分混在を追加。直接開始は[スーパーボール＋ゴム＋氷＋綿](https://corogalism.sikumilab.com/ball-lab.html?preset=cotton)。ボールrevision8／床revision9、表示版v0.6.27。[仕様](cotton-wall-lab.md)、[確認・公開状態](verification/cotton-wall.md)。
-- 201テスト・ローカル3幅×広場／迷路の実入力比較・設定URLの107資材オフライン・旧資材2経路・既存試遊／探索3幅・本編オフラインを確認。キャッシュc079eb6c1e5974fc、107資材。本編の素材抽選・ルールは維持。公開確認は配信後に追記。
+- 201テスト・ローカル3幅×広場／迷路の実入力比較・設定URLの107資材オフライン・旧資材2経路・既存試遊／探索3幅・本編オフラインを確認。キャッシュc079eb6c1e5974fc、107資材。本編の素材抽選・ルールは維持。
+- アプリ0a94a10、[Pages38007573478成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38007573478)。公開110資材すべてHTTP200・SHA-256一致。[照合](verification/cotton-wall/deploy-hashes.json)。
+- 公開版も3幅×2面の実入力・配置数／反発／共有・旧資材2経路・未訪問の設定URLの107資材オフライン成功。本編の盤面外通知・音・ガイド・両ラボ・広場の生成と操作も完全オフラインで成功。[公開結果](verification/cotton-wall/public/results.json)、[本編オフライン](verification/play-notices/v0627/public-offline.json)。実機の体感は未確認。
 
 # v0.6.25 外周と通知の隙間（2026-10-08）
 
