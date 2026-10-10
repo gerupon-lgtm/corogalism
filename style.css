@@ -169,7 +169,7 @@ body.board-session .panel{padding:10px;gap:8px}
 .head{display:block;position:relative}
 .head .badge{position:static;margin-left:auto;flex:none;align-self:center}
 .head .sub{font-size:10px}
-.brand-lockup{display:flex;align-items:last baseline;gap:8px;margin-bottom:5px}
+.brand-lockup{display:flex;align-items:last baseline;gap:8px;margin-bottom:0}
 .brand-tagline{margin:0;font-size:clamp(5px,1.3vw,6px);line-height:1.1;letter-spacing:.16em;color:#b6c3a7;white-space:nowrap}
 /* TIME / HP：トイパネル、読みやすい数値、丸いゲル状ゲージ。 */
 .challenge-hud{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:stretch}

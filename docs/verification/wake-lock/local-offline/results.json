@@ -1,0 +1,91 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "offline",
+  "version": "0.7.0",
+  "rows": [
+    {
+      "name": "offline-module-and-main-course",
+      "cache": {
+        "names": [
+          "corogalism-8adcb71b40886111"
+        ],
+        "count": 120,
+        "wakeLockModule": true
+      },
+      "offline": true,
+      "courseWakeLock": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "courseInput": {
+        "before": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "after": {
+          "x": 0.395,
+          "y": 0.5,
+          "vx": 1.2787637256733797,
+          "vy": 0,
+          "r": 0.275
+        },
+        "wallHitsBefore": 0,
+        "wallHitsAfter": 0,
+        "reflectedAtWall": true,
+        "actualPointer": true,
+        "teleport": false
+      },
+      "released": {
+        "supported": true,
+        "active": false,
+        "held": false,
+        "pending": false,
+        "lastError": null
+      },
+      "practiceWakeLock": {
+        "supported": true,
+        "active": true,
+        "held": true,
+        "pending": false,
+        "lastError": null
+      },
+      "practiceInput": {
+        "before": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "after": {
+          "x": 0.395,
+          "y": 0.5,
+          "vx": 0.5223667275500277,
+          "vy": 0,
+          "r": 0.275
+        },
+        "wallHitsBefore": 0,
+        "wallHitsAfter": 0,
+        "reflectedAtWall": true,
+        "actualPointer": true,
+        "teleport": false
+      },
+      "realPhoneDimmingUnverified": true
+    },
+    {
+      "name": "diagnostics",
+      "mode": "native",
+      "width": 412,
+      "pageErrors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    }
+  ]
+}

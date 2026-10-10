@@ -1,0 +1,24 @@
+{
+  "command": "node --test test/screen-wake-lock.test.js test/puzzle-integration.test.js test/onboarding.test.js test/audio-settings.test.js",
+  "testFiles": 4,
+  "tests": 23,
+  "passed": 23,
+  "failed": 0,
+  "exitCode": 0,
+  "durationMs": 565.1591,
+  "newWakeLockTests": 12,
+  "checks": [
+    "start and stop",
+    "resume",
+    "visibility release and reacquire",
+    "paused return",
+    "pending acquisition stop",
+    "pending acquisition hidden",
+    "resume during delayed release",
+    "denial does not retry each frame",
+    "OS release does not loop",
+    "page hide and show",
+    "unsupported",
+    "dispose during acquisition"
+  ]
+}

@@ -1,0 +1,970 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "version": "0.7.0",
+  "rows": [
+    {
+      "name": "failure",
+      "error": "AssertionError [ERR_ASSERTION]: 実pointer入力で外周へ当たり反応する",
+      "diagnostics": {
+        "pageErrors": [],
+        "failedRequests": [],
+        "consoleErrors": [],
+        "httpErrors": []
+      },
+      "state": {
+        "seed": 980930,
+        "timeMs": 4960,
+        "wallHits": 0,
+        "started": true,
+        "audio": {
+          "enabled": false,
+          "context": "none",
+          "loaded": false,
+          "buffers": 0,
+          "music": false,
+          "rolling": false,
+          "voices": 0,
+          "musicDelaySec": 0,
+          "bgmVolume": 0.6,
+          "seVolume": 0.8,
+          "events": []
+        },
+        "hourglass": null,
+        "leaf": null,
+        "rest": null,
+        "rests": [],
+        "sticky": [],
+        "trap": null,
+        "shield": 0,
+        "extendedSec": 0,
+        "level": "easy",
+        "theme": {
+          "id": "basic",
+          "material": "default",
+          "ratio": 0,
+          "label": "基本の迷路",
+          "firstVisit": false,
+          "learning": false
+        },
+        "recovery": null,
+        "calibration": null,
+        "needsCalibration": true,
+        "tutorialOpen": false,
+        "cleared": false,
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "mode": "pointer",
+        "gameMode": "challenge",
+        "screen": "game",
+        "stageIndex": 1,
+        "wakeLock": {
+          "supported": true,
+          "active": true,
+          "held": true,
+          "pending": false,
+          "lastError": null
+        },
+        "status": "playing",
+        "remainingSec": 52.04,
+        "limitSec": 57,
+        "hp": {
+          "value": 75.6819982149373,
+          "max": 76
+        },
+        "run": {
+          "stages": 0,
+          "totalTimeMs": 0,
+          "noDamageStages": 0,
+          "usedContinue": false,
+          "cause": null,
+          "stageIndex": 1,
+          "continuesLeft": 2,
+          "runSeed": 77
+        },
+        "actor": {
+          "x": 0.395,
+          "y": 0.5,
+          "vx": 0.05749739711440638,
+          "vy": 0,
+          "r": 0.275
+        },
+        "maze": {
+          "size": 7,
+          "path": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 1
+            },
+            {
+              "x": 1,
+              "y": 1
+            },
+            {
+              "x": 2,
+              "y": 1
+            },
+            {
+              "x": 2,
+              "y": 0
+            },
+            {
+              "x": 3,
+              "y": 0
+            },
+            {
+              "x": 4,
+              "y": 0
+            },
+            {
+              "x": 4,
+              "y": 1
+            },
+            {
+              "x": 4,
+              "y": 2
+            },
+            {
+              "x": 4,
+              "y": 3
+            },
+            {
+              "x": 4,
+              "y": 4
+            },
+            {
+              "x": 4,
+              "y": 5
+            },
+            {
+              "x": 3,
+              "y": 5
+            },
+            {
+              "x": 3,
+              "y": 4
+            },
+            {
+              "x": 2,
+              "y": 4
+            },
+            {
+              "x": 1,
+              "y": 4
+            },
+            {
+              "x": 0,
+              "y": 4
+            },
+            {
+              "x": 0,
+              "y": 5
+            },
+            {
+              "x": 0,
+              "y": 6
+            },
+            {
+              "x": 1,
+              "y": 6
+            },
+            {
+              "x": 2,
+              "y": 6
+            },
+            {
+              "x": 3,
+              "y": 6
+            },
+            {
+              "x": 4,
+              "y": 6
+            },
+            {
+              "x": 5,
+              "y": 6
+            },
+            {
+              "x": 6,
+              "y": 6
+            }
+          ],
+          "cells": [
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 1,
+              "b": 0,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 0,
+              "l": 1
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 1
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 1,
+              "r": 0,
+              "b": 1,
+              "l": 0
+            },
+            {
+              "t": 0,
+              "r": 1,
+              "b": 1,
+              "l": 0
+            }
+          ],
+          "variation": {
+            "size": 7,
+            "shape": "short",
+            "themeId": "basic",
+            "label": "すなおな道",
+            "sourceSeed": 980930
+          }
+        },
+        "zones": [],
+        "goal": {
+          "x": 6.5,
+          "y": 6.5
+        },
+        "walls": [
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 1.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 3.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 5.88,
+            "y": -0.12,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 6.88,
+            "y": -0.12,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 0.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": 0.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 3.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 0.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 6.88,
+            "y": 0.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 1.88,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 1.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 3.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 5.88,
+            "y": 1.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 6.88,
+            "y": 1.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 3.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 2.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 6.88,
+            "y": 2.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 3.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 1.88,
+            "y": 3.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": 3.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 3.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 5.88,
+            "y": 3.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 6.88,
+            "y": 3.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 1.88,
+            "y": 4.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 5.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 6.88,
+            "y": 4.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": -0.12,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 5.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 0.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 1.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": 5.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 2.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 3.88,
+            "y": 5.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 3.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 5.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 4.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          },
+          {
+            "x": 6.88,
+            "y": 5.88,
+            "w": 0.24,
+            "h": 1.24,
+            "materialId": "default"
+          },
+          {
+            "x": 5.88,
+            "y": 6.88,
+            "w": 1.24,
+            "h": 0.24,
+            "materialId": "default"
+          }
+        ],
+        "rackets": [],
+        "lastResult": {
+          "wallHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 2.5,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          }
+        },
+        "puzzleCourse": null
+      }
+    }
+  ]
+}

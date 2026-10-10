@@ -1,5 +1,6 @@
 import {FLOOR_LESSONS,floorContact,createFloorContactGuide} from './world/floorLearning.js';
 import { initPortraitLock } from './input/portraitLock.js';
+import { createScreenWakeLock } from './input/screenWakeLock.js';
 /** 初期化・画面遷移・ゲームループ。物理とHPの接続はstagePlayに委譲する。 */
 import { BASE, TUNING, UI, CHALLENGE_LEVELS } from './config/gameConfig.js';
 import { createEscapeInput } from './input/escapeInput.js';
@@ -85,6 +86,7 @@ let puzzleCourse=null;
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 const endConfirm = createRunEndConfirm(root, finishRun);
+const screenWakeLock = createScreenWakeLock();
 
 function initialSeed() {
   const q = new URLSearchParams(location.search).get('seed');
@@ -96,6 +98,8 @@ function isPlaying() { return screen === 'game' && !paused && !document.hidden &
 function receiveTilt(x, y) { if (isPlaying()) tilt.setRaw(x, y); }
 
 function updateAudio() {
+  // READY・カウントダウンも対象。音のON/OFFや入力方式には依存しない。
+  void screenWakeLock.setActive(screen === 'game' && !paused);
   const active = play && isPlaying() && play.status === 'playing';
   sound.setScene({
     music: Boolean(active),
@@ -587,6 +591,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
         calibration: tiltSource.getCalibration(), needsCalibration: tiltSource.needsCalibration,
         tutorialOpen: tutorial.open,
         cleared: play.status === 'clear', paused, prepareMs, countdownMs, mode: settings.mode, gameMode, screen, stageIndex,
+        wakeLock: screenWakeLock.state,
         status: play.status, remainingSec: play.remainingSec, limitSec: play.limitSec,
         hp: play.hp ? { value: play.hp.value, max: play.hp.max } : null,
         run: run ? { ...run.result(), stageIndex: run.stageIndex, continuesLeft: run.continuesLeft, runSeed: run.runSeed } : null,

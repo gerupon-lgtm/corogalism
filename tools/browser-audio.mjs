@@ -67,7 +67,7 @@ try {
   assert.deepEqual(await page.evaluate(() => window.__bgmStarts.at(-1)), { offset: 0, loop: true }, 'unmuting also restarts BGM from the beginning');
   const audioBox = await page.locator('#btn-sound').boundingBox(), pauseBox = await page.locator('#btn-pause').boundingBox();
   assert.ok(audioBox.x + audioBox.width <= pauseBox.x); assert.ok(Math.abs(audioBox.y - pauseBox.y) < 1);
-  assert.equal(await page.locator('#dev-note').isVisible(), true);
+  assert.equal(await page.locator('#dev-note').isVisible(), false);
   await page.screenshot({ path: fileURLToPath(new URL('game-390.png', output)), fullPage: true });
   await page.evaluate(() => window.__corogalism.setTilt(1, 0)); await page.clock.runFor(150);
   assert.ok((await state()).audio.events.includes('rolling'));
