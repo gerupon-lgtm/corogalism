@@ -2,7 +2,7 @@
  * 傾きで道を作る面。入口・戸袋・待機壁の関係から生成し、ラボの固定迷路を使わない。
  * セルBFSは静止壁だけの検証。開口の球径検証と、実操作の検証を区別して記録する。
  */
-import {BASE,TUNING,FLOOR_CHALLENGE,PUZZLE_MAIN} from '../config/gameConfig.js';
+import {BASE,TUNING,PUZZLE_MAIN} from '../config/gameConfig.js';
 import {createRng} from '../maze/rng.js';
 import {checkReachability} from '../maze/validator.js';
 import {solvePath,countTurns} from '../maze/path.js';
@@ -11,9 +11,10 @@ import {createRecovery} from './recovery.js';
 import {addStageFeatures} from './stageFeatures.js';
 import {getCharacter} from './characters.js';
 import {PUZZLE_KINDS,PUZZLE_LABELS} from '../game/puzzleVariety.js';
+import {applyPuzzleMaterials} from './puzzleMaterials.js';
 
 const ballRadius=()=>getCharacter('default').sizeRatio/2;
-const hints={racket:'ラケットの中心と端で、跳ねる向きを変えよう。',sequence:'綿で勢いを受け止め、数字の順に道をひらこう。',timing:'逆へ傾けて道をひらき、球の勢いで滑りこもう。',openRacket:'道をひらいたら、ラケットで次の部屋へ。',sequenceTiming:'順に道をひらき、最後は切り返して滑りこもう。',racketTiming:'ラケットの勢いと、切り返しを組み合わせよう。'};
+const hints={racket:'ラケットの中心と端で、跳ねる向きを変えよう。',sequence:'球を落ち着かせ、数字の順に道をひらこう。',timing:'逆へ傾けて道をひらき、球の勢いで滑りこもう。',openRacket:'道をひらいたら、ラケットで次の部屋へ。',sequenceTiming:'順に道をひらき、最後は切り返して滑りこもう。',racketTiming:'ラケットの勢いと、切り返しを組み合わせよう。'};
 const integer=(rng,low,high)=>low+Math.floor(rng()*(high-low+1));
 const pointDistance=(p,w)=>Math.hypot(p.x-Math.max(w.x,Math.min(p.x,w.x+w.w)),p.y-Math.max(w.y,Math.min(p.y,w.y+w.h)));
 
@@ -33,7 +34,6 @@ export function createPuzzleStage(seed,profile={}){
  const stage=createStage(maze),settings={...PUZZLE_MAIN.physics};
  stage.theme={id:'puzzle',puzzleKind:kind,label:PUZZLE_LABELS[kind],firstVisit:Boolean(profile.puzzleFirstVisit),learning:Boolean(profile.puzzleFirstVisit),introHint:hints[kind]};
  stage.racketSettings=settings;
- stage.zones=[{kind:'ice',cells:Array.from({length:size**2},(_,i)=>({x:i%size,y:Math.floor(i/size)})),frictionK:FLOOR_CHALLENGE.ice,...FLOOR_CHALLENGE.iceMotion,forceX:0,forceY:0}];
  const cottonLines=plan.cotton.map(transform.rect);
  for(const wall of stage.walls){
   wall.materialId=cottonLines.some(line=>sameWallLine(wall,line))?'cotton':'rubber';
@@ -59,6 +59,7 @@ export function createPuzzleStage(seed,profile={}){
   portals:plan.portals.map(p=>({...p,from:transform.point(p.from),to:transform.point(p.to)})),
   verificationOperations:plan.operations.map(op=>transform.operation(op)),
  };
+ applyPuzzleMaterials(stage,profile.puzzleMaterialPattern??'iceRubber');
  const verify=validatePuzzleStructure(stage);
  stage.puzzle.verification=verify;
  if(!verify.ok)throw new Error(`生成したパズルの球径検証に失敗しました: ${verify.errors.join(', ')}`);

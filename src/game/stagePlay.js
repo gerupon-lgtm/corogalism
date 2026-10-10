@@ -25,7 +25,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
   const actor = createActor(maze, getCharacter('default'));
   const origin = { x: actor.x, y: actor.y };
   const shield = carry.shield ?? { value: 0 };
-  const hp = floorPractice ? null : tutorial ? createHp({ turns: 0, hpPerTurn: 0, cfg: {...HP, base: TUTORIAL.hp}, minimum: TUTORIAL.minHp, shield }) : difficulty ? createHp({ turns: maze.turns, ...difficulty, shield }) : null;
+  const hp = floorPractice ? null : tutorial ? createHp({ turns: 0, hpPerTurn: 0, cfg: {...HP, base: TUTORIAL.hp}, minimum: TUTORIAL.minHp, allowRecoveryAtZero: true, shield }) : difficulty ? createHp({ turns: maze.turns, ...difficulty, shield }) : null;
   if (stage.leaf && carry.leafCollected) stage.leaf.collected = true;
   if (stage.rest && carry.restUsed) stage.rest.used = true;
   for(const rest of restFloors(stage))if(carry.restUsedCells?.some(p=>p.x===rest.x&&p.y===rest.y))rest.used=true;
@@ -89,7 +89,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
       if (Math.hypot(actor.vx, actor.vy) > TUNING.startMoveSpeed
         || (hp && Math.hypot(actor.x - origin.x, actor.y - origin.y) >= TUNING.challengeStartDistance)) started = true;
       // 最終フレームでゴールに触れても、死亡・時間切れならクリアにしない。
-      if (hp?.isDead) status = 'dead';
+      if (hp?.isDead && !tutorial) status = 'dead';
       else if (limitSec !== null && timeMs >= (limitSec + extendedSec) * 1000) status = 'timeout';
       else {
         const hourglass = stage.hourglass;

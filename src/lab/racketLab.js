@@ -126,7 +126,7 @@ for(const [id,key]of Object.entries(bindings))$(id).oninput=()=>{
 };
 $('defaults').onclick=()=>{gesture();Object.assign(settings,defaults);reset();};
 $('copy').onclick=async()=>{
-  const data={page:'corogalism-racket-lab',revision:3,version:'0.7.1',...settings,mode:settings.mode,inputMode:mode,elapsedSec,racketHits,goalReached,edited:trialEdited,completions,observations};
+  const data={page:'corogalism-racket-lab',revision:3,version:'0.7.2',...settings,mode:settings.mode,inputMode:mode,elapsedSec,racketHits,goalReached,edited:trialEdited,completions,observations};
   const text=JSON.stringify(data,null,2);$('settings-text').hidden=false;$('settings-text').value=text;
   try{await navigator.clipboard.writeText(text);$('copy-status').textContent='設定と試遊結果をコピーしました。';}catch{$('settings-text').select();$('copy-status').textContent='下の設定を選択してコピーしてください。';}
 };

@@ -1,0 +1,11 @@
+{
+  "files": [
+    "test/puzzle-materials.test.js",
+    "test/puzzle-variety.test.js"
+  ],
+  "tests": 9,
+  "pass": 9,
+  "fail": 0,
+  "exitCode": 0,
+  "elapsedSec": 3.984
+}

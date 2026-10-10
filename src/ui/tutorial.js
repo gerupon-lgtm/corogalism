@@ -27,7 +27,7 @@ export function createTutorialUi() {
    const entry=entries.get(id);
    panel.querySelector('h2').textContent=entry.title+(walls.some(w=>w[0]===id)?'の壁':'');
    panel.querySelector('.tutorial-copy').textContent=entry.body;
-   panel.querySelector('.tutorial-context').textContent=openingLesson?'時間・げんき切れなし。綿で狙い直せます。':entry.context??(id==='cotton'?'壁に沿う動きは残ります。':movingWalls.some(w=>w[0]===id)?'傾きを戻すと壁は止まり、球は勢いで進みます。':walls.some(w=>w[0]===id)?'速さと壁の素材で、げんきの減り方が変わります。':['hourglass','rest'].includes(id)?'時間の加算はチャレンジで有効です。':'');
+   panel.querySelector('.tutorial-context').textContent=openingLesson?openingLesson.context:entry.context??(id==='cotton'?'壁に沿う動きは残ります。':movingWalls.some(w=>w[0]===id)?'傾きを戻すと壁は止まり、球は勢いで進みます。':walls.some(w=>w[0]===id)?'速さと壁の素材で、げんきの減り方が変わります。':['hourglass','rest'].includes(id)?'時間の加算はチャレンジで有効です。':'');
    drawGuideArt(panel.querySelector('canvas'),entry.art??id);
    panel.dataset.lesson=id;
    noticeMs=TUTORIAL.flashMs;

@@ -1,0 +1,98 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "ui",
+  "version": "0.7.2",
+  "rows": [
+    {
+      "name": "lesson-ui",
+      "width": 312,
+      "index": 1,
+      "card": {
+        "top": 469.4375,
+        "bottom": 619.4375,
+        "left": 19,
+        "right": 293,
+        "height": 150,
+        "fields": [
+          {
+            "selector": "h2",
+            "top": 480.640625,
+            "bottom": 506.234375,
+            "left": 74,
+            "right": 282,
+            "height": 25.59375,
+            "text": "順に動かして、道を開こう",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-copy",
+            "top": 508.4375,
+            "bottom": 527.9375,
+            "left": 30,
+            "right": 282,
+            "height": 19.5,
+            "text": "球を落ち着かせ、順に戸を開こう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-hint",
+            "top": 551.0625,
+            "bottom": 569.90625,
+            "left": 30,
+            "right": 282,
+            "height": 18.84375,
+            "text": "少し右下に傾けて、開いた通路へ。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-context",
+            "top": 593.046875,
+            "bottom": 608.4375,
+            "left": 30,
+            "right": 282,
+            "height": 15.390625,
+            "text": "げんきが0になっても続けられます。",
+            "visible": true
+          }
+        ]
+      },
+      "materials": {
+        "profile": "tutorialNormal",
+        "materialLabel": "通常床・通常壁",
+        "counts": {
+          "ice": 0,
+          "sand": 0,
+          "normal": 49
+        },
+        "floors": [],
+        "walls": {
+          "default": 43
+        }
+      },
+      "actualPointerMovement": true,
+      "diagnosticEarlierGoalPlacement": true
+    },
+    {
+      "name": "browser-errors",
+      "width": 312,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/config/gameConfig.js": "12aa7688a20cd023c621727b2136722ea19577f595ca2abb3a17214f6249fa70",
+        "/src/ui/tutorial.js": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+        "/src/game/puzzleTutorial.js": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+        "/src/game/stagePlay.js": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+        "/src/game/hp.js": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+        "/src/world/puzzleStage.js": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+        "/src/game/puzzleVariety.js": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+        "/src/world/puzzleMaterials.js": "d75546b840666da190a3116114fade407aafdd0025f79c24751606bace4d5f59"
+      }
+    }
+  ]
+}

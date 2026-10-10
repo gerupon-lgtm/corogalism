@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#0f1513">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="assets/pwa/icon-192.png">
-<link rel="stylesheet" href="style.css?v=0.7.1">
+<link rel="stylesheet" href="style.css?v=0.7.2">
 </head>
 <body>
 <div class="wrap">
@@ -23,7 +23,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.7.1</span>
+      <span class="badge">v0.7.2</span>
       </div>
       <p class="sub" id="dev-note" hidden>開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -129,11 +129,11 @@
       <div><dt>操作</dt><dd id="hud-mode">傾き</dd></div>
     </dl>
     <div id="tutorial-lesson" class="tutorial-lesson" aria-label="素材の説明">
-      <p class="tutorial-idle">素材にふれて、動きを試してみよう。<br><small>説明はここに表示します。</small></p>
+      <p class="tutorial-idle">素材にふれて、動きを試してみよう。<br><small>げんきが0になっても続けられます。</small></p>
       <div class="tutorial-message" hidden>
         <canvas width="144" height="112" aria-hidden="true"></canvas>
         <div class="tutorial-text" role="status"><h2></h2><p class="tutorial-copy"></p><p class="tutorial-hint" hidden></p><p class="tutorial-context"></p></div>
-        <small class="tutorial-play-state">そのまま操作できます</small>
+        <small class="tutorial-play-state">げんきが0になっても続けられます</small>
       </div>
     </div>
     <p id="game-status" class="note" role="status"></p>
@@ -168,7 +168,7 @@
     <img class="tutorial-hold" src="assets/tutorial-hold.png" alt="スマホを縦持ちにして画面を上へ向け、奥側の上端を少し持ち上げ、両手で支える姿勢">
     <p><strong>画面を上に向けて、<br>奥側を少し持ち上げよう。</strong></p><p>楽に持てる角度で大丈夫。</p>
     <button type="button" id="btn-tutorial-start" class="primary">この角度でスタート</button></div>
-    <p>壁・アイテム・砂・氷・引く力・押す力を試せます。<br>続きには、ラケットや動く戸の紹介も。<br>時間制限なし。げんきが少なくなっても続けられます。</p>
+    <p>壁・アイテム・砂・氷・引く力・押す力を試せます。<br>続きには、ラケットや動く戸の紹介も。<br>時間制限なし。げんきが0になっても続けられます。</p>
     <p class="tutorial-pointer-note">センサーが使えない端末では、迷路の中心から進みたい方向を押し続けて操作します。</p>
     <button type="button" id="btn-tutorial-back" class="text-button">モード選択へ戻る</button>
   </section>
@@ -217,6 +217,6 @@
     <button class="ghost" id="btn-end-confirm" type="button">終了して結果を見る</button>
   </div>
 </dialog>
-<script type="module" src="src/main.js?v=0.7.1"></script>
+<script type="module" src="src/main.js?v=0.7.2"></script>
 </body>
 </html>

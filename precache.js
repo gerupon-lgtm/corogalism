@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'a73e087e0c8a56b0';
+self.PRECACHE_VERSION = '2f5e8c567242bec9';
 self.PRECACHE_FILES = [
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
@@ -114,6 +114,7 @@ self.PRECACHE_FILES = [
   "src/world/materials.js",
   "src/world/openFields.js",
   "src/world/openFloors.js",
+  "src/world/puzzleMaterials.js",
   "src/world/puzzleStage.js",
   "src/world/recovery.js",
   "src/world/stage.js",

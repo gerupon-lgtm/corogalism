@@ -15,7 +15,7 @@ const recentWeight=(value,key,history,C)=>history.slice(-C.history).reverse().re
 export function choosePuzzleVariation({seed,stage,level='normal',history=[]}){
  if(level==='normal'&&stage%10===0)return null;
  const introduction=C.introduction.find(([at])=>at===stage);
- if(introduction)return {size:C.introSize,shape:'puzzle',themeId:'iceRubber',puzzleKind:introduction[1],puzzleEase:'relaxed',puzzleFirstVisit:true,label:PUZZLE_LABELS[introduction[1]]};
+ if(introduction)return {size:C.introSize,shape:'puzzle',themeId:'iceRubber',puzzleKind:introduction[1],puzzleEase:'relaxed',puzzleMaterialPattern:'iceRubber',puzzleFirstVisit:true,label:PUZZLE_LABELS[introduction[1]]};
  if(stage<C.mixStartStage)return null;
  const rng=createRng((seed^0x8b8b8b8b)>>>0);
  // 同種が続く確率を下げるだけ。単独・組合せ・息抜きの候補を除外しない。
@@ -24,5 +24,10 @@ export function choosePuzzleVariation({seed,stage,level='normal',history=[]}){
  const puzzleKind=weighted(rng,PUZZLE_KINDS.map(kind=>[kind,recentWeight(kind,'puzzleKind',history,C)]));
  const size=weighted(rng,C.sizes);
  const puzzleEase=weighted(rng,C.easeWeights.map(([ease,w])=>[ease,w*recentWeight(ease,'puzzleEase',history,C)]));
- return {size,shape:'puzzle',themeId:'iceRubber',puzzleKind,puzzleEase,puzzleFirstVisit:false,label:PUZZLE_LABELS[puzzleKind]};
+ const puzzleMaterialPattern=weighted(rng,C.materials.weights.map(([pattern,w])=>{
+  const safe=['iceRubber','iceSandRubber','normalRubber'].includes(pattern);
+  const early=stage<=C.materials.earlyEndStage?(safe?C.materials.earlySafeFactor:C.materials.earlyChallengeFactor):1;
+  return [pattern,w*early*recentWeight(pattern,'puzzleMaterialPattern',history,C)];
+ }));
+ return {size,shape:'puzzle',themeId:'iceRubber',puzzleKind,puzzleEase,puzzleMaterialPattern,puzzleFirstVisit:false,label:PUZZLE_LABELS[puzzleKind]};
 }

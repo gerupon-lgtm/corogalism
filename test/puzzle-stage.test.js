@@ -89,7 +89,14 @@ function runOperations(seed,profile){
   assert.ok([actor.x,actor.y,actor.vx,actor.vy,...stage.rackets.flatMap(w=>[w.x,w.y,w.vx,w.vy])].every(Number.isFinite));
  };
  const context=target=>JSON.stringify({kind:stage.puzzle.kind,seed,size:profile.size,target,actor:{x:actor.x,y:actor.y,vx:actor.vx,vy:actor.vy},rackets:stage.rackets.map(w=>({id:w.id,x:w.x,y:w.y}))});
- for(const op of stage.puzzle.verificationOperations){
+ const operations=structuredClone(stage.puzzle.verificationOperations);
+ if(['normalRubber','normalCork'].includes(profile.puzzleMaterialPattern)&&stage.puzzle.timingCount){
+  const launch=operations.find(op=>op.kind==='until'),cut=operations[operations.indexOf(launch)+1],axis=launch.condition.axis;
+  const approach=operations[operations.indexOf(launch)-1].via.at(-1),cross=axis==='x'?'y':'x';approach[cross]+=.8*Math.sign(cut.tilt[cross]);
+  for(const key of ['min','max'])if(launch.condition[key]!==undefined)launch.condition[key]+=key==='min'?.9:-.9;
+  launch.tilt[axis]*=4/7;launch.tilt[cross]=0;launch.maxSeconds=4;cut.maxSeconds=5;cut.tilt[axis]/=.7;cut.tilt[cross]/=.7;
+ }
+ for(const op of operations){
   if(clear)break;
   if(op.kind==='hold')for(let i=0;i<Math.ceil(op.seconds/.016)&&!clear;i++)tick(op.tilt);
   else if(op.kind==='until'){
@@ -115,4 +122,15 @@ function runOperations(seed,profile){
 for(const [i,kind] of PUZZLE_KINDS.entries())test(`${kind}: 異なる種・向き・大きさを開始地点から傾きだけで操作できる`,()=>{
  const tutorialSeed=(77+Math.imul(i+1,0x9e3779b9))>>>0;
  for(const [seed,size] of [[77,7],[42,9],[2,13],[3,7],[tutorialSeed,7]])runOperations(seed,{size,puzzleKind:kind,puzzleEase:'relaxed'});
+});
+
+for(const pattern of ['iceSandRubber','normalRubber','normalCork','iceSandCork','mixedStandard'])test(`${pattern}: 各仕掛けを共通の物理と傾きだけで開始からクリアできる`,()=>{
+ for(const kind of PUZZLE_KINDS)runOperations(kind==='racketTiming'&&['iceSandCork','mixedStandard'].includes(pattern)?42:77,{size:7,puzzleKind:kind,puzzleEase:'relaxed',puzzleMaterialPattern:pattern});
+});
+
+test('通常床・通常壁の紹介序盤2面は同じ構造を保って開始から傾きだけでクリアできる',()=>{
+ for(const [i,kind] of ['racket','sequence'].entries()){
+  const seed=(77+Math.imul(i+1,0x9e3779b9))>>>0;
+  runOperations(seed,{size:7,puzzleKind:kind,puzzleEase:'relaxed',puzzleMaterialPattern:'tutorialNormal'});
+ }
 });

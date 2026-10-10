@@ -1,0 +1,660 @@
+{
+  "generatedAt": "2026-10-10T08:13:09.208Z",
+  "source": "shared-physics-automatic-control",
+  "teleport": false,
+  "physicsOverrides": false,
+  "inputNormalization": true,
+  "inputSmoothing": 0.35,
+  "dtSec": 0.016,
+  "normalPilot": "Approach .8 cell toward crossing; pure tangent launch .4 to original condition +.9; cut with both raw components1, magnitude normalized by createTiltVector.",
+  "successful": [
+    {
+      "seed": 77,
+      "kind": "racket",
+      "pattern": "iceRubber",
+      "timeSec": 15.712,
+      "clear": true,
+      "impacts": 15,
+      "error": null,
+      "actor": {
+        "x": 1.2042300238134274,
+        "y": 4.497567638064039,
+        "vx": 0.8641805788255407,
+        "vy": 0.013866174486685607
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequence",
+      "pattern": "iceRubber",
+      "timeSec": 19.088,
+      "clear": true,
+      "impacts": 179,
+      "error": null,
+      "actor": {
+        "x": 1.2045759607869362,
+        "y": 4.498736685996333,
+        "vx": 0.8634235893099987,
+        "vy": 0.009558150797278661
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "iceRubber",
+      "timeSec": 14.112,
+      "clear": true,
+      "impacts": 2,
+      "error": null,
+      "actor": {
+        "x": 1.4987368172970448,
+        "y": 2.204577723497131,
+        "vx": 0.009556964011945479,
+        "vy": 0.8634197352571695
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "openRacket",
+      "pattern": "iceRubber",
+      "timeSec": 18.16,
+      "clear": true,
+      "impacts": 99,
+      "error": null,
+      "actor": {
+        "x": 1.20457595955184,
+        "y": 4.498736685739781,
+        "vx": 0.8634235919862986,
+        "vy": 0.00955815309083618
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequenceTiming",
+      "pattern": "iceRubber",
+      "timeSec": 20.224,
+      "clear": true,
+      "impacts": 107,
+      "error": null,
+      "actor": {
+        "x": 1.2046482512027465,
+        "y": 1.501283145781692,
+        "vx": 0.8632658695419893,
+        "vy": -0.009590442350952254
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racketTiming",
+      "pattern": "iceRubber",
+      "timeSec": 19.184,
+      "clear": true,
+      "impacts": 42,
+      "error": null,
+      "actor": {
+        "x": 1.4987360908901193,
+        "y": 2.2047124474665907,
+        "vx": 0.009559185354287096,
+        "vy": 0.8631241362265003
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racket",
+      "pattern": "iceSandRubber",
+      "timeSec": 15.712,
+      "clear": true,
+      "impacts": 15,
+      "error": null,
+      "actor": {
+        "x": 1.2042300238134274,
+        "y": 4.497567638064039,
+        "vx": 0.8641805788255407,
+        "vy": 0.013866174486685607
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequence",
+      "pattern": "iceSandRubber",
+      "timeSec": 21.552,
+      "clear": true,
+      "impacts": 206,
+      "error": null,
+      "actor": {
+        "x": 1.2045759611220233,
+        "y": 4.4987366860062465,
+        "vx": 0.8634235885749643,
+        "vy": 0.009558150705140654
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "iceSandRubber",
+      "timeSec": 14.112,
+      "clear": true,
+      "impacts": 2,
+      "error": null,
+      "actor": {
+        "x": 1.4987368172970448,
+        "y": 2.204577723497131,
+        "vx": 0.009556964011945479,
+        "vy": 0.8634197352571695
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "openRacket",
+      "pattern": "iceSandRubber",
+      "timeSec": 20.544,
+      "clear": true,
+      "impacts": 95,
+      "error": null,
+      "actor": {
+        "x": 1.2045759600074406,
+        "y": 4.498736685575035,
+        "vx": 0.8634235909602107,
+        "vy": 0.009558154548362981
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequenceTiming",
+      "pattern": "iceSandRubber",
+      "timeSec": 20.64,
+      "clear": true,
+      "impacts": 102,
+      "error": null,
+      "actor": {
+        "x": 1.2046482512027463,
+        "y": 1.5012831457816926,
+        "vx": 0.8632658695419897,
+        "vy": -0.009590442350955727
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racketTiming",
+      "pattern": "iceSandRubber",
+      "timeSec": 20.944,
+      "clear": true,
+      "impacts": 42,
+      "error": null,
+      "actor": {
+        "x": 1.4987360908348488,
+        "y": 2.2047124481529425,
+        "vx": 0.009559185805093037,
+        "vy": 0.8631241347098738
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racket",
+      "pattern": "normalRubber",
+      "timeSec": 17.968,
+      "clear": true,
+      "impacts": 40,
+      "error": null,
+      "actor": {
+        "x": 1.2031386263697812,
+        "y": 4.4912347120696685,
+        "vx": 0.5423789465720404,
+        "vy": 0.016094982717401087
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequence",
+      "pattern": "normalRubber",
+      "timeSec": 24.48,
+      "clear": true,
+      "impacts": 189,
+      "error": null,
+      "actor": {
+        "x": 1.200886635672866,
+        "y": 4.491233163049171,
+        "vx": 0.5464067700261287,
+        "vy": 0.01609782705927841
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "normalRubber",
+      "timeSec": 21.84,
+      "clear": true,
+      "impacts": 174,
+      "error": null,
+      "actor": {
+        "x": 1.491231043483065,
+        "y": 2.200884424512429,
+        "vx": 0.016101719045485484,
+        "vy": 0.5464107248221589
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "openRacket",
+      "pattern": "normalRubber",
+      "timeSec": 23.504,
+      "clear": true,
+      "impacts": 103,
+      "error": null,
+      "actor": {
+        "x": 1.2008866321785068,
+        "y": 4.491233105551667,
+        "vx": 0.5464067762760049,
+        "vy": 0.01609793263725025
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequenceTiming",
+      "pattern": "normalRubber",
+      "timeSec": 26.448,
+      "clear": true,
+      "impacts": 106,
+      "error": null,
+      "actor": {
+        "x": 1.2002850320747331,
+        "y": 1.508709714740818,
+        "vx": 0.5474827749515233,
+        "vy": -0.015992938207567406
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racketTiming",
+      "pattern": "normalRubber",
+      "timeSec": 24.96,
+      "clear": true,
+      "impacts": 52,
+      "error": null,
+      "actor": {
+        "x": 1.4914980735939334,
+        "y": 2.208221867678791,
+        "vx": 0.015611393452248306,
+        "vy": 0.5332990208869065
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racket",
+      "pattern": "normalCork",
+      "timeSec": 17.968,
+      "clear": true,
+      "impacts": 40,
+      "error": null,
+      "actor": {
+        "x": 1.2031386263697812,
+        "y": 4.4912347120696685,
+        "vx": 0.5423789465720404,
+        "vy": 0.016094982717401087
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequence",
+      "pattern": "normalCork",
+      "timeSec": 26.176,
+      "clear": true,
+      "impacts": 212,
+      "error": null,
+      "actor": {
+        "x": 1.2008866351620926,
+        "y": 4.491233163049171,
+        "vx": 0.5464067709396783,
+        "vy": 0.01609782705927841
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "normalCork",
+      "timeSec": 24.032,
+      "clear": true,
+      "impacts": 327,
+      "error": null,
+      "actor": {
+        "x": 1.4912310434752778,
+        "y": 2.2008844252232036,
+        "vx": 0.016101719059784865,
+        "vy": 0.5464107235508943
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "openRacket",
+      "pattern": "normalCork",
+      "timeSec": 25.184,
+      "clear": true,
+      "impacts": 100,
+      "error": null,
+      "actor": {
+        "x": 1.2008866296557983,
+        "y": 4.49123310616232,
+        "vx": 0.5464067807880244,
+        "vy": 0.0160979315159602
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequenceTiming",
+      "pattern": "normalCork",
+      "timeSec": 26.752,
+      "clear": true,
+      "impacts": 104,
+      "error": null,
+      "actor": {
+        "x": 1.2002850320747331,
+        "y": 1.5087097147408175,
+        "vx": 0.5474827749515233,
+        "vy": -0.015992938207566736
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racketTiming",
+      "pattern": "normalCork",
+      "timeSec": 28.32,
+      "clear": true,
+      "impacts": 104,
+      "error": null,
+      "actor": {
+        "x": 1.491498073593749,
+        "y": 2.2082218658709913,
+        "vx": 0.01561139345258713,
+        "vy": 0.533299024120195
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racket",
+      "pattern": "iceSandCork",
+      "timeSec": 15.712,
+      "clear": true,
+      "impacts": 15,
+      "error": null,
+      "actor": {
+        "x": 1.2042300238134274,
+        "y": 4.497567638064039,
+        "vx": 0.8641805788255407,
+        "vy": 0.013866174486685607
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequence",
+      "pattern": "iceSandCork",
+      "timeSec": 21.552,
+      "clear": true,
+      "impacts": 206,
+      "error": null,
+      "actor": {
+        "x": 1.2045759611220233,
+        "y": 4.4987366860062465,
+        "vx": 0.8634235885749643,
+        "vy": 0.009558150705140654
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "iceSandCork",
+      "timeSec": 14.064,
+      "clear": true,
+      "impacts": 2,
+      "error": null,
+      "actor": {
+        "x": 1.4987368172982785,
+        "y": 2.20457772347991,
+        "vx": 0.009556964001496871,
+        "vy": 0.8634197352951926
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "openRacket",
+      "pattern": "iceSandCork",
+      "timeSec": 20.544,
+      "clear": true,
+      "impacts": 95,
+      "error": null,
+      "actor": {
+        "x": 1.2045759600074406,
+        "y": 4.498736685575035,
+        "vx": 0.8634235909602107,
+        "vy": 0.009558154548362981
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequenceTiming",
+      "pattern": "iceSandCork",
+      "timeSec": 20.752,
+      "clear": true,
+      "impacts": 98,
+      "error": null,
+      "actor": {
+        "x": 1.2046482513056234,
+        "y": 1.501283145604255,
+        "vx": 0.8632658693438837,
+        "vy": -0.009590440733803543
+      }
+    },
+    {
+      "seed": 42,
+      "kind": "racketTiming",
+      "pattern": "iceSandCork",
+      "timeSec": 18.16,
+      "clear": true,
+      "impacts": 4,
+      "error": null,
+      "actor": {
+        "x": 1.498736090833874,
+        "y": 2.7952875518437676,
+        "vx": 0.009559185813481601,
+        "vy": -0.8631241347024973
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racket",
+      "pattern": "mixedStandard",
+      "timeSec": 17.92,
+      "clear": true,
+      "impacts": 59,
+      "error": null,
+      "actor": {
+        "x": 1.2031028260726293,
+        "y": 4.491339873826964,
+        "vx": 0.5424429775988322,
+        "vy": 0.015901882767677292
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequence",
+      "pattern": "mixedStandard",
+      "timeSec": 22.912,
+      "clear": true,
+      "impacts": 209,
+      "error": null,
+      "actor": {
+        "x": 1.2045759617888434,
+        "y": 4.498736686540411,
+        "vx": 0.8634235871893491,
+        "vy": 0.009558145952249122
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "mixedStandard",
+      "timeSec": 16.368,
+      "clear": true,
+      "impacts": 2,
+      "error": null,
+      "actor": {
+        "x": 1.4912310503317663,
+        "y": 2.2008846700379454,
+        "vx": 0.016101706469774713,
+        "vy": 0.5464102856847177
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "openRacket",
+      "pattern": "mixedStandard",
+      "timeSec": 24.496,
+      "clear": true,
+      "impacts": 100,
+      "error": null,
+      "actor": {
+        "x": 1.2008866297774892,
+        "y": 4.491233106198228,
+        "vx": 0.5464067805703722,
+        "vy": 0.016097931450024267
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "sequenceTiming",
+      "pattern": "mixedStandard",
+      "timeSec": 24.016,
+      "clear": true,
+      "impacts": 103,
+      "error": null,
+      "actor": {
+        "x": 1.200285032094089,
+        "y": 1.5087097320852758,
+        "vx": 0.5474827749169048,
+        "vy": -0.015992970055778766
+      }
+    },
+    {
+      "seed": 42,
+      "kind": "racketTiming",
+      "pattern": "mixedStandard",
+      "timeSec": 26.592,
+      "clear": true,
+      "impacts": 62,
+      "error": null,
+      "actor": {
+        "x": 1.4913270674468053,
+        "y": 2.7991717138767482,
+        "vx": 0.0226205571078294,
+        "vy": -0.7649149655148731
+      }
+    }
+  ],
+  "legacyFailures": [
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "normalRubber",
+      "before": {
+        "timeSec": 6.864,
+        "clear": false,
+        "impacts": 161,
+        "error": "切り返し条件に届く {\"kind\":\"timing\",\"seed\":77,\"size\":7,\"target\":{\"axis\":\"x\",\"max\":2.365},\"actor\":{\"x\":3.395,\"y\":0.395,\"vx\":0,\"vy\":0.07569905426817473},\"rackets\":[{\"id\":\"timing-gate\",\"x\":2.88,\"y\":0.88}]}",
+        "actor": {
+          "x": 3.395,
+          "y": 0.395,
+          "vx": 0,
+          "vy": 0.07569905426817473
+        }
+      },
+      "escape": null
+    },
+    {
+      "seed": 77,
+      "kind": "timing",
+      "pattern": "normalCork",
+      "before": {
+        "timeSec": 6.864,
+        "clear": false,
+        "impacts": 230,
+        "error": "切り返し条件に届く {\"kind\":\"timing\",\"seed\":77,\"size\":7,\"target\":{\"axis\":\"x\",\"max\":2.365},\"actor\":{\"x\":3.395,\"y\":0.395,\"vx\":0,\"vy\":0.04791449795799599},\"rackets\":[{\"id\":\"timing-gate\",\"x\":2.88,\"y\":0.88}]}",
+        "actor": {
+          "x": 3.395,
+          "y": 0.395,
+          "vx": 0,
+          "vy": 0.04791449795799599
+        }
+      },
+      "escape": null
+    },
+    {
+      "seed": 77,
+      "kind": "racketTiming",
+      "pattern": "iceSandCork",
+      "before": {
+        "timeSec": 21.952,
+        "clear": false,
+        "impacts": 872,
+        "error": "構造から選んだ通過点に届く {\"kind\":\"racketTiming\",\"seed\":77,\"size\":7,\"target\":{\"x\":2.55,\"y\":4.5},\"actor\":{\"x\":2.0349999999999997,\"y\":4.699969574587721,\"vx\":-0.05207237298554577,\"vy\":0.0743612775375825},\"rackets\":[{\"id\":\"timing-gate\",\"x\":2.88,\"y\":0.88},{\"id\":\"racket-vertical\",\"x\":4.75,\"y\":6.3},{\"id\":\"racket-horizontal\",\"x\":2.3099999999999996,\"y\":3.1}]}",
+        "actor": {
+          "x": 2.0349999999999997,
+          "y": 4.699969574587721,
+          "vx": -0.05207237298554577,
+          "vy": 0.0743612775375825
+        }
+      },
+      "escape": {
+        "input": {
+          "x": 0,
+          "y": 1
+        },
+        "seconds": 1.008,
+        "actor": {
+          "x": 2.054539552226555,
+          "y": 6.6049999999999995,
+          "vx": 0.018085684999644882,
+          "vy": 0
+        },
+        "displacement": 1.905130629601997,
+        "clearance": 1.922052299074249,
+        "radius": 0.275,
+        "escaped": true
+      }
+    },
+    {
+      "seed": 77,
+      "kind": "racketTiming",
+      "pattern": "mixedStandard",
+      "before": {
+        "timeSec": 22.272,
+        "clear": false,
+        "impacts": 437,
+        "error": "構造から選んだ通過点に届く {\"kind\":\"racketTiming\",\"seed\":77,\"size\":7,\"target\":{\"x\":2.55,\"y\":4.5},\"actor\":{\"x\":3.395,\"y\":4.500000000000007,\"vx\":0.1748963612848635,\"vy\":-1.3845735985395226e-14},\"rackets\":[{\"id\":\"timing-gate\",\"x\":2.88,\"y\":2.3584424332487726},{\"id\":\"racket-vertical\",\"x\":4.3,\"y\":6.3},{\"id\":\"racket-horizontal\",\"x\":0.45999999999999996,\"y\":3.1}]}",
+        "actor": {
+          "x": 3.395,
+          "y": 4.500000000000007,
+          "vx": 0.1748963612848635,
+          "vy": -1.3845735985395226e-14
+        }
+      },
+      "escape": {
+        "input": {
+          "x": 0,
+          "y": 1
+        },
+        "seconds": 1.008,
+        "actor": {
+          "x": 3.4521512125056093,
+          "y": 6.598388519355583,
+          "vx": 0.03753876986641167,
+          "vy": -0.41321754027603225
+        },
+        "displacement": 2.0991666535209035,
+        "clearance": 3.3433838049074143,
+        "radius": 0.275,
+        "escaped": true
+      }
+    }
+  ],
+  "humanEnjoyment": "unverified",
+  "limitations": "Successful routes are representative seeds. Legacy PD stalls do not establish unreachable stages; escaping them is separately shown with actual input."
+}

@@ -1,5 +1,7 @@
 # T-240 はじめてのあそび方（v0.5.0）
 
+**v0.7.2:** 基本紹介もげんきは０まで減るが、操作・クリア・回復を続けられる。動く壁の最初の２面は通常床・通常壁。[現行仕様](puzzle-materials.md)。
+
 **v0.5.2:** 最新の表示動作は [tutorial-continuous.md](tutorial-continuous.md)。素材配分は [tutorial-pacing.md](tutorial-pacing.md)。以下はv0.5.0の導入時点の記録。
 
 承認済みの3画面コンセプト（縦持ちに修正）に基づく固定面チュートリアル。

@@ -10,6 +10,7 @@ test('床の紹介を保ち、単独3種類を両モードで紹介した後に�
   for(const [stage,kind] of [[17,'racket'],[19,'sequence'],[21,'timing'],[23,'openRacket']]){
    const profile=chooseStageVariation({seed:77,stage,level});
    assert.equal(profile.puzzleKind,kind);assert.equal(profile.puzzleEase,'relaxed');assert.equal(profile.puzzleFirstVisit,true);
+   assert.equal(profile.puzzleMaterialPattern,'iceRubber');
   }
   for(const stage of [18,20,22])assert.equal(choosePuzzleVariation({seed:77,stage,level}),null);
  }
@@ -37,8 +38,8 @@ test('紹介後は両モードに単独・組合せ・普通・息抜きが混�
 });
 
 test('同じ種と履歴なら面数だけで難化せず、続ける時に同じ面を保持する',()=>{
- const args={seed:77,stage:25,level:'easy',history:[]};
- assert.deepEqual(choosePuzzleVariation(args),choosePuzzleVariation({...args,stage:125}));
+ const args={seed:77,stage:35,level:'easy',history:[]};
+ assert.deepEqual(choosePuzzleVariation(args),choosePuzzleVariation({...args,stage:135}));
  const run=createRun(77);for(let n=1;n<23;n++){run.currentVariation('easy');run.clearStage({timeMs:1000,noDamage:true});}
  const before=run.currentVariation('easy');run.failStage('timeout');run.useContinue();assert.deepEqual(run.currentVariation('easy'),before);
 });
@@ -54,4 +55,30 @@ test('最近の仕掛けを抑える重みでも候補を除外せず、通常�
   assert.equal(kinds.size,PUZZLE_KINDS.length);assert.ok(normal>0);return count;
  });
  assert.ok(counts[1]<counts[0]);
+});
+
+test('素材は両モードで後半にも無傷・低ダメージ・通常壁が混ざり、直近の素材を控えめにする',()=>{
+ for(const level of ['easy','normal']){
+  const run=createRun(77),patterns=new Map(),late=[];
+  for(let stage=1;stage<=450;stage++){
+   const p=run.currentVariation(level);
+   if(p.puzzleKind&&stage>=33){patterns.set(p.puzzleMaterialPattern,(patterns.get(p.puzzleMaterialPattern)||0)+1);late.push(p);}
+   run.clearStage({timeMs:1000,noDamage:true});
+  }
+  assert.equal(patterns.size,6);
+  for(const pattern of ['normalCork','iceSandCork','mixedStandard'])assert.ok(late.some(p=>p.puzzleMaterialPattern===pattern&&p.puzzleEase==='relaxed'),pattern+'にも余裕のある面');
+  assert.ok(late.some(p=>p.puzzleMaterialPattern==='iceRubber'&&p.puzzleEase==='relaxed'));
+ }
+ const counts=history=>{
+  let safe=0,challenge=0,repeat=0;
+  for(let seed=1;seed<=4000;seed++){
+   const p=choosePuzzleVariation({seed:seed*7919,stage:31,level:'easy',history});if(!p)continue;
+   if(['iceRubber','iceSandRubber','normalRubber'].includes(p.puzzleMaterialPattern))safe++;else challenge++;
+   if(p.puzzleMaterialPattern==='iceRubber')repeat++;
+  }
+  assert.ok(challenge>0,'少し難しい組合せも候補に残る');return {safe,challenge,repeat};
+ };
+ const before=counts([]),after=counts([{puzzleMaterialPattern:'iceRubber'}]);
+ assert.ok(before.safe>before.challenge*5,'紹介直後は安全な壁が多い');
+ assert.ok(after.repeat<before.repeat,'直近の同素材を抑える');
 });

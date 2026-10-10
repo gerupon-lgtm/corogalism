@@ -34,3 +34,12 @@ test('戻っても同じ紹介面を再現でき、別コースの進み具合�
   assert.equal(course.stageSeed, firstSeed);
   assert.deepEqual(course.profile, other.profile);
 });
+
+test('最初の２面は通常床と通常壁、切り返しから氷へ進む',()=>{
+ const course=createPuzzleTutorialCourse(123),patterns=[];
+ do {
+  patterns.push(course.profile.puzzleMaterialPattern);
+  assert.equal(course.lesson.context,'げんきが0になっても続けられます。');
+ } while(course.next());
+ assert.deepEqual(patterns,['tutorialNormal','tutorialNormal','iceRubber','iceRubber','iceRubber','iceRubber']);
+});

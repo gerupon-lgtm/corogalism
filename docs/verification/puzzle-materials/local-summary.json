@@ -1,0 +1,199 @@
+{
+  "mainActualPointer": [
+    {
+      "label": "easy-17",
+      "seconds": 19.664,
+      "limitSec": 104,
+      "hp": {
+        "value": 72,
+        "max": 72
+      },
+      "hits": 0,
+      "materialProfile": "iceRubber",
+      "remainingSec": 84.336,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "easy-28",
+      "seconds": 19.872,
+      "limitSec": 74,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "normalRubber",
+      "remainingSec": 59.128,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "easy-31",
+      "seconds": 17.296,
+      "limitSec": 71,
+      "hp": {
+        "value": 52,
+        "max": 52
+      },
+      "hits": 1,
+      "materialProfile": "iceSandRubber",
+      "remainingSec": 53.704,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "easy-38",
+      "seconds": 20.816,
+      "limitSec": 89,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "iceSandCork",
+      "remainingSec": 68.184,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "easy-41",
+      "seconds": 17.856,
+      "limitSec": 77,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "mixedStandard",
+      "remainingSec": 59.144,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "easy-59",
+      "seconds": 37.888,
+      "limitSec": 109,
+      "hp": {
+        "value": 72,
+        "max": 72
+      },
+      "hits": 2,
+      "materialProfile": "normalCork",
+      "remainingSec": 71.112,
+      "sandTraceSamples": 3,
+      "movingSandSamples": 1,
+      "sandMaxSpeed": 0.30878467518621755
+    },
+    {
+      "label": "normal-17",
+      "seconds": 19.664,
+      "limitSec": 82,
+      "hp": {
+        "value": 72,
+        "max": 72
+      },
+      "hits": 0,
+      "materialProfile": "iceRubber",
+      "remainingSec": 62.336,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "normal-28",
+      "seconds": 19.872,
+      "limitSec": 46,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "normalRubber",
+      "remainingSec": 26.128,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "normal-31",
+      "seconds": 17.328,
+      "limitSec": 46,
+      "hp": {
+        "value": 52,
+        "max": 52
+      },
+      "hits": 1,
+      "materialProfile": "iceSandRubber",
+      "remainingSec": 28.672,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "normal-38",
+      "seconds": 20.864,
+      "limitSec": 46,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "iceSandCork",
+      "remainingSec": 25.136,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "normal-41",
+      "seconds": 17.856,
+      "limitSec": 50,
+      "hp": {
+        "value": 68,
+        "max": 68
+      },
+      "hits": 0,
+      "materialProfile": "mixedStandard",
+      "remainingSec": 32.144,
+      "sandTraceSamples": 0,
+      "movingSandSamples": 0,
+      "sandMaxSpeed": null
+    },
+    {
+      "label": "normal-59",
+      "seconds": 37.904,
+      "limitSec": 55,
+      "hp": {
+        "value": 72,
+        "max": 72
+      },
+      "hits": 2,
+      "materialProfile": "normalCork",
+      "remainingSec": 17.095999999999997,
+      "sandTraceSamples": 3,
+      "movingSandSamples": 1,
+      "sandMaxSpeed": 0.30878467518621755
+    }
+  ],
+  "browserExitCodes": {
+    "local-ui": 1,
+    "local-ui-576": 1,
+    "local-ui-576-r2": 0,
+    "local-final-312": 0,
+    "local-tutorial": 0,
+    "local-hp0": 0,
+    "local-main": 0,
+    "local-offline": 0
+  },
+  "failures": "initial UI connection-refused during module loading, retained; quiet server rerun passed; app cause not established",
+  "realPhoneOrHumanReactionVerified": false,
+  "controller": "tutorial first3 initial run16ms; main route48ms/timing16ms; frame physics16ms",
+  "cache": "2f5e8c567242bec9",
+  "precacheCount": 122
+}

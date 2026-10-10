@@ -39,6 +39,11 @@ export const PUZZLE_MAIN = {
  mixStartStage:24, introSize:7, chance:.35, history:4, repeatFactor:.22, recentFactor:.65,
  sizes:[[7,3],[8,1.4],[9,1.6],[11,1],[13,.4]],
  easeWeights:[['relaxed',1.6],['flow',1.6],['focused',.8]],
+ // 素材も直近との違いで選ぶ。序盤は無傷の壁を多めにし、後半も息抜きを残す。
+ materials:{weights:[['iceRubber',2],['iceSandRubber',2],['normalRubber',1.6],['normalCork',1.2],['iceSandCork',1.2],['mixedStandard',.8]],
+   earlyEndStage:32,earlySafeFactor:2.5,earlyChallengeFactor:.3,
+   minimumSandCells:2,sandCellsPerAnchor:2,sandCellsPerSize:1,timingClearance:1.1,paddleIceRadius:1.7,mixedIceRatio:.5,
+   standardRatio:.35,rubberRatio:.25,endpointClearance:.7,sandRankJitter:.25},
  physics:{racketSpeed:4,racketRestitution:1.08,aimAngleDeg:55,motionTransfer:0,ballTilt:1,speedLimit:30,cottonRestitution:0},
  // 経路時間へ、開閉・狙い直し・切り返しの余裕を追加。初紹介はさらに余裕を取る。
  time:{base:{easy:12,normal:8},gate:{easy:8,normal:5},aim:{easy:7,normal:5},timing:{easy:10,normal:7},intro:12,
@@ -205,7 +210,7 @@ export const STICKY = { firstStage: 3, interval: 8, durationSec: 3, shortenSec: 
   motionThreshold: 6, motionReset: 2, motionGapMs: 250, touchSuppressMs: 450 };
 
 /** チュートリアル。表示前の間と更新時のハイライト時間を調整できる。 */
-export const TUTORIAL = { contactDelayMs: 700, flashMs: 1800, hp: 100, minHp: 1, size: 7 };
+export const TUTORIAL = { contactDelayMs: 700, flashMs: 1800, hp: 100, minHp: 0, size: 7 };
 
 /** 紹介コースの案内だけに使う値。球・壁の物理は変更しない。 */
 export const PUZZLE_HINTS = {

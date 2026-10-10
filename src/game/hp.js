@@ -19,7 +19,7 @@ export function initialHp(turns, hpPerTurn, cfg = HP) {
   return cfg.base + hpPerTurn * turns;
 }
 
-export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg = HP, damageCapRatio = cfg.capRatio, minimum = null } = {}) {
+export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg = HP, damageCapRatio = cfg.capRatio, minimum = null, allowRecoveryAtZero = false } = {}) {
   const max = initialHp(turns, hpPerTurn, cfg);
   const cap = max * Math.min(cfg.capRatio, damageCapRatio);
   let value = max;
@@ -34,9 +34,9 @@ export function createHp({ turns, hpPerTurn, damageMult = 1, shield = null, cfg 
     /** この面で一度でもダメージを受けたか（ノーミス面数の判定に使う） */
     get tookDamage() { return tookDamage; },
 
-    /** 回復しても被弾履歴は維持。死亡後の復活には使わない。 */
+    /** 回復しても被弾履歴は維持。０で続行する紹介だけ、０からの回復を許す。 */
     heal(amount) {
-      if (value <= 0 || !Number.isFinite(amount) || amount <= 0) return 0;
+      if ((value <= 0 && !allowRecoveryAtZero) || !Number.isFinite(amount) || amount <= 0) return 0;
       const gained = Math.min(amount, max - value);
       value += gained;
       return gained;

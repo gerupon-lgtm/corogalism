@@ -1,0 +1,1258 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "ui",
+  "version": "0.7.2",
+  "rows": [
+    {
+      "name": "lesson-ui",
+      "width": 576,
+      "index": 0,
+      "card": {
+        "top": 651.046875,
+        "bottom": 801.046875,
+        "left": 71,
+        "right": 505,
+        "height": 150,
+        "fields": [
+          {
+            "selector": "h2",
+            "top": 662.25,
+            "bottom": 687.84375,
+            "left": 126,
+            "right": 494,
+            "height": 25.59375,
+            "text": "動かして、打ち返そう",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-copy",
+            "top": 690.046875,
+            "bottom": 709.546875,
+            "left": 82,
+            "right": 494,
+            "height": 19.5,
+            "text": "ラケットの中心と端で、返す向きを変えよう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-hint",
+            "top": 732.671875,
+            "bottom": 751.515625,
+            "left": 82,
+            "right": 494,
+            "height": 18.84375,
+            "text": "少し右下に傾けて、入口へ進もう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-context",
+            "top": 774.65625,
+            "bottom": 790.046875,
+            "left": 82,
+            "right": 494,
+            "height": 15.390625,
+            "text": "げんきが0になっても続けられます。",
+            "visible": true
+          }
+        ]
+      },
+      "materials": {
+        "profile": "tutorialNormal",
+        "materialLabel": "通常床・通常壁",
+        "counts": {
+          "ice": 0,
+          "sand": 0,
+          "normal": 49
+        },
+        "floors": [],
+        "walls": {
+          "default": 42
+        }
+      },
+      "actualPointerMovement": true,
+      "diagnosticEarlierGoalPlacement": false
+    },
+    {
+      "name": "lesson-ui",
+      "width": 576,
+      "index": 1,
+      "card": {
+        "top": 651.046875,
+        "bottom": 801.046875,
+        "left": 71,
+        "right": 505,
+        "height": 150,
+        "fields": [
+          {
+            "selector": "h2",
+            "top": 662.25,
+            "bottom": 687.84375,
+            "left": 126,
+            "right": 494,
+            "height": 25.59375,
+            "text": "順に動かして、道を開こう",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-copy",
+            "top": 690.046875,
+            "bottom": 709.546875,
+            "left": 82,
+            "right": 494,
+            "height": 19.5,
+            "text": "球を落ち着かせ、順に戸を開こう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-hint",
+            "top": 732.671875,
+            "bottom": 751.515625,
+            "left": 82,
+            "right": 494,
+            "height": 18.84375,
+            "text": "少し右下に傾けて、開いた通路へ。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-context",
+            "top": 774.65625,
+            "bottom": 790.046875,
+            "left": 82,
+            "right": 494,
+            "height": 15.390625,
+            "text": "げんきが0になっても続けられます。",
+            "visible": true
+          }
+        ]
+      },
+      "materials": {
+        "profile": "tutorialNormal",
+        "materialLabel": "通常床・通常壁",
+        "counts": {
+          "ice": 0,
+          "sand": 0,
+          "normal": 49
+        },
+        "floors": [],
+        "walls": {
+          "default": 43
+        }
+      },
+      "actualPointerMovement": true,
+      "diagnosticEarlierGoalPlacement": true
+    },
+    {
+      "name": "lesson-ui",
+      "width": 576,
+      "index": 2,
+      "card": {
+        "top": 651.046875,
+        "bottom": 801.046875,
+        "left": 71,
+        "right": 505,
+        "height": 150,
+        "fields": [
+          {
+            "selector": "h2",
+            "top": 662.25,
+            "bottom": 687.84375,
+            "left": 126,
+            "right": 494,
+            "height": 25.59375,
+            "text": "切り返して、滑り込もう",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-copy",
+            "top": 690.046875,
+            "bottom": 709.546875,
+            "left": 82,
+            "right": 494,
+            "height": 19.5,
+            "text": "球の勢いを残し、戸を開いて滑り込もう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-hint",
+            "top": 732.671875,
+            "bottom": 751.515625,
+            "left": 82,
+            "right": 494,
+            "height": 18.84375,
+            "text": "少し左上に傾けて、入口へ進もう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-context",
+            "top": 774.65625,
+            "bottom": 790.046875,
+            "left": 82,
+            "right": 494,
+            "height": 15.390625,
+            "text": "げんきが0になっても続けられます。",
+            "visible": true
+          }
+        ]
+      },
+      "materials": {
+        "profile": "iceRubber",
+        "materialLabel": "氷・ゴムと綿",
+        "counts": {
+          "ice": 49,
+          "sand": 0,
+          "normal": 0
+        },
+        "floors": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08
+          }
+        ],
+        "walls": {
+          "rubber": 26,
+          "cotton": 11
+        }
+      },
+      "actualPointerMovement": true,
+      "diagnosticEarlierGoalPlacement": true
+    },
+    {
+      "name": "lesson-ui",
+      "width": 576,
+      "index": 3,
+      "card": {
+        "top": 651.046875,
+        "bottom": 801.046875,
+        "left": 71,
+        "right": 505,
+        "height": 150,
+        "fields": [
+          {
+            "selector": "h2",
+            "top": 662.25,
+            "bottom": 687.84375,
+            "left": 126,
+            "right": 494,
+            "height": 25.59375,
+            "text": "道を開いて、打ち返そう",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-copy",
+            "top": 690.046875,
+            "bottom": 709.546875,
+            "left": 82,
+            "right": 494,
+            "height": 19.5,
+            "text": "戸を開き、ラケットで次の部屋へ送ろう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-hint",
+            "top": 732.671875,
+            "bottom": 751.515625,
+            "left": 82,
+            "right": 494,
+            "height": 18.84375,
+            "text": "少し左下に傾けて、開いた通路へ。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-context",
+            "top": 774.65625,
+            "bottom": 790.046875,
+            "left": 82,
+            "right": 494,
+            "height": 15.390625,
+            "text": "げんきが0になっても続けられます。",
+            "visible": true
+          }
+        ]
+      },
+      "materials": {
+        "profile": "iceRubber",
+        "materialLabel": "氷・ゴムと綿",
+        "counts": {
+          "ice": 49,
+          "sand": 0,
+          "normal": 0
+        },
+        "floors": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08
+          }
+        ],
+        "walls": {
+          "rubber": 31,
+          "cotton": 12
+        }
+      },
+      "actualPointerMovement": true,
+      "diagnosticEarlierGoalPlacement": true
+    },
+    {
+      "name": "lesson-ui",
+      "width": 576,
+      "index": 4,
+      "card": {
+        "top": 651.046875,
+        "bottom": 801.046875,
+        "left": 71,
+        "right": 505,
+        "height": 150,
+        "fields": [
+          {
+            "selector": "h2",
+            "top": 662.25,
+            "bottom": 687.84375,
+            "left": 126,
+            "right": 494,
+            "height": 25.59375,
+            "text": "順に開いて、滑り込もう",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-copy",
+            "top": 690.046875,
+            "bottom": 709.546875,
+            "left": 82,
+            "right": 494,
+            "height": 19.5,
+            "text": "戸を順に開き、最後は勢いで滑り込もう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-hint",
+            "top": 732.671875,
+            "bottom": 751.515625,
+            "left": 82,
+            "right": 494,
+            "height": 18.84375,
+            "text": "少し左上に傾けて、開いた通路へ。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-context",
+            "top": 774.65625,
+            "bottom": 790.046875,
+            "left": 82,
+            "right": 494,
+            "height": 15.390625,
+            "text": "げんきが0になっても続けられます。",
+            "visible": true
+          }
+        ]
+      },
+      "materials": {
+        "profile": "iceRubber",
+        "materialLabel": "氷・ゴムと綿",
+        "counts": {
+          "ice": 49,
+          "sand": 0,
+          "normal": 0
+        },
+        "floors": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08
+          }
+        ],
+        "walls": {
+          "rubber": 30,
+          "cotton": 12
+        }
+      },
+      "actualPointerMovement": true,
+      "diagnosticEarlierGoalPlacement": true
+    },
+    {
+      "name": "lesson-ui",
+      "width": 576,
+      "index": 5,
+      "card": {
+        "top": 651.046875,
+        "bottom": 801.046875,
+        "left": 71,
+        "right": 505,
+        "height": 150,
+        "fields": [
+          {
+            "selector": "h2",
+            "top": 662.25,
+            "bottom": 687.84375,
+            "left": 126,
+            "right": 494,
+            "height": 25.59375,
+            "text": "打ち返して、滑り込もう",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-copy",
+            "top": 690.046875,
+            "bottom": 709.546875,
+            "left": 82,
+            "right": 494,
+            "height": 19.5,
+            "text": "ラケットで球を送り、切り返して戸を開こう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-hint",
+            "top": 732.671875,
+            "bottom": 751.515625,
+            "left": 82,
+            "right": 494,
+            "height": 18.84375,
+            "text": "少し右上に傾けて、入口へ進もう。",
+            "visible": true
+          },
+          {
+            "selector": ".tutorial-context",
+            "top": 774.65625,
+            "bottom": 790.046875,
+            "left": 82,
+            "right": 494,
+            "height": 15.390625,
+            "text": "げんきが0になっても続けられます。",
+            "visible": true
+          }
+        ]
+      },
+      "materials": {
+        "profile": "iceRubber",
+        "materialLabel": "氷・ゴムと綿",
+        "counts": {
+          "ice": 49,
+          "sand": 0,
+          "normal": 0
+        },
+        "floors": [
+          {
+            "kind": "ice",
+            "cells": [
+              {
+                "x": 0,
+                "y": 0
+              },
+              {
+                "x": 1,
+                "y": 0
+              },
+              {
+                "x": 2,
+                "y": 0
+              },
+              {
+                "x": 3,
+                "y": 0
+              },
+              {
+                "x": 4,
+                "y": 0
+              },
+              {
+                "x": 5,
+                "y": 0
+              },
+              {
+                "x": 6,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 1
+              },
+              {
+                "x": 1,
+                "y": 1
+              },
+              {
+                "x": 2,
+                "y": 1
+              },
+              {
+                "x": 3,
+                "y": 1
+              },
+              {
+                "x": 4,
+                "y": 1
+              },
+              {
+                "x": 5,
+                "y": 1
+              },
+              {
+                "x": 6,
+                "y": 1
+              },
+              {
+                "x": 0,
+                "y": 2
+              },
+              {
+                "x": 1,
+                "y": 2
+              },
+              {
+                "x": 2,
+                "y": 2
+              },
+              {
+                "x": 3,
+                "y": 2
+              },
+              {
+                "x": 4,
+                "y": 2
+              },
+              {
+                "x": 5,
+                "y": 2
+              },
+              {
+                "x": 6,
+                "y": 2
+              },
+              {
+                "x": 0,
+                "y": 3
+              },
+              {
+                "x": 1,
+                "y": 3
+              },
+              {
+                "x": 2,
+                "y": 3
+              },
+              {
+                "x": 3,
+                "y": 3
+              },
+              {
+                "x": 4,
+                "y": 3
+              },
+              {
+                "x": 5,
+                "y": 3
+              },
+              {
+                "x": 6,
+                "y": 3
+              },
+              {
+                "x": 0,
+                "y": 4
+              },
+              {
+                "x": 1,
+                "y": 4
+              },
+              {
+                "x": 2,
+                "y": 4
+              },
+              {
+                "x": 3,
+                "y": 4
+              },
+              {
+                "x": 4,
+                "y": 4
+              },
+              {
+                "x": 5,
+                "y": 4
+              },
+              {
+                "x": 6,
+                "y": 4
+              },
+              {
+                "x": 0,
+                "y": 5
+              },
+              {
+                "x": 1,
+                "y": 5
+              },
+              {
+                "x": 2,
+                "y": 5
+              },
+              {
+                "x": 3,
+                "y": 5
+              },
+              {
+                "x": 4,
+                "y": 5
+              },
+              {
+                "x": 5,
+                "y": 5
+              },
+              {
+                "x": 6,
+                "y": 5
+              },
+              {
+                "x": 0,
+                "y": 6
+              },
+              {
+                "x": 1,
+                "y": 6
+              },
+              {
+                "x": 2,
+                "y": 6
+              },
+              {
+                "x": 3,
+                "y": 6
+              },
+              {
+                "x": 4,
+                "y": 6
+              },
+              {
+                "x": 5,
+                "y": 6
+              },
+              {
+                "x": 6,
+                "y": 6
+              }
+            ],
+            "frictionK": 0.08
+          }
+        ],
+        "walls": {
+          "rubber": 26,
+          "cotton": 11
+        }
+      },
+      "actualPointerMovement": true,
+      "diagnosticEarlierGoalPlacement": true
+    },
+    {
+      "name": "browser-errors",
+      "width": 576,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      },
+      "loadedAssets": {
+        "/style.css": "2b05043109989c412d1ea1fd1f49b8d4a15524d20b4057d288132a0203bae28d",
+        "/src/config/gameConfig.js": "12aa7688a20cd023c621727b2136722ea19577f595ca2abb3a17214f6249fa70",
+        "/src/ui/tutorial.js": "0f133ad57232689e1ad5633091c35173135b2552c81fafc82b11b692cbe85f18",
+        "/src/game/puzzleTutorial.js": "4e2adb3775517e0b5a2efbdd96f4aac81a1cfcd775f3e5db4a9eb5a4f5baba0f",
+        "/src/game/stagePlay.js": "0283c77bfe2ea1b375e4cdda5375a70851d3ec5d1f58aa927008cd3eb18eb58e",
+        "/src/game/puzzleHints.js": "5c691b42c56a2e912a0a8caf055624e808d2fbfa917243715dcf647da17e2405",
+        "/src/world/puzzleStage.js": "1f18a6c65fcbe0a62084612d68f679ca2eddea34053d89df8c30d20840697a51",
+        "/src/game/puzzleVariety.js": "2075ae62eaaba82438ce7c39260869b785d98388b30bb9656921151c6f06208e",
+        "/src/world/puzzleMaterials.js": "d75546b840666da190a3116114fade407aafdd0025f79c24751606bace4d5f59"
+      }
+    }
+  ]
+}
