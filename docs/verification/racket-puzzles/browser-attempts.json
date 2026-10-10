@@ -1,0 +1,42 @@
+{
+  "appVersion": "0.6.30",
+  "revision": 3,
+  "applicationChangedByBrowserAgent": false,
+  "attempts": [
+    {"output": "local", "result": "startup-failure", "evidence": "src/world/stageFeatures.js net::ERR_CONNECTION_REFUSED; API did not start"},
+    {"output": "local-final", "result": "fixture-collision", "evidence": "gate-1 offset +0.5 with tangent +0.8 also hit adjacent cotton at y=2.605, leaving vy=0", "correction": "Aim tangent toward the gate centre at both offsets; preserve offset and tolerance"},
+    {"output": "local-confirmed", "result": "observation-too-short", "evidence": "Open gate probe at 1 second: x=2.718, vx=3.681, no impact; crossing requires x>3.395", "correction": "Observe both closed/open cases for 2 seconds; record first crossing, including later rebounds"},
+    {"output": "local-complete", "result": "pointer-start-outside-canvas", "evidence": "The first y=1 pointerdown landed at the exclusive canvas bottom boundary; ball and gates never moved", "correction": "Begin pointerdown at canvas centre, then pointermove to the requested boundary; preserve tilt 1"},
+    {"output": "local-pointer", "result": "startup-failure", "evidence": "src/render/toyCandy.js net::ERR_CONNECTION_REFUSED; corrected pointer fixture was not reached"}
+  ],
+  "serverConditionChange": {
+    "afterAttempt": "local-pointer",
+    "change": "Restart the same local port with a quiet ThreadingHTTPServer and request queue 128",
+    "evidence": "The old server had accumulated 22765 tokens of request output; the refusal cause was not proven",
+    "rootServerSession": 84590,
+    "applicationHash": "b948188693e4cdd0"
+  },
+  "finalLocalVerification": {
+    "puzzlesOutput": "local-stable/results.json",
+    "puzzlesExitCode": 0,
+    "viewportWidths": [312, 412, 576],
+    "sequencePointerSeconds": 20.928,
+    "timingPointerSeconds": 9.04,
+    "courseTeleport": false,
+    "courseDebugAdvance": false,
+    "earlyProbePassedAtMs": 640,
+    "lateProbePassedWithinOneSecond": false,
+    "earlyProbePositiveInertiaOnLeft": true,
+    "sampledWallHitsAreExactCounts": false,
+    "modeEnableSafetyDisplacements": [0, 0, 0],
+    "offlineCacheFiles": 114,
+    "offlineCacheName": "corogalism-b948188693e4cdd0",
+    "nativeScreenOutput": "local-screen/results.json",
+    "nativeScreenExitCode": 0,
+    "nativePngIceCoverageThreshold": 0.05,
+    "nativePngVerifiedCases": ["relay/baseline", "relay/cotton", "relay/rackets", "sequence/rackets", "timing/rackets"],
+    "newPngVisuallyReviewedByBrowserAgent": true
+  },
+  "thresholdsPreserved": ["finite state", "no ball embedding", "gate crossing boundary", "reflection tangent tolerance 0.06", "saved PNG ice coverage >0.05"],
+  "limitations": ["Automated pointer completion is not proof of human ease or fun", "Synthetic orientation does not verify a physical sensor", "Virtual-clock PNG appearance is not verified; the separate native-clock screen command verifies it"]
+}

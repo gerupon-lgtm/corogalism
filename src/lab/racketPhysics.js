@@ -95,15 +95,17 @@ export function stepRacketPhysics({actor,stage,tilt,base,dt,settings={},onImpact
    // 専用反発だけは本編の素材上限に丸めず、編集した値を解決層へ渡す。
    if(Number.isFinite(settings.racketRestitution))material.restitutionK=settings.racketRestitution/base.wallRestitution;
    const rest=resolveParams({base,character:actor.character,material,zone,impactSpeed,policy:{...stage.physicsPolicy,unrestricted:true}}).restitution;
-   const longFace=axis==='y'?Math.abs(hit.nx)>1-EPS:Math.abs(hit.ny)>1-EPS;
-   if(longFace){
-    const center=axis==='y'?w.y+w.h/2:w.x+w.w/2,half=axis==='y'?w.h/2:w.w/2;
-    const offset=Math.max(-1,Math.min(1,(actor[axis]-center)/half)),angle=offset*aimAngleDeg*Math.PI/180;
-    const outgoing=Math.hypot(actor.vx,actor.vy)*rest;
-    if(axis==='y'){actor.vx=hit.nx*Math.cos(angle)*outgoing;actor.vy=Math.sin(angle)*outgoing+w.vy*motionTransfer;}
-    else{actor.vy=hit.ny*Math.cos(angle)*outgoing;actor.vx=Math.sin(angle)*outgoing+w.vx*motionTransfer;}
+   // 動く方向と壁の向きは別。横へ動く縦壁、縦へ動く横壁も置ける。
+   const vertical=w.h>=w.w,longFace=vertical?Math.abs(hit.nx)>1-EPS:Math.abs(hit.ny)>1-EPS;
+   if(w.bounce!=='reflect'&&longFace){
+    const along=vertical?'y':'x',center=vertical?w.y+w.h/2:w.x+w.w/2,half=vertical?w.h/2:w.w/2;
+    const offset=Math.max(-1,Math.min(1,(actor[along]-center)/half)),angle=offset*aimAngleDeg*Math.PI/180;
+    const normalX=vertical?w.vx:0,normalY=vertical?0:w.vy;
+    const outgoing=Math.hypot(actor.vx-normalX,actor.vy-normalY)*rest;
+    if(vertical){actor.vx=hit.nx*Math.cos(angle)*outgoing+normalX;actor.vy=Math.sin(angle)*outgoing+w.vy*motionTransfer;}
+    else{actor.vy=hit.ny*Math.cos(angle)*outgoing+normalY;actor.vx=Math.sin(angle)*outgoing+w.vx*motionTransfer;}
    }else{
-    // 短面や角に動く壁が当たる場合は、壁から見た速度を反射する。
+    // ゲート、短面、角は、壁から見た速度を通常どおり反射する。
     actor.vx-=(1+rest)*vn*hit.nx;actor.vy-=(1+rest)*vn*hit.ny;
    }
   }

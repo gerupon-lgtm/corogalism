@@ -119,3 +119,44 @@ test('本編へ委譲する比較も、有限の大きな傾き倍率による�
  const tiny=setup({rackets:false});Object.assign(tiny.actor,{vx:30,r:1e-8});const initial={...tiny.actor};
  const overload=run(tiny);assert.equal(overload.halt.reason,'workload');assert.deepEqual(tiny.actor,initial);
 });
+
+test('ゲートの向きと移動軸は別で、横へ動く縦壁と縦へ動く横壁が静止球を打ち返す',()=>{
+ for(const axis of ['x','y']){
+  const state=setup(),w=state.stage.rackets[0];
+  Object.assign(w,axis==='x'?{axis:'x',bounce:'reflect',x:3.4,y:2,w:.12,h:2}:{axis:'y',bounce:'reflect',x:2,y:3.4,w:2,h:.12});
+  Object.assign(state.actor,axis==='x'?{x:3.88,y:3,vx:0,vy:0}:{x:3,y:3.88,vx:0,vy:0});
+  const result=run(state,{dt:.05,tilt:axis==='x'?{x:1,y:0}:{x:0,y:1},settings:{...settings,ballTilt:0}});
+  assert.equal(result.racketHits,1);near(axis==='x'?state.actor.vx:state.actor.vy,4*(1+1.08));
+  near(axis==='x'?state.actor.vy:state.actor.vx,0);assert.ok(separation(state.actor,w)>=state.actor.r-1e-8);
+ }
+});
+
+test('狙い打ちの中心と端は移動軸ではなく壁の長辺から決まる',()=>{
+ const vertical=setup();vertical.stage.rackets[0].axis='x';Object.assign(vertical.actor,{x:3.08,y:2.15,vx:8,vy:0});
+ run(vertical);near(Math.atan2(vertical.actor.vy,-vertical.actor.vx),-.85*55*Math.PI/180);
+ const horizontal=setup();Object.assign(horizontal.stage.rackets[0],{x:2,y:3.4,w:2,h:.12,axis:'y'});Object.assign(horizontal.actor,{x:2.15,y:3.08,vx:0,vy:8});
+ run(horizontal);near(Math.atan2(horizontal.actor.vx,-horizontal.actor.vy),-.85*55*Math.PI/180);
+});
+
+test('ゲートは中心・端を狙う処理をせず、斜め入力でも沿う速度を保って相対反射する',()=>{
+ const state=setup(),w=state.stage.rackets[0];Object.assign(w,{axis:'x',bounce:'reflect'});
+ Object.assign(state.actor,{x:3.83,y:2.2,vx:0,vy:0});
+ const result=run(state,{dt:.05,tilt:{x:.5,y:.5}});
+ assert.equal(result.racketHits,1);const inputVelocity=17*.5*.05*Math.exp(-.2*.05);
+ near(state.actor.vy,inputVelocity);near(state.actor.vx,inputVelocity-(1+1.08)*(inputVelocity-2));
+});
+
+test('横へ閉じる縦ゲートは挟み込み位置で止まり、切り返せば球が押し戻されず離れられる',()=>{
+ const state=setup(),w=state.stage.rackets[0];Object.assign(w,{axis:'x',bounce:'reflect',min:1,max:4.5});
+ state.stage.walls=[{x:4.4,y:0,w:.2,h:7,materialId:'cotton'}];Object.assign(state.actor,{x:3.98,y:3,vx:0,vy:0});
+ let blocked=false;
+ for(let i=0;i<20;i++){
+  const result=run(state,{tilt:{x:1,y:0},settings:{...settings,ballTilt:0}});blocked ||=result.blockedRackets.includes(w.id);
+  assert.ok(separation(state.actor,w)>=state.actor.r-2e-8);assert.ok(separation(state.actor,state.stage.walls[0])>=state.actor.r-2e-8);
+ }
+ assert.ok(blocked);near(w.x+w.w,4.4-state.actor.r*2,2e-8);
+ const trappedX=state.actor.x,gateX=w.x;
+ for(let i=0;i<5;i++)run(state,{tilt:{x:-.7,y:0}});
+ assert.ok(w.x<gateX);assert.ok(state.actor.x<trappedX);assert.ok(state.actor.vx<0);
+ assert.ok(separation(state.actor,w)>state.actor.r,'ゲートが退いて球とのすき間が開く');
+});

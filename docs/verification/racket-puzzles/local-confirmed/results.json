@@ -1,0 +1,1689 @@
+[
+  {
+    "layout": "sequence",
+    "width": 312,
+    "modeGeometryMatches": true,
+    "variableRacketCount": 2,
+    "definitions": [
+      {
+        "id": "gate-1",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 2.88,
+        "y": 0.85,
+        "w": 0.24,
+        "h": 2.3,
+        "axis": "y",
+        "min": 0.85,
+        "max": 3.5,
+        "home": 0.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      },
+      {
+        "id": "gate-2",
+        "label": "2",
+        "bounce": "reflect",
+        "x": 4.85,
+        "y": 3.88,
+        "w": 2.3,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2.65,
+        "max": 4.85,
+        "home": 4.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "realPointer": true,
+    "before": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 0.85,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "moving": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8413763146265459,
+        "y": 0.8413761405584208,
+        "vx": 1.628267351257171,
+        "vy": 1.6282665210020155,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 1.4670446697311559,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 1.7999992653198182
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.30400000000000016,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "neutral": [
+      {
+        "id": "gate-1",
+        "x": 2.88,
+        "y": 1.4835997415413529
+      },
+      {
+        "id": "gate-2",
+        "x": 4.85,
+        "y": 3.88
+      }
+    ],
+    "shared": {
+      "page": "corogalism-racket-lab",
+      "revision": 3,
+      "version": "0.6.30",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4,
+      "racketRestitution": 1.08,
+      "aimAngleDeg": 55,
+      "motionTransfer": 0,
+      "ballTilt": 1,
+      "speedLimit": 30,
+      "cottonRestitution": 0,
+      "maxTiltAngleDeg": 25,
+      "layout": "sequence",
+      "inputMode": "pointer",
+      "elapsedSec": 2.4960000000000018,
+      "racketHits": 1,
+      "goalReached": false,
+      "edited": false,
+      "completions": [],
+      "observations": []
+    },
+    "mainStorageUnchanged": true
+  },
+  {
+    "layout": "timing",
+    "width": 312,
+    "modeGeometryMatches": true,
+    "variableRacketCount": 1,
+    "definitions": [
+      {
+        "id": "timing-gate",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 2,
+        "y": 3.12,
+        "w": 2,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2,
+        "max": 4,
+        "home": 2,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "realPointer": true,
+    "before": {
+      "layout": "timing",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "timing-gate",
+          "x": 2,
+          "y": 3.12,
+          "w": 2,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2,
+          "max": 4,
+          "home": 2,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "moving": {
+      "layout": "timing",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8413763146265459,
+        "y": 0.8413761405584208,
+        "vx": 1.628267351257171,
+        "vy": 1.6282665210020155,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "timing-gate",
+          "x": 2.6170449843630132,
+          "y": 3.12,
+          "w": 2,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2,
+          "max": 4,
+          "home": 2,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 1.80000018314172,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.30400000000000016,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "neutral": [
+      {
+        "id": "timing-gate",
+        "x": 2.6336000646146625,
+        "y": 3.12
+      }
+    ],
+    "shared": {
+      "page": "corogalism-racket-lab",
+      "revision": 3,
+      "version": "0.6.30",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4,
+      "racketRestitution": 1.08,
+      "aimAngleDeg": 55,
+      "motionTransfer": 0,
+      "ballTilt": 1,
+      "speedLimit": 30,
+      "cottonRestitution": 0,
+      "maxTiltAngleDeg": 25,
+      "layout": "timing",
+      "inputMode": "pointer",
+      "elapsedSec": 2.4960000000000018,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": false,
+      "completions": [],
+      "observations": []
+    },
+    "mainStorageUnchanged": true
+  },
+  {
+    "layout": "sequence",
+    "width": 412,
+    "modeGeometryMatches": true,
+    "variableRacketCount": 2,
+    "definitions": [
+      {
+        "id": "gate-1",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 2.88,
+        "y": 0.85,
+        "w": 0.24,
+        "h": 2.3,
+        "axis": "y",
+        "min": 0.85,
+        "max": 3.5,
+        "home": 0.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      },
+      {
+        "id": "gate-2",
+        "label": "2",
+        "bounce": "reflect",
+        "x": 4.85,
+        "y": 3.88,
+        "w": 2.3,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2.65,
+        "max": 4.85,
+        "home": 4.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "realPointer": true,
+    "before": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 0.85,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "moving": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8413763013792799,
+        "y": 0.8413761748707531,
+        "vx": 1.6282672840837678,
+        "vy": 1.6282666806742918,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 1.4670447385031475,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 1.799999465936633
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.30400000000000016,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "neutral": [
+      {
+        "id": "gate-1",
+        "x": 2.88,
+        "y": 1.4835998121584704
+      },
+      {
+        "id": "gate-2",
+        "x": 4.85,
+        "y": 3.88
+      }
+    ],
+    "shared": {
+      "page": "corogalism-racket-lab",
+      "revision": 3,
+      "version": "0.6.30",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4,
+      "racketRestitution": 1.08,
+      "aimAngleDeg": 55,
+      "motionTransfer": 0,
+      "ballTilt": 1,
+      "speedLimit": 30,
+      "cottonRestitution": 0,
+      "maxTiltAngleDeg": 25,
+      "layout": "sequence",
+      "inputMode": "pointer",
+      "elapsedSec": 2.4960000000000018,
+      "racketHits": 1,
+      "goalReached": false,
+      "edited": false,
+      "completions": [],
+      "observations": []
+    },
+    "mainStorageUnchanged": true
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-1",
+      "offset": 0,
+      "tangentInitial": 0.8,
+      "vertical": true,
+      "axis": "y",
+      "bounce": "reflect",
+      "debugGatePosition": 0.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 2.605,
+        "y": 2.0712845384815193,
+        "vx": -4.242935659787859,
+        "vy": 0.7857288258866406
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-1",
+      "offset": -0.5,
+      "tangentInitial": 0.8,
+      "vertical": true,
+      "axis": "y",
+      "bounce": "reflect",
+      "debugGatePosition": 0.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 2.605,
+        "y": 1.496284538481519,
+        "vx": -4.242935659787859,
+        "vy": 0.7857288258866406
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-1",
+      "offset": 0.5,
+      "tangentInitial": -0.8,
+      "vertical": true,
+      "axis": "y",
+      "bounce": "reflect",
+      "debugGatePosition": 0.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 2.605,
+        "y": 2.503715461518481,
+        "vx": -4.242935659787859,
+        "vy": -0.7857288258866406
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-2",
+      "offset": 0,
+      "tangentInitial": 0.8,
+      "vertical": false,
+      "axis": "x",
+      "bounce": "reflect",
+      "debugGatePosition": 4.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 6.071284538481518,
+        "y": 3.605,
+        "vx": 0.7857288258866406,
+        "vy": -4.242935659787859
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-2",
+      "offset": -0.5,
+      "tangentInitial": 0.8,
+      "vertical": false,
+      "axis": "x",
+      "bounce": "reflect",
+      "debugGatePosition": 4.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 5.496284538481518,
+        "y": 3.605,
+        "vx": 0.7857288258866406,
+        "vy": -4.242935659787859
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-2",
+      "offset": 0.5,
+      "tangentInitial": -0.8,
+      "vertical": false,
+      "axis": "x",
+      "bounce": "reflect",
+      "debugGatePosition": 4.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 6.503715461518482,
+        "y": 3.605,
+        "vx": -0.7857288258866406,
+        "vy": -4.242935659787859
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "sequenceGateProbe": {
+      "debugActorAndGatePlacement": {
+        "actor": {
+          "x": 0.5,
+          "y": 2.605
+        },
+        "gateId": "gate-1",
+        "gatePosition": 0.85,
+        "axis": "y",
+        "open": false
+      },
+      "debugAdvance": false,
+      "actualPointer": true,
+      "passed": false,
+      "final": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 2.481847369243192,
+          "y": 2.605,
+          "vx": -3.819080962700745,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 0.85,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 4.85,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 0.9920000000000008,
+        "racketHits": 1,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      },
+      "trace": [
+        {
+          "phase": "gate-1 closed",
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 10,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5980902719349687,
+            "y": 2.605,
+            "vx": 1.092117665195534,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.16000000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 20,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.8413806475425281,
+            "y": 2.605,
+            "vx": 1.8304015952530825,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.3200000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.1847915534006612,
+            "y": 2.605,
+            "vx": 2.3872730629153094,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.4800000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 40,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.6088442823939182,
+            "y": 2.605,
+            "vx": 2.8555872705909238,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.6400000000000005,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 50,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.1027470925710707,
+            "y": 2.605,
+            "vx": 3.269476346675121,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.8000000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.605,
+            "y": 2.605,
+            "vx": -3.9367923995584873,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9600000000000007,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 1,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 62,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.481847369243192,
+            "y": 2.605,
+            "vx": -3.819080962700745,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9920000000000008,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        }
+      ]
+    }
+  },
+  {
+    "sequenceGateProbe": {
+      "debugActorAndGatePlacement": {
+        "actor": {
+          "x": 0.5,
+          "y": 2.605
+        },
+        "gateId": "gate-1",
+        "gatePosition": 3.5,
+        "axis": "y",
+        "open": true
+      },
+      "debugAdvance": false,
+      "actualPointer": true,
+      "passed": false,
+      "final": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 2.7182546045672025,
+          "y": 2.605,
+          "vx": 3.6810343376868415,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 3.5,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 4.85,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 0.9760000000000008,
+        "racketHits": 0,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      },
+      "trace": [
+        {
+          "phase": "gate-1 open",
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 10,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5980902719349687,
+            "y": 2.605,
+            "vx": 1.092117665195534,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.16000000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 20,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.8413806475425281,
+            "y": 2.605,
+            "vx": 1.8304015952530825,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.3200000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.1847915534006612,
+            "y": 2.605,
+            "vx": 2.3872730629153094,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.4800000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 40,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.6088442823939182,
+            "y": 2.605,
+            "vx": 2.8555872705909238,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.6400000000000005,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 50,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.1027470925710707,
+            "y": 2.605,
+            "vx": 3.269476346675121,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.8000000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.659358055164213,
+            "y": 2.605,
+            "vx": 3.6451781477393395,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9600000000000007,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 62,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.7182546045672025,
+            "y": 2.605,
+            "vx": 3.6810343376868415,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9760000000000008,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        }
+      ]
+    }
+  },
+  {
+    "failure": "AssertionError [ERR_ASSERTION]: 閉じた戸で止まり、開いた戸の先へ進む\n\nfalse !== true\n",
+    "errors": [],
+    "failedRequests": []
+  },
+  {
+    "failureState": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 2.7182546045672025,
+        "y": 2.605,
+        "vx": 3.6810343376868415,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 3.5,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.9760000000000008,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    }
+  }
+]

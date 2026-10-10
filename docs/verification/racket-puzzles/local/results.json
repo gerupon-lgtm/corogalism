@@ -1,0 +1,17 @@
+[
+  {
+    "failure": "TimeoutError: page.waitForFunction: Timeout 30000ms exceeded.",
+    "errors": [],
+    "failedRequests": [
+      {
+        "url": "http://127.0.0.1:8772/src/world/stageFeatures.js",
+        "failure": {
+          "errorText": "net::ERR_CONNECTION_REFUSED"
+        }
+      }
+    ]
+  },
+  {
+    "failureState": null
+  }
+]

@@ -1,0 +1,7158 @@
+[
+  {
+    "layout": "sequence",
+    "width": 312,
+    "modeGeometryMatches": true,
+    "variableRacketCount": 2,
+    "definitions": [
+      {
+        "id": "gate-1",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 2.88,
+        "y": 0.85,
+        "w": 0.24,
+        "h": 2.3,
+        "axis": "y",
+        "min": 0.85,
+        "max": 3.5,
+        "home": 0.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      },
+      {
+        "id": "gate-2",
+        "label": "2",
+        "bounce": "reflect",
+        "x": 4.85,
+        "y": 3.88,
+        "w": 2.3,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2.65,
+        "max": 4.85,
+        "home": 4.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "realPointer": true,
+    "before": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 0.85,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "moving": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8413763146265459,
+        "y": 0.8413761405584208,
+        "vx": 1.628267351257171,
+        "vy": 1.6282665210020155,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 1.4670446697311559,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 1.7999992653198182
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.30400000000000016,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "neutral": [
+      {
+        "id": "gate-1",
+        "x": 2.88,
+        "y": 1.4835997415413529
+      },
+      {
+        "id": "gate-2",
+        "x": 4.85,
+        "y": 3.88
+      }
+    ],
+    "shared": {
+      "page": "corogalism-racket-lab",
+      "revision": 3,
+      "version": "0.6.30",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4,
+      "racketRestitution": 1.08,
+      "aimAngleDeg": 55,
+      "motionTransfer": 0,
+      "ballTilt": 1,
+      "speedLimit": 30,
+      "cottonRestitution": 0,
+      "maxTiltAngleDeg": 25,
+      "layout": "sequence",
+      "inputMode": "pointer",
+      "elapsedSec": 2.4960000000000018,
+      "racketHits": 1,
+      "goalReached": false,
+      "edited": false,
+      "completions": [],
+      "observations": []
+    },
+    "mainStorageUnchanged": true
+  },
+  {
+    "layout": "timing",
+    "width": 312,
+    "modeGeometryMatches": true,
+    "variableRacketCount": 1,
+    "definitions": [
+      {
+        "id": "timing-gate",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 2,
+        "y": 3.12,
+        "w": 2,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2,
+        "max": 4,
+        "home": 2,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "realPointer": true,
+    "before": {
+      "layout": "timing",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "timing-gate",
+          "x": 2,
+          "y": 3.12,
+          "w": 2,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2,
+          "max": 4,
+          "home": 2,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "moving": {
+      "layout": "timing",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8413763146265459,
+        "y": 0.8413761405584208,
+        "vx": 1.628267351257171,
+        "vy": 1.6282665210020155,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "timing-gate",
+          "x": 2.6170449843630132,
+          "y": 3.12,
+          "w": 2,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2,
+          "max": 4,
+          "home": 2,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 1.80000018314172,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.30400000000000016,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "neutral": [
+      {
+        "id": "timing-gate",
+        "x": 2.6336000646146625,
+        "y": 3.12
+      }
+    ],
+    "shared": {
+      "page": "corogalism-racket-lab",
+      "revision": 3,
+      "version": "0.6.30",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4,
+      "racketRestitution": 1.08,
+      "aimAngleDeg": 55,
+      "motionTransfer": 0,
+      "ballTilt": 1,
+      "speedLimit": 30,
+      "cottonRestitution": 0,
+      "maxTiltAngleDeg": 25,
+      "layout": "timing",
+      "inputMode": "pointer",
+      "elapsedSec": 2.4960000000000018,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": false,
+      "completions": [],
+      "observations": []
+    },
+    "mainStorageUnchanged": true
+  },
+  {
+    "layout": "sequence",
+    "width": 412,
+    "modeGeometryMatches": true,
+    "variableRacketCount": 2,
+    "definitions": [
+      {
+        "id": "gate-1",
+        "label": "1",
+        "bounce": "reflect",
+        "x": 2.88,
+        "y": 0.85,
+        "w": 0.24,
+        "h": 2.3,
+        "axis": "y",
+        "min": 0.85,
+        "max": 3.5,
+        "home": 0.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      },
+      {
+        "id": "gate-2",
+        "label": "2",
+        "bounce": "reflect",
+        "x": 4.85,
+        "y": 3.88,
+        "w": 2.3,
+        "h": 0.24,
+        "axis": "x",
+        "min": 2.65,
+        "max": 4.85,
+        "home": 4.85,
+        "vx": 0,
+        "vy": 0,
+        "materialId": "racket",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 3.0857142857142863,
+          "damageK": 0
+        },
+        "blocked": false
+      }
+    ],
+    "realPointer": true,
+    "before": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 0.85,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "moving": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.8413763013792799,
+        "y": 0.8413761748707531,
+        "vx": 1.6282672840837678,
+        "vy": 1.6282666806742918,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 1.4670447385031475,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 1.799999465936633
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0.30400000000000016,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    },
+    "neutral": [
+      {
+        "id": "gate-1",
+        "x": 2.88,
+        "y": 1.4835998121584704
+      },
+      {
+        "id": "gate-2",
+        "x": 4.85,
+        "y": 3.88
+      }
+    ],
+    "shared": {
+      "page": "corogalism-racket-lab",
+      "revision": 3,
+      "version": "0.6.30",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4,
+      "racketRestitution": 1.08,
+      "aimAngleDeg": 55,
+      "motionTransfer": 0,
+      "ballTilt": 1,
+      "speedLimit": 30,
+      "cottonRestitution": 0,
+      "maxTiltAngleDeg": 25,
+      "layout": "sequence",
+      "inputMode": "pointer",
+      "elapsedSec": 2.4960000000000018,
+      "racketHits": 1,
+      "goalReached": false,
+      "edited": false,
+      "completions": [],
+      "observations": []
+    },
+    "mainStorageUnchanged": true
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-1",
+      "offset": 0,
+      "tangentInitial": 0.8,
+      "vertical": true,
+      "axis": "y",
+      "bounce": "reflect",
+      "debugGatePosition": 0.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 2.605,
+        "y": 2.0712845384815193,
+        "vx": -4.242935659787859,
+        "vy": 0.7857288258866406
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-1",
+      "offset": -0.5,
+      "tangentInitial": 0.8,
+      "vertical": true,
+      "axis": "y",
+      "bounce": "reflect",
+      "debugGatePosition": 0.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 2.605,
+        "y": 1.496284538481519,
+        "vx": -4.242935659787859,
+        "vy": 0.7857288258866406
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-1",
+      "offset": 0.5,
+      "tangentInitial": -0.8,
+      "vertical": true,
+      "axis": "y",
+      "bounce": "reflect",
+      "debugGatePosition": 0.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 2.605,
+        "y": 2.503715461518481,
+        "vx": -4.242935659787859,
+        "vy": -0.7857288258866406
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-2",
+      "offset": 0,
+      "tangentInitial": 0.8,
+      "vertical": false,
+      "axis": "x",
+      "bounce": "reflect",
+      "debugGatePosition": 4.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 6.071284538481518,
+        "y": 3.605,
+        "vx": 0.7857288258866406,
+        "vy": -4.242935659787859
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-2",
+      "offset": -0.5,
+      "tangentInitial": 0.8,
+      "vertical": false,
+      "axis": "x",
+      "bounce": "reflect",
+      "debugGatePosition": 4.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 5.496284538481518,
+        "y": 3.605,
+        "vx": 0.7857288258866406,
+        "vy": -4.242935659787859
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "localDebugShot": {
+      "id": "gate-2",
+      "offset": 0.5,
+      "tangentInitial": -0.8,
+      "vertical": false,
+      "axis": "x",
+      "bounce": "reflect",
+      "debugGatePosition": 4.85,
+      "debugAdvance": true,
+      "actor": {
+        "x": 6.503715461518482,
+        "y": 3.605,
+        "vx": -0.7857288258866406,
+        "vy": -4.242935659787859
+      },
+      "hits": 1,
+      "halt": null
+    }
+  },
+  {
+    "sequenceGateProbe": {
+      "debugActorAndGatePlacement": {
+        "actor": {
+          "x": 0.5,
+          "y": 2.605
+        },
+        "gateId": "gate-1",
+        "gatePosition": 0.85,
+        "axis": "y",
+        "open": false
+      },
+      "debugAdvance": false,
+      "actualPointer": true,
+      "observationSeconds": 2,
+      "passed": false,
+      "passedAtMs": null,
+      "final": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 0.9035473783186654,
+          "y": 2.605,
+          "vx": 1.2885553980340432,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 0.85,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 4.85,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 1.9840000000000015,
+        "racketHits": 1,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      },
+      "trace": [
+        {
+          "phase": "gate-1 closed",
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 10,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5980902719349687,
+            "y": 2.605,
+            "vx": 1.092117665195534,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.16000000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 20,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.8413806475425281,
+            "y": 2.605,
+            "vx": 1.8304015952530825,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.3200000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.1847915534006612,
+            "y": 2.605,
+            "vx": 2.3872730629153094,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.4800000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 40,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.6088442823939182,
+            "y": 2.605,
+            "vx": 2.8555872705909238,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.6400000000000005,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 50,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.1027470925710707,
+            "y": 2.605,
+            "vx": 3.269476346675121,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.8000000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.605,
+            "y": 2.605,
+            "vx": -3.9367923995584873,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9600000000000007,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 1,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 70,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.0270568018620057,
+            "y": 2.605,
+            "vx": -3.3452223585444156,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.1200000000000008,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 80,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.5449727574142467,
+            "y": 2.605,
+            "vx": -2.737453165717545,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.280000000000001,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 90,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.1632598889146981,
+            "y": 2.605,
+            "vx": -2.0888413283377507,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.440000000000001,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 100,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.8929835497840857,
+            "y": 2.605,
+            "vx": -1.3388023587114182,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.6000000000000012,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 110,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.7640537911646648,
+            "y": 2.605,
+            "vx": -0.302015853333209,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.7600000000000013,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 120,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.8292737100614225,
+            "y": 2.605,
+            "vx": 0.9325210391511952,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9200000000000015,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 closed",
+          "tick": 124,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.9035473783186654,
+            "y": 2.605,
+            "vx": 1.2885553980340432,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9840000000000015,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        }
+      ]
+    }
+  },
+  {
+    "sequenceGateProbe": {
+      "debugActorAndGatePlacement": {
+        "actor": {
+          "x": 0.5,
+          "y": 2.605
+        },
+        "gateId": "gate-1",
+        "gatePosition": 3.5,
+        "axis": "y",
+        "open": true
+      },
+      "debugAdvance": false,
+      "actualPointer": true,
+      "observationSeconds": 2,
+      "passed": true,
+      "passedAtMs": 1168,
+      "final": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 4.6049999999999995,
+          "y": 2.605,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 3.5,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 4.85,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 1.9840000000000015,
+        "racketHits": 0,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      },
+      "trace": [
+        {
+          "phase": "gate-1 open",
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 10,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5980902719349687,
+            "y": 2.605,
+            "vx": 1.092117665195534,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.16000000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 20,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.8413806475425281,
+            "y": 2.605,
+            "vx": 1.8304015952530825,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.3200000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.1847915534006612,
+            "y": 2.605,
+            "vx": 2.3872730629153094,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.4800000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 40,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 1.6088442823939182,
+            "y": 2.605,
+            "vx": 2.8555872705909238,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.6400000000000005,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 50,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.1027470925710707,
+            "y": 2.605,
+            "vx": 3.269476346675121,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.8000000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 2.659358055164213,
+            "y": 2.605,
+            "vx": 3.6451781477393395,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9600000000000007,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 70,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 3.2734277625378234,
+            "y": 2.605,
+            "vx": 3.9917694279365654,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.1200000000000008,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "firstCrossing": true,
+          "tick": 72,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 3.402758879524808,
+            "y": 2.605,
+            "vx": 4.058130472936473,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.1520000000000008,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 80,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 3.9408276188163947,
+            "y": 2.605,
+            "vx": 4.314899415892293,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.280000000000001,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 90,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 4.6049999999999995,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.440000000000001,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 1,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 100,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 4.6049999999999995,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.6000000000000012,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 110,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 4.6049999999999995,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.7600000000000013,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 120,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 4.6049999999999995,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9200000000000015,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-1 open",
+          "tick": 124,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 4.6049999999999995,
+            "y": 2.605,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9840000000000015,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        }
+      ]
+    }
+  },
+  {
+    "sequenceGateProbe": {
+      "debugActorAndGatePlacement": {
+        "actor": {
+          "x": 5.395,
+          "y": 3.5
+        },
+        "gateId": "gate-2",
+        "gatePosition": 4.85,
+        "axis": "x",
+        "open": false
+      },
+      "debugAdvance": false,
+      "actualPointer": true,
+      "observationSeconds": 2,
+      "passed": false,
+      "passedAtMs": null,
+      "final": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 5.3950000000000005,
+          "y": 3.424213181557539,
+          "vx": 0,
+          "vy": 0.18699130651880277,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 3.5,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 4.85,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 1.9840000000000015,
+        "racketHits": 5,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      },
+      "trace": [
+        {
+          "phase": "gate-2 closed",
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.395,
+            "y": 3.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 10,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.5980902719349688,
+            "vx": 0,
+            "vy": 1.092117665195534,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 1.1516062404802467,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 1.9999160379137042
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.16000000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 20,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.4923249219674997,
+            "vx": 0,
+            "vy": -0.3333875944012071,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 1.4716054682910347,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 1.9999999964751825
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.3200000000000002,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.5527448245153135,
+            "vx": 0,
+            "vy": 0.9082022900545544,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 1.7916054682586173,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 1.999999999999849
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.4800000000000003,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 40,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.504268012819835,
+            "vx": 0,
+            "vy": -0.5844154825550227,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 2.111605468258616,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.6400000000000005,
+          "racketHits": 2,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 50,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.523321060826595,
+            "vx": 0,
+            "vy": 0.6897213533756217,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 2.431605468258616,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.8000000000000006,
+          "racketHits": 2,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.5317343894855395,
+            "vx": 0,
+            "vy": -1.0065424500991822,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 2.7516054682586164,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9600000000000007,
+          "racketHits": 3,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 70,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.4702545103999336,
+            "vx": 0,
+            "vy": 0.1920835785973074,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.0716054682586167,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.1200000000000008,
+          "racketHits": 3,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 80,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.602696077135509,
+            "vx": 0,
+            "vy": 1.2636261905835704,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.391605468258617,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.280000000000001,
+          "racketHits": 3,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 90,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.461213351700568,
+            "vx": 0,
+            "vy": -0.5905218311533045,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.440000000000001,
+          "racketHits": 4,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 100,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.47919316733115,
+            "vx": 0,
+            "vy": 0.6837884573271713,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.6000000000000012,
+          "racketHits": 4,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 110,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.5599177743408497,
+            "vx": 0,
+            "vy": -1.3676851236468393,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.7600000000000013,
+          "racketHits": 5,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 120,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.4251985782328656,
+            "vx": 0,
+            "vy": -0.345943655053428,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9200000000000015,
+          "racketHits": 5,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 closed",
+          "tick": 124,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.424213181557539,
+            "vx": 0,
+            "vy": 0.18699130651880277,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9840000000000015,
+          "racketHits": 5,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        }
+      ]
+    }
+  },
+  {
+    "sequenceGateProbe": {
+      "debugActorAndGatePlacement": {
+        "actor": {
+          "x": 5.395,
+          "y": 3.5
+        },
+        "gateId": "gate-2",
+        "gatePosition": 2.65,
+        "axis": "x",
+        "open": true
+      },
+      "debugAdvance": false,
+      "actualPointer": true,
+      "observationSeconds": 2,
+      "passed": true,
+      "passedAtMs": 592,
+      "final": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 5.3950000000000005,
+          "y": 4.935569546305087,
+          "vx": 0,
+          "vy": -0.19201277144399406,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 3.5,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 2.65,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 1.9840000000000015,
+        "racketHits": 0,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      },
+      "trace": [
+        {
+          "phase": "gate-2 open",
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.395,
+            "y": 3.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 10,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.5980902719349688,
+            "vx": 0,
+            "vy": 1.092117665195534,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 1.1516062404802467,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 1.9999160379137042
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.16000000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 20,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 3.841380647542528,
+            "vx": 0,
+            "vy": 1.8304015952530825,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 1.4716054682910347,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 1.9999999964751825
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.3200000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 4.184791553400661,
+            "vx": 0,
+            "vy": 2.3872730629153094,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 1.7916054682586173,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 1.999999999999849
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.4800000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "firstCrossing": true,
+          "tick": 36,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 4.430348071043044,
+            "vx": 0,
+            "vy": 2.6761049988199,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 1.983605468258616,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.5760000000000004,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 40,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 4.608844282393918,
+            "vx": 0,
+            "vy": 2.8555872705909238,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 2.111605468258616,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.6400000000000005,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 50,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 5.102747092571072,
+            "vx": 0,
+            "vy": 3.269476346675121,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 2.431605468258616,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.8000000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 5.659358055164214,
+            "vx": 0,
+            "vy": 3.6451781477393395,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 2.7516054682586164,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0.9600000000000007,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 70,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 6.273427762537824,
+            "vx": 0,
+            "vy": 3.9917694279365654,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.0716054682586167,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.1200000000000008,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 80,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 6.3732100543382035,
+            "vx": 0,
+            "vy": -3.5329592839219237,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.391605468258617,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 2.0000000000000018
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.280000000000001,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 90,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 5.8605602270172765,
+            "vx": 0,
+            "vy": -2.932154906021911,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.440000000000001,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 100,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 5.446400250616329,
+            "vx": 0,
+            "vy": -2.3004430539829994,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.6000000000000012,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 110,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 5.139040755113177,
+            "vx": 0,
+            "vy": -1.5934802830145371,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.7600000000000013,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 120,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 4.960016349022107,
+            "vx": 0,
+            "vy": -0.6806984629440351,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9200000000000015,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "gate-2 open",
+          "tick": 124,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 5.3950000000000005,
+            "y": 4.935569546305087,
+            "vx": 0,
+            "vy": -0.19201277144399406,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 3.5,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 2.65,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 1.9840000000000015,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        }
+      ]
+    }
+  },
+  {
+    "fullCourse": {
+      "layout": "sequence",
+      "automatedController": true,
+      "teleport": false,
+      "debugAdvance": false,
+      "controller": {
+        "tickMs": 16,
+        "velocityFromError": 2,
+        "maxDesiredSpeed": 1.3,
+        "velocityFeedback": 0.45,
+        "maxInputComponent": 0.7,
+        "tolerance": 0.045,
+        "maxArrivalSpeed": 0.1
+      },
+      "operations": [
+        {
+          "kind": "hold",
+          "tilt": {
+            "x": 0,
+            "y": 1
+          },
+          "seconds": 2,
+          "until": "waitingA",
+          "purpose": "綿の横壁で球を待たせ、1を下へ開く"
+        },
+        {
+          "kind": "route",
+          "via": [
+            {
+              "x": 3.7,
+              "y": 2.605
+            },
+            {
+              "x": 3.7,
+              "y": 1.5
+            },
+            {
+              "x": 5.7,
+              "y": 1.5
+            },
+            {
+              "x": 5.7,
+              "y": 3.5
+            }
+          ],
+          "purpose": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む"
+        },
+        {
+          "kind": "hold",
+          "tilt": {
+            "x": -1,
+            "y": 0
+          },
+          "seconds": 1,
+          "until": "waitingB",
+          "purpose": "綿の縦壁で球を待たせ、2を左へ開く"
+        },
+        {
+          "kind": "route",
+          "via": [
+            {
+              "x": 5.395,
+              "y": 4.7
+            },
+            {
+              "x": 5.395,
+              "y": 6.35
+            },
+            {
+              "x": 1.5,
+              "y": 6.35
+            },
+            {
+              "x": 1.5,
+              "y": 4.5
+            }
+          ],
+          "purpose": "2の下へ渡り、下の戻り口からカップへ進む"
+        }
+      ],
+      "before": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 0.85,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 4.85,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 0,
+        "racketHits": 0,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      },
+      "trace": [
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 10,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 20,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 40,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 50,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 70,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 80,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 90,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 100,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 110,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 120,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "綿の横壁で球を待たせ、1を下へ開く",
+          "tick": 124,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 0,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 30,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 60,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 90,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 120,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 150,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 180,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 210,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 240,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 270,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 300,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 330,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 360,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 390,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 420,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 450,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 480,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 510,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 540,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 570,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 600,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 630,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 660,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 690,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 720,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 750,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 780,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 810,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 840,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 870,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 900,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 930,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 960,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 990,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 1020,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 1050,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "tick": 1080,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        },
+        {
+          "phase": "1の右へ渡り、綿の縦壁の上を回って2の手前へ進む",
+          "target": {
+            "x": 3.7,
+            "y": 2.605
+          },
+          "reached": false,
+          "layout": "sequence",
+          "mode": "rackets",
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "gate-1",
+              "x": 2.88,
+              "y": 0.85,
+              "w": 0.24,
+              "h": 2.3,
+              "axis": "y",
+              "min": 0.85,
+              "max": 3.5,
+              "home": 0.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "gate-2",
+              "x": 4.85,
+              "y": 3.88,
+              "w": 2.3,
+              "h": 0.24,
+              "axis": "x",
+              "min": 2.65,
+              "max": 4.85,
+              "home": 4.85,
+              "bounce": "reflect",
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false,
+          "lastWallHits": 0,
+          "blockedRackets": [],
+          "embedded": []
+        }
+      ],
+      "final": {
+        "layout": "sequence",
+        "mode": "rackets",
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 2.88,
+            "y": 0.85,
+            "w": 0.24,
+            "h": 2.3,
+            "axis": "y",
+            "min": 0.85,
+            "max": 3.5,
+            "home": 0.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 4.85,
+            "y": 3.88,
+            "w": 2.3,
+            "h": 0.24,
+            "axis": "x",
+            "min": 2.65,
+            "max": 4.85,
+            "home": 4.85,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "goalReached": false,
+        "elapsedSec": 0,
+        "racketHits": 0,
+        "lastHalt": null,
+        "paused": false,
+        "lastWallHits": 0,
+        "blockedRackets": [],
+        "embedded": []
+      }
+    }
+  },
+  {
+    "failure": "Error: 自動pointer制御が通過点へ到達しない {\"target\":{\"x\":3.7,\"y\":2.605},\"actor\":{\"x\":0.5,\"y\":0.5,\"vx\":0,\"vy\":0,\"r\":0.275},\"rackets\":[{\"id\":\"gate-1\",\"x\":2.88,\"y\":0.85,\"w\":0.24,\"h\":2.3,\"axis\":\"y\",\"min\":0.85,\"max\":3.5,\"home\":0.85,\"bounce\":\"reflect\",\"blocked\":false,\"vx\":0,\"vy\":0},{\"id\":\"gate-2\",\"x\":4.85,\"y\":3.88,\"w\":2.3,\"h\":0.24,\"axis\":\"x\",\"min\":2.65,\"max\":4.85,\"home\":4.85,\"bounce\":\"reflect\",\"blocked\":false,\"vx\":0,\"vy\":0}]}",
+    "errors": [],
+    "failedRequests": []
+  },
+  {
+    "failureState": {
+      "layout": "sequence",
+      "mode": "rackets",
+      "actor": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "rackets": [
+        {
+          "id": "gate-1",
+          "x": 2.88,
+          "y": 0.85,
+          "w": 0.24,
+          "h": 2.3,
+          "axis": "y",
+          "min": 0.85,
+          "max": 3.5,
+          "home": 0.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        },
+        {
+          "id": "gate-2",
+          "x": 4.85,
+          "y": 3.88,
+          "w": 2.3,
+          "h": 0.24,
+          "axis": "x",
+          "min": 2.65,
+          "max": 4.85,
+          "home": 4.85,
+          "bounce": "reflect",
+          "blocked": false,
+          "vx": 0,
+          "vy": 0
+        }
+      ],
+      "goalReached": false,
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "lastHalt": null,
+      "paused": false,
+      "lastWallHits": 0,
+      "blockedRackets": [],
+      "embedded": []
+    }
+  }
+]

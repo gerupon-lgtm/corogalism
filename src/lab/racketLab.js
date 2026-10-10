@@ -4,7 +4,7 @@ import {getCharacter} from '../world/characters.js';
 import {createActor,goalCenter} from '../world/stage.js';
 import {getMaterial} from '../world/materials.js';
 import {resolveParams} from '../physics/resolveParams.js';
-import {createRacketStage,RACKET_DEFAULTS} from './racketStage.js';
+import {createRacketStage,RACKET_DEFAULTS,RACKET_LAYOUTS} from './racketStage.js';
 import {stepRacketPhysics} from './racketPhysics.js';
 import {drawRackets} from './racketRender.js';
 import {createRenderer} from '../render/canvasRenderer.js';
@@ -21,7 +21,7 @@ const mainSettings=loadSettings();
 const defaults={...RACKET_DEFAULTS,maxTiltAngleDeg:Number.isFinite(mainSettings.maxTiltAngleDeg)&&mainSettings.maxTiltAngleDeg>0?mainSettings.maxTiltAngleDeg:BASE.maxTiltAngleDeg};
 const settings={...defaults},query=new URLSearchParams(location.search);
 if(['baseline','cotton','rackets'].includes(query.get('mode')))settings.mode=query.get('mode');
-if(['relay','practice'].includes(query.get('layout')))settings.layout=query.get('layout');
+if(Object.hasOwn(RACKET_LAYOUTS,query.get('layout')))settings.layout=query.get('layout');
 if(query.has('cotton'))settings.cotton=query.get('cotton')!=='0';
 for(const key of Object.keys(defaults))if(typeof defaults[key]==='number'&&query.has(key)){
   const value=Number(query.get(key));if(Number.isFinite(value)&&(key!=='maxTiltAngleDeg'||value>0))settings[key]=value;
@@ -32,7 +32,7 @@ let mode='pointer',paused=false,last=0,requestId=0,sensorTimer=null,lastResult=n
 let elapsedSec=0,racketHits=0,goalReached=false,started=false,trialEdited=false;
 const observations=[],completions=[];
 const receive=(x,y)=>{if(!paused&&!goalReached&&!document.hidden)tilt.setRaw(x,y);};
-const sensor=createTiltSource({canCalibrate:()=>!paused&&!document.hidden,onCalibrated:()=>{$('status').textContent='傾き操作中。球とラケットが同じ傾きで動きます。';}});
+const sensor=createTiltSource({canCalibrate:()=>!paused&&!document.hidden,onCalibrated:()=>{$('status').textContent='傾き操作中。球と動く壁が同じ傾きで動きます。';}});
 sound.setVolume(.6);sound.setEnabled(mainSettings.soundEnabled!==false);
 function gesture(){sound.unlock();portrait.requestOnStart();}
 function resize(){const size=renderer.resize(canvas.parentElement.clientWidth);camera=createFixedCamera(stage,size);}
@@ -40,7 +40,15 @@ const bindings={'racket-speed':'racketSpeed','racket-restitution':'racketRestitu
 function refresh(){
   $('scenario').value=settings.mode;$('layout').value=settings.layout;$('mix-cotton').checked=settings.cotton;
   $('cotton-choice').hidden=settings.mode!=='rackets';
-  $('hint').textContent=settings.mode==='rackets'
+  const puzzle=['sequence','timing'].includes(settings.layout);
+  $('scenario').querySelector('option[value="rackets"]').textContent=puzzle?'氷＋動く壁＋綿':'氷＋ラケット＋綿';
+  $('motion-note').textContent=puzzle?'通路の壁はぶつかると普通にはね返します。端の角度と壁の動きを乗せる倍率は、ラケットの打ち分け用です。':'球は本編と同じビー玉・氷・ゴムの設定。ラケットを使わなくてもゴールできます。';
+  $('hint').textContent=puzzle
+    ?settings.mode==='rackets'?(settings.layout==='sequence'
+      ?'①を下へ逃がして右の部屋へ。②を左へどかして下へ。白い綿で球を落ち着かせられます。'
+      :'右へ助走すると、壁も右へ動いて入口をふさぎます。左下へ切り返して、滑る球を開いた通路へ。')
+      :'動く壁を外した同じ通路で、球の動きを比べられます。綿の有無も切り替えてみよう。'
+    :settings.mode==='rackets'
     ?'紫の縦ラケットは上下、横ラケットは左右へ。中心でまっすぐ、端で斜めに。'+(settings.layout==='relay'?'下から打ち返して、内側のカップを狙おう。':'綿で受け止めて狙い直せます。')
     :settings.mode==='cotton'?'白い綿は勢いを受け止めます。斜めに当てると壁沿いに滑り、傾けるとまた動けます。':'本編と同じビー玉・氷・ゴムの動き。'+(settings.layout==='relay'?'カップの入口は下側。折り返して導いてみよう。':'右下のカップまで、傾きで導いてみよう。');
   for(const [id,key]of Object.entries(bindings))$(id).value=settings[key];
@@ -53,7 +61,7 @@ function refresh(){
   $('elapsed').textContent=elapsedSec.toFixed(2);$('racket-hits').textContent=racketHits;$('speed').textContent=Math.hypot(actor.vx,actor.vy).toFixed(1);
   $('sound-note').hidden=!sound.state.failed;
 }
-function pointerMode(message='画面操作：押した方向へ球とラケットが動きます。離すとラケットは止まります。'){
+function pointerMode(message='画面操作：押した方向へ球と動く壁が動きます。離すと壁は止まり、球は滑ります。'){
   requestId++;clearTimeout(sensorTimer);sensor.stop();pointer.stop();tilt.reset();mode='pointer';pointer.start(receive);
   $('sensor').hidden=false;$('pointer').hidden=true;$('calibrate').hidden=true;$('status').textContent=message;
 }
@@ -69,13 +77,20 @@ function reset(){
 }
 function rebuild(){
   if(goalReached){reset();$('status').textContent=paused?'設定を切り替え、スタートへ戻しました。「再開」で試せます。':'設定を切り替え、スタートへ戻しました。球が動き始めると計測します。';return;}
-  const previous=stage.rackets;stage=createRacketStage(settings);
-  for(const w of stage.rackets){
+  const previous=stage.rackets,candidate=createRacketStage(settings);
+  for(const w of candidate.rackets){
     const old=previous.find(p=>p.id===w.id);if(old)w[w.axis]=Math.max(w.min,Math.min(w.max,old[w.axis]));
-    // A newly enabled racket starts on a free part of its rail, rather than inside the ball.
-    const overlaps=()=>actor.x+actor.r>w.x&&actor.x-actor.r<w.x+w.w&&actor.y+actor.r>w.y&&actor.y-actor.r<w.y+w.h;
+    // 円の球を四角として判定すると、角の近くの安全な配置まで除外してしまう。
+    const overlaps=()=>Math.hypot(actor.x-Math.max(w.x,Math.min(actor.x,w.x+w.w)),actor.y-Math.max(w.y,Math.min(actor.y,w.y+w.h)))<actor.r-1e-9;
     if(overlaps()){for(const position of [w.min,w.max]){w[w.axis]=position;if(!overlaps())break;}}
+    if(overlaps()){
+      // レール全体を球がふさぐ場合、設定切替で球を押し出さず、以前の条件を保つ。
+      Object.assign(settings,stage.racketSettings);refresh();
+      $('status').textContent='球が通路の中にいるため、動く壁を置けません。球を少し移動してから切り替えるか、「スタートへ」で戻して試せます。';
+      return;
+    }
   }
+  stage=candidate;
   trialEdited=true;lastHalt=null;last=0;sound.stop();resize();refresh();
   $('status').textContent='位置と勢いを保って切り替えました。時間を比べる時は「スタートへ」で揃えられます。';
 }
@@ -111,7 +126,7 @@ for(const [id,key]of Object.entries(bindings))$(id).oninput=()=>{
 };
 $('defaults').onclick=()=>{gesture();Object.assign(settings,defaults);reset();};
 $('copy').onclick=async()=>{
-  const data={page:'corogalism-racket-lab',revision:2,version:'0.6.29',...settings,mode:settings.mode,inputMode:mode,elapsedSec,racketHits,goalReached,edited:trialEdited,completions,observations};
+  const data={page:'corogalism-racket-lab',revision:3,version:'0.6.30',...settings,mode:settings.mode,inputMode:mode,elapsedSec,racketHits,goalReached,edited:trialEdited,completions,observations};
   const text=JSON.stringify(data,null,2);$('settings-text').hidden=false;$('settings-text').value=text;
   try{await navigator.clipboard.writeText(text);$('copy-status').textContent='設定と試遊結果をコピーしました。';}catch{$('settings-text').select();$('copy-status').textContent='下の設定を選択してコピーしてください。';}
 };

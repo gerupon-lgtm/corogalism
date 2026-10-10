@@ -145,7 +145,7 @@ try{
  for(const [width,height]of viewports){
   const f=await fixture(width,height),{page,state,errors,context,click,pointer}=f;
   const initial=await state();assert.ok(initial.actor&&initial.settings&&initial.stage,'検証APIは球・設定・盤面を公開する');
-  assert.match(await page.locator('header span').textContent(),/おためし2.*v0\.6\.29/);
+  assert.match(await page.locator('header span').textContent(),/おためし3.*v0\.6\.30/);
   const records=await page.evaluate(()=>JSON.stringify({...localStorage}));
   await page.locator('#scenario').selectOption('baseline');await page.clock.runFor(32);await click('reset');
   const beforePointer=await state();await pointer(.65,.12,600);const afterPointer=await state();
@@ -207,7 +207,7 @@ try{
    await page.locator('#'+id).fill(value);await page.clock.runFor(32);assert.equal((await state()).settings[key],Number(value),id+'の数値を保存する');
   }
   await click('copy');const shared=JSON.parse(await page.locator('#settings-text').inputValue());
-  assert.equal(shared.page,'corogalism-racket-lab');assert.equal(shared.revision,2);assert.equal(shared.version,'0.6.29');assert.equal(shared.racketRestitution,1.2);
+  assert.equal(shared.page,'corogalism-racket-lab');assert.equal(shared.revision,3);assert.equal(shared.version,'0.6.30');assert.equal(shared.racketRestitution,1.2);
   await click('defaults');const defaults=await state();assert.notEqual(defaults.settings.racketSpeed,4.5);assert.equal(defaults.lastHalt,null);
   if(!defaults.paused)await click('pause');await page.clock.runFor(100);
   // 模擬の2D領域復元と実resize。静止時の盤面が同じ倍率で再描画される。
