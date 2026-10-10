@@ -7,6 +7,8 @@ import {generateVariedMaze} from '../maze/variation.js';
 import { createStage, createActor, goalCenter } from '../world/stage.js';
 import { getCharacter } from '../world/characters.js';
 import { stepPhysics } from '../physics/integrator.js';
+import { stepMovingWallPhysics } from '../physics/movingWalls.js';
+import { createPuzzleStage } from '../world/puzzleStage.js';
 import { createHp } from './hp.js';
 import { restFloors } from '../world/stageFeatures.js';
 import { stageTimeLimitSec } from './progression.js';
@@ -14,7 +16,11 @@ import { stageTimeLimitSec } from './progression.js';
 export function createStagePlay(seed, difficulty = null, carry = {}) {
   const floorPractice = Boolean(carry.floorPractice);
   const tutorial = !floorPractice && Boolean(carry.tutorial);
-  const stage = floorPractice ? createFloorPracticeStage(carry.floorPractice) : tutorial ? createTutorialStage() : createStage(carry.variation?generateVariedMaze(carry.variation,seed):generateMaze(BASE.mazeSize, seed), difficulty);
+  const puzzleProfile=carry.tutorialPuzzle??carry.variation;
+  const stage = floorPractice ? createFloorPracticeStage(carry.floorPractice)
+    : puzzleProfile?.puzzleKind ? createPuzzleStage(seed,{...puzzleProfile,difficulty})
+    : tutorial ? createTutorialStage()
+    : createStage(carry.variation?generateVariedMaze(carry.variation,seed):generateMaze(BASE.mazeSize, seed), difficulty);
   const maze = stage.maze;
   const actor = createActor(maze, getCharacter('default'));
   const origin = { x: actor.x, y: actor.y };
@@ -32,9 +38,11 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
   let wallHits = 0;
   let started = false;
   let status = 'playing';
+  let lastPhysicsResult = null;
 
   return {
     stage, actor, hp, limitSec, shield,
+    get lastPhysicsResult(){return lastPhysicsResult;},
     get trap() { return trap; },
     get extendedSec() { return extendedSec; },
     assistEscape() {
@@ -62,8 +70,10 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
         actor.vx = 0; actor.vy = 0;
         if (trap.elapsed >= trap.target) { releasedFloor = trap.tile; trap = null; }
       }
-      const result = trap ? { wallHits: 0 } : stepPhysics({
+      const step = stage.rackets?.length ? stepMovingWallPhysics : stepPhysics;
+      const result = trap ? { wallHits: 0 } : step({
         actor, stage, tilt, base, dt,
+        settings:stage.racketSettings,
         onTravel(from,to) {
           const dx=to.x-from.x,dy=to.y-from.y,length=dx*dx+dy*dy;
           const t=length?Math.max(0,Math.min(1,((goal.x-from.x)*dx+(goal.y-from.y)*dy)/length)):0;
@@ -74,6 +84,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
           onImpact?.(speed, wall);
         },
       });
+      lastPhysicsResult=result;
       wallHits += result.wallHits;
       if (Math.hypot(actor.vx, actor.vy) > TUNING.startMoveSpeed
         || (hp && Math.hypot(actor.x - origin.x, actor.y - origin.y) >= TUNING.challengeStartDistance)) started = true;

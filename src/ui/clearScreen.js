@@ -31,7 +31,13 @@ export function createClearScreen(root) {
       retryBtn.classList.remove('primary');
       retryBtn.classList.add('text-button');
       retryBtn.textContent = '同じ迷路をもう一度';
-      if (tutorial) { el.querySelector('#clear-heading').textContent = 'できた！'; el.querySelector('#clear-note').textContent = 'いろいろな素材を試せたかな？'; nextBtn.textContent = 'モード選択へ'; retryBtn.textContent = 'もう一度あそぶ'; }
+      if (tutorial) {
+        el.querySelector('#clear-heading').textContent = 'できた！';
+        el.querySelector('#clear-note').textContent = v.tutorialLesson?.clearNote??'つぎは、傾けて壁を動かしてみよう。';
+        nextBtn.textContent = v.tutorialLesson ? (v.tutorialHasNext?v.tutorialLesson.nextLabel:'モード選択へ') : '壁を動かしてみる';
+        retryBtn.textContent = 'もう一度あそぶ';
+        el.querySelector('#clear-best-field').hidden=true;
+      }
       if(floorPractice){el.querySelector('#clear-note').textContent='床を切り替えて、何度でも試せます。';nextBtn.textContent='続けて試す';retryBtn.textContent='同じ床をもう一度';}
       time.textContent = `${(v.timeMs / 1000).toFixed(2)} 秒`;
       best.textContent = v.bestMs != null ? `${(v.bestMs / 1000).toFixed(2)} 秒` : '—';

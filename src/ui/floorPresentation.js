@@ -1,4 +1,5 @@
 import { drawFloorArt } from '../render/floorArt.js';
+import { drawPuzzleIntro } from '../render/movingWalls.js';
 const KEY='corogalism-flow-preview-v1';
 let fallbackShown=false;
 export function shouldShowFlowPreview(result){
@@ -14,11 +15,15 @@ export function createFloorPresentation(root){
  return {
   resetRun(){seen=new Set();},
   setStage(theme){
-   const show=Boolean(theme?.floorPattern&&!seen.has(theme.id));currentCue=show?(theme.special?'flowStart':'floorStart'):theme?.special?'flowStart':null;
+   const key=theme?.puzzleKind?`puzzle-${theme.puzzleKind}`:theme?.id;
+   const show=Boolean((theme?.floorPattern||theme?.puzzleKind&&theme.firstVisit)&&!seen.has(key));currentCue=show?(theme.special?'flowStart':'floorStart'):theme?.special?'flowStart':null;
    intro.hidden=!show;layer.classList.toggle('has-floor-intro',show);
-   if(show){seen.add(theme.id);intro.querySelector('strong').textContent=theme.label;intro.querySelector('p').textContent=theme.introHint;
-    const id=theme.special?'specialFlow':theme.floorPattern==='iceRubber'?'ice':theme.floorPattern.startsWith('ice')?'iceSand':theme.floorPattern.toLowerCase().includes('repulsion')?'repulsion':theme.floorPattern.toLowerCase().includes('gravity')?'gravity':'sand';
-    drawFloorArt(intro.querySelector('canvas'),id);
+   if(show){seen.add(key);intro.querySelector('strong').textContent=theme.label;intro.querySelector('p').textContent=theme.introHint;
+    if(theme.puzzleKind)drawPuzzleIntro(intro.querySelector('canvas'),theme.puzzleKind);
+    else {
+     const id=theme.special?'specialFlow':theme.floorPattern==='iceRubber'?'ice':theme.floorPattern.startsWith('ice')?'iceSand':theme.floorPattern.toLowerCase().includes('repulsion')?'repulsion':theme.floorPattern.toLowerCase().includes('gravity')?'gravity':'sand';
+     drawFloorArt(intro.querySelector('canvas'),id);
+    }
    }
   },
   setResult(result){

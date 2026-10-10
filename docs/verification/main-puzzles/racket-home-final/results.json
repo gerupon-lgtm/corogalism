@@ -1,0 +1,2063 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "tutorial",
+  "version": "0.6.31",
+  "rows": [
+    {
+      "name": "full-course",
+      "label": "tutorial-1",
+      "kind": "racket",
+      "teleport": false,
+      "debugAdvance": false,
+      "diagnosticStageAdvance": false,
+      "actualPointer": true,
+      "automatedController": true,
+      "realDevice": false,
+      "controller": {
+        "tickMs": 16,
+        "positionErrorGain": 2,
+        "maxDesiredSpeed": 1.3,
+        "velocityFeedback": 0.45,
+        "maxInputComponent": 0.7,
+        "tolerance": 0.045,
+        "maxArrivalSpeed": 0.1
+      },
+      "before": {
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "operations": [
+        {
+          "kind": "route",
+          "via": [
+            {
+              "x": 5.65,
+              "y": 1.4
+            },
+            {
+              "x": 5.65,
+              "y": 2.7
+            },
+            {
+              "x": 1.35,
+              "y": 3.3
+            },
+            {
+              "x": 1.35,
+              "y": 4.7
+            },
+            {
+              "x": 4.5,
+              "y": 6.5
+            },
+            {
+              "x": 4.5,
+              "y": 5.5
+            },
+            {
+              "x": 5.5,
+              "y": 5.5
+            }
+          ],
+          "purpose": "開口と部屋を回って次の仕掛けへ進む"
+        }
+      ],
+      "trace": [
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 0,
+          "actor": {
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 0,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 60,
+          "actor": {
+            "x": 1.5036354964692125,
+            "y": 1.2962905005249428,
+            "vx": 1.236217665442032,
+            "vy": 0.46307720660153007,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.771780120751795,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.4775544007717958
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.17438003854429,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.11733315206277628,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 896,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 120,
+          "actor": {
+            "x": 2.699228061286774,
+            "y": 1.4089741000065197,
+            "vx": 1.2477235915438911,
+            "vy": -0.011863554173266861,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.5998732978968269,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.01367616369586655
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.2692582925417968,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.09411865100736327,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 1856,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 180,
+          "actor": {
+            "x": 3.897102129320973,
+            "y": 1.4003678134050046,
+            "vx": 1.2477991996162887,
+            "vy": -0.002456508386140121,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6027614045752732,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.0032966108139131922
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.3594885839462836,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.09396152035459626,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 2816,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "tick": 240,
+          "actor": {
+            "x": 5.094358980470866,
+            "y": 1.3999369484383573,
+            "vx": 1.2269678287753165,
+            "vy": 0.00013787157047494183,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6037041938043544,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.00001039029177973827
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.4418251362839611,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.11914484938074787,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 3776,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 1.4
+          },
+          "reached": true,
+          "actor": {
+            "x": 5.620329523340647,
+            "y": 1.399996589885913,
+            "vx": 0.09568730766420297,
+            "vy": 0.000011000868936093428,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6036710093008664,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.000007990818576275593
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.1448783442080275,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.07155319523097226,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 4736,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 2.7
+          },
+          "tick": 0,
+          "actor": {
+            "x": 5.620329523340647,
+            "y": 1.399996589885913,
+            "vx": 0.09568730766420297,
+            "vy": 0.000011000868936093428,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6036710093008664,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.000007990818576275593
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.1448783442080275,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.07155319523097226,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 4736,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 2.7
+          },
+          "tick": 60,
+          "actor": {
+            "x": 5.65018185234107,
+            "y": 2.3906126095342866,
+            "vx": 0.0030588611856907835,
+            "vy": 0.9072578576068054,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.909333726196607,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.5150422318292852
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.1173737204351013,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.006891406400255651,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 5696,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.65,
+            "y": 2.7
+          },
+          "reached": true,
+          "actor": {
+            "x": 5.6501717513366305,
+            "y": 2.670421002009057,
+            "vx": -0.0004582652462680998,
+            "vy": 0.09518812421296359,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.705852160850731,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.070894070248545
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.1163490508368838,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.00020838479272700106,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 6432,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 0,
+          "actor": {
+            "x": 5.6501717513366305,
+            "y": 2.670421002009057,
+            "vx": -0.0004582652462680998,
+            "vy": 0.09518812421296359,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.705852160850731,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.070894070248545
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.1163490508368838,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.00020838479272700106,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 6432,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 60,
+          "actor": {
+            "x": 4.642117657222278,
+            "y": 3.254663481894278,
+            "vx": -1.2404548433403613,
+            "vy": 0.2420452295652703,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.7252418526101294,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.2870628577375245
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 7392,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 120,
+          "actor": {
+            "x": 3.4455545099718328,
+            "y": 3.305392910102237,
+            "vx": -1.2477608660369341,
+            "vy": -0.009718195382080345,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6342231999344405,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.0031499319420036365
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 8352,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 180,
+          "actor": {
+            "x": 2.247673642512135,
+            "y": 3.300118391626755,
+            "vx": -1.247799550922565,
+            "vy": -0.0011628312126531523,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6370420146774194,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.0017898944838640185
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.7,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 9312,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "tick": 240,
+          "actor": {
+            "x": 1.4214720359177722,
+            "y": 3.2999686246791997,
+            "vx": -0.23958547224219406,
+            "vy": 0.00008164674014384308,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.637488683996192,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.000033277311128898646
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.9674393388009173,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.19047968794252274,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 10272,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 3.3
+          },
+          "reached": true,
+          "actor": {
+            "x": 1.3799179441058584,
+            "y": 3.2999850184773183,
+            "vx": -0.0965172790423359,
+            "vy": 0.000043230588075451363,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6374802991874202,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.0000252472077549859
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.9996407594705254,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.0722166160668572,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 10544,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 4.7
+          },
+          "tick": 0,
+          "actor": {
+            "x": 1.3799179441058584,
+            "y": 3.2999850184773183,
+            "vx": -0.0965172790423359,
+            "vy": 0.000043230588075451363,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6374802991874202,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.0000252472077549859
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 0.9996407594705254,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.0722166160668572,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 10544,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 4.7
+          },
+          "tick": 60,
+          "actor": {
+            "x": 1.3497946884557388,
+            "y": 4.3132506634273575,
+            "vx": -0.003245129537325449,
+            "vy": 1.0460152630410964,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.9481904771017007,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.4626187086454181
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.0274205851876883,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.007282795046331669,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 11504,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 1.35,
+            "y": 4.7
+          },
+          "reached": true,
+          "actor": {
+            "x": 1.3498372228629454,
+            "y": 4.670506426581006,
+            "vx": 0.0004471013503522268,
+            "vy": 0.09497223230387104,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.7037238035726952,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.07081703329352151
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.0285721360794655,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.00022505636840253196,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 12320,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 0,
+          "actor": {
+            "x": 1.3498372228629454,
+            "y": 4.670506426581006,
+            "vx": 0.0004471013503522268,
+            "vy": 0.09497223230387104,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.7037238035726952,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.07081703329352151
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.0285721360794655,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.00022505636840253196,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 12320,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 60,
+          "actor": {
+            "x": 2.349036951953482,
+            "y": 5.684059985104458,
+            "vx": 1.2278839084901543,
+            "vy": 1.2286248876016304,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.510548878108753,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.13176217150751013,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 13280,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 120,
+          "actor": {
+            "x": 3.451358610981077,
+            "y": 5.951212924337128,
+            "vx": 1.2534437263541995,
+            "vy": -0.32653530879953674,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 1.7864250325248114,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 0.0818168291335658,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 14240,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 180,
+          "actor": {
+            "x": 3.605,
+            "y": 6.030393702573141,
+            "vx": -0.07616461802114975,
+            "vy": 0.22126025515957795,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 2,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 3.687533828493693,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": 2.4856599387556297,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 15200,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 240,
+          "actor": {
+            "x": 4.210244939021105,
+            "y": 6.489344273342611,
+            "vx": 0.8314385010502301,
+            "vy": 0.10337487722881408,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.7374405048189825,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": -0.1632449018340587
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.692568232194943,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.44855507347585366,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 16160,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "tick": 300,
+          "actor": {
+            "x": 4.4100722857113395,
+            "y": 6.5013247881904315,
+            "vx": 0.2512620780142942,
+            "vy": -0.003615442468993901,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.7070481469796588,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.0017675090761282153
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.914423357895983,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.13244627676423093,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 17120,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 6.5
+          },
+          "reached": true,
+          "actor": {
+            "x": 4.467109065977677,
+            "y": 6.500490800069781,
+            "vx": 0.0985283038636683,
+            "vy": -0.001459707464829556,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.707523828894474,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.0009186968134011764
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.880616828444072,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.0630754912501752,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 17472,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "actor": {
+            "x": 4.467109065977677,
+            "y": 6.500490800069781,
+            "vx": 0.0985283038636683,
+            "vy": -0.001459707464829556,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.707523828894474,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.0009186968134011764
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.880616828444072,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.0630754912501752,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 17472,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 5.5
+          },
+          "tick": 60,
+          "actor": {
+            "x": 4.499755092506276,
+            "y": 5.648350220632394,
+            "vx": 0.003279968650074649,
+            "vy": -0.4881822123838723,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.536497748688165,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.3676983781664561
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.852979738309286,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.00576999111517873,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 18432,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 4.5,
+            "y": 5.5
+          },
+          "reached": true,
+          "actor": {
+            "x": 4.50009927413805,
+            "y": 5.530347957847226,
+            "vx": -0.0001501929155476821,
+            "vy": -0.09721514935836942,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6272667177532143,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.07176934176549021
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.852138359066709,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.0001264927099731139,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 18928,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        },
+        {
+          "purpose": "開口と部屋を回って次の仕掛けへ進む",
+          "kind": "route",
+          "target": {
+            "x": 5.5,
+            "y": 5.5
+          },
+          "tick": 0,
+          "actor": {
+            "x": 4.50009927413805,
+            "y": 5.530347957847226,
+            "vx": -0.0001501929155476821,
+            "vy": -0.09721514935836942,
+            "r": 0.275
+          },
+          "rackets": [
+            {
+              "id": "racket-vertical",
+              "x": 6.3,
+              "y": 1.6272667177532143,
+              "w": 0.2400000000000002,
+              "h": 1.6,
+              "axis": "y",
+              "min": 0.65,
+              "max": 2,
+              "home": 2,
+              "blocked": false,
+              "vx": 0,
+              "vy": 0.07176934176549021
+            },
+            {
+              "id": "racket-horizontal",
+              "x": 4.852138359066709,
+              "y": 6.3,
+              "w": 1.5999999999999999,
+              "h": 0.2400000000000002,
+              "axis": "x",
+              "min": 0.7,
+              "max": 4.95,
+              "home": 0.7,
+              "blocked": false,
+              "vx": -0.0001264927099731139,
+              "vy": 0
+            }
+          ],
+          "status": "playing",
+          "timeMs": 18928,
+          "hp": {
+            "value": 100,
+            "max": 100
+          },
+          "wallHits": 0,
+          "racketHits": null,
+          "lastHalt": null
+        }
+      ],
+      "final": {
+        "actor": {
+          "x": 5.204700566732118,
+          "y": 5.501264445148363,
+          "vx": 0.8631506167311797,
+          "vy": -0.009564523865466683,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 1.6527035707161433,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0.013889935011265897
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 4.862689980260753,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": -0.487861907303655,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "clear",
+        "screen": "clear",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 19664,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 12.65222214966018,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "summary": {
+        "label": "tutorial-1",
+        "kind": "racket",
+        "seconds": 19.664,
+        "budget": null,
+        "spareSeconds": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "hits": 0,
+        "racketHits": null
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    }
+  ]
+}

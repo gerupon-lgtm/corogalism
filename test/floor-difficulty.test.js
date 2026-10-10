@@ -31,7 +31,7 @@ test('新旧ルールの記録を混ぜず旧ベストを保持する',()=>{
  map.set('corogalism-run-bests',JSON.stringify(old));
  const r=saveRunBest({stages:2,totalTimeMs:9000,usedContinue:false,level:'normal'});
  assert.equal(r.saved,true);assert.equal(r.best.stages,2);
- assert.equal(r.best.rulesVersion,'maze-v1');
+ assert.equal(r.best.rulesVersion,'puzzle-v1');
  assert.deepEqual(loadLegacyRunBests().noContinue,old.noContinue);
  assert.deepEqual(JSON.parse(map.get('corogalism-run-bests')),old);
  delete globalThis.localStorage;

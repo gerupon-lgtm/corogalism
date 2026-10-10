@@ -2,6 +2,7 @@ import { AUDIO } from '../config/gameConfig.js';
 import { normalizeAudioSettings } from './audioSettings.js';
 import { createFloorJingle } from './floorJingle.js';
 import { createSelectBuffer } from './selectBuffer.js';
+import { createImpactBuffer } from './ballMaterialAudio.js';
 
 const files = {
   hourglass: 'se-hourglass.wav', bgm: 'bgm.wav', rolling: 'rolling-loop.wav', countdown: 'se-countdown.wav',
@@ -172,7 +173,8 @@ export function createSoundManager(initial, onStatus = () => {}) {
     impact(speed, wall) {
       if (!available() || speed < AUDIO.impactMinSpeed || context.currentTime - lastImpact < AUDIO.impactIntervalSec) return;
       lastImpact = context.currentTime;
-      const name = ['default','cork'].includes(wall.materialId) ? 'wall' : wall.materialId;
+      if(wall.materialId==='cotton'&&!buffers.has('cotton'))buffers.set('cotton',createImpactBuffer(context,'default','cotton'));
+      const name = wall.materialId==='racket'?'rubber':['default','cork'].includes(wall.materialId) ? 'wall' : wall.materialId;
       effect(name, { rate:wall.materialId==='cork'?.7:1, gain: 0.25 + 0.75 * Math.min(1, speed / AUDIO.impactFullSpeed) });
     },
     get state() { return { enabled: prefs.soundEnabled, context: context?.state || 'none', loaded,

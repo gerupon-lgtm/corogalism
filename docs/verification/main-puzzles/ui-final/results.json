@@ -1,0 +1,612 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "ui",
+  "version": "0.6.31",
+  "rows": [
+    {
+      "name": "guide",
+      "width": 312,
+      "newArts": [
+        "leaf",
+        "slide-demo",
+        "brake-demo",
+        "force-demo",
+        "ice",
+        "sand",
+        "gravity",
+        "repulsion",
+        "racket",
+        "gate",
+        "default",
+        "rubber",
+        "cork",
+        "stone",
+        "spike",
+        "moss",
+        "cotton",
+        "candy",
+        "leaf",
+        "hourglass",
+        "rest",
+        "sticky"
+      ],
+      "geometry": {
+        "height": 688,
+        "scrollHeight": 1889
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 312,
+      "index": 0,
+      "kind": "racket",
+      "lesson": {
+        "title": "動かして、打ち返そう",
+        "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 493.640625,
+        "titleBottom": 519.234375,
+        "copyTop": 523.4375,
+        "copyBottom": 581.9375,
+        "contextTop": 584.453125,
+        "contextBottom": 599.84375,
+        "footerTop": 601.84375,
+        "footerBottom": 619.4375,
+        "cardTop": 480.4375,
+        "cardBottom": 630.4375
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 312,
+      "index": 1,
+      "kind": "sequence",
+      "lesson": {
+        "title": "順に動かして、道を開こう",
+        "body": "数字の順に戸を動かそう。綿のそばで球を待たせると、壁を動かしやすくなります。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 493.640625,
+        "titleBottom": 519.234375,
+        "copyTop": 523.4375,
+        "copyBottom": 562.4375,
+        "contextTop": 584.453125,
+        "contextBottom": 599.84375,
+        "footerTop": 601.84375,
+        "footerBottom": 619.4375,
+        "cardTop": 480.4375,
+        "cardBottom": 630.4375
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 312,
+      "index": 2,
+      "kind": "timing",
+      "lesson": {
+        "title": "切り返して、滑り込もう",
+        "body": "球に勢いをつけ、逆に傾けて戸を開こう。滑り続ける球を、空いた道へ。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 493.640625,
+        "titleBottom": 519.234375,
+        "copyTop": 523.4375,
+        "copyBottom": 562.4375,
+        "contextTop": 584.453125,
+        "contextBottom": 599.84375,
+        "footerTop": 601.84375,
+        "footerBottom": 619.4375,
+        "cardTop": 480.4375,
+        "cardBottom": 630.4375
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 312,
+      "index": 3,
+      "kind": "openRacket",
+      "lesson": {
+        "title": "道を開いて、打ち返そう",
+        "body": "開いた道の先へラケットで球を送ろう。綿に寄せて落ち着き、打つ位置を変えてみよう。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 493.640625,
+        "titleBottom": 519.234375,
+        "copyTop": 523.4375,
+        "copyBottom": 581.9375,
+        "contextTop": 584.453125,
+        "contextBottom": 599.84375,
+        "footerTop": 601.84375,
+        "footerBottom": 619.4375,
+        "cardTop": 480.4375,
+        "cardBottom": 630.4375
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 312,
+      "index": 4,
+      "kind": "sequenceTiming",
+      "lesson": {
+        "title": "順に開いて、滑り込もう",
+        "body": "戸を順に動かして進み、最後は球の勢いで滑り込もう。綿のそばで一息ついても大丈夫。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 493.640625,
+        "titleBottom": 519.234375,
+        "copyTop": 523.4375,
+        "copyBottom": 581.9375,
+        "contextTop": 584.453125,
+        "contextBottom": 599.84375,
+        "footerTop": 601.84375,
+        "footerBottom": 619.4375,
+        "cardTop": 480.4375,
+        "cardBottom": 630.4375
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 312,
+      "index": 5,
+      "kind": "racketTiming",
+      "lesson": {
+        "title": "打ち返して、滑り込もう",
+        "body": "ラケットで球を送り、切り返して戸を開こう。うまく通れなくても、綿で受け止めて狙い直せます。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 493.640625,
+        "titleBottom": 519.234375,
+        "copyTop": 523.4375,
+        "copyBottom": 581.9375,
+        "contextTop": 584.453125,
+        "contextBottom": 599.84375,
+        "footerTop": 601.84375,
+        "footerBottom": 619.4375,
+        "cardTop": 480.4375,
+        "cardBottom": 630.4375
+      }
+    },
+    {
+      "name": "tutorial-ui",
+      "width": 312,
+      "kinds": [
+        "racket",
+        "sequence",
+        "timing",
+        "openRacket",
+        "sequenceTiming",
+        "racketTiming"
+      ],
+      "diagnosticGoalPlacement": true,
+      "actualPointerMovement": true,
+      "pauseResume": true
+    },
+    {
+      "name": "browser-errors",
+      "width": 312,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "guide",
+      "width": 412,
+      "newArts": [
+        "leaf",
+        "slide-demo",
+        "brake-demo",
+        "force-demo",
+        "ice",
+        "sand",
+        "gravity",
+        "repulsion",
+        "racket",
+        "gate",
+        "default",
+        "rubber",
+        "cork",
+        "stone",
+        "spike",
+        "moss",
+        "cotton",
+        "candy",
+        "leaf",
+        "hourglass",
+        "rest",
+        "sticky"
+      ],
+      "geometry": {
+        "height": 883,
+        "scrollHeight": 1773
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 412,
+      "index": 0,
+      "kind": "racket",
+      "lesson": {
+        "title": "動かして、打ち返そう",
+        "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 617.25,
+        "titleBottom": 642.84375,
+        "copyTop": 647.046875,
+        "copyBottom": 686.046875,
+        "contextTop": 708.0625,
+        "contextBottom": 723.453125,
+        "footerTop": 725.453125,
+        "footerBottom": 743.046875,
+        "cardTop": 604.046875,
+        "cardBottom": 754.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 412,
+      "index": 1,
+      "kind": "sequence",
+      "lesson": {
+        "title": "順に動かして、道を開こう",
+        "body": "数字の順に戸を動かそう。綿のそばで球を待たせると、壁を動かしやすくなります。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 617.25,
+        "titleBottom": 642.84375,
+        "copyTop": 647.046875,
+        "copyBottom": 686.046875,
+        "contextTop": 708.0625,
+        "contextBottom": 723.453125,
+        "footerTop": 725.453125,
+        "footerBottom": 743.046875,
+        "cardTop": 604.046875,
+        "cardBottom": 754.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 412,
+      "index": 2,
+      "kind": "timing",
+      "lesson": {
+        "title": "切り返して、滑り込もう",
+        "body": "球に勢いをつけ、逆に傾けて戸を開こう。滑り続ける球を、空いた道へ。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 617.25,
+        "titleBottom": 642.84375,
+        "copyTop": 647.046875,
+        "copyBottom": 686.046875,
+        "contextTop": 708.0625,
+        "contextBottom": 723.453125,
+        "footerTop": 725.453125,
+        "footerBottom": 743.046875,
+        "cardTop": 604.046875,
+        "cardBottom": 754.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 412,
+      "index": 3,
+      "kind": "openRacket",
+      "lesson": {
+        "title": "道を開いて、打ち返そう",
+        "body": "開いた道の先へラケットで球を送ろう。綿に寄せて落ち着き、打つ位置を変えてみよう。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 617.25,
+        "titleBottom": 642.84375,
+        "copyTop": 647.046875,
+        "copyBottom": 686.046875,
+        "contextTop": 708.0625,
+        "contextBottom": 723.453125,
+        "footerTop": 725.453125,
+        "footerBottom": 743.046875,
+        "cardTop": 604.046875,
+        "cardBottom": 754.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 412,
+      "index": 4,
+      "kind": "sequenceTiming",
+      "lesson": {
+        "title": "順に開いて、滑り込もう",
+        "body": "戸を順に動かして進み、最後は球の勢いで滑り込もう。綿のそばで一息ついても大丈夫。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 617.25,
+        "titleBottom": 642.84375,
+        "copyTop": 647.046875,
+        "copyBottom": 686.046875,
+        "contextTop": 708.0625,
+        "contextBottom": 723.453125,
+        "footerTop": 725.453125,
+        "footerBottom": 743.046875,
+        "cardTop": 604.046875,
+        "cardBottom": 754.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 412,
+      "index": 5,
+      "kind": "racketTiming",
+      "lesson": {
+        "title": "打ち返して、滑り込もう",
+        "body": "ラケットで球を送り、切り返して戸を開こう。うまく通れなくても、綿で受け止めて狙い直せます。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 617.25,
+        "titleBottom": 642.84375,
+        "copyTop": 647.046875,
+        "copyBottom": 686.046875,
+        "contextTop": 708.0625,
+        "contextBottom": 723.453125,
+        "footerTop": 725.453125,
+        "footerBottom": 743.046875,
+        "cardTop": 604.046875,
+        "cardBottom": 754.046875
+      }
+    },
+    {
+      "name": "tutorial-ui",
+      "width": 412,
+      "kinds": [
+        "racket",
+        "sequence",
+        "timing",
+        "openRacket",
+        "sequenceTiming",
+        "racketTiming"
+      ],
+      "diagnosticGoalPlacement": true,
+      "actualPointerMovement": true,
+      "pauseResume": true
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "guide",
+      "width": 576,
+      "newArts": [
+        "leaf",
+        "slide-demo",
+        "brake-demo",
+        "force-demo",
+        "ice",
+        "sand",
+        "gravity",
+        "repulsion",
+        "racket",
+        "gate",
+        "default",
+        "rubber",
+        "cork",
+        "stone",
+        "spike",
+        "moss",
+        "cotton",
+        "candy",
+        "leaf",
+        "hourglass",
+        "rest",
+        "sticky"
+      ],
+      "geometry": {
+        "height": 992,
+        "scrollHeight": 1741
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 576,
+      "index": 0,
+      "kind": "racket",
+      "lesson": {
+        "title": "動かして、打ち返そう",
+        "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 685.25,
+        "titleBottom": 710.84375,
+        "copyTop": 715.046875,
+        "copyBottom": 754.046875,
+        "contextTop": 776.0625,
+        "contextBottom": 791.453125,
+        "footerTop": 793.453125,
+        "footerBottom": 811.046875,
+        "cardTop": 672.046875,
+        "cardBottom": 822.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 576,
+      "index": 1,
+      "kind": "sequence",
+      "lesson": {
+        "title": "順に動かして、道を開こう",
+        "body": "数字の順に戸を動かそう。綿のそばで球を待たせると、壁を動かしやすくなります。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 685.25,
+        "titleBottom": 710.84375,
+        "copyTop": 715.046875,
+        "copyBottom": 754.046875,
+        "contextTop": 776.0625,
+        "contextBottom": 791.453125,
+        "footerTop": 793.453125,
+        "footerBottom": 811.046875,
+        "cardTop": 672.046875,
+        "cardBottom": 822.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 576,
+      "index": 2,
+      "kind": "timing",
+      "lesson": {
+        "title": "切り返して、滑り込もう",
+        "body": "球に勢いをつけ、逆に傾けて戸を開こう。滑り続ける球を、空いた道へ。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 685.25,
+        "titleBottom": 710.84375,
+        "copyTop": 715.046875,
+        "copyBottom": 754.046875,
+        "contextTop": 776.0625,
+        "contextBottom": 791.453125,
+        "footerTop": 793.453125,
+        "footerBottom": 811.046875,
+        "cardTop": 672.046875,
+        "cardBottom": 822.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 576,
+      "index": 3,
+      "kind": "openRacket",
+      "lesson": {
+        "title": "道を開いて、打ち返そう",
+        "body": "開いた道の先へラケットで球を送ろう。綿に寄せて落ち着き、打つ位置を変えてみよう。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 685.25,
+        "titleBottom": 710.84375,
+        "copyTop": 715.046875,
+        "copyBottom": 754.046875,
+        "contextTop": 776.0625,
+        "contextBottom": 791.453125,
+        "footerTop": 793.453125,
+        "footerBottom": 811.046875,
+        "cardTop": 672.046875,
+        "cardBottom": 822.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 576,
+      "index": 4,
+      "kind": "sequenceTiming",
+      "lesson": {
+        "title": "順に開いて、滑り込もう",
+        "body": "戸を順に動かして進み、最後は球の勢いで滑り込もう。綿のそばで一息ついても大丈夫。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 685.25,
+        "titleBottom": 710.84375,
+        "copyTop": 715.046875,
+        "copyBottom": 754.046875,
+        "contextTop": 776.0625,
+        "contextBottom": 791.453125,
+        "footerTop": 793.453125,
+        "footerBottom": 811.046875,
+        "cardTop": 672.046875,
+        "cardBottom": 822.046875
+      }
+    },
+    {
+      "name": "tutorial-lesson",
+      "width": 576,
+      "index": 5,
+      "kind": "racketTiming",
+      "lesson": {
+        "title": "打ち返して、滑り込もう",
+        "body": "ラケットで球を送り、切り返して戸を開こう。うまく通れなくても、綿で受け止めて狙い直せます。",
+        "cardHeight": 150,
+        "textHeight": 0,
+        "textScrollHeight": 0,
+        "titleTop": 685.25,
+        "titleBottom": 710.84375,
+        "copyTop": 715.046875,
+        "copyBottom": 754.046875,
+        "contextTop": 776.0625,
+        "contextBottom": 791.453125,
+        "footerTop": 793.453125,
+        "footerBottom": 811.046875,
+        "cardTop": 672.046875,
+        "cardBottom": 822.046875
+      }
+    },
+    {
+      "name": "tutorial-ui",
+      "width": 576,
+      "kinds": [
+        "racket",
+        "sequence",
+        "timing",
+        "openRacket",
+        "sequenceTiming",
+        "racketTiming"
+      ],
+      "diagnosticGoalPlacement": true,
+      "actualPointerMovement": true,
+      "pauseResume": true
+    },
+    {
+      "name": "browser-errors",
+      "width": 576,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "sensor-denied",
+      "fallback": "pointer",
+      "actualPointer": true
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "existing-tutorial-continuation",
+      "diagnosticExistingGoalPlacement": true,
+      "continuation": "puzzle-tutorial"
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    }
+  ]
+}

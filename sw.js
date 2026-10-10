@@ -28,8 +28,9 @@ self.addEventListener('fetch', event => {
     const root=new URL('./',self.registration.scope);
     const page = url.pathname.slice(root.pathname.length);
     // 設定・検証用のquery付きでも、同じ静的ページを保存済み資材から開ける。
-    const key = event.request.mode === 'navigate' && url.pathname.startsWith(root.pathname) && ['', 'index.html', 'ball-lab.html', 'floor-lab.html', 'racket-lab.html'].includes(page)
-      ? new URL(page || 'index.html', root).href : event.request;
+    const navigation = event.request.mode === 'navigate' && url.pathname.startsWith(root.pathname) && ['', 'index.html', 'ball-lab.html', 'floor-lab.html', 'racket-lab.html'].includes(page);
+    const versionedAsset=url.searchParams.has('v')&&self.PRECACHE_FILES.includes(page);
+    const key=navigation?new URL(page||'index.html',root).href:versionedAsset?new URL(page,root).href:event.request;
     const saved=await cache.match(key);
     return saved || fetch(event.request);
   })());

@@ -1,0 +1,613 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "offline",
+  "version": "0.6.31",
+  "rows": [
+    {
+      "name": "offline-main",
+      "offline": true,
+      "cache": {
+        "names": [
+          "corogalism-e40e71ef5c7ca7cb"
+        ],
+        "files": 119,
+        "keys": [
+          "/assets/audio/bgm.wav",
+          "/assets/audio/rolling-loop.wav",
+          "/assets/audio/se-clear.wav",
+          "/assets/audio/se-continue.wav",
+          "/assets/audio/se-countdown.wav",
+          "/assets/audio/se-fail.wav",
+          "/assets/audio/se-goal.wav",
+          "/assets/audio/se-hourglass.wav",
+          "/assets/audio/se-moss.wav",
+          "/assets/audio/se-pause.wav",
+          "/assets/audio/se-rolling.wav",
+          "/assets/audio/se-rubber.wav",
+          "/assets/audio/se-select.wav",
+          "/assets/audio/se-spike.wav",
+          "/assets/audio/se-stone.wav",
+          "/assets/audio/se-wall.wav",
+          "/assets/brand-leaf.svg",
+          "/assets/fonts/MPLUS1p-Black.woff2",
+          "/assets/fonts/MPLUS1p-Bold.woff2",
+          "/assets/fonts/MPLUS1p-Regular.woff2",
+          "/assets/pwa/icon-192.png",
+          "/assets/pwa/icon-512.png",
+          "/assets/pwa/icon.svg",
+          "/assets/toy-wall-atlas.png",
+          "/assets/tutorial-hold.png",
+          "/ball-lab.css",
+          "/ball-lab.html",
+          "/floor-lab.css",
+          "/floor-lab.html",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/racket-lab.css",
+          "/racket-lab.html",
+          "/src/audio/audioSettings.js",
+          "/src/audio/ballMaterialAudio.js",
+          "/src/audio/floorJingle.js",
+          "/src/audio/selectBuffer.js",
+          "/src/audio/soundManager.js",
+          "/src/config/gameConfig.js",
+          "/src/game/challenge.js",
+          "/src/game/hp.js",
+          "/src/game/progression.js",
+          "/src/game/puzzleTutorial.js",
+          "/src/game/puzzleVariety.js",
+          "/src/game/run.js",
+          "/src/game/stagePlay.js",
+          "/src/game/stageVariety.js",
+          "/src/game/tutorialLessons.js",
+          "/src/input/escapeInput.js",
+          "/src/input/pointerSource.js",
+          "/src/input/portraitLock.js",
+          "/src/input/stableCalibration.js",
+          "/src/input/tiltSource.js",
+          "/src/input/tiltVector.js",
+          "/src/lab/ballBoot.js",
+          "/src/lab/ballLab.js",
+          "/src/lab/ballLabStage.js",
+          "/src/lab/boot.js",
+          "/src/lab/exploration.js",
+          "/src/lab/floorLab.js",
+          "/src/lab/floorModel.js",
+          "/src/lab/floorVisuals.js",
+          "/src/lab/racketBoot.js",
+          "/src/lab/racketLab.js",
+          "/src/lab/racketPhysics.js",
+          "/src/lab/racketRender.js",
+          "/src/lab/racketStage.js",
+          "/src/lab/timeTrial.js",
+          "/src/main.js",
+          "/src/maze/generator.js",
+          "/src/maze/path.js",
+          "/src/maze/rng.js",
+          "/src/maze/validator.js",
+          "/src/maze/variation.js",
+          "/src/physics/collision.js",
+          "/src/physics/integrator.js",
+          "/src/physics/movingWalls.js",
+          "/src/physics/resolveParams.js",
+          "/src/pwa.js",
+          "/src/record/storage.js",
+          "/src/render/ballRotation.js",
+          "/src/render/camera.js",
+          "/src/render/canvasRenderer.js",
+          "/src/render/floorArt.js",
+          "/src/render/floorVisuals.js",
+          "/src/render/materialAppearance.js",
+          "/src/render/movingWalls.js",
+          "/src/render/toyBall.js",
+          "/src/render/toyCandy.js",
+          "/src/render/toyFeatures.js",
+          "/src/render/toyHourglass.js",
+          "/src/render/toyWorld.js",
+          "/src/ui/clearScreen.js",
+          "/src/ui/featureHintPosition.js",
+          "/src/ui/floorPresentation.js",
+          "/src/ui/gameScreen.js",
+          "/src/ui/guide.js",
+          "/src/ui/hpDisplay.js",
+          "/src/ui/runEndConfirm.js",
+          "/src/ui/runScreens.js",
+          "/src/ui/settingsScreen.js",
+          "/src/ui/titleScreen.js",
+          "/src/ui/tutorial.js",
+          "/src/world/ballMaterials.js",
+          "/src/world/branchFloors.js",
+          "/src/world/characters.js",
+          "/src/world/floorLearning.js",
+          "/src/world/floorPractice.js",
+          "/src/world/floorThemes.js",
+          "/src/world/materials.js",
+          "/src/world/openFields.js",
+          "/src/world/openFloors.js",
+          "/src/world/puzzleStage.js",
+          "/src/world/recovery.js",
+          "/src/world/stage.js",
+          "/src/world/stageFeatures.js",
+          "/src/world/themes.js",
+          "/src/world/tutorialStage.js",
+          "/style.css"
+        ]
+      },
+      "versioned": [
+        "http://127.0.0.1:8774/style.css?v=0.6.31",
+        "http://127.0.0.1:8774/src/main.js?v=0.6.31"
+      ],
+      "newTutorialPointer": true,
+      "guide": true,
+      "oldPractice": true,
+      "before": {
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "after": {
+        "actor": {
+          "x": 0.626475424908291,
+          "y": 0.5505902021276803,
+          "vx": 0.9014827092390986,
+          "vy": 0.3605933129545479,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.9468027350424616,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0.9999999007146501,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 160,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 12.466841354409949,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      }
+    },
+    {
+      "name": "offline-lab",
+      "path": "ball-lab.html?debug=1&preset=cotton",
+      "offline": true,
+      "actualPointer": true,
+      "initial": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0
+      },
+      "moved": {
+        "x": 0.8126527289675833,
+        "y": 0.5781631822418959,
+        "vx": 2.078376157577622,
+        "vy": 0.5195940393944055
+      }
+    },
+    {
+      "name": "offline-lab",
+      "path": "floor-lab.html?debug=1",
+      "offline": true,
+      "actualPointer": true,
+      "initial": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0
+      },
+      "moved": {
+        "x": 0.7339329487959005,
+        "y": 0.558483188434864,
+        "vx": 1.393450851968662,
+        "vy": 0.3483624225226426
+      }
+    },
+    {
+      "name": "offline-lab",
+      "path": "racket-lab.html?debug=1&layout=sequence",
+      "offline": true,
+      "actualPointer": true,
+      "initial": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0
+      },
+      "moved": {
+        "x": 0.7597709743182425,
+        "y": 0.5649426894294263,
+        "vx": 1.4931296188323782,
+        "vy": 0.373282093460197
+      }
+    },
+    {
+      "name": "failure",
+      "error": "AssertionError [ERR_ASSERTION]: consoleErrors が空\n+ actual - expected\n\n+ [\n+   {\n+     location: {\n+       column: 0,\n+       columnNumber: 0,\n+       line: 0,\n+       lineNumber: 0,\n+       url: 'http://127.0.0.1:8774/favicon.ico'\n+     },\n+     text: 'Failed to load resource: net::ERR_FAILED'\n+   },\n+   {\n+     location: {\n+       column: 0,\n+       columnNumber: 0,\n+       line: 0,\n+       lineNumber: 0,\n+       url: 'http://127.0.0.1:8774/favicon.ico'\n+     },\n+     text: 'Failed to load resource: net::ERR_FAILED'\n+   }\n+ ]\n- []\n",
+      "observed": {
+        "errors": [],
+        "failedRequests": [],
+        "consoleErrors": [
+          {
+            "text": "Failed to load resource: net::ERR_FAILED",
+            "location": {
+              "url": "http://127.0.0.1:8774/favicon.ico",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          },
+          {
+            "text": "Failed to load resource: net::ERR_FAILED",
+            "location": {
+              "url": "http://127.0.0.1:8774/favicon.ico",
+              "line": 0,
+              "column": 0,
+              "lineNumber": 0,
+              "columnNumber": 0
+            }
+          }
+        ],
+        "httpErrors": []
+      },
+      "activeState": null
+    }
+  ]
+}

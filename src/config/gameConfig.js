@@ -33,6 +33,17 @@ export const MAZE_VARIETY = {
 
 /** T-247: おためし専用。正式な床の採用値ではない。 */
 export const ICE_LAB = { minAccelK: 0.28, transitionSpeed: 1.2 };
+/** T-288: 配分は初期値で、検証候補の上限ではない。 */
+export const PUZZLE_MAIN = {
+ introduction:[[17,'racket'],[19,'sequence'],[21,'timing'],[23,'openRacket']],
+ mixStartStage:24, introSize:7, chance:.35, history:4, repeatFactor:.22, recentFactor:.65,
+ sizes:[[7,3],[8,1.4],[9,1.6],[11,1],[13,.4]],
+ easeWeights:[['relaxed',1.6],['flow',1.6],['focused',.8]],
+ physics:{racketSpeed:4,racketRestitution:1.08,aimAngleDeg:55,motionTransfer:0,ballTilt:1,speedLimit:30,cottonRestitution:0},
+ // 経路時間へ、開閉・狙い直し・切り返しの余裕を追加。初紹介はさらに余裕を取る。
+ time:{base:{easy:12,normal:8},gate:{easy:8,normal:5},aim:{easy:7,normal:5},timing:{easy:10,normal:7},intro:12,
+   ease:{relaxed:1.35,flow:1.15,focused:1}},
+};
 export const FLOOR_LAB = { ice: 0.08, sand: 3.2, force: 6, radius: 1.6 };
 /** ボールのおためし。連続音だけ控えめにし、壁の衝突音は維持する。 */
 export const BALL_LAB_AUDIO = { rollingGain: 0.25, rollingMinSpeed: 0.12, rollingFullSpeed: 6 };

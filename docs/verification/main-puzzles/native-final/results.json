@@ -1,0 +1,208 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "native",
+  "version": "0.6.31",
+  "rows": [
+    {
+      "name": "failure",
+      "error": "Error: locator.evaluate: Error: strict mode violation: locator('#board canvas') resolved to 2 elements:\n    1) <canvas id=\"canvas\" width=\"286\" height=\"286\" aria-label=\"7×7の迷路。オレンジのビー玉をカップへ導きます\"></canvas> aka getByLabel('×7の迷路。オレンジのビー玉をカップへ導きます')\n    2) <canvas width=\"240\" height=\"96\" aria-hidden=\"true\"></canvas> aka getByLabel('開始まで1秒').locator('canvas')\n\nCall log:\n\u001b[2m  - waiting for locator('#board canvas')\u001b[22m\n",
+      "observed": {
+        "errors": [],
+        "failedRequests": [],
+        "consoleErrors": [],
+        "httpErrors": []
+      },
+      "activeState": {
+        "actor": {
+          "x": 0.7573536892483311,
+          "y": 0.6544121705144161,
+          "vx": 1.0602024475138676,
+          "vy": 0.6361212912216848,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 1.016856643580812,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0.014974775236041791,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": true,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 283.5,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 10.680603460951897,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      }
+    }
+  ]
+}

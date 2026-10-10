@@ -7,7 +7,7 @@
  *
  * 純粋関数。
  */
-import { DIFFICULTY, HP, FLOOR_CHALLENGE as C } from '../config/gameConfig.js';
+import { DIFFICULTY, HP, FLOOR_CHALLENGE as C, PUZZLE_MAIN } from '../config/gameConfig.js';
 
 const lerpDown = (start, end, stages, n) =>
   Math.max(end, start - (start - end) * (n - 1) / Math.max(1, stages - 1));
@@ -44,8 +44,16 @@ export function stageTimeLimitSec(maze, difficulty, stage=null) {
     const extra=maze.turns*C.turnSec+(load.sandCells||0)*C.sandSec+(load.hinderFields||0)*C.hinderSec+(stage?.theme.firstVisit?C.introSec:0);
     let limit=Math.max(C.minSec[difficulty.level]||25,maze.pathLength*difficulty.secPerCell+extra,maze.pathLength*difficultyAt(difficulty.stage).secPerCell+2)+(difficulty.level==='easy'?5:0);
     if(difficulty.level==='easy')limit=Math.max(limit,maze.pathLength*C.easySecPerCell+maze.turns*C.easyTurnSec+C.easyThinkingSec+(load.sandCells||0)*C.sandSec+(stage?.zones.filter(z=>z.kind==='radial').length||0)*C.easyFieldSec+(stage?.theme.firstVisit?C.introSec:0));
-    const result=stage?.theme.learning?Math.max(C.learningSeconds,limit):limit;
+    const result=(stage?.theme.learning?Math.max(C.learningSeconds,limit):limit)+puzzleTimeAllowanceSec(stage,difficulty.level);
     return difficulty.level==='easy'?Math.ceil(result):result;
   }
   return maze.pathLength * difficulty.secPerCell + (difficulty.timeBonusSec ?? 0);
+}
+
+/** 道の長さに現れない壁の開閉・返球・切り返しの負担を追加する。 */
+export function puzzleTimeAllowanceSec(stage,level='normal'){
+ const p=stage?.puzzle;if(!p)return 0;
+ const c=PUZZLE_MAIN.time,mode=level==='easy'?'easy':'normal';
+ const operation=c.base[mode]+p.gateCount*c.gate[mode]+p.aimCount*c.aim[mode]+p.timingCount*c.timing[mode]+(p.openingSeconds||0);
+ return Math.ceil(operation*(c.ease[p.ease]??1)+(p.firstVisit?c.intro:0));
 }

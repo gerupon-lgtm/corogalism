@@ -129,7 +129,7 @@ test('107面の旧記録を保持・参考表示し、新構成の記録と比�
   assert.equal(loadRunBests('easy').withContinue,null);
   assert.deepEqual(loadLegacyRunBests('easy').withContinue,old);
   const saved=saveRunBest({level:'easy',stages:1,totalTimeMs:1000,usedContinue:true});
-  assert.equal(saved.updated,true);assert.equal(saved.best.rulesVersion,'maze-v1');
+  assert.equal(saved.updated,true);assert.equal(saved.best.rulesVersion,'puzzle-v1');
   assert.deepEqual(JSON.parse(values.get('corogalism-run-bests-floor-v1-easy')).withContinue,old);
  }finally{delete globalThis.localStorage;}
 });

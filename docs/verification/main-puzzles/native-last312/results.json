@@ -1,0 +1,269 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "last312",
+  "version": "0.6.31",
+  "rows": [
+    {
+      "name": "native-last312",
+      "width": 312,
+      "index": 5,
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "state": {
+        "actor": {
+          "x": 0.5,
+          "y": 6.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "timing-gate",
+            "x": 2.88,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 2.88,
+            "max": 4.88,
+            "home": 2.88,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 4.3,
+            "w": 0.2400000000000002,
+            "h": 1.6000000000000005,
+            "axis": "y",
+            "min": 4.3,
+            "max": 4.75,
+            "home": 4.3,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 5.1,
+            "y": 0.45999999999999996,
+            "w": 1.5999999999999996,
+            "h": 0.2400000000000002,
+            "axis": "y",
+            "min": 0.45999999999999996,
+            "max": 2.3099999999999996,
+            "home": 0.45999999999999996,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 5,
+          "isLast": true,
+          "lesson": {
+            "id": "puzzle-racketTiming",
+            "puzzleKind": "racketTiming",
+            "puzzleEase": "relaxed",
+            "title": "打ち返して、滑り込もう",
+            "body": "ラケットで球を送り、切り返して戸を開こう。うまく通れなくても、綿で受け止めて狙い直せます。",
+            "art": "timing-demo",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "本編では、普通の迷路・一つのしかけ・組み合わせが登場します。やさしいでも通常でも遊べます。",
+            "nextLabel": "あそび方を終える"
+          }
+        },
+        "puzzle": {
+          "kind": "racketTiming",
+          "ease": "relaxed",
+          "label": "打ち返して滑りこむ",
+          "hint": "ラケットの勢いと、切り返しを組み合わせよう。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 2,
+          "timingCount": 1,
+          "operationDistance": 2,
+          "openingSeconds": 0.5,
+          "rotation": 2,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 4.5,
+              "y": 1.5
+            },
+            "course": [
+              {
+                "x": 3.7,
+                "y": 4.3
+              },
+              {
+                "x": 6.5,
+                "y": 2.55
+              },
+              {
+                "x": 2.5,
+                "y": 2.55
+              },
+              {
+                "x": 2.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 1.5
+              },
+              {
+                "x": 4.5,
+                "y": 1.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 4.35,
+                "y": 3.395
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "timing-gate": 2.88
+              },
+              "closed": {
+                "timing-gate": 4.88
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 6,
+                "y": 3.65
+              },
+              "to": {
+                "x": 6,
+                "y": 2.3499999999999996
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.7,
+                  "y": 4.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": 0.7,
+                "y": -0.3
+              },
+              "condition": {
+                "axis": "x",
+                "min": 5.3
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 2.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 6.5,
+                  "y": 2.55
+                },
+                {
+                  "x": 2.5,
+                  "y": 2.55
+                },
+                {
+                  "x": 2.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 1.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 1.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": null
+      },
+      "screenshot": "docs/verification/main-puzzles/native-last312/native-racketTiming-312.png"
+    },
+    {
+      "name": "browser-errors",
+      "width": 312,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    }
+  ]
+}

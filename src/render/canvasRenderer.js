@@ -6,6 +6,7 @@ import { createToyBall } from './toyBall.js';
 import { drawLeaf, drawFeatureFloors, drawGuard, drawTrap } from './toyFeatures.js';
 import { drawToyCandy } from './toyCandy.js';
 import { drawFloorVisuals } from './floorVisuals.js';
+import { drawRackets } from './movingWalls.js';
 import { drawToyWall, drawToyFloor, drawToyGoal, drawConfetti, wallTextureReady } from './toyWorld.js';
 
 export function createRenderer(canvas) {
@@ -75,6 +76,7 @@ export function createRenderer(canvas) {
       ctx.drawImage(wallLayer,0,0,viewportPx,viewportPx);
     }
     drawFeatureFloors(ctx,stage,camera);
+    if(stage.rackets?.length&&!drawExtras)drawRackets(ctx,camera,stage,new Map(),now);
     drawExtras?.(ctx,camera);
     if (stage.leaf && !stage.leaf.collected) { const at=camera.toScreen(stage.leaf.x,stage.leaf.y);drawLeaf(ctx,at.px,at.py,camera.toPx(.3)); }
     if (stage.hourglass && !stage.hourglass.collected) {

@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#0f1513">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="assets/pwa/icon-192.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=0.6.31">
 </head>
 <body>
 <div class="wrap">
@@ -23,7 +23,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.6.30</span>
+      <span class="badge">v0.6.31</span>
       </div>
       <p class="sub" id="dev-note">開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -86,6 +86,7 @@
     <p class="menu-eyebrow">ROLL AT YOUR OWN PACE</p>
     <h2>どちらで遊ぶ？</h2>
     <button class="tutorial-entry" id="btn-tutorial" type="button"><img src="assets/brand-leaf.svg" alt=""> はじめてのあそび方 <span>›</span></button>
+    <button class="tutorial-entry puzzle-tutorial-entry" id="btn-puzzle-tutorial" type="button"><span class="puzzle-entry-mark" aria-hidden="true">↔</span> 壁を動かすあそび方 <span>›</span></button>
     <div class="practice-choice">
     <button class="mode-card" id="btn-practice" type="button"><strong>プラクティス <span>自由に練習</span></strong><small class="mode-description"><span>げんき・時間制限なし。</span><span>同じ迷路でタイムを縮めよう。</span></small></button>
     <button id="btn-floor-practice" type="button" class="floor-practice-entry"><strong>床の練習</strong><span>砂・氷・力場をくらべる ›</span></button>
@@ -167,7 +168,7 @@
     <img class="tutorial-hold" src="assets/tutorial-hold.png" alt="スマホを縦持ちにして画面を上へ向け、奥側の上端を少し持ち上げ、両手で支える姿勢">
     <p><strong>画面を上に向けて、<br>奥側を少し持ち上げよう。</strong></p><p>楽に持てる角度で大丈夫。</p>
     <button type="button" id="btn-tutorial-start" class="primary">この角度でスタート</button></div>
-    <p>壁・アイテム・砂・氷・引く力・押す力を試せます。<br>時間制限なし。げんきが少なくなっても続けられます。</p>
+    <p>壁・アイテム・砂・氷・引く力・押す力を試せます。<br>続きには、ラケットや動く戸の紹介も。<br>時間制限なし。げんきが少なくなっても続けられます。</p>
     <p class="tutorial-pointer-note">センサーが使えない端末では、迷路の中心から進みたい方向を押し続けて操作します。</p>
     <button type="button" id="btn-tutorial-back" class="text-button">モード選択へ戻る</button>
   </section>
@@ -216,6 +217,6 @@
     <button class="ghost" id="btn-end-confirm" type="button">終了して結果を見る</button>
   </div>
 </dialog>
-<script type="module" src="src/main.js"></script>
+<script type="module" src="src/main.js?v=0.6.31"></script>
 </body>
 </html>

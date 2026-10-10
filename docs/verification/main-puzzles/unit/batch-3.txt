@@ -1,0 +1,57 @@
+✔ 四辺・四隅でもヒントは球に重ならず盤内に収まる (1.6946ms)
+✔ まもりは上限適用後の実ダメージを消費し、全額吸収はノーミス (3.1979ms)
+✔ 葉っぱは満杯で残る。20%加算・50%上限、持ち越しを切り捨てず再取得なし (41.0703ms)
+✔ 休憩は2秒成立後だけ20%回復・残り2秒加算。記録時間は差し引かない (4.1227ms)
+✔ 休憩の揺れ許容・リセット・時間切れ優先、停止時リセット (1.9426ms)
+✔ とりもちは拘束・タップ短縮の下限・同じ床から出るまで再拘束なし (2.5441ms)
+✔ 配置は独立抽選・全テーマで休憩、危険壁で高確率、重複せずとりもち専用面 (2958.0375ms)
+✔ 初回操作音のPCMは承認済みWAVの全サンプルと一致する (20.5115ms)
+✔ resume待ちの操作音は1件だけ保持し、停止・ミュート・非表示で破棄する (575.0906ms)
+✔ 通常もゆるめ、床負荷と折れ回数を時間へ反映する (72.1881ms)
+✔ コルクは通常と同じ反発で低ダメージ、閾値と上限を維持 (0.5181ms)
+✖ 新旧ルールの記録を混ぜず旧ベストを保持する (4.0253ms)
+✔ 序盤も短い経路を選び、元の同じ経路より時間を短縮しない (802.8763ms)
+✔ 力場初登場と通常限定面には最終経路の広い角と力場を必ず置く（各1000シード） (5425.7235ms)
+✔ 補助カーブは内側を開いて全セル到達可能、力場が出口方向の移動を増やす (19.595ms)
+✔ 複合パターンは同一迷路・安全壁で床の対比と方向に沿う力を配置 (3.8299ms)
+✔ 氷は逆入力後も滑り、減速してから反転する。速いほど停止距離が長い (4.7498ms)
+✔ 氷の発進は通常と同じ加速度で始まり、斜め入力時には横滑りを残す (1.0154ms)
+✔ おためし固定コースは全セル到達可能 (0.5148ms)
+✔ 同じ初速の球は氷、通常、砂の順に遠くまで滑る (2.6741ms)
+✔ 重力と反重力は接近・通過の力が逆、中心と範囲外は力なし (4.1208ms)
+✔ 広場の横をかすめる球は引力で内側、斥力で外側に曲がる (2.2219ms)
+✔ 固定迷路は全壁ゴム・全面床で、切替後も同じ迷路を使う (6.9611ms)
+✔ タイムトライアルは角の手前だけ砂、角と残りの床は氷、壁は通常 (1.0086ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 23
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11416.0065
+
+✖ failing tests:
+
+test at test\floor-difficulty.test.js:28:1
+✖ 新旧ルールの記録を混ぜず旧ベストを保持する (4.0253ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'puzzle-v1'
+  - 'maze-v1'
+
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/floor-difficulty.test.js:34:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'puzzle-v1',
+    expected: 'maze-v1',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

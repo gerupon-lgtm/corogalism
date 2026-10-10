@@ -1,0 +1,204 @@
+{
+  "base": "http://127.0.0.1:8774/",
+  "phase": "main-title",
+  "version": "0.6.31",
+  "rows": [
+    {
+      "name": "main17-title",
+      "width": 412,
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "title": {
+        "text": "7×7 ラケットで打ち返す",
+        "width": 208,
+        "scrollWidth": 208
+      },
+      "state": {
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "challenge",
+        "stageIndex": 17,
+        "puzzleCourse": null,
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 72,
+          "max": 72
+        },
+        "remainingSec": 104,
+        "limitSec": 104,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "screenshot": "docs/verification/main-puzzles/main-title-final/main17-title-412.png"
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    }
+  ]
+}

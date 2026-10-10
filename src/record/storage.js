@@ -11,7 +11,8 @@ const SETTINGS_KEY = 'corogalism-settings';
 const BESTS_KEY = 'corogalism-bests';
 const LEGACY_RUN_KEY='corogalism-run-bests';
 const FLOOR_RUN_KEY='corogalism-run-bests-floor-v1';
-const RUN_BESTS_KEY = 'corogalism-run-bests-maze-v1';
+const MAZE_RUN_KEY = 'corogalism-run-bests-maze-v1';
+const RUN_BESTS_KEY = 'corogalism-run-bests-puzzle-v1';
 
 const DEFAULT_SETTINGS = {
   mode: 'tilt',
@@ -119,7 +120,7 @@ export function saveRunBest(result) {
   }
 
   const best = {
-    rulesVersion: 'maze-v1',
+    rulesVersion: 'puzzle-v1',
     stages: result.stages,
     totalTimeMs: result.totalTimeMs,
     at: new Date().toISOString(),
@@ -131,7 +132,8 @@ export function saveRunBest(result) {
 
 /** 旧記録は読み取り専用。新しいルールのベストとは比較しない。 */
 export function loadLegacyRunBests(level='normal'){
+ const maze=read(level==='easy'?`${MAZE_RUN_KEY}-easy`:MAZE_RUN_KEY,{});
  const floor=read(level==='easy'?`${FLOOR_RUN_KEY}-easy`:FLOOR_RUN_KEY,{});
- const stored=isRunBest(floor.noContinue)||isRunBest(floor.withContinue)?floor:read(level==='easy'?`${LEGACY_RUN_KEY}-easy`:LEGACY_RUN_KEY,{});
+ const stored=isRunBest(maze.noContinue)||isRunBest(maze.withContinue)?maze:isRunBest(floor.noContinue)||isRunBest(floor.withContinue)?floor:read(level==='easy'?`${LEGACY_RUN_KEY}-easy`:LEGACY_RUN_KEY,{});
  return {noContinue:isRunBest(stored.noContinue)?stored.noContinue:null,withContinue:isRunBest(stored.withContinue)?stored.withContinue:null};
 }

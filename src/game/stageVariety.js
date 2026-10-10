@@ -2,6 +2,7 @@
 import {MAZE_VARIETY as C} from '../config/gameConfig.js';
 import {createRng} from '../maze/rng.js';
 import {themeAt} from '../world/themes.js';
+import {choosePuzzleVariation} from './puzzleVariety.js';
 
 const labels={classic:'迷路',intricate:'入り組んだ道',short:'すなおな道',roomy:'広い曲がり角',open:'反発の広場'};
 function pick(rng,entries){
@@ -15,6 +16,8 @@ function varietyWeight(value,key,history){
  return weight;
 }
 export function chooseStageVariation({seed,stage,level='normal',history=[]}){
+ const puzzle=choosePuzzleVariation({seed,stage,level,history});
+ if(puzzle)return puzzle;
  const rng=createRng((seed^0xb7e15162)>>>0);
  if(stage===1)return {size:7,shape:'short',themeId:'basic',label:labels.short};
  const shape=pick(rng,C.shapes.map(([id,w])=>[id,w*varietyWeight(id,'shape',history)]));

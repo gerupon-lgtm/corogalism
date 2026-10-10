@@ -475,6 +475,8 @@ body.board-session #screen-game{padding:8px;gap:6px}#game-status{margin:0}
 /* 固定チュートリアル。既存の盤面寸法とトイ調を共有する。 */
 .tutorial-entry{display:flex;align-items:center;justify-content:center;gap:9px;min-height:44px;background:linear-gradient(#f7f9dd,#e1ebbd);color:#536f36;border:1px solid #aebc84;border-radius:20px;box-shadow:0 3px #8c9f73;font-weight:700}
 .tutorial-entry img{width:20px;height:24px}.tutorial-entry span{margin-left:auto}
+.puzzle-tutorial-entry{background:linear-gradient(#f6e9f6,#e2cde7);color:#754b83;border-color:#bca0c5;box-shadow:0 3px #9876a6}
+.tutorial-entry .puzzle-entry-mark{margin-left:0;font-size:23px;line-height:1;color:#9461ab}
 .tutorial-intro{background:linear-gradient(#fff3d9,#eedcba);color:#70451f;border:2px solid #b5a17a;border-radius:26px;box-shadow:0 5px #887350;text-align:center;padding:18px;gap:14px}
 .tutorial-intro h2,.tutorial-intro h3,.tutorial-intro p{margin:0}
 .tutorial-intro h3{color:#536f36}.tutorial-instruction{display:flex;flex-direction:column;gap:12px;border:1px solid #d7bc8d;border-radius:20px;padding:14px}
@@ -497,6 +499,14 @@ body[data-game-mode="tutorial"] .tutorial-lesson{display:block}
 .tutorial-lesson canvas{width:44px;height:35px}.tutorial-text{grid-column:2/4;align-self:center}.tutorial-lesson h2{margin:0 0 4px;text-align:left;font-size:16px}
 .tutorial-lesson .tutorial-copy{margin:0;font-size:13px;line-height:1.5}.tutorial-context{margin:3px 0 0;font-size:11px;line-height:1.4}
 .tutorial-play-state{grid-column:1/4;font-size:11px;color:#806847}
+/* 続きの紹介だけ、絵と題名の下で本文を全幅へ。150pxの枠と文字サイズは保つ。 */
+.is-puzzle-course .tutorial-message{grid-template-columns:36px 1fr;grid-template-rows:30px minmax(0,1fr) auto auto;gap:2px 8px}
+.is-puzzle-course .tutorial-text{display:contents}
+.is-puzzle-course canvas{width:36px;height:28px;grid-column:1;grid-row:1}
+.is-puzzle-course h2{grid-column:2;grid-row:1;margin:0}
+.is-puzzle-course .tutorial-copy{grid-column:1/-1;grid-row:2;align-self:start}
+.is-puzzle-course .tutorial-context{grid-column:1/-1;grid-row:3;margin:0}
+.is-puzzle-course .tutorial-play-state{grid-column:1/-1;grid-row:4}
 body[data-game-mode="tutorial"] #game-status{display:none}
 
 /* 動きを減らす設定では、点滅の代わりに金色の面を短く表示。 */
@@ -540,6 +550,13 @@ body[data-game-mode="tutorial"] #game-status{display:none}
 .guide-tip{font-size:11px;line-height:1.65;margin:7px 3px;color:#7b694f}
 .guide-heading{position:sticky;top:-14px;z-index:2;background:linear-gradient(#fff1d6,#f5e7cc);padding:8px 0 6px;margin-top:-7px;border-radius:12px}
 .guide-heading .guide-x{right:0;top:3px;background:#fff7e2}.guide-heading h2{padding-right:25px}
+.guide-moving{background:linear-gradient(#f8edf5,#efe0ed);border-color:#c5a7c9}
+.guide-moving>h2{color:#795287}.guide-moving-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.guide-moving-grid .guide-card{flex-direction:column;align-items:stretch;gap:6px;padding:7px}
+.guide-moving-grid .guide-card canvas{width:100%;height:86px;object-fit:contain;border-radius:8px}
+.guide-moving-grid .guide-card h3{font-size:14px}.guide-moving-grid .guide-card p{font-size:12px;line-height:1.65}
+.guide-wall-grid .guide-card:last-child:nth-child(odd){grid-column:1/-1}
+.guide-wall-grid .guide-card:last-child:nth-child(odd) canvas{width:58px;height:44px}
 
 /* T-261: 本編と同じ素材で比べる床の練習。 */
 .practice-choice{display:grid;gap:4px}

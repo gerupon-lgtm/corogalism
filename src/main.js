@@ -8,6 +8,7 @@ import { initGuide } from './ui/guide.js';
 import { initPwa } from './pwa.js';
 import { createSoundManager } from './audio/soundManager.js';
 import { createTutorialUi } from './ui/tutorial.js';
+import { createPuzzleTutorialCourse } from './game/puzzleTutorial.js';
 import { createStagePlay } from './game/stagePlay.js';
 import { createRun } from './game/run.js';
 import { challengeDifficulty, normalizeLevel } from './game/challenge.js';
@@ -80,6 +81,7 @@ const tutorial = createTutorialUi();
 const floorPresentation=createFloorPresentation(root);
 const floorContactGuide=createFloorContactGuide();
 let floorPracticeKind='normal';
+let puzzleCourse=null;
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 const endConfirm = createRunEndConfirm(root, finishRun);
@@ -207,6 +209,7 @@ function updateHint() {
   find('play-hint').textContent = screen === 'game'
     ? settings.mode === 'pointer' ? '盤面の中心から、進みたい方向を押し続けます。' : '端末を傾けて、右下のカップへ。'
     : 'オレンジのビー玉を、右下のカップへ。';
+  if(play?.stage.puzzle&&screen==='game')find('play-hint').textContent='同じ傾きで球と壁を動かして、カップへ。';
   game.setOrientationWarning(window.innerWidth > window.innerHeight && settings.mode === 'tilt');
 }
 
@@ -308,7 +311,8 @@ function updateCountdown() {
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
-  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, variation:run?.currentVariation(activeLevel), shield, tutorial: gameMode === 'tutorial',floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
+  play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, variation:run?.currentVariation(activeLevel), shield, tutorial: gameMode === 'tutorial',tutorialPuzzle:puzzleCourse?.profile,floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
+  if(gameMode==='tutorial')tutorial.reset(puzzleCourse?.lesson);
   floorPresentation.setStage(run?play.stage.theme:null);
   floorContactGuide.reset();game.resetNotices();
   renderFloorPractice();
@@ -322,6 +326,9 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   const variety=play.stage.maze.variation;
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉を右下のカップへ導きます`);
   find('stage-theme').textContent = `${variety?`${variety.size}×${variety.size} ${variety.label}｜`:''}${play.stage.theme?.label || ''}`;
+  if(play.stage.puzzle)find('stage-theme').textContent=`${play.stage.maze.size}×${play.stage.maze.size} ${play.stage.puzzle.label}`;
+  if(puzzleCourse)find('stage-theme').textContent=`${puzzleCourse.index+1}/6｜${puzzleCourse.lesson.title}`;
+  find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉をカップへ導きます`);
   resize();
 }
 
@@ -335,19 +342,21 @@ function changePracticeFloor(kind){
  Object.assign(play.actor,{x,y,vx,vy});floorContactGuide.reset();find('floor-contact-hint').hidden=true;
  find('stage-theme').textContent=play.stage.theme.label;renderFloorPractice();resize();
 }
-function startGame(mode, useSeed = seed) {
+function startGame(mode, useSeed = seed, withPuzzles=false) {
   tutorial.reset();
   floorPresentation.resetRun();
   gameMode = mode;
+  puzzleCourse=mode==='tutorial'&&withPuzzles?createPuzzleTutorialCourse(useSeed):null;
   activeLevel = settings.challengeLevel;
   run = mode === 'challenge' ? createRun(useSeed) : null;
   recordStatus = null;
   shield = { value: 0 };
-  loadStage(run ? run.currentSeed() : useSeed);
+  loadStage(run ? run.currentSeed() : puzzleCourse?.stageSeed??useSeed);
   showScreen('game');
 }
 
 function showModes() {
+  puzzleCourse=null;
   tutorial.reset();
   countdownMs = 0;
   prepareMs = 0;
@@ -380,7 +389,7 @@ function finishStage() {
     clear.setResult({gameMode,timeMs:play.timeMs,seed});
   } else if (gameMode === 'tutorial') {
     tutorial.reset();
-    clear.setResult({ gameMode, timeMs: play.timeMs, seed });
+    clear.setResult({ gameMode, timeMs: play.timeMs, seed, tutorialLesson:puzzleCourse?.lesson,tutorialHasNext:puzzleCourse?!puzzleCourse.isLast:true });
   } else {
     const updated = saveBest(seed, play.timeMs, play.wallHits);
     const best = getBest(seed);
@@ -436,10 +445,11 @@ function frame(now) {
     const hpBefore = play.hp?.value;
     const guardBefore = shield.value;
     let recovery = null;
-    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: (speed,wall) => { sound.impact(speed,wall); if(gameMode==='tutorial')tutorial.contact(wall.materialId); },
+    const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: (speed,wall) => { sound.impact(speed,wall); if(gameMode==='tutorial')tutorial.contact(wall.materialId==='racket'&&wall.bounce==='reflect'?'gate':wall.materialId); },
       onFeature: kind => { if (gameMode === 'tutorial' && ['leaf', 'hourglass'].includes(kind)) tutorial.contact(kind); game.showFeature(kind, now); if (kind !== 'full') sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
       onRecovery: (_amount, change) => { if (gameMode === 'tutorial') tutorial.contact('candy'); recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
     if (gameMode === 'tutorial') tutorial.inspect(play);
+    if(play.lastPhysicsResult?.halt){setPaused(true);find('board-status').textContent='計算を続けられないため一時停止しました。';}
     if (guardBefore > shield.value && damage === 0) game.showFeature('guard', now);
     if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);
     if (!handled && play.status === 'clear') finishStage();
@@ -454,7 +464,7 @@ function frame(now) {
   const floorActive=isPlaying()&&play?.status==='playing'&&Boolean(play.stage.theme?.learning||gameMode==='floor-practice');
   const kind=floorActive?floorContact(play.stage,play.actor):null;
   const text=floorContactGuide.tick(kind==='normal'&&gameMode!=='floor-practice'?null:kind,elapsedMs,floorActive);
-  game.renderNotices({ visible: isPlaying() && play?.status === 'playing', floorText: floorActive ? text : '' });
+  game.renderNotices({ visible: isPlaying() && play?.status === 'playing', floorText: play?.stage.puzzle?.hint??(floorActive ? text : '') });
   if(gameMode==='floor-practice')for(const b of root.querySelectorAll('#floor-practice-tools button'))b.disabled=!isPlaying()||play.status!=='playing';
   updateAudio();
   requestAnimationFrame(frame);
@@ -463,7 +473,7 @@ function frame(now) {
 async function selectMode(mode) {
   if (starting) return;
   starting = true;
-  const controls = ['btn-floor-practice','btn-practice', 'btn-challenge', 'btn-mode-settings', 'btn-tutorial-start'].map(find);
+  const controls = ['btn-floor-practice','btn-practice', 'btn-challenge', 'btn-mode-settings', 'btn-tutorial-start','btn-puzzle-tutorial'].map(find);
   controls.forEach(el => { el.disabled = true; });
   try {
     if (!inputReady) {
@@ -478,8 +488,8 @@ async function selectMode(mode) {
       inputReady = true;
     }
     portrait.requestOnStart();
-    if (mode === 'tutorial' && settings.mode === 'tilt') tiltSource.calibrate();
-    startGame(mode, mode === 'practice' ? initialSeed() : seed);
+    if (['tutorial','puzzle-tutorial'].includes(mode) && settings.mode === 'tilt') tiltSource.calibrate();
+    startGame(mode==='puzzle-tutorial'?'tutorial':mode, mode === 'practice' ? initialSeed() : seed,mode==='puzzle-tutorial');
     // 初回センサー確認でボタンを無効化していても、遷移完了後に操作音を1回鳴らす。
     sound.effect('select');
   } finally {
@@ -499,6 +509,7 @@ function toSettings(from) {
 find('btn-tutorial').addEventListener('click', () => showScreen('tutorial-intro'));
 find('btn-tutorial-back').addEventListener('click', showModes);
 find('btn-tutorial-start').addEventListener('click', () => selectMode('tutorial'));
+find('btn-puzzle-tutorial').addEventListener('click', () => selectMode('puzzle-tutorial'));
 find('btn-challenge').addEventListener('click', () => selectMode('challenge'));
 for (const button of root.querySelectorAll('[data-level]')) button.addEventListener('click', () => {
   if (screen !== 'mode' || starting) return;
@@ -519,10 +530,14 @@ game.onCalibrate(calibrate);
 game.onSettings(() => toSettings(screen));
 find('btn-game-exit').addEventListener('click', requestFinishRun);
 find('btn-clear-exit').addEventListener('click', requestFinishRun);
-clear.onRetry(() => { if (screen === 'clear' && !run) { if (gameMode === 'tutorial') startGame('tutorial', seed); else { loadStage(seed); showScreen('game'); } } });
+clear.onRetry(() => { if (screen === 'clear' && !run) { if (gameMode === 'tutorial'&&!puzzleCourse) startGame('tutorial', seed); else { loadStage(puzzleCourse?.stageSeed??seed); showScreen('game'); } } });
 clear.onNext(() => {
   if (screen !== 'clear' || find('btn-next').disabled) return;
-  if (gameMode === 'tutorial') { showModes(); return; }
+  if (gameMode === 'tutorial') {
+    if(!puzzleCourse)puzzleCourse=createPuzzleTutorialCourse(seed);
+    else if(!puzzleCourse.next()){showModes();return;}
+    loadStage(puzzleCourse.stageSeed);showScreen('game');return;
+  }
   loadStage(run ? run.currentSeed() : gameMode==='floor-practice'?seed:nextSeed());
   showScreen('game');
 });
@@ -551,7 +566,7 @@ root.addEventListener('click', (event) => {
 }, true);
 root.addEventListener('click', (event) => {
   const button = event.target.closest('button');
-  if (button && !button.disabled && !['btn-sound', 'btn-settings-sound', 'btn-pause', 'btn-resume', 'btn-continue', 'btn-practice', 'btn-challenge', 'btn-tutorial-start'].includes(button.id)) sound.effect('select');
+    if (button && !button.disabled && !['btn-sound', 'btn-settings-sound', 'btn-pause', 'btn-resume', 'btn-continue', 'btn-practice', 'btn-challenge', 'btn-tutorial-start','btn-puzzle-tutorial'].includes(button.id)) sound.effect('select');
 });
 settingsUi.onCalibrate(calibrate);
 settingsUi.onClose(() => showScreen(['game', 'clear', 'over'].includes(settingsUi.returnTo) ? settingsUi.returnTo : 'mode'));
@@ -577,7 +592,9 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
         run: run ? { ...run.result(), stageIndex: run.stageIndex, continuesLeft: run.continuesLeft, runSeed: run.runSeed } : null,
         actor: { x: play.actor.x, y: play.actor.y, vx: play.actor.vx, vy: play.actor.vy, r: play.actor.r },
         maze:{size:play.stage.maze.size,path:play.stage.maze.path,cells:play.stage.maze.cells,variation:play.stage.maze.variation,baffle:play.stage.maze.baffle,baffles:play.stage.maze.baffles},zones:play.stage.zones,
-        goal: goalCenter(play.stage.maze), walls: play.stage.walls.map((wall) => ({ ...wall })) };
+        goal: goalCenter(play.stage.maze), walls: play.stage.walls.map((wall) => ({ ...wall })),
+        puzzle:play.stage.puzzle,rackets:play.stage.rackets??[],lastResult:play.lastPhysicsResult,
+        puzzleCourse:puzzleCourse?{index:puzzleCourse.index,isLast:puzzleCourse.isLast,lesson:puzzleCourse.lesson}:null };
     },
     teleport(x, y) { play.teleport(x, y); },
     setTilt(x, y) { tilt.setRaw(x, y); },
