@@ -2,7 +2,7 @@
 
 ## 状態と確認の範囲
 
-実装・ローカル確認を完了。公開確認は未完了。自動操作とスマホ幅の表示確認は、実機の傾き、音の自然さ、長時間の楽しさ・負荷とは区別する。
+実装・公開確認を完了。公開版は [コロガリズム](https://corogalism.sikumilab.com/) の v0.6.31。自動操作とスマホ幅の表示確認は、実機の傾き、音の自然さ、長時間の楽しさ・負荷とは区別する。
 
 ## 仕組み
 
@@ -38,4 +38,16 @@
 
 通常時計の3幅と412幅の全6面を採取。312幅の最終6面は一時停止せず、実際の通常UIを検視し、盤面・球・可動壁・説明・ボタンの重なりがないことを確認した。音ON、音源開始、BGM稼働、実タッチで綿に接触した音源の再生も確認。音の自然さは実機の試遊が必要。[通常時計](main-puzzles/native-r3/results.json)、[312幅の6面](main-puzzles/native-last312/native-racketTiming-312.png)。
 
-オフライン初回は119資材の保存・本編・新紹介・既存練習・3ラボの操作に成功したが、2ラボが自動取得する未指定のタブアイコンで通信失敗した。両HTMLへ保存済みの葉っぱアイコンを明示して再確認に成功。119資材、初訪問の3ラボ・本編・新紹介・既存練習をオフラインで操作でき、アプリの例外・通信失敗・console.error・HTTPエラーは空。[再確認](main-puzzles/offline-r2/results.json)。初回失敗を保存する。[初回](main-puzzles/offline-final/results.json)。公開資材の一致・公開ブラウザ操作は公開後に追記する。
+オフライン初回は119資材の保存・本編・新紹介・既存練習・3ラボの操作に成功したが、2ラボが自動取得する未指定のタブアイコンで通信失敗した。両HTMLへ保存済みの葉っぱアイコンを明示して再確認に成功。119資材、初訪問の3ラボ・本編・新紹介・既存練習をオフラインで操作でき、アプリの例外・通信失敗・console.error・HTTPエラーは空。[再確認](main-puzzles/offline-r2/results.json)。初回失敗を保存する。[初回](main-puzzles/offline-final/results.json)。
+
+## 公開
+
+アプリ d3222d847aaf6ca98cdb080ab06a4ed6d140c169、[Pages 38028868281成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/38028868281)。キャッシュ `08081160cbbe00a7`、119資材。公開122ファイルすべてHTTP200・SHA-256一致、クエリなしの主要9ファイルも本文・Content-Typeが一致。[122資材の照合](main-puzzles/deploy-hashes.json)、[配信形式と本文](main-puzzles/deploy-headers.json)、[Pages](main-puzzles/pages-app.json)。
+
+公開Chromeで、312／412／576幅の通常時計・実タッチ入力・音ON・BGM・綿への接触音を確認。紹介6種類の表示と、312幅の第6面の未停止表示も確認。[公開表示と音](main-puzzles/public-native/results.json)。
+
+公開の代表紹介1面は開始からタッチ入力で19.664秒、げんき100で完走した。途中で球の置換や面送りはしていない。PCの自動制御であり人間の試遊とは区別する。[公開完走](main-puzzles/public-pointer/results.json)。本編17面の題名が1回だけで枠内に収まることも確認した。[本編表示](main-puzzles/public-main-title/results.json)。
+
+公開で119資材を保存後、完全オフラインの再読み込みから新紹介・ガイド・既存練習・初訪問の3ラボをタッチ操作できた。最新キャッシュが使われ、公開全工程のアプリ例外・通信失敗・console.error・HTTPエラーは空。[公開オフライン](main-puzzles/public-offline/results.json)。
+
+Pixel 6a実機の傾き、音の自然さ、人間の難しさ・楽しさ、長時間の負荷は未確認。今回の時間設定は計算とPC操作の余裕から決めた初期値で、実機の報告で引き続き調整する。

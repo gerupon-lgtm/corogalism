@@ -1,0 +1,2957 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "phase": "native",
+  "version": "0.6.31",
+  "rows": [
+    {
+      "name": "native-screen",
+      "width": 312,
+      "realClock": true,
+      "actualPointer": true,
+      "before": {
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "after": {
+        "actor": {
+          "x": 0.7572467069830445,
+          "y": 0.6543479811731333,
+          "vx": 1.0599930413746572,
+          "vy": 0.6359956475731755,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 1.0167725751566694,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0.01497477523584235,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": true,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 283.5,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 10.681812291397641,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "canvas": {
+        "width": 286,
+        "height": 286,
+        "transparent": 0
+      },
+      "audioPlaying": {
+        "enabled": true,
+        "context": "running",
+        "loaded": true,
+        "buffers": 18,
+        "music": true,
+        "rolling": true,
+        "voices": 0,
+        "musicDelaySec": 0,
+        "bgmVolume": 0.6,
+        "seVolume": 0.8,
+        "events": [
+          "select",
+          "select",
+          "select",
+          "countdown",
+          "countdown",
+          "countdown",
+          "countdown",
+          "bgm",
+          "rolling"
+        ]
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 312,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "native-screen",
+      "width": 412,
+      "realClock": true,
+      "actualPointer": true,
+      "before": {
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "after": {
+        "actor": {
+          "x": 0.7784353129952774,
+          "y": 0.6670611169874044,
+          "vx": 1.1004158865238791,
+          "vy": 0.6602492520640957,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 1.0335809181371285,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0.014880746605517163,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": true,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 300.3000000000002,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 10.453147927317849,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "canvas": {
+        "width": 992,
+        "height": 992,
+        "transparent": 0
+      },
+      "audioPlaying": {
+        "enabled": true,
+        "context": "running",
+        "loaded": true,
+        "buffers": 18,
+        "music": true,
+        "rolling": true,
+        "voices": 0,
+        "musicDelaySec": 0,
+        "bgmVolume": 0.6,
+        "seVolume": 0.8,
+        "events": [
+          "select",
+          "select",
+          "select",
+          "countdown",
+          "countdown",
+          "countdown",
+          "countdown",
+          "bgm",
+          "rolling"
+        ]
+      }
+    },
+    {
+      "name": "native-cotton-audio",
+      "actualPointer": true,
+      "teleport": false,
+      "cotton": {
+        "x": 0.88,
+        "y": -0.12,
+        "w": 1.24,
+        "h": 0.24,
+        "materialId": "cotton",
+        "physicsMaterial": {
+          "frictionK": 1,
+          "accelK": 1,
+          "restitutionK": 0,
+          "damageK": 0
+        }
+      },
+      "audioBefore": {
+        "enabled": true,
+        "context": "running",
+        "loaded": true,
+        "buffers": 18,
+        "music": true,
+        "rolling": true,
+        "voices": 0,
+        "musicDelaySec": 0,
+        "bgmVolume": 0.6,
+        "seVolume": 0.8,
+        "events": [
+          "select",
+          "select",
+          "select",
+          "countdown",
+          "countdown",
+          "countdown",
+          "countdown",
+          "bgm",
+          "rolling",
+          "pause",
+          "countdown",
+          "countdown",
+          "countdown",
+          "countdown",
+          "rolling",
+          "bgm"
+        ]
+      },
+      "audioAfter": {
+        "enabled": true,
+        "context": "running",
+        "loaded": true,
+        "buffers": 19,
+        "music": true,
+        "rolling": true,
+        "voices": 0,
+        "musicDelaySec": 0,
+        "bgmVolume": 0.6,
+        "seVolume": 0.8,
+        "events": [
+          "select",
+          "select",
+          "select",
+          "countdown",
+          "countdown",
+          "countdown",
+          "countdown",
+          "bgm",
+          "rolling",
+          "pause",
+          "countdown",
+          "countdown",
+          "countdown",
+          "countdown",
+          "rolling",
+          "bgm",
+          "cotton"
+        ]
+      },
+      "naturalSoundOnDeviceUnverified": true
+    },
+    {
+      "name": "native-puzzle-comparison",
+      "width": 412,
+      "index": 1,
+      "kind": "sequence",
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "screenshot": "docs/verification/main-puzzles/public-native/native-sequence-412.png",
+      "state": {
+        "actor": {
+          "x": 0.5,
+          "y": 1.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 0.8799999999999999,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.8799999999999999,
+            "max": 3.12,
+            "home": 0.8799999999999999,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "gate-2",
+            "x": 3.88,
+            "y": 4.88,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": 2.88,
+            "max": 4.88,
+            "home": 4.88,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 1,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-sequence",
+            "puzzleKind": "sequence",
+            "puzzleEase": "relaxed",
+            "title": "順に動かして、道を開こう",
+            "body": "数字の順に戸を動かそう。綿のそばで球を待たせると、壁を動かしやすくなります。",
+            "art": "gate",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "球を落ち着かせる場所が、道を開く手がかりです。次は、球の勢いを使ってみよう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "sequence",
+          "ease": "relaxed",
+          "label": "順に道をひらく",
+          "hint": "綿で勢いを受け止め、数字の順に道をひらこう。",
+          "firstVisit": true,
+          "gateCount": 2,
+          "aimCount": 0,
+          "timingCount": 0,
+          "operationDistance": 4.24,
+          "openingSeconds": 1.06,
+          "rotation": 3,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 1.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 2.6050000000000004,
+                "y": 1.5
+              },
+              {
+                "x": 2.6050000000000004,
+                "y": 3.65
+              },
+              {
+                "x": 1.5,
+                "y": 5.5
+              },
+              {
+                "x": 3.5,
+                "y": 5.3950000000000005
+              },
+              {
+                "x": 4.45,
+                "y": 5.3950000000000005
+              },
+              {
+                "x": 4.45,
+                "y": 3.5
+              },
+              {
+                "x": 6.5,
+                "y": 3.5
+              },
+              {
+                "x": 6.5,
+                "y": 4.5
+              },
+              {
+                "x": 5.5,
+                "y": 4.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 2.6050000000000004,
+                "y": 1.5
+              },
+              {
+                "x": 3.5,
+                "y": 5.3950000000000005
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "gate-1": 3.12,
+                "gate-2": 2.88
+              },
+              "closed": {
+                "gate-1": 0.8799999999999999,
+                "gate-2": 4.88
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "gate-1",
+              "from": {
+                "x": 2,
+                "y": 2.3499999999999996
+              },
+              "to": {
+                "x": 2,
+                "y": 3.65
+              }
+            },
+            {
+              "id": "gate-2",
+              "from": {
+                "x": 3.55,
+                "y": 6
+              },
+              "to": {
+                "x": 4.45,
+                "y": 6
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "hold",
+              "tilt": {
+                "x": 1,
+                "y": 0
+              },
+              "seconds": 1.8,
+              "until": "waiting-1",
+              "purpose": "綿へ球を預け、1の壁を戸袋へ動かす"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 2.6050000000000004,
+                  "y": 3.65
+                },
+                {
+                  "x": 1.5,
+                  "y": 3.65
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 1.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "hold",
+              "tilt": {
+                "x": 0,
+                "y": -1
+              },
+              "seconds": 1,
+              "until": "waiting-2",
+              "purpose": "綿へ球を預け、2の壁を戸袋へ動かす"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 4.45,
+                  "y": 5.3950000000000005
+                },
+                {
+                  "x": 4.45,
+                  "y": 3.5
+                },
+                {
+                  "x": 6.5,
+                  "y": 3.5
+                },
+                {
+                  "x": 6.5,
+                  "y": 4.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 4.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": null
+      }
+    },
+    {
+      "name": "native-puzzle-comparison",
+      "width": 412,
+      "index": 2,
+      "kind": "timing",
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "screenshot": "docs/verification/main-puzzles/public-native/native-timing-412.png",
+      "state": {
+        "actor": {
+          "x": 6.5,
+          "y": 6.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "timing-gate",
+            "x": 1.88,
+            "y": 3.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 2,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-timing",
+            "puzzleKind": "timing",
+            "puzzleEase": "relaxed",
+            "title": "切り返して、滑り込もう",
+            "body": "球に勢いをつけ、逆に傾けて戸を開こう。滑り続ける球を、空いた道へ。",
+            "art": "timing-demo",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "壁は切り返しても、球には勢いが残ります。ここからは、しかけを組み合わせよう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "timing",
+          "ease": "relaxed",
+          "label": "切り返して滑りこむ",
+          "hint": "逆へ傾けて道をひらき、球の勢いで滑りこもう。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 0,
+          "timingCount": 1,
+          "operationDistance": 2,
+          "openingSeconds": 0.5,
+          "rotation": 2,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 6.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 2.5,
+              "y": 2.5
+            },
+            "course": [
+              {
+                "x": 3.3,
+                "y": 5.3
+              },
+              {
+                "x": 0.5,
+                "y": 3.35
+              },
+              {
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 2.5
+              },
+              {
+                "x": 2.5,
+                "y": 2.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 2.6500000000000004,
+                "y": 4.395
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "timing-gate": 1.88
+              },
+              "closed": {
+                "timing-gate": -0.1200000000000001
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 1,
+                "y": 4.65
+              },
+              "to": {
+                "x": 1,
+                "y": 3.35
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.3,
+                  "y": 5.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": -0.3
+              },
+              "condition": {
+                "axis": "x",
+                "max": 1.7000000000000002
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": 0.7,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 3.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 0.5,
+                  "y": 3.35
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 2.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 2.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": null
+      }
+    },
+    {
+      "name": "native-puzzle-comparison",
+      "width": 412,
+      "index": 3,
+      "kind": "openRacket",
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "screenshot": "docs/verification/main-puzzles/public-native/native-openRacket-412.png",
+      "state": {
+        "actor": {
+          "x": 5.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 3.88,
+            "y": 0.88,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": 0.88,
+            "max": 3.12,
+            "home": 0.88,
+            "bounce": "reflect",
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-vertical",
+            "x": 0.45999999999999996,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 3,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-openRacket",
+            "puzzleKind": "openRacket",
+            "puzzleEase": "relaxed",
+            "title": "道を開いて、打ち返そう",
+            "body": "開いた道の先へラケットで球を送ろう。綿に寄せて落ち着き、打つ位置を変えてみよう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "道を開いた先でも、ラケットで狙いを変えられます。次は、順番とタイミングを組み合わせよう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "openRacket",
+          "ease": "relaxed",
+          "label": "ひらいて打ち返す",
+          "hint": "道をひらいたら、ラケットで次の部屋へ。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 1,
+          "timingCount": 0,
+          "operationDistance": 2.24,
+          "openingSeconds": 0.56,
+          "rotation": 0,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 5.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 1.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.5,
+                "y": 2.605
+              },
+              {
+                "x": 3.35,
+                "y": 2.605
+              },
+              {
+                "x": 1.5,
+                "y": 1.5
+              },
+              {
+                "x": 1.6049999999999995,
+                "y": 3.5
+              },
+              {
+                "x": 1.6049999999999995,
+                "y": 4.45
+              },
+              {
+                "x": 3.5,
+                "y": 4.45
+              },
+              {
+                "x": 3.5,
+                "y": 6.5
+              },
+              {
+                "x": 2.5,
+                "y": 6.5
+              },
+              {
+                "x": 2.5,
+                "y": 5.5
+              },
+              {
+                "x": 1.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 5.5,
+                "y": 2.605
+              },
+              {
+                "x": 1.6049999999999995,
+                "y": 3.5
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "gate-1": 3.12
+              },
+              "closed": {
+                "gate-1": 0.88
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "gate-1",
+              "from": {
+                "x": 4.65,
+                "y": 2
+              },
+              "to": {
+                "x": 3.35,
+                "y": 2
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "hold",
+              "tilt": {
+                "x": 0,
+                "y": 1
+              },
+              "seconds": 1.8,
+              "until": "waiting-1",
+              "purpose": "綿へ球を預け、1の壁を戸袋へ動かす"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.35,
+                  "y": 2.605
+                },
+                {
+                  "x": 3.35,
+                  "y": 1.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 1.5,
+                  "y": 1.5
+                },
+                {
+                  "x": 1.5,
+                  "y": 3.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 1.6049999999999995,
+                  "y": 4.45
+                },
+                {
+                  "x": 3.5,
+                  "y": 4.45
+                },
+                {
+                  "x": 3.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 2.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 1.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      }
+    },
+    {
+      "name": "native-puzzle-comparison",
+      "width": 412,
+      "index": 4,
+      "kind": "sequenceTiming",
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "screenshot": "docs/verification/main-puzzles/public-native/native-sequenceTiming-412.png",
+      "state": {
+        "actor": {
+          "x": 5.5,
+          "y": 6.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "gate-1",
+            "x": 3.88,
+            "y": 3.88,
+            "w": 0.2400000000000002,
+            "h": 2.24,
+            "axis": "y",
+            "min": 1.6399999999999997,
+            "max": 3.88,
+            "home": 3.88,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "timing-gate",
+            "x": 1.88,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": -0.1200000000000001,
+            "max": 1.88,
+            "home": 1.88,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 4,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-sequenceTiming",
+            "puzzleKind": "sequenceTiming",
+            "puzzleEase": "relaxed",
+            "title": "順に開いて、滑り込もう",
+            "body": "戸を順に動かして進み、最後は球の勢いで滑り込もう。綿のそばで一息ついても大丈夫。",
+            "art": "gate",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "落ち着いて道を作る場面と、勢いを使う場面がつながります。最後は、打ち返しから滑り込もう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "sequenceTiming",
+          "ease": "relaxed",
+          "label": "順にひらいて滑りこむ",
+          "hint": "順に道をひらき、最後は切り返して滑りこもう。",
+          "firstVisit": true,
+          "gateCount": 2,
+          "aimCount": 0,
+          "timingCount": 1,
+          "operationDistance": 4.24,
+          "openingSeconds": 1.06,
+          "rotation": 2,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 5.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 1.5
+            },
+            "course": [
+              {
+                "x": 5.5,
+                "y": 4.395
+              },
+              {
+                "x": 3.35,
+                "y": 4.395
+              },
+              {
+                "x": 3.3,
+                "y": 4.3
+              },
+              {
+                "x": 0.5,
+                "y": 2.3499999999999996
+              },
+              {
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.35,
+                "y": 0.5
+              },
+              {
+                "x": 4.65,
+                "y": 0.5
+              },
+              {
+                "x": 5.5,
+                "y": 0.5
+              },
+              {
+                "x": 5.5,
+                "y": 1.5
+              },
+              {
+                "x": 5.5,
+                "y": 1.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 5.5,
+                "y": 4.395
+              },
+              {
+                "x": 2.6500000000000004,
+                "y": 3.395
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "gate-1": 1.6399999999999997,
+                "timing-gate": 1.88
+              },
+              "closed": {
+                "gate-1": 3.88,
+                "timing-gate": -0.1200000000000001
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "gate-1",
+              "from": {
+                "x": 4.65,
+                "y": 5
+              },
+              "to": {
+                "x": 3.35,
+                "y": 5
+              }
+            },
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 1,
+                "y": 3.65
+              },
+              "to": {
+                "x": 1,
+                "y": 2.3499999999999996
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "hold",
+              "tilt": {
+                "x": 0,
+                "y": -1
+              },
+              "seconds": 1.8,
+              "until": "waiting-1",
+              "purpose": "綿へ球を預け、1の壁を戸袋へ動かす"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.35,
+                  "y": 4.395
+                },
+                {
+                  "x": 3.35,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.3,
+                  "y": 4.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": -0.3
+              },
+              "condition": {
+                "axis": "x",
+                "max": 1.7000000000000002
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": 0.7,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 2.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 0.5,
+                  "y": 2.3499999999999996
+                },
+                {
+                  "x": 0.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.35,
+                  "y": 0.5
+                },
+                {
+                  "x": 4.65,
+                  "y": 0.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 1.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 1.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": null
+      }
+    },
+    {
+      "name": "native-puzzle-comparison",
+      "width": 412,
+      "index": 5,
+      "kind": "racketTiming",
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "screenshot": "docs/verification/main-puzzles/public-native/native-racketTiming-412.png",
+      "state": {
+        "actor": {
+          "x": 0.5,
+          "y": 6.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "timing-gate",
+            "x": 2.88,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 2.88,
+            "max": 4.88,
+            "home": 2.88,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 4.3,
+            "w": 0.2400000000000002,
+            "h": 1.6000000000000005,
+            "axis": "y",
+            "min": 4.3,
+            "max": 4.75,
+            "home": 4.3,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 5.1,
+            "y": 0.45999999999999996,
+            "w": 1.5999999999999996,
+            "h": 0.2400000000000002,
+            "axis": "y",
+            "min": 0.45999999999999996,
+            "max": 2.3099999999999996,
+            "home": 0.45999999999999996,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 5,
+          "isLast": true,
+          "lesson": {
+            "id": "puzzle-racketTiming",
+            "puzzleKind": "racketTiming",
+            "puzzleEase": "relaxed",
+            "title": "打ち返して、滑り込もう",
+            "body": "ラケットで球を送り、切り返して戸を開こう。うまく通れなくても、綿で受け止めて狙い直せます。",
+            "art": "timing-demo",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "本編では、普通の迷路・一つのしかけ・組み合わせが登場します。やさしいでも通常でも遊べます。",
+            "nextLabel": "あそび方を終える"
+          }
+        },
+        "puzzle": {
+          "kind": "racketTiming",
+          "ease": "relaxed",
+          "label": "打ち返して滑りこむ",
+          "hint": "ラケットの勢いと、切り返しを組み合わせよう。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 2,
+          "timingCount": 1,
+          "operationDistance": 2,
+          "openingSeconds": 0.5,
+          "rotation": 2,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 4.5,
+              "y": 1.5
+            },
+            "course": [
+              {
+                "x": 3.7,
+                "y": 4.3
+              },
+              {
+                "x": 6.5,
+                "y": 2.55
+              },
+              {
+                "x": 2.5,
+                "y": 2.55
+              },
+              {
+                "x": 2.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 1.5
+              },
+              {
+                "x": 4.5,
+                "y": 1.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 4.35,
+                "y": 3.395
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "timing-gate": 2.88
+              },
+              "closed": {
+                "timing-gate": 4.88
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 6,
+                "y": 3.65
+              },
+              "to": {
+                "x": 6,
+                "y": 2.3499999999999996
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.7,
+                  "y": 4.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": 0.7,
+                "y": -0.3
+              },
+              "condition": {
+                "axis": "x",
+                "min": 5.3
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 2.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 6.5,
+                  "y": 2.55
+                },
+                {
+                  "x": 2.5,
+                  "y": 2.55
+                },
+                {
+                  "x": 2.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 1.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 1.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": null
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 412,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "native-screen",
+      "width": 576,
+      "realClock": true,
+      "actualPointer": true,
+      "before": {
+        "actor": {
+          "x": 0.5,
+          "y": 0.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 0.7,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 17,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "after": {
+        "actor": {
+          "x": 0.814626153157477,
+          "y": 0.6887756579064216,
+          "vx": 1.0931551326902034,
+          "vy": 0.655892961524044,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 2,
+            "w": 0.2400000000000002,
+            "h": 1.6,
+            "axis": "y",
+            "min": 0.65,
+            "max": 2,
+            "home": 2,
+            "blocked": false,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 1.0335770682422933,
+            "y": 6.3,
+            "w": 1.5999999999999999,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 0.7,
+            "max": 4.95,
+            "home": 0.7,
+            "blocked": false,
+            "vx": 0.0018382656236204387,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 0,
+          "isLast": false,
+          "lesson": {
+            "id": "puzzle-racket",
+            "puzzleKind": "racket",
+            "puzzleEase": "relaxed",
+            "title": "動かして、打ち返そう",
+            "body": "傾けるとラケットも動く。中心はまっすぐ、端は斜めへ。綿で勢いを受け止めて狙い直そう。",
+            "art": "racket",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "狙う位置で、はね返る方向が変わります。次は、壁を動かして道を開こう。",
+            "nextLabel": "次のしかけを試す"
+          }
+        },
+        "puzzle": {
+          "kind": "racket",
+          "ease": "relaxed",
+          "label": "ラケットで打ち返す",
+          "hint": "ラケットの中心と端で、跳ねる向きを変えよう。",
+          "firstVisit": true,
+          "gateCount": 0,
+          "aimCount": 2,
+          "timingCount": 0,
+          "operationDistance": 0,
+          "openingSeconds": 0,
+          "rotation": 0,
+          "mirror": false,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "goal": {
+              "x": 5.5,
+              "y": 5.5
+            },
+            "course": [
+              {
+                "x": 5.65,
+                "y": 1.4
+              },
+              {
+                "x": 5.65,
+                "y": 2.7
+              },
+              {
+                "x": 1.35,
+                "y": 3.3
+              },
+              {
+                "x": 1.35,
+                "y": 4.7
+              },
+              {
+                "x": 4.5,
+                "y": 6.5
+              },
+              {
+                "x": 4.5,
+                "y": 5.5
+              },
+              {
+                "x": 5.5,
+                "y": 5.5
+              }
+            ],
+            "waitingPoints": [],
+            "gateStates": {
+              "open": {},
+              "closed": {}
+            }
+          },
+          "portals": [],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 5.65,
+                  "y": 1.4
+                },
+                {
+                  "x": 5.65,
+                  "y": 2.7
+                },
+                {
+                  "x": 1.35,
+                  "y": 3.3
+                },
+                {
+                  "x": 1.35,
+                  "y": 4.7
+                },
+                {
+                  "x": 4.5,
+                  "y": 6.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 5.5
+                },
+                {
+                  "x": 5.5,
+                  "y": 5.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": true,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 333.6999999999998,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": {
+          "wallHits": 0,
+          "racketHits": 0,
+          "params": {
+            "accel": 10.490344330593178,
+            "friction": 0.2,
+            "restitution": 0.35,
+            "forceX": 0,
+            "forceY": 0
+          },
+          "blockedRackets": []
+        }
+      },
+      "canvas": {
+        "width": 446,
+        "height": 446,
+        "transparent": 0
+      },
+      "audioPlaying": {
+        "enabled": true,
+        "context": "running",
+        "loaded": true,
+        "buffers": 18,
+        "music": true,
+        "rolling": true,
+        "voices": 0,
+        "musicDelaySec": 0,
+        "bgmVolume": 0.6,
+        "seVolume": 0.8,
+        "events": [
+          "select",
+          "select",
+          "select",
+          "countdown",
+          "countdown",
+          "countdown",
+          "countdown",
+          "bgm",
+          "rolling"
+        ]
+      }
+    },
+    {
+      "name": "browser-errors",
+      "width": 576,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    },
+    {
+      "name": "native-last312",
+      "width": 312,
+      "index": 5,
+      "realClock": true,
+      "diagnosticEarlierGoalPlacement": true,
+      "state": {
+        "actor": {
+          "x": 0.5,
+          "y": 6.5,
+          "vx": 0,
+          "vy": 0,
+          "r": 0.275
+        },
+        "rackets": [
+          {
+            "id": "timing-gate",
+            "x": 2.88,
+            "y": 2.88,
+            "w": 2.24,
+            "h": 0.2400000000000002,
+            "axis": "x",
+            "min": 2.88,
+            "max": 4.88,
+            "home": 2.88,
+            "bounce": "reflect",
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-vertical",
+            "x": 6.3,
+            "y": 4.3,
+            "w": 0.2400000000000002,
+            "h": 1.6000000000000005,
+            "axis": "y",
+            "min": 4.3,
+            "max": 4.75,
+            "home": 4.3,
+            "vx": 0,
+            "vy": 0
+          },
+          {
+            "id": "racket-horizontal",
+            "x": 5.1,
+            "y": 0.45999999999999996,
+            "w": 1.5999999999999996,
+            "h": 0.2400000000000002,
+            "axis": "y",
+            "min": 0.45999999999999996,
+            "max": 2.3099999999999996,
+            "home": 0.45999999999999996,
+            "vx": 0,
+            "vy": 0
+          }
+        ],
+        "embedded": [],
+        "status": "playing",
+        "screen": "game",
+        "gameMode": "tutorial",
+        "stageIndex": 1,
+        "puzzleCourse": {
+          "index": 5,
+          "isLast": true,
+          "lesson": {
+            "id": "puzzle-racketTiming",
+            "puzzleKind": "racketTiming",
+            "puzzleEase": "relaxed",
+            "title": "打ち返して、滑り込もう",
+            "body": "ラケットで球を送り、切り返して戸を開こう。うまく通れなくても、綿で受け止めて狙い直せます。",
+            "art": "timing-demo",
+            "context": "時間・げんき切れなし。何度でも狙い直そう。",
+            "clearNote": "本編では、普通の迷路・一つのしかけ・組み合わせが登場します。やさしいでも通常でも遊べます。",
+            "nextLabel": "あそび方を終える"
+          }
+        },
+        "puzzle": {
+          "kind": "racketTiming",
+          "ease": "relaxed",
+          "label": "打ち返して滑りこむ",
+          "hint": "ラケットの勢いと、切り返しを組み合わせよう。",
+          "firstVisit": true,
+          "gateCount": 1,
+          "aimCount": 2,
+          "timingCount": 1,
+          "operationDistance": 2,
+          "openingSeconds": 0.5,
+          "rotation": 2,
+          "mirror": true,
+          "anchors": {
+            "start": {
+              "x": 0.5,
+              "y": 6.5
+            },
+            "goal": {
+              "x": 4.5,
+              "y": 1.5
+            },
+            "course": [
+              {
+                "x": 3.7,
+                "y": 4.3
+              },
+              {
+                "x": 6.5,
+                "y": 2.55
+              },
+              {
+                "x": 2.5,
+                "y": 2.55
+              },
+              {
+                "x": 2.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 0.5
+              },
+              {
+                "x": 3.5,
+                "y": 1.5
+              },
+              {
+                "x": 4.5,
+                "y": 1.5
+              }
+            ],
+            "waitingPoints": [
+              {
+                "x": 4.35,
+                "y": 3.395
+              }
+            ],
+            "gateStates": {
+              "open": {
+                "timing-gate": 2.88
+              },
+              "closed": {
+                "timing-gate": 4.88
+              }
+            }
+          },
+          "portals": [
+            {
+              "id": "timing-gate",
+              "from": {
+                "x": 6,
+                "y": 3.65
+              },
+              "to": {
+                "x": 6,
+                "y": 2.3499999999999996
+              }
+            }
+          ],
+          "verificationOperations": [
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 3.7,
+                  "y": 4.3
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": 0.7,
+                "y": -0.3
+              },
+              "condition": {
+                "axis": "x",
+                "min": 5.3
+              },
+              "maxSeconds": 3,
+              "purpose": "球を入口へ送り、同時に壁を閉じる"
+            },
+            {
+              "kind": "until",
+              "tilt": {
+                "x": -0.7,
+                "y": -0.7
+              },
+              "condition": {
+                "axis": "y",
+                "max": 2.365
+              },
+              "maxSeconds": 3,
+              "purpose": "逆へ壁を開き、球の慣性で滑りこむ"
+            },
+            {
+              "kind": "route",
+              "via": [
+                {
+                  "x": 6.5,
+                  "y": 2.55
+                },
+                {
+                  "x": 2.5,
+                  "y": 2.55
+                },
+                {
+                  "x": 2.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 0.5
+                },
+                {
+                  "x": 3.5,
+                  "y": 1.5
+                },
+                {
+                  "x": 4.5,
+                  "y": 1.5
+                }
+              ],
+              "purpose": "開口と部屋を回って次の仕掛けへ進む"
+            }
+          ],
+          "verification": {
+            "ok": true,
+            "scope": "static-bfs-and-open-clearance",
+            "staticCells": 49,
+            "openRetryReachable": [
+              true,
+              true
+            ],
+            "errors": []
+          }
+        },
+        "paused": false,
+        "prepareMs": 0,
+        "countdownMs": 0,
+        "timeMs": 0,
+        "wallHits": 0,
+        "racketHits": null,
+        "hp": {
+          "value": 100,
+          "max": 100
+        },
+        "remainingSec": null,
+        "limitSec": null,
+        "extendedSec": 0,
+        "lastHalt": null,
+        "sampledLastRacketHits": 0,
+        "lastResult": null
+      },
+      "screenshot": "docs/verification/main-puzzles/public-native/native-racketTiming-312.png"
+    },
+    {
+      "name": "browser-errors",
+      "width": 312,
+      "errors": [],
+      "failedRequests": [],
+      "consoleErrors": [],
+      "httpErrors": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "2d1c73d130f790d5bbc68cb5197c369ac5b57d72acfb79c8338ad2a1016c7264",
+    "match": true
+  },
+  {
+    "path": "ball-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "bb6ac3a2823f3f89f17e442e841537d253c8facd96988ec3efabb198df617fcc",
+    "match": true
+  },
+  {
+    "path": "floor-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "cf0cdc639964b756597e1b618c9d20b2047727068f7396fd10a1d324d50d30ac",
+    "match": true
+  },
+  {
+    "path": "racket-lab.html",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "sha256": "0d804e8f233199dac63652b2ddb618488b680ade9066df3b84b003815c5b227a",
+    "match": true
+  },
+  {
+    "path": "style.css",
+    "status": 200,
+    "contentType": "text/css; charset=utf-8",
+    "sha256": "b2311533c3fe963299d52de82a2f16e478b3bb32779d625ff19f4565207ba174",
+    "match": true
+  },
+  {
+    "path": "src/main.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "18e2323c2d0deee1adb05b2ce55f4e95ec564992d6e33430f54e20455094fa9c",
+    "match": true
+  },
+  {
+    "path": "src/config/gameConfig.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "9f6312c5072eee630155f87a91defe439530a6403b073db488577f871137ff85",
+    "match": true
+  },
+  {
+    "path": "sw.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "8fb53c882d93ec9163c4af032ab6166f29105e30a9875b666c1e60af64f41b2f",
+    "match": true
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "contentType": "application/javascript; charset=utf-8",
+    "sha256": "670d824650106f30e3570efe3cbf222bd1371e93f94d7f536cbc7eeb6490945c",
+    "match": true
+  }
+]
