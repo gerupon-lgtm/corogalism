@@ -24,7 +24,7 @@ export function createRunScreens(root) {
       const level=document.querySelector('[data-level=easy][aria-pressed=true]')?'easy':'normal';
       const old=loadLegacyRunBests(level);
       const legacy=find('mode-legacy');
-      if(legacy){legacy.hidden=!old.noContinue&&!old.withContinue;legacy.textContent=`旧ルールの記録：ノーコン ${bestLabel(old.noContinue)} ／ 続行 ${bestLabel(old.withContinue)}`;}
+      if(legacy){legacy.hidden=!old.noContinue&&!old.withContinue;legacy.textContent=`旧ルールの自己ベスト：ノーコン ${bestLabel(old.noContinue)} ／ 続行 ${bestLabel(old.withContinue)}`;}
     },
     setOver(run) {
       find('over-heading').textContent = run.canContinue ? 'もう一度！' : 'おつかれさま！';

@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {
   getBest,
   loadRunBests,
+  loadLegacyRunBests,
   loadSettings,
   saveBest,
   saveRunBest,
@@ -124,4 +125,43 @@ test('難易度ごとに2枠ずつ保存し、旧記録は通常に残す', () =
   assert.deepEqual(loadRunBests('normal').noContinue, old.best);
   assert.deepEqual(loadRunBests('easy'), { noContinue: easy.best, withContinue: continued.best });
   assert.equal(loadRunBests('normal').withContinue, null);
+});
+
+
+test('複数世代の旧記録があっても107面を隠さず、現ルールと保存本文を維持する', () => {
+  const best = (stages, totalTimeMs) => ({stages, totalTimeMs, at: '2026-10-07T00:00:00Z'});
+  const initial = {
+    'corogalism-run-bests-floor-v1-easy': JSON.stringify({noContinue: best(32, 500000), withContinue: best(107, 1600000)}),
+    'corogalism-run-bests-maze-v1-easy': JSON.stringify({noContinue: best(10, 140810), withContinue: best(16, 240240)}),
+    'corogalism-run-bests-puzzle-v1-easy': JSON.stringify({noContinue: best(25, 454660), withContinue: best(73, 1497960)}),
+  };
+  globalThis.localStorage = createStorage(initial);
+  assert.deepEqual(loadLegacyRunBests('easy'), {noContinue: best(32, 500000), withContinue: best(107, 1600000)});
+  assert.deepEqual(loadRunBests('easy'), {noContinue: best(25, 454660), withContinue: best(73, 1497960)});
+  saveRunBest({level: 'easy', stages: 2, totalTimeMs: 1000, usedContinue: true});
+  for (const [key, body] of Object.entries(initial)) assert.equal(localStorage.getItem(key), body);
+});
+
+test('旧記録は各枠を全世代から選び、同面数は速い方、難易度は分ける', () => {
+  const best = (stages, totalTimeMs) => ({stages, totalTimeMs, at: '2026-10-07T00:00:00Z'});
+  globalThis.localStorage = createStorage({
+    'corogalism-run-bests': JSON.stringify({noContinue: best(30, 7000), withContinue: best(40, 9000)}),
+    'corogalism-run-bests-floor-v1': JSON.stringify({noContinue: best(30, 5000), withContinue: best(20, 3000)}),
+    'corogalism-run-bests-maze-v1': JSON.stringify({noContinue: best(10, 1000), withContinue: best(35, 4000)}),
+    'corogalism-run-bests-floor-v1-easy': JSON.stringify({withContinue: best(107, 1600000)}),
+  });
+  assert.deepEqual(loadLegacyRunBests(), {noContinue: best(30, 5000), withContinue: best(40, 9000)});
+  assert.deepEqual(loadLegacyRunBests('easy'), {noContinue: null, withContinue: best(107, 1600000)});
+});
+
+test('旧記録の一世代が壊れていても残る有効記録を読み、無い記録を作らない', () => {
+  const best = {stages: 107, totalTimeMs: 1600000, at: '2026-10-07T00:00:00Z'};
+  globalThis.localStorage = createStorage({
+    'corogalism-run-bests-maze-v1-easy': '{broken',
+    'corogalism-run-bests-floor-v1-easy': JSON.stringify({withContinue: best, noContinue: {stages: 30, totalTimeMs: -1, at: best.at}}),
+  });
+  assert.deepEqual(loadLegacyRunBests('easy'), {noContinue: null, withContinue: best});
+  assert.deepEqual(loadLegacyRunBests(), {noContinue: null, withContinue: null});
+  globalThis.localStorage = {getItem() {throw new Error('blocked');}};
+  assert.deepEqual(loadLegacyRunBests('easy'), {noContinue: null, withContinue: null});
 });

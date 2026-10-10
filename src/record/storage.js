@@ -130,10 +130,15 @@ export function saveRunBest(result) {
   return { updated: true, saved, best };
 }
 
-/** 旧記録は読み取り専用。新しいルールのベストとは比較しない。 */
+/** 旧記録は読み取り専用。全世代から、各枠の参考用自己ベストを選ぶ。 */
 export function loadLegacyRunBests(level='normal'){
- const maze=read(level==='easy'?`${MAZE_RUN_KEY}-easy`:MAZE_RUN_KEY,{});
- const floor=read(level==='easy'?`${FLOOR_RUN_KEY}-easy`:FLOOR_RUN_KEY,{});
- const stored=isRunBest(maze.noContinue)||isRunBest(maze.withContinue)?maze:isRunBest(floor.noContinue)||isRunBest(floor.withContinue)?floor:read(level==='easy'?`${LEGACY_RUN_KEY}-easy`:LEGACY_RUN_KEY,{});
- return {noContinue:isRunBest(stored.noContinue)?stored.noContinue:null,withContinue:isRunBest(stored.withContinue)?stored.withContinue:null};
+ const bests={noContinue:null,withContinue:null};
+ for(const key of [MAZE_RUN_KEY,FLOOR_RUN_KEY,LEGACY_RUN_KEY]){
+  const stored=read(level==='easy'?`${key}-easy`:key,{});
+  for(const category of ['noContinue','withContinue']){
+   const candidate=stored[category];
+   if(isRunBest(candidate)&&isBetterRun(candidate,bests[category]))bests[category]=candidate;
+  }
+ }
+ return bests;
 }

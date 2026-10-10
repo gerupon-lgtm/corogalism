@@ -1,0 +1,196 @@
+{
+  "base": "http://127.0.0.1:8775/",
+  "version": "0.7.3",
+  "syntheticFixtures": true,
+  "actualPhoneStorageInspected": false,
+  "rows": [
+    {
+      "name": "legacy-visible",
+      "width": 312,
+      "level": "easy",
+      "current": [
+        "25 面454.66 秒",
+        "73 面1497.96 秒"
+      ],
+      "legacy": "旧ルールの自己ベスト：ノーコン 10面 / 140.81 秒 ／ 続行 107面 / 1600.00 秒",
+      "layout": {
+        "x": 41,
+        "width": 230,
+        "height": 34,
+        "scroll": 230,
+        "client": 230,
+        "viewport": 312
+      },
+      "recordBodiesUnchanged": true
+    },
+    {
+      "name": "legacy-visible",
+      "width": 312,
+      "level": "normal",
+      "current": [
+        "3 面1.00 秒",
+        "4 面2.00 秒"
+      ],
+      "legacy": "旧ルールの自己ベスト：ノーコン 30面 / 5.00 秒 ／ 続行 40面 / 9.00 秒",
+      "layout": {
+        "x": 41,
+        "width": 230,
+        "height": 34,
+        "scroll": 230,
+        "client": 230,
+        "viewport": 312
+      },
+      "recordBodiesUnchanged": true
+    },
+    {
+      "name": "reload-and-save",
+      "width": 312,
+      "actualStorageSave": true,
+      "currentStages": 80,
+      "legacyStages": 107,
+      "oldBodiesUnchanged": true,
+      "loaded": {
+        "/src/record/storage.js": "1e9354a0e74922bbe026ec30dd6b12f0c42ef523adb6fe9f65d619f1b4bbed33",
+        "/src/ui/runScreens.js": "930ad9fa81bfc87396679325d346378128114268bfcf7520da060039788a507f"
+      },
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      }
+    },
+    {
+      "name": "legacy-visible",
+      "width": 412,
+      "level": "easy",
+      "current": [
+        "25 面454.66 秒",
+        "73 面1497.96 秒"
+      ],
+      "legacy": "旧ルールの自己ベスト：ノーコン 10面 / 140.81 秒 ／ 続行 107面 / 1600.00 秒",
+      "layout": {
+        "x": 45,
+        "width": 322,
+        "height": 34,
+        "scroll": 322,
+        "client": 322,
+        "viewport": 412
+      },
+      "recordBodiesUnchanged": true
+    },
+    {
+      "name": "legacy-visible",
+      "width": 412,
+      "level": "normal",
+      "current": [
+        "3 面1.00 秒",
+        "4 面2.00 秒"
+      ],
+      "legacy": "旧ルールの自己ベスト：ノーコン 30面 / 5.00 秒 ／ 続行 40面 / 9.00 秒",
+      "layout": {
+        "x": 45,
+        "width": 322,
+        "height": 34,
+        "scroll": 322,
+        "client": 322,
+        "viewport": 412
+      },
+      "recordBodiesUnchanged": true
+    },
+    {
+      "name": "reload-and-save",
+      "width": 412,
+      "actualStorageSave": true,
+      "currentStages": 80,
+      "legacyStages": 107,
+      "oldBodiesUnchanged": true,
+      "loaded": {
+        "/src/record/storage.js": "1e9354a0e74922bbe026ec30dd6b12f0c42ef523adb6fe9f65d619f1b4bbed33",
+        "/src/ui/runScreens.js": "930ad9fa81bfc87396679325d346378128114268bfcf7520da060039788a507f"
+      },
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      }
+    },
+    {
+      "name": "legacy-visible",
+      "width": 576,
+      "level": "easy",
+      "current": [
+        "25 面454.66 秒",
+        "73 面1497.96 秒"
+      ],
+      "legacy": "旧ルールの自己ベスト：ノーコン 10面 / 140.81 秒 ／ 続行 107面 / 1600.00 秒",
+      "layout": {
+        "x": 93,
+        "width": 390,
+        "height": 17,
+        "scroll": 390,
+        "client": 390,
+        "viewport": 576
+      },
+      "recordBodiesUnchanged": true
+    },
+    {
+      "name": "legacy-visible",
+      "width": 576,
+      "level": "normal",
+      "current": [
+        "3 面1.00 秒",
+        "4 面2.00 秒"
+      ],
+      "legacy": "旧ルールの自己ベスト：ノーコン 30面 / 5.00 秒 ／ 続行 40面 / 9.00 秒",
+      "layout": {
+        "x": 93,
+        "width": 390,
+        "height": 17,
+        "scroll": 390,
+        "client": 390,
+        "viewport": 576
+      },
+      "recordBodiesUnchanged": true
+    },
+    {
+      "name": "reload-and-save",
+      "width": 576,
+      "actualStorageSave": true,
+      "currentStages": 80,
+      "legacyStages": 107,
+      "oldBodiesUnchanged": true,
+      "loaded": {
+        "/src/record/storage.js": "1e9354a0e74922bbe026ec30dd6b12f0c42ef523adb6fe9f65d619f1b4bbed33",
+        "/src/ui/runScreens.js": "930ad9fa81bfc87396679325d346378128114268bfcf7520da060039788a507f"
+      },
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      }
+    },
+    {
+      "name": "empty-records",
+      "noFabricatedRecords": true
+    },
+    {
+      "name": "offline-records",
+      "cache": {
+        "name": "corogalism-7da95b332c20edb1",
+        "count": 122
+      },
+      "legacyStages": 107,
+      "currentStages": 73,
+      "recordBodiesUnchanged": true,
+      "errors": {
+        "page": [],
+        "console": [],
+        "requests": [],
+        "http": []
+      }
+    }
+  ]
+}

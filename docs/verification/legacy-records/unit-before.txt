@@ -1,0 +1,88 @@
+✔ ラン記録は到達面数を優先し、同面数なら合計タイムが速い記録を残す (3.5776ms)
+✔ ノーコンティニューとコンティニュー込みの記録を別々に保存する (0.4342ms)
+✔ 不正なラン記録は未保存として読み飛ばす (0.4043ms)
+✔ ラン記録は既存の設定とプラクティス記録から独立している (0.6452ms)
+✔ localStorageへ書き込めない場合は保存成功を返さない (0.323ms)
+✔ localStorageを読めない場合も未保存として扱う (0.5149ms)
+✔ 難易度ごとに2枠ずつ保存し、旧記録は通常に残す (1.2717ms)
+✖ 複数世代の旧記録があっても107面を隠さず、現ルールと保存本文を維持する (1.7682ms)
+✖ 旧記録は各枠を全世代から選び、同面数は速い方、難易度は分ける (0.5374ms)
+✔ 旧記録の一世代が壊れていても残る有効記録を読み、無い記録を作らない (0.3689ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 8
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 147.8567
+
+✖ failing tests:
+
+test at test\storage.test.js:131:1
+✖ 複数世代の旧記録があっても107面を隠さず、現ルールと保存本文を維持する (1.7682ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    {
+      noContinue: {
+        at: '2026-10-07T00:00:00Z',
+  +     stages: 10,
+  +     totalTimeMs: 140810
+  -     stages: 32,
+  -     totalTimeMs: 500000
+      },
+      withContinue: {
+        at: '2026-10-07T00:00:00Z',
+  +     stages: 16,
+  +     totalTimeMs: 240240
+  -     stages: 107,
+  -     totalTimeMs: 1600000
+      }
+    }
+
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/storage.test.js:139:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { noContinue: { stages: 10, totalTimeMs: 140810, at: '2026-10-07T00:00:00Z' }, withContinue: { stages: 16, totalTimeMs: 240240, at: '2026-10-07T00:00:00Z' } },
+    expected: { noContinue: { stages: 32, totalTimeMs: 500000, at: '2026-10-07T00:00:00Z' }, withContinue: { stages: 107, totalTimeMs: 1600000, at: '2026-10-07T00:00:00Z' } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at test\storage.test.js:145:1
+✖ 旧記録は各枠を全世代から選び、同面数は速い方、難易度は分ける (0.5374ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    {
+      noContinue: {
+        at: '2026-10-07T00:00:00Z',
+  +     stages: 10,
+  +     totalTimeMs: 1000
+  -     stages: 30,
+  -     totalTimeMs: 5000
+      },
+      withContinue: {
+        at: '2026-10-07T00:00:00Z',
+  +     stages: 35,
+  +     totalTimeMs: 4000
+  -     stages: 40,
+  -     totalTimeMs: 9000
+      }
+    }
+
+      at TestContext.<anonymous> (file:///C:/Users/user/Documents/AI%E9%80%A3%E6%90%BA%E3%82%B2%E3%83%BC%E3%83%A0/corogalism/test/storage.test.js:153:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { noContinue: { stages: 10, totalTimeMs: 1000, at: '2026-10-07T00:00:00Z' }, withContinue: { stages: 35, totalTimeMs: 4000, at: '2026-10-07T00:00:00Z' } },
+    expected: { noContinue: { stages: 30, totalTimeMs: 5000, at: '2026-10-07T00:00:00Z' }, withContinue: { stages: 40, totalTimeMs: 9000, at: '2026-10-07T00:00:00Z' } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
