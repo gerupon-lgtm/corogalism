@@ -5,7 +5,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
 const browser=await chromium.launch({executablePath:process.env.CHROME_EXECUTABLE||'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
 const base=process.env.BASE_URL||'http://127.0.0.1:8767/';
-const output=process.env.RACKET_OUTPUT||'docs/verification/racket-lab/local';
+const output=process.env.RACKET_OUTPUT||'docs/verification/racket-goal/local';
 const viewports=(process.env.RACKET_VIEWPORTS||'312x720,412x915,576x1024').split(',').map(item=>item.split('x').map(Number));
 const rows=[];
 await mkdir(output,{recursive:true});
@@ -53,11 +53,35 @@ function assertRaster(original,current,pixels,message){
  // 盤面の縮小・透明化・残像は許容しない。今回の312幅では2画素を観測した。
  assert.equal(pixels.transparent,0,message+'（透明画素）');assert.ok(pixels.different<=32&&pixels.maxChannelDelta<=1,message+' '+JSON.stringify(pixels));
 }
-async function course(page,scenario){
+async function resizedFrame(page,viewport){
+ await page.setViewportSize(viewport);
+ // 本体Observerが新しい寸法を処理した後で、追加Observerの通知を待つ。
+ // 自動描画の時計だけを止めたテストでも、ブラウザの寸法通知は届く。
+ await page.evaluate(()=>new Promise(resolve=>{const observer=new ResizeObserver(()=>{observer.disconnect();resolve();});observer.observe(document.querySelector('#board').parentElement);}));
+ const dimensions=await page.evaluate(()=>{const c=document.querySelector('#board');return {actual:c.width,expected:Math.round(Math.round(c.parentElement.clientWidth)*Math.min(devicePixelRatio,3))};});
+ assert.equal(dimensions.actual,dimensions.expected,'ResizeObserverが新しい幅を反映する');
+ // ResizeObserverの寸法変更はcanvasを消去する。寸法の確認後に次のframeを進め、
+ // 仮想時計の最後のframeより遅く届いたObserverを復元失敗と数えない。
+ await page.clock.runFor(32);
+}
+async function boardScreenshot(page,file){
+ // 通知の後に描画を進め、canvas内部画素は厳密に検査する。
+ // 仮想RAF下のChrome合成では、内部画素が正常でも保存PNGだけ空になることがある。
+ // PNGの外観判定は browser-racket-screen.mjs で通常時計の独立コマンドとして行う。
+ await page.evaluate(()=>new Promise(resolve=>{const observer=new ResizeObserver(()=>{observer.disconnect();resolve();});observer.observe(document.querySelector('#board').parentElement);}));
+ await page.clock.runFor(32);
+ const rect=await page.evaluate(()=>{const c=document.querySelector('#board'),r=c.getBoundingClientRect(),data=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let transparent=0;for(let i=3;i<data.length;i+=4)if(data[i]!==255)transparent++;return {x:r.x+scrollX,y:r.y+scrollY,width:r.width,height:r.height,viewportWidth:innerWidth,transparent};});
+ assert.equal(rect.transparent,0,'スクリーンショット前の盤面は透明でない');
+ await page.screenshot({path:output+'/'+file,fullPage:true});
+ rows.push({screenshot:file,virtualClock:true,canvasTransparent:rect.transparent,pngAppearanceVerified:false,pngVerificationCommand:'node tools/browser-racket-screen.mjs'});
+}
+async function prepareCourse(page,scenario){
  await page.locator('#scenario').selectOption(scenario);await page.clock.runFor(32);await page.locator('#layout').selectOption('relay');await page.locator('#reset').click();await page.clock.runFor(32);
  if(await page.evaluate(()=>window.__racketLab.state.paused)){await page.locator('#pause').click();await page.clock.runFor(32);}
+}
+async function followWaypoints(page,waypoints,label){
  await page.locator('#board').scrollIntoViewIfNeeded();const r=await page.locator('#board').boundingBox();
- const waypoints=[[4.65,.75],[4.7,3.25],[1.65,3.7],[1.65,5.6],[5.95,6.5],[6.5,6.5]],trace=[];
+ const trace=[];
  let index=0,ticks=0;
  await page.mouse.move(r.x+r.width/2,r.y+r.height/2);await page.mouse.down();
  for(;ticks<800;ticks++){
@@ -65,7 +89,7 @@ async function course(page,scenario){
   assert.equal(s.lastHalt,null,'全コースの実pointer操作で計算が止まらない');assert.equal(s.paused,false);
   if(s.goalReached){trace.push({tick:ticks,waypoint:index,...s});break;}
   const target=waypoints[index],dx=target[0]-s.actor.x,dy=target[1]-s.actor.y;
-  if(index<waypoints.length-1&&Math.hypot(dx,dy)<.2&&Math.hypot(s.actor.vx,s.actor.vy)<1){trace.push({tick:ticks,waypoint:index,...s});index++;continue;}
+  if(Math.hypot(dx,dy)<.2&&Math.hypot(s.actor.vx,s.actor.vy)<1){trace.push({tick:ticks,waypoint:index,...s});index++;if(index===waypoints.length)break;continue;}
   // 位置と速度を読み、押す位置だけを変える自動制御。advance/teleportは使わない。
   let x=(14*dx-6*s.actor.vx)/17.85,y=(14*dy-6*s.actor.vy)/17.85,m=Math.hypot(x,y);
   if(m>.96){x*=.96/m;y*=.96/m;}
@@ -73,13 +97,55 @@ async function course(page,scenario){
   if(ticks%40===0)trace.push({tick:ticks,waypoint:index,...s});
  }
  await page.mouse.up();const s=await page.evaluate(()=>window.__racketLab.state);
- return {automatedController:true,scenario,teleport:false,debugAdvance:false,virtualSec:ticks*.075,completed:s.goalReached,elapsedSec:s.elapsedSec,racketHits:s.racketHits,actor:s.actor,trace};
+ return {automatedController:true,label,waypoints,reachedAllWaypoints:index===waypoints.length,teleport:false,debugAdvance:false,virtualSec:ticks*.075,completed:s.goalReached,elapsedSec:s.elapsedSec,racketHits:s.racketHits,actor:s.actor,trace};
+}
+async function course(page,scenario){
+ await prepareCourse(page,scenario);
+ const {waypoints,goal}=await page.evaluate(()=>{
+  const stage=window.__racketLab.state.stage;return {waypoints:stage.labAnchors.course.map(p=>[p.x,p.y]),goal:[stage.maze.goal.x+.5,stage.maze.goal.y+.5]};
+ });assert.deepEqual(waypoints.at(-1),goal,'コースの最後は現在のカップに合わせる');
+ return {scenario,...await followWaypoints(page,waypoints,'current relay course')};
+}
+async function relayBottomChecks(page){
+ const results=[];
+ for(const scenario of ['baseline','cotton','rackets']){
+  await prepareCourse(page,scenario);
+  const setup=await page.evaluate(()=>{const lab=window.__racketLab,a=lab.state.stage.labAnchors.bottomProbe;lab.teleport(a.x,a.y,a.vx,a.vy);return a;});
+  await page.locator('#board').scrollIntoViewIfNeeded();const box=await page.locator('#board').boundingBox();
+  await page.mouse.move(box.x+box.width*.85,box.y+box.height*.55);await page.mouse.down();await page.clock.runFor(2000);await page.mouse.up();
+  const edge=await page.evaluate(()=>window.__racketLab.state);assert.equal(edge.goalReached,false,'底辺沿いの横移動だけではゴールしない');assert.equal(edge.lastHalt,null);
+  await page.evaluate(()=>window.__racketLab.teleport(6.5,6.5));await page.clock.runFor(32);
+  const old=await page.evaluate(()=>window.__racketLab.state);assert.equal(old.goalReached,false,'以前の右下の終点はゴールではない');
+  results.push({scenario,debugPlacement:setup,actualPointerMs:2000,bottomGoalReached:edge.goalReached,bottomActor:edge.actor,oldEnd:{x:6.5,y:6.5,goalReached:old.goalReached},goal:old.stage.labAnchors.goal,halt:edge.lastHalt});
+ }
+ await prepareCourse(page,'rackets');
+ const anchors=await page.evaluate(()=>window.__racketLab.state.stage.labAnchors);
+ const legacyPoints=[...anchors.course.slice(0,4).map(p=>[p.x,p.y]),[5.95,6.5],[6.5,6.5]],legacy=await followWaypoints(page,legacyPoints,'old bottom finish path');
+ assert.equal(legacy.reachedAllWaypoints,true,'開始から以前の最後の横移動まで実pointerで進む');assert.equal(legacy.completed,false,'以前の最後の横移動を終えてもクリアしない');
+ await boardScreenshot(page,'old-bottom-finish-412.png');
+ const upturn=await followWaypoints(page,[[6.5,5.55],[anchors.goal.x,5.55],[anchors.goal.x,anchors.goal.y]],'new final upward turn');
+ assert.equal(upturn.completed,true,'そのまま操作を続け、下の入口から曲がるとクリアできる');await boardScreenshot(page,'last-upturn-goal-412.png');
+ return {bottomProbes:results,legacyCourse:legacy,newLastTurn:upturn};
+}
+async function replyTrial(page,scenario){
+ await prepareCourse(page,scenario);
+ const setup=await page.evaluate(()=>{const lab=window.__racketLab,a=lab.state.stage.labAnchors.horizontalShot;lab.teleport(a.x,a.y,a.vx,a.vy);return a;});
+ await page.locator('#board').scrollIntoViewIfNeeded();const box=await page.locator('#board').boundingBox();
+ await page.mouse.move(box.x+box.width*.65,box.y+box.height*.5);await page.mouse.down();
+ const trace=[];
+ for(let i=0;i<120;i++){
+  await page.clock.runFor(25);const s=await page.evaluate(()=>{const s=window.__racketLab.state;return {actor:s.actor,goalReached:s.goalReached,elapsedSec:s.elapsedSec,racketHits:s.racketHits,lastHalt:s.lastHalt};});
+  if(i%4===0||s.goalReached)trace.push(s);assert.equal(s.lastHalt,null);if(s.goalReached)break;
+ }
+ await page.mouse.up();const s=await page.evaluate(()=>window.__racketLab.state);
+ return {scenario,debugPlacement:setup,actualPointer:{x:.3,y:0},debugAdvance:false,completed:s.goalReached,elapsedSec:s.elapsedSec,racketHits:s.racketHits,actor:s.actor,trace};
 }
 
 try{
  for(const [width,height]of viewports){
   const f=await fixture(width,height),{page,state,errors,context,click,pointer}=f;
   const initial=await state();assert.ok(initial.actor&&initial.settings&&initial.stage,'検証APIは球・設定・盤面を公開する');
+  assert.match(await page.locator('header span').textContent(),/おためし2.*v0\.6\.29/);
   const records=await page.evaluate(()=>JSON.stringify({...localStorage}));
   await page.locator('#scenario').selectOption('baseline');await page.clock.runFor(32);await click('reset');
   const beforePointer=await state();await pointer(.65,.12,600);const afterPointer=await state();
@@ -101,9 +167,9 @@ try{
   await click('pause');await click('reset');
   await page.locator('#mix-cotton').uncheck();await page.clock.runFor(32);assert.ok(!(await state()).stage.walls.some(w=>w.materialId==='cotton'));
   await page.locator('#mix-cotton').check();await page.clock.runFor(32);assert.ok((await state()).stage.walls.some(w=>w.materialId==='cotton'));
-  await page.screenshot({path:output+`/relay-${width}.png`,fullPage:true});
+  await boardScreenshot(page,`relay-${width}.png`);
   await page.locator('#layout').selectOption('practice');await page.clock.runFor(32);assert.equal((await state()).settings.layout,'practice');
-  await page.screenshot({path:output+`/practice-${width}.png`,fullPage:true});
+  await boardScreenshot(page,`practice-${width}.png`);
   if(width===412){
    const shots=[];
    for(const axis of ['y','x'])for(const offset of [0,-.75,.75]){
@@ -141,7 +207,7 @@ try{
    await page.locator('#'+id).fill(value);await page.clock.runFor(32);assert.equal((await state()).settings[key],Number(value),id+'の数値を保存する');
   }
   await click('copy');const shared=JSON.parse(await page.locator('#settings-text').inputValue());
-  assert.equal(shared.page,'corogalism-racket-lab');assert.equal(shared.revision,1);assert.equal(shared.racketRestitution,1.2);
+  assert.equal(shared.page,'corogalism-racket-lab');assert.equal(shared.revision,2);assert.equal(shared.version,'0.6.29');assert.equal(shared.racketRestitution,1.2);
   await click('defaults');const defaults=await state();assert.notEqual(defaults.settings.racketSpeed,4.5);assert.equal(defaults.lastHalt,null);
   if(!defaults.paused)await click('pause');await page.clock.runFor(100);
   // 模擬の2D領域復元と実resize。静止時の盤面が同じ倍率で再描画される。
@@ -150,7 +216,7 @@ try{
   const original=await digestCanvas(page);await storePixels(page);await page.screenshot({path:output+`/render-before-${width}.png`});await page.evaluate(()=>{
    const c=document.querySelector('#board');c.dispatchEvent(new Event('contextlost'));c.getContext('2d').reset();c.dispatchEvent(new Event('contextrestored'));
   });await page.clock.runFor(100);const restored=await digestCanvas(page);assert.deepEqual(restored,original,'描画領域の復元後も盤面を保つ');
-  await page.setViewportSize({width:width+24,height});await page.clock.runFor(100);await page.setViewportSize({width,height});await page.clock.runFor(100);
+  await resizedFrame(page,{width:width+24,height});await resizedFrame(page,{width,height});
   const resized=await digestCanvas(page),resizePixels=await comparePixels(page);
   if(resized.hash!==original.hash){rows.push({width,renderDiagnostic:{original,resized,pixels:resizePixels,priorStrictHashFailure:true}});console.log('RESIZE DIAGNOSTIC '+JSON.stringify(resizePixels));await page.screenshot({path:output+`/render-resized-${width}.png`});}
   assertRaster(original,resized,resizePixels,'幅変更を戻すと描画倍率・画面が戻る');
@@ -177,10 +243,15 @@ try{
    rows.push({goalSwitch:{scenario:true,numeric:true,backgroundPause:true,pauseDisabled:true},cottonRaw:1,cottonEffective:.7});console.log('PASS racket goal switches/pause/cotton effective');
    await click('defaults');
    if(process.env.RACKET_COURSE!=='0'){
+    const bottom=await relayBottomChecks(page);rows.push({relayBottomRegression:bottom});console.log('PASS relay bottom misses, old finish misses, new upward turn completes');
     for(const scenario of ['baseline','cotton','rackets']){
      const result=await course(page,scenario);rows.push({fullCourse:result});console.log('COURSE '+JSON.stringify({scenario,completed:result.completed,elapsedSec:result.elapsedSec,racketHits:result.racketHits,actor:result.actor}));
-     assert.equal(result.completed,true,'開始からゴールまで実pointerの自動制御で進める');await page.screenshot({path:output+`/goal-${scenario}-412.png`,fullPage:true});
+     assert.equal(result.completed,true,'開始からゴールまで実pointerの自動制御で進める');await boardScreenshot(page,`goal-${scenario}-412.png`);
     }
+    const replies=[];for(const scenario of ['cotton','rackets'])replies.push(await replyTrial(page,scenario));
+    rows.push({localizedReply:replies});for(const trial of replies)assert.equal(trial.completed,true,'同じ局所入射と実pointerでどちらもゴールできる');
+    assert.ok(replies[1].racketHits>0);assert.ok(replies[1].elapsedSec<replies[0].elapsedSec,'この局所返球例ではラケットの恩恵がある');
+    console.log('REPLY '+JSON.stringify(replies.map(r=>({scenario:r.scenario,elapsedSec:r.elapsedSec,racketHits:r.racketHits}))));await boardScreenshot(page,'localized-racket-goal-412.png');
    }
   }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'横幅をはみ出さない');

@@ -1,0 +1,11 @@
+{
+  "version": "0.6.29",
+  "command": "node --test test/racket-stage.test.js test/racket-physics.test.js test/floor-lab.test.js test/resolveParams.test.js test/physics.test.js",
+  "files": 5,
+  "tests": 46,
+  "pass": 46,
+  "fail": 0,
+  "exitCode": 0,
+  "durationMs": 369.8469,
+  "scope": "changed layout and shared physics regression; not a rerun of all test files"
+}

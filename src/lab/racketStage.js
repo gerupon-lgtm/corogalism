@@ -1,7 +1,7 @@
 import {BASE,FLOOR_CHALLENGE,TUNING} from '../config/gameConfig.js';
 import {checkReachability} from '../maze/validator.js';
 import {solvePath,countTurns} from '../maze/path.js';
-import {createStage} from '../world/stage.js';
+import {createStage,goalCenter} from '../world/stage.js';
 
 // 数値は比較を始める値。検証ページから変更でき、本編の採用値ではない。
 export const RACKET_DEFAULTS={
@@ -30,8 +30,8 @@ export function createRacketStage(requested={}){
   frictionK:FLOOR_CHALLENGE.ice,...FLOOR_CHALLENGE.iceMotion,forceX:0,forceY:0,
  });
  const definitions=layout==='relay'?[
-  {id:'vertical',x:5.4,y:1.9,w:TUNING.wallThickness,h:1.3,axis:'y',min:.8,max:3,home:1.9},
-  {id:'horizontal',x:1.2,y:6,w:1.3,h:TUNING.wallThickness,axis:'x',min:.8,max:4.6,home:1.2},
+  {id:'vertical',x:5.4,y:1.9,w:TUNING.wallThickness,h:1.3,axis:'y',min:.8,max:2,home:1.9},
+  {id:'horizontal',x:3.2,y:6,w:1.3,h:TUNING.wallThickness,axis:'x',min:.8,max:4.85,home:3.2},
  ]:[
   {id:'vertical',x:5.4,y:1.9,w:TUNING.wallThickness,h:1.3,axis:'y',min:.8,max:4,home:1.9},
   {id:'horizontal',x:2.2,y:6,w:1.3,h:TUNING.wallThickness,axis:'x',min:.8,max:4.6,home:2.2},
@@ -42,10 +42,14 @@ export function createRacketStage(requested={}){
  })):[];
  // 試遊・ブラウザ検証で使う開始条件。成功する軌道や強制ヒット条件ではない。
  stage.labAnchors={
-  start:{x:.5,y:.5},goal:{x:6.5,y:6.5},
+  start:{x:.5,y:.5},goal:goalCenter(maze),
   verticalShot:{x:4.7,y:2.65,vx:4,vy:0},
-  horizontalShot:{x:2.4,y:5.5,vx:2,vy:4},
+  horizontalShot:layout==='relay'?{x:4.375,y:5.38,vx:0,vy:4}:{x:2.4,y:5.5,vx:2,vy:4},
   cottonBrake:{x:6.2,y:3.5,vx:4,vy:0},
+  ...(layout==='relay'?{
+   course:[{x:4.65,y:.75},{x:4.7,y:3.15},{x:1.65,y:3.4},{x:1.65,y:5.65},{x:4.6,y:5.55},{x:5.5,y:5.5},{x:5.5,y:4.5}],
+   bottomProbe:{x:4.5,y:6.58,vx:3,vy:0},
+  }:{}),
  };
  return stage;
 }
@@ -53,10 +57,15 @@ export function createRacketStage(requested={}){
 function createRacketMaze(layout){
  const size=7,cells=Array.from({length:size**2},(_,i)=>({t:i<size?1:0,r:i%size===size-1?1:0,b:i>=size*(size-1)?1:0,l:i%size===0?1:0}));
  const horizontal=(y,from,to)=>{for(let x=from;x<to;x++){cells[y*size+x].t=1;cells[(y-1)*size+x].b=1;}};
+ const vertical=(x,from,to)=>{for(let y=from;y<to;y++){cells[y*size+x].l=1;cells[y*size+x-1].r=1;}};
  // 二つの出口をずらして、傾き一発やL字の直行を防ぐ。ラケット利用のロックはない。
- if(layout==='relay'){horizontal(2,0,4);horizontal(5,3,7);}
+ if(layout==='relay'){
+  horizontal(2,0,4);horizontal(5,3,4);horizontal(5,6,7);
+  // カップは外周から離し、2マス幅の下向き入口から受ける。
+  horizontal(4,4,6);vertical(4,4,5);vertical(6,4,5);
+ }
  else horizontal(3,1,4);
- const maze={size,seed:0,cells,start:{x:0,y:0},goal:{x:6,y:6},labLayout:layout};
+ const maze={size,seed:0,cells,start:{x:0,y:0},goal:layout==='relay'?{x:5,y:4}:{x:6,y:6},labLayout:layout};
  if(!checkReachability(maze).ok)throw new Error('ラケットの広場の到達性が不正です');
  maze.path=solvePath(maze);maze.pathLength=maze.path.length;maze.turns=countTurns(maze.path);
  // BFSは静止壁の全セルの連結を検証する。可動壁はセル境界へ丸めない。

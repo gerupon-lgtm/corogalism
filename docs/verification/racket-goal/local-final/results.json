@@ -1,0 +1,2422 @@
+[
+  {
+    "width": 312,
+    "renderDiagnostic": {
+      "original": {
+        "hash": "ccf0a9b2d4226717be84976b8b5c8ada8cfdcc4d0a74457d18cc17216bad527f",
+        "width": 266,
+        "height": 266,
+        "transform": 1
+      },
+      "resized": {
+        "hash": "3f63da91f12364da893b52190cf9ef904630cba2f6feb5cfba2258af57f5ec7e",
+        "width": 266,
+        "height": 266,
+        "transform": 1
+      },
+      "pixels": {
+        "different": 2,
+        "maxChannelDelta": 1,
+        "transparent": 0,
+        "bounds": {
+          "minX": 11,
+          "minY": 33,
+          "maxX": 47,
+          "maxY": 35
+        }
+      },
+      "priorStrictHashFailure": true
+    }
+  },
+  {
+    "width": 312,
+    "height": 720,
+    "realPointer": true,
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.66608799083361,
+      "y": 0.7152776752637247,
+      "vx": 3.2300838269518253,
+      "vy": 0.5963228698342413,
+      "r": 0.275
+    },
+    "rackets": {
+      "before": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 1.9
+        },
+        {
+          "id": "horizontal",
+          "x": 3.2,
+          "y": 6
+        }
+      ],
+      "moving": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.8170449843630134,
+          "y": 6
+        }
+      ],
+      "neutral": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.8336000646146626,
+          "y": 6
+        }
+      ]
+    },
+    "share": {
+      "page": "corogalism-racket-lab",
+      "revision": 2,
+      "version": "0.6.29",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4.5,
+      "racketRestitution": 1.2,
+      "aimAngleDeg": 40,
+      "motionTransfer": 0.2,
+      "ballTilt": 0.7,
+      "speedLimit": 24,
+      "cottonRestitution": 0.15,
+      "maxTiltAngleDeg": 30,
+      "layout": "practice",
+      "inputMode": "pointer",
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": true,
+      "completions": [],
+      "observations": []
+    },
+    "render": {
+      "hash": "ccf0a9b2d4226717be84976b8b5c8ada8cfdcc4d0a74457d18cc17216bad527f",
+      "width": 266,
+      "height": 266,
+      "transform": 1
+    },
+    "errors": []
+  },
+  {
+    "shots": [
+      {
+        "axis": "y",
+        "offset": 0,
+        "actor": {
+          "x": 5.125,
+          "y": 2.55,
+          "vx": -4.24293565978786,
+          "vy": 0
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "y",
+        "offset": -0.75,
+        "actor": {
+          "x": 5.125,
+          "y": 2.0625,
+          "vx": -3.1900079296005934,
+          "vy": -2.797561871019974
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "y",
+        "offset": 0.75,
+        "actor": {
+          "x": 5.125,
+          "y": 3.0374999999999996,
+          "vx": -3.1900079296005934,
+          "vy": 2.797561871019974
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": 0,
+        "actor": {
+          "x": 2.85,
+          "y": 5.725,
+          "vx": 0,
+          "vy": -4.24293565978786
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": -0.75,
+        "actor": {
+          "x": 2.3625,
+          "y": 5.725,
+          "vx": -2.7975618710199766,
+          "vy": -3.1900079296005917
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": 0.75,
+        "actor": {
+          "x": 3.3375000000000004,
+          "y": 5.725,
+          "vx": 2.7975618710199766,
+          "vy": -3.1900079296005917
+        },
+        "hits": 1,
+        "halt": null
+      }
+    ],
+    "postRacketTilt": {
+      "vyBefore": 0,
+      "vyAfter": -0.0805444638943189
+    },
+    "cottonComparison": [
+      {
+        "scenario": "baseline",
+        "actor": {
+          "x": 6.291199683441447,
+          "y": 3.6566854534280613,
+          "vx": -3.458841980948364,
+          "vy": 0.7686315513218586
+        },
+        "halt": null
+      },
+      {
+        "scenario": "cotton",
+        "actor": {
+          "x": 6.6049999999999995,
+          "y": 3.6566854534280613,
+          "vx": 0,
+          "vy": 0.7686315513218586
+        },
+        "halt": null
+      }
+    ]
+  },
+  {
+    "goalSwitch": {
+      "scenario": true,
+      "numeric": true,
+      "backgroundPause": true,
+      "pauseDisabled": true
+    },
+    "cottonRaw": 1,
+    "cottonEffective": 0.7
+  },
+  {
+    "relayBottomRegression": {
+      "bottomProbes": [
+        {
+          "scenario": "baseline",
+          "debugPlacement": {
+            "x": 4.5,
+            "y": 6.58,
+            "vx": 3,
+            "vy": 0
+          },
+          "actualPointerMs": 2000,
+          "bottomGoalReached": false,
+          "bottomActor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 6.49737808881864,
+            "y": 6.603354624391324,
+            "vx": -3.3236209209644674,
+            "vy": 0.026825047259497727,
+            "r": 0.275
+          },
+          "oldEnd": {
+            "x": 6.5,
+            "y": 6.5,
+            "goalReached": false
+          },
+          "goal": {
+            "x": 5.5,
+            "y": 4.5
+          },
+          "halt": null
+        },
+        {
+          "scenario": "cotton",
+          "debugPlacement": {
+            "x": 4.5,
+            "y": 6.58,
+            "vx": 3,
+            "vy": 0
+          },
+          "actualPointerMs": 2000,
+          "bottomGoalReached": false,
+          "bottomActor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 6.49737808881864,
+            "y": 6.603354624391324,
+            "vx": -3.3236209209644674,
+            "vy": 0.026825047259497727,
+            "r": 0.275
+          },
+          "oldEnd": {
+            "x": 6.5,
+            "y": 6.5,
+            "goalReached": false
+          },
+          "goal": {
+            "x": 5.5,
+            "y": 4.5
+          },
+          "halt": null
+        },
+        {
+          "scenario": "rackets",
+          "debugPlacement": {
+            "x": 4.5,
+            "y": 6.58,
+            "vx": 3,
+            "vy": 0
+          },
+          "actualPointerMs": 2000,
+          "bottomGoalReached": false,
+          "bottomActor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 6.49737808881864,
+            "y": 6.603354624391324,
+            "vx": -3.3236209209644674,
+            "vy": 0.026825047259497727,
+            "r": 0.275
+          },
+          "oldEnd": {
+            "x": 6.5,
+            "y": 6.5,
+            "goalReached": false
+          },
+          "goal": {
+            "x": 5.5,
+            "y": 4.5
+          },
+          "halt": null
+        }
+      ],
+      "legacyCourse": {
+        "automatedController": true,
+        "label": "old bottom finish path",
+        "waypoints": [
+          [
+            4.65,
+            0.75
+          ],
+          [
+            4.7,
+            3.15
+          ],
+          [
+            1.65,
+            3.4
+          ],
+          [
+            1.65,
+            5.65
+          ],
+          [
+            5.95,
+            6.5
+          ],
+          [
+            6.5,
+            6.5
+          ]
+        ],
+        "reachedAllWaypoints": true,
+        "teleport": false,
+        "debugAdvance": false,
+        "virtualSec": 9,
+        "completed": false,
+        "elapsedSec": 8.592000000000006,
+        "racketHits": 0,
+        "actor": {
+          "character": {
+            "id": "default",
+            "name": "ビー玉",
+            "sizeRatio": 0.55,
+            "frictionK": 1,
+            "restitutionK": 1,
+            "accelK": 1
+          },
+          "x": 6.3444616883373115,
+          "y": 6.498492874486217,
+          "vx": 0.5887894013153285,
+          "vy": 0.006098792055263922,
+          "r": 0.275
+        },
+        "trace": [
+          {
+            "tick": 0,
+            "waypoint": 0,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 0.5,
+              "y": 0.5,
+              "vx": 0,
+              "vy": 0,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 27,
+            "waypoint": 0,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.817017822498628,
+              "y": 0.7600613154776668,
+              "vx": -0.6131174104982773,
+              "vy": -0.036934758195292565,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 1.9840000000000015,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 40,
+            "waypoint": 1,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.617710982269235,
+              "y": 2.9030340139036794,
+              "vx": 0.06553465783329607,
+              "vy": 2.151642448791648,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 2.880000000000002,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 44,
+            "waypoint": 1,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.650237039094035,
+              "y": 3.3158231747017877,
+              "vx": 0.12735575391568318,
+              "vy": 0.5660878176927615,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 3.1840000000000024,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 67,
+            "waypoint": 2,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 1.4534417114298084,
+              "y": 3.4117599835802146,
+              "vx": 0.4804249942915315,
+              "vy": -0.05941595618695425,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 4.832000000000003,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 80,
+            "waypoint": 3,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 1.703313671018323,
+              "y": 5.4570022306570305,
+              "vx": 0.03534787482860463,
+              "vy": 1.9346072759553008,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 5.728000000000004,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 83,
+            "waypoint": 3,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 1.698277653926115,
+              "y": 5.772802293347096,
+              "vx": -0.06472014701561367,
+              "vy": 0.7255587887099942,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 5.968000000000004,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 112,
+            "waypoint": 4,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 6.102680330938817,
+              "y": 6.495470806418553,
+              "vx": -0.5909558154274052,
+              "vy": -0.004499730011464937,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 8.064000000000005,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 120,
+            "waypoint": 5,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 6.3444616883373115,
+              "y": 6.498492874486217,
+              "vx": 0.5887894013153285,
+              "vy": 0.006098792055263922,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 8.592000000000006,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          }
+        ]
+      },
+      "newLastTurn": {
+        "automatedController": true,
+        "label": "new final upward turn",
+        "waypoints": [
+          [
+            6.5,
+            5.55
+          ],
+          [
+            5.5,
+            5.55
+          ],
+          [
+            5.5,
+            4.5
+          ]
+        ],
+        "reachedAllWaypoints": false,
+        "teleport": false,
+        "debugAdvance": false,
+        "virtualSec": 2.175,
+        "completed": true,
+        "elapsedSec": 10.608000000000008,
+        "racketHits": 0,
+        "actor": {
+          "character": {
+            "id": "default",
+            "name": "ビー玉",
+            "sizeRatio": 0.55,
+            "frictionK": 1,
+            "restitutionK": 1,
+            "accelK": 1
+          },
+          "x": 5.435330998234532,
+          "y": 4.777858675696795,
+          "vx": -0.00037574789656726455,
+          "vy": -1.2175993501729636,
+          "r": 0.275
+        },
+        "trace": [
+          {
+            "tick": 0,
+            "waypoint": 0,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 6.3444616883373115,
+              "y": 6.498492874486217,
+              "vx": 0.5887894013153285,
+              "vy": 0.006098792055263922,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 8.592000000000006,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 9,
+            "waypoint": 0,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 6.528080950711184,
+              "y": 5.716939293964565,
+              "vx": 0.03906572371844739,
+              "vy": -0.9520101299997522,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 9.264000000000006,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 20,
+            "waypoint": 1,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 5.624261065133405,
+              "y": 5.486383335555495,
+              "vx": -0.873878642013966,
+              "vy": 0.064526955324429,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 10.016000000000007,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          },
+          {
+            "tick": 29,
+            "waypoint": 2,
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 5.435330998234532,
+              "y": 4.777858675696795,
+              "vx": -0.00037574789656726455,
+              "vy": -1.2175993501729636,
+              "r": 0.275
+            },
+            "goalReached": true,
+            "elapsedSec": 10.608000000000008,
+            "racketHits": 0,
+            "lastHalt": null,
+            "paused": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "fullCourse": {
+      "scenario": "baseline",
+      "automatedController": true,
+      "label": "current relay course",
+      "waypoints": [
+        [
+          4.65,
+          0.75
+        ],
+        [
+          4.7,
+          3.15
+        ],
+        [
+          1.65,
+          3.4
+        ],
+        [
+          1.65,
+          5.65
+        ],
+        [
+          4.6,
+          5.55
+        ],
+        [
+          5.5,
+          5.5
+        ],
+        [
+          5.5,
+          4.5
+        ]
+      ],
+      "reachedAllWaypoints": false,
+      "teleport": false,
+      "debugAdvance": false,
+      "virtualSec": 9.299999999999999,
+      "completed": true,
+      "elapsedSec": 8.800000000000006,
+      "racketHits": 0,
+      "actor": {
+        "character": {
+          "id": "default",
+          "name": "ビー玉",
+          "sizeRatio": 0.55,
+          "frictionK": 1,
+          "restitutionK": 1,
+          "accelK": 1
+        },
+        "x": 5.5482909033900984,
+        "y": 4.795651748898716,
+        "vx": 0.08737533842121688,
+        "vy": -1.2618596429218716,
+        "r": 0.275
+      },
+      "trace": [
+        {
+          "tick": 0,
+          "waypoint": 0,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 27,
+          "waypoint": 0,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.80785595207437,
+            "y": 0.7595094094680378,
+            "vx": -0.5961794737980477,
+            "vy": -0.03591440204832315,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 2.0000000000000013,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 40,
+          "waypoint": 1,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.619604235635153,
+            "y": 2.902978305125183,
+            "vx": 0.06874467378761123,
+            "vy": 2.151186317902461,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 2.896000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 44,
+          "waypoint": 1,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.65214496323352,
+            "y": 3.3156818114342905,
+            "vx": 0.12519958399268533,
+            "vy": 0.5629810780593857,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 3.2000000000000024,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 67,
+          "waypoint": 2,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.4523597320064128,
+            "y": 3.4117015304965386,
+            "vx": 0.481809103651589,
+            "vy": -0.05898783398593218,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 4.848000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 80,
+          "waypoint": 3,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.7037696942847114,
+            "y": 5.455698979735872,
+            "vx": 0.0352285016431718,
+            "vy": 1.935006941275425,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 5.744000000000004,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 83,
+          "waypoint": 3,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.6997123580732239,
+            "y": 5.760464326479385,
+            "vx": -0.0595455804069779,
+            "vy": 0.8185102435347522,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 5.968000000000004,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 106,
+          "waypoint": 4,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.787715361167909,
+            "y": 5.545035733871512,
+            "vx": -0.461204375890224,
+            "vy": -0.032551919882713345,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 7.616000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 115,
+          "waypoint": 5,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.319293323849747,
+            "y": 5.506927281686136,
+            "vx": 0.8433049879006816,
+            "vy": -0.043290752493138934,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 8.224000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 120,
+          "waypoint": 6,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.491560313233858,
+            "y": 5.187164389231702,
+            "vx": 0.36232386952813206,
+            "vy": -1.5157880233021974,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 8.528000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 124,
+          "waypoint": 6,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.5482909033900984,
+            "y": 4.795651748898716,
+            "vx": 0.08737533842121688,
+            "vy": -1.2618596429218716,
+            "r": 0.275
+          },
+          "goalReached": true,
+          "elapsedSec": 8.800000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        }
+      ]
+    }
+  },
+  {
+    "fullCourse": {
+      "scenario": "cotton",
+      "automatedController": true,
+      "label": "current relay course",
+      "waypoints": [
+        [
+          4.65,
+          0.75
+        ],
+        [
+          4.7,
+          3.15
+        ],
+        [
+          1.65,
+          3.4
+        ],
+        [
+          1.65,
+          5.65
+        ],
+        [
+          4.6,
+          5.55
+        ],
+        [
+          5.5,
+          5.5
+        ],
+        [
+          5.5,
+          4.5
+        ]
+      ],
+      "reachedAllWaypoints": false,
+      "teleport": false,
+      "debugAdvance": false,
+      "virtualSec": 9.299999999999999,
+      "completed": true,
+      "elapsedSec": 8.816000000000006,
+      "racketHits": 0,
+      "actor": {
+        "character": {
+          "id": "default",
+          "name": "ビー玉",
+          "sizeRatio": 0.55,
+          "frictionK": 1,
+          "restitutionK": 1,
+          "accelK": 1
+        },
+        "x": 5.549550812892736,
+        "y": 4.776558364856144,
+        "vx": 0.07336452178539991,
+        "vy": -1.226948544794095,
+        "r": 0.275
+      },
+      "trace": [
+        {
+          "tick": 0,
+          "waypoint": 0,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 27,
+          "waypoint": 0,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.807991396245538,
+            "y": 0.7595175560255965,
+            "vx": -0.5969527237615331,
+            "vy": -0.0359609860357115,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 2.0000000000000013,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 40,
+          "waypoint": 1,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.619505863409791,
+            "y": 2.9031628634783457,
+            "vx": 0.06888033735476637,
+            "vy": 2.149728680906663,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 2.896000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 44,
+          "waypoint": 1,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.652098898036229,
+            "y": 3.315500546146685,
+            "vx": 0.12537013567950941,
+            "vy": 0.5621411260564988,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 3.2000000000000024,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 67,
+          "waypoint": 2,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.4526262086767805,
+            "y": 3.4116173035490442,
+            "vx": 0.48006194150935144,
+            "vy": -0.058621082657521445,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 4.848000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 80,
+          "waypoint": 3,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.7034894701011845,
+            "y": 5.456084730727096,
+            "vx": 0.035602106576520895,
+            "vy": 1.9366132678961205,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 5.744000000000004,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 83,
+          "waypoint": 3,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.6995037893459857,
+            "y": 5.760803042521465,
+            "vx": -0.05891162279767778,
+            "vy": 0.8205743654977905,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 5.968000000000004,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 106,
+          "waypoint": 4,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.7885104884268666,
+            "y": 5.5449956892772985,
+            "vx": -0.4626609415328054,
+            "vy": -0.03273607756391598,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 7.616000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 115,
+          "waypoint": 5,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.319722393452335,
+            "y": 5.506892196761306,
+            "vx": 0.8427018806804066,
+            "vy": -0.04324588175298324,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 8.224000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 120,
+          "waypoint": 6,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.491852476464202,
+            "y": 5.186839438008434,
+            "vx": 0.3617559132926179,
+            "vy": -1.5106367855371154,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 8.528000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 124,
+          "waypoint": 6,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.549550812892736,
+            "y": 4.776558364856144,
+            "vx": 0.07336452178539991,
+            "vy": -1.226948544794095,
+            "r": 0.275
+          },
+          "goalReached": true,
+          "elapsedSec": 8.816000000000006,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        }
+      ]
+    }
+  },
+  {
+    "fullCourse": {
+      "scenario": "rackets",
+      "automatedController": true,
+      "label": "current relay course",
+      "waypoints": [
+        [
+          4.65,
+          0.75
+        ],
+        [
+          4.7,
+          3.15
+        ],
+        [
+          1.65,
+          3.4
+        ],
+        [
+          1.65,
+          5.65
+        ],
+        [
+          4.6,
+          5.55
+        ],
+        [
+          5.5,
+          5.5
+        ],
+        [
+          5.5,
+          4.5
+        ]
+      ],
+      "reachedAllWaypoints": false,
+      "teleport": false,
+      "debugAdvance": false,
+      "virtualSec": 9.525,
+      "completed": true,
+      "elapsedSec": 9.040000000000006,
+      "racketHits": 1,
+      "actor": {
+        "character": {
+          "id": "default",
+          "name": "ビー玉",
+          "sizeRatio": 0.55,
+          "frictionK": 1,
+          "restitutionK": 1,
+          "accelK": 1
+        },
+        "x": 5.5538700876505125,
+        "y": 4.782693713426365,
+        "vx": 0.045533446521013814,
+        "vy": -1.2577165113653064,
+        "r": 0.275
+      },
+      "trace": [
+        {
+          "tick": 0,
+          "waypoint": 0,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 0.5,
+            "y": 0.5,
+            "vx": 0,
+            "vy": 0,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 0,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 27,
+          "waypoint": 0,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.806615638171661,
+            "y": 0.7594346706820059,
+            "vx": -0.5937530952145628,
+            "vy": -0.035768288810522866,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 2.0000000000000013,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 40,
+          "waypoint": 1,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.619948283198708,
+            "y": 2.9037113513903536,
+            "vx": 0.06916736335341848,
+            "vy": 2.1511896817768537,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 2.896000000000002,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 44,
+          "waypoint": 1,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.652465168799819,
+            "y": 3.316187208306169,
+            "vx": 0.1244134998078759,
+            "vy": 0.5645065142031781,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 3.2000000000000024,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 67,
+          "waypoint": 2,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.4520675727642054,
+            "y": 3.411615490736671,
+            "vx": 0.48145933495403226,
+            "vy": -0.058753445468405156,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 4.848000000000003,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 80,
+          "waypoint": 3,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.7037253886142525,
+            "y": 5.456862485824373,
+            "vx": 0.03572451900326207,
+            "vy": 1.9349511121141112,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 5.744000000000004,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 83,
+          "waypoint": 3,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 1.6997100326937733,
+            "y": 5.761140763962892,
+            "vx": -0.05923738707580517,
+            "vy": 0.8184068648128809,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 5.968000000000004,
+          "racketHits": 0,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 108,
+          "waypoint": 4,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 4.698155582518399,
+            "y": 5.402937917161954,
+            "vx": -0.2776052516547777,
+            "vy": 0.5764042786263194,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 7.776000000000006,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 118,
+          "waypoint": 5,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.349659370052207,
+            "y": 5.529853653314143,
+            "vx": 0.8132028588480513,
+            "vy": -0.01705659281082913,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 8.448000000000006,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 120,
+          "waypoint": 6,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.406279602115416,
+            "y": 5.494844715954342,
+            "vx": 0.6390594077412025,
+            "vy": -0.7557395224621818,
+            "r": 0.275
+          },
+          "goalReached": false,
+          "elapsedSec": 8.528000000000006,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false
+        },
+        {
+          "tick": 127,
+          "waypoint": 6,
+          "actor": {
+            "character": {
+              "id": "default",
+              "name": "ビー玉",
+              "sizeRatio": 0.55,
+              "frictionK": 1,
+              "restitutionK": 1,
+              "accelK": 1
+            },
+            "x": 5.5538700876505125,
+            "y": 4.782693713426365,
+            "vx": 0.045533446521013814,
+            "vy": -1.2577165113653064,
+            "r": 0.275
+          },
+          "goalReached": true,
+          "elapsedSec": 9.040000000000006,
+          "racketHits": 1,
+          "lastHalt": null,
+          "paused": false
+        }
+      ]
+    }
+  },
+  {
+    "localizedReply": [
+      {
+        "scenario": "cotton",
+        "debugPlacement": {
+          "x": 4.375,
+          "y": 5.38,
+          "vx": 0,
+          "vy": 4
+        },
+        "actualPointer": {
+          "x": 0.3,
+          "y": 0
+        },
+        "debugAdvance": false,
+        "completed": true,
+        "elapsedSec": 1.0080000000000007,
+        "racketHits": 0,
+        "actor": {
+          "character": {
+            "id": "default",
+            "name": "ビー玉",
+            "sizeRatio": 0.55,
+            "frictionK": 1,
+            "restitutionK": 1,
+            "accelK": 1
+          },
+          "x": 5.224526451255361,
+          "y": 4.437973914750105,
+          "vx": 1.641496998917062,
+          "vy": -2.9427185926429957,
+          "r": 0.275
+        },
+        "trace": [
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.375,
+              "y": 5.38,
+              "vx": 0,
+              "vy": 4,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.382875102832477,
+              "y": 5.759728865373288,
+              "vx": 0.14914581581909994,
+              "vy": 3.9239325839705446,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.096,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.411751787481565,
+              "y": 6.193628700284478,
+              "vx": 0.3389349322682938,
+              "vy": 3.837013620818097,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.20800000000000007,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.45328410287574,
+              "y": 6.557884907448254,
+              "vx": 0.49924038901587797,
+              "vy": 3.764045692966733,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.30400000000000016,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.510339128084185,
+              "y": 6.337432807927191,
+              "vx": 0.6626822096511776,
+              "vy": -3.323218846991884,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.40000000000000024,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.583050882872365,
+              "y": 6.021952277388352,
+              "vx": 0.8247245665153481,
+              "vy": -3.2600216793441192,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.49600000000000033,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.687339897935278,
+              "y": 5.661466250117468,
+              "vx": 1.0104466350658061,
+              "vy": -3.187808995216817,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.6080000000000004,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.793111271823003,
+              "y": 5.358840476922358,
+              "vx": 1.1666315022974265,
+              "vy": -3.1271868969514176,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.7040000000000005,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.913714435085912,
+              "y": 5.061969693874965,
+              "vx": 1.3199072727268302,
+              "vy": -3.0677176402783513,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.8000000000000006,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 5.048863534684049,
+              "y": 4.770744459167836,
+              "vx": 1.470158422047638,
+              "vy": -3.0093793017773627,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.8960000000000007,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 5.224526451255361,
+              "y": 4.437973914750105,
+              "vx": 1.641496998917062,
+              "vy": -2.9427185926429957,
+              "r": 0.275
+            },
+            "goalReached": true,
+            "elapsedSec": 1.0080000000000007,
+            "racketHits": 0,
+            "lastHalt": null
+          }
+        ]
+      },
+      {
+        "scenario": "rackets",
+        "debugPlacement": {
+          "x": 4.375,
+          "y": 5.38,
+          "vx": 0,
+          "vy": 4
+        },
+        "actualPointer": {
+          "x": 0.3,
+          "y": 0
+        },
+        "debugAdvance": false,
+        "completed": true,
+        "elapsedSec": 0.4320000000000003,
+        "racketHits": 1,
+        "actor": {
+          "character": {
+            "id": "default",
+            "name": "ビー玉",
+            "sizeRatio": 0.55,
+            "frictionK": 1,
+            "restitutionK": 1,
+            "accelK": 1
+          },
+          "x": 5.294892788234268,
+          "y": 4.615731174749197,
+          "vx": 2.896383862315207,
+          "vy": -3.196822907005246,
+          "r": 0.275
+        },
+        "trace": [
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.375,
+              "y": 5.38,
+              "vx": 0,
+              "vy": 4,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0,
+            "racketHits": 0,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.382875102832477,
+              "y": 5.725,
+              "vx": 2.5090864539063333,
+              "vy": -3.419032017013014,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.096,
+            "racketHits": 1,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.672386932143727,
+              "y": 5.346930959314066,
+              "vx": 2.641369613921131,
+              "vy": -3.343297097631937,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.20800000000000007,
+            "racketHits": 1,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 4.932184762260044,
+              "y": 5.029544355941671,
+              "vx": 2.752227020545254,
+              "vy": -3.2797181048230275,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.30400000000000016,
+            "racketHits": 1,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 5.202493183348208,
+              "y": 4.718193447269502,
+              "vx": 2.86073428207506,
+              "vy": -3.2173481844383,
+              "r": 0.275
+            },
+            "goalReached": false,
+            "elapsedSec": 0.40000000000000024,
+            "racketHits": 1,
+            "lastHalt": null
+          },
+          {
+            "actor": {
+              "character": {
+                "id": "default",
+                "name": "ビー玉",
+                "sizeRatio": 0.55,
+                "frictionK": 1,
+                "restitutionK": 1,
+                "accelK": 1
+              },
+              "x": 5.294892788234268,
+              "y": 4.615731174749197,
+              "vx": 2.896383862315207,
+              "vy": -3.196822907005246,
+              "r": 0.275
+            },
+            "goalReached": true,
+            "elapsedSec": 0.4320000000000003,
+            "racketHits": 1,
+            "lastHalt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 412,
+    "height": 915,
+    "realPointer": true,
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.6660881032976111,
+      "y": 0.7152776978258275,
+      "vx": 3.2300841283621278,
+      "vy": 0.596322930463919,
+      "r": 0.275
+    },
+    "rackets": {
+      "before": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 1.9
+        },
+        {
+          "id": "horizontal",
+          "x": 3.2,
+          "y": 6
+        }
+      ],
+      "moving": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.8170449671700144,
+          "y": 6
+        }
+      ],
+      "neutral": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.833600046960381,
+          "y": 6
+        }
+      ]
+    },
+    "share": {
+      "page": "corogalism-racket-lab",
+      "revision": 2,
+      "version": "0.6.29",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4.5,
+      "racketRestitution": 1.2,
+      "aimAngleDeg": 40,
+      "motionTransfer": 0.2,
+      "ballTilt": 0.7,
+      "speedLimit": 24,
+      "cottonRestitution": 0.15,
+      "maxTiltAngleDeg": 30,
+      "layout": "practice",
+      "inputMode": "pointer",
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": true,
+      "completions": [],
+      "observations": []
+    },
+    "render": {
+      "hash": "8ad22c8da17974397604a9a0e818560616ae31cfd9b5ad8b7ae87eaad5f656ae",
+      "width": 961,
+      "height": 961,
+      "transform": 2.625
+    },
+    "errors": []
+  },
+  {
+    "width": 576,
+    "height": 1024,
+    "realPointer": true,
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.6660880183020788,
+      "y": 0.7152777053557811,
+      "vx": 3.230083900175322,
+      "vy": 0.5963229526609007,
+      "r": 0.275
+    },
+    "rackets": {
+      "before": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 1.9
+        },
+        {
+          "id": "horizontal",
+          "x": 3.2,
+          "y": 6
+        }
+      ],
+      "moving": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.8170449214366418,
+          "y": 6
+        }
+      ],
+      "neutral": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.8335999999999997,
+          "y": 6
+        }
+      ]
+    },
+    "share": {
+      "page": "corogalism-racket-lab",
+      "revision": 2,
+      "version": "0.6.29",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4.5,
+      "racketRestitution": 1.2,
+      "aimAngleDeg": 40,
+      "motionTransfer": 0.2,
+      "ballTilt": 0.7,
+      "speedLimit": 24,
+      "cottonRestitution": 0.15,
+      "maxTiltAngleDeg": 30,
+      "layout": "practice",
+      "inputMode": "pointer",
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": true,
+      "completions": [],
+      "observations": []
+    },
+    "render": {
+      "hash": "665cde30abaa490df90cc31720ec89e407809fc45bcc418593948a010051f93f",
+      "width": 530,
+      "height": 530,
+      "transform": 1
+    },
+    "errors": []
+  },
+  {
+    "sensor": "granted",
+    "mode": "pointer",
+    "gestures": [
+      "sensor",
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "sensor": "denied",
+    "mode": "pointer",
+    "gestures": [
+      "sensor",
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "sensor": "silent",
+    "mode": "pointer",
+    "gestures": [
+      "sensor",
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "sensor": "unsupported",
+    "mode": "pointer",
+    "gestures": [
+      "fullscreen"
+    ],
+    "errors": []
+  },
+  {
+    "savedSettings": true,
+    "maxTiltAngleDeg": 31,
+    "soundEnabled": false
+  },
+  {
+    "oldRendererGuard": true
+  },
+  {
+    "offline": true,
+    "cache": {
+      "names": [
+        "corogalism-3094062a11076d0c"
+      ],
+      "files": 114,
+      "racketFiles": [
+        "/racket-lab.css",
+        "/racket-lab.html",
+        "/src/lab/racketBoot.js",
+        "/src/lab/racketLab.js",
+        "/src/lab/racketPhysics.js",
+        "/src/lab/racketRender.js",
+        "/src/lab/racketStage.js"
+      ]
+    },
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 0.8397007831414718,
+      "y": 0.8088189874004043,
+      "vx": 1.6269272600852507,
+      "vy": 1.4790252303433773,
+      "r": 0.275
+    },
+    "rackets": [
+      {
+        "id": "vertical",
+        "x": 5.4,
+        "y": 2
+      },
+      {
+        "id": "horizontal",
+        "x": 3.80333272975131,
+        "y": 6
+      }
+    ],
+    "errors": []
+  }
+]

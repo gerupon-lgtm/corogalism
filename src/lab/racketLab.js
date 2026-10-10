@@ -41,8 +41,8 @@ function refresh(){
   $('scenario').value=settings.mode;$('layout').value=settings.layout;$('mix-cotton').checked=settings.cotton;
   $('cotton-choice').hidden=settings.mode!=='rackets';
   $('hint').textContent=settings.mode==='rackets'
-    ?'紫の縦ラケットは上下、横ラケットは左右へ。中心でまっすぐ、端で斜めに。綿で受け止めて狙い直せます。'
-    :settings.mode==='cotton'?'白い綿は勢いを受け止めます。斜めに当てると壁沿いに滑り、傾けるとまた動けます。':'本編と同じビー玉・氷・ゴムの動き。右下のカップまで、傾きで導いてみよう。';
+    ?'紫の縦ラケットは上下、横ラケットは左右へ。中心でまっすぐ、端で斜めに。'+(settings.layout==='relay'?'下から打ち返して、内側のカップを狙おう。':'綿で受け止めて狙い直せます。')
+    :settings.mode==='cotton'?'白い綿は勢いを受け止めます。斜めに当てると壁沿いに滑り、傾けるとまた動けます。':'本編と同じビー玉・氷・ゴムの動き。'+(settings.layout==='relay'?'カップの入口は下側。折り返して導いてみよう。':'右下のカップまで、傾きで導いてみよう。');
   for(const [id,key]of Object.entries(bindings))$(id).value=settings[key];
   const cotton=stage.walls.find(w=>w.materialId==='cotton');
   const cottonBounce=cotton?resolveParams({base:BASE,character:actor.character,material:{...getMaterial('cotton'),...cotton.physicsMaterial}}).restitution:null;
@@ -111,7 +111,7 @@ for(const [id,key]of Object.entries(bindings))$(id).oninput=()=>{
 };
 $('defaults').onclick=()=>{gesture();Object.assign(settings,defaults);reset();};
 $('copy').onclick=async()=>{
-  const data={page:'corogalism-racket-lab',revision:1,version:'0.6.28',...settings,mode:settings.mode,inputMode:mode,elapsedSec,racketHits,goalReached,edited:trialEdited,completions,observations};
+  const data={page:'corogalism-racket-lab',revision:2,version:'0.6.29',...settings,mode:settings.mode,inputMode:mode,elapsedSec,racketHits,goalReached,edited:trialEdited,completions,observations};
   const text=JSON.stringify(data,null,2);$('settings-text').hidden=false;$('settings-text').value=text;
   try{await navigator.clipboard.writeText(text);$('copy-status').textContent='設定と試遊結果をコピーしました。';}catch{$('settings-text').select();$('copy-status').textContent='下の設定を選択してコピーしてください。';}
 };

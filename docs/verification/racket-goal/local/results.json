@@ -1,0 +1,250 @@
+[
+  {
+    "width": 312,
+    "renderDiagnostic": {
+      "original": {
+        "hash": "ccf0a9b2d4226717be84976b8b5c8ada8cfdcc4d0a74457d18cc17216bad527f",
+        "width": 266,
+        "height": 266,
+        "transform": 1
+      },
+      "resized": {
+        "hash": "3f63da91f12364da893b52190cf9ef904630cba2f6feb5cfba2258af57f5ec7e",
+        "width": 266,
+        "height": 266,
+        "transform": 1
+      },
+      "pixels": {
+        "different": 2,
+        "maxChannelDelta": 1,
+        "transparent": 0,
+        "bounds": {
+          "minX": 11,
+          "minY": 33,
+          "maxX": 47,
+          "maxY": 35
+        }
+      },
+      "priorStrictHashFailure": true
+    }
+  },
+  {
+    "width": 312,
+    "height": 720,
+    "realPointer": true,
+    "actor": {
+      "character": {
+        "id": "default",
+        "name": "ビー玉",
+        "sizeRatio": 0.55,
+        "frictionK": 1,
+        "restitutionK": 1,
+        "accelK": 1
+      },
+      "x": 1.66608799083361,
+      "y": 0.7152776752637247,
+      "vx": 3.2300838269518253,
+      "vy": 0.5963228698342413,
+      "r": 0.275
+    },
+    "rackets": {
+      "before": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 1.9
+        },
+        {
+          "id": "horizontal",
+          "x": 3.2,
+          "y": 6
+        }
+      ],
+      "moving": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.8170449843630134,
+          "y": 6
+        }
+      ],
+      "neutral": [
+        {
+          "id": "vertical",
+          "x": 5.4,
+          "y": 2
+        },
+        {
+          "id": "horizontal",
+          "x": 3.8336000646146626,
+          "y": 6
+        }
+      ]
+    },
+    "share": {
+      "page": "corogalism-racket-lab",
+      "revision": 2,
+      "version": "0.6.29",
+      "mode": "rackets",
+      "cotton": true,
+      "racketSpeed": 4.5,
+      "racketRestitution": 1.2,
+      "aimAngleDeg": 40,
+      "motionTransfer": 0.2,
+      "ballTilt": 0.7,
+      "speedLimit": 24,
+      "cottonRestitution": 0.15,
+      "maxTiltAngleDeg": 30,
+      "layout": "practice",
+      "inputMode": "pointer",
+      "elapsedSec": 0,
+      "racketHits": 0,
+      "goalReached": false,
+      "edited": true,
+      "completions": [],
+      "observations": []
+    },
+    "render": {
+      "hash": "ccf0a9b2d4226717be84976b8b5c8ada8cfdcc4d0a74457d18cc17216bad527f",
+      "width": 266,
+      "height": 266,
+      "transform": 1
+    },
+    "errors": []
+  },
+  {
+    "shots": [
+      {
+        "axis": "y",
+        "offset": 0,
+        "actor": {
+          "x": 5.125,
+          "y": 2.55,
+          "vx": -4.24293565978786,
+          "vy": 0
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "y",
+        "offset": -0.75,
+        "actor": {
+          "x": 5.125,
+          "y": 2.0625,
+          "vx": -3.1900079296005934,
+          "vy": -2.797561871019974
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "y",
+        "offset": 0.75,
+        "actor": {
+          "x": 5.125,
+          "y": 3.0374999999999996,
+          "vx": -3.1900079296005934,
+          "vy": 2.797561871019974
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": 0,
+        "actor": {
+          "x": 2.85,
+          "y": 5.725,
+          "vx": 0,
+          "vy": -4.24293565978786
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": -0.75,
+        "actor": {
+          "x": 2.3625,
+          "y": 5.725,
+          "vx": -2.7975618710199766,
+          "vy": -3.1900079296005917
+        },
+        "hits": 1,
+        "halt": null
+      },
+      {
+        "axis": "x",
+        "offset": 0.75,
+        "actor": {
+          "x": 3.3375000000000004,
+          "y": 5.725,
+          "vx": 2.7975618710199766,
+          "vy": -3.1900079296005917
+        },
+        "hits": 1,
+        "halt": null
+      }
+    ],
+    "postRacketTilt": {
+      "vyBefore": 0,
+      "vyAfter": -0.0805444638943189
+    },
+    "cottonComparison": [
+      {
+        "scenario": "baseline",
+        "actor": {
+          "x": 6.291199683441447,
+          "y": 3.6566854534280613,
+          "vx": -3.458841980948364,
+          "vy": 0.7686315513218586
+        },
+        "halt": null
+      },
+      {
+        "scenario": "cotton",
+        "actor": {
+          "x": 6.6049999999999995,
+          "y": 3.6566854534280613,
+          "vx": 0,
+          "vy": 0.7686315513218586
+        },
+        "halt": null
+      }
+    ]
+  },
+  {
+    "width": 412,
+    "renderDiagnostic": {
+      "original": {
+        "hash": "8ad22c8da17974397604a9a0e818560616ae31cfd9b5ad8b7ae87eaad5f656ae",
+        "width": 961,
+        "height": 961,
+        "transform": 2.625
+      },
+      "resized": {
+        "hash": "6d50b9a4f1e04e62e2fffa5f25a3c3b31f4935c3a330c42df5247dec8f36912f",
+        "width": 961,
+        "height": 961,
+        "transform": 2.625
+      },
+      "pixels": {
+        "different": 923521,
+        "maxChannelDelta": 255,
+        "transparent": 923521,
+        "bounds": {
+          "minX": 0,
+          "minY": 0,
+          "maxX": 960,
+          "maxY": 960
+        }
+      },
+      "priorStrictHashFailure": true
+    }
+  }
+]

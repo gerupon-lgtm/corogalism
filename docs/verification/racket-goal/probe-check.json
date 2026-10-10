@@ -1,0 +1,10 @@
+{
+  "command": "node --test test/racket-stage.test.js",
+  "tests": 8,
+  "pass": 8,
+  "fail": 0,
+  "exitCode": 0,
+  "finalStageSha256": "5acb0e0f8638e79b561507416e5d096232451da93df8e1397cb88f405ec67866",
+  "probe": {"x":4.5,"y":6.58,"radius":0.275},
+  "note": "prepared probe clears both racket bottom and outer wall; original y6.5 overlapped racket by0.015"
+}
