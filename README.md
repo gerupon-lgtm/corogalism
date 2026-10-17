@@ -1,5 +1,7 @@
 # コロガリズム / Corogalism
 
+**v0.7.4 / T-293:** 回転して縦へ戻した後も、盤面の実寸へ描画を合わせる修正。公開確認は進行中、iPhone実機の再発有無は未確認。[原因と確認範囲](docs/verification/rotation-recovery.md)。以下の旧版記述は当時の履歴を含み、最新状況は[引き継ぎ](docs/handoff-codex.md)を優先してください。
+
 端末の傾きでビー玉を転がし、迷路のゴールを目指すブラウザゲーム。シクミラボ / SIKUMI LAB。
 センサーが使えない場合は、盤面のタッチ／クリックで同じゲームを遊べます。
 Vanilla JavaScript・Canvas、ビルド不要。バックエンド・外部API・生成AIは使いません。

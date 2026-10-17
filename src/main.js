@@ -77,6 +77,7 @@ let audibleCountdown = null;
 let lastFrame = performance.now();
 let endActionTimer = null;
 let restoreEndAction = null;
+let resizeFrame = null;
 let shield = { value: 0 };
 const tutorial = createTutorialUi();
 const floorPresentation=createFloorPresentation(root);
@@ -206,7 +207,19 @@ function saveRunProgress() {
 }
 
 function resize() {
-  if (play && !boardEl.hidden) camera = createFixedCamera(play.stage, renderer.resize(boardEl.clientWidth));
+  if (!play || boardEl.hidden) return;
+  const width = boardEl.clientWidth;
+  // 回転や非表示からの復帰途中の0幅で、保存画像・カメラを縮めない。
+  if (width > 0) camera = createFixedCamera(play.stage, renderer.resize(width));
+}
+
+function scheduleResize() {
+  if (resizeFrame !== null) return;
+  resizeFrame = requestAnimationFrame(() => {
+    resizeFrame = null;
+    resize();
+    updateHint();
+  });
 }
 
 function updateHint() {
@@ -574,8 +587,16 @@ root.addEventListener('click', (event) => {
 });
 settingsUi.onCalibrate(calibrate);
 settingsUi.onClose(() => showScreen(['game', 'clear', 'over'].includes(settingsUi.returnTo) ? settingsUi.returnTo : 'mode'));
-window.addEventListener('resize', () => { resize(); updateHint(); });
+// 回転のresize通知より後にsvh等の配置が確定する場合も、実際の盤面幅へ追従する。
+// canvasの寸法とカメラを同じ処理で更新し、球や進行状態は作り直さない。
+if (typeof ResizeObserver === 'function') new ResizeObserver(resize).observe(boardEl);
+window.addEventListener('resize', scheduleResize);
+window.addEventListener('orientationchange', scheduleResize);
+window.addEventListener('pageshow', scheduleResize);
+window.visualViewport?.addEventListener('resize', scheduleResize);
+document.addEventListener('fullscreenchange', scheduleResize);
 document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) scheduleResize();
   if (document.hidden && screen === 'game') setPaused(true);
   if (document.hidden) sound.stopEffects();
   updateAudio();

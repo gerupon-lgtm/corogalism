@@ -1,0 +1,10 @@
+{
+  "version": "0.7.3",
+  "base": "http://127.0.0.1:8786/",
+  "rows": [
+    {
+      "engine": "chromium",
+      "error": "AssertionError [ERR_ASSERTION]: portrait dimensions"
+    }
+  ]
+}
