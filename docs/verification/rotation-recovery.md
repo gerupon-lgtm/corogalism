@@ -38,7 +38,11 @@ PC ChromeとPC WebKitで、実アプリの盤面を縮めてresizeを通知し�
 
 以前の描画復元検証は100条件で倍率・画像一致・残像なし、失敗0。通知なし・画素倍率1の5診断条件は成功件数に含めない。[既存対策の再確認](rotation-recovery/render-local/recovery.json)。122資材を保存した完全オフラインで、動く壁の遊び方の通常床・通常壁とpointer入力も成功。[オフライン](rotation-recovery/offline-local/results.json)。
 
-公開先の結果・資材一致は公開完了時に追記する。iPhone実機で回転後も正常か、センサーや音を含めた実機での再発有無は追加確認の対象。
+公開アプリ`b30fe8d6c4bd7afcffbb2db03445461f9350d21e`、[Pages39027473725成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/39027473725)。正式URL https://corogalism.sikumilab.com/ 。公開Chrome／PC WebKitでも28記録が成功し、復帰後の幅一致・状態保持・実pointer移動・透明領域0・エラー0を確認。[公開結果](rotation-recovery/public/results.json)。公開122資材の完全オフラインで遊び方とpointer操作も成功。[公開オフライン](rotation-recovery/offline-public/results.json)。
+
+公開125資材すべてHTTP200・SHA-256一致。[全資材](rotation-recovery/deploy-hashes.json)。正式URLの主要6資材は本文とContent-Typeも一致。[形式と本文](rotation-recovery/deploy-headers.json)。
+
+iPhone実機で回転後も正常か、センサーや音を含めた実機での再発有無は追加確認の対象。
 
 ## 再実行
 

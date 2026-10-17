@@ -1,0 +1,38 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "contentType": "text/html",
+    "match": true
+  },
+  {
+    "path": "src/main.js",
+    "status": 200,
+    "contentType": "application/javascript",
+    "match": true
+  },
+  {
+    "path": "src/render/canvasRenderer.js",
+    "status": 200,
+    "contentType": "application/javascript",
+    "match": true
+  },
+  {
+    "path": "style.css",
+    "status": 200,
+    "contentType": "text/css",
+    "match": true
+  },
+  {
+    "path": "precache.js",
+    "status": 200,
+    "contentType": "application/javascript",
+    "match": true
+  },
+  {
+    "path": "package.json",
+    "status": 200,
+    "contentType": "application/json",
+    "match": true
+  }
+]
