@@ -47,15 +47,20 @@ export function createSoundManager(initial, onStatus = () => {}) {
     } catch { /* 既に終了した短い音も停止対象にできる。 */ }
   }
 
-  function startVoice(name, { loop = false, offset = 0, duration, gain = 1, delay = 0, rate = 1 } = {}) {
+  function startVoice(name, { loop = false, offset = 0, duration, gain = 1, delay = 0, rate = 1, attackSec = 0 } = {}) {
     const buffer = buffers.get(name) || (name === 'select' ? instantSelect : null);
     if (!available() || !buffer) return null;
     try {
       const source = context.createBufferSource(), node = context.createGain();
       source.buffer = buffer; source.loop = loop; source.playbackRate.value=rate;
-      node.gain.value = gain;
+      const at = context.currentTime + delay;
+      node.gain.value = attackSec > 0 ? 0 : gain;
+      if (attackSec > 0) {
+        node.gain.setValueAtTime(0, at);
+        node.gain.linearRampToValueAtTime(gain, at + attackSec);
+      }
       source.connect(node); node.connect(name === 'bgm' || name.startsWith('bgm:') ? bgmGain : seGain);
-      const voice = { source, gain: node, at: context.currentTime + delay, offset };
+      const voice = { source, gain: node, at, offset };
       source.onended = () => { source.disconnect(); node.disconnect(); voices.delete(voice); };
       if (duration === undefined) source.start(voice.at, offset);
       else source.start(voice.at, offset, duration);
@@ -103,8 +108,9 @@ export function createSoundManager(initial, onStatus = () => {}) {
       stopVoice(music, true, AUDIO.musicFadeSec); music = null;
     }
     if (wantsMusic && !music) {
-      music = startVoice(musicName, { loop: true, offset: 0, gain: 0 });
-      if (music) { music.track = track; ramp(music.gain.gain, 1, AUDIO.musicFadeSec); }
+      // 冒頭の打音を長いフェードで消さない。開始ノイズだけ5msで抑える。
+      music = startVoice(musicName, { loop: true, offset: 0, attackSec: AUDIO.musicAttackSec });
+      if (music) music.track = track;
     }
     const speed = Math.min(1, Math.max(0, scene.speed / AUDIO.rollingFullSpeed));
     const wantsRolling = available() && prefs.seVolume > 0 && scene.speed > AUDIO.rollingMinSpeed;

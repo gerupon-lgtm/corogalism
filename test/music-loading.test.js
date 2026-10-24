@@ -5,7 +5,7 @@ import {createSoundManager} from '../src/audio/soundManager.js';
 test('遅れて届いた前の曲や停止中に届いた曲を勝手に再生しない',async()=>{
   const saved={AudioContext:globalThis.AudioContext,fetch:globalThis.fetch};
   const pending=new Map(),starts=[],requests=[];
-  const param=()=>({value:0,cancelScheduledValues(){},setTargetAtTime(){}});
+  const param=()=>({value:0,cancelScheduledValues(){},setTargetAtTime(){},setValueAtTime(){},linearRampToValueAtTime(){}});
   class Audio{
     constructor(){this.state='running';this.currentTime=0;this.sampleRate=44100;}
     createGain(){return {gain:param(),connect(){},disconnect(){}};}

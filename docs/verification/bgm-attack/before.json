@@ -1,0 +1,87 @@
+{
+  "note": "Chrome OfflineAudioContext: actual SoundManager, steady sine instead of WAV, 60 frame updates per second. Device output not measured.",
+  "rows": [
+    {
+      "fadeSec": 0.06,
+      "levels": [
+        {
+          "ms": 0,
+          "ratioToSettled": 0.06777587416456357
+        },
+        {
+          "ms": 10,
+          "ratioToSettled": 0.367606881158656
+        },
+        {
+          "ms": 20,
+          "ratioToSettled": 0.611814677727946
+        },
+        {
+          "ms": 40,
+          "ratioToSettled": 0.856491374393744
+        },
+        {
+          "ms": 60,
+          "ratioToSettled": 0.947144645572097
+        },
+        {
+          "ms": 100,
+          "ratioToSettled": 0.9928430804773998
+        },
+        {
+          "ms": 140,
+          "ratioToSettled": 0.9990312149044233
+        },
+        {
+          "ms": 200,
+          "ratioToSettled": 0.9999681756952271
+        },
+        {
+          "ms": 500,
+          "ratioToSettled": 1
+        }
+      ]
+    },
+    {
+      "fadeSec": 0.14,
+      "levels": [
+        {
+          "ms": 0,
+          "ratioToSettled": 0.030282265259407963
+        },
+        {
+          "ms": 10,
+          "ratioToSettled": 0.18116476732294715
+        },
+        {
+          "ms": 20,
+          "ratioToSettled": 0.3357165768280207
+        },
+        {
+          "ms": 40,
+          "ratioToSettled": 0.5662430089414808
+        },
+        {
+          "ms": 60,
+          "ratioToSettled": 0.7172323135285306
+        },
+        {
+          "ms": 100,
+          "ratioToSettled": 0.8799418977417781
+        },
+        {
+          "ms": 140,
+          "ratioToSettled": 0.9490426570792944
+        },
+        {
+          "ms": 200,
+          "ratioToSettled": 0.9859112794213192
+        },
+        {
+          "ms": 500,
+          "ratioToSettled": 1
+        }
+      ]
+    }
+  ]
+}

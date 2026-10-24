@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 const playwright=await import(process.env.PLAYWRIGHT_MODULE);
 const engine=process.env.V080_ENGINE||'chromium';
+const version=process.env.APP_VERSION||'0.8.0';
 const base=process.env.BASE_URL||'http://127.0.0.1:8794/';
 const out=process.env.V080_OUTPUT||'docs/verification/v0.8.0/local';
 const phase=process.env.V080_PHASE||'ui';
@@ -64,7 +65,7 @@ async function next(p){
 async function ui(){
  for(const [width,height]of [[390,780],[360,740],[312,780]]){
   const f=await fixture({width,height,records:true}),{page}=f;
-  assert.equal(await page.locator('.badge').first().textContent(),'v0.8.0');
+  assert.equal(await page.locator('.badge').first().textContent(),'v'+version);
   assert.equal(await page.locator('#btn-puzzle-tutorial').isVisible(),false);
   assert.equal(await page.locator('#btn-floor-practice').isVisible(),false);
   assert.equal(await page.locator('#mode-records').getAttribute('open'),null);
@@ -156,4 +157,4 @@ async function offline(){
 }
 try{if(phase==='ui')await ui();else if(phase==='music')await music();else if(phase==='offline')await offline();else throw Error('unknown phase');}
 catch(error){rows.push({name:'failure',error:String(error),state:active&&!active.isClosed()?await state(active).catch(()=>null):null});if(active&&!active.isClosed())await active.screenshot({path:`${out}/failure.png`,fullPage:true});throw error;}
-finally{await writeFile(`${out}/results-${phase}.json`,JSON.stringify({base,version:'0.8.0',phase,rows},null,2)+'\n');await browser.close();}
+finally{await writeFile(`${out}/results-${phase}.json`,JSON.stringify({base,version,phase,rows},null,2)+'\n');await browser.close();}

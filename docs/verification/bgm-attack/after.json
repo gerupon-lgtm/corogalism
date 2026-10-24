@@ -1,0 +1,47 @@
+{
+  "note": "Chrome OfflineAudioContext: actual SoundManager, steady sine instead of WAV, 60 frame updates per second. Device output not measured.",
+  "rows": [
+    {
+      "stopFadeSec": 0.14,
+      "startAttackSec": 0.005,
+      "levels": [
+        {
+          "ms": 0,
+          "ratioToSettled": 0.29177160872105146
+        },
+        {
+          "ms": 10,
+          "ratioToSettled": 0.9905970945043683
+        },
+        {
+          "ms": 20,
+          "ratioToSettled": 1
+        },
+        {
+          "ms": 40,
+          "ratioToSettled": 1
+        },
+        {
+          "ms": 60,
+          "ratioToSettled": 1
+        },
+        {
+          "ms": 100,
+          "ratioToSettled": 1
+        },
+        {
+          "ms": 140,
+          "ratioToSettled": 1
+        },
+        {
+          "ms": 200,
+          "ratioToSettled": 1
+        },
+        {
+          "ms": 500,
+          "ratioToSettled": 1
+        }
+      ]
+    }
+  ]
+}

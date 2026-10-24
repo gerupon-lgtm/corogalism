@@ -1,0 +1,273 @@
+{
+  "base": "http://127.0.0.1:8794/",
+  "version": "0.8.1",
+  "phase": "music",
+  "rows": [
+    {
+      "name": "stage-music",
+      "stage": 1,
+      "theme": "basic",
+      "track": "default",
+      "audio": {
+        "rms": 0.10895294682498359,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 2.752
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 2,
+      "theme": "basic",
+      "track": "default",
+      "audio": {
+        "rms": 0.05750310541086992,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 8.610666666666667
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 3,
+      "theme": "sand",
+      "track": "default",
+      "audio": {
+        "rms": 0.05750310541086992,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 11.770666666666667
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 4,
+      "theme": "iceRubber",
+      "track": "slide",
+      "audio": {
+        "rms": 0.07150486337147671,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 14.792
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 5,
+      "theme": "gravityAssist",
+      "track": "force",
+      "audio": {
+        "rms": 0.027301838239773973,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 20.621333333333332
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 6,
+      "theme": "iceSand",
+      "track": "slide",
+      "audio": {
+        "rms": 0.07495380881932152,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 26.88
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 7,
+      "theme": "repulsionAssist",
+      "track": "force",
+      "audio": {
+        "rms": 0.016627441077930346,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 30.501333333333335
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 8,
+      "theme": "iceAssist",
+      "track": "force",
+      "audio": {
+        "rms": 0.027301838239773973,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 34.26133333333333
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 9,
+      "theme": "rest",
+      "track": "rest",
+      "audio": {
+        "rms": 0.0630330381630424,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 34.909083333333335,
+          "when": 37.64
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 10,
+      "theme": "iceSand",
+      "track": "slide",
+      "audio": {
+        "rms": 0.08851977513854087,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 43.48
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 11,
+      "theme": "sticky",
+      "track": "default",
+      "audio": {
+        "rms": 0.09691244975412552,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 46.730666666666664
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 12,
+      "theme": "careful",
+      "track": "default",
+      "audio": {
+        "rms": 0.09691244975412552,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 49.89066666666667
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 13,
+      "theme": "gravityHinder",
+      "track": "force",
+      "audio": {
+        "rms": 0.027301838239773973,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 53.181333333333335
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 14,
+      "theme": "rest",
+      "track": "rest",
+      "audio": {
+        "rms": 0.04951647967483359,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 34.909083333333335,
+          "when": 56.432
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 15,
+      "theme": "repulsionHinder",
+      "track": "force",
+      "audio": {
+        "rms": 0.027301838239773973,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 59.96
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 16,
+      "theme": "iceAssist",
+      "track": "force",
+      "audio": {
+        "rms": 0.031548389503374144,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 64.032
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 17,
+      "theme": "puzzle",
+      "puzzle": "racket",
+      "track": "puzzle",
+      "audio": {
+        "rms": 0.059112177856957056,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 28.4444375,
+          "when": 67.872
+        }
+      }
+    },
+    {
+      "name": "five-tracks-pause-mute",
+      "tracks": [
+        "default",
+        "slide",
+        "force",
+        "rest",
+        "puzzle"
+      ]
+    }
+  ]
+}
