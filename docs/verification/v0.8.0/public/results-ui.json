@@ -1,0 +1,128 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "version": "0.8.0",
+  "phase": "ui",
+  "rows": [
+    {
+      "name": "home",
+      "width": 390,
+      "height": 780,
+      "level": "normal",
+      "bounds": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 780,
+        "scrollHeight": 780,
+        "title": "26px"
+      }
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "height": 780,
+      "level": "easy",
+      "bounds": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 780,
+        "scrollHeight": 780,
+        "title": "26px"
+      }
+    },
+    {
+      "name": "records-and-entries",
+      "width": 390,
+      "preservedSyntheticBest": 107,
+      "legacy": 108
+    },
+    {
+      "name": "home",
+      "width": 360,
+      "height": 740,
+      "level": "normal",
+      "bounds": {
+        "width": 360,
+        "scrollWidth": 360,
+        "height": 740,
+        "scrollHeight": 740,
+        "title": "26px"
+      }
+    },
+    {
+      "name": "home",
+      "width": 360,
+      "height": 740,
+      "level": "easy",
+      "bounds": {
+        "width": 360,
+        "scrollWidth": 360,
+        "height": 740,
+        "scrollHeight": 740,
+        "title": "26px"
+      }
+    },
+    {
+      "name": "records-and-entries",
+      "width": 360,
+      "preservedSyntheticBest": 107,
+      "legacy": 108
+    },
+    {
+      "name": "home",
+      "width": 312,
+      "height": 780,
+      "level": "normal",
+      "bounds": {
+        "width": 312,
+        "scrollWidth": 312,
+        "height": 780,
+        "scrollHeight": 780,
+        "title": "26px"
+      }
+    },
+    {
+      "name": "home",
+      "width": 312,
+      "height": 780,
+      "level": "easy",
+      "bounds": {
+        "width": 312,
+        "scrollWidth": 312,
+        "height": 780,
+        "scrollHeight": 780,
+        "title": "26px"
+      }
+    },
+    {
+      "name": "records-and-entries",
+      "width": 312,
+      "preservedSyntheticBest": 107,
+      "legacy": 108
+    },
+    {
+      "name": "actual-practice-pointer",
+      "before": {
+        "x": 0.5,
+        "y": 0.5,
+        "vx": 0,
+        "vy": 0,
+        "r": 0.275
+      },
+      "after": {
+        "x": 1.202926076971823,
+        "y": 0.605,
+        "vx": 2.344927332355307,
+        "vy": -0.013685487052732509,
+        "r": 0.275
+      },
+      "pauseResume": true
+    },
+    {
+      "name": "tutorial-start",
+      "hp": {
+        "value": 100,
+        "max": 100
+      }
+    }
+  ]
+}
