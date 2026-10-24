@@ -4,7 +4,7 @@
 
 既存のアイテム説明内へ、キャンディは「20％回復。げんき満タンでは取れません。」、葉っぱは「ダメージを肩代わり。まもり満タンでは取れません。」を追記。項目や注釈の欄は増やさず、取得条件自体は変更しない。説明は基本チュートリアルでも共有する。詳しい上限・持ち越しは[player-rules.md](player-rules.md)へ整理済み。
 
-Chrome／PC WebKitの312・390・412px幅で折り返しと横はみ出し、閉じた後の元の位置・フォーカス、ポーズから開閉した後の停止維持を確認。旧本文だけへ戻した同じ画面との比較で、スクロール増は312px幅で24px、390・412px幅で12px。カードや文字を縮めていない。検証用スクリプトはWebKitの非同期のcloseイベントを待つ形に修正した。公開確認中。証拠はverification/v0.8.4/local・webkit-local。iOS／Android実機の表示は未確認。
+Chrome／PC WebKitの312・390・412px幅で折り返しと横はみ出し、閉じた後の元の位置・フォーカス、ポーズから開閉した後の停止維持を確認。旧本文だけへ戻した同じ画面との比較で、スクロール増は312px幅で24px、390・412px幅で12px。カードや文字を縮めていない。検証用スクリプトはWebKitの非同期のcloseイベントを待つ形に修正した。公開確認完了：アプリ17d4a20、[Pages40087847817成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/40087847817)。公開133資材の本文と音声・JavaScript・CSS・HTMLの形式が一致。公開Chromeでも3幅の表示・開閉・ポーズ維持、130資材のオフライン再読込後の同じガイドが成功し、ブラウザエラー0件。キャッシュf3d50216170f49be。証拠：[公開表示](verification/v0.8.4/public/guide-items.json)、[資材照合](verification/v0.8.4/public/assets.json)、[オフライン](verification/v0.8.4/public-offline/guide-items.json)、ローカルはverification/v0.8.4/local・webkit-local。iOS／Android実機の表示は未確認。
 
 以下は過去の履歴。
 

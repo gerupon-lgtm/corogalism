@@ -1,0 +1,39 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "version": "0.8.4",
+  "engine": "chromium",
+  "offline": true,
+  "rows": [
+    {
+      "width": 390,
+      "height": 844,
+      "before": {
+        "scrollHeight": 1785,
+        "clientHeight": 812,
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "cards": [
+          52,
+          52
+        ]
+      },
+      "after": {
+        "scrollHeight": 1797,
+        "clientHeight": 812,
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "cards": [
+          52,
+          64.1875
+        ]
+      },
+      "text": [
+        "20％回復。げんき満タンでは取れません。",
+        "ダメージを肩代わり。まもり満タンでは取れません。"
+      ],
+      "addedScroll": 12,
+      "paragraphsFit": true,
+      "errors": []
+    }
+  ]
+}
