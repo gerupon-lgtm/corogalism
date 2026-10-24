@@ -1,0 +1,33 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "rows": [
+    {
+      "width": 312,
+      "shield": 40,
+      "maxHp": 80,
+      "geometry": {
+        "boardBottom": 495.4375,
+        "noticeTop": 501.4375,
+        "noticeLeft": 71,
+        "noticeRight": 241,
+        "width": 312
+      },
+      "oncePerContact": true,
+      "reentry": true
+    },
+    {
+      "width": 390,
+      "shield": 40,
+      "maxHp": 80,
+      "geometry": {
+        "boardBottom": 559.046875,
+        "noticeTop": 565.046875,
+        "noticeLeft": 110,
+        "noticeRight": 280,
+        "width": 390
+      },
+      "oncePerContact": true,
+      "reentry": true
+    }
+  ]
+}

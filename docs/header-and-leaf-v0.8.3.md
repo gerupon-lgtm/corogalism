@@ -24,4 +24,8 @@
 
 関連5ファイル28テスト成功。ChromeとPC WebKitの各8画面条件で、木枠上端とチャレンジ盤面上端、枠幅とブランド行の一致を確認済み。Chrome312／390pxの実ゲームへ同じ葉っぱを繰り返し配置するテスト条件で、げんき満タンのまま取得・まもり上限で未取得・盤面外の理由表示・接触中の非反復・再接触通知が成功。取得と加算は本物のゲーム処理を使った。元のアイテム数を増やした本番仕様ではない。
 
-公開確認中。キャッシュf29a3e2f1ab631da・130資材。証拠はverification/v0.8.3。iOS／Android実機の見え方と操作感は未確認。
+公開確認完了。アプリa734584、[Pages40077821141成功](https://github.com/gerupon-lgtm/corogalism/actions/runs/40077821141)。キャッシュf29a3e2f1ab631da・130資材。公開133資材の本文と、音声・JavaScript・CSS・HTMLの配信形式が一致した。
+
+公開Chromeでも8画面条件の木枠上端・横幅・ロゴ行の一致、回転復帰、紹介から戻った後の位置を確認。312／390pxで葉っぱの取得・上限時の案内・接触中の非反復・再接触通知が成功。オフライン再読込後の1〜17面の進行とBGM5曲の再生も成功した。面の進行は確認用のゴールへの移動を使っており、人が17面を完走した結果ではない。各確認のブラウザエラーは0件。
+
+証拠：[公開資材の照合](verification/v0.8.3/public/assets.json)、[公開ヘッダー](verification/v0.8.3/public/header-alignment.json)、[公開の葉っぱ案内](verification/v0.8.3/public/leaf-full.json)、[オフライン](verification/v0.8.3/public/results-offline.json)、[関連テスト](verification/v0.8.3/tests.txt)。iOS／Android実機の見え方と操作感は未確認。
