@@ -18,6 +18,6 @@ v0.8.0では、BGM開始と停止に共通の時間を60msから140msへ延長�
 
 ## 確認状況
 
-ローカルChromeで1〜17面の5曲の実音声出力、停止・再開、音OFF/ONが成功。曲の先頭開始とループも維持。到達には検証用の位置変更を使い、人の17面完走ではない。ページ・console・通信のエラーなし。公開前。
+ローカルChromeで1〜17面の5曲の実音声出力、停止・再開、音OFF/ONが成功。曲の先頭開始とループも維持。到達には検証用の位置変更を使い、人の17面完走ではない。ページ・console・通信のエラーなし。アプリfc060d8、[Pages40073017343](https://github.com/gerupon-lgtm/corogalism/actions/runs/40073017343)成功。公開132資材（実行129＋precache・SW・CNAME）の本文と配信形式を確認。公開版の実SoundManagerの音声計算でも20ms以降100%。129資材のオフライン再読込と5曲再生も成功。公開証拠はverification/v0.8.1/public。
 
 再測定はtools/probe-bgm-attack.mjs。記録はverification/bgm-attack/before.json、after.json。v0.8.0の前後比較は一定振幅の音で行い、曲ごとの音量・端末の音質の評価とは区別する。iOS／Android実機での再確認は未実施。

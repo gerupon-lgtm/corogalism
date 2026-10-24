@@ -1,5 +1,6 @@
 /** 実際のSoundManagerを一定振幅の音で動かし、開始音量の変化を測定する。 */
 import {mkdir,writeFile} from 'node:fs/promises';
+import {dirname} from 'node:path';
 import assert from 'node:assert/strict';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
 const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});
@@ -37,8 +38,9 @@ try{
   }finally{globalThis.AudioContext=original.AudioContext;globalThis.fetch=original.fetch;AUDIO.musicFadeSec=original.fade;}
   return {note:'Chrome OfflineAudioContext: actual SoundManager, steady sine instead of WAV, 60 frame updates per second. Device output not measured.',rows};
  });
- await mkdir('docs/verification/bgm-attack',{recursive:true});
- await writeFile(process.env.ATTACK_OUTPUT||'docs/verification/bgm-attack/current.json',JSON.stringify(result,null,2)+'\n');
+ const out=process.env.ATTACK_OUTPUT||'docs/verification/bgm-attack/current.json';
+ await mkdir(dirname(out),{recursive:true});
+ await writeFile(out,JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify(result,null,2));
  for(const row of result.rows)assert.ok(row.levels.find(v=>v.ms===20).ratioToSettled>=.98,'BGM must reach its normal level within the opening attack, without a long fade');
 }finally{await browser.close();}

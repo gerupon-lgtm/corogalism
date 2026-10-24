@@ -1,0 +1,19 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "version": "0.8.1",
+  "phase": "offline",
+  "rows": [
+    {
+      "name": "offline-all-five-music",
+      "cache": "corogalism-100152b71a2d6cc4",
+      "files": 129,
+      "tracks": [
+        "default",
+        "slide",
+        "force",
+        "rest",
+        "puzzle"
+      ]
+    }
+  ]
+}
