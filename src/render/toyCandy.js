@@ -12,7 +12,7 @@ export function drawToyCandy(ctx, x, y, size, now, reducedMotion) {
     const wrap = ctx.createLinearGradient(0, -0.45, 0, 0.45);
     wrap.addColorStop(0, '#fffbe5'); wrap.addColorStop(0.3, '#e4d0a2');
     wrap.addColorStop(0.48, '#fff8df'); wrap.addColorStop(0.8, '#bd9e6b'); wrap.addColorStop(1, '#f7e8bc');
-    ctx.fillStyle = wrap; ctx.strokeStyle = '#fff0c8'; ctx.lineWidth = 0.025;
+    ctx.fillStyle = wrap; ctx.strokeStyle = '#75644f'; ctx.lineWidth = Math.max(0.043, 0.7 / size); ctx.lineJoin = 'round';
     ctx.beginPath(); ctx.moveTo(0.38, 0); ctx.bezierCurveTo(0.53, -0.12, 0.81, -0.49, 0.85, -0.32);
     ctx.bezierCurveTo(0.82, -0.13, 0.73, 0, 0.88, 0.3); ctx.bezierCurveTo(0.8, 0.5, 0.57, 0.15, 0.38, 0);
     ctx.fill(); ctx.stroke();
@@ -33,5 +33,8 @@ export function drawToyCandy(ctx, x, y, size, now, reducedMotion) {
   shine.addColorStop(0, '#fffef4ff'); shine.addColorStop(0.45, '#fffef4d9'); shine.addColorStop(1, '#fffef400');
   ctx.fillStyle = shine; ctx.fillRect(-0.5, -0.5, 1, 1);
   ctx.restore();
+  // 模様の上から中央の輪郭だけ細く描き、砂の床と区別する。
+  ctx.beginPath(); ctx.ellipse(0, 0, 0.48, 0.46, 0, 0, Math.PI * 2);
+  ctx.strokeStyle = '#75644f'; ctx.lineWidth = Math.max(0.043, 0.7 / size); ctx.stroke();
   ctx.restore();
 }

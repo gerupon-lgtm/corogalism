@@ -1,0 +1,66 @@
+{
+  "version": "0.8.0",
+  "adopted": "bgm-levels-r6",
+  "tracks": [
+    {
+      "id": "current",
+      "file": "assets/audio/bgm.wav",
+      "bpm": 100,
+      "seconds": 38.4,
+      "sha256": "a6495cbf10f3eaed011f5a13bf7a63a34da83b9d2cbb4e3e78d49a475493de93",
+      "loudness": {
+        "lufs": -18.19,
+        "truePeakDb": -6.36,
+        "rangeLu": 1.0
+      }
+    },
+    {
+      "id": "slide",
+      "file": "assets/audio/bgm-slide.wav",
+      "bpm": 100,
+      "seconds": 38.4,
+      "sha256": "9f78c4535ca10bb0317dabaa1d9d4bca453c2a50e6bd8df95eac5b3f7172a974",
+      "loudness": {
+        "lufs": -18.22,
+        "truePeakDb": -6.11,
+        "rangeLu": 2.8
+      }
+    },
+    {
+      "id": "force",
+      "file": "assets/audio/bgm-force.wav",
+      "bpm": 120,
+      "seconds": 32.0,
+      "sha256": "8c72e833ac0635b0823e37b8250996408acfd82068e98f182513115198155467",
+      "loudness": {
+        "lufs": -18.19,
+        "truePeakDb": -5.02,
+        "rangeLu": 2.7
+      }
+    },
+    {
+      "id": "puzzle",
+      "file": "assets/audio/bgm-puzzle.wav",
+      "bpm": 135,
+      "seconds": 28.444444444444443,
+      "sha256": "96c749eddc7805ace6cb603a195a6c882f58a27adb2f8cd2b6799de49b3b72d1",
+      "loudness": {
+        "lufs": -18.19,
+        "truePeakDb": -7.58,
+        "rangeLu": 1.3
+      }
+    },
+    {
+      "id": "rest",
+      "file": "assets/audio/bgm-rest.wav",
+      "bpm": 110,
+      "seconds": 34.90909297052154,
+      "sha256": "433274a14ee93dcec1f618df73c8a760e2b939a4101b1db72201a92ff57c326f",
+      "loudness": {
+        "lufs": -18.19,
+        "truePeakDb": -9.17,
+        "rangeLu": 1.9
+      }
+    }
+  ]
+}

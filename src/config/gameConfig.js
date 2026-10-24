@@ -188,6 +188,7 @@ export const AUDIO = {
   defaultBgmVolume: 0.6,
   defaultSeVolume: 0.8,
   fadeSec: 0.06,
+  musicFadeSec: 0.14,
   startCueSec: 0.8,
   bgmAfterStartGapSec: 0.2,
   impactMinSpeed: 0.55,

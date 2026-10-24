@@ -3,6 +3,7 @@ import { normalizeAudioSettings } from './audioSettings.js';
 import { createFloorJingle } from './floorJingle.js';
 import { createSelectBuffer } from './selectBuffer.js';
 import { createImpactBuffer } from './ballMaterialAudio.js';
+import { MUSIC_TRACKS, normalizeMusicTrack } from './musicTracks.js';
 
 const files = {
   hourglass: 'se-hourglass.wav', bgm: 'bgm.wav', rolling: 'rolling-loop.wav', countdown: 'se-countdown.wav',
@@ -20,6 +21,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
   let instantSelect = null, pendingSelect = null;
   let scene = { music: false, speed: 0, hidden: false };
   const buffers = new Map(), voices = new Set(), events = [];
+  const musicLoads = new Map(), failedMusic = new Set();
   const log = name => { events.push(name); if (events.length > 32) events.shift(); };
   const available = () => prefs.soundEnabled && context?.state === 'running' && !scene.hidden;
 
@@ -31,17 +33,17 @@ export function createSoundManager(initial, onStatus = () => {}) {
     return Math.max(0, AUDIO.startCueSec + AUDIO.bgmAfterStartGapSec - Math.min(wallElapsed, audioElapsed));
   }
 
-  function ramp(param, value) {
+  function ramp(param, value, fadeSec = AUDIO.fadeSec) {
     const now = context.currentTime;
     param.cancelScheduledValues(now);
-    param.setTargetAtTime(value, now, AUDIO.fadeSec / 3);
+    param.setTargetAtTime(value, now, fadeSec / 3);
   }
 
-  function stopVoice(voice, fade = false) {
+  function stopVoice(voice, fade = false, fadeSec = AUDIO.fadeSec) {
     if (!voice) return;
     try {
-      if (fade) ramp(voice.gain.gain, 0);
-      voice.source.stop(context.currentTime + (fade ? AUDIO.fadeSec : 0));
+      if (fade) ramp(voice.gain.gain, 0, fadeSec);
+      voice.source.stop(context.currentTime + (fade ? fadeSec : 0));
     } catch { /* 既に終了した短い音も停止対象にできる。 */ }
   }
 
@@ -52,7 +54,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
       const source = context.createBufferSource(), node = context.createGain();
       source.buffer = buffer; source.loop = loop; source.playbackRate.value=rate;
       node.gain.value = gain;
-      source.connect(node); node.connect(name === 'bgm' ? bgmGain : seGain);
+      source.connect(node); node.connect(name === 'bgm' || name.startsWith('bgm:') ? bgmGain : seGain);
       const voice = { source, gain: node, at: context.currentTime + delay, offset };
       source.onended = () => { source.disconnect(); node.disconnect(); voices.delete(voice); };
       if (duration === undefined) source.start(voice.at, offset);
@@ -60,6 +62,29 @@ export function createSoundManager(initial, onStatus = () => {}) {
       log(name);
       return voice;
     } catch { return null; }
+  }
+
+  function ensureMusic(track) {
+    const name = track === 'default' ? 'bgm' : `bgm:${track}`;
+    // 既定曲は従来のloadが担当。追加曲は必要な面で1回だけ取得する。
+    if (track === 'default' || buffers.has(name) || musicLoads.has(name) || failedMusic.has(name)) return;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), AUDIO.loadTimeoutMs);
+    musicLoads.set(name, controller);
+    void (async () => {
+      try {
+        const response = await fetch(new URL(`../../assets/audio/${MUSIC_TRACKS[track]}`, import.meta.url), { signal: controller.signal });
+        if (!response.ok) throw new Error('music load');
+        buffers.set(name, await context.decodeAudioData(await response.arrayBuffer()));
+      } catch {
+        failedMusic.add(name);
+        onStatus('BGMを読み込めませんでした。音をOFF→ONにすると再試行できます。');
+      } finally {
+        clearTimeout(timeout); musicLoads.delete(name);
+        // 遅れて届いた曲も、今の面・停止・音OFFを確認してから使う。
+        sync();
+      }
+    })();
   }
 
   function sync() {
@@ -70,12 +95,16 @@ export function createSoundManager(initial, onStatus = () => {}) {
       const pending = pendingSelect; pendingSelect = null;
       if (performance.now() <= pending.expires) effect('select', pending.options);
     }
+    const track = normalizeMusicTrack(scene.track);
+    const musicName = track === 'default' ? 'bgm' : `bgm:${track}`;
+    if (available() && scene.music && prefs.bgmVolume > 0) ensureMusic(track);
     const wantsMusic = available() && scene.music && prefs.bgmVolume > 0 && musicDelaySec() === 0;
-    if (!wantsMusic && music) {
-      stopVoice(music, true); music = null;
-    } else if (wantsMusic && !music) {
-      music = startVoice('bgm', { loop: true, offset: 0, gain: 0 });
-      if (music) ramp(music.gain.gain, 1);
+    if (music && (!wantsMusic || music.track !== track)) {
+      stopVoice(music, true, AUDIO.musicFadeSec); music = null;
+    }
+    if (wantsMusic && !music) {
+      music = startVoice(musicName, { loop: true, offset: 0, gain: 0 });
+      if (music) { music.track = track; ramp(music.gain.gain, 1, AUDIO.musicFadeSec); }
     }
     const speed = Math.min(1, Math.max(0, scene.speed / AUDIO.rollingFullSpeed));
     const wantsRolling = available() && prefs.seVolume > 0 && scene.speed > AUDIO.rollingMinSpeed;
@@ -132,7 +161,7 @@ export function createSoundManager(initial, onStatus = () => {}) {
         context.addEventListener('statechange', () => { if (context.state !== 'running') stopEffects(); sync(); });
       }
       if (context.state !== 'running') context.resume().then(sync).catch(() => onStatus('音ボタンを押して再開してください。'));
-      if (retry) loaded = false;
+      if (retry) { loaded = false; failedMusic.clear(); }
       load(); sync();
     } catch { onStatus('音を再生できませんでした。無音で遊べます。'); }
   }
@@ -180,6 +209,8 @@ export function createSoundManager(initial, onStatus = () => {}) {
     get state() { return { enabled: prefs.soundEnabled, context: context?.state || 'none', loaded,
       buffers: buffers.size, music: Boolean(music), rolling: Boolean(rolling), voices: voices.size,
       musicDelaySec: musicDelaySec(),
+      requestedTrack: normalizeMusicTrack(scene.track), musicTrack: music?.track || null,
+      musicLoading: musicLoads.size,
       bgmVolume: prefs.bgmVolume, seVolume: prefs.seVolume, events: [...events] }; },
   };
 }

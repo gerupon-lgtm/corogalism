@@ -8,6 +8,8 @@ import { createFloorPresentation } from './ui/floorPresentation.js';
 import { initGuide } from './ui/guide.js';
 import { initPwa } from './pwa.js';
 import { createSoundManager } from './audio/soundManager.js';
+import { musicTrackForStage } from './audio/musicTracks.js';
+import { initHomeDecoration } from './ui/homeDecoration.js';
 import { createTutorialUi } from './ui/tutorial.js';
 import { createPuzzleTutorialCourse } from './game/puzzleTutorial.js';
 import { createStagePlay } from './game/stagePlay.js';
@@ -56,6 +58,7 @@ const escapeInput = createEscapeInput(boardEl, () => Boolean(isPlaying() && play
 let activeLevel = settings.challengeLevel;
 let manualCalibration = false;
 const sound = createSoundManager(settings, (note) => { find('sound-note').textContent = note; });
+initHomeDecoration(root);
 let tiltAllowed = false;
 let tiltDeniedReason = '';
 let sensorCheck = null;
@@ -106,6 +109,7 @@ function updateAudio() {
     music: Boolean(active),
     speed: active ? Math.hypot(play.actor.vx, play.actor.vy) : 0,
     hidden: document.hidden,
+    track: musicTrackForStage(play?.stage),
   });
 }
 
@@ -191,7 +195,7 @@ function calibrate() {
 
 function renderDifficulty() {
   for (const button of root.querySelectorAll('[data-level]')) button.setAttribute('aria-pressed', String(button.dataset.level === settings.challengeLevel));
-  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'げんきと時間に、もっとゆとり。' : 'ほどよい手応え。先には光の滑走路も。';
+  find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'げんきと時間に、もっとゆとり。' : '傾きと仕掛けを使いこなそう。';
   find('challenge-level-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
   runUi.setModeBests(loadRunBests(settings.challengeLevel), tiltDeniedReason);
 }

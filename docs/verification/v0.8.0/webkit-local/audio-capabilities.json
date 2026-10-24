@@ -1,0 +1,6 @@
+{
+  "AudioContext": "undefined",
+  "webkitAudioContext": "undefined",
+  "AudioNode": "undefined",
+  "AudioBufferSourceNode": "undefined"
+}

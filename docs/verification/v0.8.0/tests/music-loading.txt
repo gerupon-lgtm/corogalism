@@ -1,0 +1,9 @@
+✔ 遅れて届いた前の曲や停止中に届いた曲を勝手に再生しない (38.0186ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 158.3205

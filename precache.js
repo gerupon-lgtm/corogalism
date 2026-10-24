@@ -1,5 +1,9 @@
-self.PRECACHE_VERSION = '6948c8799e2f182c';
+self.PRECACHE_VERSION = '842e2d1c805c2213';
 self.PRECACHE_FILES = [
+  "assets/audio/bgm-force.wav",
+  "assets/audio/bgm-puzzle.wav",
+  "assets/audio/bgm-rest.wav",
+  "assets/audio/bgm-slide.wav",
   "assets/audio/bgm.wav",
   "assets/audio/rolling-loop.wav",
   "assets/audio/se-clear.wav",
@@ -29,6 +33,7 @@ self.PRECACHE_FILES = [
   "ball-lab.html",
   "floor-lab.css",
   "floor-lab.html",
+  "home.css",
   "index.html",
   "manifest.webmanifest",
   "racket-lab.css",
@@ -36,6 +41,7 @@ self.PRECACHE_FILES = [
   "src/audio/audioSettings.js",
   "src/audio/ballMaterialAudio.js",
   "src/audio/floorJingle.js",
+  "src/audio/musicTracks.js",
   "src/audio/selectBuffer.js",
   "src/audio/soundManager.js",
   "src/config/gameConfig.js",
@@ -99,6 +105,7 @@ self.PRECACHE_FILES = [
   "src/ui/floorPresentation.js",
   "src/ui/gameScreen.js",
   "src/ui/guide.js",
+  "src/ui/homeDecoration.js",
   "src/ui/hpDisplay.js",
   "src/ui/runEndConfirm.js",
   "src/ui/runScreens.js",

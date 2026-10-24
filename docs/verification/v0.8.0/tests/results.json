@@ -1,0 +1,141 @@
+{
+  "rows": [
+    {
+      "files": [
+        "test/audio-settings.test.js",
+        "test/balance.test.js",
+        "test/ball-materials.test.js",
+        "test/ballRotation.test.js",
+        "test/branch-floors.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 10.324,
+      "tests": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/candy-full.test.js",
+        "test/challenge.test.js",
+        "test/cotton-wall.test.js",
+        "test/escape-timing.test.js",
+        "test/exploration.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 2.87,
+      "tests": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/feature-hint-position.test.js",
+        "test/features.test.js",
+        "test/first-sound.test.js",
+        "test/floor-difficulty.test.js",
+        "test/floor-lab.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 5.238,
+      "tests": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/floor-learning.test.js",
+        "test/floor-presentation.test.js",
+        "test/floor-themes.test.js",
+        "test/floor-trial.test.js",
+        "test/hourglass.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 3.15,
+      "tests": 14,
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/hp-display.test.js",
+        "test/maze-variation.test.js",
+        "test/maze.test.js",
+        "test/music-tracks.test.js",
+        "test/onboarding.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 1.346,
+      "tests": 29,
+      "passed": 29,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/open-floor-pacing.test.js",
+        "test/open-plaza.test.js",
+        "test/phase2.test.js",
+        "test/physics.test.js",
+        "test/playthrough.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 2.698,
+      "tests": 46,
+      "passed": 46,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/puzzle-hints.test.js",
+        "test/puzzle-integration.test.js",
+        "test/puzzle-materials.test.js",
+        "test/puzzle-stage.test.js",
+        "test/puzzle-tutorial.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 9.521,
+      "tests": 40,
+      "passed": 40,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/puzzle-variety.test.js",
+        "test/racket-physics.test.js",
+        "test/racket-stage.test.js",
+        "test/resolveParams.test.js",
+        "test/rubber-rebound.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 1.337,
+      "tests": 44,
+      "passed": 44,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/screen-wake-lock.test.js",
+        "test/stableCalibration.test.js",
+        "test/stagePlay.test.js",
+        "test/storage.test.js",
+        "test/tutorial-zero.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 0.985,
+      "tests": 39,
+      "passed": 39,
+      "failed": 0
+    },
+    {
+      "files": [
+        "test/tutorial.test.js",
+        "test/wall-clearance.test.js"
+      ],
+      "exitCode": 0,
+      "seconds": 1.619,
+      "tests": 8,
+      "passed": 8,
+      "failed": 0
+    }
+  ]
+}
