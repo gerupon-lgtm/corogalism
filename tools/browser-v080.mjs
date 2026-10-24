@@ -113,26 +113,32 @@ async function music(){
  const f=await fixture({audio:true,clock:true}),{page}=f;
  await page.locator('#btn-challenge').click();
  const seen=new Set(),stop=Number(process.env.V080_MUSIC_STAGES||21);
+ const rotating=process.env.ROTATING_MUSIC==='1';let remaining=new Set(['slide','force','puzzle']),lastRotating=null;
  for(let n=1;n<=stop;n++){
   assert.equal((await state(page)).audio.music,false,'countdown is silent');
   await ready(page,true);
   const s=await state(page),expected=await page.evaluate(async()=>{const m=await import('./src/audio/musicTracks.js');const s=window.__corogalism.state;return m.musicTrackForStage({theme:s.theme,puzzle:s.puzzle});});
-  assert.equal(s.stageIndex,n);assert.equal(s.audio.musicTrack,expected);
-  assert.equal(s.audio.requestedTrack,expected);
+  assert.equal(s.stageIndex,n);
+  if(rotating&&['slide','force','puzzle'].includes(expected)){
+   if(!remaining.size){remaining=new Set(['slide','force','puzzle']);assert.notEqual(s.audio.musicTrack,lastRotating);}
+   assert.ok(remaining.has(s.audio.musicTrack),'rotating tracks must cover the bag');remaining.delete(s.audio.musicTrack);lastRotating=s.audio.musicTrack;
+  }else assert.equal(s.audio.musicTrack,expected);
+  const selected=s.audio.musicTrack;assert.equal(s.audio.requestedTrack,selected);
   await page.waitForFunction(()=>{const p=window.__audioProbe,v=new Float32Array(2048);p.analyser.getFloatTimeDomainData(v);return v.some(x=>Math.abs(x)>.001);},null,{polling:50});
   const played=await page.evaluate(()=>{const p=window.__audioProbe,v=new Float32Array(2048);p.analyser.getFloatTimeDomainData(v);return {rms:Math.sqrt(v.reduce((s,x)=>s+x*x,0)/v.length),last:window.__musicStarts.at(-1)};});
   assert.ok(played.rms>.0001,JSON.stringify(played));assert.equal(played.last.loop,true);assert.equal(played.last.offset,0);
-  if(!seen.has(expected)){
-   seen.add(expected);await page.screenshot({path:`${out}/music-${expected}.png`,fullPage:true});
+  if(!seen.has(selected)){
+   seen.add(selected);await page.screenshot({path:`${out}/music-${selected}.png`,fullPage:true});
    await page.locator('#btn-pause').click();await page.clock.runFor(180);assert.equal((await state(page)).audio.music,false);
-   await page.locator('#btn-resume').click();await ready(page,true);assert.equal((await state(page)).audio.musicTrack,expected);
+   await page.locator('#btn-resume').click();await ready(page,true);assert.equal((await state(page)).audio.musicTrack,selected);
   }
-  record('stage-music',{stage:n,theme:s.theme.id,puzzle:s.puzzle?.kind,track:expected,audio:played});
+  record('stage-music',{stage:n,theme:s.theme.id,puzzle:s.puzzle?.kind,baseline:expected,track:selected,audio:played});
   if(n<stop)await next(page);
  }
  assert.deepEqual([...seen].sort(),['default','force','puzzle','rest','slide']);
+ const finalTrack=(await state(page)).audio.musicTrack;
  await page.locator('#btn-sound').click();assert.equal((await state(page)).audio.music,false);
- await page.locator('#btn-sound').click();await page.clock.runFor(32);assert.equal((await state(page)).audio.musicTrack,'puzzle');
+ await page.locator('#btn-sound').click();await page.clock.runFor(32);assert.equal((await state(page)).audio.musicTrack,finalTrack);
  record('five-tracks-pause-mute',{tracks:[...seen]});
  await close(f);
 }
@@ -141,7 +147,7 @@ async function offline(){
  await page.evaluate(()=>navigator.serviceWorker.ready);
  await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
  const cache=await page.evaluate(async()=>{const name=(await caches.keys()).find(n=>n.startsWith('corogalism-'));return {name,keys:(await(await caches.open(name)).keys()).map(r=>new URL(r.url).pathname)};});
- assert.equal(cache.keys.length,129);for(const key of ['home.css','src/ui/homeDecoration.js','assets/audio/bgm-rest.wav','assets/audio/bgm-puzzle.wav'])assert.ok(cache.keys.some(k=>k.endsWith('/'+key)));
+ assert.equal(cache.keys.length,Number(process.env.PRECACHE_COUNT||129));for(const key of ['home.css','src/ui/homeDecoration.js','assets/audio/bgm-rest.wav','assets/audio/bgm-puzzle.wav'])assert.ok(cache.keys.some(k=>k.endsWith('/'+key)));
  await context.setOffline(true);await page.reload();await page.waitForFunction(()=>document.querySelector('#screen-mode').dataset.artReady==='true');
  await page.clock.install();await page.clock.pauseAt(Date.now()+1000);await page.clock.runFor(32);
  await page.locator('#btn-challenge').click();await ready(page,true);

@@ -1,0 +1,356 @@
+{
+  "base": "http://127.0.0.1:8794/",
+  "version": "0.8.2",
+  "phase": "music",
+  "rows": [
+    {
+      "name": "stage-music",
+      "stage": 1,
+      "theme": "basic",
+      "baseline": "default",
+      "track": "default",
+      "audio": {
+        "rms": 0.08828938058728322,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 2.912
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 2,
+      "theme": "basic",
+      "baseline": "default",
+      "track": "default",
+      "audio": {
+        "rms": 0.07751691096586182,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 9.181333333333333
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 3,
+      "theme": "sand",
+      "baseline": "default",
+      "track": "default",
+      "audio": {
+        "rms": 0.1121507412166323,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 12.741333333333333
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 4,
+      "theme": "iceRubber",
+      "baseline": "slide",
+      "track": "puzzle",
+      "audio": {
+        "rms": 0.059112177856957056,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 28.4444375,
+          "when": 15.992
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 5,
+      "theme": "gravityAssist",
+      "baseline": "force",
+      "track": "force",
+      "audio": {
+        "rms": 0.027301838239773973,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 21.992
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 6,
+      "theme": "iceSand",
+      "baseline": "slide",
+      "track": "slide",
+      "audio": {
+        "rms": 0.07150486337147671,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 28.541333333333334
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 7,
+      "theme": "repulsionAssist",
+      "baseline": "force",
+      "track": "force",
+      "audio": {
+        "rms": 0.02730183823041826,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 34.81066666666667
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 8,
+      "theme": "iceAssist",
+      "baseline": "force",
+      "track": "slide",
+      "audio": {
+        "rms": 0.07150486337147671,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 39.010666666666665
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 9,
+      "theme": "rest",
+      "baseline": "rest",
+      "track": "rest",
+      "audio": {
+        "rms": 0.04951647967483359,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 34.909083333333335,
+          "when": 42.501333333333335
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 10,
+      "theme": "iceSand",
+      "baseline": "slide",
+      "track": "puzzle",
+      "audio": {
+        "rms": 0.07140706976825345,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 28.4444375,
+          "when": 48.56
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 11,
+      "theme": "sticky",
+      "baseline": "default",
+      "track": "default",
+      "audio": {
+        "rms": 0.09691244975412552,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 51.90133333333333
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 12,
+      "theme": "careful",
+      "baseline": "default",
+      "track": "default",
+      "audio": {
+        "rms": 0.09691244975412552,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 55.141333333333336
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 13,
+      "theme": "gravityHinder",
+      "baseline": "force",
+      "track": "force",
+      "audio": {
+        "rms": 0.027301838239773973,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 58.650666666666666
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 14,
+      "theme": "rest",
+      "baseline": "rest",
+      "track": "rest",
+      "audio": {
+        "rms": 0.052140517375556826,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 34.909083333333335,
+          "when": 62.16
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 15,
+      "theme": "repulsionHinder",
+      "baseline": "force",
+      "track": "puzzle",
+      "audio": {
+        "rms": 0.08003210155266823,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 28.4444375,
+          "when": 65.8
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 16,
+      "theme": "iceAssist",
+      "baseline": "force",
+      "track": "slide",
+      "audio": {
+        "rms": 0.10345464609627282,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 69.832
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 17,
+      "theme": "puzzle",
+      "puzzle": "racket",
+      "baseline": "puzzle",
+      "track": "puzzle",
+      "audio": {
+        "rms": 0.07140706976825345,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 28.4444375,
+          "when": 73.86133333333333
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 18,
+      "theme": "gravityAssist",
+      "baseline": "force",
+      "track": "slide",
+      "audio": {
+        "rms": 0.08851977513854087,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 77.29066666666667
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 19,
+      "theme": "puzzle",
+      "puzzle": "sequence",
+      "baseline": "puzzle",
+      "track": "force",
+      "audio": {
+        "rms": 0.027301838239773973,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 32,
+          "when": 80.86133333333333
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 20,
+      "theme": "basic",
+      "baseline": "default",
+      "track": "default",
+      "audio": {
+        "rms": 0.09121611752117251,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 38.4,
+          "when": 84.352
+        }
+      }
+    },
+    {
+      "name": "stage-music",
+      "stage": 21,
+      "theme": "puzzle",
+      "puzzle": "timing",
+      "baseline": "puzzle",
+      "track": "puzzle",
+      "audio": {
+        "rms": 0.059112177856957056,
+        "last": {
+          "offset": 0,
+          "loop": true,
+          "duration": 28.4444375,
+          "when": 88.18133333333333
+        }
+      }
+    },
+    {
+      "name": "five-tracks-pause-mute",
+      "tracks": [
+        "default",
+        "puzzle",
+        "force",
+        "slide",
+        "rest"
+      ]
+    }
+  ]
+}

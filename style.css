@@ -26,7 +26,8 @@ h2{margin:0 0 4px;font-size:14px;font-weight:700;display:flex;align-items:center
 .badge{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--accent);
   border:1px solid var(--accent);border-radius:4px;padding:2px 6px;white-space:nowrap}
 
-.board{position:relative;width:min(100%, max(calc(200px - var(--camera-top)), calc(100svh - 340px - var(--camera-top))));aspect-ratio:1/1;align-self:center;background:#0B100F;
+.wrap{--playfield-size:min(100%, max(calc(200px - var(--camera-top)), calc(100svh - 340px - var(--camera-top))))}
+.board{position:relative;width:var(--playfield-size);aspect-ratio:1/1;align-self:center;background:#0B100F;
   border:1px solid var(--line);border-radius:10px;overflow:hidden;touch-action:none;
   user-select:none;-webkit-user-select:none}
 .board canvas{display:block}

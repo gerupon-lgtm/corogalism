@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '100152b71a2d6cc4';
+self.PRECACHE_VERSION = '497c2a63db725dc3';
 self.PRECACHE_FILES = [
   "assets/audio/bgm-force.wav",
   "assets/audio/bgm-puzzle.wav",
@@ -41,6 +41,7 @@ self.PRECACHE_FILES = [
   "src/audio/audioSettings.js",
   "src/audio/ballMaterialAudio.js",
   "src/audio/floorJingle.js",
+  "src/audio/musicRotation.js",
   "src/audio/musicTracks.js",
   "src/audio/selectBuffer.js",
   "src/audio/soundManager.js",

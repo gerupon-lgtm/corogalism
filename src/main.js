@@ -9,6 +9,7 @@ import { initGuide } from './ui/guide.js';
 import { initPwa } from './pwa.js';
 import { createSoundManager } from './audio/soundManager.js';
 import { musicTrackForStage } from './audio/musicTracks.js';
+import { createMusicRotation } from './audio/musicRotation.js';
 import { initHomeDecoration } from './ui/homeDecoration.js';
 import { createTutorialUi } from './ui/tutorial.js';
 import { createPuzzleTutorialCourse } from './game/puzzleTutorial.js';
@@ -67,6 +68,8 @@ let camera = null;
 let seed = initialSeed();
 let gameMode = 'practice';
 let run = null;
+let musicRotation = createMusicRotation();
+let stageMusic = 'default';
 let recordStatus = null;
 let stageIndex = 1;
 let screen = 'mode';
@@ -109,7 +112,7 @@ function updateAudio() {
     music: Boolean(active),
     speed: active ? Math.hypot(play.actor.vx, play.actor.vy) : 0,
     hidden: document.hidden,
-    track: musicTrackForStage(play?.stage),
+    track: run ? stageMusic : musicTrackForStage(play?.stage),
   });
 }
 
@@ -333,6 +336,7 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
   play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, variation:run?.currentVariation(activeLevel), shield, tutorial: gameMode === 'tutorial',tutorialPuzzle:puzzleCourse?.profile,floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
+  if (run) stageMusic = musicRotation.select(play.stage, `${stageIndex}:${seed}`);
   if(gameMode==='tutorial')tutorial.reset(puzzleCourse?.lesson,play.stage);
   floorPresentation.setStage(run?play.stage.theme:null);
   floorContactGuide.reset();game.resetNotices();
@@ -370,6 +374,7 @@ function startGame(mode, useSeed = seed, withPuzzles=false) {
   puzzleCourse=mode==='tutorial'&&withPuzzles?createPuzzleTutorialCourse(useSeed):null;
   activeLevel = settings.challengeLevel;
   run = mode === 'challenge' ? createRun(useSeed) : null;
+  musicRotation = createMusicRotation();
   recordStatus = null;
   shield = { value: 0 };
   loadStage(run ? run.currentSeed() : puzzleCourse?.stageSeed??useSeed);
