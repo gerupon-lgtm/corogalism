@@ -1,0 +1,110 @@
+{
+  "base": "http://127.0.0.1:8794/",
+  "engine": "chromium",
+  "version": "0.8.4",
+  "baseline": true,
+  "rows": [
+    {
+      "width": 312,
+      "height": 780,
+      "camera": 0,
+      "bottom": 0,
+      "top": {
+        "head": {
+          "x": 10,
+          "y": 14,
+          "width": 292,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 250.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 10,
+          "y": 197.4375,
+          "width": 292,
+          "height": 663.0625,
+          "bottom": 860.5
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "meter": {
+          "x": 10,
+          "y": 84.046875,
+          "width": 142,
+          "height": 60,
+          "bottom": 144.046875
+        },
+        "toolbar": {
+          "x": 10,
+          "y": 150.046875,
+          "width": 292,
+          "height": 44.390625,
+          "bottom": 194.4375
+        },
+        "height": 780,
+        "scroll": 873,
+        "width": 312,
+        "scrollWidth": 312
+      },
+      "play": {
+        "head": {
+          "x": 10,
+          "y": 14,
+          "width": 292,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 250.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 10,
+          "y": 197.4375,
+          "width": 292,
+          "height": 292,
+          "bottom": 489.4375
+        },
+        "meter": {
+          "x": 10,
+          "y": 84.046875,
+          "width": 142,
+          "height": 60,
+          "bottom": 144.046875
+        },
+        "toolbar": {
+          "x": 10,
+          "y": 150.046875,
+          "width": 292,
+          "height": 44.390625,
+          "bottom": 194.4375
+        },
+        "height": 780,
+        "scroll": 780,
+        "width": 312,
+        "scrollWidth": 312
+      }
+    }
+  ]
+}

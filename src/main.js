@@ -197,7 +197,6 @@ function calibrate() {
 }
 
 function renderDifficulty() {
-  if (screen === 'mode') renderHomeHeader();
   for (const button of root.querySelectorAll('[data-level]')) button.setAttribute('aria-pressed', String(button.dataset.level === settings.challengeLevel));
   find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'げんきと時間に、もっとゆとり。' : '傾きと仕掛けを使いこなそう。';
   find('challenge-level-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
@@ -255,7 +254,7 @@ function showScreen(name) {
   pwa.render();
   const ended = name === 'clear' || name === 'over';
   const boardSession = name === 'game' || ended;
-  const reservePlayHeader = name === 'mode';
+  const reserveHeaderRow = name === 'mode';
   root.querySelectorAll('section.panel, section.game-toast').forEach((el) => {
     el.hidden = el.id !== `screen-${name}` && !(ended && el.id === 'screen-game');
   });
@@ -263,22 +262,19 @@ function showScreen(name) {
   root.body.dataset.gameMode = gameMode;
   root.body.classList.toggle('board-session', boardSession);
   boardEl.hidden = !boardSession;
-  find('play-toolbar').hidden = !boardSession && !reservePlayHeader;
+  find('play-toolbar').hidden = !boardSession;
   find('floor-practice-tools').hidden = !boardSession || gameMode!=='floor-practice';
   find('play-hint').hidden = !boardSession;
   game.renderNotices({ visible: false });
   find('btn-pause').disabled = name !== 'game';
   find('toast-layer').hidden = !ended;
-  find('challenge-hud').hidden = !reservePlayHeader && (!boardSession || !['challenge','tutorial'].includes(gameMode));
-  // トップでも、チャレンジの盤面直前までと同じ高さを予約する。
-  for (const id of ['challenge-hud', 'play-toolbar']) {
-    const element = find(id);
-    element.classList.toggle('home-header-space', reservePlayHeader);
-    element.inert = reservePlayHeader;
-    if (reservePlayHeader) element.setAttribute('aria-hidden', 'true');
-    else element.removeAttribute('aria-hidden');
-  }
-  if (reservePlayHeader) renderHomeHeader();
+  const challengeHud = find('challenge-hud');
+  challengeHud.hidden = !reserveHeaderRow && (!boardSession || !['challenge','tutorial'].includes(gameMode));
+  // ユーザーの白線の範囲＝ロゴ＋面数の行まで。メーターから下は含めない。
+  challengeHud.classList.toggle('home-header-space', reserveHeaderRow);
+  challengeHud.inert = reserveHeaderRow;
+  if (reserveHeaderRow) challengeHud.setAttribute('aria-hidden', 'true');
+  else challengeHud.removeAttribute('aria-hidden');
   find('board-overlay').hidden = name !== 'game' || !paused;
   find('board-status').textContent = '一時停止';
   updateCountdown();
@@ -348,15 +344,6 @@ function stageThemeLabel(stage) {
   if (stage.puzzle) return `${stage.maze.size}×${stage.maze.size} ${stage.puzzle.label}`;
   const variety = stage.maze.variation;
   return `${variety ? `${variety.size}×${variety.size} ${variety.label}｜` : ''}${stage.theme?.label || ''}`;
-}
-
-function renderHomeHeader() {
-  // 折り返しで操作列が高くなる端末でも、次のチャレンジと同じ高さにする。
-  // この下見は表示だけに使い、実際のラン・迷路の乱数・選曲は進めない。
-  const upcoming = createRun(seed);
-  const preview = createStagePlay(upcoming.currentSeed(), challengeDifficulty(1, settings.challengeLevel), { variation: upcoming.currentVariation(settings.challengeLevel) });
-  find('play-mode-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
-  find('stage-theme').textContent = stageThemeLabel(preview.stage);
 }
 
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {

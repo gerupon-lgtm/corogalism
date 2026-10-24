@@ -1,0 +1,8 @@
+{
+  "error": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:8795/?debug=1&seed=77\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:8795/?debug=1&seed=77\", waiting until \"load\"\u001b[22m\n",
+  "url": "about:blank",
+  "errors": [
+    "Failed to read the 'localStorage' property from 'Window': Access is denied for this document."
+  ],
+  "dom": null
+}

@@ -1,0 +1,10 @@
+{
+  "error": "TimeoutError: page.waitForFunction: Timeout 30000ms exceeded.",
+  "url": "http://127.0.0.1:8794/?debug=1&seed=77",
+  "errors": [
+    "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+  ],
+  "dom": {
+    "text": "更新するどう遊ぶ？チュートリアル傾け方としくみを体験プラクティス時間制限なしで練習チャレンジクリアを重ねて、先へ進もう。げんき・時間制限のある連続プレイ。やさしい通常げんきと時間に、もっとゆとり。やさ"
+  }
+}
