@@ -10,10 +10,10 @@
 <meta name="theme-color" content="#0f1513">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="assets/pwa/icon-192.png">
-<link rel="stylesheet" href="style.css?v=0.8.2">
-<link rel="stylesheet" href="home.css?v=0.8.2">
+<link rel="stylesheet" href="style.css?v=0.8.3">
+<link rel="stylesheet" href="home.css?v=0.8.3">
 </head>
-<body>
+<body data-screen="mode">
 <div class="wrap">
 
   <header class="head">
@@ -24,13 +24,13 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.8.2</span>
+      <span class="badge">v0.8.3</span>
       </div>
       <p class="sub" id="dev-note" hidden>開発中の技術検証です（フェーズ2）</p>
     </div>
   </header>
 
-  <div id="challenge-hud" class="challenge-hud" hidden>
+  <div id="challenge-hud" class="challenge-hud home-header-space" aria-hidden="true" inert>
     <div class="stage-line"><strong id="hud-stage">1面目</strong><span id="hud-continues"></span></div>
     <div class="meter-block" id="time-meter-block">
       <div class="meter-label"><span class="meter-name"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>のこりじかん</span><strong><span id="hud-remaining">0.0</span><small> 秒</small></strong></div>
@@ -41,7 +41,7 @@
       <progress id="hp-bar" max="1" value="1" aria-label="げんき"></progress>
     </div>
   </div>
-  <div id="play-toolbar" class="play-toolbar" hidden><div class="play-labels"><span id="play-mode-label">プラクティス</span><span id="stage-theme" class="stage-theme"></span></div><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
+  <div id="play-toolbar" class="play-toolbar home-header-space" aria-hidden="true" inert><div class="play-labels"><span id="play-mode-label">プラクティス</span><span id="stage-theme" class="stage-theme"></span></div><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
   <div id="floor-practice-tools" class="floor-practice-tools" hidden>
     <div class="floor-practice-caption"><span>同じ場所で、床をくらべよう</span><button id="btn-floor-reset" type="button">最初へ戻す</button></div>
     <div class="floor-practice-switch" role="group" aria-label="試す床素材"><button data-floor="normal" aria-pressed="true">普通</button><button data-floor="sand" aria-pressed="false">砂</button><button data-floor="ice" aria-pressed="false">氷</button><button data-floor="gravity" aria-pressed="false">重力</button><button data-floor="repulsion" aria-pressed="false">反重力</button></div>
@@ -192,6 +192,6 @@
     <button class="ghost" id="btn-end-confirm" type="button">終了して結果を見る</button>
   </div>
 </dialog>
-<script type="module" src="src/main.js?v=0.8.2"></script>
+<script type="module" src="src/main.js?v=0.8.3"></script>
 </body>
 </html>

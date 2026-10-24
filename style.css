@@ -483,8 +483,8 @@ body.board-session #screen-game{padding:8px;gap:6px}#game-status{margin:0}
 .tutorial-intro h3{color:#536f36}.tutorial-instruction{display:flex;flex-direction:column;gap:12px;border:1px solid #d7bc8d;border-radius:20px;padding:14px}
 .tutorial-hold{width:100%;max-height:230px;object-fit:contain;border-radius:16px}.tutorial-intro button{min-height:44px}
 .tutorial-pointer-note{font-size:12px;line-height:1.6}.tutorial-intro .text-button{color:#70451f}
-body[data-game-mode="tutorial"] #challenge-hud .stage-line,body[data-game-mode="tutorial"] #time-meter-block,body[data-game-mode="tutorial"] #screen-game .hud,body[data-game-mode="tutorial"] #screen-clear .result{display:none}
-body[data-game-mode="tutorial"] #challenge-hud{grid-template-columns:1fr}
+body.board-session[data-game-mode="tutorial"] #challenge-hud .stage-line,body.board-session[data-game-mode="tutorial"] #time-meter-block,body.board-session[data-game-mode="tutorial"] #screen-game .hud,body.board-session[data-game-mode="tutorial"] #screen-clear .result{display:none}
+body.board-session[data-game-mode="tutorial"] #challenge-hud{grid-template-columns:1fr}
 body[data-screen="tutorial-intro"] .tutorial-intro{flex:1 0 auto;justify-content:space-between}
 
 

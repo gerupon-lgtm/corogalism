@@ -197,6 +197,7 @@ function calibrate() {
 }
 
 function renderDifficulty() {
+  if (screen === 'mode') renderHomeHeader();
   for (const button of root.querySelectorAll('[data-level]')) button.setAttribute('aria-pressed', String(button.dataset.level === settings.challengeLevel));
   find('difficulty-note').textContent = settings.challengeLevel === 'easy' ? 'げんきと時間に、もっとゆとり。' : '傾きと仕掛けを使いこなそう。';
   find('challenge-level-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
@@ -254,6 +255,7 @@ function showScreen(name) {
   pwa.render();
   const ended = name === 'clear' || name === 'over';
   const boardSession = name === 'game' || ended;
+  const reservePlayHeader = name === 'mode';
   root.querySelectorAll('section.panel, section.game-toast').forEach((el) => {
     el.hidden = el.id !== `screen-${name}` && !(ended && el.id === 'screen-game');
   });
@@ -261,13 +263,22 @@ function showScreen(name) {
   root.body.dataset.gameMode = gameMode;
   root.body.classList.toggle('board-session', boardSession);
   boardEl.hidden = !boardSession;
-  find('play-toolbar').hidden = !boardSession;
+  find('play-toolbar').hidden = !boardSession && !reservePlayHeader;
   find('floor-practice-tools').hidden = !boardSession || gameMode!=='floor-practice';
   find('play-hint').hidden = !boardSession;
   game.renderNotices({ visible: false });
   find('btn-pause').disabled = name !== 'game';
   find('toast-layer').hidden = !ended;
-  find('challenge-hud').hidden = !boardSession || !['challenge','tutorial'].includes(gameMode);
+  find('challenge-hud').hidden = !reservePlayHeader && (!boardSession || !['challenge','tutorial'].includes(gameMode));
+  // トップでも、チャレンジの盤面直前までと同じ高さを予約する。
+  for (const id of ['challenge-hud', 'play-toolbar']) {
+    const element = find(id);
+    element.classList.toggle('home-header-space', reservePlayHeader);
+    element.inert = reservePlayHeader;
+    if (reservePlayHeader) element.setAttribute('aria-hidden', 'true');
+    else element.removeAttribute('aria-hidden');
+  }
+  if (reservePlayHeader) renderHomeHeader();
   find('board-overlay').hidden = name !== 'game' || !paused;
   find('board-status').textContent = '一時停止';
   updateCountdown();
@@ -283,6 +294,7 @@ function showScreen(name) {
     find('run-heading').focus({ preventScroll: true });
   }
   else if (previousScreen === 'settings') window.scrollTo(0, settingsUi.returnScroll || 0);
+  else if (name === 'mode' || (previousScreen === 'mode' && name === 'game')) window.scrollTo(0, 0);
   // focus()の既定スクロールを抑え、トースト内から操作を続けられるようにする。
   if (ended) {
     const canAdvance = name === 'clear' || run?.canContinue;
@@ -332,6 +344,21 @@ function updateCountdown() {
   }
 }
 
+function stageThemeLabel(stage) {
+  if (stage.puzzle) return `${stage.maze.size}×${stage.maze.size} ${stage.puzzle.label}`;
+  const variety = stage.maze.variation;
+  return `${variety ? `${variety.size}×${variety.size} ${variety.label}｜` : ''}${stage.theme?.label || ''}`;
+}
+
+function renderHomeHeader() {
+  // 折り返しで操作列が高くなる端末でも、次のチャレンジと同じ高さにする。
+  // この下見は表示だけに使い、実際のラン・迷路の乱数・選曲は進めない。
+  const upcoming = createRun(seed);
+  const preview = createStagePlay(upcoming.currentSeed(), challengeDifficulty(1, settings.challengeLevel), { variation: upcoming.currentVariation(settings.challengeLevel) });
+  find('play-mode-label').textContent = CHALLENGE_LEVELS[settings.challengeLevel].label;
+  find('stage-theme').textContent = stageThemeLabel(preview.stage);
+}
+
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
   stageIndex = run ? run.stageIndex : 1;
@@ -348,10 +375,8 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   game.setPaused(false);
   game.setStage({ challenge: Boolean(run), stageIndex, continuesLeft: run?.continuesLeft ?? 0 });
   find('play-mode-label').textContent = gameMode === 'tutorial' ? 'はじめて' : gameMode==='floor-practice'?'床の練習':run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
-  const variety=play.stage.maze.variation;
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉を右下のカップへ導きます`);
-  find('stage-theme').textContent = `${variety?`${variety.size}×${variety.size} ${variety.label}｜`:''}${play.stage.theme?.label || ''}`;
-  if(play.stage.puzzle)find('stage-theme').textContent=`${play.stage.maze.size}×${play.stage.maze.size} ${play.stage.puzzle.label}`;
+  find('stage-theme').textContent = stageThemeLabel(play.stage);
   if(puzzleCourse)find('stage-theme').textContent=`${puzzleCourse.index+1}/6｜${puzzleCourse.lesson.title}`;
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉をカップへ導きます`);
   resize();
@@ -472,7 +497,7 @@ function frame(now) {
     const guardBefore = shield.value;
     let recovery = null;
     const damage = play.advance({ dt, elapsedMs, tilt: tilt.value, base: { ...BASE, maxTiltAngleDeg: settings.maxTiltAngleDeg }, onImpact: (speed,wall) => { sound.impact(speed,wall); if(gameMode==='tutorial')tutorial.contact(wall.materialId==='racket'&&wall.bounce==='reflect'?'gate':wall.materialId); },
-      onFeature: kind => { if (gameMode === 'tutorial' && ['leaf', 'hourglass'].includes(kind)) tutorial.contact(kind); game.showFeature(kind, now); if (kind !== 'full') sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
+      onFeature: kind => { if (gameMode === 'tutorial' && ['leaf', 'hourglass'].includes(kind)) tutorial.contact(kind); game.showFeature(kind, now); if (!['full','leaf-full'].includes(kind)) sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
       onRecovery: (_amount, change) => { if (gameMode === 'tutorial') tutorial.contact('candy'); recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
     if (gameMode === 'tutorial') tutorial.inspect(play,tilt.value,dt*1000);
     if(play.lastPhysicsResult?.halt){setPaused(true);find('board-status').textContent='計算を続けられないため一時停止しました。';}

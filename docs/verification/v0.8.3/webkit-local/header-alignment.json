@@ -1,0 +1,598 @@
+{
+  "base": "http://127.0.0.1:8794/",
+  "engine": "webkit",
+  "rows": [
+    {
+      "width": 312,
+      "height": 780,
+      "camera": 0,
+      "bottom": 0,
+      "top": {
+        "head": {
+          "x": 10,
+          "y": 14,
+          "width": 292,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 250.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 10,
+          "y": 197.4375,
+          "width": 292,
+          "height": 663.0625,
+          "bottom": 860.5
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 780,
+        "scroll": 873,
+        "width": 312,
+        "scrollWidth": 312
+      },
+      "play": {
+        "head": {
+          "x": 10,
+          "y": 14,
+          "width": 292,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 250.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 10,
+          "y": 197.4375,
+          "width": 292,
+          "height": 292,
+          "bottom": 489.4375
+        },
+        "height": 780,
+        "scroll": 780,
+        "width": 312,
+        "scrollWidth": 312
+      }
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "camera": 0,
+      "bottom": 0,
+      "top": {
+        "head": {
+          "x": 10,
+          "y": 14,
+          "width": 340,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 298.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 10,
+          "y": 187.046875,
+          "width": 340,
+          "height": 669.0625,
+          "bottom": 856.109375
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 740,
+        "scroll": 868,
+        "width": 360,
+        "scrollWidth": 360
+      },
+      "play": {
+        "head": {
+          "x": 10,
+          "y": 14,
+          "width": 340,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 298.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 10,
+          "y": 187.046875,
+          "width": 340,
+          "height": 340,
+          "bottom": 527.046875
+        },
+        "height": 740,
+        "scroll": 740,
+        "width": 360,
+        "scrollWidth": 360
+      }
+    },
+    {
+      "width": 390,
+      "height": 700,
+      "camera": 0,
+      "bottom": 0,
+      "top": {
+        "head": {
+          "x": 14,
+          "y": 14,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 15,
+          "y": 191.046875,
+          "width": 360,
+          "height": 669.0625,
+          "bottom": 860.109375
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 700,
+        "scroll": 872,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      "play": {
+        "head": {
+          "x": 14,
+          "y": 14,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 15,
+          "y": 191.046875,
+          "width": 360,
+          "height": 360,
+          "bottom": 551.046875
+        },
+        "height": 700,
+        "scroll": 755,
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "camera": 0,
+      "bottom": 0,
+      "top": {
+        "head": {
+          "x": 14,
+          "y": 14,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 14,
+          "y": 197.046875,
+          "width": 362,
+          "height": 669.0625,
+          "bottom": 866.109375
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 844,
+        "scroll": 878,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      "play": {
+        "head": {
+          "x": 14,
+          "y": 14,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 14,
+          "y": 197.046875,
+          "width": 362,
+          "height": 362,
+          "bottom": 559.046875
+        },
+        "height": 844,
+        "scroll": 844,
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "camera": 47,
+      "bottom": 34,
+      "top": {
+        "head": {
+          "x": 14,
+          "y": 61,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 92.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 65.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 87.515625
+        },
+        "frame": {
+          "x": 14,
+          "y": 244.046875,
+          "width": 362,
+          "height": 669.0625,
+          "bottom": 913.109375
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 844,
+        "scroll": 959,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      "play": {
+        "head": {
+          "x": 14,
+          "y": 61,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 92.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 65.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 87.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 14,
+          "y": 244.046875,
+          "width": 362,
+          "height": 362,
+          "bottom": 606.046875
+        },
+        "height": 844,
+        "scroll": 864,
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "camera": 18,
+      "bottom": 24,
+      "top": {
+        "head": {
+          "x": 14,
+          "y": 32,
+          "width": 384,
+          "height": 31.046875,
+          "bottom": 63.046875
+        },
+        "badge": {
+          "x": 346.96875,
+          "y": 36.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 58.515625
+        },
+        "frame": {
+          "x": 14,
+          "y": 215.046875,
+          "width": 384,
+          "height": 669.0625,
+          "bottom": 884.109375
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 915,
+        "scroll": 920,
+        "width": 412,
+        "scrollWidth": 412
+      },
+      "play": {
+        "head": {
+          "x": 14,
+          "y": 32,
+          "width": 384,
+          "height": 31.046875,
+          "bottom": 63.046875
+        },
+        "badge": {
+          "x": 346.96875,
+          "y": 36.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 58.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 14,
+          "y": 215.046875,
+          "width": 384,
+          "height": 384,
+          "bottom": 599.046875
+        },
+        "height": 915,
+        "scroll": 915,
+        "width": 412,
+        "scrollWidth": 412
+      }
+    },
+    {
+      "width": 576,
+      "height": 900,
+      "camera": 0,
+      "bottom": 0,
+      "top": {
+        "head": {
+          "x": 62,
+          "y": 14,
+          "width": 452,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 462.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 62,
+          "y": 197.046875,
+          "width": 452,
+          "height": 690.953125,
+          "bottom": 888
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 900,
+        "scroll": 900,
+        "width": 576,
+        "scrollWidth": 576
+      },
+      "play": {
+        "head": {
+          "x": 62,
+          "y": 14,
+          "width": 452,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 462.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 62,
+          "y": 197.046875,
+          "width": 452,
+          "height": 452,
+          "bottom": 649.046875
+        },
+        "height": 900,
+        "scroll": 900,
+        "width": 576,
+        "scrollWidth": 576
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "camera": 0,
+      "bottom": 0,
+      "top": {
+        "head": {
+          "x": 196,
+          "y": 14,
+          "width": 452,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 596.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 322,
+          "y": 191.046875,
+          "width": 200,
+          "height": 804.9375,
+          "bottom": 995.984375
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 390,
+        "scroll": 1008,
+        "width": 844,
+        "scrollWidth": 844
+      },
+      "play": {
+        "head": {
+          "x": 196,
+          "y": 14,
+          "width": 452,
+          "height": 31.046875,
+          "bottom": 45.046875
+        },
+        "badge": {
+          "x": 596.96875,
+          "y": 18.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 40.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 322,
+          "y": 191.046875,
+          "width": 200,
+          "height": 200,
+          "bottom": 391.046875
+        },
+        "height": 390,
+        "scroll": 595,
+        "width": 844,
+        "scrollWidth": 844
+      }
+    }
+  ]
+}

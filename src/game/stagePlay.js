@@ -34,6 +34,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
   const limitSec = !floorPractice && !tutorial && difficulty ? stageTimeLimitSec(maze, difficulty, stage) : null;
   let timeMs = 0;
   let activeSec = 0;
+  let touchingLeaf = false;
   let touchingRecovery = false;
   let wallHits = 0;
   let started = false;
@@ -98,7 +99,10 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
           hourglass.collected = true; extendedSec += HOURGLASS.bonusSec; onFeature?.('hourglass');
         }
         const leaf = stage.leaf;
-        if (leaf && !leaf.collected && onTile(leaf, actor.r + LEAF.radius) && shield.value < hp.max * LEAF.capRatio) {
+        const leafTouching = Boolean(hp && leaf && !leaf.collected && onTile(leaf, actor.r + LEAF.radius));
+        if (leafTouching && shield.value >= hp.max * LEAF.capRatio && !touchingLeaf) onFeature?.('leaf-full');
+        touchingLeaf = leafTouching;
+        if (leafTouching && shield.value < hp.max * LEAF.capRatio) {
           shield.value += Math.min(hp.max * LEAF.amountRatio, hp.max * LEAF.capRatio - shield.value);
           leaf.collected = true; onFeature?.('leaf');
         }
