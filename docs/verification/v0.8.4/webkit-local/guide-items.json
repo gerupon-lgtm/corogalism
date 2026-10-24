@@ -1,0 +1,100 @@
+{
+  "base": "http://127.0.0.1:8794/",
+  "version": "0.8.4",
+  "engine": "webkit",
+  "rows": [
+    {
+      "width": 312,
+      "height": 780,
+      "before": {
+        "scrollHeight": 1925,
+        "clientHeight": 748,
+        "scrollWidth": 280,
+        "clientWidth": 280,
+        "cards": [
+          52,
+          52
+        ]
+      },
+      "after": {
+        "scrollHeight": 1949,
+        "clientHeight": 748,
+        "scrollWidth": 280,
+        "clientWidth": 280,
+        "cards": [
+          64.1875,
+          64.1875
+        ]
+      },
+      "text": [
+        "20％回復。げんき満タンでは取れません。",
+        "ダメージを肩代わり。まもり満タンでは取れません。"
+      ],
+      "addedScroll": 24,
+      "paragraphsFit": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "before": {
+        "scrollHeight": 1785,
+        "clientHeight": 812,
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "cards": [
+          52,
+          52
+        ]
+      },
+      "after": {
+        "scrollHeight": 1797,
+        "clientHeight": 812,
+        "scrollWidth": 358,
+        "clientWidth": 358,
+        "cards": [
+          52,
+          64.1875
+        ]
+      },
+      "text": [
+        "20％回復。げんき満タンでは取れません。",
+        "ダメージを肩代わり。まもり満タンでは取れません。"
+      ],
+      "addedScroll": 12,
+      "paragraphsFit": true,
+      "errors": []
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "before": {
+        "scrollHeight": 1789,
+        "clientHeight": 883,
+        "scrollWidth": 380,
+        "clientWidth": 380,
+        "cards": [
+          52,
+          52
+        ]
+      },
+      "after": {
+        "scrollHeight": 1801,
+        "clientHeight": 883,
+        "scrollWidth": 380,
+        "clientWidth": 380,
+        "cards": [
+          52,
+          64.1875
+        ]
+      },
+      "text": [
+        "20％回復。げんき満タンでは取れません。",
+        "ダメージを肩代わり。まもり満タンでは取れません。"
+      ],
+      "addedScroll": 12,
+      "paragraphsFit": true,
+      "errors": []
+    }
+  ]
+}

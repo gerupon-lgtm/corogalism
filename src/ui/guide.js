@@ -9,7 +9,7 @@ import { drawRackets } from '../render/movingWalls.js';
 import { RECOVERY, REST, HOURGLASS } from '../config/gameConfig.js';
 export const walls=[['default','標準','いつもの壁。'],['rubber','ゴム','よくはねる・ゴム自体は無傷。'],['cork','コルク','ほどよくはねる・痛み少なめ。'],['stone','石','はねにくい・痛み大きめ。'],['spike','とげ','ぶつかると大きなダメージ。'],['moss','こけ','はねにくい・痛み少なめ。'],['cotton','綿','壁へ向かう勢いを受け止める。横にはすべる、痛みなし。']];
 export const movingWalls=[['racket','ラケット','中心はまっすぐ、端は斜めへ。動かして狙おう。ダメージなし。'],['gate','通路の戸','傾けて動かすと、道が開く。打ち分けず、壁としてはね返す。']];
-export const items=[['candy','キャンディ',`${RECOVERY.healRatio*100}％回復。満タンなら残る。`],['leaf','葉っぱのまもり','ダメージを肩代わり。'],['hourglass','砂時計',`のこりじかん ＋${HOURGLASS.bonusSec}秒。`]];
+export const items=[['candy','キャンディ',`${RECOVERY.healRatio*100}％回復。げんき満タンでは取れません。`],['leaf','葉っぱのまもり','ダメージを肩代わり。まもり満タンでは取れません。'],['hourglass','砂時計',`のこりじかん ＋${HOURGLASS.bonusSec}秒。`]];
 export const floorMaterials=[['ice','氷','勢いが残る！早めに逆へ傾けてブレーキ。'],['sand','砂','すべる勢いを落とす、曲がり角の味方。'],['gravity','重力','中心へ引く。軌道が内側へ曲がる。'],['repulsion','反重力','外へ押す。抜けるときの加速に注意。']];
 export const floors=[['rest','ひとやすみ',`${REST.durationSec}秒じっとすると げんき回復＆じかん＋${REST.durationSec}秒。`],['sticky','とりもち','迷路内連続タップで最短0.5秒で脱出可能。']];
 const card=([id,title,body])=>`<article class="guide-card"><canvas data-guide-art="${id}" width="144" height="112" aria-hidden="true"></canvas><div><h3>${title}</h3><p>${body}</p></div></article>`;
