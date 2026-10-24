@@ -1,0 +1,111 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "engine": "chromium",
+  "version": "0.8.5",
+  "baseline": false,
+  "offline": true,
+  "rows": [
+    {
+      "width": 390,
+      "height": 844,
+      "camera": 47,
+      "bottom": 34,
+      "top": {
+        "head": {
+          "x": 14,
+          "y": 61,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 92.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 65.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 87.515625
+        },
+        "frame": {
+          "x": 14,
+          "y": 133.046875,
+          "width": 362,
+          "height": 669.0625,
+          "bottom": 802.109375
+        },
+        "board": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "meter": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "toolbar": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "height": 844,
+        "scroll": 848,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      "play": {
+        "head": {
+          "x": 14,
+          "y": 61,
+          "width": 362,
+          "height": 31.046875,
+          "bottom": 92.046875
+        },
+        "badge": {
+          "x": 324.96875,
+          "y": 65.515625,
+          "width": 51.03125,
+          "height": 22,
+          "bottom": 87.515625
+        },
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "board": {
+          "x": 14,
+          "y": 244.046875,
+          "width": 362,
+          "height": 362,
+          "bottom": 606.046875
+        },
+        "meter": {
+          "x": 14,
+          "y": 133.046875,
+          "width": 177,
+          "height": 64,
+          "bottom": 197.046875
+        },
+        "toolbar": {
+          "x": 14,
+          "y": 205.046875,
+          "width": 362,
+          "height": 34,
+          "bottom": 239.046875
+        },
+        "height": 844,
+        "scroll": 864,
+        "width": 390,
+        "scrollWidth": 390
+      }
+    }
+  ]
+}
