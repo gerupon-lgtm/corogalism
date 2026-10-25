@@ -1,0 +1,87 @@
+{
+  "version": "0.8.15",
+  "runtimeFiles": 134,
+  "runtimeBytes": 39745098,
+  "bgmBytes": 30368104,
+  "cases": [
+    {
+      "kind": "no-new-version",
+      "elapsedMs": 2232,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "最新版です。",
+      "installing": null,
+      "waiting": null,
+      "noticeVisible": false
+    },
+    {
+      "kind": "new-version-found-but-audio-blocked",
+      "elapsedMs": 335,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新の準備中…",
+      "installing": "installing",
+      "waiting": null,
+      "noticeVisible": false
+    },
+    {
+      "kind": "audio-released",
+      "elapsedMs": 1199,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新できます。",
+      "installing": null,
+      "waiting": "installed",
+      "noticeVisible": true
+    },
+    {
+      "kind": "preparation-over-15-seconds-is-not-check-failure",
+      "elapsedMs": 16468,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新の準備中…",
+      "installing": "installing",
+      "waiting": null,
+      "noticeVisible": false
+    },
+    {
+      "kind": "ready-during-play-does-not-interrupt-game",
+      "seed": 881558,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新できます。",
+      "installing": null,
+      "waiting": "installed",
+      "noticeVisible": false
+    },
+    {
+      "kind": "preparation-failed-keeps-current-version",
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新の準備に失敗しました。もう一度確認してください。",
+      "installing": null,
+      "waiting": null,
+      "noticeVisible": false
+    },
+    {
+      "kind": "retry-after-preparation-failure",
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新できます。",
+      "installing": null,
+      "waiting": "installed",
+      "noticeVisible": true
+    },
+    {
+      "kind": "other-tab-still-blocks-apply",
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新できます。",
+      "installing": null,
+      "waiting": "installed",
+      "noticeVisible": true
+    }
+  ],
+  "errors": [],
+  "boundary": "isolated local browser; actual pwa.js and sw.js; controlled precache revision and blocked audio response"
+}

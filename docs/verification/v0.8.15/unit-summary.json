@@ -1,0 +1,9 @@
+{
+  "command": "node --test --test-concurrency=1",
+  "tests": 338,
+  "pass": 338,
+  "fail": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "duration_ms": 57662.8
+}
