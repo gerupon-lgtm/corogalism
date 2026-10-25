@@ -7,4 +7,14 @@
 ローカルと公開Chromeで4画面条件の左右配置・タイルの実描画・縦横スクロールを確認する。既存の3面進行・やり直し・オフライン確認も同じブラウザ手順に含む。実機撮影や人間の完走とは区別する。ゲームロジックは変更しないため、単体330件は前版の確認結果を参照する。
 
 - [ローカル結果](verification/v0.8.9/local/results.json)
-- 公開確認はデプロイ後に追記する。
+- [公開ブラウザ結果](verification/v0.8.9/public/results.json)
+
+## 公開確認
+
+アプリ`77428ffa07609088a8d10c92ed6c790d46d19bd5`、[Pages 40150766104](https://github.com/gerupon-lgtm/corogalism/actions/runs/40150766104)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+ローカル・公開Chromeとも4画面条件でトップと結果の床2枚の実描画・左右配置・枠内への収まり・縦横スクロール0を確認した。短い画面で新記録バッジを出す条件も成功。134資材のオフライン再起動、チュートリアル3面の進行・最後のリトライ・モード選択への復帰、プラクティスの5面表示も成功。エラー0。面送りはゴールへ移動する検証操作であり、人間の完走ではない。
+
+公開137資材はHTTP200・SHA-256すべて一致。キャッシュは`36d812126e1f35e3`。[配信本文の検証](verification/v0.8.9/deploy-hashes.json)。
+
+[トップ画像](verification/v0.8.9/public/home-full.png)、[結果画像](verification/v0.8.9/public/result-full.png)。上下の安全余白を模擬したブラウザ画像であり、実機撮影ではない。
