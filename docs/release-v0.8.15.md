@@ -29,4 +29,12 @@ sw.jsの全資材保存、明示適用、別タブでプレイ中の適用禁止
 - [全テスト集計](verification/v0.8.15/unit-summary.json)
 - [実更新の遅延・失敗・再試行](verification/update-check-improved/results.json)、[再現手順](../tools/browser-update-check-v0815.mjs)
 - [ローカルの画面・通常更新チェック](verification/v0.8.15/settings-local/results.json)
-- 公開確認はデプロイ後に追記する。
+- [公開の通常更新チェックと画面確認](verification/v0.8.15/settings-public/results.json)
+
+## 公開確認
+
+アプリ`c579679d30f5840a280c8a3755f8affb476a918a`、[Pages 40160855053](https://github.com/gerupon-lgtm/corogalism/actions/runs/40160855053)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+公開Chromeの5条件で実更新チェックの「最新版です」、前後のトップ8要素の配置保持、トップと設定の見出し一致、設定の両入口のスクロール0、設定保存・一時停止保持、134資材のオフライン再起動が成功。エラー0。新版の音源を遅らせるケース・取得失敗・別タブ保護はローカルの実ブラウザ検証であり、公開先を故意に遅くしたものではない。
+
+公開137資材はすべてHTTP200・SHA-256一致。キャッシュは`b1c669607d644cb3`。[配信本文確認](verification/v0.8.15/deploy-hashes.json)。公開されたpwa.js・sw.jsの本文も検証版と一致する。
