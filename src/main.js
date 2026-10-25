@@ -374,7 +374,7 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉を右下のカップへ導きます`);
   find('stage-theme').textContent = stageThemeLabel(play.stage);
   // 詳しい面の目的は下の説明欄に残し、操作行は狭い画面でも二段に保つ。
-  if(puzzleCourse)find('stage-theme').textContent=`動く壁 ${puzzleCourse.index+1} / 6`;
+  if(puzzleCourse)find('stage-theme').textContent=`動く壁 ${puzzleCourse.index+1} / ${puzzleCourse.stageCount}`;
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉をカップへ導きます`);
   resize();
 }
@@ -660,7 +660,7 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
         maze:{size:play.stage.maze.size,path:play.stage.maze.path,cells:play.stage.maze.cells,variation:play.stage.maze.variation,baffle:play.stage.maze.baffle,baffles:play.stage.maze.baffles},zones:play.stage.zones,
         goal: goalCenter(play.stage.maze), walls: play.stage.walls.map((wall) => ({ ...wall })),
         puzzle:play.stage.puzzle,rackets:play.stage.rackets??[],lastResult:play.lastPhysicsResult,
-        puzzleCourse:puzzleCourse?{index:puzzleCourse.index,isLast:puzzleCourse.isLast,lesson:puzzleCourse.lesson}:null };
+        puzzleCourse:puzzleCourse?{index:puzzleCourse.index,stageCount:puzzleCourse.stageCount,isLast:puzzleCourse.isLast,lesson:puzzleCourse.lesson}:null };
     },
     teleport(x, y) { play.teleport(x, y); },
     setTilt(x, y) { tilt.setRaw(x, y); },

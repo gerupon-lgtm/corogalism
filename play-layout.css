@@ -47,3 +47,5 @@ body[data-screen="mode"] .wrap{gap:8px}
 body[data-screen="mode"] #challenge-hud{display:none}
 body[data-screen="mode"] #screen-mode{min-height:0;flex:1 1 auto}
 @media(max-height:760px){.toy-box{gap:8px;padding-block:9px}.toy-box .menu-scene{height:38px}.toy-box .learning{gap:10px}.toy-box .entry{min-height:62px;padding-block:5px}.toy-box .challenge{padding-block:12px}.toy-box .difficulty-note{margin-block:5px 7px}}
+/* 見出しの壁飾りを足しても、短い画面では操作の間隔から高さを確保する。 */
+@media(max-height:720px){.toy-box{gap:5px}.toy-box .challenge{padding-block:9px}}

@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '51d2027ab6f0d287';
+self.PRECACHE_VERSION = '6c60168ae71a7e32';
 self.PRECACHE_FILES = [
   "assets/audio/bgm-force.wav",
   "assets/audio/bgm-puzzle.wav",

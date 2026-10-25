@@ -26,9 +26,10 @@ test('動く壁も綿も無傷で、直後に通常壁へぶつかった時の�
  assert.ok(hp.applyImpact(4,{materialId:'stone'},1)>0);
 });
 
-test('紹介コース6面は無制限時間で、実際の壁と球が同じ傾きに反応する',()=>{
+test('紹介コース2面は無制限時間で、実際の壁と球が同じ傾きに反応する',()=>{
  const course=createPuzzleTutorialCourse(913);
- for(let i=0;i<6;i++){
+ assert.equal(course.stageCount,2);
+ for(let i=0;i<course.stageCount;i++){
   const play=createStagePlay(course.stageSeed,null,{tutorial:true,tutorialPuzzle:course.profile});
   assert.equal(play.limitSec,null);assert.equal(play.hp.max,100);
   const before=play.stage.rackets.map(w=>({id:w.id,x:w.x,y:w.y}));
@@ -41,7 +42,7 @@ test('紹介コース6面は無制限時間で、実際の壁と球が同じ傾�
   assert.deepEqual(play.stage.rackets.map(w=>({x:w.x,y:w.y})),positions);
   assert.equal(play.lastPhysicsResult.halt,undefined);
   assert.ok([play.actor.x,play.actor.y,play.actor.vx,play.actor.vy].every(Number.isFinite));
-  if(i<5)assert.equal(course.next(),true);
+  assert.equal(course.next(),i<course.stageCount-1);
  }
 });
 

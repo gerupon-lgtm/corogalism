@@ -70,3 +70,14 @@
 }
 @media(max-width:350px){.toy-box{padding-inline:11px}.toy-box .entry{padding-inline:10px;gap:9px}.toy-box .entry strong{font-size:16px}.toy-box .entry small{font-size:11px}.toy-box .challenge{padding:12px}}
 @media(prefers-reduced-motion:reduce){.toy-box button{transition:none}}
+
+/* T-302: 見出しの小物と同じまとまりに、短いコルク壁の飾りを置く。 */
+.menu-heading,.run-result-intro{display:flex;flex-direction:column;gap:6px;flex-shrink:0;min-width:0}
+.toy-wall-divider{display:block;width:72%;height:22px;align-self:center;pointer-events:none}
+.run-result-intro{gap:8px}
+.result-scene{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;gap:8px;align-items:center;min-height:48px}
+.result-scene canvas{display:block;width:48px;height:48px;justify-self:center;pointer-events:none}
+.result-scene canvas[data-toy="goal"]{height:38px}
+.run-result-intro .best-badge{align-self:center;margin:0}
+.run-result-intro .lead{margin:0}
+@media(max-height:720px){.run-result-menu{gap:6px}}
