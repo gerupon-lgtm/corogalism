@@ -1,0 +1,140 @@
+{
+  "version": "0.8.7",
+  "base": "http://127.0.0.1:56626/",
+  "homeWidths": [
+    {
+      "width": 360,
+      "overflow": 0,
+      "horizontal": 0,
+      "titleFits": true
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "horizontal": 0,
+      "titleFits": true
+    },
+    {
+      "width": 412,
+      "overflow": 0,
+      "horizontal": 0,
+      "titleFits": true
+    }
+  ],
+  "mode": {
+    "overflow": 0,
+    "headerHidden": true
+  },
+  "cache": {
+    "key": "corogalism-51d2027ab6f0d287",
+    "count": 134
+  },
+  "layouts": [
+    {
+      "mode": "tutorial",
+      "overflow": 0,
+      "panels": [
+        {
+          "id": "play-heading",
+          "leftDelta": 0,
+          "widthDelta": 0
+        },
+        {
+          "id": "play-toolbar",
+          "leftDelta": 0,
+          "widthDelta": 0
+        },
+        {
+          "id": "screen-game",
+          "leftDelta": 0,
+          "widthDelta": 0
+        }
+      ]
+    },
+    {
+      "mode": "challenge",
+      "overflow": 0,
+      "panels": [
+        {
+          "id": "play-heading",
+          "leftDelta": 0,
+          "widthDelta": 0
+        },
+        {
+          "id": "play-toolbar",
+          "leftDelta": 0,
+          "widthDelta": 0
+        },
+        {
+          "id": "screen-game",
+          "leftDelta": 0,
+          "widthDelta": 0
+        }
+      ]
+    },
+    {
+      "mode": "practice",
+      "overflow": 0,
+      "panels": [
+        {
+          "id": "play-heading",
+          "leftDelta": 0,
+          "widthDelta": 0
+        },
+        {
+          "id": "play-toolbar",
+          "leftDelta": 0,
+          "widthDelta": 0
+        },
+        {
+          "id": "screen-game",
+          "leftDelta": 0,
+          "widthDelta": 0
+        }
+      ]
+    }
+  ],
+  "rotation": {
+    "seed": 77,
+    "timeMs": 0,
+    "paused": true,
+    "actorPreserved": true,
+    "canvasMatches": true
+  },
+  "delayedLayout": {
+    "canvasMatches": true,
+    "width": 332
+  },
+  "offline": {
+    "reload": true,
+    "practice": true,
+    "comment": true
+  },
+  "course": {
+    "kind": "teleport fixture; not human completion",
+    "stages": [
+      {
+        "stage": 1,
+        "next": "次の迷路（2 / 5）"
+      },
+      {
+        "stage": 2,
+        "next": "次の迷路（3 / 5）"
+      },
+      {
+        "stage": 3,
+        "next": "次の迷路（4 / 5）"
+      },
+      {
+        "stage": 4,
+        "next": "次の迷路（5 / 5）"
+      },
+      {
+        "stage": 5,
+        "next": "モード選択へ"
+      }
+    ],
+    "finalScreen": "mode"
+  },
+  "errors": []
+}
