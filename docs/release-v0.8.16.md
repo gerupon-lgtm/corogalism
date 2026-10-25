@@ -17,6 +17,15 @@
 - [修正前の実寸](verification/shield-visibility/before/results.json)
 - [ローカル確認](verification/v0.8.16/shield-local/results.json)
 - [関連13テスト](verification/v0.8.16/unit-summary.json)
-- 公開確認はデプロイ後に追記する。
+- [公開のまもり表示](verification/v0.8.16/shield-public/results.json)
+- [公開の設定・更新チェック・オフライン](verification/v0.8.16/settings-public/results.json)
 
 ローカル8画面でカードと迷路のx・y・幅・高さは修正前と一致、両バーの高さも維持。0〜120の数値と−123のダメージの分離、文字と札の明暗差4.5以上、残量0と実取得後20の表示・読み上げ名を確認。エラー0、縦スクロール0。
+
+## 公開確認
+
+アプリ`2cf7812dd0856d3fc4677afe1c3d7e3bef94eca8`、[Pages 40172061824](https://github.com/gerupon-lgtm/corogalism/actions/runs/40172061824)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+公開Chromeでも全8画面で寸法保持、文字・葉っぱの拡大、明暗差、他の数値との分離、実取得後の残量20と読み上げ名が成功。縦スクロール0、エラー0。別手順の公開5条件で、設定両入口・保存・見出し一致、更新チェック前後のトップ配置保持、134資材オフライン再起動も成功。
+
+公開137資材はすべてHTTP200・SHA-256一致。キャッシュは`e7d221e699532e7a`。[配信本文確認](verification/v0.8.16/deploy-hashes.json)。[チャレンジの画像](verification/v0.8.16/shield-public/393x740-challenge.png)、[取得後の画像](verification/v0.8.16/shield-public/393x740-tutorial.png)。
