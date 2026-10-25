@@ -9,4 +9,12 @@
 ローカルChromeの360×740・390×700・390×740・390×844（上下余白の模擬設定）で縦横スクロール0を確認。2か所のカード間隔の差は0〜0.016px、区分14px／700を確認。短い画面の新記録バッジも収まる。既存の3面進行・リトライ・134資材のオフライン再起動も成功、エラー0。面送りは球をゴールへ移す検証操作であり、人間の完走や実機撮影とは区別する。ゲームロジックは変更しないため単体330件はv0.8.8の結果を参照。
 
 - [ローカル結果](verification/v0.8.11/local/results.json)
-- 公開確認はデプロイ後に追記する。
+- [公開ブラウザ結果](verification/v0.8.11/public/results.json)
+
+## 公開確認
+
+アプリ`007516b10e8f1b94fc03d3f06ba685e35788cad6`、[Pages 40156172612](https://github.com/gerupon-lgtm/corogalism/actions/runs/40156172612)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+公開Chromeでも4画面条件と短い画面の新記録バッジで、区分14px／700、2か所のカード間隔の差0〜0.016px、縦横スクロール0を確認。134資材のオフライン再起動と既存3面進行・リトライ・終了も成功、エラー0。
+
+公開137資材はすべてHTTP200・SHA-256一致。キャッシュは`f643cefc1a79b80e`。[配信本文の確認](verification/v0.8.11/deploy-hashes.json)。[結果画面の画像](verification/v0.8.11/public/result-full.png)。
