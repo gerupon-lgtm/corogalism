@@ -48,7 +48,13 @@ export function createGameScreen(root) {
         hpBar.setAttribute('aria-valuetext', hpLabel(v.hp));
         root.querySelector('#hud-hp').textContent = hpLabel(v.hp);
         const stock = root.querySelector('#hud-shield');
-        if (stock) { stock.textContent = String(Math.ceil(v.shield ?? 0)); stock.parentElement?.setAttribute('aria-label', `葉っぱのまもり ${Math.ceil(v.shield ?? 0)}`); }
+        if (stock) {
+          const remaining=String(Math.ceil(v.shield??0));
+          if(stock.textContent!==remaining)stock.textContent=remaining;
+          const badge=stock.parentElement;
+          badge?.classList.toggle('is-empty',Number(remaining)===0);
+          if(badge&&badge.getAttribute('aria-label')!==`葉っぱのまもり 残り${remaining}`)badge.setAttribute('aria-label',`葉っぱのまもり 残り${remaining}`);
+        }
         if (v.limitSec !== null) {
           timeBar.value = v.remainingSec / v.limitSec;
           timeBar.setAttribute('aria-valuetext', `${v.remainingSec.toFixed(1)} 秒`);

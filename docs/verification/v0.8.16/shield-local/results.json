@@ -1,0 +1,1260 @@
+{
+  "version": "0.8.16",
+  "base": "http://127.0.0.1:59563/",
+  "rows": [
+    {
+      "profile": "393x740",
+      "mode": "challenge",
+      "initial": {
+        "card": {
+          "x": 200.5,
+          "y": 84.046875,
+          "width": 168,
+          "height": 64,
+          "right": 368.5,
+          "bottom": 148.046875
+        },
+        "board": {
+          "x": 24.5,
+          "y": 191.046875,
+          "width": 344,
+          "height": 344,
+          "right": 368.5,
+          "bottom": 535.046875
+        },
+        "badge": {
+          "x": 285.59375,
+          "y": 89.046875,
+          "width": 71.90625,
+          "height": 19,
+          "right": 357.5,
+          "bottom": 108.046875
+        },
+        "hp": {
+          "x": 295.046875,
+          "y": 108.046875,
+          "width": 62.453125,
+          "height": 18,
+          "right": 357.5,
+          "bottom": 126.046875
+        },
+        "damage": {
+          "x": 211.5,
+          "y": 115.046875,
+          "width": 10,
+          "height": 4,
+          "right": 221.5,
+          "bottom": 119.046875
+        },
+        "name": {
+          "x": 211.5,
+          "y": 92.046875,
+          "width": 71.09375,
+          "height": 13,
+          "right": 282.59375,
+          "bottom": 105.046875
+        },
+        "hpBar": {
+          "x": 211.5,
+          "y": 127.046875,
+          "width": 146,
+          "height": 10,
+          "right": 357.5,
+          "bottom": 137.046875
+        },
+        "timeBar": {
+          "x": 35.5,
+          "y": 127.046875,
+          "width": 146,
+          "height": 10,
+          "right": 181.5,
+          "bottom": 137.046875
+        },
+        "font": 15,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ]
+    },
+    {
+      "profile": "393x740",
+      "mode": "tutorial",
+      "initial": {
+        "card": {
+          "x": 38.5,
+          "y": 101.046875,
+          "width": 316,
+          "height": 47,
+          "right": 354.5,
+          "bottom": 148.046875
+        },
+        "board": {
+          "x": 38.5,
+          "y": 191.046875,
+          "width": 316,
+          "height": 316,
+          "right": 354.5,
+          "bottom": 507.046875
+        },
+        "badge": {
+          "x": 210.359375,
+          "y": 108.546875,
+          "width": 41.90625,
+          "height": 19,
+          "right": 252.265625,
+          "bottom": 127.546875
+        },
+        "hp": {
+          "x": 259.265625,
+          "y": 109.046875,
+          "width": 84.234375,
+          "height": 18,
+          "right": 343.5,
+          "bottom": 127.046875
+        },
+        "damage": {
+          "x": 97.5,
+          "y": 109.046875,
+          "width": 10,
+          "height": 4,
+          "right": 107.5,
+          "bottom": 113.046875
+        },
+        "name": {
+          "x": 49.5,
+          "y": 111.546875,
+          "width": 153.859375,
+          "height": 13,
+          "right": 203.359375,
+          "bottom": 124.546875
+        },
+        "hpBar": {
+          "x": 49.5,
+          "y": 131.046875,
+          "width": 294,
+          "height": 7,
+          "right": 343.5,
+          "bottom": 138.046875
+        },
+        "timeBar": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "font": 15,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ],
+      "pickup": {
+        "actual": 20,
+        "display": {
+          "card": {
+            "x": 38.5,
+            "y": 101.046875,
+            "width": 316,
+            "height": 47,
+            "right": 354.5,
+            "bottom": 148.046875
+          },
+          "board": {
+            "x": 38.5,
+            "y": 191.046875,
+            "width": 316,
+            "height": 316,
+            "right": 354.5,
+            "bottom": 507.046875
+          },
+          "badge": {
+            "x": 200.453125,
+            "y": 108.546875,
+            "width": 51.8125,
+            "height": 19,
+            "right": 252.265625,
+            "bottom": 127.546875
+          },
+          "hp": {
+            "x": 259.265625,
+            "y": 109.046875,
+            "width": 84.234375,
+            "height": 18,
+            "right": 343.5,
+            "bottom": 127.046875
+          },
+          "damage": {
+            "x": 97.5,
+            "y": 109.046875,
+            "width": 10,
+            "height": 4,
+            "right": 107.5,
+            "bottom": 113.046875
+          },
+          "name": {
+            "x": 49.5,
+            "y": 111.546875,
+            "width": 143.953125,
+            "height": 13,
+            "right": 193.453125,
+            "bottom": 124.546875
+          },
+          "hpBar": {
+            "x": 49.5,
+            "y": 131.046875,
+            "width": 294,
+            "height": 7,
+            "right": 343.5,
+            "bottom": 138.046875
+          },
+          "timeBar": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "font": 15,
+          "weight": "900",
+          "color": "rgb(53, 85, 46)",
+          "background": "rgb(226, 237, 207)",
+          "icon": 17,
+          "value": "20",
+          "label": "葉っぱのまもり 残り20",
+          "badgeText": "まもり20",
+          "overflow": 0,
+          "contrast": 6.9264435773020665
+        }
+      }
+    },
+    {
+      "profile": "360x740",
+      "mode": "challenge",
+      "initial": {
+        "card": {
+          "x": 184,
+          "y": 84.046875,
+          "width": 166,
+          "height": 60,
+          "right": 350,
+          "bottom": 144.046875
+        },
+        "board": {
+          "x": 10,
+          "y": 187.046875,
+          "width": 340,
+          "height": 340,
+          "right": 350,
+          "bottom": 527.046875
+        },
+        "badge": {
+          "x": 300.75,
+          "y": 87.046875,
+          "width": 41.25,
+          "height": 19,
+          "right": 342,
+          "bottom": 106.046875
+        },
+        "hp": {
+          "x": 286.484375,
+          "y": 107.046875,
+          "width": 55.515625,
+          "height": 16,
+          "right": 342,
+          "bottom": 123.046875
+        },
+        "damage": {
+          "x": 192,
+          "y": 113.046875,
+          "width": 10,
+          "height": 4,
+          "right": 202,
+          "bottom": 117.046875
+        },
+        "name": {
+          "x": 192,
+          "y": 90.703125,
+          "width": 91.484375,
+          "height": 11.6875,
+          "right": 283.484375,
+          "bottom": 102.390625
+        },
+        "hpBar": {
+          "x": 192,
+          "y": 125.046875,
+          "width": 150,
+          "height": 10,
+          "right": 342,
+          "bottom": 135.046875
+        },
+        "timeBar": {
+          "x": 18,
+          "y": 125.046875,
+          "width": 150,
+          "height": 10,
+          "right": 168,
+          "bottom": 135.046875
+        },
+        "font": 14,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ]
+    },
+    {
+      "profile": "360x740",
+      "mode": "tutorial",
+      "initial": {
+        "card": {
+          "x": 20,
+          "y": 101.046875,
+          "width": 320,
+          "height": 43,
+          "right": 340,
+          "bottom": 144.046875
+        },
+        "board": {
+          "x": 20,
+          "y": 187.046875,
+          "width": 320,
+          "height": 320,
+          "right": 340,
+          "bottom": 507.046875
+        },
+        "badge": {
+          "x": 196.515625,
+          "y": 108.546875,
+          "width": 41.25,
+          "height": 19,
+          "right": 237.765625,
+          "bottom": 127.546875
+        },
+        "hp": {
+          "x": 244.765625,
+          "y": 109.046875,
+          "width": 84.234375,
+          "height": 18,
+          "right": 329,
+          "bottom": 127.046875
+        },
+        "damage": {
+          "x": 79,
+          "y": 109.046875,
+          "width": 10,
+          "height": 4,
+          "right": 89,
+          "bottom": 113.046875
+        },
+        "name": {
+          "x": 31,
+          "y": 112.203125,
+          "width": 158.515625,
+          "height": 11.6875,
+          "right": 189.515625,
+          "bottom": 123.890625
+        },
+        "hpBar": {
+          "x": 31,
+          "y": 131.046875,
+          "width": 298,
+          "height": 7,
+          "right": 329,
+          "bottom": 138.046875
+        },
+        "timeBar": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "font": 14,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ],
+      "pickup": {
+        "actual": 20,
+        "display": {
+          "card": {
+            "x": 20,
+            "y": 101.046875,
+            "width": 320,
+            "height": 43,
+            "right": 340,
+            "bottom": 144.046875
+          },
+          "board": {
+            "x": 20,
+            "y": 187.046875,
+            "width": 320,
+            "height": 320,
+            "right": 340,
+            "bottom": 507.046875
+          },
+          "badge": {
+            "x": 187.28125,
+            "y": 108.546875,
+            "width": 50.484375,
+            "height": 19,
+            "right": 237.765625,
+            "bottom": 127.546875
+          },
+          "hp": {
+            "x": 244.765625,
+            "y": 109.046875,
+            "width": 84.234375,
+            "height": 18,
+            "right": 329,
+            "bottom": 127.046875
+          },
+          "damage": {
+            "x": 79,
+            "y": 109.046875,
+            "width": 10,
+            "height": 4,
+            "right": 89,
+            "bottom": 113.046875
+          },
+          "name": {
+            "x": 31,
+            "y": 112.203125,
+            "width": 149.28125,
+            "height": 11.6875,
+            "right": 180.28125,
+            "bottom": 123.890625
+          },
+          "hpBar": {
+            "x": 31,
+            "y": 131.046875,
+            "width": 298,
+            "height": 7,
+            "right": 329,
+            "bottom": 138.046875
+          },
+          "timeBar": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "font": 14,
+          "weight": "900",
+          "color": "rgb(53, 85, 46)",
+          "background": "rgb(226, 237, 207)",
+          "icon": 17,
+          "value": "20",
+          "label": "葉っぱのまもり 残り20",
+          "badgeText": "まもり20",
+          "overflow": 0,
+          "contrast": 6.9264435773020665
+        }
+      }
+    },
+    {
+      "profile": "390x700",
+      "mode": "challenge",
+      "initial": {
+        "card": {
+          "x": 199,
+          "y": 84.046875,
+          "width": 148,
+          "height": 64,
+          "right": 347,
+          "bottom": 148.046875
+        },
+        "board": {
+          "x": 43,
+          "y": 191.046875,
+          "width": 304,
+          "height": 304,
+          "right": 347,
+          "bottom": 495.046875
+        },
+        "badge": {
+          "x": 297.09375,
+          "y": 89.046875,
+          "width": 41.90625,
+          "height": 19,
+          "right": 339,
+          "bottom": 108.046875
+        },
+        "hp": {
+          "x": 276.546875,
+          "y": 108.046875,
+          "width": 62.453125,
+          "height": 18,
+          "right": 339,
+          "bottom": 126.046875
+        },
+        "damage": {
+          "x": 207,
+          "y": 115.046875,
+          "width": 10,
+          "height": 4,
+          "right": 217,
+          "bottom": 119.046875
+        },
+        "name": {
+          "x": 207,
+          "y": 92.046875,
+          "width": 66.546875,
+          "height": 13,
+          "right": 273.546875,
+          "bottom": 105.046875
+        },
+        "hpBar": {
+          "x": 207,
+          "y": 127.046875,
+          "width": 132,
+          "height": 10,
+          "right": 339,
+          "bottom": 137.046875
+        },
+        "timeBar": {
+          "x": 51,
+          "y": 127.046875,
+          "width": 132,
+          "height": 10,
+          "right": 183,
+          "bottom": 137.046875
+        },
+        "font": 15,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ]
+    },
+    {
+      "profile": "390x700",
+      "mode": "tutorial",
+      "initial": {
+        "card": {
+          "x": 61,
+          "y": 101.046875,
+          "width": 268,
+          "height": 47,
+          "right": 329,
+          "bottom": 148.046875
+        },
+        "board": {
+          "x": 61,
+          "y": 191.046875,
+          "width": 268,
+          "height": 268,
+          "right": 329,
+          "bottom": 459.046875
+        },
+        "badge": {
+          "x": 184.859375,
+          "y": 108.546875,
+          "width": 41.90625,
+          "height": 19,
+          "right": 226.765625,
+          "bottom": 127.546875
+        },
+        "hp": {
+          "x": 233.765625,
+          "y": 109.046875,
+          "width": 84.234375,
+          "height": 18,
+          "right": 318,
+          "bottom": 127.046875
+        },
+        "damage": {
+          "x": 120,
+          "y": 109.046875,
+          "width": 10,
+          "height": 4,
+          "right": 130,
+          "bottom": 113.046875
+        },
+        "name": {
+          "x": 72,
+          "y": 111.546875,
+          "width": 105.859375,
+          "height": 13,
+          "right": 177.859375,
+          "bottom": 124.546875
+        },
+        "hpBar": {
+          "x": 72,
+          "y": 131.046875,
+          "width": 246,
+          "height": 7,
+          "right": 318,
+          "bottom": 138.046875
+        },
+        "timeBar": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "font": 15,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ],
+      "pickup": {
+        "actual": 20,
+        "display": {
+          "card": {
+            "x": 61,
+            "y": 101.046875,
+            "width": 268,
+            "height": 47,
+            "right": 329,
+            "bottom": 148.046875
+          },
+          "board": {
+            "x": 61,
+            "y": 191.046875,
+            "width": 268,
+            "height": 268,
+            "right": 329,
+            "bottom": 459.046875
+          },
+          "badge": {
+            "x": 174.953125,
+            "y": 108.546875,
+            "width": 51.8125,
+            "height": 19,
+            "right": 226.765625,
+            "bottom": 127.546875
+          },
+          "hp": {
+            "x": 233.765625,
+            "y": 109.046875,
+            "width": 84.234375,
+            "height": 18,
+            "right": 318,
+            "bottom": 127.046875
+          },
+          "damage": {
+            "x": 120,
+            "y": 109.046875,
+            "width": 10,
+            "height": 4,
+            "right": 130,
+            "bottom": 113.046875
+          },
+          "name": {
+            "x": 72,
+            "y": 111.546875,
+            "width": 95.953125,
+            "height": 13,
+            "right": 167.953125,
+            "bottom": 124.546875
+          },
+          "hpBar": {
+            "x": 72,
+            "y": 131.046875,
+            "width": 246,
+            "height": 7,
+            "right": 318,
+            "bottom": 138.046875
+          },
+          "timeBar": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "font": 15,
+          "weight": "900",
+          "color": "rgb(53, 85, 46)",
+          "background": "rgb(226, 237, 207)",
+          "icon": 17,
+          "value": "20",
+          "label": "葉っぱのまもり 残り20",
+          "badgeText": "まもり20",
+          "overflow": 0,
+          "contrast": 6.9264435773020665
+        }
+      }
+    },
+    {
+      "profile": "full",
+      "mode": "challenge",
+      "initial": {
+        "card": {
+          "x": 199,
+          "y": 104.046875,
+          "width": 177,
+          "height": 64,
+          "right": 376,
+          "bottom": 168.046875
+        },
+        "board": {
+          "x": 14,
+          "y": 215.046875,
+          "width": 362,
+          "height": 362,
+          "right": 376,
+          "bottom": 577.046875
+        },
+        "badge": {
+          "x": 293.09375,
+          "y": 109.046875,
+          "width": 71.90625,
+          "height": 19,
+          "right": 365,
+          "bottom": 128.046875
+        },
+        "hp": {
+          "x": 302.546875,
+          "y": 128.046875,
+          "width": 62.453125,
+          "height": 18,
+          "right": 365,
+          "bottom": 146.046875
+        },
+        "damage": {
+          "x": 210,
+          "y": 135.046875,
+          "width": 10,
+          "height": 4,
+          "right": 220,
+          "bottom": 139.046875
+        },
+        "name": {
+          "x": 210,
+          "y": 112.046875,
+          "width": 80.09375,
+          "height": 13,
+          "right": 290.09375,
+          "bottom": 125.046875
+        },
+        "hpBar": {
+          "x": 210,
+          "y": 147.046875,
+          "width": 155,
+          "height": 10,
+          "right": 365,
+          "bottom": 157.046875
+        },
+        "timeBar": {
+          "x": 25,
+          "y": 147.046875,
+          "width": 155,
+          "height": 10,
+          "right": 180,
+          "bottom": 157.046875
+        },
+        "font": 15,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ]
+    },
+    {
+      "profile": "full",
+      "mode": "tutorial",
+      "initial": {
+        "card": {
+          "x": 19,
+          "y": 121.046875,
+          "width": 352,
+          "height": 47,
+          "right": 371,
+          "bottom": 168.046875
+        },
+        "board": {
+          "x": 19,
+          "y": 215.046875,
+          "width": 352,
+          "height": 352,
+          "right": 371,
+          "bottom": 567.046875
+        },
+        "badge": {
+          "x": 196.859375,
+          "y": 128.546875,
+          "width": 71.90625,
+          "height": 19,
+          "right": 268.765625,
+          "bottom": 147.546875
+        },
+        "hp": {
+          "x": 275.765625,
+          "y": 129.046875,
+          "width": 84.234375,
+          "height": 18,
+          "right": 360,
+          "bottom": 147.046875
+        },
+        "damage": {
+          "x": 78,
+          "y": 129.046875,
+          "width": 10,
+          "height": 4,
+          "right": 88,
+          "bottom": 133.046875
+        },
+        "name": {
+          "x": 30,
+          "y": 131.546875,
+          "width": 159.859375,
+          "height": 13,
+          "right": 189.859375,
+          "bottom": 144.546875
+        },
+        "hpBar": {
+          "x": 30,
+          "y": 151.046875,
+          "width": 330,
+          "height": 7,
+          "right": 360,
+          "bottom": 158.046875
+        },
+        "timeBar": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "font": 15,
+        "weight": "900",
+        "color": "rgb(111, 96, 75)",
+        "background": "rgb(242, 233, 215)",
+        "icon": 17,
+        "value": "0",
+        "label": "葉っぱのまもり 残り0",
+        "badgeText": "まもり0",
+        "overflow": 0,
+        "contrast": 5.046085344923128
+      },
+      "largeValues": [
+        {
+          "value": 0,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 1,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 20,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 50,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        },
+        {
+          "value": 120,
+          "inside": true,
+          "clearOfName": true,
+          "clearOfHp": true,
+          "clearOfDamage": true
+        }
+      ],
+      "pickup": {
+        "actual": 20,
+        "display": {
+          "card": {
+            "x": 19,
+            "y": 121.046875,
+            "width": 352,
+            "height": 47,
+            "right": 371,
+            "bottom": 168.046875
+          },
+          "board": {
+            "x": 19,
+            "y": 215.046875,
+            "width": 352,
+            "height": 352,
+            "right": 371,
+            "bottom": 567.046875
+          },
+          "badge": {
+            "x": 186.953125,
+            "y": 128.546875,
+            "width": 81.8125,
+            "height": 19,
+            "right": 268.765625,
+            "bottom": 147.546875
+          },
+          "hp": {
+            "x": 275.765625,
+            "y": 129.046875,
+            "width": 84.234375,
+            "height": 18,
+            "right": 360,
+            "bottom": 147.046875
+          },
+          "damage": {
+            "x": 78,
+            "y": 129.046875,
+            "width": 10,
+            "height": 4,
+            "right": 88,
+            "bottom": 133.046875
+          },
+          "name": {
+            "x": 30,
+            "y": 131.546875,
+            "width": 149.953125,
+            "height": 13,
+            "right": 179.953125,
+            "bottom": 144.546875
+          },
+          "hpBar": {
+            "x": 30,
+            "y": 151.046875,
+            "width": 330,
+            "height": 7,
+            "right": 360,
+            "bottom": 158.046875
+          },
+          "timeBar": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "font": 15,
+          "weight": "900",
+          "color": "rgb(53, 85, 46)",
+          "background": "rgb(226, 237, 207)",
+          "icon": 17,
+          "value": "20",
+          "label": "葉っぱのまもり 残り20",
+          "badgeText": "まもり20",
+          "overflow": 0,
+          "contrast": 6.9264435773020665
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "fixtureBoundary": "large numeric values are DOM-only layout fixtures; item acquisition uses debug teleport and real pickup logic"
+}
