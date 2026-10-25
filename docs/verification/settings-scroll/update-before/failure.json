@@ -1,0 +1,116 @@
+{
+  "message": "latest-version check must keep home geometry unchanged\n+ actual - expected\n... Skipped lines\n\n  {\n    '#btn-practice': {\n      height: 62,\n      width: 331,\n      x: 31,\n+     y: 212.046875\n-     y: 216.828125\n    },\n    '#btn-tutorial': {\n      height: 62,\n      width: 331,\n      x: 31,\n+     y: 140.046875\n-     y: 144.828125\n    },\n    '#screen-mode': {\n+     height: 677.75,\n-     height: 674.953125,\n      width: 365,\n      x: 14,\n      y: 53.046875\n    },\n    '.bottom': {\n...\n      x: 31,\n+     y: 647.109375\n-     y: 671\n    },\n    '.challenge': {\n      height: 256.0625,\n      width: 331,\n      x: 31,\n+     y: 282.046875\n-     y: 291.609375\n    },\n    '.menu-heading': {\n      height: 66,\n      width: 331,\n      x: 31,\n...\n      x: 31,\n+     y: 548.109375\n-     y: 562.4375\n    },\n    '.tools': {\n      height: 44,\n      width: 331,\n      x: 31,\n+     y: 601.109375\n-     y: 620.21875\n    }\n  }\n",
+  "report": {
+    "version": "0.8.12",
+    "base": "http://127.0.0.1:59186/",
+    "rows": [],
+    "updateChecks": [
+      {
+        "profile": "393x740",
+        "before": {
+          "#screen-mode": {
+            "x": 14,
+            "y": 53.046875,
+            "width": 365,
+            "height": 674.953125
+          },
+          ".menu-heading": {
+            "x": 31,
+            "y": 66.046875,
+            "width": 331,
+            "height": 66
+          },
+          "#btn-tutorial": {
+            "x": 31,
+            "y": 144.828125,
+            "width": 331,
+            "height": 62
+          },
+          "#btn-practice": {
+            "x": 31,
+            "y": 216.828125,
+            "width": 331,
+            "height": 62
+          },
+          ".challenge": {
+            "x": 31,
+            "y": 291.609375,
+            "width": 331,
+            "height": 256.0625
+          },
+          ".records": {
+            "x": 31,
+            "y": 562.4375,
+            "width": 331,
+            "height": 45
+          },
+          ".tools": {
+            "x": 31,
+            "y": 620.21875,
+            "width": 331,
+            "height": 44
+          },
+          ".bottom": {
+            "x": 31,
+            "y": 671,
+            "width": 331,
+            "height": 44
+          }
+        },
+        "after": {
+          "#screen-mode": {
+            "x": 14,
+            "y": 53.046875,
+            "width": 365,
+            "height": 677.75
+          },
+          ".menu-heading": {
+            "x": 31,
+            "y": 66.046875,
+            "width": 331,
+            "height": 66
+          },
+          "#btn-tutorial": {
+            "x": 31,
+            "y": 140.046875,
+            "width": 331,
+            "height": 62
+          },
+          "#btn-practice": {
+            "x": 31,
+            "y": 212.046875,
+            "width": 331,
+            "height": 62
+          },
+          ".challenge": {
+            "x": 31,
+            "y": 282.046875,
+            "width": 331,
+            "height": 256.0625
+          },
+          ".records": {
+            "x": 31,
+            "y": 548.109375,
+            "width": 331,
+            "height": 45
+          },
+          ".tools": {
+            "x": 31,
+            "y": 601.109375,
+            "width": 331,
+            "height": 44
+          },
+          ".bottom": {
+            "x": 31,
+            "y": 647.109375,
+            "width": 331,
+            "height": 44
+          }
+        },
+        "message": "最新版です。"
+      }
+    ],
+    "errors": [],
+    "simulatedSafeArea": true
+  }
+}

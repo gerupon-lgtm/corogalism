@@ -12,7 +12,7 @@ const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=u
 let base=process.env.BASE_URL,server,browser;
 if(!base){server=createServer(async(req,res)=>{try{const p=decodeURIComponent(new URL(req.url,'http://localhost').pathname),f=resolve(root,'.'+p+(p.endsWith('/')?'index.html':''));if(!f.startsWith(root+sep))throw Error('outside root');const b=await readFile(f);res.writeHead(200,{'content-type':mime[extname(f)]||'application/octet-stream','cache-control':'no-store'});res.end(b);}catch{res.writeHead(404);res.end();}});await new Promise(done=>server.listen(0,'127.0.0.1',done));base=`http://127.0.0.1:${server.address().port}/`;}
 const profiles=[{id:'393x740',width:393,height:740},{id:'390x700',width:390,height:700},{id:'360x740',width:360,height:740},{id:'390x780',width:390,height:780},{id:'full',width:390,height:844,camera:18,bottom:24}].filter(p=>!process.env.SETTINGS_PROFILE||p.id===process.env.SETTINGS_PROFILE);
-const report={version,base,rows:[],errors:[],simulatedSafeArea:true};
+const report={version,base,rows:[],updateChecks:[],errors:[],simulatedSafeArea:true};
 try{
  await mkdir(output,{recursive:true});browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
  for(const p of profiles){
@@ -20,6 +20,13 @@ try{
   await context.addInitScript(()=>{Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true});Element.prototype.requestFullscreen=()=>Promise.reject(Error('fixture'));if(!localStorage.getItem('corogalism-settings'))localStorage.setItem('corogalism-settings',JSON.stringify({mode:'pointer',soundEnabled:false}));});
   const page=await context.newPage();page.setDefaultTimeout(30000);page.on('pageerror',e=>report.errors.push(e.message));
   await page.goto(base+'?debug=1&verify='+version);await page.evaluate(()=>document.fonts.ready);await page.waitForFunction(()=>!!window.__corogalism);await page.evaluate(()=>navigator.serviceWorker.ready);
+  if(process.env.VERIFY_UPDATE==='1'){
+   await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+   const measure=()=>page.evaluate(()=>Object.fromEntries(['#screen-mode','.menu-heading','#btn-tutorial','#btn-practice','.challenge','.records','.tools','.bottom'].map(s=>{const r=document.querySelector(s).getBoundingClientRect();return [s,{x:r.x,y:r.y,width:r.width,height:r.height}];})));
+   const before=await measure();await page.locator('#btn-pwa-check').click();await page.waitForFunction(()=>!document.getElementById('btn-pwa-check').disabled&&document.getElementById('pwa-check-result').textContent==='最新版です。');const after=await measure();report.updateChecks.push({profile:p.id,before,after,message:await page.locator('#pwa-check-result').textContent()});
+   assert.deepEqual(after,before,'latest-version check must keep home geometry unchanged');
+   if(p.id==='393x740')await page.screenshot({path:resolve(output,'home-latest.png')});
+  }
   await page.locator('#btn-mode-settings').click();
   await page.evaluate(p=>{document.documentElement.style.setProperty('--camera-top',(p.camera||0)+'px');document.querySelector('.wrap').style.paddingBottom=(12+(p.bottom||0))+'px';},p);
   if(process.env.PROBE_CSS)await page.addStyleTag({content:process.env.PROBE_CSS});

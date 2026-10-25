@@ -27,6 +27,6 @@
 - [修正前の測定](verification/settings-scroll/before/results.json)
 - [ローカル確認](verification/v0.8.12/settings-local/results.json)
 - [関連15テスト](verification/v0.8.12/unit-summary.json)
-- 公開確認はデプロイ後に追記する。
+- 公開確認は追加依頼を含む[v0.8.13](release-v0.8.13.md)でまとめて実施する。
 
 ローカル全5条件で通常表示・プレイ中からの表示・オフライン再読込の縦横スクロール0、26pxの見出しと3点の装飾の実描画、全画面ボタン44pxを確認。角度・音量の保存値も維持し、エラー0。
