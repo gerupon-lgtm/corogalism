@@ -79,5 +79,7 @@
 .result-scene canvas{display:block;width:48px;height:48px;justify-self:center;pointer-events:none}
 .result-scene canvas[data-toy="goal"]{height:38px}
 .run-result-intro .best-badge{align-self:center;margin:0}
-.run-result-intro .lead{margin:0}
-@media(max-height:720px){.run-result-menu{gap:6px}}
+.run-result-intro .lead{margin:0;font-size:14px;font-weight:700}
+.run-result-top{display:flex;flex-direction:column;gap:16px;flex-shrink:0}
+.run-result-menu #run-best{margin:0}
+@media(max-height:720px){.run-result-menu{gap:6px}.run-result-top{gap:8px}}
