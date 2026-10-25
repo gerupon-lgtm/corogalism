@@ -22,8 +22,18 @@
 
 - [ローカルブラウザ結果](verification/v0.8.8/local/results.json)
 - [単体テスト集計](verification/v0.8.8/unit-summary.json)
-- 公開確認はデプロイ後に追記。
+- [公開ブラウザ結果](verification/v0.8.8/public/results.json)
 
 ローカルChromeは全4条件で縦横スクロール0、左右対称の壁余白、壁と小物の実描画を確認。短い画面の新記録バッジも収まり、オフラインで3面進行・最終面のリトライ・終了後のモード選択復帰と練習の5面表示が成功した。エラー0、134資材のキャッシュを確認。単体テストは330件成功。
 
 ブラウザの壁移動は実際のポインター入力。面送りは球をゴールへ移す検証操作で、人間の完走や実機の傾き操作の証明とは分ける。Pixel 6a／iPhone実機での見え方・難易度は未確認。
+
+## 公開確認
+
+アプリ`ede72afd8e15c6c987f6e7381eb2042d458b8c09`、[Pages 40150308556](https://github.com/gerupon-lgtm/corogalism/actions/runs/40150308556)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+公開Chromeでも全4条件でトップ・結果の縦横スクロール0、左右対称の壁余白と実描画、短い画面の新記録バッジ表示が成功。134資材のオフライン再起動、素材→ラケット→順に戸を開くの3面進行、壁の実入力移動、最終面のリトライと終了後の復帰を確認。エラー0。
+
+公開137資材はすべてHTTP200・SHA-256一致。主要20資材はクエリなしでも本文と配信形式が一致した。キャッシュは`6c60168ae71a7e32`。[全資材](verification/v0.8.8/deploy-hashes.json)、[主要配信形式](verification/v0.8.8/deploy-headers.json)。
+
+[トップの画像](verification/v0.8.8/public/home-full.png)、[結果の画像](verification/v0.8.8/public/result-full.png)。上下の安全余白は模擬設定で、実機撮影ではない。

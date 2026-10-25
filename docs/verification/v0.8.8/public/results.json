@@ -1,0 +1,191 @@
+{
+  "version": "0.8.8",
+  "base": "https://corogalism.sikumilab.com/",
+  "home": [
+    {
+      "profile": "normal",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 236.15625,
+      "leftInset": 62.921875,
+      "rightInset": 62.921875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": []
+    },
+    {
+      "profile": "narrow",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 220.3125,
+      "leftInset": 59.84375,
+      "rightInset": 59.84375,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": []
+    },
+    {
+      "profile": "short",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 234.71875,
+      "leftInset": 62.640625,
+      "rightInset": 62.640625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": []
+    },
+    {
+      "profile": "full",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 236.15625,
+      "leftInset": 62.921875,
+      "rightInset": 62.921875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": []
+    }
+  ],
+  "result": [
+    {
+      "profile": "normal",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 234.71875,
+      "leftInset": 63.640625,
+      "rightInset": 63.640625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ]
+    },
+    {
+      "profile": "narrow",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 218.875,
+      "leftInset": 60.5625,
+      "rightInset": 60.5625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ]
+    },
+    {
+      "profile": "short",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 234.71875,
+      "leftInset": 63.640625,
+      "rightInset": 63.640625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ]
+    },
+    {
+      "profile": "full",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 234.71875,
+      "leftInset": 63.640625,
+      "rightInset": 63.640625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ]
+    },
+    {
+      "profile": "short-new-best-badge-fixture",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 234.71875,
+      "leftInset": 63.640625,
+      "rightInset": 63.640625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ]
+    }
+  ],
+  "tutorial": {
+    "goalProgression": "teleport fixture; not human completion",
+    "wallInput": "actual mouse/pointer events",
+    "stages": [
+      {
+        "step": 1,
+        "kind": "materials",
+        "seed": 77,
+        "wallMovedByPointer": false
+      },
+      {
+        "step": 2,
+        "kind": "racket",
+        "seed": 2654435846,
+        "wallMovedByPointer": true
+      },
+      {
+        "step": 3,
+        "kind": "sequence",
+        "seed": 1013904319,
+        "wallMovedByPointer": true
+      }
+    ],
+    "retry": {
+      "seed": 1013904319,
+      "index": 1
+    },
+    "finalScreen": "mode"
+  },
+  "errors": [],
+  "cache": {
+    "key": "corogalism-6c60168ae71a7e32",
+    "assets": 134
+  },
+  "offline": {
+    "reload": true,
+    "tutorialThreeStages": true,
+    "practiceFiveStageLabel": true
+  }
+}
