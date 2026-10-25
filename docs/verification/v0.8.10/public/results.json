@@ -1,0 +1,218 @@
+{
+  "version": "0.8.10",
+  "base": "https://corogalism.sikumilab.com/",
+  "home": [
+    {
+      "profile": "normal",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 308,
+      "leftInset": 27,
+      "rightInset": 27,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [],
+      "leftAlignment": 0,
+      "rightAlignment": 0
+    },
+    {
+      "profile": "narrow",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 286,
+      "leftInset": 27,
+      "rightInset": 27,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [],
+      "leftAlignment": 0,
+      "rightAlignment": 0
+    },
+    {
+      "profile": "short",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 306,
+      "leftInset": 27,
+      "rightInset": 27,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [],
+      "leftAlignment": 0,
+      "rightAlignment": 0
+    },
+    {
+      "profile": "full",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 308,
+      "leftInset": 27,
+      "rightInset": 27,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [],
+      "leftAlignment": 0,
+      "rightAlignment": 0
+    }
+  ],
+  "result": [
+    {
+      "profile": "normal",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 306,
+      "leftInset": 28,
+      "rightInset": 28,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [],
+      "leftAlignment": 10,
+      "rightAlignment": 10
+    },
+    {
+      "profile": "narrow",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 284,
+      "leftInset": 28,
+      "rightInset": 28,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [],
+      "leftAlignment": 10,
+      "rightAlignment": 10
+    },
+    {
+      "profile": "short",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 306,
+      "leftInset": 28,
+      "rightInset": 28,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [],
+      "leftAlignment": 10,
+      "rightAlignment": 10
+    },
+    {
+      "profile": "full",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 306,
+      "leftInset": 28,
+      "rightInset": 28,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [],
+      "leftAlignment": 10,
+      "rightAlignment": 10
+    },
+    {
+      "profile": "short-new-best-badge-fixture",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 306,
+      "leftInset": 28,
+      "rightInset": 28,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [],
+      "leftAlignment": 10,
+      "rightAlignment": 10
+    }
+  ],
+  "tutorial": {
+    "goalProgression": "teleport fixture; not human completion",
+    "wallInput": "actual mouse/pointer events",
+    "stages": [
+      {
+        "step": 1,
+        "kind": "materials",
+        "seed": 77,
+        "wallMovedByPointer": false
+      },
+      {
+        "step": 2,
+        "kind": "racket",
+        "seed": 2654435846,
+        "wallMovedByPointer": true
+      },
+      {
+        "step": 3,
+        "kind": "sequence",
+        "seed": 1013904319,
+        "wallMovedByPointer": true
+      }
+    ],
+    "retry": {
+      "seed": 1013904319,
+      "index": 1
+    },
+    "finalScreen": "mode"
+  },
+  "errors": [],
+  "cache": {
+    "key": "corogalism-efaf8e0d0b23c8a6",
+    "assets": 134
+  },
+  "offline": {
+    "reload": true,
+    "tutorialThreeStages": true,
+    "practiceFiveStageLabel": true
+  }
+}

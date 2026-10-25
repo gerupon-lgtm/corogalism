@@ -5,4 +5,14 @@
 ゲーム・物理・保存・BGM・チュートリアル3面は変更しない。表示版、資材URL、precacheは0.8.10へ更新。今回のブラウザ確認では4画面条件で床タイルがないこと、コルク壁の実描画と左右対称の余白、見出し小物の外端とのずれ10px以内、スクロール0を確認する。前版と同じ3面進行とオフライン確認も含む。実機の見え方・人間の完走とは分ける。
 
 - [ローカル結果](verification/v0.8.10/local/results.json)
-- 公開確認はデプロイ後に追記する。
+- [公開ブラウザ結果](verification/v0.8.10/public/results.json)
+
+## 公開確認
+
+アプリ`6f4dd36ea3d24f7050f70e2c2b3f12987ea159fe`、[Pages 40151214650](https://github.com/gerupon-lgtm/corogalism/actions/runs/40151214650)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+ローカル・公開Chromeとも4画面条件でトップと結果の床タイルなし、コルク壁の実描画、見出し小物との端位置、左右対称の余白と縦横スクロール0を確認。新記録バッジの表示、134資材のオフライン再起動、既存3面進行とリトライ・終了も成功。エラー0。面送りにはゴールへ球を移す検証操作を使用した。
+
+公開137資材はすべてHTTP200・SHA-256一致。キャッシュは`efaf8e0d0b23c8a6`。[本文確認](verification/v0.8.10/deploy-hashes.json)。
+
+[トップの画像](verification/v0.8.10/public/home-full.png)、[結果の画像](verification/v0.8.10/public/result-full.png)。上下の安全余白は模擬設定であり、実機撮影ではない。
