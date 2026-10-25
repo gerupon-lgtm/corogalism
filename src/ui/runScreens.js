@@ -46,7 +46,7 @@ export function createRunScreens(root) {
       find('run-badge').hidden = !(record.updated && record.saved);
       find('run-best').textContent = `この枠の自己ベスト: ${bestLabel(record.best)}`;
       find('run-save-note').textContent = record.saved
-        ? '合計タイムはクリアした面のみ。面数が同じなら、速い記録が自己ベストになります。'
+        ? 'タイムはクリアした面のみ。無傷はげんきが減らなかった面の合計。自己ベストは面数優先、同面数なら速い記録です。'
         : 'このブラウザでは記録を保存できませんでした。プレイは続けられます。';
     },
   };

@@ -79,7 +79,9 @@
 .result-scene{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;gap:8px;align-items:center;min-height:48px}
 .result-scene canvas{display:block;width:48px;height:48px;justify-self:center;pointer-events:none}
 .result-scene canvas[data-toy="goal"]{height:38px}
-.run-result-intro .best-badge{align-self:center;margin:0}
+.run-stage-score{position:relative}
+.run-result-menu .run-stage-score .best-badge{position:absolute;top:48px;right:30px;margin:0;padding:4px 8px;font-size:10px;line-height:1.2;white-space:nowrap;transform:rotate(20deg);transform-origin:top right}
+.run-result-menu .run-score dt{font-weight:700}
 .run-result-intro .lead{margin:0;font-size:14px;font-weight:700}
 .run-result-top{display:flex;flex-direction:column;gap:16px;flex-shrink:0}
 .run-result-menu #run-best{margin:0}
