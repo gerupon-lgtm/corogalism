@@ -1,0 +1,60 @@
+{
+  "version": "0.8.13",
+  "runtimeFiles": 134,
+  "runtimeBytes": 39743018,
+  "bgmBytes": 30368104,
+  "cases": [
+    {
+      "kind": "no-new-version",
+      "elapsedMs": 2440,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "最新版です。",
+      "installing": null,
+      "waiting": null,
+      "noticeVisible": false
+    },
+    {
+      "kind": "new-version-found-but-audio-blocked",
+      "elapsedMs": 187,
+      "disabled": true,
+      "label": "確認中…",
+      "result": "更新を確認しています…",
+      "installing": "installing",
+      "waiting": null,
+      "noticeVisible": false
+    },
+    {
+      "kind": "audio-released",
+      "elapsedMs": 714,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "新しいバージョンがあります。上の「更新する」で反映できます。",
+      "installing": null,
+      "waiting": "installed",
+      "noticeVisible": true
+    },
+    {
+      "kind": "timeout-while-download-still-running",
+      "elapsedMs": 15079,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新を確認できませんでした。少し待ってもう一度お試しください。",
+      "installing": "installing",
+      "waiting": null,
+      "noticeVisible": false
+    },
+    {
+      "kind": "download-completes-after-ui-timeout",
+      "elapsedMs": 15277,
+      "disabled": false,
+      "label": "更新をチェック",
+      "result": "更新を確認できませんでした。少し待ってもう一度お試しください。",
+      "installing": null,
+      "waiting": "installed",
+      "noticeVisible": true
+    }
+  ],
+  "errors": [],
+  "boundary": "isolated local browser; actual pwa.js and sw.js; controlled precache revision and blocked audio response"
+}

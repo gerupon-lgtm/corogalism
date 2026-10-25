@@ -86,11 +86,8 @@
 @media(max-height:720px){.run-result-menu{gap:6px}.run-result-top{gap:8px}}
 
 /* T-306: 設定の操作を残して縦積みを減らし、補足だけを開閉する。 */
-.settings-heading{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
-.settings-scene{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;gap:8px;align-items:center;min-height:42px;padding-inline:10px}
-.settings-scene canvas{display:block;width:42px;height:34px;pointer-events:none}
-.settings-menu .settings-scene h2{margin:0;font-size:26px;line-height:1.4;color:#5f513d;white-space:nowrap}
-.settings-menu{gap:5px}
+.settings-menu.toy-box{gap:5px}
+.settings-menu .sound-button{font:700 12px var(--sans)}
 .settings-menu .field{padding:7px 8px;gap:5px}
 .settings-menu .seg{flex-direction:row;gap:6px}
 .settings-menu .seg button{flex:1;min-width:0;padding-inline:5px;font-size:12px}

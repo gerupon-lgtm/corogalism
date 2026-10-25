@@ -1,0 +1,80 @@
+{
+  "message": "settings header dimensions and positions must match home\n+ actual - expected\n\n  {\n    art: [\n      {\n        height: 34,\n        width: 42,\n+       x: 42,\n+       y: 71.046875\n-       x: 41,\n-       y: 68.046875\n      },\n      {\n        height: 34,\n        width: 42,\n+       x: 309,\n+       y: 71.046875\n-       x: 310,\n-       y: 68.046875\n      }\n    ],\n    panelWidth: 365,\n    panelX: 14,\n    rail: {\n      height: 22,\n+     width: 309,\n+     x: 42,\n+     y: 114.046875\n-     width: 311,\n-     x: 41,\n-     y: 110.046875\n    },\n    title: {\n      centerX: 196.5,\n      fontSize: '26px',\n      fontWeight: '700',\n      height: 36.390625,\n      lineHeight: '36.4px',\n+     top: 69.84375\n-     top: 66.84375\n    }\n  }\n",
+  "report": {
+    "version": "0.8.13",
+    "base": "http://127.0.0.1:59861/",
+    "rows": [],
+    "updateChecks": [],
+    "headingChecks": [
+      {
+        "profile": "393x740",
+        "home": {
+          "panelX": 14,
+          "panelWidth": 365,
+          "title": {
+            "centerX": 196.5,
+            "top": 66.84375,
+            "height": 36.390625,
+            "fontSize": "26px",
+            "fontWeight": "700",
+            "lineHeight": "36.4px"
+          },
+          "art": [
+            {
+              "x": 41,
+              "y": 68.046875,
+              "width": 42,
+              "height": 34
+            },
+            {
+              "x": 310,
+              "y": 68.046875,
+              "width": 42,
+              "height": 34
+            }
+          ],
+          "rail": {
+            "x": 41,
+            "y": 110.046875,
+            "width": 311,
+            "height": 22
+          }
+        },
+        "settings": {
+          "panelX": 14,
+          "panelWidth": 365,
+          "title": {
+            "centerX": 196.5,
+            "top": 69.84375,
+            "height": 36.390625,
+            "fontSize": "26px",
+            "fontWeight": "700",
+            "lineHeight": "36.4px"
+          },
+          "art": [
+            {
+              "x": 42,
+              "y": 71.046875,
+              "width": 42,
+              "height": 34
+            },
+            {
+              "x": 309,
+              "y": 71.046875,
+              "width": 42,
+              "height": 34
+            }
+          ],
+          "rail": {
+            "x": 42,
+            "y": 114.046875,
+            "width": 309,
+            "height": 22
+          }
+        }
+      }
+    ],
+    "errors": [],
+    "simulatedSafeArea": true
+  }
+}
