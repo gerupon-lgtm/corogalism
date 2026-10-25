@@ -1,0 +1,8 @@
+{
+  "command": "node --test test/audio-settings.test.js test/screen-wake-lock.test.js",
+  "tests": 15,
+  "pass": 15,
+  "fail": 0,
+  "cancelled": 0,
+  "skipped": 0
+}

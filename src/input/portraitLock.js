@@ -27,7 +27,7 @@ export function initPortraitLock() {
       note.textContent = await lock() ? '縦向きに固定しました。全画面は端末の戻る操作などで解除できます。' : fallback;
     } finally { busy = false; button.disabled = false; }
   }
-  button.addEventListener('click', () => { void request(true); });
+  button.addEventListener('click', () => { const details=note.closest('details');if(details)details.open=true;void request(true); });
   document.addEventListener('fullscreenchange', () => {
     if (busy) return;
     if (document.fullscreenElement) void request(false);

@@ -83,3 +83,23 @@
 .run-result-top{display:flex;flex-direction:column;gap:16px;flex-shrink:0}
 .run-result-menu #run-best{margin:0}
 @media(max-height:720px){.run-result-menu{gap:6px}.run-result-top{gap:8px}}
+
+/* T-306: 設定の操作を残して縦積みを減らし、補足だけを開閉する。 */
+.settings-heading{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
+.settings-scene{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;gap:8px;align-items:center;min-height:42px;padding-inline:10px}
+.settings-scene canvas{display:block;width:42px;height:34px;pointer-events:none}
+.settings-menu .settings-scene h2{margin:0;font-size:26px;line-height:1.4;color:#5f513d;white-space:nowrap}
+.settings-menu{gap:5px}
+.settings-menu .field{padding:7px 8px;gap:5px}
+.settings-menu .seg{flex-direction:row;gap:6px}
+.settings-menu .seg button{flex:1;min-width:0;padding-inline:5px;font-size:12px}
+.settings-menu .field label b{font-size:16px}
+.settings-menu .volume-field{grid-template-columns:80px minmax(0,1fr) 38px;gap:6px;align-items:center}
+.settings-menu .volume-field label{font-size:12px;white-space:nowrap}
+.settings-menu .volume-field input{min-width:0;width:100%;margin-inline:0}
+.settings-menu .volume-field output{font-size:16px;text-align:right}
+.settings-menu .note{line-height:1.55}
+.settings-menu>#portrait-lock{flex:0 0 auto;min-height:44px}
+.settings-device-notes{border-top:1px solid #d3bd99;color:#785b3d;font-size:11px}
+.settings-device-notes summary{min-height:32px;line-height:32px;cursor:pointer}
+.settings-device-notes[open] .note{margin:5px 0}

@@ -8,7 +8,7 @@ import { drawHourglass } from '../render/toyHourglass.js';
 export function initHomeDecoration(root) {
   const ball = createToyBall();
   ball.update({ x: 1, y: 1, r: .4, character: { appearance: 'pearl' } });
-  const canvases = [...root.querySelectorAll('#screen-mode [data-toy], #screen-run-result [data-toy], [data-wall-divider]')];
+  const canvases = [...root.querySelectorAll('#screen-mode [data-toy], #screen-run-result [data-toy], #screen-settings [data-toy], [data-wall-divider]')];
   const draw = () => {
     for (const canvas of canvases) {
       const c = canvas.getContext('2d');

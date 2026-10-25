@@ -1,0 +1,123 @@
+{
+  "version": "0.8.11",
+  "base": "http://127.0.0.1:57113/",
+  "rows": [
+    {
+      "profile": "393x740",
+      "overflow": 110,
+      "horizontal": 0,
+      "screen": "settings",
+      "innerHeight": 740,
+      "wrapBottom": 849.515625,
+      "panel": {
+        "top": 53.046875,
+        "bottom": 849.515625,
+        "height": 796.46875
+      },
+      "closeBottom": 728.765625,
+      "children": [
+        {
+          "id": "menu-eyebrow",
+          "top": 67.046875,
+          "bottom": 81.4375,
+          "height": 14.390625,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "MAKE YOURSELF COMFORTABLE"
+        },
+        {
+          "id": "",
+          "top": 89.4375,
+          "bottom": 124.625,
+          "height": 35.1875,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "操作の設定"
+        },
+        {
+          "id": "settings-intro",
+          "top": 132.625,
+          "bottom": 154.21875,
+          "height": 21.59375,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "持ちやすい角度で あなたに合う操作に。"
+        },
+        {
+          "id": "field",
+          "top": 162.21875,
+          "bottom": 301.015625,
+          "height": 138.796875,
+          "margin": "0px",
+          "padding": "8px",
+          "text": "操作モード\n      \n        傾きで操作\n        擬似傾き（押した位置）"
+        },
+        {
+          "id": "field",
+          "top": 309.015625,
+          "bottom": 397.015625,
+          "height": 88,
+          "margin": "0px",
+          "padding": "8px",
+          "text": "最大傾き角（この角度で全力）25°"
+        },
+        {
+          "id": "pwa-status",
+          "top": 405.015625,
+          "bottom": 443.515625,
+          "height": 38.5,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "オフラインでも遊べます。ホーム画面への追加はブラウザのメニューから。"
+        },
+        {
+          "id": "field sound-settings",
+          "top": 451.515625,
+          "bottom": 676.765625,
+          "height": 225.25,
+          "margin": "0px",
+          "padding": "8px",
+          "text": "サウンド音 OFF\n      BGM60%\n      効果音（SE）80%\n      音量の設定は次回も引き継ぎます。"
+        },
+        {
+          "id": "row",
+          "top": 684.765625,
+          "bottom": 728.765625,
+          "height": 44,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準をとり直す\n      設定を終える"
+        },
+        {
+          "id": "portrait-lock",
+          "top": 736.765625,
+          "bottom": 761.765625,
+          "height": 25,
+          "margin": "0px",
+          "padding": "1px 6px",
+          "text": "縦向きで全画面"
+        },
+        {
+          "id": "portrait-note",
+          "top": 769.765625,
+          "bottom": 808.265625,
+          "height": 38.5,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "固定できない場合は、端末の自動回転をOFF（縦向きロック）にしてください。傾き操作はそのまま使えます。"
+        },
+        {
+          "id": "calibration-note",
+          "top": 816.265625,
+          "bottom": 835.515625,
+          "height": 19.25,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準の角度は、このページで遊ぶ間は維持します。"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "simulatedSafeArea": true
+}
