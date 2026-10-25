@@ -15,4 +15,12 @@
 - [修正前の更新チェック測定](verification/settings-scroll/update-before/failure.json)
 - [ローカル結果](verification/v0.8.13/settings-local/results.json)
 - [設定対策の原因と関連15テスト](release-v0.8.12.md)
-- 公開確認はデプロイ後に追記する。
+- [公開ブラウザ確認](verification/v0.8.13/settings-public/results.json)
+
+## 公開確認
+
+アプリ`83a296ad1cbe298136548ece8d6d7e4119b00d40`、[Pages 40157718075](https://github.com/gerupon-lgtm/corogalism/actions/runs/40157718075)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+公開Chromeの5条件でも、実際の更新チェック後に「最新版です。」が出た状態のトップ8要素の位置と寸法が完全一致した。設定は全5条件でスクロール0、ゲームから開いた場合も0。見出し・小物・壁の実描画、補足の開閉、全画面拒否時の案内、角度と音量の保存・音ON/OFF・一時停止保持、134資材のオフライン再読込が成功。ブラウザのエラー0。
+
+公開137資材はすべてHTTP200・SHA-256一致、キャッシュは`98b3633c80ee9382`。[配信本文確認](verification/v0.8.13/deploy-hashes.json)。[更新チェック後のトップ](verification/v0.8.13/settings-public/home-latest.png)、[設定画面](verification/v0.8.13/settings-public/393x740.png)。
