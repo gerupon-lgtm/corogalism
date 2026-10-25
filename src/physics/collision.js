@@ -13,6 +13,15 @@
  */
 import { TUNING } from '../config/gameConfig.js';
 
+// 共有境界付近は配列の先の区間へ揃え、丸め誤差で素材が交互に変わるのを避ける。
+const REGION_EPS = 1e-9;
+function materialAtContact(wall, x, y) {
+  const region = wall.materialRegions?.find(r => x >= r.x - REGION_EPS && x <= r.x + r.w + REGION_EPS
+    && y >= r.y - REGION_EPS && y <= r.y + r.h + REGION_EPS);
+  // 衝突の矩形と特殊係数は元の一枚のまま、接触した区間の素材だけを渡す。
+  return region ? { ...wall, materialId: region.materialId } : wall;
+}
+
 export function resolveCollisions(actor, walls, restitutionOf, onImpact) {
   let hits = 0;
 
@@ -47,9 +56,10 @@ export function resolveCollisions(actor, walls, restitutionOf, onImpact) {
 
     const vn = actor.vx * nx + actor.vy * ny;
     if (vn < 0) {
-      if (onImpact) onImpact(-vn, w);
+      const contactWall = materialAtContact(w, px, py);
+      if (onImpact) onImpact(-vn, contactWall);
       if (-vn > TUNING.wallHitSpeed) hits++;
-      const rest = restitutionOf(w, -vn);
+      const rest = restitutionOf(contactWall, -vn);
       actor.vx -= (1 + rest) * vn * nx;
       actor.vy -= (1 + rest) * vn * ny;
     }

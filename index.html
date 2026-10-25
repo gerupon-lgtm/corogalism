@@ -10,8 +10,9 @@
 <meta name="theme-color" content="#0f1513">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="assets/pwa/icon-192.png">
-<link rel="stylesheet" href="style.css?v=0.8.5">
-<link rel="stylesheet" href="home.css?v=0.8.5">
+<link rel="stylesheet" href="style.css?v=0.8.6">
+<link rel="stylesheet" href="home.css?v=0.8.6">
+<link rel="stylesheet" href="play-layout.css?v=0.8.6">
 </head>
 <body data-screen="mode">
 <div class="wrap">
@@ -24,12 +25,13 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.8.5</span>
+      <span class="badge">v0.8.6</span>
       </div>
       <p class="sub" id="dev-note" hidden>開発中の技術検証です（フェーズ2）</p>
     </div>
   </header>
 
+  <div id="play-heading" hidden><aside id="play-mode-card" class="play-mode-card" aria-labelledby="mode-card-title" hidden><img id="mode-card-icon" alt=""><strong id="mode-card-title"></strong><span id="mode-card-description"></span><p id="practice-comment" role="status" hidden></p></aside>
   <div id="challenge-hud" class="challenge-hud home-header-space" aria-hidden="true" inert>
     <div class="stage-line"><strong id="hud-stage">1面目</strong><span id="hud-continues"></span></div>
     <div class="meter-block" id="time-meter-block">
@@ -41,7 +43,8 @@
       <progress id="hp-bar" max="1" value="1" aria-label="げんき"></progress>
     </div>
   </div>
-  <div id="play-toolbar" class="play-toolbar" hidden><div class="play-labels"><span id="play-mode-label">プラクティス</span><span id="stage-theme" class="stage-theme"></span></div><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
+  </div>
+  <div id="play-toolbar" class="play-toolbar" hidden><strong id="practice-stage" hidden></strong><div class="play-labels"><span id="play-mode-label">プラクティス</span><span id="stage-theme" class="stage-theme"></span></div><div class="play-actions"><button id="btn-sound" class="sound-button" type="button" aria-pressed="false" aria-label="音を有効にする"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12-2v2a4 4 0 0 1 0 6v2a6 6 0 0 0 0-10zm3-3v2a8 8 0 0 1 0 12v2a10 10 0 0 0 0-16z"/></svg><span>音 OFF</span></button><button id="btn-pause" class="pause-button" type="button"><span aria-hidden="true">Ⅱ</span> ポーズ</button></div></div>
   <div id="floor-practice-tools" class="floor-practice-tools" hidden>
     <div class="floor-practice-caption"><span>同じ場所で、床をくらべよう</span><button id="btn-floor-reset" type="button">最初へ戻す</button></div>
     <div class="floor-practice-switch" role="group" aria-label="試す床素材"><button data-floor="normal" aria-pressed="true">普通</button><button data-floor="sand" aria-pressed="false">砂</button><button data-floor="ice" aria-pressed="false">氷</button><button data-floor="gravity" aria-pressed="false">重力</button><button data-floor="repulsion" aria-pressed="false">反重力</button></div>
@@ -82,7 +85,7 @@
   <p class="cap" id="play-hint" hidden>オレンジのビー玉を、右下のカップへ。</p>
 
   <!-- S-101 / S-105 タイトル兼モード選択 -->
-  <section id="screen-mode" class="panel toy-box toy-b toy-mix"><div id="pwa-notice" class="pwa-notice" hidden><span id="pwa-message"></span><button id="btn-pwa-update" type="button" hidden>更新する</button></div><div class="menu-scene"><canvas data-toy="candy" width="144" height="112" aria-hidden="true"></canvas><h2>どう遊ぶ？</h2><canvas data-toy="hourglass" width="144" height="112" aria-hidden="true"></canvas></div><div class="learning"><button class="entry tutorial" id="btn-tutorial" type="button"><span class="toy-medallion"><canvas data-toy="leaf" width="144" height="112" aria-hidden="true"></canvas></span><span class="toy-label"><strong>チュートリアル</strong><small>傾け方としくみを体験</small></span></button><button class="entry practice" id="btn-practice" type="button"><span class="toy-medallion"><canvas data-toy="goal" width="144" height="112" aria-hidden="true"></canvas></span><span class="toy-label"><strong>プラクティス</strong><small>時間制限なしで練習</small></span></button></div><section class="challenge" aria-labelledby="challenge-heading"><canvas class="hero-ball" data-toy="ball" width="180" height="180" aria-hidden="true"></canvas><h3 id="challenge-heading">チャレンジ</h3><p class="hero-copy">クリアを重ねて、先へ進もう。<br>げんき・時間制限のある連続プレイ。</p><div class="difficulty" role="group" aria-label="チャレンジの難易度"><button type="button" data-level="easy" aria-pressed="true">やさしい</button><button type="button" data-level="normal" aria-pressed="false">通常</button></div><p class="difficulty-note" id="difficulty-note">げんきと時間に、もっとゆとり。</p><button type="button" class="start" id="btn-challenge"><span class="level-label" id="challenge-level-label">やさしい</span>でスタート</button></section><details id="mode-records" class="records mode-records"><summary>自己ベストを見る</summary><div class="difficulty-switch record-switch" role="group" aria-label="記録の難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
+  <section id="screen-mode" class="panel toy-box toy-b toy-mix"><div id="pwa-notice" class="pwa-notice" hidden><span id="pwa-message"></span><button id="btn-pwa-update" type="button" hidden>更新する</button></div><div class="menu-scene"><canvas data-toy="candy" width="144" height="112" aria-hidden="true"></canvas><h2>どう遊ぶ？</h2><canvas data-toy="hourglass" width="144" height="112" aria-hidden="true"></canvas></div><div class="learning"><button class="entry tutorial" id="btn-tutorial" type="button"><span class="toy-medallion"><canvas data-toy="leaf" width="144" height="112" aria-hidden="true"></canvas></span><span class="toy-label"><strong>チュートリアル</strong><small>傾け方としくみを体験</small></span></button><button class="entry practice" id="btn-practice" type="button"><span class="toy-medallion"><canvas data-toy="goal" width="144" height="112" aria-hidden="true"></canvas></span><span class="toy-label"><strong>プラクティス</strong><small>時間制限なし・5面の練習</small></span></button></div><section class="challenge" aria-labelledby="challenge-heading"><canvas class="hero-ball" data-toy="ball" width="180" height="180" aria-hidden="true"></canvas><h3 id="challenge-heading">チャレンジ</h3><p class="hero-copy">クリアを重ねて、先へ進もう。<br>げんき・時間制限のある連続プレイ。</p><div class="difficulty" role="group" aria-label="チャレンジの難易度"><button type="button" data-level="easy" aria-pressed="true">やさしい</button><button type="button" data-level="normal" aria-pressed="false">通常</button></div><p class="difficulty-note" id="difficulty-note">げんきと時間に、もっとゆとり。</p><button type="button" class="start" id="btn-challenge"><span class="level-label" id="challenge-level-label">やさしい</span>でスタート</button></section><details id="mode-records" class="records mode-records"><summary>自己ベストを見る</summary><div class="difficulty-switch record-switch" role="group" aria-label="記録の難易度"><button type="button" data-level="easy" aria-pressed="false">やさしい</button><button type="button" data-level="normal" aria-pressed="true">通常</button></div>
     <dl class="result record-cards">
       <div><dt>ノーコンティニュー記録</dt><dd id="mode-best-no">—</dd></div>
       <div><dt>コンティニュー使用記録</dt><dd id="mode-best-continue">—</dd></div>
@@ -192,6 +195,6 @@
     <button class="ghost" id="btn-end-confirm" type="button">終了して結果を見る</button>
   </div>
 </dialog>
-<script type="module" src="src/main.js?v=0.8.5"></script>
+<script type="module" src="src/main.js?v=0.8.6"></script>
 </body>
 </html>

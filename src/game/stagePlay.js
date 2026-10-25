@@ -9,6 +9,7 @@ import { getCharacter } from '../world/characters.js';
 import { stepPhysics } from '../physics/integrator.js';
 import { stepMovingWallPhysics } from '../physics/movingWalls.js';
 import { createPuzzleStage } from '../world/puzzleStage.js';
+import { applyProgressiveWalls } from '../world/progressiveWalls.js';
 import { createHp } from './hp.js';
 import { restFloors } from '../world/stageFeatures.js';
 import { stageTimeLimitSec } from './progression.js';
@@ -21,6 +22,7 @@ export function createStagePlay(seed, difficulty = null, carry = {}) {
     : puzzleProfile?.puzzleKind ? createPuzzleStage(seed,{...puzzleProfile,difficulty})
     : tutorial ? createTutorialStage()
     : createStage(carry.variation?generateVariedMaze(carry.variation,seed):generateMaze(BASE.mazeSize, seed), difficulty);
+  applyProgressiveWalls(stage,difficulty);
   const maze = stage.maze;
   const actor = createActor(maze, getCharacter('default'));
   const origin = { x: actor.x, y: actor.y };

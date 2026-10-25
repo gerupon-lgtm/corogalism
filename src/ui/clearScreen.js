@@ -24,6 +24,7 @@ export function createClearScreen(root) {
         ? `${v.stageIndex}面目${v.noDamage ? ' · ノーダメージ！' : ' · お見事！'}`
         : 'ゴールに到着！';
       el.querySelector('#btn-clear-exit').textContent = challenge ? '終了して結果を見る' : 'モード選択へ';
+      el.querySelector('#btn-clear-exit').hidden = Boolean(v.gameMode==='practice'&&v.practiceLast);
       retryBtn.hidden = challenge;
       nextBtn.textContent = challenge ? '次の面へ' : '次の迷路';
       nextBtn.classList.add('primary');
@@ -39,6 +40,10 @@ export function createClearScreen(root) {
         el.querySelector('#clear-best-field').hidden=true;
       }
       if(floorPractice){el.querySelector('#clear-note').textContent='床を切り替えて、何度でも試せます。';nextBtn.textContent='続けて試す';retryBtn.textContent='同じ床をもう一度';}
+      if(v.gameMode==='practice'){
+        el.querySelector('#clear-note').textContent=v.practiceLast?'5面の練習ができました！':`${v.practiceStage} / ${v.practiceCount}面クリア`;
+        nextBtn.textContent=v.practiceLast?'モード選択へ':`次の迷路（${v.practiceStage+1} / ${v.practiceCount}）`;
+      }
       time.textContent = `${(v.timeMs / 1000).toFixed(2)} 秒`;
       best.textContent = v.bestMs != null ? `${(v.bestMs / 1000).toFixed(2)} 秒` : '—';
       seed.textContent = String(v.seed);

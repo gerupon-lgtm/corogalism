@@ -1,0 +1,28 @@
+{
+  "base": "http://127.0.0.1:51241/",
+  "mode": {
+    "overflow": 0,
+    "headerHidden": true
+  },
+  "cache": {
+    "key": "corogalism-82dc1dc4977ebb7d",
+    "count": 134
+  },
+  "rotation": {
+    "seed": 77,
+    "timeMs": 0,
+    "paused": true,
+    "actorPreserved": true,
+    "canvasMatches": true
+  },
+  "delayedLayout": {
+    "canvasMatches": true,
+    "width": 332
+  },
+  "offline": {
+    "reload": true,
+    "practice": true,
+    "comment": true
+  },
+  "errors": []
+}

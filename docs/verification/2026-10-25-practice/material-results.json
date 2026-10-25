@@ -1,0 +1,79 @@
+{
+  "conditions": [],
+  "lessons": [
+    {
+      "label": "cotton",
+      "kind": "static text fixture from actual guide definitions",
+      "height": 112,
+      "innerBottom": 631.046875,
+      "contentBottom": 612.265625,
+      "overflow": 0,
+      "rows": [
+        {
+          "tag": "CANVAS",
+          "cls": "",
+          "text": "",
+          "bottom": 557.046875
+        },
+        {
+          "tag": "H2",
+          "cls": "",
+          "text": "綿の壁",
+          "bottom": 554.796875
+        },
+        {
+          "tag": "P",
+          "cls": "tutorial-copy",
+          "text": "壁へ向かう勢いを受け止める。横にはすべる、痛みなし。",
+          "bottom": 595.421875
+        },
+        {
+          "tag": "P",
+          "cls": "tutorial-context",
+          "text": "壁に沿う動きは残ります。",
+          "bottom": 612.265625
+        }
+      ]
+    },
+    {
+      "label": "sticky",
+      "kind": "static text fixture from actual guide definitions",
+      "height": 112,
+      "innerBottom": 631.046875,
+      "contentBottom": 577.234375,
+      "overflow": 0,
+      "rows": [
+        {
+          "tag": "CANVAS",
+          "cls": "",
+          "text": "",
+          "bottom": 557.046875
+        },
+        {
+          "tag": "H2",
+          "cls": "",
+          "text": "とりもち",
+          "bottom": 554.796875
+        },
+        {
+          "tag": "P",
+          "cls": "tutorial-copy",
+          "text": "迷路内連続タップで最短0.5秒で脱出可能。",
+          "bottom": 577.234375
+        }
+      ]
+    }
+  ],
+  "flow": {
+    "kind": "debug teleport fixture; not physical completion",
+    "stages": []
+  },
+  "physical": {
+    "kind": "actual pointer events; no teleport or HP mutation"
+  },
+  "comments": {
+    "kind": "pure comment module fixture"
+  },
+  "errors": [],
+  "failures": []
+}

@@ -60,7 +60,7 @@ export function stepPhysics({ actor, stage, tilt, base, dt, onImpact, onTravel }
     const from = onTravel ? {x: actor.x, y: actor.y} : null;
     actor.x += (actor.vx * step) / sub;
     actor.y += (actor.vy * step) / sub;
-    wallHits += resolveCollisions(actor, stage.walls, restitutionOf, onImpact);
+    wallHits += resolveCollisions(actor, stage.collisionWalls ?? stage.walls, restitutionOf, onImpact);
     onTravel?.(from, {x: actor.x, y: actor.y});
   }
 
@@ -93,7 +93,7 @@ function stepExploration({actor, stage, tilt, base, step, zone, p, onImpact, onT
     if (!(slice > 0) || remaining - slice === remaining) return stop('precision');
     const from = snapshot();
     actor.x += actor.vx * slice; actor.y += actor.vy * slice;
-    wallHits += resolveCollisions(actor,stage.walls,restitutionOf,onImpact);
+    wallHits += resolveCollisions(actor,stage.collisionWalls??stage.walls,restitutionOf,onImpact);
     if (!finite()) {Object.assign(actor,from); return stop('nonfinite');}
     onTravel?.({x:from.x,y:from.y},{x:actor.x,y:actor.y});
     remaining = Math.max(0,remaining-slice); steps++;

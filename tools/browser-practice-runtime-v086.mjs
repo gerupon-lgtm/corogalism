@@ -1,0 +1,70 @@
+/** 回転・遅れて確定する配置・更新後のオフライン。実機の確認とは区別する。 */
+import assert from 'node:assert/strict';
+import {createServer} from 'node:http';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {resolve,sep,extname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);
+const root=resolve(fileURLToPath(new URL('../',import.meta.url)));
+const output=resolve(root,process.env.RUNTIME_OUTPUT||'docs/verification/v0.8.6/runtime-local');
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2','.wav':'audio/wav','.webmanifest':'application/manifest+json'};
+let server;
+let base=process.env.BASE_URL;
+if(!base){
+ server=createServer(async(req,res)=>{try{const p=decodeURIComponent(new URL(req.url,'http://localhost').pathname);const f=resolve(root,'.'+p+(p.endsWith('/')?'index.html':''));if(!f.startsWith(root+sep))throw Error('outside root');res.writeHead(200,{'content-type':mime[extname(f)]||'application/octet-stream','cache-control':'no-store'});res.end(await readFile(f));}catch{res.writeHead(404);res.end();}});
+ await new Promise(done=>server.listen(0,'127.0.0.1',done));base=`http://127.0.0.1:${server.address().port}/`;
+}
+const rows={},errors=[];
+const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+try{
+ await mkdir(output,{recursive:true});
+ const context=await browser.newContext({viewport:{width:390,height:740},serviceWorkers:'allow'});
+ await context.addInitScript(()=>{Object.defineProperty(window,'DeviceOrientationEvent',{value:undefined,configurable:true});Element.prototype.requestFullscreen=()=>Promise.reject(Error('fixture'));localStorage.setItem('corogalism-settings',JSON.stringify({mode:'pointer',challengeLevel:'easy',soundEnabled:false}));});
+ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(base+'?debug=1&seed=77');
+ await page.waitForFunction(()=>!!window.__corogalism);
+ await page.evaluate(()=>document.fonts.ready);
+ assert.equal(await page.locator('.badge').textContent(),'v0.8.6');
+ rows.mode=await page.evaluate(()=>({overflow:document.documentElement.scrollHeight-innerHeight,headerHidden:document.getElementById('play-heading').hidden}));
+ assert.equal(rows.mode.overflow,0,'home scroll');assert.equal(rows.mode.headerHidden,true);
+ await page.evaluate(()=>navigator.serviceWorker.ready);
+ await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
+ rows.cache=await page.evaluate(async()=>{const names=(await caches.keys()).filter(n=>n.startsWith('corogalism-'));const key=names[0];return {key,count:(await(await caches.open(key)).keys()).length};});
+ assert.equal(rows.cache.count,134);
+ await page.locator('#btn-practice').click();
+ await page.waitForFunction(()=>window.__corogalism.state.screen==='game'&&window.__corogalism.state.countdownMs===0);
+ await page.locator('#btn-pause').click();
+ const before=await page.evaluate(()=>window.__corogalism.state);
+ await page.setViewportSize({width:740,height:390});
+ await page.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
+ await page.setViewportSize({width:390,height:740});
+ const canvasMatches=()=>{
+  const board=document.getElementById('board'),canvas=document.getElementById('canvas');
+  return Math.abs(board.clientWidth-canvas.getBoundingClientRect().width)<1&&Math.abs(canvas.width-canvas.getBoundingClientRect().width*devicePixelRatio)<1;
+ };
+ await page.waitForFunction(canvasMatches);
+ const after=await page.evaluate(()=>window.__corogalism.state);
+ for(const key of ['seed','timeMs','paused','stageIndex'])assert.equal(after[key],before[key],key+' preserved');
+ assert.deepEqual(after.actor,before.actor);
+ rows.rotation={seed:after.seed,timeMs:after.timeMs,paused:after.paused,actorPreserved:true,canvasMatches:true};
+ await page.screenshot({path:resolve(output,'portrait-recovered.png')});
+ await page.evaluate(()=>document.querySelector('.wrap').style.maxWidth='360px');
+ await page.waitForFunction(canvasMatches);
+ await page.waitForFunction(()=>Math.abs(document.getElementById('play-toolbar').getBoundingClientRect().width-document.getElementById('board').getBoundingClientRect().width)<1);
+ rows.delayedLayout={canvasMatches:true,width:await page.locator('#board').evaluate(e=>e.getBoundingClientRect().width)};
+ await page.evaluate(()=>document.querySelector('.wrap').style.removeProperty('max-width'));
+ await page.waitForFunction(canvasMatches);
+ await context.setOffline(true);
+ await page.reload({waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>!!window.__corogalism);
+ assert.equal(await page.locator('.badge').textContent(),'v0.8.6');
+ await page.locator('#btn-practice').click();
+ await page.waitForFunction(()=>window.__corogalism.state.screen==='game'&&window.__corogalism.state.countdownMs===0);
+ assert.equal(await page.locator('#practice-stage').textContent(),'1面目 / 5');
+ assert.equal(await page.locator('#practice-comment').textContent(),'小さく傾けて、ゆっくり転がしてみよう。');
+ rows.offline={reload:true,practice:true,comment:true};
+ await page.screenshot({path:resolve(output,'offline-practice.png')});
+ assert.deepEqual(errors,[]);
+ await writeFile(resolve(output,'results.json'),JSON.stringify({base,...rows,errors},null,2)+'\n');
+ await context.close();console.log('PASS: home/rotation/delayed layout/134 assets offline/practice');
+}finally{await browser.close();if(server)await new Promise(done=>server.close(done));}

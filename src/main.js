@@ -14,6 +14,8 @@ import { initHomeDecoration } from './ui/homeDecoration.js';
 import { createTutorialUi } from './ui/tutorial.js';
 import { createPuzzleTutorialCourse } from './game/puzzleTutorial.js';
 import { createStagePlay } from './game/stagePlay.js';
+import { createPracticeCourse, createPracticeComment } from './game/practiceCourse.js';
+import { createPlayLayout } from './ui/playLayout.js';
 import { createRun } from './game/run.js';
 import { challengeDifficulty, normalizeLevel } from './game/challenge.js';
 import { goalCenter } from './world/stage.js';
@@ -34,6 +36,7 @@ const root = document;
 const find = (id) => root.querySelector(`#${id}`);
 const boardEl = find('board');
 const game = createGameScreen(root);
+const playLayout = createPlayLayout(root);
 const clear = createClearScreen(root);
 const settingsUi = createSettingsScreen(root);
 const runUi = createRunScreens(root);
@@ -90,6 +93,8 @@ const floorPresentation=createFloorPresentation(root);
 const floorContactGuide=createFloorContactGuide();
 let floorPracticeKind='normal';
 let puzzleCourse=null;
+let practiceCourse=null;
+const practiceComment=createPracticeComment();
 const pwa = initPwa(() => screen === 'mode');
 initGuide(id => id === 'btn-guide' ? screen === 'mode' : screen === 'game' && paused);
 const endConfirm = createRunEndConfirm(root, finishRun);
@@ -215,6 +220,7 @@ function saveRunProgress() {
 
 function resize() {
   if (!play || boardEl.hidden) return;
+  playLayout.fit();
   const width = boardEl.clientWidth;
   // 回転や非表示からの復帰途中の0幅で、保存画像・カメラを縮めない。
   if (width > 0) camera = createFixedCamera(play.stage, renderer.resize(width));
@@ -254,7 +260,6 @@ function showScreen(name) {
   pwa.render();
   const ended = name === 'clear' || name === 'over';
   const boardSession = name === 'game' || ended;
-  const reserveHeaderRow = name === 'mode';
   root.querySelectorAll('section.panel, section.game-toast').forEach((el) => {
     el.hidden = el.id !== `screen-${name}` && !(ended && el.id === 'screen-game');
   });
@@ -263,18 +268,18 @@ function showScreen(name) {
   root.body.classList.toggle('board-session', boardSession);
   boardEl.hidden = !boardSession;
   find('play-toolbar').hidden = !boardSession;
+  playLayout.setMode({visible:boardSession,mode:gameMode,stageIndex:practiceCourse?.stageIndex,stageCount:practiceCourse?.stageCount});
   find('floor-practice-tools').hidden = !boardSession || gameMode!=='floor-practice';
   find('play-hint').hidden = !boardSession;
   game.renderNotices({ visible: false });
   find('btn-pause').disabled = name !== 'game';
   find('toast-layer').hidden = !ended;
   const challengeHud = find('challenge-hud');
-  challengeHud.hidden = !reserveHeaderRow && (!boardSession || !['challenge','tutorial'].includes(gameMode));
-  // ユーザーの白線の範囲＝ロゴ＋面数の行まで。メーターから下は含めない。
-  challengeHud.classList.toggle('home-header-space', reserveHeaderRow);
-  challengeHud.inert = reserveHeaderRow;
-  if (reserveHeaderRow) challengeHud.setAttribute('aria-hidden', 'true');
-  else challengeHud.removeAttribute('aria-hidden');
+  challengeHud.hidden = !boardSession || !['challenge','tutorial'].includes(gameMode);
+  // タイトルには空の面数行を置かず、プレイ時だけ共通の上部領域を使う。
+  challengeHud.classList.remove('home-header-space');
+  challengeHud.inert = false;
+  challengeHud.removeAttribute('aria-hidden');
   find('board-overlay').hidden = name !== 'game' || !paused;
   find('board-status').textContent = '一時停止';
   updateCountdown();
@@ -348,13 +353,17 @@ function stageThemeLabel(stage) {
 
 function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   seed = useSeed >>> 0;
-  stageIndex = run ? run.stageIndex : 1;
+  stageIndex = run ? run.stageIndex : practiceCourse?.stageIndex ?? 1;
   play = createStagePlay(seed, run ? challengeDifficulty(stageIndex, activeLevel) : null, { ...carry, variation:run?.currentVariation(activeLevel), shield, tutorial: gameMode === 'tutorial',tutorialPuzzle:puzzleCourse?.profile,floorPractice:gameMode==='floor-practice'?floorPracticeKind:null });
   if (run) stageMusic = musicRotation.select(play.stage, `${stageIndex}:${seed}`);
   if(gameMode==='tutorial')tutorial.reset(puzzleCourse?.lesson,play.stage);
   floorPresentation.setStage(run?play.stage.theme:null);
   floorContactGuide.reset();game.resetNotices();
   renderFloorPractice();
+  if(gameMode==='practice'){
+    practiceComment.reset();
+    playLayout.setComment(practiceComment.update());
+  }
   paused = false;
   handled = false;
   countdownMs = UI.startCountdownMs;
@@ -364,7 +373,8 @@ function loadStage(useSeed, delayMs = UI.beforeCountdownMs, carry = {}) {
   find('play-mode-label').textContent = gameMode === 'tutorial' ? 'はじめて' : gameMode==='floor-practice'?'床の練習':run ? CHALLENGE_LEVELS[activeLevel].label : 'PRACTICE';
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉を右下のカップへ導きます`);
   find('stage-theme').textContent = stageThemeLabel(play.stage);
-  if(puzzleCourse)find('stage-theme').textContent=`${puzzleCourse.index+1}/6｜${puzzleCourse.lesson.title}`;
+  // 詳しい面の目的は下の説明欄に残し、操作行は狭い画面でも二段に保つ。
+  if(puzzleCourse)find('stage-theme').textContent=`動く壁 ${puzzleCourse.index+1} / 6`;
   find('canvas').setAttribute('aria-label',`${play.stage.maze.size}×${play.stage.maze.size}の迷路。オレンジのビー玉をカップへ導きます`);
   resize();
 }
@@ -383,6 +393,7 @@ function startGame(mode, useSeed = seed, withPuzzles=false) {
   tutorial.reset();
   floorPresentation.resetRun();
   gameMode = mode;
+  practiceCourse=mode==='practice'?createPracticeCourse(useSeed):null;
   puzzleCourse=mode==='tutorial'&&withPuzzles?createPuzzleTutorialCourse(useSeed):null;
   activeLevel = settings.challengeLevel;
   run = mode === 'challenge' ? createRun(useSeed) : null;
@@ -395,6 +406,7 @@ function startGame(mode, useSeed = seed, withPuzzles=false) {
 
 function showModes() {
   puzzleCourse=null;
+  practiceCourse=null;
   tutorial.reset();
   countdownMs = 0;
   prepareMs = 0;
@@ -431,7 +443,7 @@ function finishStage() {
   } else {
     const updated = saveBest(seed, play.timeMs, play.wallHits);
     const best = getBest(seed);
-    clear.setResult({ gameMode, timeMs: play.timeMs, bestMs: best?.timeMs, isNewBest: Boolean(updated && best), seed });
+    clear.setResult({ gameMode, timeMs: play.timeMs, bestMs: best?.timeMs, isNewBest: Boolean(updated && best), seed, practiceStage:practiceCourse?.stageIndex,practiceCount:practiceCourse?.stageCount,practiceLast:practiceCourse?.isLast });
   }
   showScreen('clear');
   sound.clear(Boolean(play.stage.theme?.special));
@@ -487,6 +499,7 @@ function frame(now) {
       onFeature: kind => { if (gameMode === 'tutorial' && ['leaf', 'hourglass'].includes(kind)) tutorial.contact(kind); game.showFeature(kind, now); if (!['full','leaf-full'].includes(kind)) sound.effect(kind === 'hourglass' ? 'hourglass' : 'select'); },
       onRecovery: (_amount, change) => { if (gameMode === 'tutorial') tutorial.contact('candy'); recovery = change; game.showRecovery(change.before, change.after, now); sound.effect('select'); } });
     if (gameMode === 'tutorial') tutorial.inspect(play,tilt.value,dt*1000);
+    if(gameMode==='practice')playLayout.setComment(practiceComment.update({actor:play.actor,goal:goalCenter(play.stage.maze),wallHits:play.wallHits,started:play.started,elapsedMs}));
     if(play.lastPhysicsResult?.halt){setPaused(true);find('board-status').textContent='計算を続けられないため一時停止しました。';}
     if (guardBefore > shield.value && damage === 0) game.showFeature('guard', now);
     if (damage > 0) game.showDamage(hpBefore, recovery?.before ?? play.hp.value, now);
@@ -576,6 +589,10 @@ clear.onNext(() => {
     else if(!puzzleCourse.next()){showModes();return;}
     loadStage(puzzleCourse.stageSeed);showScreen('game');return;
   }
+  if(gameMode==='practice'){
+    if(!practiceCourse.next()){showModes();return;}
+    loadStage(practiceCourse.currentSeed);showScreen('game');return;
+  }
   loadStage(run ? run.currentSeed() : gameMode==='floor-practice'?seed:nextSeed());
   showScreen('game');
 });
@@ -615,6 +632,7 @@ window.addEventListener('resize', scheduleResize);
 window.addEventListener('orientationchange', scheduleResize);
 window.addEventListener('pageshow', scheduleResize);
 window.visualViewport?.addEventListener('resize', scheduleResize);
+document.fonts.ready.then(scheduleResize);
 document.addEventListener('fullscreenchange', scheduleResize);
 document.addEventListener('visibilitychange', () => {
   if (!document.hidden) scheduleResize();

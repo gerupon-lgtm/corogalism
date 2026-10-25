@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = '7ffb5b7b3140b7c6';
+self.PRECACHE_VERSION = '82dc1dc4977ebb7d';
 self.PRECACHE_FILES = [
   "assets/audio/bgm-force.wav",
   "assets/audio/bgm-puzzle.wav",
@@ -36,6 +36,7 @@ self.PRECACHE_FILES = [
   "home.css",
   "index.html",
   "manifest.webmanifest",
+  "play-layout.css",
   "racket-lab.css",
   "racket-lab.html",
   "src/audio/audioSettings.js",
@@ -48,6 +49,7 @@ self.PRECACHE_FILES = [
   "src/config/gameConfig.js",
   "src/game/challenge.js",
   "src/game/hp.js",
+  "src/game/practiceCourse.js",
   "src/game/progression.js",
   "src/game/puzzleHints.js",
   "src/game/puzzleTutorial.js",
@@ -108,6 +110,7 @@ self.PRECACHE_FILES = [
   "src/ui/guide.js",
   "src/ui/homeDecoration.js",
   "src/ui/hpDisplay.js",
+  "src/ui/playLayout.js",
   "src/ui/runEndConfirm.js",
   "src/ui/runScreens.js",
   "src/ui/settingsScreen.js",
@@ -122,6 +125,7 @@ self.PRECACHE_FILES = [
   "src/world/materials.js",
   "src/world/openFields.js",
   "src/world/openFloors.js",
+  "src/world/progressiveWalls.js",
   "src/world/puzzleMaterials.js",
   "src/world/puzzleStage.js",
   "src/world/recovery.js",

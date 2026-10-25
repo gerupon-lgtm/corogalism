@@ -31,6 +31,14 @@ export const MAZE_VARIETY = {
  openBaffleCounts:[2,3], openRoomMinWidth:2, openGapWidths:[1,2], openIslandEvery:5, openFieldMarkerClearance:.36,
 };
 
+/** 床と動く壁の紹介後も、元の配合と一部危険な壁を交互に体験する。 */
+export const PROGRESSIVE_WALLS = {
+  startStage:33,
+  weights:{easy:[.5,.4,.1],normal:[.45,.4,.15]},
+  ratios:{mixed:{default:.20,stone:.08},accent:{default:.25,stone:.12,spike:.03}},
+  endpointClearance:1,portalClearance:1,segmentSize:1,
+};
+
 /** T-247: おためし専用。正式な床の採用値ではない。 */
 export const ICE_LAB = { minAccelK: 0.28, transitionSpeed: 1.2 };
 /** T-288: 配分は初期値で、検証候補の上限ではない。 */

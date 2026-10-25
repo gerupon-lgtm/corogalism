@@ -1,0 +1,1332 @@
+{
+  "conditions": [
+    {
+      "id": "390x740",
+      "width": 390,
+      "height": 740,
+      "modes": {
+        "tutorial": {
+          "elements": {
+            "play-heading": {
+              "x": 14,
+              "y": 51.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 148.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "チュートリアルげんきが0になっても続けられます。小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り0回\n    \n      のこりじかん0.0 秒\n      \n    \n    \n      げんき0100 / 100\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 14,
+              "y": 51.046875,
+              "width": 362,
+              "height": 46,
+              "bottom": 97.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "チュートリアルげんきが0になっても続けられます。小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 65,
+              "y": 57.046875,
+              "width": 300,
+              "height": 20,
+              "bottom": 77.046875,
+              "fontSize": "16px",
+              "visible": true,
+              "text": "チュートリアル"
+            },
+            "mode-card-description": {
+              "x": 65,
+              "y": 77.046875,
+              "width": 300,
+              "height": 14,
+              "bottom": 91.046875,
+              "fontSize": "11px",
+              "visible": true,
+              "text": "げんきが0になっても続けられます。"
+            },
+            "mode-card-icon": {
+              "x": 25,
+              "y": 62.046875,
+              "width": 32,
+              "height": 24,
+              "bottom": 86.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "18px",
+              "visible": false,
+              "text": "1面目 / 5"
+            },
+            "practice-comment": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 204.40625,
+              "y": 154.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 188.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 297.703125,
+              "y": 154.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 188.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 23,
+              "y": 645,
+              "width": 168,
+              "height": 44,
+              "bottom": 689,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 23,
+              "y": 695,
+              "width": 344,
+              "height": 28,
+              "bottom": 723,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "モード選択へ戻る"
+            },
+            "board": {
+              "x": 37,
+              "y": 191.046875,
+              "width": 316,
+              "height": 316,
+              "bottom": 507.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 23,
+              "y": 526.046875,
+              "width": 344,
+              "height": 112,
+              "bottom": 638.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 740,
+          "fullscreen": false
+        },
+        "practice": {
+          "elements": {
+            "play-heading": {
+              "x": 14,
+              "y": 51.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 148.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "プラクティス時間制限なしで、くり返し練習。小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り0回\n    \n      のこりじかん0.0 秒\n      \n    \n    \n      げんき0—\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 14,
+              "y": 51.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 148.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "プラクティス時間制限なしで、くり返し練習。小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 65,
+              "y": 57.046875,
+              "width": 300,
+              "height": 20,
+              "bottom": 77.046875,
+              "fontSize": "16px",
+              "visible": true,
+              "text": "プラクティス"
+            },
+            "mode-card-description": {
+              "x": 65,
+              "y": 77.046875,
+              "width": 300,
+              "height": 14,
+              "bottom": 91.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "時間制限なしで、くり返し練習。"
+            },
+            "mode-card-icon": {
+              "x": 29,
+              "y": 62.046875,
+              "width": 24,
+              "height": 24,
+              "bottom": 86.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 26,
+              "y": 160.25,
+              "width": 79.8125,
+              "height": 21.59375,
+              "bottom": 181.84375,
+              "fontSize": "18px",
+              "visible": true,
+              "text": "1面目 / 5"
+            },
+            "practice-comment": {
+              "x": 65,
+              "y": 97.046875,
+              "width": 300,
+              "height": 44,
+              "bottom": 141.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 204.40625,
+              "y": 154.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 188.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 297.703125,
+              "y": 154.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 188.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 23,
+              "y": 645,
+              "width": 168,
+              "height": 44,
+              "bottom": 689,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 23,
+              "y": 695,
+              "width": 344,
+              "height": 28,
+              "bottom": 723,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "モード選択へ戻る"
+            },
+            "board": {
+              "x": 23,
+              "y": 191.046875,
+              "width": 344,
+              "height": 344,
+              "bottom": 535.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 740,
+          "fullscreen": false
+        },
+        "challenge": {
+          "elements": {
+            "play-heading": {
+              "x": 14,
+              "y": 51.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 148.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り2回\n    \n      のこりじかん57.0 秒\n      \n    \n    \n      げんき076 / 76\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "16px",
+              "visible": false,
+              "text": ""
+            },
+            "mode-card-description": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": ""
+            },
+            "mode-card-icon": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "18px",
+              "visible": false,
+              "text": ""
+            },
+            "practice-comment": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 204.40625,
+              "y": 154.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 188.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 297.703125,
+              "y": 154.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 188.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 23,
+              "y": 645,
+              "width": 168,
+              "height": 44,
+              "bottom": 689,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 23,
+              "y": 695,
+              "width": 344,
+              "height": 28,
+              "bottom": 723,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "終了して結果を見る"
+            },
+            "board": {
+              "x": 23,
+              "y": 191.046875,
+              "width": 344,
+              "height": 344,
+              "bottom": 535.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 740,
+          "fullscreen": false
+        }
+      }
+    },
+    {
+      "id": "390x844-camera18-bottom24",
+      "width": 390,
+      "height": 844,
+      "camera": 18,
+      "bottom": 24,
+      "modes": {
+        "tutorial": {
+          "elements": {
+            "play-heading": {
+              "x": 14,
+              "y": 71.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 168.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "チュートリアルげんきが0になっても続けられます。小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り0回\n    \n      のこりじかん0.0 秒\n      \n    \n    \n      げんき0100 / 100\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 14,
+              "y": 71.046875,
+              "width": 362,
+              "height": 46,
+              "bottom": 117.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "チュートリアルげんきが0になっても続けられます。小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 65,
+              "y": 77.046875,
+              "width": 300,
+              "height": 20,
+              "bottom": 97.046875,
+              "fontSize": "16px",
+              "visible": true,
+              "text": "チュートリアル"
+            },
+            "mode-card-description": {
+              "x": 65,
+              "y": 97.046875,
+              "width": 300,
+              "height": 14,
+              "bottom": 111.046875,
+              "fontSize": "11px",
+              "visible": true,
+              "text": "げんきが0になっても続けられます。"
+            },
+            "mode-card-icon": {
+              "x": 25,
+              "y": 82.046875,
+              "width": 32,
+              "height": 24,
+              "bottom": 106.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "18px",
+              "visible": false,
+              "text": "1面目 / 5"
+            },
+            "practice-comment": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 204.40625,
+              "y": 176.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 210.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 297.703125,
+              "y": 176.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 210.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 23,
+              "y": 733,
+              "width": 168,
+              "height": 44,
+              "bottom": 777,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 23,
+              "y": 783,
+              "width": 344,
+              "height": 28,
+              "bottom": 811,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "モード選択へ戻る"
+            },
+            "board": {
+              "x": 14,
+              "y": 215.046875,
+              "width": 362,
+              "height": 362,
+              "bottom": 577.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 23,
+              "y": 612.046875,
+              "width": 344,
+              "height": 112,
+              "bottom": 724.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 844,
+          "fullscreen": false
+        },
+        "practice": {
+          "elements": {
+            "play-heading": {
+              "x": 14,
+              "y": 71.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 168.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "プラクティス時間制限なしで、くり返し練習。小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り0回\n    \n      のこりじかん0.0 秒\n      \n    \n    \n      げんき0—\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 14,
+              "y": 71.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 168.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "プラクティス時間制限なしで、くり返し練習。小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 65,
+              "y": 77.046875,
+              "width": 300,
+              "height": 20,
+              "bottom": 97.046875,
+              "fontSize": "16px",
+              "visible": true,
+              "text": "プラクティス"
+            },
+            "mode-card-description": {
+              "x": 65,
+              "y": 97.046875,
+              "width": 300,
+              "height": 14,
+              "bottom": 111.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "時間制限なしで、くり返し練習。"
+            },
+            "mode-card-icon": {
+              "x": 29,
+              "y": 82.046875,
+              "width": 24,
+              "height": 24,
+              "bottom": 106.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 17,
+              "y": 182.25,
+              "width": 79.8125,
+              "height": 21.59375,
+              "bottom": 203.84375,
+              "fontSize": "18px",
+              "visible": true,
+              "text": "1面目 / 5"
+            },
+            "practice-comment": {
+              "x": 65,
+              "y": 117.046875,
+              "width": 300,
+              "height": 44,
+              "bottom": 161.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 204.40625,
+              "y": 176.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 210.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 297.703125,
+              "y": 176.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 210.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 23,
+              "y": 733,
+              "width": 168,
+              "height": 44,
+              "bottom": 777,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 23,
+              "y": 783,
+              "width": 344,
+              "height": 28,
+              "bottom": 811,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "モード選択へ戻る"
+            },
+            "board": {
+              "x": 14,
+              "y": 215.046875,
+              "width": 362,
+              "height": 362,
+              "bottom": 577.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 844,
+          "fullscreen": false
+        },
+        "challenge": {
+          "elements": {
+            "play-heading": {
+              "x": 14,
+              "y": 71.046875,
+              "width": 362,
+              "height": 97,
+              "bottom": 168.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り2回\n    \n      のこりじかん57.0 秒\n      \n    \n    \n      げんき076 / 76\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "16px",
+              "visible": false,
+              "text": ""
+            },
+            "mode-card-description": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": ""
+            },
+            "mode-card-icon": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "18px",
+              "visible": false,
+              "text": ""
+            },
+            "practice-comment": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 204.40625,
+              "y": 176.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 210.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 297.703125,
+              "y": 176.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 210.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 23,
+              "y": 733,
+              "width": 168,
+              "height": 44,
+              "bottom": 777,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 23,
+              "y": 783,
+              "width": 344,
+              "height": 28,
+              "bottom": 811,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "終了して結果を見る"
+            },
+            "board": {
+              "x": 14,
+              "y": 215.046875,
+              "width": 362,
+              "height": 362,
+              "bottom": 577.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 844,
+          "fullscreen": false
+        }
+      }
+    },
+    {
+      "id": "360x740",
+      "width": 360,
+      "height": 740,
+      "modes": {
+        "tutorial": {
+          "elements": {
+            "play-heading": {
+              "x": 10,
+              "y": 51.046875,
+              "width": 340,
+              "height": 93,
+              "bottom": 144.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "チュートリアルげんきが0になっても続けられます。小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り0回\n    \n      のこりじかん0.0 秒\n      \n    \n    \n      げんき0100 / 100\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 10,
+              "y": 51.046875,
+              "width": 340,
+              "height": 46,
+              "bottom": 97.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "チュートリアルげんきが0になっても続けられます。小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 61,
+              "y": 57.046875,
+              "width": 278,
+              "height": 20,
+              "bottom": 77.046875,
+              "fontSize": "16px",
+              "visible": true,
+              "text": "チュートリアル"
+            },
+            "mode-card-description": {
+              "x": 61,
+              "y": 77.046875,
+              "width": 278,
+              "height": 14,
+              "bottom": 91.046875,
+              "fontSize": "11px",
+              "visible": true,
+              "text": "げんきが0になっても続けられます。"
+            },
+            "mode-card-icon": {
+              "x": 21,
+              "y": 62.046875,
+              "width": 32,
+              "height": 24,
+              "bottom": 86.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "18px",
+              "visible": false,
+              "text": "1面目 / 5"
+            },
+            "practice-comment": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 178.40625,
+              "y": 150.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 184.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 271.703125,
+              "y": 150.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 184.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 19,
+              "y": 645,
+              "width": 157,
+              "height": 44,
+              "bottom": 689,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 19,
+              "y": 695,
+              "width": 322,
+              "height": 28,
+              "bottom": 723,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "モード選択へ戻る"
+            },
+            "board": {
+              "x": 20,
+              "y": 187.046875,
+              "width": 320,
+              "height": 320,
+              "bottom": 507.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 19,
+              "y": 526.046875,
+              "width": 322,
+              "height": 112,
+              "bottom": 638.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 740,
+          "fullscreen": false
+        },
+        "practice": {
+          "elements": {
+            "play-heading": {
+              "x": 10,
+              "y": 51.046875,
+              "width": 340,
+              "height": 93,
+              "bottom": 144.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "プラクティス時間制限なしで、くり返し練習。小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り0回\n    \n      のこりじかん0.0 秒\n      \n    \n    \n      げんき0—\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 10,
+              "y": 51.046875,
+              "width": 340,
+              "height": 93,
+              "bottom": 144.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "プラクティス時間制限なしで、くり返し練習。小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 61,
+              "y": 57.046875,
+              "width": 278,
+              "height": 20,
+              "bottom": 77.046875,
+              "fontSize": "16px",
+              "visible": true,
+              "text": "プラクティス"
+            },
+            "mode-card-description": {
+              "x": 61,
+              "y": 77.046875,
+              "width": 278,
+              "height": 14,
+              "bottom": 91.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "時間制限なしで、くり返し練習。"
+            },
+            "mode-card-icon": {
+              "x": 25,
+              "y": 62.046875,
+              "width": 24,
+              "height": 24,
+              "bottom": 86.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 13,
+              "y": 156.25,
+              "width": 79.8125,
+              "height": 21.59375,
+              "bottom": 177.84375,
+              "fontSize": "18px",
+              "visible": true,
+              "text": "1面目 / 5"
+            },
+            "practice-comment": {
+              "x": 61,
+              "y": 97.046875,
+              "width": 278,
+              "height": 40,
+              "bottom": 137.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 178.40625,
+              "y": 150.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 184.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 271.703125,
+              "y": 150.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 184.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 19,
+              "y": 645,
+              "width": 157,
+              "height": 44,
+              "bottom": 689,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 19,
+              "y": 695,
+              "width": 322,
+              "height": 28,
+              "bottom": 723,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "モード選択へ戻る"
+            },
+            "board": {
+              "x": 10,
+              "y": 187.046875,
+              "width": 340,
+              "height": 340,
+              "bottom": 527.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 740,
+          "fullscreen": false
+        },
+        "challenge": {
+          "elements": {
+            "play-heading": {
+              "x": 10,
+              "y": 51.046875,
+              "width": 340,
+              "height": 93,
+              "bottom": 144.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。\n  \n    1面目コンティニュー 残り2回\n    \n      のこりじかん57.0 秒\n      \n    \n    \n      げんき076 / 76\n      \n    \n  \n  "
+            },
+            "play-mode-card": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "mode-card-title": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "16px",
+              "visible": false,
+              "text": ""
+            },
+            "mode-card-description": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": ""
+            },
+            "mode-card-icon": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": ""
+            },
+            "practice-stage": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "18px",
+              "visible": false,
+              "text": ""
+            },
+            "practice-comment": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "12px",
+              "visible": false,
+              "text": "小さく傾けて、ゆっくり転がしてみよう。"
+            },
+            "btn-sound": {
+              "x": 178.40625,
+              "y": 150.046875,
+              "width": 85.296875,
+              "height": 34,
+              "bottom": 184.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "音 OFF"
+            },
+            "btn-pause": {
+              "x": 271.703125,
+              "y": 150.046875,
+              "width": 78.296875,
+              "height": 34,
+              "bottom": 184.046875,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "Ⅱ ポーズ"
+            },
+            "btn-calibrate": {
+              "x": 19,
+              "y": 645,
+              "width": 157,
+              "height": 44,
+              "bottom": 689,
+              "fontSize": "13px",
+              "visible": true,
+              "text": "基準をとり直す"
+            },
+            "btn-game-exit": {
+              "x": 19,
+              "y": 695,
+              "width": 322,
+              "height": 28,
+              "bottom": 723,
+              "fontSize": "12px",
+              "visible": true,
+              "text": "終了して結果を見る"
+            },
+            "board": {
+              "x": 10,
+              "y": 187.046875,
+              "width": 340,
+              "height": 340,
+              "bottom": 527.046875,
+              "fontSize": "15px",
+              "visible": true,
+              "text": "\n    \n    \n  \n      クリア自己ベスト更新\n    \n      タイム—\n      自己ベスト—\n      残りのげんき—\n      シード—\n    \n    \n    \n      同じ迷路をやり直す\n      次の迷路\n    \n    モード選択へ戻る\n  \n  \n      ゲームオーバー\n    \n    クリア面数0 面合計クリアタイム0.00 秒\n    コンティニュー\n    \n    ランを終えて結果を見る\n  \n    \n    \n      \n      READY1まもなくスタートタッチで遊ぶ\n    \n    一時停止この角度を基準にするあそびのガイド▶ 再開\n  "
+            },
+            "tutorial-lesson": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "fontSize": "15px",
+              "visible": false,
+              "text": "\n      素材にふれて、動きを試してみよう。げんきが0になっても続けられます。\n      \n        \n        \n        げんきが0になっても続けられます\n      \n    "
+            }
+          },
+          "scrollY": 0,
+          "overflow": 0,
+          "innerHeight": 740,
+          "fullscreen": false
+        }
+      }
+    }
+  ],
+  "flow": {
+    "kind": "debug teleport fixture; not physical completion",
+    "stages": [
+      {
+        "stage": 1,
+        "seed": 77,
+        "nextText": "次の迷路（2 / 5）",
+        "clearNote": "1 / 5面クリア"
+      },
+      {
+        "stage": 2,
+        "seed": 609776,
+        "nextText": "次の迷路（3 / 5）",
+        "clearNote": "2 / 5面クリア"
+      },
+      {
+        "stage": 3,
+        "seed": 801673,
+        "nextText": "次の迷路（4 / 5）",
+        "clearNote": "3 / 5面クリア"
+      },
+      {
+        "stage": 4,
+        "seed": 429456,
+        "nextText": "次の迷路（5 / 5）",
+        "clearNote": "4 / 5面クリア"
+      },
+      {
+        "stage": 5,
+        "seed": 851877,
+        "nextText": "モード選択へ",
+        "clearNote": "5面の練習ができました！"
+      }
+    ],
+    "retry": {
+      "seedBefore": 77,
+      "seedAfter": 77,
+      "stageBefore": 1,
+      "stageAfter": 1
+    },
+    "finalScreen": "mode"
+  },
+  "physical": {
+    "kind": "actual pointer events; no teleport or HP mutation",
+    "seed": 77,
+    "stage": 1,
+    "result": "clear",
+    "seconds": 11.9098,
+    "wallHits": 0,
+    "steps": 78,
+    "waypoint": 16,
+    "pathLength": 17
+  },
+  "comments": {
+    "kind": "pure module fixture; initial goal approach explicitly overrides 4-second minimum",
+    "start": "小さく傾けて、ゆっくり転がしてみよう。",
+    "earlyWall": "小さく傾けて、ゆっくり転がしてみよう。",
+    "before4": "小さく傾けて、ゆっくり転がしてみよう。",
+    "after4": "曲がる前に、逆へ傾けて減速してみよう。",
+    "earlyGoal": "傾きを小さくして、カップを狙おう。"
+  },
+  "errors": [],
+  "failures": []
+}

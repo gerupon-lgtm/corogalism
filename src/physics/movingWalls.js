@@ -60,11 +60,11 @@ export function stepMovingWallPhysics({actor,stage,tilt,base,dt,settings={},onIm
   if(!(slice>0)||remaining-slice===remaining)return stop('precision');
   const from=snapshot(),wallBefore=rackets.map(w=>({x:w.x,y:w.y,vx:w.vx,vy:w.vy}));
   actor.x+=actor.vx*slice;actor.y+=actor.vy*slice;
-  wallHits+=resolveCollisions(actor,stage.walls,restitutionOf,onImpact);
+  wallHits+=resolveCollisions(actor,stage.collisionWalls??stage.walls,restitutionOf,onImpact);
   for(const w of rackets){
    const axis=w.axis==='y'?'y':'x',old=w[axis],requested=(axis==='y'?tilt.y:tilt.x)*racketSpeed;
    const desired=Math.min(w.max,Math.max(w.min,old+requested*slice));
-   const others=[...stage.walls,...rackets.filter(other=>other!==w)];
+   const others=[...(stage.collisionWalls??stage.walls),...rackets.filter(other=>other!==w)];
    // 球自身が狭いすき間へ進んだ場合も、その移動区間内の接触位置で止める。
    const oldContact=contact(actor,w);
    if(oldContact&&blockedPoint(project(actor,oldContact),actor.r,others,stage.maze.size)){

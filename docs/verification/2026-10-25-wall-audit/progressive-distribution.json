@@ -1,0 +1,1265 @@
+{
+  "generatedAt": "2026-10-25T00:02:59.228Z",
+  "seeds": [
+    7996,
+    15915,
+    23834,
+    31753,
+    39672,
+    47591,
+    55510,
+    63429,
+    71348,
+    79267,
+    87186,
+    95105,
+    103024,
+    110943,
+    118862,
+    126781,
+    134700,
+    142619,
+    150538,
+    158457,
+    166376,
+    174295,
+    182214,
+    190133,
+    198052,
+    205971,
+    213890,
+    221809,
+    229728,
+    237647,
+    245566,
+    253485
+  ],
+  "stagesPerRun": 100,
+  "limitations": "Generation only; no actor movement, damage simulation, device input, or enjoyment verification. Profile shares include eligible original stages. No-eligible stages preserve all walls.",
+  "aggregates": [
+    {
+      "level": "easy",
+      "range": "33-64",
+      "group": "all",
+      "stages": 758,
+      "profiles": {
+        "original": 361,
+        "mixed": 303,
+        "accent": 94
+      },
+      "noEligible": 5,
+      "minimumChanged": 31,
+      "nonOriginalUnchanged": 1,
+      "changed": {
+        "default": 2467,
+        "stone": 1001,
+        "spike": 77
+      },
+      "eligibleSegments": 20929,
+      "changedSegments": 3545,
+      "zeroBefore": 339,
+      "zeroAfter": 171,
+      "stoneBefore": 11,
+      "stoneAfter": 302,
+      "spikeBefore": 11,
+      "spikeAfter": 55,
+      "shortfall": {
+        "default": 33,
+        "stone": 102,
+        "spike": 49
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "easy",
+      "range": "33-64",
+      "group": "open",
+      "stages": 210,
+      "profiles": {
+        "original": 105,
+        "mixed": 82,
+        "accent": 23
+      },
+      "noEligible": 0,
+      "minimumChanged": 2,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 400,
+        "stone": 152,
+        "spike": 15
+      },
+      "eligibleSegments": 3658,
+      "changedSegments": 567,
+      "zeroBefore": 177,
+      "zeroAfter": 91,
+      "stoneBefore": 11,
+      "stoneAfter": 85,
+      "spikeBefore": 11,
+      "spikeAfter": 21,
+      "shortfall": {
+        "default": 4,
+        "stone": 27,
+        "spike": 12
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "easy",
+      "range": "33-64",
+      "group": "ice-non-open",
+      "stages": 87,
+      "profiles": {
+        "original": 42,
+        "mixed": 30,
+        "accent": 15
+      },
+      "noEligible": 0,
+      "minimumChanged": 0,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 491,
+        "stone": 210,
+        "spike": 19
+      },
+      "eligibleSegments": 4611,
+      "changedSegments": 720,
+      "zeroBefore": 18,
+      "zeroAfter": 11,
+      "stoneBefore": 0,
+      "stoneAfter": 43,
+      "spikeBefore": 0,
+      "spikeAfter": 9,
+      "shortfall": {
+        "default": 0,
+        "stone": 2,
+        "spike": 6
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "easy",
+      "range": "33-64",
+      "group": "puzzle",
+      "stages": 247,
+      "profiles": {
+        "original": 115,
+        "mixed": 98,
+        "accent": 34
+      },
+      "noEligible": 5,
+      "minimumChanged": 29,
+      "nonOriginalUnchanged": 1,
+      "changed": {
+        "default": 170,
+        "stone": 83,
+        "spike": 8
+      },
+      "eligibleSegments": 1315,
+      "changedSegments": 261,
+      "zeroBefore": 144,
+      "zeroAfter": 69,
+      "stoneBefore": 0,
+      "stoneAfter": 65,
+      "spikeBefore": 0,
+      "spikeAfter": 8,
+      "shortfall": {
+        "default": 28,
+        "stone": 67,
+        "spike": 26
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "easy",
+      "range": "65-100",
+      "group": "all",
+      "stages": 859,
+      "profiles": {
+        "original": 426,
+        "mixed": 347,
+        "accent": 86
+      },
+      "noEligible": 8,
+      "minimumChanged": 43,
+      "nonOriginalUnchanged": 2,
+      "changed": {
+        "default": 2308,
+        "stone": 962,
+        "spike": 70
+      },
+      "eligibleSegments": 22406,
+      "changedSegments": 3340,
+      "zeroBefore": 412,
+      "zeroAfter": 202,
+      "stoneBefore": 9,
+      "stoneAfter": 304,
+      "spikeBefore": 16,
+      "spikeAfter": 52,
+      "shortfall": {
+        "default": 42,
+        "stone": 136,
+        "spike": 50
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "easy",
+      "range": "65-100",
+      "group": "open",
+      "stages": 225,
+      "profiles": {
+        "original": 109,
+        "mixed": 87,
+        "accent": 29
+      },
+      "noEligible": 0,
+      "minimumChanged": 5,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 374,
+        "stone": 154,
+        "spike": 13
+      },
+      "eligibleSegments": 3486,
+      "changedSegments": 541,
+      "zeroBefore": 188,
+      "zeroAfter": 91,
+      "stoneBefore": 9,
+      "stoneAfter": 84,
+      "spikeBefore": 16,
+      "spikeAfter": 25,
+      "shortfall": {
+        "default": 13,
+        "stone": 39,
+        "spike": 20
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "easy",
+      "range": "65-100",
+      "group": "puzzle",
+      "stages": 307,
+      "profiles": {
+        "original": 149,
+        "mixed": 135,
+        "accent": 23
+      },
+      "noEligible": 8,
+      "minimumChanged": 38,
+      "nonOriginalUnchanged": 2,
+      "changed": {
+        "default": 188,
+        "stone": 82,
+        "spike": 2
+      },
+      "eligibleSegments": 1605,
+      "changedSegments": 272,
+      "zeroBefore": 205,
+      "zeroAfter": 102,
+      "stoneBefore": 0,
+      "stoneAfter": 69,
+      "spikeBefore": 0,
+      "spikeAfter": 2,
+      "shortfall": {
+        "default": 29,
+        "stone": 89,
+        "spike": 21
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "easy",
+      "range": "65-100",
+      "group": "ice-non-open",
+      "stages": 97,
+      "profiles": {
+        "original": 45,
+        "mixed": 41,
+        "accent": 11
+      },
+      "noEligible": 0,
+      "minimumChanged": 0,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 590,
+        "stone": 249,
+        "spike": 15
+      },
+      "eligibleSegments": 5327,
+      "changedSegments": 854,
+      "zeroBefore": 19,
+      "zeroAfter": 9,
+      "stoneBefore": 0,
+      "stoneAfter": 49,
+      "spikeBefore": 0,
+      "spikeAfter": 8,
+      "shortfall": {
+        "default": 0,
+        "stone": 3,
+        "spike": 3
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "33-64",
+      "group": "all",
+      "stages": 785,
+      "profiles": {
+        "original": 336,
+        "mixed": 321,
+        "accent": 128
+      },
+      "noEligible": 5,
+      "minimumChanged": 33,
+      "nonOriginalUnchanged": 2,
+      "changed": {
+        "default": 2941,
+        "stone": 1251,
+        "spike": 129
+      },
+      "eligibleSegments": 22686,
+      "changedSegments": 4321,
+      "zeroBefore": 325,
+      "zeroAfter": 144,
+      "stoneBefore": 12,
+      "stoneAfter": 355,
+      "spikeBefore": 12,
+      "spikeAfter": 75,
+      "shortfall": {
+        "default": 34,
+        "stone": 102,
+        "spike": 62
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "33-64",
+      "group": "open",
+      "stages": 208,
+      "profiles": {
+        "original": 92,
+        "mixed": 85,
+        "accent": 31
+      },
+      "noEligible": 0,
+      "minimumChanged": 2,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 457,
+        "stone": 170,
+        "spike": 23
+      },
+      "eligibleSegments": 3658,
+      "changedSegments": 650,
+      "zeroBefore": 176,
+      "zeroAfter": 79,
+      "stoneBefore": 12,
+      "stoneAfter": 99,
+      "spikeBefore": 12,
+      "spikeAfter": 26,
+      "shortfall": {
+        "default": 5,
+        "stone": 25,
+        "spike": 14
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "33-64",
+      "group": "ice-non-open",
+      "stages": 163,
+      "profiles": {
+        "original": 76,
+        "mixed": 61,
+        "accent": 26
+      },
+      "noEligible": 0,
+      "minimumChanged": 0,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 843,
+        "stone": 391,
+        "spike": 40
+      },
+      "eligibleSegments": 7393,
+      "changedSegments": 1274,
+      "zeroBefore": 18,
+      "zeroAfter": 7,
+      "stoneBefore": 0,
+      "stoneAfter": 82,
+      "spikeBefore": 0,
+      "spikeAfter": 18,
+      "shortfall": {
+        "default": 0,
+        "stone": 5,
+        "spike": 8
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "33-64",
+      "group": "puzzle",
+      "stages": 221,
+      "profiles": {
+        "original": 90,
+        "mixed": 94,
+        "accent": 37
+      },
+      "noEligible": 5,
+      "minimumChanged": 31,
+      "nonOriginalUnchanged": 2,
+      "changed": {
+        "default": 170,
+        "stone": 80,
+        "spike": 4
+      },
+      "eligibleSegments": 1168,
+      "changedSegments": 254,
+      "zeroBefore": 131,
+      "zeroAfter": 58,
+      "stoneBefore": 0,
+      "stoneAfter": 62,
+      "spikeBefore": 0,
+      "spikeAfter": 4,
+      "shortfall": {
+        "default": 28,
+        "stone": 69,
+        "spike": 33
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "65-100",
+      "group": "all",
+      "stages": 904,
+      "profiles": {
+        "original": 404,
+        "mixed": 368,
+        "accent": 132
+      },
+      "noEligible": 7,
+      "minimumChanged": 44,
+      "nonOriginalUnchanged": 2,
+      "changed": {
+        "default": 3004,
+        "stone": 1268,
+        "spike": 109
+      },
+      "eligibleSegments": 26024,
+      "changedSegments": 4381,
+      "zeroBefore": 380,
+      "zeroAfter": 165,
+      "stoneBefore": 12,
+      "stoneAfter": 368,
+      "spikeBefore": 13,
+      "spikeAfter": 66,
+      "shortfall": {
+        "default": 42,
+        "stone": 140,
+        "spike": 79
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "65-100",
+      "group": "open",
+      "stages": 224,
+      "profiles": {
+        "original": 98,
+        "mixed": 85,
+        "accent": 41
+      },
+      "noEligible": 0,
+      "minimumChanged": 6,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 398,
+        "stone": 181,
+        "spike": 14
+      },
+      "eligibleSegments": 3408,
+      "changedSegments": 593,
+      "zeroBefore": 188,
+      "zeroAfter": 82,
+      "stoneBefore": 12,
+      "stoneAfter": 97,
+      "spikeBefore": 13,
+      "spikeAfter": 23,
+      "shortfall": {
+        "default": 14,
+        "stone": 37,
+        "spike": 31
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "65-100",
+      "group": "puzzle",
+      "stages": 272,
+      "profiles": {
+        "original": 115,
+        "mixed": 121,
+        "accent": 36
+      },
+      "noEligible": 7,
+      "minimumChanged": 38,
+      "nonOriginalUnchanged": 2,
+      "changed": {
+        "default": 194,
+        "stone": 74,
+        "spike": 4
+      },
+      "eligibleSegments": 1404,
+      "changedSegments": 272,
+      "zeroBefore": 180,
+      "zeroAfter": 76,
+      "stoneBefore": 0,
+      "stoneAfter": 63,
+      "spikeBefore": 0,
+      "spikeAfter": 4,
+      "shortfall": {
+        "default": 28,
+        "stone": 94,
+        "spike": 32
+      },
+      "splitWalls": 0
+    },
+    {
+      "level": "normal",
+      "range": "65-100",
+      "group": "ice-non-open",
+      "stages": 205,
+      "profiles": {
+        "original": 92,
+        "mixed": 87,
+        "accent": 26
+      },
+      "noEligible": 0,
+      "minimumChanged": 0,
+      "nonOriginalUnchanged": 0,
+      "changed": {
+        "default": 1284,
+        "stone": 533,
+        "spike": 47
+      },
+      "eligibleSegments": 10958,
+      "changedSegments": 1864,
+      "zeroBefore": 12,
+      "zeroAfter": 7,
+      "stoneBefore": 0,
+      "stoneAfter": 109,
+      "spikeBefore": 0,
+      "spikeAfter": 18,
+      "shortfall": {
+        "default": 0,
+        "stone": 4,
+        "spike": 8
+      },
+      "splitWalls": 0
+    }
+  ],
+  "examples": [
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 47640,
+      "stage": 34,
+      "shape": "open",
+      "version": 1,
+      "profile": "original",
+      "seed": 47640,
+      "eligibleSegments": 9,
+      "protectedSegments": 30,
+      "changedSegments": 0,
+      "changedCounts": {
+        "default": 0,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 39,
+      "outputWallCount": 39,
+      "ratios": {},
+      "expectedCounts": {},
+      "shortfall": [],
+      "countsBefore": {
+        "rubber": 39
+      },
+      "countsAfter": {
+        "rubber": 39
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 88143,
+      "stage": 35,
+      "shape": "short",
+      "version": 1,
+      "profile": "accent",
+      "seed": 3124148092,
+      "eligibleSegments": 42,
+      "protectedSegments": 39,
+      "changedSegments": 22,
+      "changedCounts": {
+        "default": 11,
+        "stone": 9,
+        "spike": 2
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 81,
+      "outputWallCount": 81,
+      "ratios": {
+        "default": 0.25,
+        "stone": 0.12,
+        "spike": 0.03
+      },
+      "expectedCounts": {
+        "default": 10.5,
+        "stone": 5.04,
+        "spike": 1.26
+      },
+      "shortfall": [],
+      "countsBefore": {
+        "cork": 81
+      },
+      "countsAfter": {
+        "cork": 59,
+        "spike": 2,
+        "default": 11,
+        "stone": 9
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 128646,
+      "stage": 36,
+      "shape": "puzzle",
+      "version": 1,
+      "profile": "mixed",
+      "seed": 128646,
+      "eligibleSegments": 8,
+      "protectedSegments": 58,
+      "changedSegments": 1,
+      "changedCounts": {
+        "default": 1,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": true,
+      "splitWalls": 0,
+      "inputWallCount": 66,
+      "outputWallCount": 66,
+      "ratios": {
+        "default": 0.2,
+        "stone": 0.08
+      },
+      "expectedCounts": {
+        "default": 1.6,
+        "stone": 0.64
+      },
+      "shortfall": [
+        "stone"
+      ],
+      "countsBefore": {
+        "rubber": 51,
+        "cotton": 15
+      },
+      "countsAfter": {
+        "rubber": 50,
+        "cotton": 15,
+        "default": 1
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 169149,
+      "stage": 37,
+      "shape": "classic",
+      "version": 1,
+      "profile": "mixed",
+      "seed": 169149,
+      "eligibleSegments": 36,
+      "protectedSegments": 41,
+      "changedSegments": 11,
+      "changedCounts": {
+        "default": 11,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 77,
+      "outputWallCount": 77,
+      "ratios": {
+        "default": 0.2,
+        "stone": 0.08
+      },
+      "expectedCounts": {
+        "default": 7.2,
+        "stone": 2.88
+      },
+      "shortfall": [
+        "stone"
+      ],
+      "countsBefore": {
+        "cork": 77
+      },
+      "countsAfter": {
+        "cork": 66,
+        "default": 11
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 209652,
+      "stage": 38,
+      "shape": "puzzle",
+      "version": 1,
+      "profile": "original",
+      "seed": 209652,
+      "eligibleSegments": 1,
+      "protectedSegments": 36,
+      "changedSegments": 0,
+      "changedCounts": {
+        "default": 0,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 37,
+      "outputWallCount": 37,
+      "ratios": {},
+      "expectedCounts": {},
+      "shortfall": [],
+      "countsBefore": {
+        "cork": 18,
+        "cotton": 11,
+        "rubber": 8
+      },
+      "countsAfter": {
+        "cork": 18,
+        "cotton": 11,
+        "rubber": 8
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 250155,
+      "stage": 39,
+      "shape": "classic",
+      "version": 1,
+      "profile": "mixed",
+      "seed": 250155,
+      "eligibleSegments": 132,
+      "protectedSegments": 64,
+      "changedSegments": 37,
+      "changedCounts": {
+        "default": 27,
+        "stone": 10,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 196,
+      "outputWallCount": 196,
+      "ratios": {
+        "default": 0.2,
+        "stone": 0.08
+      },
+      "expectedCounts": {
+        "default": 26.400000000000002,
+        "stone": 10.56
+      },
+      "shortfall": [],
+      "countsBefore": {
+        "cork": 196
+      },
+      "countsAfter": {
+        "cork": 159,
+        "default": 27,
+        "stone": 10
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 290658,
+      "stage": 40,
+      "shape": "intricate",
+      "version": 1,
+      "profile": "original",
+      "seed": 290658,
+      "eligibleSegments": 28,
+      "protectedSegments": 36,
+      "changedSegments": 0,
+      "changedCounts": {
+        "default": 0,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 64,
+      "outputWallCount": 64,
+      "ratios": {},
+      "expectedCounts": {},
+      "shortfall": [],
+      "countsBefore": {
+        "cork": 64
+      },
+      "countsAfter": {
+        "cork": 64
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 396808,
+      "stage": 92,
+      "shape": "open",
+      "version": 1,
+      "profile": "accent",
+      "seed": 396808,
+      "eligibleSegments": 16,
+      "protectedSegments": 35,
+      "changedSegments": 6,
+      "changedCounts": {
+        "default": 6,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 51,
+      "outputWallCount": 51,
+      "ratios": {
+        "default": 0.25,
+        "stone": 0.12,
+        "spike": 0.03
+      },
+      "expectedCounts": {
+        "default": 4,
+        "stone": 1.92,
+        "spike": 0.48
+      },
+      "shortfall": [
+        "stone",
+        "spike"
+      ],
+      "countsBefore": {
+        "rubber": 51
+      },
+      "countsAfter": {
+        "rubber": 45,
+        "default": 6
+      }
+    },
+    {
+      "level": "easy",
+      "runSeed": 7996,
+      "stageSeed": 720832,
+      "stage": 100,
+      "shape": "puzzle",
+      "version": 1,
+      "profile": "accent",
+      "seed": 720832,
+      "eligibleSegments": 2,
+      "protectedSegments": 35,
+      "changedSegments": 1,
+      "changedCounts": {
+        "default": 1,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 37,
+      "outputWallCount": 37,
+      "ratios": {
+        "default": 0.25,
+        "stone": 0.12,
+        "spike": 0.03
+      },
+      "expectedCounts": {
+        "default": 0.5,
+        "stone": 0.24,
+        "spike": 0.06
+      },
+      "shortfall": [
+        "stone",
+        "spike"
+      ],
+      "countsBefore": {
+        "rubber": 26,
+        "cotton": 11
+      },
+      "countsAfter": {
+        "rubber": 25,
+        "cotton": 11,
+        "default": 1
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 47640,
+      "stage": 34,
+      "shape": "open",
+      "version": 1,
+      "profile": "original",
+      "seed": 47640,
+      "eligibleSegments": 9,
+      "protectedSegments": 30,
+      "changedSegments": 0,
+      "changedCounts": {
+        "default": 0,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 39,
+      "outputWallCount": 39,
+      "ratios": {},
+      "expectedCounts": {},
+      "shortfall": [],
+      "countsBefore": {
+        "rubber": 39
+      },
+      "countsAfter": {
+        "rubber": 39
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 88143,
+      "stage": 35,
+      "shape": "short",
+      "version": 1,
+      "profile": "accent",
+      "seed": 3124148092,
+      "eligibleSegments": 42,
+      "protectedSegments": 39,
+      "changedSegments": 22,
+      "changedCounts": {
+        "default": 11,
+        "stone": 9,
+        "spike": 2
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 81,
+      "outputWallCount": 81,
+      "ratios": {
+        "default": 0.25,
+        "stone": 0.12,
+        "spike": 0.03
+      },
+      "expectedCounts": {
+        "default": 10.5,
+        "stone": 5.04,
+        "spike": 1.26
+      },
+      "shortfall": [],
+      "countsBefore": {
+        "cork": 81
+      },
+      "countsAfter": {
+        "cork": 59,
+        "spike": 2,
+        "default": 11,
+        "stone": 9
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 128646,
+      "stage": 36,
+      "shape": "puzzle",
+      "version": 1,
+      "profile": "mixed",
+      "seed": 128646,
+      "eligibleSegments": 8,
+      "protectedSegments": 58,
+      "changedSegments": 1,
+      "changedCounts": {
+        "default": 1,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": true,
+      "splitWalls": 0,
+      "inputWallCount": 66,
+      "outputWallCount": 66,
+      "ratios": {
+        "default": 0.2,
+        "stone": 0.08
+      },
+      "expectedCounts": {
+        "default": 1.6,
+        "stone": 0.64
+      },
+      "shortfall": [
+        "stone"
+      ],
+      "countsBefore": {
+        "rubber": 51,
+        "cotton": 15
+      },
+      "countsAfter": {
+        "rubber": 50,
+        "cotton": 15,
+        "default": 1
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 169149,
+      "stage": 37,
+      "shape": "classic",
+      "version": 1,
+      "profile": "mixed",
+      "seed": 169149,
+      "eligibleSegments": 36,
+      "protectedSegments": 41,
+      "changedSegments": 11,
+      "changedCounts": {
+        "default": 11,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 77,
+      "outputWallCount": 77,
+      "ratios": {
+        "default": 0.2,
+        "stone": 0.08
+      },
+      "expectedCounts": {
+        "default": 7.2,
+        "stone": 2.88
+      },
+      "shortfall": [
+        "stone"
+      ],
+      "countsBefore": {
+        "cork": 77
+      },
+      "countsAfter": {
+        "cork": 66,
+        "default": 11
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 209652,
+      "stage": 38,
+      "shape": "puzzle",
+      "version": 1,
+      "profile": "mixed",
+      "seed": 209652,
+      "eligibleSegments": 1,
+      "protectedSegments": 36,
+      "changedSegments": 1,
+      "changedCounts": {
+        "default": 1,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": true,
+      "splitWalls": 0,
+      "inputWallCount": 37,
+      "outputWallCount": 37,
+      "ratios": {
+        "default": 0.2,
+        "stone": 0.08
+      },
+      "expectedCounts": {
+        "default": 0.2,
+        "stone": 0.08
+      },
+      "shortfall": [
+        "stone"
+      ],
+      "countsBefore": {
+        "cork": 18,
+        "cotton": 11,
+        "rubber": 8
+      },
+      "countsAfter": {
+        "cork": 18,
+        "cotton": 11,
+        "rubber": 7,
+        "default": 1
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 290658,
+      "stage": 40,
+      "shape": "intricate",
+      "version": 1,
+      "profile": "original",
+      "seed": 290658,
+      "eligibleSegments": 24,
+      "protectedSegments": 36,
+      "changedSegments": 0,
+      "changedCounts": {
+        "default": 0,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 60,
+      "outputWallCount": 60,
+      "ratios": {},
+      "expectedCounts": {},
+      "shortfall": [],
+      "countsBefore": {
+        "cork": 60
+      },
+      "countsAfter": {
+        "cork": 60
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 412167,
+      "stage": 43,
+      "shape": "open",
+      "version": 1,
+      "profile": "original",
+      "seed": 412167,
+      "eligibleSegments": 17,
+      "protectedSegments": 35,
+      "changedSegments": 0,
+      "changedCounts": {
+        "default": 0,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 52,
+      "outputWallCount": 52,
+      "ratios": {},
+      "expectedCounts": {},
+      "shortfall": [],
+      "countsBefore": {
+        "rubber": 52
+      },
+      "countsAfter": {
+        "rubber": 52
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 356305,
+      "stage": 91,
+      "shape": "intricate",
+      "version": 1,
+      "profile": "accent",
+      "seed": 4059162061,
+      "eligibleSegments": 82,
+      "protectedSegments": 56,
+      "changedSegments": 41,
+      "changedCounts": {
+        "default": 28,
+        "stone": 11,
+        "spike": 2
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 138,
+      "outputWallCount": 138,
+      "ratios": {
+        "default": 0.25,
+        "stone": 0.12,
+        "spike": 0.03
+      },
+      "expectedCounts": {
+        "default": 20.5,
+        "stone": 9.84,
+        "spike": 2.46
+      },
+      "shortfall": [],
+      "countsBefore": {
+        "cork": 138
+      },
+      "countsAfter": {
+        "cork": 97,
+        "default": 28,
+        "stone": 11,
+        "spike": 2
+      }
+    },
+    {
+      "level": "normal",
+      "runSeed": 7996,
+      "stageSeed": 396808,
+      "stage": 92,
+      "shape": "open",
+      "version": 1,
+      "profile": "accent",
+      "seed": 396808,
+      "eligibleSegments": 16,
+      "protectedSegments": 35,
+      "changedSegments": 6,
+      "changedCounts": {
+        "default": 6,
+        "stone": 0,
+        "spike": 0
+      },
+      "minimumChanged": false,
+      "splitWalls": 0,
+      "inputWallCount": 51,
+      "outputWallCount": 51,
+      "ratios": {
+        "default": 0.25,
+        "stone": 0.12,
+        "spike": 0.03
+      },
+      "expectedCounts": {
+        "default": 4,
+        "stone": 1.92,
+        "spike": 0.48
+      },
+      "shortfall": [
+        "stone",
+        "spike"
+      ],
+      "countsBefore": {
+        "rubber": 51
+      },
+      "countsAfter": {
+        "rubber": 45,
+        "default": 6
+      }
+    }
+  ]
+}
