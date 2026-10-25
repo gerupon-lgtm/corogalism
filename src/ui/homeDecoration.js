@@ -3,17 +3,22 @@ import { drawToyCandy } from '../render/toyCandy.js';
 import { drawLeaf } from '../render/toyFeatures.js';
 import { drawToyGoal, drawToyWall } from '../render/toyWorld.js';
 import { drawHourglass } from '../render/toyHourglass.js';
+import { drawFloorVisuals } from '../render/floorVisuals.js';
 
 /** タイトルと結果に本編と同じ小物・壁を描く。ゲームループや音を起動しない。 */
 export function initHomeDecoration(root) {
   const ball = createToyBall();
   ball.update({ x: 1, y: 1, r: .4, character: { appearance: 'pearl' } });
-  const canvases = [...root.querySelectorAll('#screen-mode [data-toy], #screen-run-result [data-toy], [data-wall-divider]')];
+  const canvases = [...root.querySelectorAll('#screen-mode [data-toy], #screen-run-result [data-toy], [data-wall-divider], [data-floor-token]')];
   const draw = () => {
     for (const canvas of canvases) {
       const c = canvas.getContext('2d');
       if (!c || c.isContextLost?.()) continue;
       c.clearRect(0, 0, canvas.width, canvas.height);
+      if(canvas.dataset.floorToken){
+        drawFloorVisuals(c,{toPx:n=>n*canvas.width},{stage:{zones:[{kind:canvas.dataset.floorToken,cells:[{x:0,y:0}]}]},actor:{x:0,y:0,vx:0,vy:0},time:0,reduced:true,dynamicLayer:false});
+        continue;
+      }
       if(canvas.dataset.wallDivider){
         drawToyWall(c,{x:4,y:3,w:canvas.width-8,h:18,materialId:canvas.dataset.wallDivider},{toScreen:(x,y)=>({px:x,py:y}),toPx:n=>n});
         continue;

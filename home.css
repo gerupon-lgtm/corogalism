@@ -74,6 +74,9 @@
 /* T-302: 見出しの小物と同じまとまりに、短いコルク壁の飾りを置く。 */
 .menu-heading,.run-result-intro{display:flex;flex-direction:column;gap:6px;flex-shrink:0;min-width:0}
 .toy-wall-divider{display:block;width:72%;height:22px;align-self:center;pointer-events:none}
+.toy-divider-row{display:flex;align-items:center;justify-content:center;gap:10px;height:22px;flex-shrink:0}
+.toy-divider-row .toy-wall-divider{width:66%;align-self:auto}
+.toy-floor-token{display:block;flex:0 0 22px;width:22px;height:22px;border-radius:3px;box-shadow:0 2px 1px #73593855;pointer-events:none}
 .run-result-intro{gap:8px}
 .result-scene{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;gap:8px;align-items:center;min-height:48px}
 .result-scene canvas{display:block;width:48px;height:48px;justify-self:center;pointer-events:none}

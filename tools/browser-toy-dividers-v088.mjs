@@ -22,10 +22,11 @@ async function decoration(screen){return page.evaluate(screen=>{
  const panel=document.querySelector('#screen-'+screen),card=panel.getBoundingClientRect(),canvas=panel.querySelector('[data-wall-divider]'),line=canvas.getBoundingClientRect(),pixels=canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data;
  let painted=0;for(let i=3;i<pixels.length;i+=4)if(pixels[i]>24)painted++;
  const heading=panel.querySelector('h2').getBoundingClientRect();
+ const floors=[...panel.querySelectorAll('[data-floor-token]')].map(c=>{const b=c.getBoundingClientRect(),data=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let painted=0;for(let i=3;i<data.length;i+=4)if(data[i]>24)painted++;return {kind:c.dataset.floorToken,painted,inside:b.left>card.left&&b.right<card.right,side:c.dataset.floorToken==='ice'?b.right<line.left:b.left>line.right};});
  const toys=[...panel.querySelectorAll('.result-scene canvas')].map(c=>{const data=c.getContext('2d').getImageData(0,0,c.width,c.height).data;let painted=0;for(let i=3;i<data.length;i+=4)if(data[i]>24)painted++;return {kind:c.dataset.toy,painted};});
- return {overflow:document.documentElement.scrollHeight-innerHeight,horizontal:document.documentElement.scrollWidth-innerWidth,lineWidth:line.width,leftInset:line.left-card.left,rightInset:card.right-line.right,belowHeading:line.top>=heading.bottom,painted,toys};
+ return {overflow:document.documentElement.scrollHeight-innerHeight,horizontal:document.documentElement.scrollWidth-innerWidth,lineWidth:line.width,leftInset:line.left-card.left,rightInset:card.right-line.right,belowHeading:line.top>=heading.bottom,painted,toys,floors};
 },screen);}
-function checkDecoration(row){assert.equal(row.overflow,0);assert.equal(row.horizontal,0);assert.ok(row.leftInset>24&&row.rightInset>24);assert.ok(Math.abs(row.leftInset-row.rightInset)<1);assert.ok(row.belowHeading);assert.ok(row.painted>1000);for(const toy of row.toys)assert.ok(toy.painted>100);}
+function checkDecoration(row){assert.equal(row.overflow,0);assert.equal(row.horizontal,0);assert.ok(row.leftInset>24&&row.rightInset>24);assert.ok(Math.abs(row.leftInset-row.rightInset)<1);assert.ok(row.belowHeading);assert.ok(row.painted>1000);for(const toy of row.toys)assert.ok(toy.painted>100);assert.deepEqual(row.floors.map(f=>f.kind),['ice','sand']);for(const floor of row.floors)assert.ok(floor.painted>1000&&floor.inside&&floor.side);}
 async function finish(){await page.evaluate(()=>{const c=window.__corogalism,g=c.state.goal;c.teleport(g.x,g.y);});await page.waitForFunction(()=>window.__corogalism.state.screen==='clear');await page.waitForFunction(()=>!document.getElementById('btn-next').disabled);}
 try{
  await mkdir(output,{recursive:true});

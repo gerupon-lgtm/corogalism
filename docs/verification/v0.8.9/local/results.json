@@ -1,0 +1,317 @@
+{
+  "version": "0.8.9",
+  "base": "http://127.0.0.1:64932/",
+  "home": [
+    {
+      "profile": "normal",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 216.46875,
+      "leftInset": 72.765625,
+      "rightInset": 72.765625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    },
+    {
+      "profile": "narrow",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 201.953125,
+      "leftInset": 69.015625,
+      "rightInset": 69.03125,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    },
+    {
+      "profile": "short",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 215.15625,
+      "leftInset": 72.421875,
+      "rightInset": 72.421875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    },
+    {
+      "profile": "full",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 216.46875,
+      "leftInset": 72.765625,
+      "rightInset": 72.765625,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    }
+  ],
+  "result": [
+    {
+      "profile": "normal",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 215.15625,
+      "leftInset": 73.421875,
+      "rightInset": 73.421875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    },
+    {
+      "profile": "narrow",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 200.625,
+      "leftInset": 69.6875,
+      "rightInset": 69.6875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    },
+    {
+      "profile": "short",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 215.15625,
+      "leftInset": 73.421875,
+      "rightInset": 73.421875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    },
+    {
+      "profile": "full",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 215.15625,
+      "leftInset": 73.421875,
+      "rightInset": 73.421875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    },
+    {
+      "profile": "short-new-best-badge-fixture",
+      "overflow": 0,
+      "horizontal": 0,
+      "lineWidth": 215.15625,
+      "leftInset": 73.421875,
+      "rightInset": 73.421875,
+      "belowHeading": true,
+      "painted": 15447,
+      "toys": [
+        {
+          "kind": "ball",
+          "painted": 17222
+        },
+        {
+          "kind": "goal",
+          "painted": 4870
+        }
+      ],
+      "floors": [
+        {
+          "kind": "ice",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        },
+        {
+          "kind": "sand",
+          "painted": 8464,
+          "inside": true,
+          "side": true
+        }
+      ]
+    }
+  ],
+  "tutorial": {
+    "goalProgression": "teleport fixture; not human completion",
+    "wallInput": "actual mouse/pointer events",
+    "stages": [
+      {
+        "step": 1,
+        "kind": "materials",
+        "seed": 77,
+        "wallMovedByPointer": false
+      },
+      {
+        "step": 2,
+        "kind": "racket",
+        "seed": 2654435846,
+        "wallMovedByPointer": true
+      },
+      {
+        "step": 3,
+        "kind": "sequence",
+        "seed": 1013904319,
+        "wallMovedByPointer": true
+      }
+    ],
+    "retry": {
+      "seed": 1013904319,
+      "index": 1
+    },
+    "finalScreen": "mode"
+  },
+  "errors": [],
+  "cache": {
+    "key": "corogalism-36d812126e1f35e3",
+    "assets": 134
+  },
+  "offline": {
+    "reload": true,
+    "tutorialThreeStages": true,
+    "practiceFiveStageLabel": true
+  }
+}
