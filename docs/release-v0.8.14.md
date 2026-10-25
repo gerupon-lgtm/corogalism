@@ -14,4 +14,12 @@
 
 - [修正前のずれ](verification/settings-scroll/heading-before/failure.json)
 - [ローカル確認](verification/v0.8.14/settings-local/results.json)
-- 公開確認はデプロイ後に追記する。
+- [公開ブラウザ確認](verification/v0.8.14/settings-public/results.json)
+
+## 公開確認
+
+アプリ`c183b9fedec8af7abe8a5fa3453f75c57cc05fec`、[Pages 40158523502](https://github.com/gerupon-lgtm/corogalism/actions/runs/40158523502)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+ローカル・公開Chromeの全5条件で、トップと設定の外枠の横位置・幅、タイトルの中心・上端・高さ・フォント、小物2点と壁ラインの位置・寸法が完全一致した。設定は両入口で縦横スクロール0、更新チェック前後のトップ8要素の配置も完全一致。補足の開閉、音量・角度の保存、音ON/OFF、ゲームへ戻る時の一時停止、134資材のオフライン再起動も成功。エラー0。
+
+公開137資材はすべてHTTP200・SHA-256一致。キャッシュは`24c7d893c6c4df85`。[配信本文確認](verification/v0.8.14/deploy-hashes.json)。[設定画面](verification/v0.8.14/settings-public/393x740.png)、[比較元のトップ](verification/v0.8.14/settings-public/home-latest.png)。
