@@ -6,4 +6,14 @@
 
 ローカルChromeで360／390／412px幅の見出しとスクロール0、3モードのカード・操作欄の幅、回転復帰、134資材のオフライン起動、練習の5面終了を確認した。5面の進行確認は位置移動用の検証操作によるもので、人間の5面完走ではない。ロジックの単体330件はv0.8.6で成功しており、今回ゲームロジックは変更していない。
 
-[ローカル結果](verification/v0.8.7/runtime-local/results.json)。現在は公開準備中。公開ブラウザと資材照合の結果は追記する。
+[ローカル結果](verification/v0.8.7/runtime-local/results.json)。
+
+## 公開確認
+
+アプリ`08b35e69207907da5ea4f8d62c9e56f25635420e`、[Pages 40147863058](https://github.com/gerupon-lgtm/corogalism/actions/runs/40147863058)の成功を確認。公開先は https://corogalism.sikumilab.com/ 。
+
+公開Chromeでも3幅の見出し・スクロール0、チュートリアル／チャレンジ／プラクティスのカード・操作幅、回転後の球・面・タイム保持、遅れて確定する横幅への描画同期、134資材のオフライン起動、練習5面後のモード選択への復帰が成功した。エラー0。[公開ブラウザ結果](verification/v0.8.7/runtime-public/results.json)。
+
+公開137資材すべてHTTP200・SHA-256一致、主要20資材はクエリなしURLでも本文・Content-Type一致。採用BGM5曲も含む。キャッシュは`51d2027ab6f0d287`。[全資材](verification/v0.8.7/deploy-hashes.json)、[主要形式と本文](verification/v0.8.7/deploy-headers.json)。
+
+Pixel 6a／iPhone実機のセンサー・音・長時間の遊び心地は未確認。既存・旧世代の記録は変更していない。
