@@ -1,0 +1,1462 @@
+{
+  "version": "0.8.17",
+  "base": "https://corogalism.sikumilab.com/",
+  "rows": [
+    {
+      "profile": "393x740",
+      "overflow": 0,
+      "horizontal": 0,
+      "screen": "settings",
+      "innerHeight": 740,
+      "wrapBottom": 740,
+      "panel": {
+        "top": 53.046875,
+        "bottom": 728,
+        "height": 674.953125
+      },
+      "closeBottom": 579.375,
+      "art": [
+        {
+          "kind": "candy",
+          "painted": 7394
+        },
+        {
+          "kind": "hourglass",
+          "painted": 3624
+        },
+        {
+          "kind": "cork",
+          "painted": 15447
+        }
+      ],
+      "portraitHeight": 44,
+      "titleFont": "26px",
+      "children": [
+        {
+          "id": "settings-heading menu-heading",
+          "top": 66.046875,
+          "bottom": 132.046875,
+          "height": 66,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "操作の設定"
+        },
+        {
+          "id": "settings-intro",
+          "top": 145.90625,
+          "bottom": 167.5,
+          "height": 21.59375,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "持ちやすい角度で あなたに合う操作に。"
+        },
+        {
+          "id": "field",
+          "top": 181.359375,
+          "bottom": 267.15625,
+          "height": 85.796875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "操作モード\n      \n        傾きで操作\n        押した位置で操作"
+        },
+        {
+          "id": "field",
+          "top": 281.015625,
+          "bottom": 359.609375,
+          "height": 78.59375,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "最大傾き角（この角度で全力）25°"
+        },
+        {
+          "id": "field sound-settings",
+          "top": 373.46875,
+          "bottom": 521.515625,
+          "height": 148.046875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "サウンド音 OFF\n      BGM60%\n      効果音（SE）80%\n      音量の設定は次回も引き継ぎます。"
+        },
+        {
+          "id": "row",
+          "top": 535.375,
+          "bottom": 579.375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準をとり直す\n      設定を終える"
+        },
+        {
+          "id": "portrait-lock",
+          "top": 593.234375,
+          "bottom": 637.234375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "10px 6px",
+          "text": "縦向きで全画面"
+        },
+        {
+          "id": "settings-device-notes",
+          "top": 651.09375,
+          "bottom": 684.09375,
+          "height": 33,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "全画面・オフラインの案内\n      固定できない場合は、端末の自動回転をOFF（縦向きロック）にしてください。傾き操作はそのまま使えます。\n      オフラインでも遊べます。ホーム画面への追加はブ"
+        },
+        {
+          "id": "calibration-note",
+          "top": 697.953125,
+          "bottom": 715,
+          "height": 17.046875,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準の角度は、このページで遊ぶ間は維持します。"
+        }
+      ],
+      "fromGame": {
+        "overflow": 0,
+        "paused": true,
+        "reason": "この端末では盤面のタッチ／クリックで操作します。"
+      },
+      "offlineReload": true
+    },
+    {
+      "profile": "390x700",
+      "overflow": 0,
+      "horizontal": 0,
+      "screen": "settings",
+      "innerHeight": 700,
+      "wrapBottom": 700,
+      "panel": {
+        "top": 53.046875,
+        "bottom": 688,
+        "height": 634.953125
+      },
+      "closeBottom": 554.375,
+      "art": [
+        {
+          "kind": "candy",
+          "painted": 7394
+        },
+        {
+          "kind": "hourglass",
+          "painted": 3624
+        },
+        {
+          "kind": "cork",
+          "painted": 15447
+        }
+      ],
+      "portraitHeight": 44,
+      "titleFont": "26px",
+      "children": [
+        {
+          "id": "settings-heading menu-heading",
+          "top": 66.046875,
+          "bottom": 132.046875,
+          "height": 66,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "操作の設定"
+        },
+        {
+          "id": "settings-intro",
+          "top": 140.90625,
+          "bottom": 162.5,
+          "height": 21.59375,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "持ちやすい角度で あなたに合う操作に。"
+        },
+        {
+          "id": "field",
+          "top": 171.359375,
+          "bottom": 257.15625,
+          "height": 85.796875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "操作モード\n      \n        傾きで操作\n        押した位置で操作"
+        },
+        {
+          "id": "field",
+          "top": 266.015625,
+          "bottom": 344.609375,
+          "height": 78.59375,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "最大傾き角（この角度で全力）25°"
+        },
+        {
+          "id": "field sound-settings",
+          "top": 353.46875,
+          "bottom": 501.515625,
+          "height": 148.046875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "サウンド音 OFF\n      BGM60%\n      効果音（SE）80%\n      音量の設定は次回も引き継ぎます。"
+        },
+        {
+          "id": "row",
+          "top": 510.375,
+          "bottom": 554.375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準をとり直す\n      設定を終える"
+        },
+        {
+          "id": "portrait-lock",
+          "top": 563.234375,
+          "bottom": 607.234375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "10px 6px",
+          "text": "縦向きで全画面"
+        },
+        {
+          "id": "settings-device-notes",
+          "top": 616.09375,
+          "bottom": 649.09375,
+          "height": 33,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "全画面・オフラインの案内\n      固定できない場合は、端末の自動回転をOFF（縦向きロック）にしてください。傾き操作はそのまま使えます。\n      オフラインでも遊べます。ホーム画面への追加はブ"
+        },
+        {
+          "id": "calibration-note",
+          "top": 657.953125,
+          "bottom": 675,
+          "height": 17.046875,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準の角度は、このページで遊ぶ間は維持します。"
+        }
+      ],
+      "fromGame": {
+        "overflow": 0,
+        "paused": true,
+        "reason": "この端末では盤面のタッチ／クリックで操作します。"
+      },
+      "offlineReload": true
+    },
+    {
+      "profile": "360x740",
+      "overflow": 0,
+      "horizontal": 0,
+      "screen": "settings",
+      "innerHeight": 740,
+      "wrapBottom": 740,
+      "panel": {
+        "top": 53.046875,
+        "bottom": 728,
+        "height": 674.953125
+      },
+      "closeBottom": 579.375,
+      "art": [
+        {
+          "kind": "candy",
+          "painted": 7394
+        },
+        {
+          "kind": "hourglass",
+          "painted": 3624
+        },
+        {
+          "kind": "cork",
+          "painted": 15447
+        }
+      ],
+      "portraitHeight": 44,
+      "titleFont": "26px",
+      "children": [
+        {
+          "id": "settings-heading menu-heading",
+          "top": 66.046875,
+          "bottom": 132.046875,
+          "height": 66,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "操作の設定"
+        },
+        {
+          "id": "settings-intro",
+          "top": 145.90625,
+          "bottom": 167.5,
+          "height": 21.59375,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "持ちやすい角度で あなたに合う操作に。"
+        },
+        {
+          "id": "field",
+          "top": 181.359375,
+          "bottom": 267.15625,
+          "height": 85.796875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "操作モード\n      \n        傾きで操作\n        押した位置で操作"
+        },
+        {
+          "id": "field",
+          "top": 281.015625,
+          "bottom": 359.609375,
+          "height": 78.59375,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "最大傾き角（この角度で全力）25°"
+        },
+        {
+          "id": "field sound-settings",
+          "top": 373.46875,
+          "bottom": 521.515625,
+          "height": 148.046875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "サウンド音 OFF\n      BGM60%\n      効果音（SE）80%\n      音量の設定は次回も引き継ぎます。"
+        },
+        {
+          "id": "row",
+          "top": 535.375,
+          "bottom": 579.375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準をとり直す\n      設定を終える"
+        },
+        {
+          "id": "portrait-lock",
+          "top": 593.234375,
+          "bottom": 637.234375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "10px 6px",
+          "text": "縦向きで全画面"
+        },
+        {
+          "id": "settings-device-notes",
+          "top": 651.09375,
+          "bottom": 684.09375,
+          "height": 33,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "全画面・オフラインの案内\n      固定できない場合は、端末の自動回転をOFF（縦向きロック）にしてください。傾き操作はそのまま使えます。\n      オフラインでも遊べます。ホーム画面への追加はブ"
+        },
+        {
+          "id": "calibration-note",
+          "top": 697.953125,
+          "bottom": 715,
+          "height": 17.046875,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準の角度は、このページで遊ぶ間は維持します。"
+        }
+      ],
+      "fromGame": {
+        "overflow": 0,
+        "paused": true,
+        "reason": "この端末では盤面のタッチ／クリックで操作します。"
+      },
+      "offlineReload": true
+    },
+    {
+      "profile": "390x780",
+      "overflow": 0,
+      "horizontal": 0,
+      "screen": "settings",
+      "innerHeight": 780,
+      "wrapBottom": 780,
+      "panel": {
+        "top": 53.046875,
+        "bottom": 768,
+        "height": 714.953125
+      },
+      "closeBottom": 606,
+      "art": [
+        {
+          "kind": "candy",
+          "painted": 7394
+        },
+        {
+          "kind": "hourglass",
+          "painted": 3624
+        },
+        {
+          "kind": "cork",
+          "painted": 15447
+        }
+      ],
+      "portraitHeight": 44,
+      "titleFont": "26px",
+      "children": [
+        {
+          "id": "settings-heading menu-heading",
+          "top": 68.046875,
+          "bottom": 138.046875,
+          "height": 70,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "操作の設定"
+        },
+        {
+          "id": "settings-intro",
+          "top": 156.03125,
+          "bottom": 177.625,
+          "height": 21.59375,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "持ちやすい角度で あなたに合う操作に。"
+        },
+        {
+          "id": "field",
+          "top": 195.609375,
+          "bottom": 281.40625,
+          "height": 85.796875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "操作モード\n      \n        傾きで操作\n        押した位置で操作"
+        },
+        {
+          "id": "field",
+          "top": 299.390625,
+          "bottom": 377.984375,
+          "height": 78.59375,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "最大傾き角（この角度で全力）25°"
+        },
+        {
+          "id": "field sound-settings",
+          "top": 395.96875,
+          "bottom": 544.015625,
+          "height": 148.046875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "サウンド音 OFF\n      BGM60%\n      効果音（SE）80%\n      音量の設定は次回も引き継ぎます。"
+        },
+        {
+          "id": "row",
+          "top": 562,
+          "bottom": 606,
+          "height": 44,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準をとり直す\n      設定を終える"
+        },
+        {
+          "id": "portrait-lock",
+          "top": 623.984375,
+          "bottom": 667.984375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "10px 6px",
+          "text": "縦向きで全画面"
+        },
+        {
+          "id": "settings-device-notes",
+          "top": 685.96875,
+          "bottom": 718.96875,
+          "height": 33,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "全画面・オフラインの案内\n      固定できない場合は、端末の自動回転をOFF（縦向きロック）にしてください。傾き操作はそのまま使えます。\n      オフラインでも遊べます。ホーム画面への追加はブ"
+        },
+        {
+          "id": "calibration-note",
+          "top": 736.953125,
+          "bottom": 754,
+          "height": 17.046875,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準の角度は、このページで遊ぶ間は維持します。"
+        }
+      ],
+      "fromGame": {
+        "overflow": 0,
+        "paused": true,
+        "reason": "この端末では盤面のタッチ／クリックで操作します。"
+      },
+      "offlineReload": true
+    },
+    {
+      "profile": "full",
+      "overflow": 0,
+      "horizontal": 0,
+      "screen": "settings",
+      "innerHeight": 844,
+      "wrapBottom": 844,
+      "panel": {
+        "top": 71.046875,
+        "bottom": 808,
+        "height": 736.953125
+      },
+      "closeBottom": 638.234375,
+      "art": [
+        {
+          "kind": "candy",
+          "painted": 7394
+        },
+        {
+          "kind": "hourglass",
+          "painted": 3624
+        },
+        {
+          "kind": "cork",
+          "painted": 15447
+        }
+      ],
+      "portraitHeight": 44,
+      "titleFont": "26px",
+      "children": [
+        {
+          "id": "settings-heading menu-heading",
+          "top": 86.578125,
+          "bottom": 157.875,
+          "height": 71.296875,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "操作の設定"
+        },
+        {
+          "id": "settings-intro",
+          "top": 178.34375,
+          "bottom": 199.9375,
+          "height": 21.59375,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "持ちやすい角度で あなたに合う操作に。"
+        },
+        {
+          "id": "field",
+          "top": 220.40625,
+          "bottom": 306.203125,
+          "height": 85.796875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "操作モード\n      \n        傾きで操作\n        押した位置で操作"
+        },
+        {
+          "id": "field",
+          "top": 326.671875,
+          "bottom": 405.265625,
+          "height": 78.59375,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "最大傾き角（この角度で全力）25°"
+        },
+        {
+          "id": "field sound-settings",
+          "top": 425.734375,
+          "bottom": 573.78125,
+          "height": 148.046875,
+          "margin": "0px",
+          "padding": "7px 8px",
+          "text": "サウンド音 OFF\n      BGM60%\n      効果音（SE）80%\n      音量の設定は次回も引き継ぎます。"
+        },
+        {
+          "id": "row",
+          "top": 594.234375,
+          "bottom": 638.234375,
+          "height": 44,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準をとり直す\n      設定を終える"
+        },
+        {
+          "id": "portrait-lock",
+          "top": 658.703125,
+          "bottom": 702.703125,
+          "height": 44,
+          "margin": "0px",
+          "padding": "10px 6px",
+          "text": "縦向きで全画面"
+        },
+        {
+          "id": "settings-device-notes",
+          "top": 723.171875,
+          "bottom": 756.171875,
+          "height": 33,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "全画面・オフラインの案内\n      固定できない場合は、端末の自動回転をOFF（縦向きロック）にしてください。傾き操作はそのまま使えます。\n      オフラインでも遊べます。ホーム画面への追加はブ"
+        },
+        {
+          "id": "calibration-note",
+          "top": 776.640625,
+          "bottom": 793.6875,
+          "height": 17.046875,
+          "margin": "0px",
+          "padding": "0px",
+          "text": "基準の角度は、このページで遊ぶ間は維持します。"
+        }
+      ],
+      "fromGame": {
+        "overflow": 0,
+        "paused": true,
+        "reason": "この端末では盤面のタッチ／クリックで操作します。"
+      },
+      "offlineReload": true
+    }
+  ],
+  "updateChecks": [
+    {
+      "profile": "393x740",
+      "before": {
+        "#screen-mode": {
+          "x": 14,
+          "y": 53.046875,
+          "width": 365,
+          "height": 674.953125
+        },
+        ".menu-heading": {
+          "x": 31,
+          "y": 66.046875,
+          "width": 331,
+          "height": 66
+        },
+        "#btn-tutorial": {
+          "x": 31,
+          "y": 144.828125,
+          "width": 331,
+          "height": 62
+        },
+        "#btn-practice": {
+          "x": 31,
+          "y": 216.828125,
+          "width": 331,
+          "height": 62
+        },
+        ".challenge": {
+          "x": 31,
+          "y": 291.609375,
+          "width": 331,
+          "height": 256.0625
+        },
+        ".records": {
+          "x": 31,
+          "y": 562.4375,
+          "width": 331,
+          "height": 45
+        },
+        ".tools": {
+          "x": 31,
+          "y": 620.21875,
+          "width": 331,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 31,
+          "y": 671,
+          "width": 331,
+          "height": 44
+        }
+      },
+      "after": {
+        "#screen-mode": {
+          "x": 14,
+          "y": 53.046875,
+          "width": 365,
+          "height": 674.953125
+        },
+        ".menu-heading": {
+          "x": 31,
+          "y": 66.046875,
+          "width": 331,
+          "height": 66
+        },
+        "#btn-tutorial": {
+          "x": 31,
+          "y": 144.828125,
+          "width": 331,
+          "height": 62
+        },
+        "#btn-practice": {
+          "x": 31,
+          "y": 216.828125,
+          "width": 331,
+          "height": 62
+        },
+        ".challenge": {
+          "x": 31,
+          "y": 291.609375,
+          "width": 331,
+          "height": 256.0625
+        },
+        ".records": {
+          "x": 31,
+          "y": 562.4375,
+          "width": 331,
+          "height": 45
+        },
+        ".tools": {
+          "x": 31,
+          "y": 620.21875,
+          "width": 331,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 31,
+          "y": 671,
+          "width": 331,
+          "height": 44
+        }
+      },
+      "message": "最新版です。"
+    },
+    {
+      "profile": "390x700",
+      "before": {
+        "#screen-mode": {
+          "x": 15,
+          "y": 53.046875,
+          "width": 360,
+          "height": 634.953125
+        },
+        ".menu-heading": {
+          "x": 32,
+          "y": 66.046875,
+          "width": 326,
+          "height": 66
+        },
+        "#btn-tutorial": {
+          "x": 32,
+          "y": 138.03125,
+          "width": 326,
+          "height": 62
+        },
+        "#btn-practice": {
+          "x": 32,
+          "y": 210.03125,
+          "width": 326,
+          "height": 62
+        },
+        ".challenge": {
+          "x": 32,
+          "y": 278,
+          "width": 326,
+          "height": 250.0625
+        },
+        ".records": {
+          "x": 32,
+          "y": 536.046875,
+          "width": 326,
+          "height": 45
+        },
+        ".tools": {
+          "x": 32,
+          "y": 587.015625,
+          "width": 326,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 32,
+          "y": 631,
+          "width": 326,
+          "height": 44
+        }
+      },
+      "after": {
+        "#screen-mode": {
+          "x": 15,
+          "y": 53.046875,
+          "width": 360,
+          "height": 634.953125
+        },
+        ".menu-heading": {
+          "x": 32,
+          "y": 66.046875,
+          "width": 326,
+          "height": 66
+        },
+        "#btn-tutorial": {
+          "x": 32,
+          "y": 138.03125,
+          "width": 326,
+          "height": 62
+        },
+        "#btn-practice": {
+          "x": 32,
+          "y": 210.03125,
+          "width": 326,
+          "height": 62
+        },
+        ".challenge": {
+          "x": 32,
+          "y": 278,
+          "width": 326,
+          "height": 250.0625
+        },
+        ".records": {
+          "x": 32,
+          "y": 536.046875,
+          "width": 326,
+          "height": 45
+        },
+        ".tools": {
+          "x": 32,
+          "y": 587.015625,
+          "width": 326,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 32,
+          "y": 631,
+          "width": 326,
+          "height": 44
+        }
+      },
+      "message": "最新版です。"
+    },
+    {
+      "profile": "360x740",
+      "before": {
+        "#screen-mode": {
+          "x": 10,
+          "y": 53.046875,
+          "width": 340,
+          "height": 674.953125
+        },
+        ".menu-heading": {
+          "x": 27,
+          "y": 66.046875,
+          "width": 306,
+          "height": 66
+        },
+        "#btn-tutorial": {
+          "x": 27,
+          "y": 144.828125,
+          "width": 306,
+          "height": 62
+        },
+        "#btn-practice": {
+          "x": 27,
+          "y": 216.828125,
+          "width": 306,
+          "height": 62
+        },
+        ".challenge": {
+          "x": 27,
+          "y": 291.609375,
+          "width": 306,
+          "height": 256.0625
+        },
+        ".records": {
+          "x": 27,
+          "y": 562.4375,
+          "width": 306,
+          "height": 45
+        },
+        ".tools": {
+          "x": 27,
+          "y": 620.21875,
+          "width": 306,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 27,
+          "y": 671,
+          "width": 306,
+          "height": 44
+        }
+      },
+      "after": {
+        "#screen-mode": {
+          "x": 10,
+          "y": 53.046875,
+          "width": 340,
+          "height": 674.953125
+        },
+        ".menu-heading": {
+          "x": 27,
+          "y": 66.046875,
+          "width": 306,
+          "height": 66
+        },
+        "#btn-tutorial": {
+          "x": 27,
+          "y": 144.828125,
+          "width": 306,
+          "height": 62
+        },
+        "#btn-practice": {
+          "x": 27,
+          "y": 216.828125,
+          "width": 306,
+          "height": 62
+        },
+        ".challenge": {
+          "x": 27,
+          "y": 291.609375,
+          "width": 306,
+          "height": 256.0625
+        },
+        ".records": {
+          "x": 27,
+          "y": 562.4375,
+          "width": 306,
+          "height": 45
+        },
+        ".tools": {
+          "x": 27,
+          "y": 620.21875,
+          "width": 306,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 27,
+          "y": 671,
+          "width": 306,
+          "height": 44
+        }
+      },
+      "message": "最新版です。"
+    },
+    {
+      "profile": "390x780",
+      "before": {
+        "#screen-mode": {
+          "x": 14,
+          "y": 53.046875,
+          "width": 362,
+          "height": 714.953125
+        },
+        ".menu-heading": {
+          "x": 31,
+          "y": 68.046875,
+          "width": 328,
+          "height": 70
+        },
+        "#btn-tutorial": {
+          "x": 31,
+          "y": 153.625,
+          "width": 328,
+          "height": 66
+        },
+        "#btn-practice": {
+          "x": 31,
+          "y": 231.625,
+          "width": 328,
+          "height": 66
+        },
+        ".challenge": {
+          "x": 31,
+          "y": 313.203125,
+          "width": 328,
+          "height": 265.0625
+        },
+        ".records": {
+          "x": 31,
+          "y": 595.84375,
+          "width": 328,
+          "height": 45
+        },
+        ".tools": {
+          "x": 31,
+          "y": 656.421875,
+          "width": 328,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 31,
+          "y": 710,
+          "width": 328,
+          "height": 44
+        }
+      },
+      "after": {
+        "#screen-mode": {
+          "x": 14,
+          "y": 53.046875,
+          "width": 362,
+          "height": 714.953125
+        },
+        ".menu-heading": {
+          "x": 31,
+          "y": 68.046875,
+          "width": 328,
+          "height": 70
+        },
+        "#btn-tutorial": {
+          "x": 31,
+          "y": 153.625,
+          "width": 328,
+          "height": 66
+        },
+        "#btn-practice": {
+          "x": 31,
+          "y": 231.625,
+          "width": 328,
+          "height": 66
+        },
+        ".challenge": {
+          "x": 31,
+          "y": 313.203125,
+          "width": 328,
+          "height": 265.0625
+        },
+        ".records": {
+          "x": 31,
+          "y": 595.84375,
+          "width": 328,
+          "height": 45
+        },
+        ".tools": {
+          "x": 31,
+          "y": 656.421875,
+          "width": 328,
+          "height": 44
+        },
+        ".bottom": {
+          "x": 31,
+          "y": 710,
+          "width": 328,
+          "height": 44
+        }
+      },
+      "message": "最新版です。"
+    },
+    {
+      "profile": "full",
+      "before": {
+        "#screen-mode": {
+          "x": 14,
+          "y": 71.046875,
+          "width": 362,
+          "height": 736.953125
+        },
+        ".menu-heading": {
+          "x": 31,
+          "y": 86.578125,
+          "width": 328,
+          "height": 71.296875
+        },
+        "#btn-tutorial": {
+          "x": 31,
+          "y": 176.4375,
+          "width": 328,
+          "height": 67.078125
+        },
+        "#btn-practice": {
+          "x": 31,
+          "y": 255.9375,
+          "width": 328,
+          "height": 67.078125
+        },
+        ".challenge": {
+          "x": 31,
+          "y": 341.59375,
+          "width": 328,
+          "height": 266.96875
+        },
+        ".records": {
+          "x": 31,
+          "y": 629.125,
+          "width": 328,
+          "height": 45
+        },
+        ".tools": {
+          "x": 31,
+          "y": 692.703125,
+          "width": 328,
+          "height": 44.421875
+        },
+        ".bottom": {
+          "x": 31,
+          "y": 749.6875,
+          "width": 328,
+          "height": 44
+        }
+      },
+      "after": {
+        "#screen-mode": {
+          "x": 14,
+          "y": 71.046875,
+          "width": 362,
+          "height": 736.953125
+        },
+        ".menu-heading": {
+          "x": 31,
+          "y": 86.578125,
+          "width": 328,
+          "height": 71.296875
+        },
+        "#btn-tutorial": {
+          "x": 31,
+          "y": 176.4375,
+          "width": 328,
+          "height": 67.078125
+        },
+        "#btn-practice": {
+          "x": 31,
+          "y": 255.9375,
+          "width": 328,
+          "height": 67.078125
+        },
+        ".challenge": {
+          "x": 31,
+          "y": 341.59375,
+          "width": 328,
+          "height": 266.96875
+        },
+        ".records": {
+          "x": 31,
+          "y": 629.125,
+          "width": 328,
+          "height": 45
+        },
+        ".tools": {
+          "x": 31,
+          "y": 692.703125,
+          "width": 328,
+          "height": 44.421875
+        },
+        ".bottom": {
+          "x": 31,
+          "y": 749.6875,
+          "width": 328,
+          "height": 44
+        }
+      },
+      "message": "最新版です。"
+    }
+  ],
+  "headingChecks": [
+    {
+      "profile": "393x740",
+      "home": {
+        "panelX": 14,
+        "panelWidth": 365,
+        "title": {
+          "centerX": 196.5,
+          "top": 66.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 41,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 310,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 41,
+          "y": 110.046875,
+          "width": 311,
+          "height": 22
+        }
+      },
+      "settings": {
+        "panelX": 14,
+        "panelWidth": 365,
+        "title": {
+          "centerX": 196.5,
+          "top": 66.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 41,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 310,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 41,
+          "y": 110.046875,
+          "width": 311,
+          "height": 22
+        }
+      }
+    },
+    {
+      "profile": "390x700",
+      "home": {
+        "panelX": 15,
+        "panelWidth": 360,
+        "title": {
+          "centerX": 195,
+          "top": 66.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 42,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 306,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 42,
+          "y": 110.046875,
+          "width": 306,
+          "height": 22
+        }
+      },
+      "settings": {
+        "panelX": 15,
+        "panelWidth": 360,
+        "title": {
+          "centerX": 195,
+          "top": 66.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 42,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 306,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 42,
+          "y": 110.046875,
+          "width": 306,
+          "height": 22
+        }
+      }
+    },
+    {
+      "profile": "360x740",
+      "home": {
+        "panelX": 10,
+        "panelWidth": 340,
+        "title": {
+          "centerX": 180,
+          "top": 66.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 37,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 281,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 37,
+          "y": 110.046875,
+          "width": 286,
+          "height": 22
+        }
+      },
+      "settings": {
+        "panelX": 10,
+        "panelWidth": 340,
+        "title": {
+          "centerX": 180,
+          "top": 66.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 37,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 281,
+            "y": 68.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 37,
+          "y": 110.046875,
+          "width": 286,
+          "height": 22
+        }
+      }
+    },
+    {
+      "profile": "390x780",
+      "home": {
+        "panelX": 14,
+        "panelWidth": 362,
+        "title": {
+          "centerX": 195,
+          "top": 70.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 41,
+            "y": 72.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 307,
+            "y": 72.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 41,
+          "y": 116.046875,
+          "width": 308,
+          "height": 22
+        }
+      },
+      "settings": {
+        "panelX": 14,
+        "panelWidth": 362,
+        "title": {
+          "centerX": 195,
+          "top": 70.84375,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 41,
+            "y": 72.046875,
+            "width": 42,
+            "height": 34
+          },
+          {
+            "x": 307,
+            "y": 72.046875,
+            "width": 42,
+            "height": 34
+          }
+        ],
+        "rail": {
+          "x": 41,
+          "y": 116.046875,
+          "width": 308,
+          "height": 22
+        }
+      }
+    },
+    {
+      "profile": "full",
+      "home": {
+        "panelX": 14,
+        "panelWidth": 362,
+        "title": {
+          "centerX": 195,
+          "top": 90.03125,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 41,
+            "y": 90.953125,
+            "width": 42.75,
+            "height": 34.53125
+          },
+          {
+            "x": 306.25,
+            "y": 90.953125,
+            "width": 42.75,
+            "height": 34.53125
+          }
+        ],
+        "rail": {
+          "x": 41,
+          "y": 135.875,
+          "width": 308,
+          "height": 22
+        }
+      },
+      "settings": {
+        "panelX": 14,
+        "panelWidth": 362,
+        "title": {
+          "centerX": 195,
+          "top": 90.03125,
+          "height": 36.390625,
+          "fontSize": "26px",
+          "fontWeight": "700",
+          "lineHeight": "36.4px"
+        },
+        "art": [
+          {
+            "x": 41,
+            "y": 90.953125,
+            "width": 42.75,
+            "height": 34.53125
+          },
+          {
+            "x": 306.25,
+            "y": 90.953125,
+            "width": 42.75,
+            "height": 34.53125
+          }
+        ],
+        "rail": {
+          "x": 41,
+          "y": 135.875,
+          "width": 308,
+          "height": 22
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "simulatedSafeArea": true
+}

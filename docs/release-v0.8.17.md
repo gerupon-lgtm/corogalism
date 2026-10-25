@@ -16,4 +16,14 @@
 
 3桁の107面／1600秒／無傷38面も4条件で表示確認し、縦横スクロール0。記録保存とげんき表示・葉っぱの取得に関する既存23テストが成功（324.8547ms）。ゲームの物理や保存ロジックの変更はなく、全体テストは今回は再実行していない。
 
-証拠：[result-local/results.json](verification/v0.8.17/result-local/results.json)。実機は未確認。公開後の確認結果は追記する。
+証拠：[result-local/results.json](verification/v0.8.17/result-local/results.json)、[関連23テスト](verification/v0.8.17/unit-summary.json)。実機は未確認。
+
+## 公開確認
+
+アプリ`c173e13529280473a7c9362dabf0d9682f03f325`、[Pages 40217264478](https://github.com/gerupon-lgtm/corogalism/actions/runs/40217264478)成功。公開先は https://corogalism.sikumilab.com/ 。
+
+公開Chromeでも4画面条件のバッジ有無で配置・寸法が一致、太字の見出しと「自己ベスト！」、無傷クリアの合計の説明、3桁107面表示、縦横スクロール0・画面例外0を確認。結果の数値は表示検証値であり、人間の完走記録ではない。[公開結果](verification/v0.8.17/result-public/results.json)。
+
+別手順の公開5条件で、設定両入口・操作角度と音量の保存・トップと見出し一致、実更新チェック前後のトップ配置保持、134資材のオフライン再起動も成功。[設定・更新・オフライン](verification/v0.8.17/settings-public/results.json)。
+
+公開137資材すべてHTTP200・SHA-256一致。キャッシュは`b6fc5e9dd8301f75`。[配信本文確認](verification/v0.8.17/deploy-hashes.json)。実機の表示感は未確認。

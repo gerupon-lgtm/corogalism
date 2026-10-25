@@ -1,0 +1,9 @@
+{
+  "version": "0.8.17",
+  "command": "node --test test/storage.test.js test/hp-display.test.js test/leaf-full.test.js",
+  "tests": 23,
+  "pass": 23,
+  "fail": 0,
+  "durationMs": 324.8547,
+  "scope": "existing record storage, damage display and leaf pickup tests; full suite not rerun for presentation-only change"
+}
