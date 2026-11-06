@@ -1,0 +1,8 @@
+{
+  "version": "0.8.18",
+  "command": "node --test --test-concurrency=1",
+  "tests": 346,
+  "pass": 346,
+  "fail": 0,
+  "durationMs": 176725.7693
+}

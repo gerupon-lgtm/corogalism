@@ -16,6 +16,7 @@ export function createClearScreen(root) {
       const tutorial = v.gameMode === 'tutorial';
       const challenge = v.gameMode === 'challenge';
       const floorPractice=v.gameMode==='floor-practice';
+      el.classList.toggle('tutorial-complete',tutorial);
       el.querySelector('#clear-heading').textContent = 'クリア！';
       el.querySelector('#clear-best-field').hidden = challenge||floorPractice;
       el.querySelector('#clear-hp-field').hidden = !challenge;
@@ -33,9 +34,9 @@ export function createClearScreen(root) {
       retryBtn.classList.add('text-button');
       retryBtn.textContent = '同じ迷路をもう一度';
       if (tutorial) {
-        el.querySelector('#clear-heading').textContent = 'できた！';
-        el.querySelector('#clear-note').textContent = v.tutorialLesson?.clearNote??'つぎは、傾けて壁を動かしてみよう。';
-        nextBtn.textContent = v.tutorialLesson ? (v.tutorialHasNext?v.tutorialLesson.nextLabel:'モード選択へ') : '壁を動かしてみる';
+        el.querySelector('#clear-heading').textContent = v.tutorialLesson?.puzzleKind==='racket'?'打ち返す、できた！':v.tutorialLesson?'道をひらく、できた！':'ころがす、できた！';
+        el.querySelector('#clear-note').textContent = v.tutorialLesson?(v.tutorialHasNext?'当てる位置で、返る向きが変わる。次は、傾けて道をつくってみよう。':'3つのあそびを体験！ 本編では氷や力場、動く壁が混ざる迷路が待っています。'): 'すべる・はずむ・引かれる。次は、壁も動かしてみよう。';
+        nextBtn.textContent = v.tutorialLesson ? (v.tutorialHasNext?'道をひらいてみる':'本編を選ぶ') : '打ち返してみる';
         retryBtn.textContent = 'もう一度あそぶ';
         el.querySelector('#clear-best-field').hidden=true;
       }

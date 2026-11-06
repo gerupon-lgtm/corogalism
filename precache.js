@@ -1,4 +1,4 @@
-self.PRECACHE_VERSION = 'b6fc5e9dd8301f75';
+self.PRECACHE_VERSION = '7992aa5e4ff1992d';
 self.PRECACHE_FILES = [
   "assets/audio/bgm-force.wav",
   "assets/audio/bgm-puzzle.wav",
@@ -57,6 +57,7 @@ self.PRECACHE_FILES = [
   "src/game/run.js",
   "src/game/stagePlay.js",
   "src/game/stageVariety.js",
+  "src/game/tutorialCoach.js",
   "src/game/tutorialLessons.js",
   "src/input/escapeInput.js",
   "src/input/pointerSource.js",
@@ -116,6 +117,7 @@ self.PRECACHE_FILES = [
   "src/ui/settingsScreen.js",
   "src/ui/titleScreen.js",
   "src/ui/tutorial.js",
+  "src/ui/tutorialDemo.js",
   "src/world/ballMaterials.js",
   "src/world/branchFloors.js",
   "src/world/characters.js",
@@ -133,5 +135,6 @@ self.PRECACHE_FILES = [
   "src/world/stageFeatures.js",
   "src/world/themes.js",
   "src/world/tutorialStage.js",
-  "style.css"
+  "style.css",
+  "tutorial.css"
 ];

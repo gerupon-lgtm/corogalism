@@ -28,7 +28,7 @@ export function createPlayLayout(root) {
     count.hidden=!visible||mode!=='practice';
     if(card.hidden)return;
     card.dataset.kind=mode;
-    title.textContent=mode==='practice'?'プラクティス':'チュートリアル';
+    title.textContent=mode==='practice'?'プラクティス':`チュートリアル ${value.stageIndex??1} / 3`;
     description.textContent=mode==='practice'?'時間制限なしで、くり返し練習。':'げんきが0になっても続けられます。';
     const source=root.querySelector(mode==='practice'?'.hero-ball':'[data-toy="candy"]');
     icon.src=source.toDataURL();

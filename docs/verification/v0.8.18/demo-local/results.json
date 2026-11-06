@@ -1,0 +1,1319 @@
+{
+  "version": "0.8.18",
+  "fixture": "detached canvas and DOM-only contact sheet; not the app layout",
+  "base": "http://127.0.0.1:8795/",
+  "checkedAt": "2026-11-06T13:17:29.135Z",
+  "checks": 103,
+  "failures": [],
+  "errors": [],
+  "textureReady": true,
+  "rows": [
+    {
+      "kind": "roll",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "7ccf0f3cd0566bc3c3c671bb569ce7212e4aad3b8cc46912f8bbbc09a9593fa2",
+          "sceneHash": "9a84b012acaf3f277995b61ece0866dde6c0a4436406d083e71de83850d9ea10",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "29253b1a93e71b3562cab4e6a43ad611befc6c7336bb99d4ef36accfbaaa44c4",
+          "sceneHash": "50afd42893ace35292b970c3f32f036d6487e488e77e6ef78973c297b785ad67",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "3c08a715b482e92ca3bd36b7337687c368b8c3479f057c49dc1ae2f68b9d8c35",
+          "sceneHash": "90709056f36e950c6f30d05c331d92c789954651b0f674b03e134547b416056d",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "3c08a715b482e92ca3bd36b7337687c368b8c3479f057c49dc1ae2f68b9d8c35",
+          "sceneHash": "90709056f36e950c6f30d05c331d92c789954651b0f674b03e134547b416056d",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "3c08a715b482e92ca3bd36b7337687c368b8c3479f057c49dc1ae2f68b9d8c35",
+        "sceneHash": "90709056f36e950c6f30d05c331d92c789954651b0f674b03e134547b416056d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "3c08a715b482e92ca3bd36b7337687c368b8c3479f057c49dc1ae2f68b9d8c35",
+        "sceneHash": "90709056f36e950c6f30d05c331d92c789954651b0f674b03e134547b416056d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "3c08a715b482e92ca3bd36b7337687c368b8c3479f057c49dc1ae2f68b9d8c35",
+        "sceneHash": "90709056f36e950c6f30d05c331d92c789954651b0f674b03e134547b416056d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "b2bcb6ae9bbb39175e668017170314f738d38e3fb59719e22d2320e2d6953bc5",
+        "sceneHash": "efddfff3fe05ebe99c319f7d03f28a275afaa60a24aac11b7d88e05e99db91dd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "b2bcb6ae9bbb39175e668017170314f738d38e3fb59719e22d2320e2d6953bc5",
+        "sceneHash": "efddfff3fe05ebe99c319f7d03f28a275afaa60a24aac11b7d88e05e99db91dd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "default",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "cb84b593e26c77355d899bad2aa59c9c6407c3f6d03023fb761971411e6b6b73",
+          "sceneHash": "d4868c5d3b6bc3b139b5ca92d49880b4bf6a7178932049e7ffb484c83cb3a677",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "405480ae8f8166434bcbd44afc163a45e9bec8a88fd915c6652e725c6f76161b",
+          "sceneHash": "34f42dd95f2cb996c02c152963b288590d2a1592affac5719aca934263da7514",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "f797f73a20a92a854753e4c650bec8218e930c7992c66c162249713d755d6483",
+          "sceneHash": "1f173f4c06e32e2ec73e10eeb510fd7588be64545ca06834027b4ef2f7377fb0",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "f797f73a20a92a854753e4c650bec8218e930c7992c66c162249713d755d6483",
+          "sceneHash": "1f173f4c06e32e2ec73e10eeb510fd7588be64545ca06834027b4ef2f7377fb0",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "f797f73a20a92a854753e4c650bec8218e930c7992c66c162249713d755d6483",
+        "sceneHash": "1f173f4c06e32e2ec73e10eeb510fd7588be64545ca06834027b4ef2f7377fb0",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "f797f73a20a92a854753e4c650bec8218e930c7992c66c162249713d755d6483",
+        "sceneHash": "1f173f4c06e32e2ec73e10eeb510fd7588be64545ca06834027b4ef2f7377fb0",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "f797f73a20a92a854753e4c650bec8218e930c7992c66c162249713d755d6483",
+        "sceneHash": "1f173f4c06e32e2ec73e10eeb510fd7588be64545ca06834027b4ef2f7377fb0",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "94200bb808874b68cf00663fec6d551314d4fc0c0c8932e76530724d462c5b8e",
+        "sceneHash": "5066ec1d863a0305f409a12d857c6e22fe190d1ce15e8d74c39a26a9bc3ed571",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "94200bb808874b68cf00663fec6d551314d4fc0c0c8932e76530724d462c5b8e",
+        "sceneHash": "5066ec1d863a0305f409a12d857c6e22fe190d1ce15e8d74c39a26a9bc3ed571",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "rubber",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "bb613cf4e36b8e5c0ab1d761034e34f12e67fef75e82320fb5b994a8670dbb37",
+          "sceneHash": "14f77797ebdebfef5c45c485f9f03e2a15c2f6b4a329c48eb42b5393e231b48e",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "842e5be92419e420add1bd896340c02e10aabcee361bfe621dcf7d32d59a4c67",
+          "sceneHash": "af4d069aa8779cd47bf1f8536a3a7f7f5b20468a6679e3d63219b5c2cea533b4",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "a6cf9b00264b5fd00e4c9ee513bb1dc662fa33fea114114765149561da9f7560",
+          "sceneHash": "4c040e5787d786963e822d8c8d8b5fcb7d641bc0c8f4d46816064838407aa2d0",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "a6cf9b00264b5fd00e4c9ee513bb1dc662fa33fea114114765149561da9f7560",
+          "sceneHash": "4c040e5787d786963e822d8c8d8b5fcb7d641bc0c8f4d46816064838407aa2d0",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "a6cf9b00264b5fd00e4c9ee513bb1dc662fa33fea114114765149561da9f7560",
+        "sceneHash": "4c040e5787d786963e822d8c8d8b5fcb7d641bc0c8f4d46816064838407aa2d0",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "a6cf9b00264b5fd00e4c9ee513bb1dc662fa33fea114114765149561da9f7560",
+        "sceneHash": "4c040e5787d786963e822d8c8d8b5fcb7d641bc0c8f4d46816064838407aa2d0",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "a6cf9b00264b5fd00e4c9ee513bb1dc662fa33fea114114765149561da9f7560",
+        "sceneHash": "4c040e5787d786963e822d8c8d8b5fcb7d641bc0c8f4d46816064838407aa2d0",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "f154e50c840e2da51d52bc52641b23faf706644b82301ba3b8ba5c319d13acc2",
+        "sceneHash": "2af2dd5f73a3f85bd473f7876f401ea120453bf21a5a610e79fb38b326228298",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "f154e50c840e2da51d52bc52641b23faf706644b82301ba3b8ba5c319d13acc2",
+        "sceneHash": "2af2dd5f73a3f85bd473f7876f401ea120453bf21a5a610e79fb38b326228298",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "cork",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "d42aae15d68bf360f49bb26ff70f5665049ae090155908f330514daf19007ab1",
+          "sceneHash": "7e1cb3c1cd9d4e2f23f087a28c41d809da1596e984d86c0409bc9c9f0aa9250b",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "662b08285b18892818c906b300c25e0dd1a4e437942e23d88b9bddbc3dd9ee42",
+          "sceneHash": "deb114847c6cba2e9cf778d57b70280bfd99788b4638cbcc630468cf9ee82b74",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "92b5970e8b88e3d82f438762c6d17eb282013ee64212efe5cb74a6b3250f235b",
+          "sceneHash": "0ac2ace5b527d4696256cdb15b970dd06f21653aa2cf2837856cb8f8369b5793",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "92b5970e8b88e3d82f438762c6d17eb282013ee64212efe5cb74a6b3250f235b",
+          "sceneHash": "0ac2ace5b527d4696256cdb15b970dd06f21653aa2cf2837856cb8f8369b5793",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "92b5970e8b88e3d82f438762c6d17eb282013ee64212efe5cb74a6b3250f235b",
+        "sceneHash": "0ac2ace5b527d4696256cdb15b970dd06f21653aa2cf2837856cb8f8369b5793",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "92b5970e8b88e3d82f438762c6d17eb282013ee64212efe5cb74a6b3250f235b",
+        "sceneHash": "0ac2ace5b527d4696256cdb15b970dd06f21653aa2cf2837856cb8f8369b5793",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "92b5970e8b88e3d82f438762c6d17eb282013ee64212efe5cb74a6b3250f235b",
+        "sceneHash": "0ac2ace5b527d4696256cdb15b970dd06f21653aa2cf2837856cb8f8369b5793",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "c3ce0d40b2fb377bc903ec7050a1cc21ae06de9a814078884a8649dc9b1894d9",
+        "sceneHash": "73d68279b4884bd8da31f4110a4fef08af4056eeba3d1ec616a741358823793d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "c3ce0d40b2fb377bc903ec7050a1cc21ae06de9a814078884a8649dc9b1894d9",
+        "sceneHash": "73d68279b4884bd8da31f4110a4fef08af4056eeba3d1ec616a741358823793d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "stone",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "314f06c810bbb828d909dc970c8d1e57cbff2654138a60fcc49f71b48b65afb3",
+          "sceneHash": "a7a51b9832437a8d516c17bc7788b72d4efa3d354152c40210fc5f302e823992",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "fb1ff34db710479c97e38274f15ee3920500f8e3bbe712cfadcd1a2253111753",
+          "sceneHash": "f2731f8242fbafcd8d38a5c7b1bd3f02fb374150bd92ee8f696659cf9371b6d6",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "e1f719725e4ca14aee8b8d16fbe9bb6905d1b1808accd11fc414598074107e1d",
+          "sceneHash": "e9fdd09ca7759b00580441e5dbf2f7d845f335c349f68728bbb8a21091929535",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "e1f719725e4ca14aee8b8d16fbe9bb6905d1b1808accd11fc414598074107e1d",
+          "sceneHash": "e9fdd09ca7759b00580441e5dbf2f7d845f335c349f68728bbb8a21091929535",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "e1f719725e4ca14aee8b8d16fbe9bb6905d1b1808accd11fc414598074107e1d",
+        "sceneHash": "e9fdd09ca7759b00580441e5dbf2f7d845f335c349f68728bbb8a21091929535",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "e1f719725e4ca14aee8b8d16fbe9bb6905d1b1808accd11fc414598074107e1d",
+        "sceneHash": "e9fdd09ca7759b00580441e5dbf2f7d845f335c349f68728bbb8a21091929535",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "e1f719725e4ca14aee8b8d16fbe9bb6905d1b1808accd11fc414598074107e1d",
+        "sceneHash": "e9fdd09ca7759b00580441e5dbf2f7d845f335c349f68728bbb8a21091929535",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "c63dff34cbc75dc6b6229ebe1bd08e9e1962a50fb1303814675f69e3536a337d",
+        "sceneHash": "a1b06087ee1190d99d4c4502f4028b1877bd346436f81759a8eb8de0378129fb",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "c63dff34cbc75dc6b6229ebe1bd08e9e1962a50fb1303814675f69e3536a337d",
+        "sceneHash": "a1b06087ee1190d99d4c4502f4028b1877bd346436f81759a8eb8de0378129fb",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "spike",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "0e90c8d1432126fa6fe28622da4b74a81f0ad65d14be4c459956f7310e2e4ff3",
+          "sceneHash": "009235496acf7e75279925cd8d32f922e226cab342670e0ddfc289024243eab9",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "e3024c72f78292ab5e1a434dba679ac9584bf7a1a4bc88c688a2a55ba854e750",
+          "sceneHash": "847785195a74a2336292f2f2f12bfb6ac5be8ede5ef1363692e0ceefa6e76458",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "c14ff19318261d83b26633371844c2fa48817d327e82396449b67365fce11279",
+          "sceneHash": "a0133ea2834063e41b351689a9d23939070f0f400316c8e314c9d1c07cb6fcdd",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "c14ff19318261d83b26633371844c2fa48817d327e82396449b67365fce11279",
+          "sceneHash": "a0133ea2834063e41b351689a9d23939070f0f400316c8e314c9d1c07cb6fcdd",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "c14ff19318261d83b26633371844c2fa48817d327e82396449b67365fce11279",
+        "sceneHash": "a0133ea2834063e41b351689a9d23939070f0f400316c8e314c9d1c07cb6fcdd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "c14ff19318261d83b26633371844c2fa48817d327e82396449b67365fce11279",
+        "sceneHash": "a0133ea2834063e41b351689a9d23939070f0f400316c8e314c9d1c07cb6fcdd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "c14ff19318261d83b26633371844c2fa48817d327e82396449b67365fce11279",
+        "sceneHash": "a0133ea2834063e41b351689a9d23939070f0f400316c8e314c9d1c07cb6fcdd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "feca7c5cdc3e250474a515b8f33b0f47191c596c1287be368aed5c68714fe863",
+        "sceneHash": "4df2ed18a91bb3ae035a29911263e61086bff57993f282e0a52b0cf15968bdb3",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "feca7c5cdc3e250474a515b8f33b0f47191c596c1287be368aed5c68714fe863",
+        "sceneHash": "4df2ed18a91bb3ae035a29911263e61086bff57993f282e0a52b0cf15968bdb3",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "moss",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "2438caaf3ce7ff945e0e8659b730ca1e53f3dcaaf92546256358bff38637624e",
+          "sceneHash": "e355807d24cec643960fb4dbc14b3bcdea0ea75444b5599e64abb8ba6d311491",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "61bad0316e376ce910a2060beab29aac2784f66b7e1d8fdb4eaa73ff0b8e0fd2",
+          "sceneHash": "9f7988fd92c8bbdd044ac59090cd38d6829eabf346ad028f97ebb797d3c29847",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "8a2e5cd03fc9847fd2669b3e2cbbda2899cd1822e2c99759568afdde12afe4e0",
+          "sceneHash": "be48673e77475810bdc037ebe8d117c1ab6cb84e411bda30b8998a341cc24862",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "8a2e5cd03fc9847fd2669b3e2cbbda2899cd1822e2c99759568afdde12afe4e0",
+          "sceneHash": "be48673e77475810bdc037ebe8d117c1ab6cb84e411bda30b8998a341cc24862",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "8a2e5cd03fc9847fd2669b3e2cbbda2899cd1822e2c99759568afdde12afe4e0",
+        "sceneHash": "be48673e77475810bdc037ebe8d117c1ab6cb84e411bda30b8998a341cc24862",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "8a2e5cd03fc9847fd2669b3e2cbbda2899cd1822e2c99759568afdde12afe4e0",
+        "sceneHash": "be48673e77475810bdc037ebe8d117c1ab6cb84e411bda30b8998a341cc24862",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "8a2e5cd03fc9847fd2669b3e2cbbda2899cd1822e2c99759568afdde12afe4e0",
+        "sceneHash": "be48673e77475810bdc037ebe8d117c1ab6cb84e411bda30b8998a341cc24862",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "5303b13c5e38f58480a15319073324e681b01aaabdaa56895e0e566df61a358e",
+        "sceneHash": "34c1dfdafa3885c37d12b98d784b26e792738081691d64d9b7c180565aa9677e",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "5303b13c5e38f58480a15319073324e681b01aaabdaa56895e0e566df61a358e",
+        "sceneHash": "34c1dfdafa3885c37d12b98d784b26e792738081691d64d9b7c180565aa9677e",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "cotton",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "32c23ab4affd30eb958b35284920102bcf81a5f2fa943af6482eb9f87b925fdd",
+          "sceneHash": "2cd8440b748172594f1d1aec06c728204859ba81760d09228203e870679bcd74",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "b0343ddb941e6285f6530309d2d33f1b13a7305d7a48c307032414af1e751a75",
+          "sceneHash": "4d8cb057a108f15bef9a6c1795f9c37b46f7e7bdf213204ca6cd7d308c85a538",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "6c307887286631d161d3336814426f0632c6e3dd282b823a1f6109d6f2f03a45",
+          "sceneHash": "f57f0d3c88cfb81c99bd01742aa9b0e3e8b96484d71cbaeda8fdaef4ea87a052",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "6c307887286631d161d3336814426f0632c6e3dd282b823a1f6109d6f2f03a45",
+          "sceneHash": "f57f0d3c88cfb81c99bd01742aa9b0e3e8b96484d71cbaeda8fdaef4ea87a052",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "6c307887286631d161d3336814426f0632c6e3dd282b823a1f6109d6f2f03a45",
+        "sceneHash": "f57f0d3c88cfb81c99bd01742aa9b0e3e8b96484d71cbaeda8fdaef4ea87a052",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "6c307887286631d161d3336814426f0632c6e3dd282b823a1f6109d6f2f03a45",
+        "sceneHash": "f57f0d3c88cfb81c99bd01742aa9b0e3e8b96484d71cbaeda8fdaef4ea87a052",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "6c307887286631d161d3336814426f0632c6e3dd282b823a1f6109d6f2f03a45",
+        "sceneHash": "f57f0d3c88cfb81c99bd01742aa9b0e3e8b96484d71cbaeda8fdaef4ea87a052",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "620645f9bf991c56cf703fbf8f27cbdfec1dc3929ef703eb5cfe8ff51bee33c0",
+        "sceneHash": "d5a137830c798d61063653a749239eebe730a53ae83a60e2bd32d5fbf2ef8b9e",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "620645f9bf991c56cf703fbf8f27cbdfec1dc3929ef703eb5cfe8ff51bee33c0",
+        "sceneHash": "d5a137830c798d61063653a749239eebe730a53ae83a60e2bd32d5fbf2ef8b9e",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "ice",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "8262cf709018d87d608e8f839300163d85b612ecad6febf9ca194ce52ca7c4ad",
+          "sceneHash": "0cb106c474bf529f16cbbe8b988914c7e3736c635bf057f9c7d405b817610851",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "89d7f124413c1ba3974f736a804a76f1329b5067a937a7926b3831675e363aa5",
+          "sceneHash": "d685eb81217fe70b72bcb0f61a8831c2d546d7833601e77423d6fd6a4dcd4357",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "9bcae33eb4b4a2a64a1f5afd5c7becbdce0ec1d441f3752a675df83a5e4c753f",
+          "sceneHash": "f63d79550b56e93cc75ad61b3520d2644ebb68b86dc9d5f19fa69e9978b7c340",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "9bcae33eb4b4a2a64a1f5afd5c7becbdce0ec1d441f3752a675df83a5e4c753f",
+          "sceneHash": "f63d79550b56e93cc75ad61b3520d2644ebb68b86dc9d5f19fa69e9978b7c340",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "9bcae33eb4b4a2a64a1f5afd5c7becbdce0ec1d441f3752a675df83a5e4c753f",
+        "sceneHash": "f63d79550b56e93cc75ad61b3520d2644ebb68b86dc9d5f19fa69e9978b7c340",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "9bcae33eb4b4a2a64a1f5afd5c7becbdce0ec1d441f3752a675df83a5e4c753f",
+        "sceneHash": "f63d79550b56e93cc75ad61b3520d2644ebb68b86dc9d5f19fa69e9978b7c340",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "9bcae33eb4b4a2a64a1f5afd5c7becbdce0ec1d441f3752a675df83a5e4c753f",
+        "sceneHash": "f63d79550b56e93cc75ad61b3520d2644ebb68b86dc9d5f19fa69e9978b7c340",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "258f4166ee30af917177243a8737d3fcc430ec9d89a53436bfbfad1bfb15c316",
+        "sceneHash": "2fd79fd5ba54bbefd82905a39342bd9cec564cdb81cb4f62a5b15ee7e1a38618",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "258f4166ee30af917177243a8737d3fcc430ec9d89a53436bfbfad1bfb15c316",
+        "sceneHash": "2fd79fd5ba54bbefd82905a39342bd9cec564cdb81cb4f62a5b15ee7e1a38618",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "sand",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "0fc48f45722a92a502a290a3cac84f63a8697efef8b3e0be0d1f4244534e4f05",
+          "sceneHash": "5202ca5d647d8ea42a2e8d5a9082dfca61efc12a9c237daf7ce4efa7735b8ba8",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "d3131f31dc516f304853cc070e49bed421d96dfe7edaad0f4f2b1319983686a8",
+          "sceneHash": "b4c6cd87654cc0ab9daa83e2fe6e91ab80f987bfd5c88ff97bd37ce2efd67d1f",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "c1e0e8a673af83f6b25e6fc2aec426c23b03c2e9856db290682a2bb930db12a2",
+          "sceneHash": "5ffad5aa8a88acf37e181cb74ea6182c96f26aa75789aa1f88d00479e7ab762d",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "c1e0e8a673af83f6b25e6fc2aec426c23b03c2e9856db290682a2bb930db12a2",
+          "sceneHash": "5ffad5aa8a88acf37e181cb74ea6182c96f26aa75789aa1f88d00479e7ab762d",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "c1e0e8a673af83f6b25e6fc2aec426c23b03c2e9856db290682a2bb930db12a2",
+        "sceneHash": "5ffad5aa8a88acf37e181cb74ea6182c96f26aa75789aa1f88d00479e7ab762d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "c1e0e8a673af83f6b25e6fc2aec426c23b03c2e9856db290682a2bb930db12a2",
+        "sceneHash": "5ffad5aa8a88acf37e181cb74ea6182c96f26aa75789aa1f88d00479e7ab762d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "c1e0e8a673af83f6b25e6fc2aec426c23b03c2e9856db290682a2bb930db12a2",
+        "sceneHash": "5ffad5aa8a88acf37e181cb74ea6182c96f26aa75789aa1f88d00479e7ab762d",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "0d3b71264047e9ce805af5dae1a57e6fd8665caf991d67e42527efbb2544a8e7",
+        "sceneHash": "74b6d204e9f2418f27f9e69fb87f5f805ebf52118ea659cfd11f7bad1d94eaa8",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "0d3b71264047e9ce805af5dae1a57e6fd8665caf991d67e42527efbb2544a8e7",
+        "sceneHash": "74b6d204e9f2418f27f9e69fb87f5f805ebf52118ea659cfd11f7bad1d94eaa8",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "gravity",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "4c2a4108741d2fdfd1d6e0b1a9fed2f399654dfbd0bfa0fedaadb5f6adfa85f2",
+          "sceneHash": "f9d2bd414d7c57be090cd8674ec6aac4474242608a910c0f8d6594406a9492b1",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "a84c24540277d54d9773445d4c44b3eb158e8302cccfa49581b8d46db431803e",
+          "sceneHash": "4729eaf658992288279e0252c9427ddabf0181394a44ff205f30dfbb825b7884",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "ce4920702067840bcf968928e54011a0151a9491c0df00542da7038761f7c5db",
+          "sceneHash": "ae5be5ac2c3e48c16d357aa3178bc4bf2e568534c01f84b5b3b2d673102a57a6",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "ce4920702067840bcf968928e54011a0151a9491c0df00542da7038761f7c5db",
+          "sceneHash": "ae5be5ac2c3e48c16d357aa3178bc4bf2e568534c01f84b5b3b2d673102a57a6",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "ce4920702067840bcf968928e54011a0151a9491c0df00542da7038761f7c5db",
+        "sceneHash": "ae5be5ac2c3e48c16d357aa3178bc4bf2e568534c01f84b5b3b2d673102a57a6",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "ce4920702067840bcf968928e54011a0151a9491c0df00542da7038761f7c5db",
+        "sceneHash": "ae5be5ac2c3e48c16d357aa3178bc4bf2e568534c01f84b5b3b2d673102a57a6",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "ce4920702067840bcf968928e54011a0151a9491c0df00542da7038761f7c5db",
+        "sceneHash": "ae5be5ac2c3e48c16d357aa3178bc4bf2e568534c01f84b5b3b2d673102a57a6",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "c27365658c6e2b505d3876a658490b74afa7178382774de402fd7a6e0e3d4325",
+        "sceneHash": "3eac748359fbe5baecb228a81649bfb32c71ba6fbcd8e9fee1c1ecf1cb291835",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "c27365658c6e2b505d3876a658490b74afa7178382774de402fd7a6e0e3d4325",
+        "sceneHash": "3eac748359fbe5baecb228a81649bfb32c71ba6fbcd8e9fee1c1ecf1cb291835",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "repulsion",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "b675e4eb741973477992a70f7ee87719bc936bab475d51c58e183b881393b044",
+          "sceneHash": "7a93ebb2ec83c04361b0d243ffe5d6e1e4bc0efb30f34e70737adfa186dfafbc",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "4b8db28986b496e77230da4c91c6f3d7144266f3d99a518e79114fa8b37f0d4f",
+          "sceneHash": "3dee0926175c196bc97e1db82bf94e99d7f0aac8dcf82878d2b895d578d2ac29",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "e9080b65fe1bb2ed047cf95888465729870a5c6aefdf41a3b4c7269605924fe7",
+          "sceneHash": "86a06ec04d149d4127dbd1fe2a2d6d4ca57959da81cd77b3969227d2a0fbc301",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "e9080b65fe1bb2ed047cf95888465729870a5c6aefdf41a3b4c7269605924fe7",
+          "sceneHash": "86a06ec04d149d4127dbd1fe2a2d6d4ca57959da81cd77b3969227d2a0fbc301",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "e9080b65fe1bb2ed047cf95888465729870a5c6aefdf41a3b4c7269605924fe7",
+        "sceneHash": "86a06ec04d149d4127dbd1fe2a2d6d4ca57959da81cd77b3969227d2a0fbc301",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "e9080b65fe1bb2ed047cf95888465729870a5c6aefdf41a3b4c7269605924fe7",
+        "sceneHash": "86a06ec04d149d4127dbd1fe2a2d6d4ca57959da81cd77b3969227d2a0fbc301",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "e9080b65fe1bb2ed047cf95888465729870a5c6aefdf41a3b4c7269605924fe7",
+        "sceneHash": "86a06ec04d149d4127dbd1fe2a2d6d4ca57959da81cd77b3969227d2a0fbc301",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "2e0b52d98bbd3e0364529dfb6d03e2a2e81e1ea275deccfe78c9bb272b1b4646",
+        "sceneHash": "370e0f8dad5ebd275a6b7d1347e6bb563bccf6517fcf294a5fe3118db1452c53",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "2e0b52d98bbd3e0364529dfb6d03e2a2e81e1ea275deccfe78c9bb272b1b4646",
+        "sceneHash": "370e0f8dad5ebd275a6b7d1347e6bb563bccf6517fcf294a5fe3118db1452c53",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "rest",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "7a98585151c38628081b6c886eb6a52de452dcea6ef7b8729341d09f0c3139d0",
+          "sceneHash": "c0db2e299edb3817d2fe786172e56f294abac77e437b549a4ac3b579e34cca76",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "d371a385abea5576266eb0956134b2ff9e438c3b1e7df0f2744b2c0069b45426",
+          "sceneHash": "c454640e3c6ba38da9ef6dd924c5485eae9652d0ba4239ff90bc6327a6391b95",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "4d6c3432afa03ef81d47bfa384dbd95c96b2ab54751412f4e6a784cc0362a4a3",
+          "sceneHash": "c1d10ec460ceb4f651f121fba5112b279f1ed688f46b21e99f2d48b1618c9b53",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "4d6c3432afa03ef81d47bfa384dbd95c96b2ab54751412f4e6a784cc0362a4a3",
+          "sceneHash": "c1d10ec460ceb4f651f121fba5112b279f1ed688f46b21e99f2d48b1618c9b53",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "4d6c3432afa03ef81d47bfa384dbd95c96b2ab54751412f4e6a784cc0362a4a3",
+        "sceneHash": "c1d10ec460ceb4f651f121fba5112b279f1ed688f46b21e99f2d48b1618c9b53",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "4d6c3432afa03ef81d47bfa384dbd95c96b2ab54751412f4e6a784cc0362a4a3",
+        "sceneHash": "c1d10ec460ceb4f651f121fba5112b279f1ed688f46b21e99f2d48b1618c9b53",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "4d6c3432afa03ef81d47bfa384dbd95c96b2ab54751412f4e6a784cc0362a4a3",
+        "sceneHash": "c1d10ec460ceb4f651f121fba5112b279f1ed688f46b21e99f2d48b1618c9b53",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "783641291487a425d67cb661d9143edd7c16c3da331ca9376e580cc6a1ba345c",
+        "sceneHash": "16c76fef25822da297bfc532e4b67a2e0fd39740ae7548c5ed45c742d6fe60d1",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "783641291487a425d67cb661d9143edd7c16c3da331ca9376e580cc6a1ba345c",
+        "sceneHash": "16c76fef25822da297bfc532e4b67a2e0fd39740ae7548c5ed45c742d6fe60d1",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "sticky",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "4922276ed3344b8347a58773b76e25f7e4b174ff4ae0abcde975995aaba8820a",
+          "sceneHash": "d57fc93740f66ae30f78d38eae1e80bbabee8fe00c25d92320b3126b24d84078",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "7e364d3b46972752eb2d3fd6168a9bd735d043f42bf7dfe0b749fa95b5c161c4",
+          "sceneHash": "e0cfe8960c76e170bd30d45c7ca6587f1a0fb113dcb8b44015f89a1260a70169",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "f29280931c5cea21b9bbf657ab345243946439842956b66cf726d3d014a6ee66",
+          "sceneHash": "316709e02414f266cd4519be3d9ea52dbedd4ffe31b1894b72465aef3acb5118",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "f29280931c5cea21b9bbf657ab345243946439842956b66cf726d3d014a6ee66",
+          "sceneHash": "316709e02414f266cd4519be3d9ea52dbedd4ffe31b1894b72465aef3acb5118",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "f29280931c5cea21b9bbf657ab345243946439842956b66cf726d3d014a6ee66",
+        "sceneHash": "316709e02414f266cd4519be3d9ea52dbedd4ffe31b1894b72465aef3acb5118",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "f29280931c5cea21b9bbf657ab345243946439842956b66cf726d3d014a6ee66",
+        "sceneHash": "316709e02414f266cd4519be3d9ea52dbedd4ffe31b1894b72465aef3acb5118",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "f29280931c5cea21b9bbf657ab345243946439842956b66cf726d3d014a6ee66",
+        "sceneHash": "316709e02414f266cd4519be3d9ea52dbedd4ffe31b1894b72465aef3acb5118",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "2e566bd36fed82198e5a19929b58796a511942d28135465286d1a1feaa1280ba",
+        "sceneHash": "430c1aef6e897d6b8890e5d5af214b63c4e3c58397d5ae111a02e5d669ec3361",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "2e566bd36fed82198e5a19929b58796a511942d28135465286d1a1feaa1280ba",
+        "sceneHash": "430c1aef6e897d6b8890e5d5af214b63c4e3c58397d5ae111a02e5d669ec3361",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "candy",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "7b9a3d56d818fb8a3ceb7bd5c28e7e0fed3dde540fa00a214797a06c56373a52",
+          "sceneHash": "3f20d693572d2c44fd9dd7dbd746af4dbd28cfb51ac828e9641b73aa665244f7",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "bc914c73c134597c366f291c373b0445e3ff75d5d2a94fc6a96bc9c3a05ad979",
+          "sceneHash": "fb09bdde26a5708de269f57d9d20206d968a5764c6bcc723be4ff37f11a2feff",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "4d377ca6cfb1cd9fb67097c4e6ab7e3d241314013eacd3d8bf23511fc85d5c75",
+          "sceneHash": "dab719dfaf1419390a06394cf614426a49bc5efb5a8f1c932e800eeff29aa34f",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "4d377ca6cfb1cd9fb67097c4e6ab7e3d241314013eacd3d8bf23511fc85d5c75",
+          "sceneHash": "dab719dfaf1419390a06394cf614426a49bc5efb5a8f1c932e800eeff29aa34f",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "4d377ca6cfb1cd9fb67097c4e6ab7e3d241314013eacd3d8bf23511fc85d5c75",
+        "sceneHash": "dab719dfaf1419390a06394cf614426a49bc5efb5a8f1c932e800eeff29aa34f",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "4d377ca6cfb1cd9fb67097c4e6ab7e3d241314013eacd3d8bf23511fc85d5c75",
+        "sceneHash": "dab719dfaf1419390a06394cf614426a49bc5efb5a8f1c932e800eeff29aa34f",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "4d377ca6cfb1cd9fb67097c4e6ab7e3d241314013eacd3d8bf23511fc85d5c75",
+        "sceneHash": "dab719dfaf1419390a06394cf614426a49bc5efb5a8f1c932e800eeff29aa34f",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "bfe792a4c90e8ecdf519249aa3566023682f235809db0d393afbbc1afe46bbc0",
+        "sceneHash": "0c40f5dd86386c13b0208cb6be0242914bd983b82f8dbd5752d2b9f02a4fe6ed",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "bfe792a4c90e8ecdf519249aa3566023682f235809db0d393afbbc1afe46bbc0",
+        "sceneHash": "0c40f5dd86386c13b0208cb6be0242914bd983b82f8dbd5752d2b9f02a4fe6ed",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "leaf",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "93afab5a407ad5acef130183f9aaa13d68e14c0b208115cb099a9d1fd531b226",
+          "sceneHash": "022df58011a79939b20ec753a5a2a461c4e1bba460c481d0cc174c6d105eeb5a",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "6e534762a63d6b0171a02bef61d7401649d234cd8fef4a142114e1192e72212a",
+          "sceneHash": "227b7543ff17c5b1f983ffec07dc8a2a8471ff09e2714eaa5b84043c1918af85",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "a9263ffc42fd1ac4ef01af35a06a15ee5b1dc08513910a60765d1780ce21fcd7",
+          "sceneHash": "faf1929c79a18d379d615d2d259044ab4f4d4dc472ab5f70c4b4d8fcc12cdbfd",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "a9263ffc42fd1ac4ef01af35a06a15ee5b1dc08513910a60765d1780ce21fcd7",
+          "sceneHash": "faf1929c79a18d379d615d2d259044ab4f4d4dc472ab5f70c4b4d8fcc12cdbfd",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "a9263ffc42fd1ac4ef01af35a06a15ee5b1dc08513910a60765d1780ce21fcd7",
+        "sceneHash": "faf1929c79a18d379d615d2d259044ab4f4d4dc472ab5f70c4b4d8fcc12cdbfd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "a9263ffc42fd1ac4ef01af35a06a15ee5b1dc08513910a60765d1780ce21fcd7",
+        "sceneHash": "faf1929c79a18d379d615d2d259044ab4f4d4dc472ab5f70c4b4d8fcc12cdbfd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "a9263ffc42fd1ac4ef01af35a06a15ee5b1dc08513910a60765d1780ce21fcd7",
+        "sceneHash": "faf1929c79a18d379d615d2d259044ab4f4d4dc472ab5f70c4b4d8fcc12cdbfd",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "e71b77a7eccba60bc5bc8a42a08a12212947263b48342675df2dcb5594cea5de",
+        "sceneHash": "0cd9255343377f707f4691922f13e13d20c446fe17bc25dc3ba122d2684731d4",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "e71b77a7eccba60bc5bc8a42a08a12212947263b48342675df2dcb5594cea5de",
+        "sceneHash": "0cd9255343377f707f4691922f13e13d20c446fe17bc25dc3ba122d2684731d4",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "hourglass",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "5b8c7df7c1e36013857219a320a1dfb911ed73478ac636e32b1a94fba15a3dc7",
+          "sceneHash": "1d9c811213b406f46299ef70afc668f7e7df9e4f91f7b2c6da9cc2eb1040ffda",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "8617bd700e005c78cd44cef0321a6b929cf810ee4e0c64f805f2522628d9f805",
+          "sceneHash": "beda0e55c33cabce80f71d6a420181dc26bbf7bde13d789b9dbb913aa3fb1f01",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "e3d5e329e2fcf2a7b0abc65495e14578f0c60ae80ac8a8e15398ccc586acd465",
+          "sceneHash": "44246a2113bebe34ffceb28dfbf4f6355981e5d7c54b20020025f7eff6d29aee",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "7000": {
+          "hash": "e3d5e329e2fcf2a7b0abc65495e14578f0c60ae80ac8a8e15398ccc586acd465",
+          "sceneHash": "44246a2113bebe34ffceb28dfbf4f6355981e5d7c54b20020025f7eff6d29aee",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        }
+      },
+      "freshEnd": {
+        "hash": "e3d5e329e2fcf2a7b0abc65495e14578f0c60ae80ac8a8e15398ccc586acd465",
+        "sceneHash": "44246a2113bebe34ffceb28dfbf4f6355981e5d7c54b20020025f7eff6d29aee",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "freshLater": {
+        "hash": "e3d5e329e2fcf2a7b0abc65495e14578f0c60ae80ac8a8e15398ccc586acd465",
+        "sceneHash": "44246a2113bebe34ffceb28dfbf4f6355981e5d7c54b20020025f7eff6d29aee",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "denseEnd": {
+        "hash": "e3d5e329e2fcf2a7b0abc65495e14578f0c60ae80ac8a8e15398ccc586acd465",
+        "sceneHash": "44246a2113bebe34ffceb28dfbf4f6355981e5d7c54b20020025f7eff6d29aee",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedFirst": {
+        "hash": "36ebdad4bfd3e4ab3b40431ab2d5bcb14b65e991cec03b71e0db914116572057",
+        "sceneHash": "ad208b00ff4cd0cf113c0928c6256f28c9803bd5e172fdd758cc0369c875c6a4",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "reducedLater": {
+        "hash": "36ebdad4bfd3e4ab3b40431ab2d5bcb14b65e991cec03b71e0db914116572057",
+        "sceneHash": "ad208b00ff4cd0cf113c0928c6256f28c9803bd5e172fdd758cc0369c875c6a4",
+        "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+        "paintedPixels": 11442
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "racket",
+      "duration": 6000,
+      "frames": {
+        "0": {
+          "hash": "a7cf1d4919e1bea7fb9a67ba72963b792fa920675fe226bcfe47d7773e56a9ec",
+          "sceneHash": "71a6ce44fe22650757fc0e009e65157602840edbd9a9b254aaa3d31ce2dfc1bf",
+          "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+          "paintedPixels": 11400
+        },
+        "1500": {
+          "hash": "e939d1cc250d3c24a9e4dd776fc990c8cf651ddf353bd9ba6a67ae2125626b88",
+          "sceneHash": "e9bd98d8294567a2609a43c018e9316c13d38477cede599e6e52234550d2c8c2",
+          "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+          "paintedPixels": 11400
+        },
+        "4000": {
+          "hash": "c45aebb7d823eb609ea26cc4ae6030bbd448361a267e979100291387044c4429",
+          "sceneHash": "8cdc172fc0278b13b3939a1bcfa396cf548d45c47386c223b7167b336c4a37fc",
+          "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+          "paintedPixels": 11400
+        },
+        "7000": {
+          "hash": "43f5d1d2a5c1a8698364bce8cf082903acd56166b58ca4e9edbd147704ecbfed",
+          "sceneHash": "3e41f699e305393559c71a166fe3f48ffb5cf854a2ab5550381c0703fde734e8",
+          "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+          "paintedPixels": 11400
+        }
+      },
+      "freshEnd": {
+        "hash": "43f5d1d2a5c1a8698364bce8cf082903acd56166b58ca4e9edbd147704ecbfed",
+        "sceneHash": "3e41f699e305393559c71a166fe3f48ffb5cf854a2ab5550381c0703fde734e8",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "freshLater": {
+        "hash": "43f5d1d2a5c1a8698364bce8cf082903acd56166b58ca4e9edbd147704ecbfed",
+        "sceneHash": "3e41f699e305393559c71a166fe3f48ffb5cf854a2ab5550381c0703fde734e8",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "denseEnd": {
+        "hash": "43f5d1d2a5c1a8698364bce8cf082903acd56166b58ca4e9edbd147704ecbfed",
+        "sceneHash": "3e41f699e305393559c71a166fe3f48ffb5cf854a2ab5550381c0703fde734e8",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "reducedFirst": {
+        "hash": "b336b99f18e5936652c97a829000b2532f0f2d40eb41dde9c4ff06cf5cdf2177",
+        "sceneHash": "e3a8de13030c114b269c030c8e5518fa12eb302c96e8eaf7c4e546c688758706",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "reducedLater": {
+        "hash": "b336b99f18e5936652c97a829000b2532f0f2d40eb41dde9c4ff06cf5cdf2177",
+        "sceneHash": "e3a8de13030c114b269c030c8e5518fa12eb302c96e8eaf7c4e546c688758706",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    },
+    {
+      "kind": "gate",
+      "duration": 4000,
+      "frames": {
+        "0": {
+          "hash": "00798dd00f944e5663e7e6baa7c704721297c278cf366c0d4ca051c0d658986c",
+          "sceneHash": "b9f1b3b63188ad5b72d8f9c4db5a32e49f7c2277290ce42e34f968e8358be573",
+          "phoneHash": "baae569b90c70716f89af90087b5550c57a18f9bdefa915aebc5a909b7fc74b7",
+          "paintedPixels": 11408
+        },
+        "1500": {
+          "hash": "ad393d6cb271c99de509879a4ec9d396967d599a2bd6f88a0fc636f6e7f83ee9",
+          "sceneHash": "205723a18828e480fa9e63feb3f0bbfcaad579029de415ce842618497038cb33",
+          "phoneHash": "43f6b453fe4fbd54d5084da037e91d007da715bbcb0f66a2f7654fb0ada4e5e9",
+          "paintedPixels": 11442
+        },
+        "4000": {
+          "hash": "c26b638799a86585b6220d4cec29ad9c85b5635f79112911b9707761b0698028",
+          "sceneHash": "82dccae81f02324072ce4daff3a62a48b8cd62d3e82d18d109b31b99dcc5021d",
+          "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+          "paintedPixels": 11400
+        },
+        "7000": {
+          "hash": "c26b638799a86585b6220d4cec29ad9c85b5635f79112911b9707761b0698028",
+          "sceneHash": "82dccae81f02324072ce4daff3a62a48b8cd62d3e82d18d109b31b99dcc5021d",
+          "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+          "paintedPixels": 11400
+        }
+      },
+      "freshEnd": {
+        "hash": "c26b638799a86585b6220d4cec29ad9c85b5635f79112911b9707761b0698028",
+        "sceneHash": "82dccae81f02324072ce4daff3a62a48b8cd62d3e82d18d109b31b99dcc5021d",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "freshLater": {
+        "hash": "c26b638799a86585b6220d4cec29ad9c85b5635f79112911b9707761b0698028",
+        "sceneHash": "82dccae81f02324072ce4daff3a62a48b8cd62d3e82d18d109b31b99dcc5021d",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "denseEnd": {
+        "hash": "c26b638799a86585b6220d4cec29ad9c85b5635f79112911b9707761b0698028",
+        "sceneHash": "82dccae81f02324072ce4daff3a62a48b8cd62d3e82d18d109b31b99dcc5021d",
+        "phoneHash": "9bd106f720735661c9e9514e88725b619e6217aa5f8b05f9bef508513bf2bdb3",
+        "paintedPixels": 11400
+      },
+      "reducedFirst": {
+        "hash": "f21a12130b1c16d50079132ec9625ea9d094b3ab4ca5edf15253aefc2f1fb272",
+        "sceneHash": "9d208404fab48686cde11514ea5c8e710f8fd5de1afb93768319deb1a7f56a38",
+        "phoneHash": "569b68daf064b0cdc38162e5e09a05db5fee8e82455e472a26952206787b41cc",
+        "paintedPixels": 11342
+      },
+      "reducedLater": {
+        "hash": "f21a12130b1c16d50079132ec9625ea9d094b3ab4ca5edf15253aefc2f1fb272",
+        "sceneHash": "9d208404fab48686cde11514ea5c8e710f8fd5de1afb93768319deb1a7f56a38",
+        "phoneHash": "569b68daf064b0cdc38162e5e09a05db5fee8e82455e472a26952206787b41cc",
+        "paintedPixels": 11342
+      },
+      "animated": true,
+      "reducedStable": true,
+      "endingStable": true,
+      "independentCanvasStable": true,
+      "painted": true
+    }
+  ],
+  "meters": [
+    {
+      "kind": "candy",
+      "before": 14,
+      "after": 21,
+      "expectedIncrease": "20 percent of 36 pixels",
+      "passed": true
+    },
+    {
+      "kind": "rest",
+      "before": 14,
+      "after": 21,
+      "expectedIncrease": "20 percent of 36 pixels",
+      "passed": true
+    }
+  ],
+  "phones": [
+    {
+      "kind": "gate",
+      "elapsedMs": 1000,
+      "direction": {
+        "x": 1,
+        "y": 0
+      },
+      "passed": true
+    },
+    {
+      "kind": "gate",
+      "elapsedMs": 2100,
+      "direction": {
+        "x": -1,
+        "y": 0
+      },
+      "passed": true
+    },
+    {
+      "kind": "gate",
+      "elapsedMs": 3100,
+      "direction": {
+        "x": 0,
+        "y": -1
+      },
+      "passed": true
+    },
+    {
+      "kind": "gate",
+      "elapsedMs": 4000,
+      "direction": {
+        "x": 0,
+        "y": 0
+      },
+      "passed": true
+    },
+    {
+      "kind": "racket",
+      "elapsedMs": 3200,
+      "direction": {
+        "x": 0,
+        "y": 1
+      },
+      "passed": true
+    },
+    {
+      "kind": "racket",
+      "elapsedMs": 6000,
+      "direction": {
+        "x": 0,
+        "y": 0
+      },
+      "passed": true
+    }
+  ]
+}

@@ -268,7 +268,7 @@ function showScreen(name) {
   root.body.classList.toggle('board-session', boardSession);
   boardEl.hidden = !boardSession;
   find('play-toolbar').hidden = !boardSession;
-  playLayout.setMode({visible:boardSession,mode:gameMode,stageIndex:practiceCourse?.stageIndex,stageCount:practiceCourse?.stageCount});
+  playLayout.setMode({visible:boardSession,mode:gameMode,stageIndex:gameMode==='tutorial'?(puzzleCourse?puzzleCourse.index+2:1):practiceCourse?.stageIndex,stageCount:gameMode==='tutorial'?3:practiceCourse?.stageCount});
   find('floor-practice-tools').hidden = !boardSession || gameMode!=='floor-practice';
   find('play-hint').hidden = !boardSession;
   game.renderNotices({ visible: false });
@@ -478,7 +478,7 @@ function requestFinishRun(event) {
 
 function frame(now) {
   const elapsedMs = Math.max(0, now - lastFrame);
-  tutorial.tick(elapsedMs, screen === 'game' && !paused && countdownMs === 0 && gameMode === 'tutorial');
+  tutorial.tick(elapsedMs, screen === 'game' && !paused && countdownMs === 0 && gameMode === 'tutorial',screen==='tutorial-intro');
   const dt = Math.min(elapsedMs / 1000, TUNING.maxDt);
   lastFrame = now;
   if (screen === 'game' && !paused && !document.hidden && countdownMs > 0) {

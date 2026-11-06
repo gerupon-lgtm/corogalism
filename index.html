@@ -10,9 +10,10 @@
 <meta name="theme-color" content="#0f1513">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" href="assets/pwa/icon-192.png">
-<link rel="stylesheet" href="style.css?v=0.8.17">
-<link rel="stylesheet" href="home.css?v=0.8.17">
-<link rel="stylesheet" href="play-layout.css?v=0.8.17">
+<link rel="stylesheet" href="style.css?v=0.8.18">
+<link rel="stylesheet" href="home.css?v=0.8.18">
+<link rel="stylesheet" href="play-layout.css?v=0.8.18">
+<link rel="stylesheet" href="tutorial.css?v=0.8.18">
 </head>
 <body data-screen="mode">
 <div class="wrap">
@@ -25,7 +26,7 @@
         <span class="brand-word">Corogalism</span>
       </h1>
       <p class="brand-tagline">A SMALL MAZE<br>A BIG FEELING</p>
-      <span class="badge">v0.8.17</span>
+      <span class="badge">v0.8.18</span>
       </div>
       <p class="sub" id="dev-note" hidden>開発中の技術検証です（フェーズ2）</p>
     </div>
@@ -107,12 +108,13 @@
       <div><dt>操作</dt><dd id="hud-mode">傾き</dd></div>
     </dl>
     <div id="tutorial-lesson" class="tutorial-lesson" aria-label="素材の説明">
-      <p class="tutorial-idle">素材にふれて、動きを試してみよう。<br><small>げんきが0になっても続けられます。</small></p>
+      <p class="tutorial-idle" hidden>傾けて、ころがしてみよう。</p>
       <div class="tutorial-message" hidden>
-        <canvas width="144" height="112" aria-hidden="true"></canvas>
-        <div class="tutorial-text" role="status"><h2></h2><p class="tutorial-copy"></p><p class="tutorial-hint" hidden></p><p class="tutorial-context"></p></div>
-        <small class="tutorial-play-state">げんきが0になっても続けられます</small>
+        <div class="tutorial-example"><canvas width="144" height="112" aria-label="動きの見本"></canvas><button id="btn-tutorial-demo" type="button">▶ 見本を再生</button></div>
+        <div class="tutorial-text"><h2></h2><p class="tutorial-copy"></p><p class="tutorial-hint" role="status" hidden></p><p class="tutorial-context" hidden></p></div>
       </div>
+      <div class="tutorial-review" hidden><button id="btn-tutorial-prev" type="button" aria-label="前に見た説明">‹</button><span></span><button id="btn-tutorial-next" type="button" aria-label="次の説明">›</button></div>
+      <p class="tutorial-feedback" role="status" hidden></p>
     </div>
     <p id="game-status" class="note" role="status"></p>
     <div class="row">
@@ -147,11 +149,17 @@
 
   <section id="screen-tutorial-intro" class="panel tutorial-intro" hidden>
     <h2>はじめてのあそび方</h2>
-    <div class="tutorial-instruction"><h3>スマホの持ち方</h3>
+    <p class="tutorial-invitation">ちょっと傾けると、世界が動きだす。</p>
+    <div class="tutorial-trailer" aria-label="体験する3つのあそび">
+      <article><canvas width="144" height="112" data-tutorial-preview="roll" aria-hidden="true"></canvas><strong>ころがす</strong></article>
+      <article><canvas width="144" height="112" data-tutorial-preview="racket" aria-hidden="true"></canvas><strong>打ち返す</strong></article>
+      <article><canvas width="144" height="112" data-tutorial-preview="gate" aria-hidden="true"></canvas><strong>道をひらく</strong></article>
+    </div>
+    <div class="tutorial-instruction">
     <img class="tutorial-hold" src="assets/tutorial-hold.png" alt="スマホを縦持ちにして画面を上へ向け、奥側の上端を少し持ち上げ、両手で支える姿勢">
-    <p><strong>画面を上に向けて、<br>奥側を少し持ち上げよう。</strong></p><p>楽に持てる角度で大丈夫。</p>
+    <p><strong>画面を上に向けて、<br>楽に持てる角度で大丈夫。</strong></p>
     <button type="button" id="btn-tutorial-start" class="primary">この角度でスタート</button></div>
-    <p>壁・アイテム・砂・氷・引く力・押す力を試せます。<br>続きは、打ち返す・道を開くの2面です。<br>時間制限なし。げんきが0になっても続けられます。</p>
+    <p class="tutorial-promise">短い3面で、しかけを体験。<br>時間制限なし。げんきは減りますが、0でも続けられます。</p>
     <p class="tutorial-pointer-note">センサーが使えない端末では、迷路の中心から進みたい方向を押し続けて操作します。</p>
     <button type="button" id="btn-tutorial-back" class="text-button">モード選択へ戻る</button>
   </section>
@@ -205,6 +213,6 @@
     <button class="ghost" id="btn-end-confirm" type="button">終了して結果を見る</button>
   </div>
 </dialog>
-<script type="module" src="src/main.js?v=0.8.17"></script>
+<script type="module" src="src/main.js?v=0.8.18"></script>
 </body>
 </html>
