@@ -1,0 +1,982 @@
+{
+  "base": "https://corogalism.sikumilab.com/",
+  "rows": [
+    {
+      "profile": "393x740",
+      "introOverflow": 0,
+      "stages": [
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 48.5,
+            "y": 191.046875,
+            "width": 296,
+            "height": 296,
+            "bottom": 487.046875,
+            "right": 344.5
+          },
+          "lesson": {
+            "x": 57.5,
+            "y": 506.046875,
+            "width": 278,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 335.5
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 66.5,
+              "y": 523.046875,
+              "width": 82,
+              "height": 98,
+              "bottom": 621.046875,
+              "right": 148.5
+            },
+            {
+              "class": "",
+              "text": "ころがしてみよう",
+              "x": 157.5,
+              "y": 540.390625,
+              "width": 169,
+              "height": 19.5,
+              "bottom": 559.890625,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "傾けた方へ、球が転がる。",
+              "x": 157.5,
+              "y": 563.890625,
+              "width": 169,
+              "height": 16.796875,
+              "bottom": 580.6875,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "→少し右に傾けてみよう。",
+              "x": 157.5,
+              "y": 584.6875,
+              "width": 169,
+              "height": 19,
+              "bottom": 603.6875,
+              "right": 326.5
+            }
+          ],
+          "title": "ころがしてみよう"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 48.5,
+            "y": 191.046875,
+            "width": 296,
+            "height": 296,
+            "bottom": 487.046875,
+            "right": 344.5
+          },
+          "lesson": {
+            "x": 57.5,
+            "y": 506.046875,
+            "width": 278,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 335.5
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 66.5,
+              "y": 523.046875,
+              "width": 82,
+              "height": 98,
+              "bottom": 621.046875,
+              "right": 148.5
+            },
+            {
+              "class": "",
+              "text": "ラケットで、ポン！",
+              "x": 157.5,
+              "y": 524.109375,
+              "width": 169,
+              "height": 19.5,
+              "bottom": 543.609375,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "中心はまっすぐ。端なら斜めへ。",
+              "x": 157.5,
+              "y": 547.609375,
+              "width": 169,
+              "height": 33.59375,
+              "bottom": 581.203125,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "↓傾けると、球もラケットも動く。",
+              "x": 157.5,
+              "y": 585.203125,
+              "width": 169,
+              "height": 34.78125,
+              "bottom": 619.984375,
+              "right": 326.5
+            }
+          ],
+          "title": "ラケットで、ポン！"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 48.5,
+            "y": 191.046875,
+            "width": 296,
+            "height": 296,
+            "bottom": 487.046875,
+            "right": 344.5
+          },
+          "lesson": {
+            "x": 57.5,
+            "y": 506.046875,
+            "width": 278,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 335.5
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 66.5,
+              "y": 523.046875,
+              "width": 82,
+              "height": 98,
+              "bottom": 621.046875,
+              "right": 148.5
+            },
+            {
+              "class": "",
+              "text": "傾けて、道をつくろう",
+              "x": 157.5,
+              "y": 532.5,
+              "width": 169,
+              "height": 19.5,
+              "bottom": 552,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "球と戸は、同じ傾きで動く。",
+              "x": 157.5,
+              "y": 556,
+              "width": 156,
+              "height": 16.796875,
+              "bottom": 572.796875,
+              "right": 313.5
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "↘少し右下に傾けて、開いた通路へ。",
+              "x": 157.5,
+              "y": 576.796875,
+              "width": 169,
+              "height": 34.78125,
+              "bottom": 611.578125,
+              "right": 326.5
+            }
+          ],
+          "title": "傾けて、道をつくろう"
+        }
+      ]
+    },
+    {
+      "profile": "360x740",
+      "introOverflow": 0,
+      "stages": [
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 30,
+            "y": 187.046875,
+            "width": 300,
+            "height": 300,
+            "bottom": 487.046875,
+            "right": 330
+          },
+          "lesson": {
+            "x": 39,
+            "y": 506.046875,
+            "width": 282,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 321
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 48,
+              "y": 527.546875,
+              "width": 70,
+              "height": 89,
+              "bottom": 616.546875,
+              "right": 118
+            },
+            {
+              "class": "",
+              "text": "ころがしてみよう",
+              "x": 125,
+              "y": 542.046875,
+              "width": 187,
+              "height": 18.1875,
+              "bottom": 560.234375,
+              "right": 312
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "傾けた方へ、球が転がる。",
+              "x": 125,
+              "y": 563.234375,
+              "width": 187,
+              "height": 16.796875,
+              "bottom": 580.03125,
+              "right": 312
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "→少し右に傾けてみよう。",
+              "x": 125,
+              "y": 583.03125,
+              "width": 187,
+              "height": 19,
+              "bottom": 602.03125,
+              "right": 312
+            }
+          ],
+          "title": "ころがしてみよう"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 30,
+            "y": 187.046875,
+            "width": 300,
+            "height": 300,
+            "bottom": 487.046875,
+            "right": 330
+          },
+          "lesson": {
+            "x": 39,
+            "y": 506.046875,
+            "width": 282,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 321
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 48,
+              "y": 527.546875,
+              "width": 70,
+              "height": 89,
+              "bottom": 616.546875,
+              "right": 118
+            },
+            {
+              "class": "",
+              "text": "ラケットで、ポン！",
+              "x": 125,
+              "y": 541.859375,
+              "width": 187,
+              "height": 18.1875,
+              "bottom": 560.046875,
+              "right": 312
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "中心はまっすぐ。端なら斜めへ。",
+              "x": 125,
+              "y": 564.046875,
+              "width": 180,
+              "height": 16.796875,
+              "bottom": 580.84375,
+              "right": 305
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "—傾けると、球もラケットも動く。",
+              "x": 128.5,
+              "y": 584.84375,
+              "width": 180,
+              "height": 17.390625,
+              "bottom": 602.234375,
+              "right": 308.5
+            }
+          ],
+          "title": "ラケットで、ポン！"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 30,
+            "y": 187.046875,
+            "width": 300,
+            "height": 300,
+            "bottom": 487.046875,
+            "right": 330
+          },
+          "lesson": {
+            "x": 39,
+            "y": 506.046875,
+            "width": 282,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 321
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 48,
+              "y": 527.546875,
+              "width": 70,
+              "height": 89,
+              "bottom": 616.546875,
+              "right": 118
+            },
+            {
+              "class": "",
+              "text": "傾けて、道をつくろう",
+              "x": 125,
+              "y": 533.15625,
+              "width": 187,
+              "height": 18.1875,
+              "bottom": 551.34375,
+              "right": 312
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "球と戸は、同じ傾きで動く。",
+              "x": 125,
+              "y": 555.34375,
+              "width": 156,
+              "height": 16.796875,
+              "bottom": 572.140625,
+              "right": 281
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "↘水平に戻すと、戸はその場で止まる。",
+              "x": 125,
+              "y": 576.140625,
+              "width": 187,
+              "height": 34.78125,
+              "bottom": 610.921875,
+              "right": 312
+            }
+          ],
+          "title": "傾けて、道をつくろう"
+        }
+      ]
+    },
+    {
+      "profile": "390x700",
+      "introOverflow": 0,
+      "stages": [
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 67,
+            "y": 191.046875,
+            "width": 256,
+            "height": 256,
+            "bottom": 447.046875,
+            "right": 323
+          },
+          "lesson": {
+            "x": 76,
+            "y": 466.046875,
+            "width": 238,
+            "height": 132,
+            "bottom": 598.046875,
+            "right": 314
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 85,
+              "y": 483.046875,
+              "width": 82,
+              "height": 98,
+              "bottom": 581.046875,
+              "right": 167
+            },
+            {
+              "class": "",
+              "text": "ころがしてみよう",
+              "x": 176,
+              "y": 484.109375,
+              "width": 129,
+              "height": 19.5,
+              "bottom": 503.609375,
+              "right": 305
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "傾けた方へ、球が転がる。",
+              "x": 176,
+              "y": 507.609375,
+              "width": 129,
+              "height": 33.59375,
+              "bottom": 541.203125,
+              "right": 305
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "→少し右に傾けてみよう。",
+              "x": 176,
+              "y": 545.203125,
+              "width": 129,
+              "height": 34.78125,
+              "bottom": 579.984375,
+              "right": 305
+            }
+          ],
+          "title": "ころがしてみよう"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 67,
+            "y": 191.046875,
+            "width": 256,
+            "height": 256,
+            "bottom": 447.046875,
+            "right": 323
+          },
+          "lesson": {
+            "x": 76,
+            "y": 466.046875,
+            "width": 238,
+            "height": 132,
+            "bottom": 598.046875,
+            "right": 314
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 85,
+              "y": 483.734375,
+              "width": 82,
+              "height": 98,
+              "bottom": 581.734375,
+              "right": 167
+            },
+            {
+              "class": "",
+              "text": "ラケットで、ポン！",
+              "x": 176,
+              "y": 475.046875,
+              "width": 129,
+              "height": 39,
+              "bottom": 514.046875,
+              "right": 305
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "中心はまっすぐ。端なら斜めへ。",
+              "x": 176,
+              "y": 518.046875,
+              "width": 129,
+              "height": 33.59375,
+              "bottom": 551.640625,
+              "right": 305
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "—傾けると、球もラケットも動く。",
+              "x": 176,
+              "y": 555.640625,
+              "width": 129,
+              "height": 34.78125,
+              "bottom": 590.421875,
+              "right": 305
+            }
+          ],
+          "title": "ラケットで、ポン！"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 67,
+            "y": 191.046875,
+            "width": 256,
+            "height": 256,
+            "bottom": 447.046875,
+            "right": 323
+          },
+          "lesson": {
+            "x": 76,
+            "y": 466.046875,
+            "width": 238,
+            "height": 132,
+            "bottom": 598.046875,
+            "right": 314
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 85,
+              "y": 483.734375,
+              "width": 82,
+              "height": 98,
+              "bottom": 581.734375,
+              "right": 167
+            },
+            {
+              "class": "",
+              "text": "傾けて、道をつくろう",
+              "x": 176,
+              "y": 475.046875,
+              "width": 129,
+              "height": 39,
+              "bottom": 514.046875,
+              "right": 305
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "球と戸は、同じ傾きで動く。",
+              "x": 176,
+              "y": 518.046875,
+              "width": 129,
+              "height": 33.59375,
+              "bottom": 551.640625,
+              "right": 305
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "↘水平に戻すと、戸はその場で止まる。",
+              "x": 176,
+              "y": 555.640625,
+              "width": 129,
+              "height": 34.78125,
+              "bottom": 590.421875,
+              "right": 305
+            }
+          ],
+          "title": "傾けて、道をつくろう"
+        }
+      ]
+    },
+    {
+      "profile": "320x700",
+      "introOverflow": 0,
+      "stages": [
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 30,
+            "y": 187.046875,
+            "width": 260,
+            "height": 260,
+            "bottom": 447.046875,
+            "right": 290
+          },
+          "lesson": {
+            "x": 39,
+            "y": 466.046875,
+            "width": 242,
+            "height": 132,
+            "bottom": 598.046875,
+            "right": 281
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 48,
+              "y": 487.546875,
+              "width": 70,
+              "height": 89,
+              "bottom": 576.546875,
+              "right": 118
+            },
+            {
+              "class": "",
+              "text": "ころがしてみよう",
+              "x": 125,
+              "y": 494.15625,
+              "width": 147,
+              "height": 18.1875,
+              "bottom": 512.34375,
+              "right": 272
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "傾けた方へ、球が転がる。",
+              "x": 125,
+              "y": 515.34375,
+              "width": 147,
+              "height": 16.796875,
+              "bottom": 532.140625,
+              "right": 272
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "→少し右に傾けてみよう。",
+              "x": 125,
+              "y": 535.140625,
+              "width": 147,
+              "height": 34.78125,
+              "bottom": 569.921875,
+              "right": 272
+            }
+          ],
+          "title": "ころがしてみよう"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 30,
+            "y": 187.046875,
+            "width": 260,
+            "height": 260,
+            "bottom": 447.046875,
+            "right": 290
+          },
+          "lesson": {
+            "x": 39,
+            "y": 466.046875,
+            "width": 242,
+            "height": 132,
+            "bottom": 598.046875,
+            "right": 281
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 48,
+              "y": 487.546875,
+              "width": 70,
+              "height": 89,
+              "bottom": 576.546875,
+              "right": 118
+            },
+            {
+              "class": "",
+              "text": "ラケットで、ポン！",
+              "x": 125,
+              "y": 484.765625,
+              "width": 147,
+              "height": 18.1875,
+              "bottom": 502.953125,
+              "right": 272
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "中心はまっすぐ。端なら斜めへ。",
+              "x": 125,
+              "y": 506.953125,
+              "width": 147,
+              "height": 33.59375,
+              "bottom": 540.546875,
+              "right": 272
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "—傾けると、球もラケットも動く。",
+              "x": 125,
+              "y": 544.546875,
+              "width": 147,
+              "height": 34.78125,
+              "bottom": 579.328125,
+              "right": 272
+            }
+          ],
+          "title": "ラケットで、ポン！"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 30,
+            "y": 187.046875,
+            "width": 260,
+            "height": 260,
+            "bottom": 447.046875,
+            "right": 290
+          },
+          "lesson": {
+            "x": 39,
+            "y": 466.046875,
+            "width": 242,
+            "height": 132,
+            "bottom": 598.046875,
+            "right": 281
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "↻ 見本を再生",
+              "x": 48,
+              "y": 487.546875,
+              "width": 70,
+              "height": 89,
+              "bottom": 576.546875,
+              "right": 118
+            },
+            {
+              "class": "",
+              "text": "傾けて、道をつくろう",
+              "x": 125,
+              "y": 484.765625,
+              "width": 147,
+              "height": 18.1875,
+              "bottom": 502.953125,
+              "right": 272
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "球と戸は、同じ傾きで動く。",
+              "x": 125,
+              "y": 506.953125,
+              "width": 147,
+              "height": 33.59375,
+              "bottom": 540.546875,
+              "right": 272
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "↘少し右下に傾けて、開いた通路へ。",
+              "x": 125,
+              "y": 544.546875,
+              "width": 147,
+              "height": 34.78125,
+              "bottom": 579.328125,
+              "right": 272
+            }
+          ],
+          "title": "傾けて、道をつくろう"
+        }
+      ]
+    },
+    {
+      "profile": "reduced",
+      "introOverflow": 0,
+      "stages": [
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 48.5,
+            "y": 191.046875,
+            "width": 296,
+            "height": 296,
+            "bottom": 487.046875,
+            "right": 344.5
+          },
+          "lesson": {
+            "x": 57.5,
+            "y": 506.046875,
+            "width": 278,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 335.5
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "▶ 見本を再生",
+              "x": 66.5,
+              "y": 523.046875,
+              "width": 82,
+              "height": 98,
+              "bottom": 621.046875,
+              "right": 148.5
+            },
+            {
+              "class": "",
+              "text": "ころがしてみよう",
+              "x": 157.5,
+              "y": 540.390625,
+              "width": 169,
+              "height": 19.5,
+              "bottom": 559.890625,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "傾けた方へ、球が転がる。",
+              "x": 157.5,
+              "y": 563.890625,
+              "width": 169,
+              "height": 16.796875,
+              "bottom": 580.6875,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "→少し右に傾けてみよう。",
+              "x": 157.5,
+              "y": 584.6875,
+              "width": 169,
+              "height": 19,
+              "bottom": 603.6875,
+              "right": 326.5
+            }
+          ],
+          "title": "ころがしてみよう"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 48.5,
+            "y": 191.046875,
+            "width": 296,
+            "height": 296,
+            "bottom": 487.046875,
+            "right": 344.5
+          },
+          "lesson": {
+            "x": 57.5,
+            "y": 506.046875,
+            "width": 278,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 335.5
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "▶ 見本を再生",
+              "x": 66.5,
+              "y": 523.046875,
+              "width": 82,
+              "height": 98,
+              "bottom": 621.046875,
+              "right": 148.5
+            },
+            {
+              "class": "",
+              "text": "ラケットで、ポン！",
+              "x": 157.5,
+              "y": 524.109375,
+              "width": 169,
+              "height": 19.5,
+              "bottom": 543.609375,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "中心はまっすぐ。端なら斜めへ。",
+              "x": 157.5,
+              "y": 547.609375,
+              "width": 169,
+              "height": 33.59375,
+              "bottom": 581.203125,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "↘少し右下に傾けて、入口へ進もう。",
+              "x": 157.5,
+              "y": 585.203125,
+              "width": 169,
+              "height": 34.78125,
+              "bottom": 619.984375,
+              "right": 326.5
+            }
+          ],
+          "title": "ラケットで、ポン！"
+        },
+        {
+          "overflow": 0,
+          "horizontal": 0,
+          "board": {
+            "x": 48.5,
+            "y": 191.046875,
+            "width": 296,
+            "height": 296,
+            "bottom": 487.046875,
+            "right": 344.5
+          },
+          "lesson": {
+            "x": 57.5,
+            "y": 506.046875,
+            "width": 278,
+            "height": 132,
+            "bottom": 638.046875,
+            "right": 335.5
+          },
+          "text": [
+            {
+              "class": "tutorial-example",
+              "text": "▶ 見本を再生",
+              "x": 66.5,
+              "y": 523.046875,
+              "width": 82,
+              "height": 98,
+              "bottom": 621.046875,
+              "right": 148.5
+            },
+            {
+              "class": "",
+              "text": "傾けて、道をつくろう",
+              "x": 157.5,
+              "y": 532.5,
+              "width": 169,
+              "height": 19.5,
+              "bottom": 552,
+              "right": 326.5
+            },
+            {
+              "class": "tutorial-copy",
+              "text": "球と戸は、同じ傾きで動く。",
+              "x": 157.5,
+              "y": 556,
+              "width": 156,
+              "height": 16.796875,
+              "bottom": 572.796875,
+              "right": 313.5
+            },
+            {
+              "class": "tutorial-hint",
+              "text": "↘水平に戻すと、戸はその場で止まる。",
+              "x": 157.5,
+              "y": 576.796875,
+              "width": 169,
+              "height": 34.78125,
+              "bottom": 611.578125,
+              "right": 326.5
+            }
+          ],
+          "title": "傾けて、道をつくろう"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "boundary": "pointer input plus debug teleports to reduce travel; not human comprehension or device evidence"
+}
