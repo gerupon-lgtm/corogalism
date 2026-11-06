@@ -243,6 +243,6 @@ export const FLOOR_CHALLENGE = {
  secPerCellStart:0.8,secPerCellEnd:0.55,timeStages:40,minSec:{normal:25,easy:35},
  easySecPerCell:1.6,easyTurnSec:1,easyThinkingSec:8,easyFieldSec:1.5,
  turnSec:0.55,sandSec:0.8,hinderSec:2,introSec:6,
- damageFactor:{normal:0.65,easy:0.4},damageStep:0.015,damageMax:1.4,hpPerTurn:4,
+ damageFactor:{normal:0.65,easy:0.28},damageIntroEndStage:{normal:10,easy:24},damageStep:0.015,damageMax:1.4,hpPerTurn:4,
  recoveryChance:{normal:0.4,easy:0.5},
 };

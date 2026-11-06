@@ -117,7 +117,9 @@ test('高速でゴール範囲を横切った時もクリアし、死亡・時�
  };
  const advance=p=>p.advance({dt:1/30,elapsedMs:1000/30,tilt:{x:0,y:0},base:BASE});
  const p=make();advance(p);assert.equal(p.status,'clear');
- const dead=make();for(let i=0;i<10;i++)dead.hp.applyImpact(30,{materialId:'spike'},i);advance(dead);assert.equal(dead.status,'dead');
+ // 難易度ごとの軽減値に依存せず、げんき切れとゴールが同時の条件を作る。
+ const dead=make();for(let i=0;i<100&&!dead.hp.isDead;i++)dead.hp.applyImpact(30,{materialId:'spike'},i);
+ assert.equal(dead.hp.isDead,true);advance(dead);assert.equal(dead.status,'dead');
  const timeout=make();timeout.advance({dt:1/30,elapsedMs:(timeout.limitSec+1)*1000,tilt:{x:0,y:0},base:BASE});assert.equal(timeout.status,'timeout');
 });
 

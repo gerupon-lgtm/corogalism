@@ -3,7 +3,9 @@ import { difficultyAt } from './progression.js';
 export function normalizeLevel(level) { return level === 'easy' ? 'easy' : 'normal'; }
 export function challengeDifficulty(stage, level) {
  const id=normalizeLevel(level),base=difficultyAt(stage),n=base.stage;
- const intro=Math.max(0,(10-n)/9);
+ // 転がり方や面構成を変えず、被ダメージだけ序盤の猶予を延ばす。
+ const introEnd=C.damageIntroEndStage[id];
+ const intro=Math.max(0,(introEnd-n)/(introEnd-1));
  return {...base,level:id,themed:true,
   secPerCell:Math.max(C.secPerCellEnd,C.secPerCellStart-(C.secPerCellStart-C.secPerCellEnd)*(n-1)/(C.timeStages-1)),
   hpPerTurn:C.hpPerTurn,damageMult:Math.min(C.damageMax,1+C.damageStep*(n-1))*(1-.5*intro)*C.damageFactor[id],

@@ -13,14 +13,16 @@ test('新テーマの序盤10面は両難易度で丁寧に完走できる（各
   }
 });
 
-test('やさしいは衝突速度・素材によらず素材ダメージを難易度係数で軽減。基本面の迷路・物理は共通', () => {
+test('やさしいは全素材・衝突速度でダメージを軽減し、紹介後まで猶予を保つ。基本面の迷路・物理は共通', () => {
   for (const stage of [1, 4, 12, 16]) for (const materialId of ['default','rubber','moss','stone','spike']) for (const speed of [1, 2, 6, 30]) {
     const normal = createStagePlay(123, challengeDifficulty(stage, 'normal'));
     const easy = createStagePlay(123, challengeDifficulty(stage, 'easy'));
     assert.deepEqual(easy.stage.walls, normal.stage.walls);
     assert.deepEqual(easy.actor, normal.actor);
     assert.equal(easy.hp.max, normal.hp.max);
-    assert.ok(Math.abs(easy.hp.applyImpact(speed,{materialId},1)-normal.hp.applyImpact(speed,{materialId},1)*FLOOR_CHALLENGE.damageFactor.easy/FLOOR_CHALLENGE.damageFactor.normal)<1e-8);
+    const dealt=easy.hp.applyImpact(speed,{materialId},1),reference=normal.hp.applyImpact(speed,{materialId},1)*FLOOR_CHALLENGE.damageFactor.easy/FLOOR_CHALLENGE.damageFactor.normal;
+    assert.ok(dealt<=reference+1e-8);
+    if(stage===1)assert.ok(Math.abs(dealt-reference)<1e-8);
   }
 });
 

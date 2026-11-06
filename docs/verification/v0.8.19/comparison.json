@@ -1,0 +1,1344 @@
+{
+  "baseline": {
+    "capturedAt": "2026-11-06T13:43:15.690Z",
+    "version": "v0.8.18",
+    "provenance": "Git HEAD cbb8f3066f478b13a54faf750298ed2cbe116b9c; old challenge/config loaded directly, unchanged core checked by SHA-256",
+    "oldFormula": {
+      "introEndStage": 10,
+      "easyFactor": 0.4,
+      "normalFactor": 0.65,
+      "damageStep": 0.015,
+      "damageMax": 1.4
+    },
+    "hpConfig": {
+      "base": 40,
+      "damageScale": 10,
+      "threshold": 1.2,
+      "capRatio": 0.35,
+      "cooldownSec": 0.25
+    },
+    "nonDamageConfigSha256": "54ee927f995dd0d80b08b1e82b640b73782e7b3e1a19d25f9d3f7ca35b8d0482",
+    "nonDamageFieldCases": 300,
+    "nonDamageFieldsSha256": "144d654b375c76dc230512663c9af3be89b1b5348d1dd667572c9be40a05e924",
+    "timeAndInitialHp": [
+      {
+        "level": "easy",
+        "stage": 1,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 23,
+        "maxHp": 92,
+        "limitSec": 58
+      },
+      {
+        "level": "easy",
+        "stage": 5,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 23,
+        "maxHp": 92,
+        "limitSec": 70
+      },
+      {
+        "level": "easy",
+        "stage": 10,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 91
+      },
+      {
+        "level": "easy",
+        "stage": 11,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 88
+      },
+      {
+        "level": "easy",
+        "stage": 17,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 88
+      },
+      {
+        "level": "easy",
+        "stage": 23,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 94
+      },
+      {
+        "level": "easy",
+        "stage": 24,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 88
+      },
+      {
+        "level": "easy",
+        "stage": 40,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 88
+      },
+      {
+        "level": "easy",
+        "stage": 100,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 23,
+        "maxHp": 92,
+        "limitSec": 58
+      },
+      {
+        "level": "normal",
+        "stage": 1,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 23,
+        "maxHp": 92,
+        "limitSec": 33.625
+      },
+      {
+        "level": "normal",
+        "stage": 5,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 23,
+        "maxHp": 92,
+        "limitSec": 30.960256410256413
+      },
+      {
+        "level": "normal",
+        "stage": 10,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 21,
+        "maxHp": 92,
+        "limitSec": 30.338461538461537
+      },
+      {
+        "level": "normal",
+        "stage": 11,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 38.95641025641026
+      },
+      {
+        "level": "normal",
+        "stage": 17,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 37.61025641025641
+      },
+      {
+        "level": "normal",
+        "stage": 23,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 44.26410256410257
+      },
+      {
+        "level": "normal",
+        "stage": 24,
+        "seed": 7919,
+        "turns": 24,
+        "pathLength": 35,
+        "maxHp": 136,
+        "limitSec": 36.039743589743594
+      },
+      {
+        "level": "normal",
+        "stage": 40,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 21,
+        "maxHp": 92,
+        "limitSec": 25
+      },
+      {
+        "level": "normal",
+        "stage": 100,
+        "seed": 7919,
+        "turns": 13,
+        "pathLength": 21,
+        "maxHp": 92,
+        "limitSec": 25
+      }
+    ],
+    "stableSourceSha256": {
+      "src/game/hp.js": "a362a42b28f7d0ca81905e3b7d56e14037577ffc0819cce2cbd92dccf15183ec",
+      "src/game/progression.js": "fa407a6a4435918321b9ee05fcb9ca4bdf0c32d9d33989b427c99389d4078fd1",
+      "src/physics/integrator.js": "97e34c121642fd6cd0e7d495ae114b37299a9bcdfa491d2f86c97105382ccb76",
+      "src/physics/collision.js": "ea7a2b69ecb1a0c720b0f9cf32b366f0dbd70a8995241eb00f3f4c0638500ea2",
+      "src/physics/resolveParams.js": "3199dc81907f70f77004319d0424c35a6368168b979355f131cc6b2ae06ca961",
+      "src/world/materials.js": "ba10f240e6a0c75d53ba97996b4e74f1e322db08570894e4204fc4d3d3bfad1d",
+      "src/world/stage.js": "8de1725dec410667a33520439627abe530770837a4f61037b2d0fbdf27702a90",
+      "src/maze/generator.js": "e8b216def21fa20c444f51907ab0755d130cca31caeeed0e2fe69c51fe75ed6c",
+      "src/game/stagePlay.js": "b50b57cc15519b5e7b8e84c25438a56867b5bcd0c79b1d23d77ebbd8eaae97f6",
+      "src/world/floorThemes.js": "dbd8064db5b8da48610f12461a75bfa4a7ba866912967aee416f2c9b5cae1744",
+      "src/world/stageFeatures.js": "fa1c007881340e50ecb893ba59254d794758059ca8f3c800e2e4292a8737d5ba",
+      "src/world/themes.js": "19e90a032929bcfea9aa96666f80cdbf420fea02ec689ffc23a419998de963bf",
+      "src/world/recovery.js": "73017c2a4aed16e4aa089763e6a17a684656f9020a583bfc731567e54a984021",
+      "src/world/progressiveWalls.js": "2ccdbbca9c0c41fe82562725633b0faeb16ae677bf41289017c1669f278002ef"
+    }
+  },
+  "verification": {
+    "at": "2026-11-06T13:48:17.268Z",
+    "version": "v0.8.19",
+    "command": "node tools/compare-easy-damage-v0819.mjs",
+    "elapsedMs": 1771.5234999999998,
+    "hitSetup": {
+      "maxHp": 140,
+      "turns": 25,
+      "wallMaterial": "default",
+      "normalSpeedModerate": 2.8,
+      "normalSpeedCapped": 4,
+      "intervalSec": 0.5,
+      "threshold": 2
+    },
+    "damageCases": 16800,
+    "stages": [
+      1,
+      150
+    ],
+    "speeds": [
+      0,
+      1.2,
+      1.8,
+      2.8,
+      4,
+      6,
+      30
+    ],
+    "materials": [
+      "default",
+      "rubber",
+      "cork",
+      "cotton",
+      "racket",
+      "stone",
+      "spike",
+      "moss"
+    ],
+    "assertions": {
+      "normalDamageUnchanged": true,
+      "easyDamageNeverHigher": true,
+      "initialHpAndTimeUnchanged": true,
+      "nonDamageDifficultyFieldsUnchanged": true,
+      "stableCoreSourcesUnchanged": true,
+      "exactTrajectoryScalars": 172800
+    },
+    "evidenceBoundary": [
+      "Deterministic numeric/Node comparison using production HP, collision and physics functions.",
+      "Equal repeated impacts are a controlled example, not a measured human play history.",
+      "Trajectory comparison continues before applying gameplay game-over stopping; it isolates rolling behavior from longer survival.",
+      "No browser, physical-device, sensor, audio, or human difficulty acceptance is claimed."
+    ]
+  },
+  "comparison": [
+    {
+      "stage": 1,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 5.119999999999999,
+          "capHp": 11.200000000000003,
+          "capRatio": 0.08000000000000002,
+          "hitsUntilDead": 28,
+          "wallHits": 28,
+          "finalHp": -3.360000000000035
+        },
+        "current": {
+          "firstDamage": 3.5839999999999996,
+          "capHp": 7.840000000000001,
+          "capRatio": 0.05600000000000001,
+          "hitsUntilDead": 40,
+          "wallHits": 40,
+          "finalHp": -3.360000000000092
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 11.200000000000003,
+          "capHp": 11.200000000000003,
+          "capRatio": 0.08000000000000002,
+          "hitsUntilDead": 13,
+          "wallHits": 13,
+          "finalHp": -5.600000000000023
+        },
+        "current": {
+          "firstDamage": 7.840000000000001,
+          "capHp": 7.840000000000001,
+          "capRatio": 0.05600000000000001,
+          "hitsUntilDead": 18,
+          "wallHits": 18,
+          "finalHp": -1.1200000000000454
+        }
+      }
+    },
+    {
+      "stage": 5,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 7.839288888888888,
+          "capHp": 14.933333333333334,
+          "capRatio": 0.10666666666666667,
+          "hitsUntilDead": 18,
+          "wallHits": 18,
+          "finalHp": -1.1071999999999775
+        },
+        "current": {
+          "firstDamage": 4.4597426086956515,
+          "capHp": 8.862608695652174,
+          "capRatio": 0.06330434782608696,
+          "hitsUntilDead": 32,
+          "wallHits": 32,
+          "finalHp": -2.7117634782607896
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 14.933333333333334,
+          "capHp": 14.933333333333334,
+          "capRatio": 0.10666666666666667,
+          "hitsUntilDead": 10,
+          "wallHits": 10,
+          "finalHp": -9.33333333333336
+        },
+        "current": {
+          "firstDamage": 8.862608695652174,
+          "capHp": 8.862608695652174,
+          "capRatio": 0.06330434782608696,
+          "hitsUntilDead": 16,
+          "wallHits": 16,
+          "finalHp": -1.8017391304347399
+        }
+      }
+    },
+    {
+      "stage": 10,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 11.622399999999999,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 13,
+          "wallHits": 13,
+          "finalHp": -11.091199999999986
+        },
+        "current": {
+          "firstDamage": 5.65960347826087,
+          "capHp": 10.140869565217393,
+          "capRatio": 0.07243478260869567,
+          "hitsUntilDead": 25,
+          "wallHits": 25,
+          "finalHp": -1.490086956521651
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 19.599999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 8,
+          "wallHits": 8,
+          "finalHp": -16.799999999999965
+        },
+        "current": {
+          "firstDamage": 10.140869565217393,
+          "capHp": 10.140869565217393,
+          "capRatio": 0.07243478260869567,
+          "hitsUntilDead": 14,
+          "wallHits": 14,
+          "finalHp": -1.9721739130435552
+        }
+      }
+    },
+    {
+      "stage": 11,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 11.775999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 12,
+          "wallHits": 12,
+          "finalHp": -1.3119999999999727
+        },
+        "current": {
+          "firstDamage": 5.913600000000001,
+          "capHp": 10.396521739130437,
+          "capRatio": 0.07426086956521741,
+          "hitsUntilDead": 24,
+          "wallHits": 24,
+          "finalHp": -1.9264000000000507
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 19.599999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 8,
+          "wallHits": 8,
+          "finalHp": -16.799999999999965
+        },
+        "current": {
+          "firstDamage": 10.396521739130437,
+          "capHp": 10.396521739130437,
+          "capRatio": 0.07426086956521741,
+          "hitsUntilDead": 14,
+          "wallHits": 14,
+          "finalHp": -5.551304347826095
+        }
+      }
+    },
+    {
+      "stage": 17,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 12.697599999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 12,
+          "wallHits": 12,
+          "finalHp": -12.371199999999945
+        },
+        "current": {
+          "firstDamage": 7.535749565217389,
+          "capHp": 11.930434782608698,
+          "capRatio": 0.08521739130434784,
+          "hitsUntilDead": 19,
+          "wallHits": 19,
+          "finalHp": -3.1792417391303776
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 19.599999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 8,
+          "wallHits": 8,
+          "finalHp": -16.799999999999965
+        },
+        "current": {
+          "firstDamage": 11.930434782608698,
+          "capHp": 11.930434782608698,
+          "capRatio": 0.08521739130434784,
+          "hitsUntilDead": 12,
+          "wallHits": 12,
+          "finalHp": -3.1652173913043917
+        }
+      }
+    },
+    {
+      "stage": 23,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 13.6192,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 11,
+          "wallHits": 11,
+          "finalHp": -9.811200000000028
+        },
+        "current": {
+          "firstDamage": 9.326191304347827,
+          "capHp": 13.464347826086959,
+          "capRatio": 0.09617391304347828,
+          "hitsUntilDead": 16,
+          "wallHits": 16,
+          "finalHp": -9.21906086956525
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 19.599999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 8,
+          "wallHits": 8,
+          "finalHp": -16.799999999999965
+        },
+        "current": {
+          "firstDamage": 13.464347826086959,
+          "capHp": 13.464347826086959,
+          "capRatio": 0.09617391304347828,
+          "hitsUntilDead": 11,
+          "wallHits": 11,
+          "finalHp": -8.107826086956567
+        }
+      }
+    },
+    {
+      "stage": 24,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 13.7728,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 11,
+          "wallHits": 11,
+          "finalHp": -11.500800000000027
+        },
+        "current": {
+          "firstDamage": 9.64096,
+          "capHp": 13.72,
+          "capRatio": 0.098,
+          "hitsUntilDead": 15,
+          "wallHits": 15,
+          "finalHp": -4.614400000000046
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 19.599999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 8,
+          "wallHits": 8,
+          "finalHp": -16.799999999999965
+        },
+        "current": {
+          "firstDamage": 13.72,
+          "capHp": 13.72,
+          "capRatio": 0.098,
+          "hitsUntilDead": 11,
+          "wallHits": 11,
+          "finalHp": -10.919999999999991
+        }
+      }
+    },
+    {
+      "stage": 40,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 14.335999999999997,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 10,
+          "wallHits": 10,
+          "finalHp": -3.3599999999999817
+        },
+        "current": {
+          "firstDamage": 10.035199999999998,
+          "capHp": 13.72,
+          "capRatio": 0.098,
+          "hitsUntilDead": 14,
+          "wallHits": 14,
+          "finalHp": -0.492799999999999
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 19.599999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 8,
+          "wallHits": 8,
+          "finalHp": -16.799999999999965
+        },
+        "current": {
+          "firstDamage": 13.72,
+          "capHp": 13.72,
+          "capRatio": 0.098,
+          "hitsUntilDead": 11,
+          "wallHits": 11,
+          "finalHp": -10.919999999999991
+        }
+      }
+    },
+    {
+      "stage": 100,
+      "maxHp": 140,
+      "materialId": "default",
+      "moderate": {
+        "speed": 2.8,
+        "old": {
+          "firstDamage": 14.335999999999997,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 10,
+          "wallHits": 10,
+          "finalHp": -3.3599999999999817
+        },
+        "current": {
+          "firstDamage": 10.035199999999998,
+          "capHp": 13.72,
+          "capRatio": 0.098,
+          "hitsUntilDead": 14,
+          "wallHits": 14,
+          "finalHp": -0.492799999999999
+        }
+      },
+      "capped": {
+        "speed": 4,
+        "old": {
+          "firstDamage": 19.599999999999998,
+          "capHp": 19.599999999999998,
+          "capRatio": 0.13999999999999999,
+          "hitsUntilDead": 8,
+          "wallHits": 8,
+          "finalHp": -16.799999999999965
+        },
+        "current": {
+          "firstDamage": 13.72,
+          "capHp": 13.72,
+          "capRatio": 0.098,
+          "hitsUntilDead": 11,
+          "wallHits": 11,
+          "finalHp": -10.919999999999991
+        }
+      }
+    }
+  ],
+  "trajectoryCases": [
+    {
+      "size": 7,
+      "seed": 7919,
+      "stage": 1,
+      "frames": 1800,
+      "impactCallbacks": [
+        1420,
+        1420
+      ],
+      "wallHits": [
+        25,
+        25
+      ],
+      "finalHp": [
+        -3.94361821894344,
+        -1.1050655065208446
+      ],
+      "firstDeadAtFrame": [
+        926,
+        1308
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 2.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 7,
+      "seed": 7919,
+      "stage": 11,
+      "frames": 1800,
+      "impactCallbacks": [
+        1547,
+        1547
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -13.312604486205622,
+        -4.705293220431717
+      ],
+      "firstDeadAtFrame": [
+        525,
+        1202
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 7,
+      "seed": 7919,
+      "stage": 24,
+      "frames": 1800,
+      "impactCallbacks": [
+        1582,
+        1582
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -0.9373262380998915,
+        -11.880233735624657
+      ],
+      "firstDeadAtFrame": [
+        641,
+        1203
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 7,
+      "seed": 7919,
+      "stage": 40,
+      "frames": 1800,
+      "impactCallbacks": [
+        1582,
+        1582
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -1.8654696902154924,
+        -13.022280468308207
+      ],
+      "firstDeadAtFrame": [
+        641,
+        1203
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 7,
+      "seed": 271828,
+      "stage": 1,
+      "frames": 1800,
+      "impactCallbacks": [
+        1770,
+        1770
+      ],
+      "wallHits": [
+        17,
+        17
+      ],
+      "finalHp": [
+        -2.336248841306327,
+        11.693600101656106
+      ],
+      "firstDeadAtFrame": [
+        1292,
+        null
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 0.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 7,
+      "seed": 271828,
+      "stage": 11,
+      "frames": 1800,
+      "impactCallbacks": [
+        1611,
+        1611
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -1.9113712039680522,
+        -3.344562294457562
+      ],
+      "firstDeadAtFrame": [
+        503,
+        1137
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 7,
+      "seed": 271828,
+      "stage": 24,
+      "frames": 1800,
+      "impactCallbacks": [
+        1669,
+        1669
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -5.167821926314043,
+        -0.6934184778514183
+      ],
+      "firstDeadAtFrame": [
+        819,
+        1137
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 7,
+      "seed": 271828,
+      "stage": 40,
+      "frames": 1800,
+      "impactCallbacks": [
+        1669,
+        1669
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -0.5387423482879674,
+        -2.1787132873122306
+      ],
+      "firstDeadAtFrame": [
+        662,
+        1137
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 7919,
+      "stage": 1,
+      "frames": 1800,
+      "impactCallbacks": [
+        1420,
+        1420
+      ],
+      "wallHits": [
+        25,
+        25
+      ],
+      "finalHp": [
+        -4.103618218943458,
+        -1.5210655065208059
+      ],
+      "firstDeadAtFrame": [
+        926,
+        1308
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 2.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 7919,
+      "stage": 11,
+      "frames": 1800,
+      "impactCallbacks": [
+        1547,
+        1547
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -6.369794566413333,
+        -7.786773988263368
+      ],
+      "firstDeadAtFrame": [
+        525,
+        1223
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 7919,
+      "stage": 24,
+      "frames": 1800,
+      "impactCallbacks": [
+        1582,
+        1582
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -16.931004676335753,
+        -7.251808642389738
+      ],
+      "firstDeadAtFrame": [
+        848,
+        1203
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 7919,
+      "stage": 40,
+      "frames": 1800,
+      "impactCallbacks": [
+        1582,
+        1582
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -18.670190741167318,
+        -8.961585203974447
+      ],
+      "firstDeadAtFrame": [
+        848,
+        1203
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 271828,
+      "stage": 1,
+      "frames": 1800,
+      "impactCallbacks": [
+        1770,
+        1770
+      ],
+      "wallHits": [
+        17,
+        17
+      ],
+      "finalHp": [
+        -2.016248841306327,
+        13.421600101656168
+      ],
+      "firstDeadAtFrame": [
+        1292,
+        null
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 0.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 271828,
+      "stage": 11,
+      "frames": 1800,
+      "impactCallbacks": [
+        1611,
+        1611
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -1.7513712039680591,
+        -3.0676927292401768
+      ],
+      "firstDeadAtFrame": [
+        503,
+        1137
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 271828,
+      "stage": 24,
+      "frames": 1800,
+      "impactCallbacks": [
+        1669,
+        1669
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -0.5278219263140533,
+        -5.629418477851418
+      ],
+      "firstDeadAtFrame": [
+        819,
+        1203
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 8,
+      "seed": 271828,
+      "stage": 40,
+      "frames": 1800,
+      "impactCallbacks": [
+        1669,
+        1669
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -2.7314131575015974,
+        -7.409595441629737
+      ],
+      "firstDeadAtFrame": [
+        819,
+        1203
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 7919,
+      "stage": 1,
+      "frames": 1800,
+      "impactCallbacks": [
+        1420,
+        1420
+      ],
+      "wallHits": [
+        25,
+        25
+      ],
+      "finalHp": [
+        -4.208261104760633,
+        -1.7669254352320731
+      ],
+      "firstDeadAtFrame": [
+        1137,
+        1556
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 2.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 7919,
+      "stage": 11,
+      "frames": 1800,
+      "impactCallbacks": [
+        1547,
+        1547
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -21.80884442712307,
+        -12.145750779465429
+      ],
+      "firstDeadAtFrame": [
+        599,
+        1308
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610944,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 7919,
+      "stage": 24,
+      "frames": 1800,
+      "impactCallbacks": [
+        1613,
+        1613
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -2.915848146534601,
+        -3.882222628947652
+      ],
+      "firstDeadAtFrame": [
+        1113,
+        1308
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 7919,
+      "stage": 40,
+      "frames": 1800,
+      "impactCallbacks": [
+        1613,
+        1613
+      ],
+      "wallHits": [
+        21,
+        21
+      ],
+      "finalHp": [
+        -6.27374528263823,
+        -6.352201992956644
+      ],
+      "firstDeadAtFrame": [
+        1113,
+        1308
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115831
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 271828,
+      "stage": 1,
+      "frames": 1800,
+      "impactCallbacks": [
+        1611,
+        1611
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -0.8788960252940754,
+        47.44089411650523
+      ],
+      "firstDeadAtFrame": [
+        1382,
+        null
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 271828,
+      "stage": 11,
+      "frames": 1800,
+      "impactCallbacks": [
+        1611,
+        1611
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -14.646043048689371,
+        -10.211552811670614
+      ],
+      "firstDeadAtFrame": [
+        580,
+        1382
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 271828,
+      "stage": 24,
+      "frames": 1800,
+      "impactCallbacks": [
+        1669,
+        1669
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -16.097787991558157,
+        -18.301006161831808
+      ],
+      "firstDeadAtFrame": [
+        1203,
+        1646
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    },
+    {
+      "size": 13,
+      "seed": 271828,
+      "stage": 40,
+      "frames": 1800,
+      "impactCallbacks": [
+        1669,
+        1669
+      ],
+      "wallHits": [
+        23,
+        23
+      ],
+      "finalHp": [
+        -19.3077347124025,
+        -0.5025789045089573
+      ],
+      "firstDeadAtFrame": [
+        1203,
+        1539
+      ],
+      "finalActor": {
+        "x": 0.4222396179549289,
+        "y": 1.395,
+        "vx": 0.0016747561287610937,
+        "vy": 0.07121244268115834
+      },
+      "exactMatch": true
+    }
+  ]
+}
